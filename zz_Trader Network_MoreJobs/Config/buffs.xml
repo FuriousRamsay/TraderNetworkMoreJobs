@@ -1,0 +1,378 @@
+<Config>
+
+		<append xpath="/buffs" >		
+
+			<buff name="FuriousRamsayStartTraining" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="3"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FuriousRamsayAlarm"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your training has begun... good luck." />
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVanishAllyTimer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="180"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVanishAllyDogTier1Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="120"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVanishAllyWolfTier2Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="180"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVanishAllyLionTier3Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="240"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVanishAllyBearTier4Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="300"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVanishAllyNPCTier5Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="360"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayAddStaminaAllyTimer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="7" buff="FuriousRamsayAddStaminaAlly" target_tags="player"/>
+				</effect_group>
+			</buff>
+			
+			<buff name="FuriousRamsayAddStaminaAlly" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Stamina" operation="add" value="5"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayAddHealthAllyWolfTier2Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="7" buff="FuriousRamsayAddHealthAllyWolfTier2" target_tags="player"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayAddHealthAllyWolfTier2" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="2"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayAddHealthAllyLionTier3Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="7" buff="FuriousRamsayAddHealthAllyLionTier3" target_tags="player"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayAddHealthAllyLionTier3" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="3"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayAddHealthAllyBearTier4Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="6" buff="FuriousRamsayAddHealthAllyBearTier4" target_tags="player"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayAddHealthAllyBearTier4" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="4"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayAddHealthAllyNPCTier5Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="5" buff="FuriousRamsayAddHealthAllyNPCTier5" target_tags="player"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayAddHealthAllyNPCTier5" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="5"/>
+				</effect_group>
+			</buff>
+			
+			<buff name="FuriousRamsayAddBurningAllyLionTier3Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="6"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="4" buff="FuriousRamsayAddBurningAllyLionTier3"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayAddBurningAllyLionTier3" hidden="true" remove_on_death="true">
+				<damage_type value="heat"/>
+				<stack_type value="replace"/>
+				<duration value="3"/>
+				<effect_group>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-1">
+						<requirement name="!EntityTagCompare" tags="player,mutantsmallanimal,robot"/>
+					</passive_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
+						<requirement name="!EntityTagCompare" tags="player,mutantsmallanimal,robot"/>
+					</triggered_effect>
+					
+					<!-- These throw contant warning mesages in the console -->
+					<!--<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="RightArm">
+						<requirement name="EntityTagCompare" tags="mutantanimal"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="LeftArm">
+						<requirement name="EntityTagCompare" tags="mutantanimal"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="RightLeg">
+						<requirement name="EntityTagCompare" tags="mutantanimal"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="LeftLeg">
+						<requirement name="EntityTagCompare" tags="mutantanimal"/>
+					</triggered_effect>-->
+					
+					<!-- tried everything for the very small animals, but no effects will stick 
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="spine1">
+						<requirement name="EntityTagCompare" tags="mutantsmallanimal"/>
+					</triggered_effect>-->
+					
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="molotov_explosion">
+						<requirement name="!EntityTagCompare" tags="player,mutantsmallanimal,robot"/>
+					</triggered_effect>
+									
+					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
+						<requirement name="!EntityTagCompare" tags="player,mutantsmallanimal,robot"/>
+					</triggered_effect>
+					
+					<!-- These throw contant warning mesages in the console -->
+					<!--<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="RightArm">
+						<requirement name="EntityTagCompare" tags="mutantanimal"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="LeftArm">
+						<requirement name="EntityTagCompare" tags="mutantanimal"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="RightLeg">
+						<requirement name="EntityTagCompare" tags="mutantanimal"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="LeftLeg">
+						<requirement name="EntityTagCompare" tags="mutantanimal"/>
+					</triggered_effect>-->
+
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire">
+						<requirement name="!EntityTagCompare" tags="player,mutantsmallanimal,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_onFire">
+						<requirement name="!EntityTagCompare" tags="player,mutantsmallanimal,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_onFire">
+						<requirement name="!EntityTagCompare" tags="player,mutantsmallanimal,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_onFire">
+						<requirement name="!EntityTagCompare" tags="player,mutantsmallanimal,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FireMediumLoop">
+						<requirement name="!EntityTagCompare" tags="player,mutantsmallanimal,robot"/>
+					</triggered_effect>
+
+					<!--<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="FireMediumLoop">
+						<requirement name="!EntityTagCompare" tags="player,mutantsmallanimal,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="FireMediumLoop">
+						<requirement name="!EntityTagCompare" tags="player,mutantsmallanimal,robot"/>
+					</triggered_effect>-->
+				</effect_group>
+			</buff>
+						
+			<buff name="FuriousRamsayKnockdownAllyBearTier4Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="6" buff="FuriousRamsayKnockdownAllyBearTier4"/>
+				</effect_group>
+			</buff>
+			
+			<buff name="FuriousRamsayKnockdownAllyBearTier4" hidden="true" remove_on_death="true">
+				<damage_type value="knockdown"/>
+				<stack_type value="ignore"/>
+				<duration value="1"/>
+				<display_value value=".knockdownDisplay"/><display_value_key value="{0}"/>
+				<requirements compare_type="or">
+					<requirement name="NotHasBuff" buff="buffInjuryKnockdown01Cooldown"/>
+				</requirements>
+
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FuriousRamsayExplosion">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" target="self" action="ShakeCamera" shake_speed="2" shake_amplitude="20" shake_time="2">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="add" value="-10">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="Ragdoll" duration="1" force="2000">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<!--<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffInjuryKnockdown01Cooldown">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>-->
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".knockdownDisplay" operation="set" value="20">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".knockdownDisplay" operation="add" value="-1">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".knockdownDisplay" operation="set" value="0">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayAddShockAllyNPCTier5Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="5"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="4" buff="FuriousRamsayAddShockAllyNPCTier5"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayAddShockAllyNPCTier5">
+				<damage_type value="electrical"/>
+				<stack_type value="replace"/>
+				<duration value="2"/>
+				<effect_group>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-6">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</passive_effect>
+					
+					<passive_effect name="RunSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</passive_effect>
+					
+					<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</passive_effect>
+					
+					<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</passive_effect>
+					
+					<passive_effect name="JumpStrength" operation="perc_subtract" value="0.9,0" duration="0,4.3">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</passive_effect>
+					
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+					
+					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="ETrapHit" operation="set" value="0">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="electric_fence_impact">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="electric_fence_impact">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="electric_fence_impact">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayTestSounds" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="21"/>
+				<update_rate value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FuriousRamsayExplosion1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="First sound" />
+					<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="FuriousRamsayExplosion2"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="Second sound" />
+					<triggered_effect trigger="onSelfBuffRemove" action="PlaySound" sound="FuriousRamsayExplosion3"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ShowToolbeltMessage" message="Third sound" />
+				</effect_group>
+			</buff>
+
+		</append>		
+		
+</Config>
+

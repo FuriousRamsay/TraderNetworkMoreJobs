@@ -1,0 +1,591 @@
+<Config>
+
+	<append xpath="/items">
+
+		<item name="FuriousRamsayChallengeQuestMaster">
+			<property name="Extends" value="questMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="qc_FuriousRamsayChallengeDesc"/>
+			<property name="CustomIcon" value="challengeQuestMaster"/>
+			<property name="EconomicValue" value="400"/>
+		</item>
+
+		<item name="FuriousRamsaySpawnAllyDogTier1">
+			<property name="Tags" value="robot"/>
+			<property name="CustomIcon" value="cntHardenedChestSecure"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="DisplayType" value="meleeTurret"/>
+			<property name="HoldType" value="73"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Weight" value="0"/>
+			<property name="CarryWeight" value="30"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="Candrop" value="true"/>
+			<property class="Action0">
+				<property name="Class" value="SpawnTurret"/>
+				<property name="Turret" value="FuriousRamsayAllyDogTier1Spawn"/>
+				<property name="PreviewSize" value="1.4,1.4,1.4"/>
+			</property>
+			<effect_group name="FuriousRamsaySpawnAllyDogTier1">
+				<passive_effect name="EntityDamage" operation="base_set" value="9"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="15"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="40"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="200"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsaySpawnAllyWolfTier2">
+			<property name="Tags" value="robot"/>
+			<property name="CustomIcon" value="cntHardenedChestSecure"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="DisplayType" value="meleeTurret"/>
+			<property name="HoldType" value="73"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Weight" value="0"/>
+			<property name="CarryWeight" value="40"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="Candrop" value="true"/>
+			<property class="Action0">
+				<property name="Class" value="SpawnTurret"/>
+				<property name="Turret" value="FuriousRamsayAllyWolfTier2Spawn"/>
+				<property name="PreviewSize" value="1.4,1.4,1.4"/>
+			</property>
+			<effect_group name="FuriousRamsaySpawnAllyWolfTier2">
+				<passive_effect name="EntityDamage" operation="base_set" value="14"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="30"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="46"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="300"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsaySpawnAllyLionTier3">
+			<property name="Tags" value="robot"/>
+			<property name="CustomIcon" value="cntHardenedChestSecure"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="DisplayType" value="meleeTurret"/>
+			<property name="HoldType" value="73"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Weight" value="0"/>
+			<property name="CarryWeight" value="50"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="Candrop" value="true"/>
+			<property class="Action0">
+				<property name="Class" value="SpawnTurret"/>
+				<property name="Turret" value="FuriousRamsayAllyLionTier3Spawn"/>
+				<property name="PreviewSize" value="1.4,1.4,1.4"/>
+			</property>
+			<effect_group name="FuriousRamsaySpawnAllyLionTier3">
+				<passive_effect name="EntityDamage" operation="base_set" value="25"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="45"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="54"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="600"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsaySpawnAllyBearTier4">
+			<property name="Tags" value="robot"/>
+			<property name="CustomIcon" value="cntHardenedChestSecure"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="DisplayType" value="meleeTurret"/>
+			<property name="HoldType" value="73"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Weight" value="0"/>
+			<property name="CarryWeight" value="80"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicValue" value="1250"/>
+			<property name="Candrop" value="true"/>
+			<property class="Action0">
+				<property name="Class" value="SpawnTurret"/>
+				<property name="Turret" value="FuriousRamsayAllyBearTier4Spawn"/>
+				<property name="PreviewSize" value="1.4,1.4,1.4"/>
+			</property>
+			<effect_group name="FuriousRamsaySpawnAllyBearTier4">
+				<passive_effect name="EntityDamage" operation="base_set" value="40"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="60"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="66"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="900"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsaySpawnAllyNPCTier5">
+			<property name="Tags" value="robot"/>
+			<property name="CustomIcon" value="cntHardenedChestSecure"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="DisplayType" value="meleeTurret"/>
+			<property name="HoldType" value="73"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Weight" value="0"/>
+			<property name="CarryWeight" value="40"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicValue" value="1500"/>
+			<property name="Candrop" value="true"/>
+			<property class="Action0">
+				<property name="Class" value="SpawnTurret"/>
+				<property name="Turret" value="FuriousRamsayAllyNPCTier5Spawn"/>
+				<property name="PreviewSize" value="1.4,1.4,1.4"/>
+			</property>
+			<effect_group name="FuriousRamsaySpawnAllyNPCTier5">
+				<passive_effect name="EntityDamage" operation="base_set" value="65"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="75"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="85"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1000"/>
+			</effect_group>
+		</item>
+
+		<item name="qc_FuriousRamsayTier1_clearhold">
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayTier1_clearhold"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayTier2_clearhold">
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayTier2_clearhold"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayTier3_clearhold">
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayTier3_clearhold"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayTier4_clearhold">
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayTier4_clearhold"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayTier5_clearhold">
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="Weight" value="50"/>
+			<property name="Weight" value="0"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayTier5_clearhold"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayTier1_minihorde">
+			<property name="DescriptionKey" value="qc_FuriousRamsay_minihordeDesc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="125"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayTier1_minihorde"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayTier2_minihorde">
+			<property name="DescriptionKey" value="qc_FuriousRamsay_minihordeDesc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayTier2_minihorde"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayTier3_minihorde">
+			<property name="DescriptionKey" value="qc_FuriousRamsay_minihordeDesc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="375"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayTier3_minihorde"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayTier4_minihorde">
+			<property name="DescriptionKey" value="qc_FuriousRamsay_minihordeDesc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayTier4_minihorde"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayTier5_minihorde">
+			<property name="DescriptionKey" value="qc_FuriousRamsay_minihordeDesc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="625"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayTier5_minihorde"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayHuntTier1">
+			<property name="DescriptionKey" value="qc_FuriousRamsayHuntDesc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsayHuntTier1"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayHuntTier2">
+			<property name="DescriptionKey" value="qc_FuriousRamsayHuntDesc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="100"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsayHuntTier2"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayHuntTier3">
+			<property name="DescriptionKey" value="qc_FuriousRamsayHuntDesc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="200"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsayHuntTier3"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayHuntTier4">
+			<property name="DescriptionKey" value="qc_FuriousRamsayHuntDesc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="300"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsayHuntTier4"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayHuntTier5">
+			<property name="DescriptionKey" value="qc_FuriousRamsayHuntDesc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="400"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsayHuntTier5"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayHordeTrainingTier1">
+			<property name="DescriptionKey" value="qc_FuriousRamsayHordeTrainingDesc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="125"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsayHordeTrainingTier1"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayHordeTrainingTier2">
+			<property name="DescriptionKey" value="qc_FuriousRamsayHordeTrainingDesc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsayHordeTrainingTier2"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayHordeTrainingTier3">
+			<property name="DescriptionKey" value="qc_FuriousRamsayHordeTrainingDesc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsayHordeTrainingTier3"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayHordeTrainingTier4">
+			<property name="DescriptionKey" value="qc_FuriousRamsayHordeTrainingDesc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsayHordeTrainingTier4"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayHordeTrainingTier5">
+			<property name="DescriptionKey" value="qc_FuriousRamsayHordeTrainingDesc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsayHordeTrainingTier5"/>
+			</property>
+		</item>
+		
+		<item name="FuriousRamsaymeleeHandHostileSmallAnimal">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="2"/>
+				<property name="Range" value="1.2"/>
+				<property name="DamageEntity" value="3"/>
+				<property name="DamageBlock" value="3"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsaymeleeHandHostileMediumAnimal">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="2"/>
+				<property name="Range" value="1.8"/>
+				<property name="DamageEntity" value="8"/>
+				<property name="DamageBlock" value="8"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsaymeleeHandHostileLargeAnimal">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="2"/>
+				<property name="Range" value="2.4"/>
+				<property name="DamageEntity" value="15"/>
+				<property name="DamageBlock" value="15"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsaymeleeHandAllyDogTier1">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="1.5"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="9"/>
+				<property name="DamageBlock" value="15"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsaymeleeHandAllyWolfTier2">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="1.3"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="14"/>
+				<property name="DamageBlock" value="30"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsaymeleeHandAllyLionTier3">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="1.1"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="25"/>
+				<property name="DamageBlock" value="45"/>
+			</property>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="SpreadDegreesVertical" operation="perc_subtract" value=".8"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="perc_subtract" value=".8"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="selfAOE" range="20" duration="0" force="1000"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsaymeleeHandAllyBearTier4">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.9"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="40"/>
+				<property name="DamageBlock" value="60"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsaymeleeHandAllyNPCTier5">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.7"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="65"/>
+				<property name="DamageBlock" value="75"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsaySpawnAllyDogTier1">
+			<property name="DescriptionKey" value="qc_FuriousRamsaySpawnAllyDogTier1Desc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="controlPanelTop01"/>
+			<property name="Weight" value="10"/>
+			<property name="CarryWeight" value="3"/>
+			<property name="Candrop" value="true"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="250"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsaySpawnAllyDogTier1"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsaySpawnAllyWolfTier2">
+			<property name="DescriptionKey" value="qc_FuriousRamsaySpawnAllyWolfTier2Desc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="controlPanelTop02"/>
+			<property name="Weight" value="10"/>
+			<property name="CarryWeight" value="3"/>
+			<property name="Candrop" value="true"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsaySpawnAllyWolfTier2"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsaySpawnAllyLionTier3">
+			<property name="DescriptionKey" value="qc_FuriousRamsaySpawnAllyLionTier3Desc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="controlPanelTop04"/>
+			<property name="Weight" value="10"/>
+			<property name="CarryWeight" value="3"/>
+			<property name="Candrop" value="true"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsaySpawnAllyLionTier3"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsaySpawnAllyBearTier4">
+			<property name="DescriptionKey" value="qc_FuriousRamsaySpawnAllyBearTier4Desc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="controlPanelTop05"/>
+			<property name="Weight" value="10"/>
+			<property name="CarryWeight" value="3"/>
+			<property name="Candrop" value="true"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicValue" value="1250"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsaySpawnAllyBearTier4"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsaySpawnAllyNPCTier5">
+			<property name="DescriptionKey" value="qc_FuriousRamsaySpawnAllyNPCTier5Desc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="controlPanelTop06"/>
+			<property name="Weight" value="10"/>
+			<property name="CarryWeight" value="3"/>
+			<property name="Candrop" value="true"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="1500"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsaySpawnAllyNPCTier5"/>
+			</property>
+		</item>
+	</append>
+</Config>
