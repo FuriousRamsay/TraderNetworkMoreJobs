@@ -36,8 +36,8 @@ The following can be purchased from the player vending machines at each trader. 
 	- There are no rewards for this challenge. It is purely meant to assist in you testing out your defenses or offensive abilities (should you wish to try this out in the open)
 	Note: Spawns occur over time and are essentially queued. You should do your best to stay and fight. If you leave and are in single player, the game will not clear the spawn 
 	      queue (bug that has been submitted) which will cause NullException errors when you go back in. The spawns will not occur, but the game will still attempt to action the 
-	      queue until the queue is empty. Spawning usually lasts 6 minutes total. One way to clear the queue is to close the game.
-	      Not much testing has been done in multiplayer. Feedback is welcome.
+	      queue until the queue is empty. Spawning usually lasts 6 minutes total. One way to clear the queue is to close the game
+	      Not much testing has been done in multiplayer. Feedback is welcome
 
 	Mechanical Allies (Tiers 1 through 5):
 	- The following allies can be purchased and spawned:
@@ -51,8 +51,7 @@ The following can be purchased from the player vending machines at each trader. 
 		- a dispatcher which will work in both modes but cannot be accurately spawned like the crate. A green marker will show on your compass to indicate where the ally
 		  has spawned
 
-The mechanical allies above will also randomly spawn in the world as allies. They have two main functions:
-
+	The mechanical allies above will also randomly spawn in the world as allies. They have two main functions:
 	- Function 1: attack zombies, mutant animals and hostile animals
 	- Function 2: follow you up to a certain point
 	- Function 3: activate their special abilities
