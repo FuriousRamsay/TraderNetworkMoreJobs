@@ -52,6 +52,7 @@ The following can be purchased from the player vending machines at each trader. 
 		  has spawned
 
 The mechanical allies above will also randomly spawn in the world as allies. They have two main functions:
+
 	- Function 1: attack zombies, mutant animals and hostile animals
 	- Function 2: follow you up to a certain point
 	- Function 3: activate their special abilities
