@@ -66,7 +66,7 @@ The following can be purchased from the player vending machines at each trader. 
 	﻿Note: These are prototypes and aren't very optimized. They rely on the core game AI which still has to be improved.
 	﻿﻿- Ally Function 1: attack nearby zombies and hostile animals
 	﻿﻿- Ally Function 2: follow player up to a certain point
-	﻿﻿The AI does not do very well inside a POI, but creates can be placed in single player as way to help defend in certain situation should you need
+	﻿﻿The AI does not do very well inside a POI, but crates can be placed in single player as way to help defend in certain situation should you need
 	﻿﻿some assistance
 
 Installation Instructions:
