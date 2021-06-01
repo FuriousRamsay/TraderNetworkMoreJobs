@@ -45,7 +45,7 @@ The following can be purchased from the player vending machines at each trader. 
 		- Tier 2: wolves that will regenerate your health if you stay close
 		- Tier 3: lions that will burn nearby zombies and knockback foes in an area of effect
 		- Tier 4: bears that will do explosive damage to nearby foes which will knock them down
-		- Tier 5: androis that will shock nearby foes
+		- Tier 5: androids that will shock nearby foes
 	Note: There are two types:
 		- a crate which can only be used in Single Player mode. They will not work in Multiplayer (game code limitations)
 		- a dispatcher which will work in both modes but cannot be accurately spawned like the crate. A green marker will show on your compass to indicate where the ally
