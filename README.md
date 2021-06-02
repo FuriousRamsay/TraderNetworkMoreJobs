@@ -83,3 +83,17 @@ Installation Instructions:
 		the trader's inventories. They have no impact on the game when not found.
 
 ﻿If you connect to servers who run this modlet, you do not have to do anything as this mod is server-side and will be loaded when you connect
+
+Warning: Please back up your saved world and character before installing this mod. The game does not handle the removal of accepted or completed
+	 quests well and will reset your character should you decide to remove the mod after trying it out. This is unfortunately a known issue 
+	 with how the game is currently designed and out of modder's control. One option is to leave the mod in and simply not make use of the 
+	 additional challenges at the vending machines (which are pretty useless otherwise anyway). If you decide to not use the mod and wish to
+	 no longer have any references to the Hold and Fetch jobs from the trader list, you can remove the following code from quests.xml:
+
+	﻿<append xpath="/quests/quest_list[@id='trader_quests']">
+		<quest id="quest_FuriousRamsayTier1_clearhold"/>
+		<quest id="quest_FuriousRamsayTier2_clearhold"/>
+		<quest id="quest_FuriousRamsayTier3_clearhold"/>
+		<quest id="quest_FuriousRamsayTier4_clearhold"/>
+		<quest id="quest_FuriousRamsayTier5_clearhold"/>
+	</append>
