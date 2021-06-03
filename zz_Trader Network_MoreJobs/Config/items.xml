@@ -10,6 +10,71 @@
 			<property name="EconomicValue" value="400"/>
 		</item>
 
+		<item name="qc_FuriousRamsayGhostsTier1">
+			<property name="DescriptionKey" value="qc_FuriousRamsayGhostsTier1Desc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsayGhostsTier1"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayGhostsTier2">
+			<property name="DescriptionKey" value="qc_FuriousRamsayGhostsTier2Desc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="100"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsayGhostsTier2"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayGhostsTier3">
+			<property name="DescriptionKey" value="qc_FuriousRamsayGhostsTier3Desc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="200"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsayGhostsTier3"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayGhostsTier4">
+			<property name="DescriptionKey" value="qc_FuriousRamsayGhostsTier4Desc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="300"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsayGhostsTier4"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayGhostsTier5">
+			<property name="DescriptionKey" value="qc_FuriousRamsayGhostsTier5Desc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="400"/>
+			<property name="Weight" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsayGhostsTier5"/>
+			</property>
+		</item>
+
 		<item name="FuriousRamsaySpawnAllyDogTier1">
 			<property name="Tags" value="robot"/>
 			<property name="CustomIcon" value="cntHardenedChestSecure"/>
@@ -401,7 +466,7 @@
 			</property>
 		</item>
 		
-		<item name="FuriousRamsaymeleeHandHostileSmallAnimal">
+		<item name="FuriousRamsayMeleeHandHostileSmallAnimal">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="55"/>
@@ -413,7 +478,7 @@
 			</property>
 		</item>
 
-		<item name="FuriousRamsaymeleeHandHostileMediumAnimal">
+		<item name="FuriousRamsayMeleeHandHostileMediumAnimal">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="55"/>
@@ -425,7 +490,7 @@
 			</property>
 		</item>
 
-		<item name="FuriousRamsaymeleeHandHostileLargeAnimal">
+		<item name="FuriousRamsayMeleeHandHostileLargeAnimal">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="55"/>
@@ -437,7 +502,19 @@
 			</property>
 		</item>
 
-		<item name="FuriousRamsaymeleeHandAllyDogTier1">
+		<item name="FuriousRamsayMeleeHandAllyGhost">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="1"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="10"/>
+				<property name="DamageBlock" value="15"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandAllyDogTier1">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="55"/>
@@ -449,7 +526,7 @@
 			</property>
 		</item>
 
-		<item name="FuriousRamsaymeleeHandAllyWolfTier2">
+		<item name="FuriousRamsayMeleeHandAllyWolfTier2">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="55"/>
@@ -461,7 +538,7 @@
 			</property>
 		</item>
 
-		<item name="FuriousRamsaymeleeHandAllyLionTier3">
+		<item name="FuriousRamsayMeleeHandAllyLionTier3">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="55"/>
@@ -475,11 +552,11 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="SpreadDegreesVertical" operation="perc_subtract" value=".8"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="perc_subtract" value=".8"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="selfAOE" range="3" duration="0" force="600"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="selfAOE" range="3" duration="0" force="400"/>
 			</effect_group>
 		</item>
 
-		<item name="FuriousRamsaymeleeHandAllyBearTier4">
+		<item name="FuriousRamsayMeleeHandAllyBearTier4">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="55"/>
@@ -491,7 +568,7 @@
 			</property>
 		</item>
 
-		<item name="FuriousRamsaymeleeHandAllyNPCTier5">
+		<item name="FuriousRamsayMeleeHandAllyNPCTier5">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="55"/>
@@ -587,5 +664,198 @@
 				<property name="QuestGiven" value="challenge_FuriousRamsaySpawnAllyNPCTier5"/>
 			</property>
 		</item>
+		
+		<item name="FuriousRamsayMeleeHandEnemyTier1">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="1.5"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="4"/>
+				<property name="DamageBlock" value="10"/>
+			</property>
+		</item>
+		
+		<item name="FuriousRamsayMeleeHandEnemyTier2">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="1.4"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="8"/>
+				<property name="DamageBlock" value="15"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandEnemyTier3">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="1.3"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="12"/>
+				<property name="DamageBlock" value="20"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandEnemyTier4">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="1.2"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="16"/>
+				<property name="DamageBlock" value="25"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandEnemyTier5">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="1.1"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="20"/>
+				<property name="DamageBlock" value="30"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandCloakedAndroidShock">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Degradation" value="99999" param1="true"/>
+			<property class="Action0">
+				<property name="Delay" value=".7"/>
+				<property name="Range" value="1.75"/>
+				<property name="DamageEntity" value="15"/>
+				<property name="DamageBlock" value="50"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Vomit"/>
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value=".5"/>
+				<property name="Range" value="15"/>
+				<property name="Infinite_ammo" value="true"/>
+				<property name="Magazine_items" value="FuriousRamsayShockAmmo"/>
+				<property name="Sound_warning" value="electric_fence_impact"/>
+				<property name="Sound_start" value=""/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value=""/>
+				<property name="Sound_reload" value=""/>		
+			</property>
+			<effect_group name="FuriousRamsayMeleeHandCloakedAndroidShock" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="15"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="360"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="4"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="4"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4"/>
+				<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayShockAmmo">
+			<property name="Meshfile" value="Entities/Electrical/steel_dartPrefab"/>
+			
+			<property name="Material" value="Morganic"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				<property name="DamageEntity" value="4"/>
+				<property name="DamageBlock" value="15"/>
+				<property name="Explosion.ParticleIndex" value="0"/> <!-- Nothing -->
+				<property name="Explosion.RadiusEntities" value="2"/>
+				<property name="Velocity" value="20"/>
+				<property name="FlyTime" value="3"/>
+				<property name="LifeTime" value="3"/>
+				<property name="CollisionRadius" value="0.5"/>
+				<property name="Buff" value="FuriousRamsayAddShockEnemy"/>
+			</property>
+			<effect_group name="FuriousRamsayShockAmmo" tiered="false">
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
+			</effect_group>
+		</item>
+		
+		<item name="FuriousRamsayMeleeHandCloakedAndroidBurn">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Degradation" value="99999" param1="true"/>
+			<property class="Action0">
+				<property name="Delay" value=".7"/>
+				<property name="Range" value="1.75"/>
+				<property name="DamageEntity" value="15"/>
+				<property name="DamageBlock" value="50"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Vomit"/>
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value=".5"/>
+				<property name="Range" value="15"/>
+				<property name="Infinite_ammo" value="true"/>
+				<property name="Magazine_items" value="FuriousRamsayBurnAmmo"/>
+				<property name="Sound_warning" value="hulkexplodewarning"/>
+				<property name="Sound_start" value="FireMediumLoop"/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value=""/>
+				<property name="Sound_reload" value=""/>		
+			</property>
+			<effect_group name="FuriousRamsayMeleeHandCloakedAndroidBurn" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="15"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="20"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="20"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="10"/>
+				<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBurnAmmo">
+			<property name="Meshfile" value="particleeffects/p_fire_small"/>
+			<property name="Meshfile" value="particleeffects/p_onFire"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				<property name="DamageEntity" value="4"/>
+				<property name="DamageBlock" value="15"/>
+				<property name="Explosion.ParticleIndex" value="0"/> <!-- Nothing -->
+				<property name="Explosion.RadiusEntities" value="2"/>
+				<property name="Velocity" value="20"/>
+				<property name="FlyTime" value="3"/>
+				<property name="LifeTime" value="3"/>
+				<property name="CollisionRadius" value="0.5"/>
+				<property name="Buff" value="FuriousRamsayAddBurningEnemyTier5"/>
+			</property>
+			<effect_group name="FuriousRamsayShockAmmo" tiered="false">
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandEnemyNPCTier5">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="1"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="20"/>
+				<property name="DamageBlock" value="50"/>
+			</property>
+		</item>
+
 	</append>
 </Config>

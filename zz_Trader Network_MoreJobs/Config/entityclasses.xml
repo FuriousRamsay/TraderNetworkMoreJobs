@@ -260,7 +260,7 @@
 			<property name="Parent" value="Enemies"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="PainResistPerHit" value=".75"/>
-			<property name="HandItem" value="FuriousRamsaymeleeHandHostileSmallAnimal"/>
+			<property name="HandItem" value="FuriousRamsayMeleeHandHostileSmallAnimal"/>
 
 			<property name="PainResistPerHit" value=".6"/>
 			<property name="MaxTurnSpeed" value="420"/>
@@ -516,7 +516,7 @@
 			<property name="AITarget-4" value=""/>
 			<property name="AITarget-5" value=""/>
 			
-			<property name="HandItem" value="FuriousRamsaymeleeHandHostileLargeAnimal"/>
+			<property name="HandItem" value="FuriousRamsayMeleeHandHostileLargeAnimal"/>
 
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
@@ -1432,6 +1432,8 @@
 			<property name="PhysicsBody" value="wolf"/>
 			<property name="Prefab" value="/Entities/Animals/Wolf/animalStandardDogZombieRagdoll"/>
 			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/junkturret/material/junkTurret.mat"/>
+			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/melee/chainsaw/materials/Chainsaw_D.mat"/>
+
 			<property name="AvatarController" value="AvatarAnimalController"/>
 			<property name="NavObject" value="FuriousRamsayMechanicalAlly"/>
 			<property name="ModelType" value="Standard"/>
@@ -1479,7 +1481,7 @@
 			<property name="Immunity" value="sickness;disease;wellness"/>
 			<property name="TimeStayAfterDeath" value="30"/>
 
-			<property name="HandItem" value="FuriousRamsaymeleeHandAllyDogTier1"/>	
+			<property name="HandItem" value="FuriousRamsayMeleeHandAllyDogTier1"/>	
 		</entity_class>
 
 		<entity_class name="FuriousRamsayAllyDogTier1Quest" extends="FuriousRamsayAllyDogTier1">
@@ -1493,6 +1495,21 @@
 			</effect_group>
 		</entity_class>
 
+		<entity_class name="FuriousRamsayAllyDogTier1Ghost" extends="FuriousRamsayAllyDogTier1">
+			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/pistol/materials/44_bullet.mat"/>
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandAllyGhost"/>	
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyTimer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddStaminaAllyTimer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+			</effect_group>
+		</entity_class>
+		
 		<entity_class name="FuriousRamsayAllyDogTier1Spawn" extends="FuriousRamsayAllyDogTier1">
 			<effect_group name="Base Effects">
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyTimer"/>
@@ -1543,6 +1560,8 @@
 			<property name="PhysicsBody" value="wolf"/>
 			<property name="Prefab" value="/Entities/Animals/Wolf/animalStandardWolfRagdoll"/>
 			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/junkturret/material/junkTurret.mat"/>
+			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/pistol/materials/44_bullet.mat"/>
+			
 			<property name="AvatarController" value="AvatarAnimalController"/>
 			<property name="NavObject" value="FuriousRamsayMechanicalAlly"/>
 			<property name="ModelType" value="Standard"/>
@@ -1590,7 +1609,7 @@
 			<property name="Immunity" value="sickness;disease;wellness"/>
 			<property name="TimeStayAfterDeath" value="30"/>
 
-			<property name="HandItem" value="FuriousRamsaymeleeHandAllyWolfTier2"/>	
+			<property name="HandItem" value="FuriousRamsayMeleeHandAllyWolfTier2"/>	
 		</entity_class>
 
 		<entity_class name="FuriousRamsayAllyWolfTier2Quest" extends="FuriousRamsayAllyWolfTier2">
@@ -1598,6 +1617,21 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyWolfTier2Timer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddHealthAllyWolfTier2Timer"/>
 				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayAllyWolfTier2Ghost" extends="FuriousRamsayAllyWolfTier2">
+			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/pistol/materials/44_bullet.mat"/>
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandAllyGhost"/>	
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyTimer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddHealthAllyWolfTier2Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
 				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
@@ -1654,6 +1688,8 @@
 			<property name="PhysicsBody" value="MountainLion"/>
 			<property name="Prefab" value="/Entities/Animals/Mountain_Lion/animalStandardMountainLionRagdoll"/>
 			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/junkturret/material/junkTurret.mat"/>
+			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/magnums/materials/44Mag_D.mat"/>
+			<property name="ReplaceMaterial0" value="#Other/Items?items/tools/materials/nailgun.mat"/>
 			<property name="AvatarController" value="AvatarAnimalController"/>
 			<property name="NavObject" value="FuriousRamsayMechanicalAlly"/>
 			<property name="ModelType" value="Standard"/>
@@ -1703,7 +1739,7 @@
 			<property name="Immunity" value="sickness;disease;wellness"/>
 			<property name="TimeStayAfterDeath" value="30"/>
 
-			<property name="HandItem" value="FuriousRamsaymeleeHandAllyLionTier3"/>	
+			<property name="HandItem" value="FuriousRamsayMeleeHandAllyLionTier3"/>	
 		</entity_class>
 
 		<entity_class name="FuriousRamsayAllyLionTier3Quest" extends="FuriousRamsayAllyLionTier3">
@@ -1722,6 +1758,21 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyTimer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddBurningAllyLionTier3Timer"/>
 				<passive_effect name="HealthMax" operation="base_set" value="600"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayAllyLionTier3Ghost" extends="FuriousRamsayAllyLionTier3">
+			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/pistol/materials/44_bullet.mat"/>
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandAllyGhost"/>	
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyTimer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddBurningAllyLionTier3Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
 				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
@@ -1761,6 +1812,7 @@
 			<property name="Prefab" value="NPC"/>
 			<property name="Mesh" value="Animals/Bear/animalBearStandardRagdoll"/>
 			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/junkturret/material/junkTurret.mat"/>
+			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/auto shotgun/materials/autoShotgun.mat"/>
 			<property name="Parent" value="Animals"/>
 			<property name="EntityType" value="Animal"/>
 			<property name="HasRagdoll" value="true"/>
@@ -1815,7 +1867,7 @@
 			<property name="Immunity" value="sickness;disease;wellness"/>
 			<property name="TimeStayAfterDeath" value="30"/>
 
-			<property name="HandItem" value="FuriousRamsaymeleeHandAllyBearTier4"/>	
+			<property name="HandItem" value="FuriousRamsayMeleeHandAllyBearTier4"/>	
 		</entity_class>
 
 		<entity_class name="FuriousRamsayAllyBearTier4Quest" extends="FuriousRamsayAllyBearTier4">
@@ -1834,6 +1886,21 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyTimer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayKnockdownAllyBearTier4Timer"/>
 				<passive_effect name="HealthMax" operation="base_set" value="900"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayAllyBearTier4Ghost" extends="FuriousRamsayAllyBearTier4">
+			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/pistol/materials/44_bullet.mat"/>
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandAllyGhost"/>	
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyTimer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayKnockdownAllyBearTier4Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
 				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
@@ -1870,6 +1937,7 @@
 			<property name="Tags" value="entity,robot"/>
 			<property name="Class" value="EntityEnemyAnimal"/>
 			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/junkturret/material/junkTurret.mat"/>
+			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/melee/junksledge/materials/junkSledge.mat"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="NavObject" value="FuriousRamsayMechanicalAlly"/>
 			<property name="SurfaceCategory" value="metal"/>
@@ -1931,7 +1999,7 @@
 			<property name="Immunity" value="sickness;disease;wellness"/>
 			<property name="TimeStayAfterDeath" value="30"/>
 
-			<property name="HandItem" value="FuriousRamsaymeleeHandAllyNPCTier5"/>	
+			<property name="HandItem" value="FuriousRamsayMeleeHandAllyNPCTier5"/>	
 		</entity_class>
 		
 		<entity_class name="FuriousRamsayAllyNPCTier5Quest" extends="FuriousRamsayAllyNPCTier5">
@@ -1954,6 +2022,21 @@
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
 			</effect_group>		
+		</entity_class>
+
+		<entity_class name="FuriousRamsayAllyNPCTier5Ghost" extends="FuriousRamsayAllyNPCTier5">
+			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/pistol/materials/44_bullet.mat"/>
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandAllyGhost"/>	
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyTimer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddShockAllyNPCTier5Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+			</effect_group>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayAllyNPCTier5Biome" extends="FuriousRamsayAllyNPCTier5">
@@ -1994,6 +2077,456 @@
 			</effect_group>
 		</entity_class>
 	
+		<entity_class name="FuriousRamsayCloakedAnimal" extends="animalTemplateHostile">
+			<property name="Class" value="EntityAnimalStag"/>
+
+			<property name="IsEnemyEntity" value="true"/>
+			<property name="Parent" value="Enemies"/>
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="PainResistPerHit" value=".75"/>
+			<property name="HandItem" value="FuriousRamsayMeleeHandHostileSmallAnimal"/>
+
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="ParticleOnDeath" value="blockdestroy_metal"/>
+
+			<property name="PainResistPerHit" value=".6"/>
+			<property name="MaxTurnSpeed" value="420"/>
+			<property name="MoveSpeed" value="0.8"/>
+			<property name="MoveSpeedPanic" value="1.3"/>
+			<property name="MoveSpeedAggro" value="1.3, 2"/>
+			<property name="SwimSpeed" value="1.2"/>
+			<property name="SwimStrokeRate" value="1.0,1.3"/>
+			<property name="CanClimbLadders" value="false"/>
+
+			<property name="LookAtAngle" value="0"/>
+			<property name="MaxViewAngle" value="360"/>
+			<property name="SightRange" value="5"/> 
+			<property name="AINoiseSeekDist" value="5"/>
+
+			<property name="AITask-1" value="Leap"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="RunawayWhenHurt"/>
+			<property name="AITask-3" value="RunawayFromEntity" data="class=EntityPlayer,EntityZombie,EntityEnemyAnimal;safeDistance=8"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="Wander"/>
+			<property name="AITask-6" value=""/>
+			<property name="AITask-7" value=""/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value=""/>
+			<property name="AITarget-2" value=""/>
+			<property name="AITarget-3" value=""/>
+			<property name="AITarget-4" value=""/>
+			<property name="AITarget-5" value=""/>
+
+			<property name="TimeStayAfterDeath" value="15"/>
+		</entity_class>
+	
+		<entity_class name="FuriousRamsayCloakedRabbit" extends="FuriousRamsayCloakedAnimal">
+			<property name="SizeScale" value="1"/>
+			<property name="Tags" value="entity,enemy,animal,blackshield"/>
+			<property name="NavObject" value="FuriousRamsayHunted" />
+			<property name="ReplaceMaterial0" value="#Other/Items?items/misc/material/beaker.mat"/>
+			<property name="MapIcon" value="ui_game_symbol_tracking_rabbit"/>
+			<property name="TrackerIcon" value="ui_game_symbol_tracking_rabbit"/>
+			<property name="Prefab" value="/Entities/Animals/Rabbit/RABBIT"/>
+			<property name="Mesh" value=""/>
+			<property name="PhysicsBody" value="rabbit"/>
+			<property name="Mass" value="150"/>
+			<property name="Weight" value="10"/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SwimOffset" value="2"/>
+			<property name="HasRagdoll" value="false"/>
+
+			<property name="ExperienceGain" value="130"/>
+			<property name="DeadBodyHitPoints" value="175"/>
+			<property name="TimeStayAfterDeath" value="2"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier1Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="50"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+			</effect_group>
+		</entity_class>
+	
+		<entity_class name="FuriousRamsayCloakedSnake" extends="animalSnake">
+			<property name="SizeScale" value="1.5"/>
+			<property name="Tags" value="entity,enemy,animal,blackshield"/>
+			<property name="NavObject" value="FuriousRamsayHunted" />
+			<property name="ReplaceMaterial0" value="#Other/Items?items/misc/material/beaker.mat"/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SwimOffset" value="2"/>
+
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="ParticleOnDeath" value="blockdestroy_metal"/>
+
+			<property name="MaxTurnSpeed" value="500"/>
+			<property name="MoveSpeed" value="0.2"/>
+			<property name="MoveSpeedAggro" value=".25, .25"/>
+			<property name="MoveSpeedPanic" value="0.25"/>
+
+			<property name="ExperienceGain" value="130"/>
+			<property name="DeadBodyHitPoints" value="175"/>
+			<property name="TimeStayAfterDeath" value="2"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier2Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="75"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayCloakedVulture" extends="animalZombieVulture">
+			<property name="SizeScale" value="0.5"/>
+			<property name="Tags" value="entity,enemy,animal,blackshield"/>
+			<property name="NavObject" value="FuriousRamsayHunted" />
+			<property name="ReplaceMaterial0" value="#Other/Items?items/misc/material/beaker.mat"/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="ParticleOnDeath" value="blockdestroy_metal"/>
+
+			<property name="MoveSpeed" value="0.5"/>
+			<property name="MoveSpeedAggro" value="0.5, 0.5"/>
+			<property name="MaxTurnSpeed" value="190"/>
+
+			<property name="ExperienceGain" value="750"/>
+			<property name="DeadBodyHitPoints" value="175"/>
+			<property name="TimeStayAfterDeath" value="2"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier3Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="100"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayCloakedAndroidMaster" extends="zombieBoe">
+		</entity_class>
+
+		<entity_class name="FuriousRamsayCloakedBurnAndroid" extends="zombieArlene">
+			<property name="SizeScale" value="1.2"/>
+			<property name="Tags" value="entity,enemy,zombie,walker,feral,blackshield"/>
+			<property name="NavObject" value="FuriousRamsayHunted" />
+			<property name="ReplaceMaterial0" value="#Other/Items?items/misc/material/torch02_fire.mat"/>
+		
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			
+			<property name="WalkType" value="2"/>
+
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="ParticleOnDeath" value="blockdestroy_metal"/>
+
+			<property name="TimeStayAfterDeath" value="2"/>
+			<property name="HandItem" value="FuriousRamsayMeleeHandCloakedAndroidBurn"/>
+						
+			<property name="SoundRandom" value="zombiemaleroam"/>
+			<property name="SoundAlert" value="zombiemaleroam"/>
+			<property name="SoundAttack" value="zombiemaleroam"/>
+			<property name="SoundHurt" value="zombiemaleroam"/>
+			<property name="SoundDeath" value="zombiemaleroam"/>
+			<property name="SoundSense" value="zombiemaleroam"/>
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=2;duration=2"/>
+			<property name="AITask-3" value="ApproachSpot"/>
+			<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15"/>
+			<property name="AITask-5" value="Look"/>
+			<property name="AITask-6" value="Wander"/>
+			<property name="AITask-7" value=""/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25"/>
+			<property name="AITarget-3" value=""/>
+			<property name="AITarget-4" value=""/>
+			<property name="AITarget-5" value=""/>
+
+			<property name="StompsSpikes" value="true"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier5Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="750"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayCloakedShockAndroid" extends="FuriousRamsayCloakedAndroidMaster">
+			<property name="SizeScale" value="1.2"/>
+			<property name="Tags" value="entity,enemy,zombie,walker,feral,blackshield"/>
+			<property name="NavObject" value="FuriousRamsayHunted" />
+			<property name="ReplaceMaterial0" value="#Other/Items?items/misc/material/beaker.mat"/>
+			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/molotov/materials/molotov_flame.mat"/>
+
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			
+			<property name="WalkType" value="8"/>
+
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="ParticleOnDeath" value="blockdestroy_metal"/>
+
+			<property name="TimeStayAfterDeath" value="2"/>
+			<property name="HandItem" value="FuriousRamsayMeleeHandCloakedAndroidShock"/>
+						
+			<property name="SoundRandom" value="zombiemaleroam"/>
+			<property name="SoundAlert" value="zombiemaleroam"/>
+			<property name="SoundAttack" value="zombiemaleroam"/>
+			<property name="SoundHurt" value="zombiemaleroam"/>
+			<property name="SoundDeath" value="zombiemaleroam"/>
+			<property name="SoundSense" value="zombiemaleroam"/>
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=2;duration=2"/>
+			<property name="AITask-3" value="ApproachSpot"/>
+			<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15"/>
+			<property name="AITask-5" value="Look"/>
+			<property name="AITask-6" value="Wander"/>
+			<property name="AITask-7" value=""/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25"/>
+			<property name="AITarget-3" value=""/>
+			<property name="AITarget-4" value=""/>
+			<property name="AITarget-5" value=""/>
+
+			<property name="StompsSpikes" value="true"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier5Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="750"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayEnemyAndroid" extends="FuriousRamsayCloakedAndroidMaster">
+			<property name="SizeScale" value="1.2"/>
+			<property name="Tags" value="entity,enemy,zombie,walker,feral,blackshield"/>
+			<property name="NavObject" value="FuriousRamsayHunted" />
+			<property name="ReplaceMaterial0" value="#Other/Items?items/misc/material/beaker.mat"/>
+
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			
+			<property name="WalkType" value="2"/>
+			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			<property name="HandItem" value="FuriousRamsayMeleeHandEnemyNPCTier5"/>
+
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="ParticleOnDeath" value="blockdestroy_metal"/>
+
+			<property name="TimeStayAfterDeath" value="2"/>
+						
+			<property name="SoundRandom" value="zombiemaleroam"/>
+			<property name="SoundAlert" value="zombiemaleroam"/>
+			<property name="SoundAttack" value="zombiemaleroam"/>
+			<property name="SoundHurt" value="zombiemaleroam"/>
+			<property name="SoundDeath" value="zombiemaleroam"/>
+			<property name="SoundSense" value="zombiemaleroam"/>
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15"/>
+			<property name="AITask-3" value="ApproachSpot"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="Wander"/>
+			<property name="AITask-6" value=""/>
+			<property name="AITask-7" value=""/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25"/>
+			<property name="AITarget-3" value=""/>
+			<property name="AITarget-4" value=""/>
+			<property name="AITarget-5" value=""/>
+
+			<property name="StompsSpikes" value="true"/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayEnemyAndroid1" extends="FuriousRamsayEnemyAndroid">
+			<property name="ReplaceMaterial0" value="#Other/Items?items/tools/materials/nailgun.mat"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier5Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="FuriousRamsayEnemyAndroid2" extends="FuriousRamsayEnemyAndroid">
+			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/melee/chainsaw/materials/Chainsaw_D.mat"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier5Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayEnemyAndroid3" extends="FuriousRamsayEnemyAndroid">
+			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/melee/knives/materials/huntingKnife.mat"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier5Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayEnemyAndroid4" extends="FuriousRamsayEnemyAndroid">
+			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/melee/spear/materials/spearIron.mat"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier5Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayEnemyAndroid5" extends="FuriousRamsayEnemyAndroid">
+			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/auto shotgun/materials/autoShotgun.mat"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier5Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayEnemyAndroid6" extends="FuriousRamsayEnemyAndroid">
+			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/magnums/materials/44Mag_D.mat"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier5Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayEnemyAndroid7" extends="FuriousRamsayEnemyAndroid">
+			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/sniperrifle/materials/sniper_rifle.mat"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier5Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBurningRabbit" extends="FuriousRamsayCloakedAnimal">
+			<property name="Class" value="EntityZombie"/>
+			<property name="SizeScale" value="1.5"/>
+			<property name="Tags" value="entity,enemy,animal,mutantsmallanimal,blackshield"/>
+			<property name="NavObject" value="FuriousRamsayHunted" />
+			<property name="ReplaceMaterial0" value="#Other/Items?items/misc/material/torch02_fire.mat"/>
+			<property name="MapIcon" value="ui_game_symbol_tracking_rabbit"/>
+			<property name="TrackerIcon" value="ui_game_symbol_tracking_rabbit"/>
+			<property name="Prefab" value="/Entities/Animals/Rabbit/RABBIT"/>
+			<property name="Mesh" value=""/>
+			<property name="PhysicsBody" value="rabbit"/>
+			<property name="Mass" value="150"/>
+			<property name="Weight" value="10"/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SwimOffset" value="2"/>
+			<property name="HasRagdoll" value="false"/>
+
+			<property name="LookAtAngle" value="0"/>
+			<property name="MaxViewAngle" value="360"/>
+			<property name="SightRange" value="25"/> 
+			<property name="AINoiseSeekDist" value="25"/>
+
+			<property name="CanClimbVertical" value="true"/>
+			<property name="JumpMaxDistance" value="11, 13"/>
+
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="Leap"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15"/>
+			<property name="AITask-4" value="ApproachDistraction"/>
+			<property name="AITask-5" value="Look"/>
+			<property name="AITask-6" value="Wander"/>
+			<property name="AITask-7" value="BreakBlock"/>
+			<property name="AITask-8" value="DestroyArea"/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25"/>
+			<property name="AITarget-3" value=""/>
+			<property name="AITarget-4" value=""/>
+			<property name="AITarget-5" value=""/>
+
+			<property name="ExperienceGain" value="130"/>
+			<property name="DeadBodyHitPoints" value="175"/>
+			<property name="TimeStayAfterDeath" value="10"/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBurningRabbitTier1" extends="FuriousRamsayBurningRabbit">
+			<property name="HandItem" value="FuriousRamsayMeleeHandEnemyTier1"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier1Timer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddBurningEnemyTier1Timer"/>				
+				<passive_effect name="HealthMax" operation="base_set" value="50"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+			</effect_group>		
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBurningRabbitTier2" extends="FuriousRamsayBurningRabbit">
+			<property name="HandItem" value="FuriousRamsayMeleeHandEnemyTier2"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier2Timer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddBurningEnemyTier2Timer"/>				
+				<passive_effect name="HealthMax" operation="base_set" value="100"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+			</effect_group>		
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBurningRabbitTier3" extends="FuriousRamsayBurningRabbit">
+			<property name="HandItem" value="FuriousRamsayMeleeHandEnemyTier3"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier3Timer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddBurningEnemyTier3Timer"/>				
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+			</effect_group>		
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBurningRabbitTier4" extends="FuriousRamsayBurningRabbit">
+			<property name="HandItem" value="FuriousRamsayMeleeHandEnemyTier4"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier4Timer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddBurningEnemyTier4Timer"/>				
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+			</effect_group>		
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBurningRabbitTier5" extends="FuriousRamsayBurningRabbit">
+			<property name="HandItem" value="FuriousRamsayMeleeHandEnemyTier5"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier5Timer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddBurningEnemyTier5Timer"/>				
+				<passive_effect name="HealthMax" operation="base_set" value="250"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+			</effect_group>		
+		</entity_class>
+
 	</append>
 
 </configs>
