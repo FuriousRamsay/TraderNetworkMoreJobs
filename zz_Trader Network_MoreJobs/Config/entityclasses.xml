@@ -2527,29 +2527,209 @@
 			</effect_group>		
 		</entity_class>
 
-        <entity_class name="FuriousRamsayUMAZombieTemplateMale" extends="zombieTemplateMale">
-            <property name="EntityType" value="Zombie" />
+        <entity_class name="FuriousRamsayUMATemplateMale" extends="zombieTemplateMale">
+            <property name="Tags" value="entity" />
+			<property name="EntityType" value="Zombie"/>
             <property name="Mesh" value="#Entities/Zombies?Zombies/zombie01Ragdoll.prefab" />
             <property name="Prefab" value="NPC" />
             <property name="Class" value="EntityZombie" />
             <property name="Parent" value="Enemies" />
             <property name="IsEnemyEntity" value="true" />
-            <property name="HandItem" value="meleeHandZombie01" />
-            <property name="SoundAlert" value="Enemies/Base_Zombie_Male/zombiemalealert" />
-            <property name="SoundSense" value="Enemies/Base_Zombie_Male/zombiemalesense" />
-            <property name="SoundHurt" value="Enemies/Base_Zombie_Male/zombiemalepain" />
-            <property name="SoundDeath" value="Enemies/Base_Zombie_Male/zombiemaledeath" />
-            <property name="SoundAttack" value="Enemies/Base_Zombie_Male/zombiemaleattack" />
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
             <property name="AttackTimeoutDay" value="1.5" />
             <property name="AttackTimeoutNight" value="1.1" />
             <property name="WalkType" value="7" />
             <property name="ModelType" value="ZombieUMA" />
             <property name="RootMotion" value="true" />
             <property name="HasRagdoll" value="true" />
-            <property name="PhysicsBody" value="zombieUMA" />
+			<property name="PhysicsBody" value="Player"/>
             <property name="HasDeathAnim" value="false" />
-            <property name="TimeStayAfterDeath" value="30" />
+            <property name="Mass" value="235" />
+			<property name="WalkType" value="7"/>
+			<property name="AIPathCostScale" value=".9, 1"/>
+			<property name="LookAtAngle" value="60"/> 
 
+			<property class="FallLandBehavior">
+				<property name="1None" data="anim=None;height=0,1;weight=0.4"/>
+				<property name="1Land" data="anim=Land;height=0,1;weight=0.4"/>
+				<property name="1LandLow" data="anim=LandLow;height=0,1;weight=0.15"/>
+				<property name="1Stumble" data="anim=Stumble;height=0,1;weight=0.05"/>
+				<property name="LowLand" data="anim=LandLow;height=1,3;weight=0.7"/>
+				<property name="LowStumble" data="anim=Stumble;height=1,3;weight=0.3"/>
+				<property name="MidStumble" data="anim=Stumble;height=3,5;weight=0.3"/>
+				<property name="MidStumbleAndRage" data="anim=Stumble;height=3,5;weight=0.3;ragePer=0.5,1.5;rageTime=1.0,2.0"/>
+				<property name="MidLandHard" data="anim=LandHard;height=3,5;weight=0.3"/>
+				<property name="MidLandHardAndRage" data="anim=LandHard;height=3,5;weight=0.3;ragePer=0.5,1.5;rageTime=1.0,2.0"/>
+				<property name="Ragdoll" data="anim=Ragdoll;height=3;weight=0.4"/>
+			</property>
+			<property class="DestroyBlockBehavior">
+				<property name="None" data="weight=0.0"/>
+				<property name="Stumble" data="weight=0.2"/>
+				<property name="Ragdoll" data="weight=0.2"/>
+			</property>
+			<property name="SoundAlertTime" value="25.0"/>
+			<property name="SoundRandomTime" value="200.0"/>
+
+			<property name="SoundRandom" value="malehateroam"/> <!-- good for survivors -->
+			<property name="SoundAlert" value="malehatealert"/> <!-- good for survivors or angry survivors -->
+			<property name="SoundSense" value="malehatesense"/> <!-- good for bandits -->
+			<property name="SoundHurt" value="malehatepain"/> <!-- good for bandits -->
+			<property name="SoundDeath" value="malehatedeath"/> <!-- good for bandits -->
+			<property name="SoundAttack" value="malehateattack"/> <!-- good for bandits -->
+
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundDeath" value="Player_Male/player1death"/>
+			<property name="SoundHurt" value="Player_Male/player1painlg"/>
+			<property name="SoundHurtSmall" value="Player_Male/player1painsm"/>
+			<property name="SoundStamina" value="Player_Male/player1stamina"/>
+			<property name="SoundDrownPain" value="Player_Male/player1drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Male/player1drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Male/player1drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player1Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player1LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player1LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundSleeperSense" value="sleepersense"/>
+			<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
+			<property name="DismemberMultiplierHead" value="1"/>
+			<property name="DismemberMultiplierArms" value="1"/>
+			<property name="DismemberMultiplierLegs" value="1"/>
+			<property name="LegCrippleScale" value="1"/> 
+			<property name="LegCrawlerThreshold" value="0"/> 
+			<property name="KnockdownProneDamageThreshold" value="0.5"/>
+			<property name="KnockdownProneStunDuration" value="0.5,1.8"/>
+			<property name="KnockdownProneRefillRate" value="0.045,0.045"/>
+			<property name="KnockdownKneelDamageThreshold" value="0.4"/>
+			<property name="KnockdownKneelStunDuration" value="0.5,1.8"/>
+			<property name="KnockdownKneelRefillRate" value="0.045,0.045"/>
+			<property name="LegsExplosionDamageMultiplier" value="1"/>
+			<property name="ArmsExplosionDamageMultiplier" value="1"/>
+			<property name="HeadExplosionDamageMultiplier" value="1"/>
+			<property name="ChestExplosionDamageMultiplier" value="1"/>
+			<property name="PainResistPerHit" value=".5"/>		
+			<property name="MaxViewAngle" value="180"/>
+			<property name="SightRange" value="50"/>
+			<property name="SightLightThreshold" value="-2,150"/> 
+			<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> 
+			<property name="SleeperWakeupSightDetectionMax" value="340,480"/> 
+			<property name="SleeperSenseSightDetectionMin" value="-10,0"/> 
+			<property name="SleeperSenseSightDetectionMax" value="200,300"/>
+			<property name="SleeperNoiseSenseThreshold" value="3,8"/> 
+			<property name="SleeperNoiseWakeThreshold" value="9,12"/>
+			<property name="SleeperSmellSenseThreshold" value="20,50"/> 
+			<property name="SoundSleeperSenseChance" value=".5"/> 
+			<property name="SleeperSmellWakeThreshold" value="40,100"/>
+			<property name="NoiseAlertThreshold" value="30"/> 
+			<property name="SmellAlertThreshold" value="40"/> 
+			<property name="MaxTurnSpeed" value="250"/>
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="MoveSpeedRand" value="-.2, .25"/> 
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="JumpMaxDistance" value="2.8, 3.9"/>
+			<property name="Immunity" value="sickness;disease;wellness"/>
+			<property name="RotateToGround" value="false"/>	
+			<property name="PushFactor" value="10"/>
+			<property name="TimeStayAfterDeath" value="5"/>
+
+			<property name="AITask-1" value=""/>
+			<property name="AITask-2" value=""/>
+			<property name="AITask-3" value=""/>
+			<property name="AITask-4" value=""/>
+			<property name="AITask-5" value=""/>
+			<property name="AITask-6" value=""/>
+			<property name="AITask-7" value=""/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value=""/>
+			<property name="AITarget-2" value=""/>
+			<property name="AITarget-3" value=""/>
+			<property name="AITarget-4" value=""/>
+        </entity_class>
+		
+        <entity_class name="FuriousRamsayUMATemplateZombieMale" extends="FuriousRamsayUMATemplateMale">
+            <property name="Tags" value="entity,zombie,walker" />
+
+			<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
+			<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
+			<property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+			<property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
+			<property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
+			<property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
+
+			<property name="SoundRandom" value="Enemies/Snow_Zombie_Male/zombiemalesnowroam"/>
+			<property name="SoundAlert" value="Enemies/Snow_Zombie_Male/zombiemalesnowalert"/>
+			<property name="SoundAttack" value="Enemies/Snow_Zombie_Male/zombiemalesnowattack"/>
+			<property name="SoundHurt" value="Enemies/Snow_Zombie_Male/zombiemalesnowpain"/>
+			<property name="SoundDeath" value="Enemies/Snow_Zombie_Male/zombiemalesnowdeath"/>
+			<property name="SoundSense" value="Enemies/Snow_Zombie_Male/zombiemalesnowsense"/>
+			<property name="SoundFootstepModifier" value="Enemies/Snow_Zombie_Male/zombiesnowfootstep"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateSurvivorMale" extends="FuriousRamsayUMATemplateMale">
+		<!--Survivors: Earl, Jim, Mike -->
+            <property name="Class" value="EntityEnemyAnimal" />
+            <property name="HandItem" value="meleeHandHumanTemplateSurvivor" />
+
+			<property name="AIGroupCircle" value="1"/>
+			<property name="LookAtAngle" value="60"/>
+			<property name="MaxViewAngle" value="360"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="AIPathCostScale" value=".15, .4"/>
+			<property name="SightLightThreshold" value="-2,-2"/>
+
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,10,EntityZombie,5"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="ApproachDistraction"/>
+			<property name="AITask-6" value="Wander"/>
+			<property name="AITask-7" value=""/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value=""/>
+			<property name="AITarget-3" value=""/>
+			<property name="AITarget-4" value=""/>
+			<property name="AITarget-5" value=""/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateEnemyMale" extends="FuriousRamsayUMATemplateMale">
+		<!--Enemies: Aiden, Hodor, Clint, Richie, Willie, Kim -->
+			<property name="SoundRandom" value="malehateroam"/>
+			<property name="SoundAlert" value="malehatealert"/>
+			<property name="SoundSense" value="malehatesense"/>
+			<property name="SoundHurt" value="malehatepain"/>
+			<property name="SoundDeath" value="malehatedeath"/>
+			<property name="SoundAttack" value="malehateattack"/>			
+
+			<property name="AIGroupCircle" value="1"/>
+			<property name="LookAtAngle" value="60"/>
+			<property name="MaxViewAngle" value="360"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="AIPathCostScale" value=".15, .4"/>
+			<property name="SightLightThreshold" value="-2,-2"/>
+
+            <property name="HandItem" value="meleeHandHumanTemplateEnemy" />
+
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="Wander"/>
+			<property name="AITask-6" value="BreakBlock"/>
+			<property name="AITask-7" value="DestroyArea"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25"/>
+			<property name="AITarget-3" value=""/>
+			<property name="AITarget-4" value=""/>
+			<property name="AITarget-5" value=""/>
+			
 			<property name="AITask-1" value=""/>
 			<property name="AITask-2" value=""/>
 			<property name="AITask-3" value=""/>
@@ -2564,184 +2744,122 @@
 			<property name="AITarget-4" value=""/>
 
         </entity_class>
-		
-        <entity_class name="FuriousRamsayUMAZombieTemplateFemale" extends="FuriousRamsayUMAZombieTemplateMale">
-            <property name="Archetype" value="ZombieFemale" />
+
+        <entity_class name="FuriousRamsayUMATemplateZombieMale" extends="FuriousRamsayUMATemplateMale">
+
+			<property name="SoundRandom" value="zombiemaleroam"/>
+			<property name="SoundAlert" value="zombiemalealert"/>
+			<property name="SoundAttack" value="zombiemaleattack"/>
+			<property name="SoundHurt" value="zombiemalepain"/>
+			<property name="SoundDeath" value="zombiemaledeath"/>
+			<property name="SoundSense" value="zombiemalesense"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateFemale" extends="FuriousRamsayUMATemplateMale">
             <property name="Mass" value="130" />
             <property name="Weight" value="200" />
+
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateSurvivorFemale" extends="FuriousRamsayUMATemplateFemale">
+		<!-- Survivors: Emma, Maria, Rayah -->
+            <property name="Class" value="EntityEnemyAnimal" />
+            <property name="HandItem" value="meleeHandHumanTemplateSurvivor" />
+
+			<property name="AIGroupCircle" value="1"/>
+			<property name="LookAtAngle" value="60"/>
+			<property name="MaxViewAngle" value="360"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="AIPathCostScale" value=".15, .4"/>
+			<property name="SightLightThreshold" value="-2,-2"/>
+
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,10,EntityZombie,5"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="ApproachDistraction"/>
+			<property name="AITask-6" value="Wander"/>
+			<property name="AITask-7" value=""/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value=""/>
+			<property name="AITarget-3" value=""/>
+			<property name="AITarget-4" value=""/>
+			<property name="AITarget-5" value=""/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateEnemyFemale" extends="FuriousRamsayUMATemplateFemale">
+		<!--Enemies: Charlotte, Roxy, Gabrielle -->
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundSense" value="Player_Female/femalehatesense"/>
+			<property name="SoundHurt" value="Player_Female/femalehatepain"/>
+			<property name="SoundDeath" value="Player_Female/femalehatedeath"/>
+			<property name="SoundAttack" value="Player_Female/femalehateattack"/>			
+
+			<property name="AIGroupCircle" value="1"/>
+			<property name="LookAtAngle" value="60"/>
+			<property name="MaxViewAngle" value="360"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="AIPathCostScale" value=".15, .4"/>
+			<property name="SightLightThreshold" value="-2,-2"/>
+
+            <property name="HandItem" value="meleeHandHumanTemplateEnemy" />
+
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="Wander"/>
+			<property name="AITask-6" value="BreakBlock"/>
+			<property name="AITask-7" value="DestroyArea"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25"/>
+			<property name="AITarget-3" value=""/>
+			<property name="AITarget-4" value=""/>
+			<property name="AITarget-5" value=""/>
+			
+			<property name="AITask-1" value=""/>
+			<property name="AITask-2" value=""/>
+			<property name="AITask-3" value=""/>
+			<property name="AITask-4" value=""/>
+			<property name="AITask-5" value=""/>
+			<property name="AITask-6" value=""/>
+			<property name="AITask-7" value=""/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value=""/>
+			<property name="AITarget-2" value=""/>
+			<property name="AITarget-3" value=""/>
+			<property name="AITarget-4" value=""/>
+
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateZombieFemale" extends="FuriousRamsayUMATemplateFemale">
             <property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam" />
             <property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert" />
             <property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack" />
             <property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain" />
             <property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath" />
             <property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense" />
-        </entity_class>
 
-        <entity_class name="FuriousRamsayUMAZombieJim" extends="FuriousRamsayUMAZombieTemplateMale">
-			<property name="WalkType" value="8"/>
-			<property name="MoveSpeed" value="0.05"/> <!-- Just shambling around -->
-			<property name="MoveSpeedAggro" value="0.15, 0.7"/> <!-- Chasing a target min/max (like day or night)-->
-			<property name="CanClimbVertical" value="true"/>
-            <property name="Archetype" value="FuriousRamsayZombieJim" />
-            <property name="Tags" value="entity,zombie,walker" />
-            <property name="Mass" value="260" />
-			<property name="SoundRandom" value="Enemies/Snow_Zombie_Male/zombiemalesnowroam"/>
-			<property name="SoundAlert" value="Enemies/Snow_Zombie_Male/zombiemalesnowalert"/>
-			<property name="SoundAttack" value="Enemies/Snow_Zombie_Male/zombiemalesnowattack"/>
-			<property name="SoundHurt" value="Enemies/Snow_Zombie_Male/zombiemalesnowpain"/>
-			<property name="SoundDeath" value="Enemies/Snow_Zombie_Male/zombiemalesnowdeath"/>
-			<property name="SoundSense" value="Enemies/Snow_Zombie_Male/zombiemalesnowsense"/>
-            <property name="HandItem" value="meleeHandZombieStrong" />
-            <property name="JumpMaxDistance" value="1, 1" />
-            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
-        </entity_class>
-
-        <entity_class name="FuriousRamsayUMAZombieEmma" extends="FuriousRamsayUMAZombieTemplateFemale">
-            <property name="Archetype" value="FuriousRamsayZombieEmma" />
-            <property name="Tags" value="entity,zombie,walker" />
-			<property name="WalkType" value="2"/>
-            <property name="Mass" value="155" />
-        </entity_class>
-
-        <entity_class name="FuriousRamsayUMAZombieMike" extends="FuriousRamsayUMAZombieTemplateMale">
-            <property name="Archetype" value="FuriousRamsayZombieMike" />
-            <property name="Tags" value="entity,zombie,walker" />
-            <property name="Mass" value="235" />
-			<property name="WalkType" value="5"/>
-        </entity_class>
-
-        <entity_class name="FuriousRamsayUMAZombieMaria" extends="FuriousRamsayUMAZombieTemplateFemale">
-            <property name="Archetype" value="FuriousRamsayZombieMaria" />
-            <property name="Tags" value="entity,zombie,walker" />
-			<property name="WalkType" value="7"/>
-            <property name="Mass" value="155" />
-        </entity_class>
-
-        <entity_class name="FuriousRamsayUMAZombieGabrielle" extends="FuriousRamsayUMAZombieTemplateFemale">
-            <property name="Archetype" value="FuriousRamsayZombieGabrielle" />
-            <property name="Tags" value="entity,zombie,walker" />
-			<property name="WalkType" value="6"/>
-            <property name="Mass" value="245" />
-            <property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam" />
-            <property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert" />
-            <property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack" />
-            <property name="SoundHurt" value="Enemies/Base_Zombie_Female2/zombiefemale2pain" />
-            <property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death" />
-            <property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense" />
-            <property name="HandItem" value="meleeHandZombieStrong" />
-            <property name="JumpMaxDistance" value=".5, .6" />
-        </entity_class>
-
-        <entity_class name="FuriousRamsayUMAZombieAiden" extends="FuriousRamsayUMAZombieTemplateMale">
-            <property name="Archetype" value="FuriousRamsayZombieAiden" />
-            <property name="Tags" value="entity,zombie,walker" />
-			<property name="WalkType" value="3"/>
-            <property name="Mass" value="225" />
-			<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
-			<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
-			<property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
-			<property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
-			<property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
-			<property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
-            <property name="HandItem" value="meleeHandZombieStrong" />
-        </entity_class>
-		
-        <entity_class name="FuriousRamsayUMAZombieCharlotte" extends="FuriousRamsayUMAZombieTemplateFemale">
-            <property name="Archetype" value="FuriousRamsayZombieCharlotte" />
-            <property name="Tags" value="entity,zombie,walker" />
-            <property name="Mass" value="170" />
-            <property name="PainResistPerHit" value=".50" />
-        </entity_class>
-
-        <entity_class name="FuriousRamsayUMAZombieWillie" extends="FuriousRamsayUMAZombieTemplateMale">
-            <property name="Archetype" value="FuriousRamsayZombieWillie" />
-            <property name="Tags" value="entity,zombie,walker" />
-            <property name="Mass" value="255" />
-            <property name="PainResistPerHit" value=".55" />
-        </entity_class>
-
-        <entity_class name="FuriousRamsayUMAZombieHodor" extends="FuriousRamsayUMAZombieTemplateMale">
-            <property name="Archetype" value="FuriousRamsayZombieHodor" />
-            <property name="Tags" value="entity,zombie,walker" />
-            <property name="Mass" value="725" />
-			<property name="WalkType" value="1"/> 
-			<property name="MoveSpeed" value="0.05"/>
-			<property name="MoveSpeedAggro" value="0.10, 0.7"/>
-			<property name="SoundRandom" value="Enemies/Snow_Zombie_Male/zombiemalesnowroam"/>
-			<property name="SoundAlert" value="Enemies/Snow_Zombie_Male/zombiemalesnowalert"/>
-			<property name="SoundAttack" value="Enemies/Snow_Zombie_Male/zombiemalesnowattack"/>
-			<property name="SoundHurt" value="Enemies/Snow_Zombie_Male/zombiemalesnowpain"/>
-			<property name="SoundDeath" value="Enemies/Snow_Zombie_Male/zombiemalesnowdeath"/>
-			<property name="SoundSense" value="Enemies/Snow_Zombie_Male/zombiemalesnowsense"/>
-			<property name="SoundFootstepModifier" value="Enemies/Snow_Zombie_Male/zombiesnowfootstep"/>
-			<property name="ExperienceGain" value="750"/>
-            <property name="PainResistPerHit" value=".50" />
-            <effect_group name="Base Effects">
-                <passive_effect name="HealthMax" operation="base_set" value="250" />
-                <passive_effect name="HealthMax" operation="perc_set" value="1" />
-                <passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
-            </effect_group>
-        </entity_class>
-
-        <entity_class name="FuriousRamsayUMAZombieRayah" extends="FuriousRamsayUMAZombieTemplateFemale">
-            <property name="Archetype" value="FuriousRamsayZombieRayah" />
-            <property name="Tags" value="entity,zombie,walker" />
-			<property name="WalkType" value="2"/> 
-            <property name="Mass" value="225" />
-        </entity_class>
-
-        <entity_class name="FuriousRamsayUMAZombieKim" extends="FuriousRamsayUMAZombieTemplateMale">
-            <property name="Archetype" value="FuriousRamsayZombieKim" />
-            <property name="Tags" value="entity,zombie,walker" />
-            <property name="WalkType" value="3"/>
-            <property name="Mass" value="200" />
-            <property name="HandItem" value="meleeHandZombieStrong" />
-        </entity_class>
-
-        <entity_class name="FuriousRamsayUMAZombieJack" extends="FuriousRamsayUMAZombieTemplateMale">
-            <property name="Archetype" value="FuriousRamsayZombieJack" />
-            <property name="Tags" value="entity,zombie,walker" />
-            <property name="Mass" value="300" />
-            <property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam" />
-            <property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert" />
-            <property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense" />
-            <property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain" />
-            <property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death" />
-            <property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack" />
-            <property name="HandItem" value="meleeHandZombieStrong" />
-            <property name="JumpMaxDistance" value="1.4, 1.5" />
-            <property name="ExperienceGain" value="750" />
-            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
-            <property name="HandItem" value="meleeHandZombieStrong" />
-        </entity_class>
-		
-        <entity_class name="FuriousRamsayUMAZombieClint" extends="FuriousRamsayUMAZombieTemplateMale">
-            <property name="Archetype" value="FuriousRamsayZombieClint" />
-            <property name="Tags" value="entity,zombie,walker" />
-            <property name="Mass" value="285" />
-            <property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam" />
-            <property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert" />
-            <property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense" />
-            <property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain" />
-            <property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death" />
-            <property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack" />
-            <property name="HandItem" value="meleeHandZombieStrong" />
-            <property name="JumpMaxDistance" value="1.4, 1.5" />
-            <property name="ExperienceGain" value="750" />
-            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
-        </entity_class>
-
-        <entity_class name="FuriousRamsayUMAZombieRichie" extends="FuriousRamsayUMAZombieTemplateMale">
-            <property name="Archetype" value="FuriousRamsayZombieRichie" />
-            <property name="Tags" value="entity,zombie,walker" />
-            <property name="Mass" value="235" />
-        </entity_class>
-
-        <entity_class name="FuriousRamsayUMAZombieRoxy" extends="FuriousRamsayUMAZombieTemplateFemale">
-            <property name="Archetype" value="FuriousRamsayZombieRoxy" />
-            <property name="Tags" value="entity,zombie,walker" />
-			<property name="WalkType" value="6"/>
-            <property name="Mass" value="225" />
 			<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
 			<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert"/>
 			<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack"/>
@@ -2750,12 +2868,223 @@
 			<property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense"/>
         </entity_class>
 
-        <entity_class name="FuriousRamsayUMAZombieEarl" extends="FuriousRamsayUMAZombieTemplateMale">
-            <property name="Archetype" value="FuriousRamsayZombieEarl" />
-            <property name="Tags" value="entity,zombie,walker" />
+        <entity_class name="FuriousRamsayUMAJimSurvivor" extends="FuriousRamsayUMATemplateSurvivorMale">
+            <property name="Archetype" value="FuriousRamsayJim" />
+			<property name="WalkType" value="7"/>
+			<property name="CanClimbVertical" value="false"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAJimZombie" extends="FuriousRamsayUMATemplateZombieMale">
+            <property name="Archetype" value="FuriousRamsayJimZombie" />
+			<property name="WalkType" value="7"/>
+			<property name="CanClimbVertical" value="false"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAEmmaSurvivor" extends="FuriousRamsayUMATemplateSurvivorFemale">
+            <property name="Archetype" value="FuriousRamsayEmma" />
+			<property name="WalkType" value="2"/>
+            <property name="Mass" value="155" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAEmmaZombie" extends="FuriousRamsayUMATemplateZombieFemale">
+            <property name="Archetype" value="FuriousRamsayEmmaZombie" />
+			<property name="WalkType" value="2"/>
+            <property name="Mass" value="155" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAMikeSurvivor" extends="FuriousRamsayUMATemplateSurvivorMale">
+            <property name="Archetype" value="FuriousRamsayMike" />
+            <property name="Mass" value="235" />
+			<property name="WalkType" value="5"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAMikeZombie" extends="FuriousRamsayUMATemplateZombieMale">
+            <property name="Archetype" value="FuriousRamsayMikeZombie" />
+            <property name="Mass" value="235" />
+			<property name="WalkType" value="5"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAMariaSurvivor" extends="FuriousRamsayUMATemplateSurvivorFemale">
+            <property name="Archetype" value="FuriousRamsayMaria" />
+			<property name="WalkType" value="7"/>
+            <property name="Mass" value="155" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAMariaZombie" extends="FuriousRamsayUMATemplateZombieFemale">
+            <property name="Archetype" value="FuriousRamsayMariaZombie" />
+			<property name="WalkType" value="7"/>
+            <property name="Mass" value="155" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAGabrielleEnemy" extends="FuriousRamsayUMATemplateEnemyFemale">
+            <property name="Archetype" value="FuriousRamsayGabrielle" />
+			<property name="WalkType" value="6"/>
+            <property name="Mass" value="245" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAGabrielleZombie" extends="FuriousRamsayUMATemplateZombieFemale">
+            <property name="Archetype" value="FuriousRamsayGabrielleZombie" />
+			<property name="WalkType" value="6"/>
+            <property name="Mass" value="245" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAAidenEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
+            <property name="Archetype" value="FuriousRamsayAiden" />
+			<property name="WalkType" value="3"/>
+            <property name="Mass" value="225" />
+        </entity_class>
+		
+        <entity_class name="FuriousRamsayUMAAidenZombie" extends="FuriousRamsayUMATemplateZombieMale">
+            <property name="Archetype" value="FuriousRamsayAidenZombie" />
+			<property name="WalkType" value="3"/>
+            <property name="Mass" value="225" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMACharlotteEnemy" extends="FuriousRamsayUMATemplateEnemyFemale">
+            <property name="Archetype" value="FuriousRamsayCharlotte" />
+            <property name="Mass" value="170" />
+            <property name="PainResistPerHit" value=".50" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMACharlotteZombie" extends="FuriousRamsayUMATemplateZombieFemale">
+            <property name="Archetype" value="FuriousRamsayCharlotteZombie" />
+            <property name="Mass" value="170" />
+            <property name="PainResistPerHit" value=".50" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAWillieEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
+            <property name="Archetype" value="FuriousRamsayWillie" />
+            <property name="Mass" value="255" />
+            <property name="PainResistPerHit" value=".55" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAWillieZombie" extends="FuriousRamsayUMATemplateZombieMale">
+            <property name="Archetype" value="FuriousRamsayWillieZombie" />
+            <property name="Mass" value="255" />
+            <property name="PainResistPerHit" value=".55" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAHodorEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
+            <property name="Archetype" value="FuriousRamsayHodor" />
+            <property name="Mass" value="725" />
+			<property name="WalkType" value="1"/> 
+			<property name="ExperienceGain" value="750"/>
+            <property name="PainResistPerHit" value=".50" />
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddParticlesEnemy"/>				
+				<passive_effect name="HealthMax" operation="base_set" value="100"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+			</effect_group>		
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAHodorZombie" extends="FuriousRamsayUMATemplateZombieMale">
+            <property name="Archetype" value="FuriousRamsayHodorZombie" />
+            <property name="Mass" value="725" />
+			<property name="WalkType" value="1"/> 
+			<property name="ExperienceGain" value="750"/>
+            <property name="PainResistPerHit" value=".50" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARayahSurvivor" extends="FuriousRamsayUMATemplateSurvivorFemale">
+            <property name="Archetype" value="FuriousRamsayRayah" />
+			<property name="WalkType" value="2"/> 
+            <property name="Mass" value="225" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARayahZombie" extends="FuriousRamsayUMATemplateZombieFemale">
+            <property name="Archetype" value="FuriousRamsayRayahZombie" />
+			<property name="WalkType" value="2"/> 
+            <property name="Mass" value="225" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAKimEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
+            <property name="Archetype" value="FuriousRamsayKim" />
+            <property name="WalkType" value="3"/>
+            <property name="Mass" value="200" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAKimZombie" extends="FuriousRamsayUMATemplateZombieMale">
+            <property name="Archetype" value="FuriousRamsayKimZombie" />
+            <property name="WalkType" value="3"/>
+            <property name="Mass" value="200" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAJack" extends="FuriousRamsayUMATemplateEnemyMale">
+            <property name="Archetype" value="FuriousRamsayJack" />
+            <property name="Mass" value="300" />
+        </entity_class>
+		
+        <entity_class name="FuriousRamsayUMAClintEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
+            <property name="Archetype" value="FuriousRamsayClint" />
+            <property name="Mass" value="285" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAClintZombie" extends="FuriousRamsayUMATemplateZombieMale">
+            <property name="Archetype" value="FuriousRamsayClintZombie" />
+            <property name="Mass" value="285" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARoxyEnemy" extends="FuriousRamsayUMATemplateEnemyFemale">
+            <property name="Archetype" value="FuriousRamsayRoxy" />
+			<property name="WalkType" value="6"/>
+            <property name="Mass" value="225" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARoxyZombie" extends="FuriousRamsayUMATemplateZombieFemale">
+            <property name="Archetype" value="FuriousRamsayRoxyZombie" />
+			<property name="WalkType" value="6"/>
+            <property name="Mass" value="225" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAEarlSurvivor" extends="FuriousRamsayUMATemplateSurvivorMale">
+            <property name="Archetype" value="FuriousRamsayEarl" />
 			<property name="WalkType" value="1"/> 
             <property name="Mass" value="225" />
         </entity_class>
+
+        <entity_class name="FuriousRamsayUMAEarlZombie" extends="FuriousRamsayUMATemplateZombieMale">
+            <property name="Archetype" value="FuriousRamsayEarlZombie" />
+			<property name="WalkType" value="1"/> 
+            <property name="Mass" value="225" />
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddParticlesEnemy"/>				
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+			</effect_group>		
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARichieEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
+            <property name="Archetype" value="FuriousRamsayRichie" />
+
+            <property name="ExperienceGain" value="750" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="250" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARichieZombie" extends="FuriousRamsayUMATemplateZombieMale">
+            <property name="Archetype" value="FuriousRamsayRichieZombie" />
+
+            <property name="ExperienceGain" value="750" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="250" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
+            </effect_group>
+        </entity_class>
+
+			<!-- <property name="WalkType" value="8"/> crawling
+			<property name="CanClimbVertical" value="true"/> -->
 
 	</append>
 

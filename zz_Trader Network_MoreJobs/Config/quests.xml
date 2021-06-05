@@ -2,6 +2,54 @@
 
 	<insertAfter xpath="/quests/quest[@id='tier2_buried_supplies']">
 
+		<quest id="quest_FuriousRamsayTier1_Protect">
+			<property name="name_key" value="quest_FuriousRamsayProtect_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayProtect_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayProtect_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="easy"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayProtect_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayProtect_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayProtect_response"/>
+			<property name="login_rally_reset" value="true"/>
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayProtect_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="biome_filter_type" value="ExcludeBiome" />
+				<property name="biome_filter" value="wasteland" />
+				<property name="nav_object" value="quest" />
+			</objective>
+
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+
+			<objective type="ZombieKill" value="2" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor, FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMAClintEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy,FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy,FuriousRamsayUMAGabrielleEnemy" value="2" phase="3"/>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="3000"/>
+			<reward type="Item" id="casinoCoin" value="600"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestSchematics,groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestTools,groupQuestMedical" ischosen="true" value="1"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestCookedFoodsTier1" ischosen="true" isfixed="true" value="2"/>
+		</quest>
+
 		<quest id="challenge_FuriousRamsayGhostsTier1">
 			<property name="name_key" value="quest_FuriousRamsayGhostsTier1_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayGhostsTier1_subtitle"/>

@@ -4,6 +4,39 @@ qc_FuriousRamsayChallengeDesc,items,Quest - Challenge,A Challenge from the Trade
 
 cntVendingMachineTrader,blocks,Container,Trader Network Challenges
 
+FuriousRamsayUMAJimSurvivor,entityclasses,Entity,Trader Network Citizen
+FuriousRamsayUMAEmmaSurvivor,entityclasses,Entity,Trader Network Citizen
+FuriousRamsayUMAMikeSurvivor,entityclasses,Entity,Trader Network Citizen
+FuriousRamsayUMAMariaSurvivor,entityclasses,Entity,Trader Network Citizen
+FuriousRamsayUMARayahSurvivor,entityclasses,Entity,Trader Network Citizen
+FuriousRamsayUMAEarlSurvivor,entityclasses,Entity,Trader Network Citizen
+
+FuriousRamsayUMAAidenEnemy,entityclasses,Entity,Black Shield Bandit
+FuriousRamsayUMAHodorEnemy,entityclasses,Entity,Black Shield Bandit
+FuriousRamsayUMAClintEnemy,entityclasses,Entity,Black Shield Bandit
+FuriousRamsayUMARichieEnemy,entityclasses,Entity,Black Shield Bandit
+FuriousRamsayUMAWillieEnemy,entityclasses,Entity,Black Shield Bandit
+FuriousRamsayUMAKimEnemy,entityclasses,Entity,Black Shield Bandit
+FuriousRamsayUMACharlotteEnemy,entityclasses,Entity,Black Shield Bandit
+FuriousRamsayUMARoxyEnemy,entityclasses,Entity,Black Shield Bandit
+FuriousRamsayUMAGabrielleEnemy,entityclasses,Entity,Black Shield Bandit
+
+FuriousRamsayUMAJimZombie,entityclasses,Entity,Black Shield Zombie
+FuriousRamsayUMAEmmaZombie,entityclasses,Entity,Black Shield Zombie
+FuriousRamsayUMAMikeZombie,entityclasses,Entity,Black Shield Zombie
+FuriousRamsayUMAMariaZombie,entityclasses,Entity,Black Shield Zombie
+FuriousRamsayUMAGabrielleZombie,entityclasses,Entity,Black Shield Zombie
+FuriousRamsayUMAAidenZombie,entityclasses,Entity,Black Shield Zombie
+FuriousRamsayUMACharlotteZombie,entityclasses,Entity,Black Shield Zombie
+FuriousRamsayUMAWillieZombie,entityclasses,Entity,Black Shield Zombie
+FuriousRamsayUMAHodorZombie,entityclasses,Entity,Black Shield Zombie
+FuriousRamsayUMARayahZombie,entityclasses,Entity,Black Shield Zombie
+FuriousRamsayUMAKimZombie,entityclasses,Entity,Black Shield Zombie
+FuriousRamsayUMAClintZombie,entityclasses,Entity,Black Shield Zombie
+FuriousRamsayUMARoxyZombie,entityclasses,Entity,Black Shield Zombie
+FuriousRamsayUMAEarlZombie,entityclasses,Entity,Black Shield Zombie
+FuriousRamsayUMARichieZombie,entityclasses,Entity,Black Shield Zombie
+
 FuriousRamsayTrainerTier1,entityclasses,Entity,Horde Trainer
 FuriousRamsayTrainerTier2,entityclasses,Entity,Horde Trainer
 FuriousRamsayTrainerTier3,entityclasses,Entity,Horde Trainer
@@ -146,6 +179,12 @@ FuriousRamsayEnemyAndroid5,entityclasses,Entity,"Black Shield Battle Android"
 FuriousRamsayEnemyAndroid6,entityclasses,Entity,"Black Shield Battle Android"
 FuriousRamsayEnemyAndroid7,entityclasses,Entity,"Black Shield Battle Android"
 
+qc_FuriousRamsayTier1_Protect,items,Quest,Protect (Tier 1)
+qc_FuriousRamsayTier2_Protect,items,Quest,Protect (Tier 2)
+qc_FuriousRamsayTier3_Protect,items,Quest,Protect (Tier 3)
+qc_FuriousRamsayTier4_Protect,items,Quest,Protect (Tier 4)
+qc_FuriousRamsayTier5_Protect,items,Quest,Protect (Tier 5)
+
 qc_FuriousRamsayGhostsTier1,items,Challenge,Ghosts (Tier 1)
 qc_FuriousRamsayGhostsTier2,items,Challenge,Ghosts (Tier 2)
 qc_FuriousRamsayGhostsTier3,items,Challenge,Ghosts (Tier 3)
@@ -200,12 +239,20 @@ qc_FuriousRamsaySpawnAllyLionTier3Desc,items,Quest - Challenge,"A Trader Network
 qc_FuriousRamsaySpawnAllyBearTier4Desc,items,Quest - Challenge,"A Trader Network Dispatcher to call in a mechanical Bear prototype that knocks ennemies down via explosive damage.\n\nHas 3 minutes of power."
 qc_FuriousRamsaySpawnAllyNPCTier5Desc,items,Quest - Challenge,"A Trader Network Dispatcher to call in a mechanical Android prototype that stuns ennemies.\n\nHas 3 minutes of power."
 
+quest_FuriousRamsayProtect_subtitle,quests,Quests,"Protect"
+quest_FuriousRamsayProtect_description,quests,Quests,"The Trader wants me to protect some of the locals."
+quest_FuriousRamsayProtect_title,quests,Quests,"Protect"
+quest_FuriousRamsayProtect_offer,quests,Quests,"This one is a little tougher than usual. I've had a few courriers attempt it and they've all failed.\n\nI need you to retrieve some supplies from the [DECEA3]{poi.name}[-], but it seems like once the place is cleared out, more will come and you'll have to deal with them before you can fetch the supplies."
+quest_FuriousRamsayProtect_response,quests,Quests,Protect ([DECEA3]{poi.distance} {poi.direction}[-])
+quest_FuriousRamsayProtect_statement,quests,Quests,Protect the locals
+quest_FuriousRamsayProtect_completion,quests,Quests,"I wasn't sure you'd be up to the task, but I was definitely wrong about you.\n\nYou've proven yourself to be quite the survivor.\n\nHere's your reward, well earned."
+
 quest_FuriousRamsayClearhold_subtitle,quests,Quests,"Hold and Fetch"
 quest_FuriousRamsayClearhold_description,quests,Quests,"The Trader wants me to fetch some supplies with a promise of a good reward."
 quest_FuriousRamsayClearhold_title,quests,Quests,"Hold and Fetch"
 quest_FuriousRamsayClearhold_offer,quests,Quests,"This one is a little tougher than usual. I've had a few courriers attempt it and they've all failed.\n\nI need you to retrieve some supplies from the [DECEA3]{poi.name}[-], but it seems like once the place is cleared out, more will come and you'll have to deal with them before you can fetch the supplies."
 quest_FuriousRamsayClearhold_response,quests,Quests,Hold and Fetch ([DECEA3]{poi.distance} {poi.direction}[-])
-quest_FuriousRamsayClearhold_statement,quests,Quests,Bring back the shipment.
+quest_FuriousRamsayClearhold_statement,quests,Quests,Bring back the shipment
 quest_FuriousRamsayClearhold_completion,quests,Quests,"I wasn't sure you'd be up to the task, but I was definitely wrong about you.\n\nYou've proven yourself to be quite the survivor.\n\nHere's your reward, well earned."
 
 quest_FuriousRamsayMinihorde_subtitle,quests,Quests,"Mini Horde"
@@ -213,7 +260,7 @@ quest_FuriousRamsayMinihorde_description,quests,Quests,"The Trader wants me to g
 quest_FuriousRamsayMinihorde_title,quests,Quests,"Mini Horde"
 quest_FuriousRamsayMinihorde_offer,quests,Quests,"All of these zombies are bad for business.\n\nWe need your help with clearing the area from a number of them.\n\nIt'll help our courriers get through.\n\nYou may want to set up a bit of a defense before you draw them in."
 quest_FuriousRamsayMinihorde_response,quests,Quests,Mini Horde
-quest_FuriousRamsayMinihorde_statement,quests,Quests,Defeat the horde.
+quest_FuriousRamsayMinihorde_statement,quests,Quests,Defeat the horde
 quest_FuriousRamsayMinihorde_completion,quests,Quests,"Thank you so much.\n\nClearing the way for our courriers will help our entire trading network.\n\nPlease choose your reward."
 
 qc_FuriousRamsayGhostsTier1Desc,items,Quest - Challenge,"Help the Trader Network hunt down cloaked mechanical rabbit prototypes.\n\nThey don't care what happens to them."

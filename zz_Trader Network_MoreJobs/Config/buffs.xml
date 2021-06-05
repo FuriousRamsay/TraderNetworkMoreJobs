@@ -806,6 +806,22 @@
 				</effect_group>
 			</buff>
 
+			<buff name="IsHuman">
+				<stack_type value="ignore"/>
+				<duration value="0"/>
+				<effect_group name="IsHuman">
+					<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="IsHuman" value="2"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayAddBurningSmokeParticles" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="burntZombieSmoke" parent_transform="Spine1" local_offset="0,0,0"/>
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="burntZombieSmoke"/>
+				</effect_group>
+			</buff>
+
 		</append>		
 		
 </Config>
