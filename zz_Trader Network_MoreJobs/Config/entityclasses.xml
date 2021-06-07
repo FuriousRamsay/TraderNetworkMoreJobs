@@ -5,26 +5,26 @@
 
 	<set xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='LookAtAngle']/@value">0</set>
 
-	<setattribute xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='AITask-2']" name="data">class=EntityEnemyAnimal,20,EntityPlayer,5,EntityNPC,20</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='AITask-2']" name="data">class=EntityEnemyAnimal,20,EntityPlayer,5,EntitySurvivor,20</setattribute>
 
-	<setattribute xpath="/entity_classes/entity_class[@name='animalSnake']/property[@name='AITask-3']" name="data">class=EntityEnemyAnimal,20,EntityPlayer,15,EntityNPC,15</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalSnake']/property[@name='AITask-3']" name="data">class=EntityEnemyAnimal,20,EntityPlayer,15,EntitySurvivor,15</setattribute>
 
-	<setattribute xpath="/entity_classes/entity_class[@name='animalCoyote']/property[@name='AITask-4']" name="data">class=EntityEnemyAnimal,15,EntityAnimalRabbit,8,EntityPlayer,10</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalCoyote']/property[@name='AITask-4']" name="data">class=EntityEnemyAnimal,15,EntityAnimalRabbit,8,EntityPlayer,10,EntitySurvivor,10</setattribute>
 
-	<setattribute xpath="/entity_classes/entity_class[@name='animalWolf']/property[@name='AITask-4']" name="data">class=EntityEnemyAnimal,20,EntityPlayer,10,EntityZombie,20</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalWolf']/property[@name='AITask-4']" name="data">class=EntityEnemyAnimal,20,EntityPlayer,10,EntityZombie,20,EntitySurvivor,10</setattribute>
 
-	<setattribute xpath="/entity_classes/entity_class[@name='animalDireWolf']/property[@name='AITask-3']" name="data">class=EntityEnemyAnimal,30,EntityPlayer,15,EntityZombie,30</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalDireWolf']/property[@name='AITask-3']" name="data">class=EntityEnemyAnimal,30,EntityPlayer,15,EntityZombie,30,EntitySurvivor,15</setattribute>
 
-	<setattribute xpath="/entity_classes/entity_class[@name='animalMountainLion']/property[@name='AITask-5']" name="data">class=EntityEnemyAnimal,30,EntityPlayer,15,EntityZombie,20</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalMountainLion']/property[@name='AITask-5']" name="data">class=EntityEnemyAnimal,30,EntityPlayer,15,EntityZombie,20,EntitySurvivor,15</setattribute>
 
-	<setattribute xpath="/entity_classes/entity_class[@name='animalBear']/property[@name='AITask-4']" name="data">class=EntityEnemyAnimal,40,EntityPlayer,20,EntityZombie,30</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalBear']/property[@name='AITask-4']" name="data">class=EntityEnemyAnimal,40,EntityPlayer,20,EntityZombie,30,EntitySurvivor,20</setattribute>
 
-	<setattribute xpath="/entity_classes/entity_class[@name='animalZombieDog']/property[@name='AITask-3']" name="data">class=EntityEnemyAnimal,20,EntityPlayer,15,EntityNPC,15</setattribute>
-	<setattribute xpath="/entity_classes/entity_class[@name='animalZombieDog']/property[@name='AITarget-1']" name="data">class=EntityEnemyAnimal,EntityNPC,EntityPlayer</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalZombieDog']/property[@name='AITask-3']" name="data">class=EntityEnemyAnimal,20,EntityPlayer,15,EntitySurvivor,15</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalZombieDog']/property[@name='AITarget-1']" name="data">class=EntityEnemyAnimal,EntitySurvivor,EntityPlayer</setattribute>
 
-	<setattribute xpath="/entity_classes/entity_class[@name='animalZombieBear']/property[@name='AITask-5']" name="data">class=EntityEnemyAnimal,20,EntityPlayer,0,EntityNPC,0</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalZombieBear']/property[@name='AITask-5']" name="data">class=EntityEnemyAnimal,20,EntityPlayer,0,EntitySurvivor,0</setattribute>
 
-	<setattribute xpath="/entity_classes/entity_class[@name='animalBossGrace']/property[@name='AITask-4']" name="data">class=EntityEnemyAnimal,30,EntityPlayer,30,EntityZombie,10</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalBossGrace']/property[@name='AITask-4']" name="data">class=EntityEnemyAnimal,30,EntityPlayer,30,EntityZombie,10,EntitySurvivor,30</setattribute>
 
 	<append xpath="/entity_classes">		
 
@@ -66,14 +66,14 @@
 			<property name="AITask-2" value="DestroyArea"/>
 			<property name="AITask-3" value="Territorial"/>
 			<property name="AITask-4" value="ApproachDistraction"/>
-			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntitySurvivor,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
 			<property name="AITask-6" value="ApproachSpot"/>
 			<property name="AITask-7" value="Look"/>
 			<property name="AITask-8" value="Wander"/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityNPC,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntitySurvivor,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
-			<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityNPC,0,0"/>
+			<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntitySurvivor,0,0"/>
 
 			<property name="HandItem" value="meleeHandZombie01"/>
 		</entity_class>
@@ -277,7 +277,7 @@
 			<property name="AINoiseSeekDist" value="5"/>
 
 			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15,EntitySurvivor,15"/>
 			<property name="AITask-3" value="Look"/>
 			<property name="AITask-4" value="Wander"/>
 			<property name="AITask-5" value=""/>
@@ -503,7 +503,7 @@
 			<property name="AINoiseSeekDist" value="10"/>
 
 			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15,EntitySurvivor,15"/>
 			<property name="AITask-3" value="Look"/>
 			<property name="AITask-4" value="Wander"/>
 			<property name="AITask-5" value=""/>
@@ -659,7 +659,7 @@
 			<property name="AINoiseSeekDist" value="10"/>
 
 			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15,EntitySurvivor,15"/>
 			<property name="AITask-3" value="Look"/>
 			<property name="AITask-4" value="Wander"/>
 			<property name="AITask-5" value=""/>
@@ -751,7 +751,7 @@
 			<property name="AINoiseSeekDist" value="15"/>
 
 			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15,EntitySurvivor,15"/>
 			<property name="AITask-3" value="Look"/>
 			<property name="AITask-4" value="Wander"/>
 			<property name="AITask-5" value=""/>
@@ -759,7 +759,7 @@
 			<property name="AITask-7" value=""/>
 			<property name="AITask-8" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntityEnemyAnimal,15,15"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntityEnemyAnimal,15,15,EntitySurvivor,15,15"/>
 			<property name="AITarget-3" value=""/>
 			<property name="AITarget-4" value=""/>
 			<property name="AITarget-5" value=""/>
@@ -871,7 +871,7 @@
 			<property name="AINoiseSeekDist" value="20"/>
 
 			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntityEnemyAnimal,10"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntityEnemyAnimal,10,EntitySurvivor,10"/>
 			<property name="AITask-3" value="Look"/>
 			<property name="AITask-4" value="Wander"/>
 			<property name="AITask-5" value=""/>
@@ -879,7 +879,7 @@
 			<property name="AITask-7" value=""/>
 			<property name="AITask-8" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,20,20,EntityEnemyAnimal,20,20"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,20,20,EntityEnemyAnimal,20,20,EntitySurvivor,20,20"/>
 			<property name="AITarget-3" value=""/>
 			<property name="AITarget-4" value=""/>
 			<property name="AITarget-5" value=""/>
@@ -991,7 +991,7 @@
 			<property name="AINoiseSeekDist" value="25"/>
 
 			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntityEnemyAnimal,10"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntityEnemyAnimal,10,EntitySurvivor,10"/>
 			<property name="AITask-3" value="Look"/>
 			<property name="AITask-4" value="Wander"/>
 			<property name="AITask-5" value=""/>
@@ -999,7 +999,7 @@
 			<property name="AITask-7" value=""/>
 			<property name="AITask-8" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25,EntitySurvivor,25,25"/>
 			<property name="AITarget-3" value=""/>
 			<property name="AITarget-4" value=""/>
 			<property name="AITarget-5" value=""/>
@@ -1111,7 +1111,7 @@
 			<property name="AINoiseSeekDist" value="25"/>
 
 			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntityEnemyAnimal,10"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntityEnemyAnimal,10,EntitySurvivor,10"/>
 			<property name="AITask-3" value="Look"/>
 			<property name="AITask-4" value="Wander"/>
 			<property name="AITask-5" value=""/>
@@ -1119,7 +1119,7 @@
 			<property name="AITask-7" value=""/>
 			<property name="AITask-8" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25,EntitySurvivor,25,25"/>
 			<property name="AITarget-3" value=""/>
 			<property name="AITarget-4" value=""/>
 			<property name="AITarget-5" value=""/>
@@ -1252,7 +1252,7 @@
 			<property name="AINoiseSeekDist" value="25"/>
 
 			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntityEnemyAnimal,10"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntityEnemyAnimal,10,EntitySurvivor,10"/>
 			<property name="AITask-3" value="Look"/>
 			<property name="AITask-4" value="Wander"/>
 			<property name="AITask-5" value=""/>
@@ -1260,7 +1260,7 @@
 			<property name="AITask-7" value=""/>
 			<property name="AITask-8" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25,EntitySurvivor,25,25"/>
 			<property name="AITarget-3" value=""/>
 			<property name="AITarget-4" value=""/>
 			<property name="AITarget-5" value=""/>
@@ -1385,7 +1385,7 @@
 			<property name="AINoiseSeekDist" value="25"/>
 
 			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntityEnemyAnimal,10"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntityEnemyAnimal,10,EntitySurvivor,10"/>
 			<property name="AITask-3" value="Look"/>
 			<property name="AITask-4" value="Wander"/>
 			<property name="AITask-5" value=""/>
@@ -1393,7 +1393,7 @@
 			<property name="AITask-7" value=""/>
 			<property name="AITask-8" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25,EntitySurvivor,25,25"/>
 			<property name="AITarget-3" value=""/>
 			<property name="AITarget-4" value=""/>
 			<property name="AITarget-5" value=""/>
@@ -1936,6 +1936,7 @@
 			<property name="SizeScale" value="1.1"/>
 			<property name="Tags" value="entity,robot"/>
 			<property name="Class" value="EntityEnemyAnimal"/>
+            <property name="Class" value="EntitySurvivor" />
 			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/junkturret/material/junkTurret.mat"/>
 			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/melee/junksledge/materials/junkSledge.mat"/>
 			<property name="ModelType" value="Standard"/>
@@ -1972,7 +1973,7 @@
 
 			<property name="RotateToGround" value="true"/>
 			<property name="AIGroupCircle" value="1"/>
-			<property name="LookAtAngle" value="60"/>
+			<property name="LookAtAngle" value="0"/>
 			<property name="MaxViewAngle" value="360"/>
 			<property name="SightRange" value="200"/> 
 			<property name="AINoiseSeekDist" value="200"/>
@@ -2106,7 +2107,7 @@
 			<property name="AITask-1" value="Leap"/>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="RunawayWhenHurt"/>
-			<property name="AITask-3" value="RunawayFromEntity" data="class=EntityPlayer,EntityZombie,EntityEnemyAnimal;safeDistance=8"/>
+			<property name="AITask-3" value="RunawayFromEntity" data="class=EntityPlayer,EntityZombie,EntityEnemyAnimal,EntitySurvivor;safeDistance=8"/>
 			<property name="AITask-4" value="Look"/>
 			<property name="AITask-5" value="Wander"/>
 			<property name="AITask-6" value=""/>
@@ -2235,13 +2236,13 @@
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=2;duration=2"/>
 			<property name="AITask-3" value="ApproachSpot"/>
-			<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15"/>
+			<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15,EntitySurvivor,15"/>
 			<property name="AITask-5" value="Look"/>
 			<property name="AITask-6" value="Wander"/>
 			<property name="AITask-7" value=""/>
 			<property name="AITask-8" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25,EntitySurvivor,25,25"/>
 			<property name="AITarget-3" value=""/>
 			<property name="AITarget-4" value=""/>
 			<property name="AITarget-5" value=""/>
@@ -2285,13 +2286,13 @@
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=2;duration=2"/>
 			<property name="AITask-3" value="ApproachSpot"/>
-			<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15"/>
+			<property name="AITask-4" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15,EntitySurvivor,15"/>
 			<property name="AITask-5" value="Look"/>
 			<property name="AITask-6" value="Wander"/>
 			<property name="AITask-7" value=""/>
 			<property name="AITask-8" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25,EntitySurvivor,25,25"/>
 			<property name="AITarget-3" value=""/>
 			<property name="AITarget-4" value=""/>
 			<property name="AITarget-5" value=""/>
@@ -2331,7 +2332,7 @@
 			<property name="SoundSense" value="zombiemaleroam"/>
 
 			<property name="AITask-1" value="BreakBlock"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15,EntitySurvivor,15"/>
 			<property name="AITask-3" value="ApproachSpot"/>
 			<property name="AITask-4" value="Look"/>
 			<property name="AITask-5" value="Wander"/>
@@ -2339,7 +2340,7 @@
 			<property name="AITask-7" value=""/>
 			<property name="AITask-8" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25,EntitySurvivor,25,25"/>
 			<property name="AITarget-3" value=""/>
 			<property name="AITarget-4" value=""/>
 			<property name="AITarget-5" value=""/>
@@ -2445,14 +2446,14 @@
 
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="Leap"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15,EntitySurvivor,15"/>
 			<property name="AITask-4" value="ApproachDistraction"/>
 			<property name="AITask-5" value="Look"/>
 			<property name="AITask-6" value="Wander"/>
 			<property name="AITask-7" value="BreakBlock"/>
 			<property name="AITask-8" value="DestroyArea"/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25,EntitySurvivor,25,25"/>
 			<property name="AITarget-3" value=""/>
 			<property name="AITarget-4" value=""/>
 			<property name="AITarget-5" value=""/>
@@ -2528,6 +2529,7 @@
 		</entity_class>
 
         <entity_class name="FuriousRamsayUMATemplateMale" extends="zombieTemplateMale">
+			<property name="HideInSpawnMenu" value="true"/>
             <property name="Tags" value="entity" />
 			<property name="EntityType" value="Zombie"/>
             <property name="Mesh" value="#Entities/Zombies?Zombies/zombie01Ragdoll.prefab" />
@@ -2547,7 +2549,16 @@
             <property name="Mass" value="235" />
 			<property name="WalkType" value="7"/>
 			<property name="AIPathCostScale" value=".9, 1"/>
-			<property name="LookAtAngle" value="60"/> 
+
+			<property name="NavObject" value="FuriousRamsayHunted"/>
+
+			<property name="AIGroupCircle" value="1"/>
+			<property name="LookAtAngle" value="60"/>
+			<property name="MaxViewAngle" value="360"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="AIPathCostScale" value=".15, .4"/>
+			<property name="SightLightThreshold" value="-2,-2"/>
 
 			<property class="FallLandBehavior">
 				<property name="1None" data="anim=None;height=0,1;weight=0.4"/>
@@ -2610,9 +2621,6 @@
 			<property name="HeadExplosionDamageMultiplier" value="1"/>
 			<property name="ChestExplosionDamageMultiplier" value="1"/>
 			<property name="PainResistPerHit" value=".5"/>		
-			<property name="MaxViewAngle" value="180"/>
-			<property name="SightRange" value="50"/>
-			<property name="SightLightThreshold" value="-2,150"/> 
 			<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> 
 			<property name="SleeperWakeupSightDetectionMax" value="340,480"/> 
 			<property name="SleeperSenseSightDetectionMin" value="-10,0"/> 
@@ -2637,21 +2645,23 @@
 			<property name="PushFactor" value="10"/>
 			<property name="TimeStayAfterDeath" value="5"/>
 
-			<property name="AITask-1" value=""/>
-			<property name="AITask-2" value=""/>
-			<property name="AITask-3" value=""/>
-			<property name="AITask-4" value=""/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15,EntityEnemyAnimal,15"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="Wander"/>
+			<property name="AITask-6" value="BreakBlock"/>
+			<property name="AITask-7" value="DestroyArea"/>
 			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value=""/>
-			<property name="AITarget-2" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntitySurvivor,25,25,EntityEnemyAnimal,25,25"/>
 			<property name="AITarget-3" value=""/>
 			<property name="AITarget-4" value=""/>
+			<property name="AITarget-5" value=""/>
         </entity_class>
 		
         <entity_class name="FuriousRamsayUMATemplateZombieMale" extends="FuriousRamsayUMATemplateMale">
+			<property name="HideInSpawnMenu" value="true"/>
             <property name="Tags" value="entity,zombie,walker" />
 
 			<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
@@ -2672,33 +2682,38 @@
 
         <entity_class name="FuriousRamsayUMATemplateSurvivorMale" extends="FuriousRamsayUMATemplateMale">
 		<!--Survivors: Earl, Jim, Mike -->
-            <property name="Class" value="EntityEnemyAnimal" />
+			<property name="HideInSpawnMenu" value="true"/>
+            <property name="Class" value="EntitySurvivor" />
             <property name="HandItem" value="meleeHandHumanTemplateSurvivor" />
 
-			<property name="AIGroupCircle" value="1"/>
-			<property name="LookAtAngle" value="60"/>
-			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="200"/> 
-			<property name="AINoiseSeekDist" value="200"/>
-			<property name="AIPathCostScale" value=".15, .4"/>
-			<property name="SightLightThreshold" value="-2,-2"/>
+			<property name="NavObject" value="FuriousRamsayMechanicalAlly"/>
 
 			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,10,EntityZombie,5"/>
-			<property name="AITask-4" value="Look"/>
-			<property name="AITask-5" value="ApproachDistraction"/>
-			<property name="AITask-6" value="Wander"/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value=""/>
-			<property name="AITarget-3" value=""/>
+			<property name="AITask-2" value="ApproachSpot" data="class=EntityPlayer,200,200"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,20,EntityZombie,20"/>
+			<property name="AITask-4" value="ApproachDistraction"/>
+			<property name="AITask-5" value="Look"/>
+			<property name="AITask-6" value="BreakBlock"/>
+			<property name="AITask-7" value="DestroyArea"/>
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITask-9" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAnimalStag,EntityZombie"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityAnimalStag,100,100,EntityZombie,80,80"/>
 			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
+		
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="125" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMATemplateEnemyMale" extends="FuriousRamsayUMATemplateMale">
 		<!--Enemies: Aiden, Hodor, Clint, Richie, Willie, Kim -->
+			<property name="HideInSpawnMenu" value="true"/>
 			<property name="SoundRandom" value="malehateroam"/>
 			<property name="SoundAlert" value="malehatealert"/>
 			<property name="SoundSense" value="malehatesense"/>
@@ -2706,56 +2721,87 @@
 			<property name="SoundDeath" value="malehatedeath"/>
 			<property name="SoundAttack" value="malehateattack"/>			
 
-			<property name="AIGroupCircle" value="1"/>
-			<property name="LookAtAngle" value="60"/>
-			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="200"/> 
-			<property name="AINoiseSeekDist" value="200"/>
-			<property name="AIPathCostScale" value=".15, .4"/>
-			<property name="SightLightThreshold" value="-2,-2"/>
-
             <property name="HandItem" value="meleeHandHumanTemplateEnemy" />
-
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15"/>
-			<property name="AITask-3" value="ApproachDistraction"/>
-			<property name="AITask-4" value="Look"/>
-			<property name="AITask-5" value="Wander"/>
-			<property name="AITask-6" value="BreakBlock"/>
-			<property name="AITask-7" value="DestroyArea"/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
-			
-			<property name="AITask-1" value=""/>
-			<property name="AITask-2" value=""/>
-			<property name="AITask-3" value=""/>
-			<property name="AITask-4" value=""/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value=""/>
-			<property name="AITarget-2" value=""/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-
+	
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="150" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="25" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMATemplateZombieMale" extends="FuriousRamsayUMATemplateMale">
-
+			<property name="HideInSpawnMenu" value="true"/>
 			<property name="SoundRandom" value="zombiemaleroam"/>
 			<property name="SoundAlert" value="zombiemalealert"/>
 			<property name="SoundAttack" value="zombiemaleattack"/>
 			<property name="SoundHurt" value="zombiemalepain"/>
 			<property name="SoundDeath" value="zombiemaledeath"/>
 			<property name="SoundSense" value="zombiemalesense"/>
+
+            <property name="HandItem" value="meleeHandHumanTemplateZombie" />
+			
+            <property name="ExperienceGain" value="750" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="250" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateZombieFeralMale" extends="FuriousRamsayUMATemplateMale">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="SoundRandom" value="zombiemaleroam"/>
+			<property name="SoundAlert" value="zombiemalealert"/>
+			<property name="SoundAttack" value="zombiemaleattack"/>
+			<property name="SoundHurt" value="zombiemalepain"/>
+			<property name="SoundDeath" value="zombiemaledeath"/>
+			<property name="SoundSense" value="zombiemalesense"/>
+
+            <property name="HandItem" value="meleeHandHumanTemplateZombieFeral" />
+			
+            <property name="ExperienceGain" value="1250" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="450" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateZombieRageMale" extends="FuriousRamsayUMATemplateMale">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="SoundRandom" value="zombiemaleroam"/>
+			<property name="SoundAlert" value="zombiemalealert"/>
+			<property name="SoundAttack" value="zombiemaleattack"/>
+			<property name="SoundHurt" value="zombiemalepain"/>
+			<property name="SoundDeath" value="zombiemaledeath"/>
+			<property name="SoundSense" value="zombiemalesense"/>
+
+            <property name="HandItem" value="meleeHandHumanTemplateZombieRage" />
+
+			<property name="CanClimbVertical" value="true"/>
+			
+            <property name="ExperienceGain" value="1750" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="850" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMATemplateFemale" extends="FuriousRamsayUMATemplateMale">
+			<property name="HideInSpawnMenu" value="true"/>
             <property name="Mass" value="130" />
             <property name="Weight" value="200" />
 
@@ -2779,33 +2825,38 @@
 
         <entity_class name="FuriousRamsayUMATemplateSurvivorFemale" extends="FuriousRamsayUMATemplateFemale">
 		<!-- Survivors: Emma, Maria, Rayah -->
-            <property name="Class" value="EntityEnemyAnimal" />
+			<property name="HideInSpawnMenu" value="true"/>
+            <property name="Class" value="EntitySurvivor" />
             <property name="HandItem" value="meleeHandHumanTemplateSurvivor" />
 
-			<property name="AIGroupCircle" value="1"/>
-			<property name="LookAtAngle" value="60"/>
-			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="200"/> 
-			<property name="AINoiseSeekDist" value="200"/>
-			<property name="AIPathCostScale" value=".15, .4"/>
-			<property name="SightLightThreshold" value="-2,-2"/>
+			<property name="NavObject" value="FuriousRamsayMechanicalAlly"/>
 
 			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,10,EntityZombie,5"/>
-			<property name="AITask-4" value="Look"/>
-			<property name="AITask-5" value="ApproachDistraction"/>
-			<property name="AITask-6" value="Wander"/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value=""/>
-			<property name="AITarget-3" value=""/>
+			<property name="AITask-2" value="ApproachSpot" data="class=EntityPlayer,200,200"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,20,EntityZombie,20"/>
+			<property name="AITask-4" value="ApproachDistraction"/>
+			<property name="AITask-5" value="Look"/>
+			<property name="AITask-6" value="BreakBlock"/>
+			<property name="AITask-7" value="DestroyArea"/>
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITask-9" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAnimalStag,EntityZombie"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityAnimalStag,100,100,EntityZombie,80,80"/>
 			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
+			
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="125" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMATemplateEnemyFemale" extends="FuriousRamsayUMATemplateFemale">
 		<!--Enemies: Charlotte, Roxy, Gabrielle -->
+			<property name="HideInSpawnMenu" value="true"/>
 			<property name="SoundRandom" value=""/>
 			<property name="SoundAlert" value=""/>
 			<property name="SoundSense" value="Player_Female/femalehatesense"/>
@@ -2813,46 +2864,19 @@
 			<property name="SoundDeath" value="Player_Female/femalehatedeath"/>
 			<property name="SoundAttack" value="Player_Female/femalehateattack"/>			
 
-			<property name="AIGroupCircle" value="1"/>
-			<property name="LookAtAngle" value="60"/>
-			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="200"/> 
-			<property name="AINoiseSeekDist" value="200"/>
-			<property name="AIPathCostScale" value=".15, .4"/>
-			<property name="SightLightThreshold" value="-2,-2"/>
-
             <property name="HandItem" value="meleeHandHumanTemplateEnemy" />
 
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15"/>
-			<property name="AITask-3" value="ApproachDistraction"/>
-			<property name="AITask-4" value="Look"/>
-			<property name="AITask-5" value="Wander"/>
-			<property name="AITask-6" value="BreakBlock"/>
-			<property name="AITask-7" value="DestroyArea"/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
-			
-			<property name="AITask-1" value=""/>
-			<property name="AITask-2" value=""/>
-			<property name="AITask-3" value=""/>
-			<property name="AITask-4" value=""/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value=""/>
-			<property name="AITarget-2" value=""/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="150" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="25" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMATemplateZombieFemale" extends="FuriousRamsayUMATemplateFemale">
+			<property name="HideInSpawnMenu" value="true"/>
             <property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam" />
             <property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert" />
             <property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack" />
@@ -2860,72 +2884,140 @@
             <property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath" />
             <property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense" />
 
+            <property name="HandItem" value="meleeHandHumanTemplateZombie" />
+			
+			<property name="CanClimbVertical" value="true"/>
+			
+            <property name="ExperienceGain" value="750" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="250" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+		
+        <entity_class name="FuriousRamsayUMATemplateZombieFeralFemale" extends="FuriousRamsayUMATemplateFemale">
+			<property name="HideInSpawnMenu" value="true"/>
+            <property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam" />
+            <property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert" />
+            <property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack" />
+            <property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain" />
+            <property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath" />
+            <property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense" />
+
+            <property name="HandItem" value="meleeHandHumanTemplateZombieFeral" />
+			
+            <property name="ExperienceGain" value="1250" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="450" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateZombieRageFemale" extends="FuriousRamsayUMATemplateFemale">
+			<property name="HideInSpawnMenu" value="true"/>
 			<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
 			<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert"/>
 			<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack"/>
 			<property name="SoundHurt" value="Enemies/Base_Zombie_Female2/zombiefemale2pain"/>
 			<property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death"/>
 			<property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense"/>
+
+            <property name="HandItem" value="meleeHandHumanTemplateZombieRage" />
+
+			<property name="CanClimbVertical" value="true"/>
+			
+            <property name="ExperienceGain" value="1750" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="850" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAJimSurvivor" extends="FuriousRamsayUMATemplateSurvivorMale">
             <property name="Archetype" value="FuriousRamsayJim" />
-			<property name="WalkType" value="7"/>
-			<property name="CanClimbVertical" value="false"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAJimZombie" extends="FuriousRamsayUMATemplateZombieMale">
             <property name="Archetype" value="FuriousRamsayJimZombie" />
-			<property name="WalkType" value="7"/>
-			<property name="CanClimbVertical" value="false"/>
+			<property name="WalkType" value="8"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAJimZombieRage" extends="FuriousRamsayUMATemplateZombieRageMale">
+            <property name="Archetype" value="FuriousRamsayJimZombieLarge" />
+			<property name="WalkType" value="8"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAEmmaSurvivor" extends="FuriousRamsayUMATemplateSurvivorFemale">
             <property name="Archetype" value="FuriousRamsayEmma" />
-			<property name="WalkType" value="2"/>
-            <property name="Mass" value="155" />
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAEmmaZombie" extends="FuriousRamsayUMATemplateZombieFemale">
             <property name="Archetype" value="FuriousRamsayEmmaZombie" />
 			<property name="WalkType" value="2"/>
-            <property name="Mass" value="155" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAEmmaZombieRage" extends="FuriousRamsayUMATemplateZombieRageFemale">
+            <property name="Archetype" value="FuriousRamsayEmmaZombieLarge" />
+			<property name="WalkType" value="2"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAMikeSurvivor" extends="FuriousRamsayUMATemplateSurvivorMale">
             <property name="Archetype" value="FuriousRamsayMike" />
-            <property name="Mass" value="235" />
-			<property name="WalkType" value="5"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAMikeZombie" extends="FuriousRamsayUMATemplateZombieMale">
             <property name="Archetype" value="FuriousRamsayMikeZombie" />
-            <property name="Mass" value="235" />
+			<property name="WalkType" value="5"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAMikeZombieRage" extends="FuriousRamsayUMATemplateZombieRageMale">
+            <property name="Archetype" value="FuriousRamsayMikeZombieLarge" />
 			<property name="WalkType" value="5"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAMariaSurvivor" extends="FuriousRamsayUMATemplateSurvivorFemale">
             <property name="Archetype" value="FuriousRamsayMaria" />
-			<property name="WalkType" value="7"/>
-            <property name="Mass" value="155" />
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAMariaZombie" extends="FuriousRamsayUMATemplateZombieFemale">
             <property name="Archetype" value="FuriousRamsayMariaZombie" />
 			<property name="WalkType" value="7"/>
-            <property name="Mass" value="155" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAMariaZombieRage" extends="FuriousRamsayUMATemplateZombieRageFemale">
+            <property name="Archetype" value="FuriousRamsayMariaZombieLarge" />
+			<property name="WalkType" value="7"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAGabrielleEnemy" extends="FuriousRamsayUMATemplateEnemyFemale">
             <property name="Archetype" value="FuriousRamsayGabrielle" />
-			<property name="WalkType" value="6"/>
-            <property name="Mass" value="245" />
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAGabrielleZombie" extends="FuriousRamsayUMATemplateZombieFemale">
             <property name="Archetype" value="FuriousRamsayGabrielleZombie" />
 			<property name="WalkType" value="6"/>
-            <property name="Mass" value="245" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAGabrielleZombieFeral" extends="FuriousRamsayUMATemplateZombieFeralFemale">
+            <property name="Archetype" value="FuriousRamsayGabrielleZombie" />
+			<property name="WalkType" value="6"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAGabrielleZombieRage" extends="FuriousRamsayUMATemplateZombieRageFemale">
+            <property name="Archetype" value="FuriousRamsayGabrielleZombie" />
+			<property name="WalkType" value="6"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAAidenEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
@@ -2937,155 +3029,175 @@
         <entity_class name="FuriousRamsayUMAAidenZombie" extends="FuriousRamsayUMATemplateZombieMale">
             <property name="Archetype" value="FuriousRamsayAidenZombie" />
 			<property name="WalkType" value="3"/>
-            <property name="Mass" value="225" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAAidenZombieFeral" extends="FuriousRamsayUMATemplateZombieFeralMale">
+            <property name="Archetype" value="FuriousRamsayAidenZombie" />
+			<property name="WalkType" value="3"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAAidenZombieRage" extends="FuriousRamsayUMATemplateZombieRageMale">
+            <property name="Archetype" value="FuriousRamsayAidenZombie" />
+			<property name="WalkType" value="3"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMACharlotteEnemy" extends="FuriousRamsayUMATemplateEnemyFemale">
             <property name="Archetype" value="FuriousRamsayCharlotte" />
-            <property name="Mass" value="170" />
-            <property name="PainResistPerHit" value=".50" />
         </entity_class>
 
         <entity_class name="FuriousRamsayUMACharlotteZombie" extends="FuriousRamsayUMATemplateZombieFemale">
             <property name="Archetype" value="FuriousRamsayCharlotteZombie" />
-            <property name="Mass" value="170" />
-            <property name="PainResistPerHit" value=".50" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMACharlotteZombieFeral" extends="FuriousRamsayUMATemplateZombieFeralFemale">
+            <property name="Archetype" value="FuriousRamsayCharlotteZombie" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMACharlotteZombieRage" extends="FuriousRamsayUMATemplateZombieRageFemale">
+            <property name="Archetype" value="FuriousRamsayCharlotteZombie" />
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAWillieEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
             <property name="Archetype" value="FuriousRamsayWillie" />
-            <property name="Mass" value="255" />
-            <property name="PainResistPerHit" value=".55" />
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAWillieZombie" extends="FuriousRamsayUMATemplateZombieMale">
             <property name="Archetype" value="FuriousRamsayWillieZombie" />
-            <property name="Mass" value="255" />
-            <property name="PainResistPerHit" value=".55" />
+			<property name="WalkType" value="6"/>	
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAWillieZombieFeral" extends="FuriousRamsayUMATemplateZombieFeralMale">
+            <property name="Archetype" value="FuriousRamsayWillieZombie" />
+			<property name="WalkType" value="6"/>	
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAWillieZombieRage" extends="FuriousRamsayUMATemplateZombieRageMale">
+            <property name="Archetype" value="FuriousRamsayWillieZombie" />
+			<property name="WalkType" value="6"/>	
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAHodorEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
             <property name="Archetype" value="FuriousRamsayHodor" />
-            <property name="Mass" value="725" />
-			<property name="WalkType" value="1"/> 
-			<property name="ExperienceGain" value="750"/>
-            <property name="PainResistPerHit" value=".50" />
-
-			<effect_group name="Base Effects">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddParticlesEnemy"/>				
-				<passive_effect name="HealthMax" operation="base_set" value="100"/>
-				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
-				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
-			</effect_group>		
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAHodorZombie" extends="FuriousRamsayUMATemplateZombieMale">
             <property name="Archetype" value="FuriousRamsayHodorZombie" />
-            <property name="Mass" value="725" />
 			<property name="WalkType" value="1"/> 
-			<property name="ExperienceGain" value="750"/>
-            <property name="PainResistPerHit" value=".50" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAHodorZombieFeral" extends="FuriousRamsayUMATemplateZombieFeralMale">
+            <property name="Archetype" value="FuriousRamsayHodorZombie" />
+			<property name="WalkType" value="1"/> 
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAHodorZombieRage" extends="FuriousRamsayUMATemplateZombieRageMale">
+            <property name="Archetype" value="FuriousRamsayHodorZombie" />
+			<property name="WalkType" value="1"/> 
         </entity_class>
 
         <entity_class name="FuriousRamsayUMARayahSurvivor" extends="FuriousRamsayUMATemplateSurvivorFemale">
             <property name="Archetype" value="FuriousRamsayRayah" />
-			<property name="WalkType" value="2"/> 
-            <property name="Mass" value="225" />
         </entity_class>
 
         <entity_class name="FuriousRamsayUMARayahZombie" extends="FuriousRamsayUMATemplateZombieFemale">
             <property name="Archetype" value="FuriousRamsayRayahZombie" />
 			<property name="WalkType" value="2"/> 
-            <property name="Mass" value="225" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARayahZombieRage" extends="FuriousRamsayUMATemplateZombieRageFemale">
+            <property name="Archetype" value="FuriousRamsayRayahZombieLarge" />
+			<property name="WalkType" value="2"/> 
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAKimEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
             <property name="Archetype" value="FuriousRamsayKim" />
-            <property name="WalkType" value="3"/>
-            <property name="Mass" value="200" />
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAKimZombie" extends="FuriousRamsayUMATemplateZombieMale">
             <property name="Archetype" value="FuriousRamsayKimZombie" />
             <property name="WalkType" value="3"/>
-            <property name="Mass" value="200" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAKimZombieFeral" extends="FuriousRamsayUMATemplateZombieFeralMale">
+            <property name="Archetype" value="FuriousRamsayKimZombie" />
+            <property name="WalkType" value="3"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAKimZombieRage" extends="FuriousRamsayUMATemplateZombieRageMale">
+            <property name="Archetype" value="FuriousRamsayKimZombie" />
+            <property name="WalkType" value="3"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAJack" extends="FuriousRamsayUMATemplateEnemyMale">
             <property name="Archetype" value="FuriousRamsayJack" />
-            <property name="Mass" value="300" />
         </entity_class>
 		
         <entity_class name="FuriousRamsayUMAClintEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
             <property name="Archetype" value="FuriousRamsayClint" />
-            <property name="Mass" value="285" />
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAClintZombie" extends="FuriousRamsayUMATemplateZombieMale">
             <property name="Archetype" value="FuriousRamsayClintZombie" />
-            <property name="Mass" value="285" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAClintZombieFeral" extends="FuriousRamsayUMATemplateZombieFeralMale">
+            <property name="Archetype" value="FuriousRamsayClintZombie" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAClintZombieRage" extends="FuriousRamsayUMATemplateZombieRageMale">
+            <property name="Archetype" value="FuriousRamsayClintZombie" />
         </entity_class>
 
         <entity_class name="FuriousRamsayUMARoxyEnemy" extends="FuriousRamsayUMATemplateEnemyFemale">
             <property name="Archetype" value="FuriousRamsayRoxy" />
-			<property name="WalkType" value="6"/>
-            <property name="Mass" value="225" />
         </entity_class>
 
         <entity_class name="FuriousRamsayUMARoxyZombie" extends="FuriousRamsayUMATemplateZombieFemale">
             <property name="Archetype" value="FuriousRamsayRoxyZombie" />
 			<property name="WalkType" value="6"/>
-            <property name="Mass" value="225" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARoxyZombieFeral" extends="FuriousRamsayUMATemplateZombieFeralFemale">
+            <property name="Archetype" value="FuriousRamsayRoxyZombie" />
+			<property name="WalkType" value="6"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARoxyZombieRage" extends="FuriousRamsayUMATemplateZombieRageFemale">
+            <property name="Archetype" value="FuriousRamsayRoxyZombie" />
+			<property name="WalkType" value="6"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAEarlSurvivor" extends="FuriousRamsayUMATemplateSurvivorMale">
             <property name="Archetype" value="FuriousRamsayEarl" />
-			<property name="WalkType" value="1"/> 
-            <property name="Mass" value="225" />
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAEarlZombie" extends="FuriousRamsayUMATemplateZombieMale">
             <property name="Archetype" value="FuriousRamsayEarlZombie" />
 			<property name="WalkType" value="1"/> 
-            <property name="Mass" value="225" />
+        </entity_class>
 
-			<effect_group name="Base Effects">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddParticlesEnemy"/>				
-				<passive_effect name="HealthMax" operation="base_set" value="500"/>
-				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
-				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
-			</effect_group>		
+        <entity_class name="FuriousRamsayUMAEarlZombieRage" extends="FuriousRamsayUMATemplateZombieRageMale">
+            <property name="Archetype" value="FuriousRamsayEarlZombieLarge" />
+			<property name="WalkType" value="1"/> 
         </entity_class>
 
         <entity_class name="FuriousRamsayUMARichieEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
             <property name="Archetype" value="FuriousRamsayRichie" />
-
-            <property name="ExperienceGain" value="750" />
-
-            <effect_group name="Base Effects">
-                <passive_effect name="HealthMax" operation="base_set" value="250" />
-                <passive_effect name="HealthMax" operation="perc_set" value="1" />
-                <passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
-            </effect_group>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMARichieZombie" extends="FuriousRamsayUMATemplateZombieMale">
             <property name="Archetype" value="FuriousRamsayRichieZombie" />
-
-            <property name="ExperienceGain" value="750" />
-
-            <effect_group name="Base Effects">
-                <passive_effect name="HealthMax" operation="base_set" value="250" />
-                <passive_effect name="HealthMax" operation="perc_set" value="1" />
-                <passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
-            </effect_group>
         </entity_class>
 
-			<!-- <property name="WalkType" value="8"/> crawling
-			<property name="CanClimbVertical" value="true"/> -->
+        <entity_class name="FuriousRamsayUMARichieZombieFeral" extends="FuriousRamsayUMATemplateZombieFeralMale">
+            <property name="Archetype" value="FuriousRamsayRichieZombie" />
+        </entity_class>
 
+        <entity_class name="FuriousRamsayUMARichieZombieRage" extends="FuriousRamsayUMATemplateZombieRageMale">
+            <property name="Archetype" value="FuriousRamsayRichieZombieLarge" />
+        </entity_class>
+
+				<!--<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddBurningSmokeParticles"/>				-->
 	</append>
 
 </configs>

@@ -33,12 +33,29 @@
 				<property name="nav_object" value="rally" />
 			</objective>
 
-			<objective type="ZombieKill" value="2" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor, FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMAClintEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy,FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy,FuriousRamsayUMAGabrielleEnemy" value="2" phase="3"/>
+			<objective type="ZombieKill" value="1" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMAClintEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="3">
+				<property name="delay" value="3"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="3">
+				<property name="delay" value="6"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy,FuriousRamsayUMAGabrielleEnemy" value="1" phase="3">
+				<property name="delay" value="9"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="3">
+				<property name="delay" value="12"/>
+			</action>
+			<objective type="ZombieKill" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMAClintEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy,FuriousRamsayUMAGabrielleEnemy" value="1" phase="4"/>
+			<objective type="ZombieKill" value="2" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMAClintEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy,FuriousRamsayUMAGabrielleEnemy" value="1" phase="5"/>
 
 			<objective type="InteractWithNPC">
-				<property name="phase" value="4"/>
+				<property name="phase" value="6"/>
 				<property name="nav_object" value="return_to_trader" />
 			</objective>
 
