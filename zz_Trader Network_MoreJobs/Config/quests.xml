@@ -8,13 +8,13 @@
 			<property name="description_key" value="quest_FuriousRamsayProtect_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
 			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
 			<property name="category_key" value="quest"/>
 			<property name="difficulty" value="easy"/>
 			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="quest_FuriousRamsayProtect_offer"/>
 			<property name="statement_key" value="quest_FuriousRamsayProtect_statement"/>
 			<property name="response_key" value="quest_FuriousRamsayProtect_response"/>
-			<property name="login_rally_reset" value="true"/>
 			
 			<property name="completiontype" value="TurnIn"/>
 			<property name="completion_key" value="quest_FuriousRamsayProtect_completion"/>
@@ -33,37 +33,48 @@
 				<property name="nav_object" value="rally" />
 			</objective>
 
-			<objective type="ZombieKill" value="1" phase="3"/>
+			<objective type="Time" value="10" phase="3"/>
 			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMAClintEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="3">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="4">
 				<property name="delay" value="3"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="3">
+			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy,FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="1" phase="4">
+				<property name="delay" value="5"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="4">
+				<property name="delay" value="8"/>
+			</action>
+			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy,FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="1" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="1" phase="5">
+				<property name="delay" value="5"/>
+			</action>
+			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy,FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="2" phase="6"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="6"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="1" phase="6">
+				<property name="delay" value="5"/>
+			</action>
+			<objective type="ZombieKill" id="FuriousRamsayUMAClintEnemy,FuriousRamsayUMAGabrielleEnemy" value="1" phase="7"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAClintEnemy" value="1" phase="7"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
+				<property name="delay" value="3"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAGabrielleEnemy" value="1" phase="7">
 				<property name="delay" value="6"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy,FuriousRamsayUMAGabrielleEnemy" value="1" phase="3">
-				<property name="delay" value="9"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="3">
-				<property name="delay" value="12"/>
-			</action>
-			<objective type="ZombieKill" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMAClintEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy,FuriousRamsayUMAGabrielleEnemy" value="1" phase="4"/>
-			<objective type="ZombieKill" value="2" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMAClintEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy,FuriousRamsayUMAGabrielleEnemy" value="1" phase="5"/>
 
 			<objective type="InteractWithNPC">
-				<property name="phase" value="6"/>
+				<property name="phase" value="8"/>
 				<property name="nav_object" value="return_to_trader" />
 			</objective>
 
 			<reward type="Exp" value="3000"/>
 			<reward type="Item" id="casinoCoin" value="600"/>
 			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
-			<reward type="LootItem" id="groupQuestSchematics,groupQuestMods" ischosen="true" isfixed="true" value="1"/>
-			<reward type="LootItem" id="groupQuestArmor,groupQuestTools,groupQuestMedical" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestTools" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestMedical" ischosen="true" value="1"/>
 			<reward type="LootItem" id="FuriousRamsayGroupQuestCookedFoodsTier1" ischosen="true" isfixed="true" value="2"/>
 		</quest>
 

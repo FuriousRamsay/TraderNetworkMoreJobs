@@ -1,4 +1,52 @@
 <Config>
+	<append xpath="/lootcontainers/lootprobtemplates">
+
+		<lootprobtemplate name="FuriousRamsayProbTemplateTreasure">
+			<loot level="1,8" prob="0.05"/>
+			<loot level="9,16" prob="0.075"/>
+			<loot level="17,25" prob="0.1"/>
+			<loot level="26,34" prob="0.125"/>
+			<loot level="35,44" prob="0.15"/>
+			<loot level="45,54" prob="0.175"/>
+			<loot level="55,65" prob="0.2"/>
+			<loot level="66,76" prob="0.225"/>
+			<loot level="77,88" prob="0.25"/>
+			<loot level="89,101" prob="0.275"/>
+			<loot level="102,114" prob="0.3"/>
+			<loot level="115,128" prob="0.325"/>
+			<loot level="129,142" prob="0.35"/>
+			<loot level="143,157" prob="0.375"/>
+			<loot level="158,173" prob="0.4"/>
+			<loot level="174,190" prob="0.425"/>
+			<loot level="191,208" prob="0.45"/>
+			<loot level="209,226" prob="0.475"/>
+			<loot level="227,245" prob="0.5"/>
+			<loot level="246,266" prob="0.525"/>
+			<loot level="267,300" prob="0.55"/>
+			<loot level="301,999" prob="0.6"/>
+		</lootprobtemplate>
+
+		<lootprobtemplate name="FuriousRamsayProbTemplateLow">
+			<loot level="1,8" prob="1"/>
+			<loot level="9,16" prob="0.8"/>
+			<loot level="17,25" prob="0.4"/>
+			<loot level="26,34" prob="0.2"/>
+			<loot level="35,44" prob="0.08"/>
+			<loot level="45,54" prob="0.04"/>
+			<loot level="55,999999" prob="0.001"/>
+		</lootprobtemplate>
+
+		<lootprobtemplate name="FuriousRamsayProbTemplateHigh">
+			<loot level="1,8" prob="0.001"/>
+			<loot level="9,16" prob="0.04"/>
+			<loot level="17,25" prob="0.08"/>
+			<loot level="26,34" prob="0.2"/>
+			<loot level="35,44" prob="0.4"/>
+			<loot level="45,54" prob="0.8"/>
+			<loot level="55,999999" prob="1"/>
+		</lootprobtemplate>
+
+	</append>
     
 	<append xpath="/lootcontainers">
 
@@ -35,28 +83,45 @@
 			<item name="foodGumboStew"/>
 		</lootgroup>
 	
-		<lootgroup name="FuriousRamsayGroupQuestMedicalTier1">
-			<item name="drugPainkillers"/>
-		</lootgroup>
-	
-		<lootgroup name="FuriousRamsayGroupQuestMedicalTier2">
+		<lootgroup name="FuriousRamsayGroupQuestMedicalLow">
 			<item name="drugPainkillers"/>
 			<item name="medicalFirstAidBandage"/>
 		</lootgroup>
 
-		<lootgroup name="FuriousRamsayGroupQuestMedicalTier3">
-			<item name="medicalFirstAidBandage"/>
-			<item name="drugPainkillers"/>
-		</lootgroup>
-
-		<lootgroup name="FuriousRamsayGroupQuestMedicalTier4">
+		<lootgroup name="FuriousRamsayGroupQuestMedicalHigh">
 			<item name="medicalFirstAidBandage"/>
 			<item name="medicalFirstAidKit"/>
 		</lootgroup>
 
-		<lootgroup name="FuriousRamsayGroupQuestMedicalTier5">
-			<item name="medicalFirstAidKit"/>
+		<lootgroup name="FuriousRamsayGroupBlackShieldCaptainDead" count="2">
+			<item group="FuriousRamsayGroupQuestMedicalLow" loot_prob_template="FuriousRamsayProbTemplateLow"/>
+			<item group="FuriousRamsayGroupQuestMedicalHigh" loot_prob_template="FuriousRamsayProbTemplateHigh"/>
+			<item group="groupApparelClothes" loot_prob_template="FuriousRamsayProbTemplateLow"/>
+			<item group="groupArmorScaled" loot_prob_template="FuriousRamsayProbTemplateHigh"/>
 		</lootgroup>
+
+		<lootgroup name="FuriousRamsayGroupBlackShieldCaptainAlive" count="1">
+			<item group="groupAmmoRegular" loot_prob_template="FuriousRamsayProbTemplateLow"/>
+			<item group="groupQuestAmmo" loot_prob_template="FuriousRamsayProbTemplateHigh"/>
+			<item group="groupTreasureMaps" loot_prob_template="FuriousRamsayProbTemplateTreasure"/>
+		</lootgroup>
+
+		<lootgroup name="FuriousRamsayGroupBlackShieldBanditAlive" count="1">
+			<item name="casinoCoin" count="10,20" loot_prob_template="FuriousRamsayProbTemplateLow"/>
+			<item name="casinoCoin" count="25,50" loot_prob_template="FuriousRamsayProbTemplateHigh"/>
+		</lootgroup>
+
+		<lootcontainer id="1010" size="4,2" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" destroy_on_close="false">
+			<item group="FuriousRamsayGroupBlackShieldCaptainAlive" />
+		</lootcontainer>
+
+		<lootcontainer id="1011" size="4,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1.5" destroy_on_close="false">
+			<item group="FuriousRamsayGroupBlackShieldCaptainDead"/>	
+		</lootcontainer>
+
+		<lootcontainer id="1012" size="4,2" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" destroy_on_close="false">
+			<item group="FuriousRamsayGroupBlackShieldBanditAlive" />
+		</lootcontainer>
 
 	</append>
     

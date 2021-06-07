@@ -2,12 +2,39 @@
 
 	<append xpath="/items">
 
+		<item name="FuriousRamsayNoteMaster">
+			<property name="Extends" value="questMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="qc_NoteGroupDesc"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="EconomicValue" value="100"/>
+			<property name="Stacknumber" value="100"/>
+			<property name="TintColor" value="255,255,255"/>
+		</item>
+
+		<item name="FuriousRamsayNoteMasterRed">
+			<property name="Extends" value="questMaster"/>
+			<property name="DescriptionKey" value="qc_NoteGroupDesc"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="EconomicValue" value="100"/>
+			<property name="Stacknumber" value="100"/>
+		</item>
+
+		<item name="FuriousRamsayChallengeRed">
+			<property name="Extends" value="questMaster"/>
+			<property name="DescriptionKey" value="qc_FuriousRamsayChallengeDesc"/>
+			<property name="CustomIcon" value="challengeQuestMaster"/>
+			<property name="EconomicValue" value="100"/>
+			<property name="TintColor" value="255,0,0"/>
+			<property name="CustomIconTint" value="FF0000"/>
+		</item>
+
 		<item name="FuriousRamsayChallengeQuestMaster">
 			<property name="Extends" value="questMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="DescriptionKey" value="qc_FuriousRamsayChallengeDesc"/>
 			<property name="CustomIcon" value="challengeQuestMaster"/>
-			<property name="EconomicValue" value="400"/>
+			<property name="EconomicValue" value="100"/>
 		</item>
 
 		<item name="qc_FuriousRamsayTier1_Protect">
@@ -34,6 +61,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsayGhostsTier1"/>
 			</property>
+			<property name="TintColor" value="223, 113, 240"/>
+			<property name="CustomIconTint" value="df71f0"/>
 		</item>
 
 		<item name="qc_FuriousRamsayGhostsTier2">
@@ -47,6 +76,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsayGhostsTier2"/>
 			</property>
+			<property name="TintColor" value="196, 81, 214"/>
+			<property name="CustomIconTint" value="c451d6"/>
 		</item>
 
 		<item name="qc_FuriousRamsayGhostsTier3">
@@ -60,6 +91,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsayGhostsTier3"/>
 			</property>
+			<property name="TintColor" value="170, 49, 189"/>
+			<property name="CustomIconTint" value="aa31bd"/>
 		</item>
 
 		<item name="qc_FuriousRamsayGhostsTier4">
@@ -73,6 +106,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsayGhostsTier4"/>
 			</property>
+			<property name="TintColor" value="147, 22, 166"/>
+			<property name="CustomIconTint" value="9316a6"/>
 		</item>
 
 		<item name="qc_FuriousRamsayGhostsTier5">
@@ -86,6 +121,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsayGhostsTier5"/>
 			</property>
+			<property name="TintColor" value="125, 3, 143"/>
+			<property name="CustomIconTint" value="7d038f"/>
 		</item>
 
 		<item name="FuriousRamsaySpawnAllyDogTier1">
@@ -114,6 +151,7 @@
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="40"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="200"/>
 			</effect_group>
+			<property name="CustomIconTint" value="217, 0, 255"/>
 		</item>
 
 		<item name="FuriousRamsaySpawnAllyWolfTier2">
@@ -142,6 +180,7 @@
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="46"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="300"/>
 			</effect_group>
+			<property name="CustomIconTint" value="255, 66, 76"/>
 		</item>
 
 		<item name="FuriousRamsaySpawnAllyLionTier3">
@@ -170,6 +209,7 @@
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="54"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="600"/>
 			</effect_group>
+			<property name="CustomIconTint" value="5, 247, 110"/>		
 		</item>
 
 		<item name="FuriousRamsaySpawnAllyBearTier4">
@@ -198,6 +238,7 @@
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="66"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="900"/>
 			</effect_group>
+			<property name="CustomIconTint" value="0, 153, 255"/>		
 		</item>
 
 		<item name="FuriousRamsaySpawnAllyNPCTier5">
@@ -226,6 +267,7 @@
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="85"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="1000"/>
 			</effect_group>
+			<property name="CustomIconTint" value="255, 255, 0"/>
 		</item>
 
 		<item name="qc_FuriousRamsayTier1_clearhold">
@@ -295,6 +337,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="quest_FuriousRamsayTier1_minihorde"/>
 			</property>
+			<property name="TintColor" value="104, 136, 222"/>
+			<property name="CustomIconTint" value="6888de"/>
 		</item>
 
 		<item name="qc_FuriousRamsayTier2_minihorde">
@@ -308,6 +352,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="quest_FuriousRamsayTier2_minihorde"/>
 			</property>
+			<property name="TintColor" value="76, 109, 199"/>
+			<property name="CustomIconTint" value="4c6dc7"/>
 		</item>
 
 		<item name="qc_FuriousRamsayTier3_minihorde">
@@ -321,6 +367,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="quest_FuriousRamsayTier3_minihorde"/>
 			</property>
+			<property name="TintColor" value="52, 86, 179"/>
+			<property name="CustomIconTint" value="3456b3"/>
 		</item>
 
 		<item name="qc_FuriousRamsayTier4_minihorde">
@@ -334,6 +382,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="quest_FuriousRamsayTier4_minihorde"/>
 			</property>
+			<property name="TintColor" value="27, 62, 158"/>
+			<property name="CustomIconTint" value="1b3e9e"/>
 		</item>
 
 		<item name="qc_FuriousRamsayTier5_minihorde">
@@ -347,6 +397,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="quest_FuriousRamsayTier5_minihorde"/>
 			</property>
+			<property name="TintColor" value="4, 40, 140"/>
+			<property name="CustomIconTint" value="04288c"/>
 		</item>
 
 		<item name="qc_FuriousRamsayHuntTier1">
@@ -360,6 +412,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsayHuntTier1"/>
 			</property>
+			<property name="TintColor" value="93, 217, 107"/>
+			<property name="CustomIconTint" value="5dd96b"/>
 		</item>
 
 		<item name="qc_FuriousRamsayHuntTier2">
@@ -373,6 +427,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsayHuntTier2"/>
 			</property>
+			<property name="TintColor" value="64, 189, 78"/>
+			<property name="CustomIconTint" value="40bd4e"/>
 		</item>
 
 		<item name="qc_FuriousRamsayHuntTier3">
@@ -386,6 +442,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsayHuntTier3"/>
 			</property>
+			<property name="TintColor" value="42, 168, 56"/>
+			<property name="CustomIconTint" value="2aa838"/>
 		</item>
 
 		<item name="qc_FuriousRamsayHuntTier4">
@@ -399,6 +457,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsayHuntTier4"/>
 			</property>
+			<property name="TintColor" value="16, 130, 29"/>
+			<property name="CustomIconTint" value="10821d"/>
 		</item>
 
 		<item name="qc_FuriousRamsayHuntTier5">
@@ -412,6 +472,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsayHuntTier5"/>
 			</property>
+			<property name="TintColor" value="2, 107, 14"/>
+			<property name="CustomIconTint" value="026b0e"/>
 		</item>
 
 		<item name="qc_FuriousRamsayHordeTrainingTier1">
@@ -425,6 +487,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsayHordeTrainingTier1"/>
 			</property>
+			<property name="TintColor" value="212, 85, 85"/>
+			<property name="CustomIconTint" value="d45555"/>
 		</item>
 
 		<item name="qc_FuriousRamsayHordeTrainingTier2">
@@ -438,6 +502,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsayHordeTrainingTier2"/>
 			</property>
+			<property name="TintColor" value="181, 56, 56"/>
+			<property name="CustomIconTint" value="b53838"/>
 		</item>
 
 		<item name="qc_FuriousRamsayHordeTrainingTier3">
@@ -451,6 +517,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsayHordeTrainingTier3"/>
 			</property>
+			<property name="TintColor" value="158, 35, 35"/>
+			<property name="CustomIconTint" value="9e2323"/>
 		</item>
 
 		<item name="qc_FuriousRamsayHordeTrainingTier4">
@@ -464,6 +532,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsayHordeTrainingTier4"/>
 			</property>
+			<property name="TintColor" value="135, 18, 18"/>
+			<property name="CustomIconTint" value="871212"/>
 		</item>
 
 		<item name="qc_FuriousRamsayHordeTrainingTier5">
@@ -477,6 +547,8 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsayHordeTrainingTier5"/>
 			</property>
+			<property name="TintColor" value="112, 2, 2"/>
+			<property name="CustomIconTint" value="700202"/>
 		</item>
 		
 		<item name="FuriousRamsayMeleeHandHostileSmallAnimal">
@@ -523,7 +595,7 @@
 				<property name="Delay" value="1"/>
 				<property name="Range" value="2"/>
 				<property name="DamageEntity" value="10"/>
-				<property name="DamageBlock" value="15"/>
+				<property name="DamageBlock" value="50"/>
 			</property>
 		</item>
 
@@ -608,6 +680,7 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsaySpawnAllyDogTier1"/>
 			</property>
+			<property name="CustomIconTint" value="217, 0, 255"/>
 		</item>
 
 		<item name="qc_FuriousRamsaySpawnAllyWolfTier2">
@@ -625,6 +698,7 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsaySpawnAllyWolfTier2"/>
 			</property>
+			<property name="CustomIconTint" value="255, 66, 76"/>
 		</item>
 
 		<item name="qc_FuriousRamsaySpawnAllyLionTier3">
@@ -642,6 +716,7 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsaySpawnAllyLionTier3"/>
 			</property>
+			<property name="CustomIconTint" value="5, 247, 110"/>		
 		</item>
 
 		<item name="qc_FuriousRamsaySpawnAllyBearTier4">
@@ -659,6 +734,7 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsaySpawnAllyBearTier4"/>
 			</property>
+			<property name="CustomIconTint" value="0, 153, 255"/>		
 		</item>
 
 		<item name="qc_FuriousRamsaySpawnAllyNPCTier5">
@@ -676,6 +752,7 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsaySpawnAllyNPCTier5"/>
 			</property>
+			<property name="CustomIconTint" value="255, 255, 0"/>
 		</item>
 		
 		<item name="FuriousRamsayMeleeHandEnemyTier1">
@@ -965,11 +1042,12 @@
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="12"/> 
 			<property class="Action0">
-				<property name="Delay" value="1.2"/>
-				<property name="Range" value="1.5"/>
-				<property name="DamageEntity" value="3"/>
+				<property name="Delay" value="1.05"/>
+				<property name="Range" value="1.75"/>
+				<property name="DamageEntity" value="5"/>
 				<property name="DamageBlock" value="50"/>
 				<property name="Sphere" value="1.2"/>
+				<property name="Block_range" value="2.5"/>
 			</property>
 			<effect_group name="meleeHandHumanTemplate" tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
@@ -982,11 +1060,12 @@
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="12"/> 
 			<property class="Action0">
-				<property name="Delay" value="1"/>
-				<property name="Range" value="1.5"/>
+				<property name="Delay" value=".9"/>
+				<property name="Range" value="1.75"/>
 				<property name="DamageEntity" value="10"/>
 				<property name="DamageBlock" value="50"/>
 				<property name="Sphere" value="1.2"/>
+				<property name="Block_range" value="2.5"/>
 			</property>
 			<effect_group name="meleeHandHumanTemplate" tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
@@ -1000,11 +1079,12 @@
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="12"/> 
 			<property class="Action0">
-				<property name="Delay" value="1"/>
-				<property name="Range" value="1.5"/>
+				<property name="Delay" value=".8"/>
+				<property name="Range" value="1.75"/>
 				<property name="DamageEntity" value="15"/>
 				<property name="DamageBlock" value="20"/>
 				<property name="Sphere" value="1.2"/>
+				<property name="Block_range" value="2.5"/>
 			</property>
 		</item>	
 
@@ -1013,11 +1093,12 @@
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="12"/> 
 			<property class="Action0">
-				<property name="Delay" value=".8"/>
-				<property name="Range" value="1.5"/>
+				<property name="Delay" value=".7"/>
+				<property name="Range" value="1.75"/>
 				<property name="DamageEntity" value="20"/>
 				<property name="DamageBlock" value="30"/>
 				<property name="Sphere" value="1.2"/>
+				<property name="Block_range" value="2.5"/>
 			</property>
 		</item>	
 
@@ -1026,11 +1107,12 @@
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="12"/> 
 			<property class="Action0">
-				<property name="Delay" value=".8"/>
-				<property name="Range" value="1.5"/>
+				<property name="Delay" value=".6"/>
+				<property name="Range" value="1.75"/>
 				<property name="DamageEntity" value="25"/>
 				<property name="DamageBlock" value="40"/>
 				<property name="Sphere" value="1.2"/>
+				<property name="Block_range" value="2.5"/>
 			</property>
 		</item>	
 
