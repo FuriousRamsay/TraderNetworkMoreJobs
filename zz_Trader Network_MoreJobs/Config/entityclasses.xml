@@ -2660,9 +2660,11 @@
 			<property name="AITarget-5" value=""/>
         </entity_class>
 		
-        <entity_class name="FuriousRamsayUMATemplateZombieMale" extends="FuriousRamsayUMATemplateMale">
+        <!--<entity_class name="FuriousRamsayUMATemplateZombieMale" extends="FuriousRamsayUMATemplateMale">
 			<property name="HideInSpawnMenu" value="true"/>
             <property name="Tags" value="entity,zombie,walker" />
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value="0.2, 1.1"/>
 
 			<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
 			<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
@@ -2678,7 +2680,7 @@
 			<property name="SoundDeath" value="Enemies/Snow_Zombie_Male/zombiemalesnowdeath"/>
 			<property name="SoundSense" value="Enemies/Snow_Zombie_Male/zombiemalesnowsense"/>
 			<property name="SoundFootstepModifier" value="Enemies/Snow_Zombie_Male/zombiesnowfootstep"/>
-        </entity_class>
+        </entity_class>-->
 
         <entity_class name="FuriousRamsayUMATemplateSurvivorMale" extends="FuriousRamsayUMATemplateMale">
 		<!--Survivors: Earl, Jim, Mike -->
@@ -2718,7 +2720,7 @@
 			<property name="LootListAlive" value="1012"/>
 	
             <effect_group name="Base Effects">
-                <passive_effect name="HealthMax" operation="base_set" value="250" />
+                <passive_effect name="HealthMax" operation="base_set" value="150" />
                 <passive_effect name="HealthMax" operation="perc_set" value="1" />
                 <passive_effect name="PhysicalDamageResist" operation="base_set" value="25" />
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
@@ -2736,6 +2738,8 @@
 			<property name="SoundSense" value="zombiemalesense"/>
 
             <property name="HandItem" value="meleeHandHumanTemplateZombie" />
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value="0.2, 1.1"/>
 			
             <property name="ExperienceGain" value="750" />
 
@@ -2874,7 +2878,9 @@
             <property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense" />
 
             <property name="HandItem" value="meleeHandHumanTemplateZombie" />
-			
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value="0.2, 1.1"/>
+
 			<property name="CanClimbVertical" value="true"/>
 			
             <property name="ExperienceGain" value="750" />
@@ -3218,13 +3224,13 @@
 
 		<entity_class name="FuriousRamsayBlackShieldCaptainLoot">
 			<property name="HideInSpawnMenu" value="true"/>
-			<property name="Mesh" value="#Entities/LootContainers?zpackPrefab.prefab"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
 			<property name="ModelType" value="Custom"/>
 			<property name="Prefab" value="Backpack"/>
 			<property name="Class" value="EntityLootContainer"/>
 			<property name="Parent" value="Backpack"/>
 			<property name="IsEnemyEntity" value="false"/>
-			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="TimeStayAfterDeath" value="120"/>
 			<property name="LootListOnDeath" value="1011"/>
 			<property name="Faction" value="none"/>	
 		</entity_class>
