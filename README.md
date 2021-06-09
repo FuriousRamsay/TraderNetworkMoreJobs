@@ -4,9 +4,11 @@ This is a modlet to add additional Jobs/Challenges at the Traders
 Can be installed for single player local games or server-side only when hosting a multiplayer server.
 
 Currently tested with:
-﻿	- Vanilla 19.4 B7
+﻿	- Vanilla 19.5
+	- Vanilla 19.4 B7
 	﻿- Undead Legacy
 	﻿- Darkness Falls
+	- Sorcery
 
 The following can be found as part of the Trader's job listing:
 
@@ -18,6 +20,14 @@ The following can be found as part of the Trader's job listing:
 	- Phase 5: Get your reward from the trader you received the mission from
 	﻿Note: you do not have to stay within the limits of the POI
 
+	Protect (Tiers 1 through 5):
+	You are sent to a random POI which you have to protect.
+	- Tier 1: The Black Shield faction sends in some of their bandits.
+	- Tier 2: The Black Shield faction sends in more of their bandits.
+	- Tier 3: The Black Shield faction experimented on some of their people and are sending them in along with their bandits.
+	- Tier 4: The Black Shield faction pushed their experiments even further. Expect stronger and faster mutated bandits.
+	- Tier 5: The Black Shield faction created a beserker mutation. Party up if you can.
+	﻿Note: you do not have to stay within the limits of the POI
 
 The following can be purchased from the player vending machines at each trader. Each Tier increases in difficulty:
 

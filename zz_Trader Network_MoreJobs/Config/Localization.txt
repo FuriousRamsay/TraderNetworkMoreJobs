@@ -65,6 +65,9 @@ FuriousRamsayUMARichieZombieRage,entityclasses,Entity,Black Shield Zombie (Bezer
 FuriousRamsayUMAGabrielleZombieRage,entityclasses,Entity,Black Shield Zombie Captain (Bezerker)
 FuriousRamsayUMAClintZombieRage,entityclasses,Entity,Black Shield Zombie Captain (Bezerker)
 
+FuriousRamsayUMAGabrielleZombieShockedRage,entityclasses,Entity,Black Shield Zombie Captain (Shocking)
+FuriousRamsayUMAClintZombieShockedRage,entityclasses,Entity,Black Shield Zombie Captain (Shocking)
+
 FuriousRamsayTrainerTier1,entityclasses,Entity,Horde Trainer
 FuriousRamsayTrainerTier2,entityclasses,Entity,Horde Trainer
 FuriousRamsayTrainerTier3,entityclasses,Entity,Horde Trainer
@@ -207,11 +210,11 @@ FuriousRamsayEnemyAndroid5,entityclasses,Entity,"Black Shield Battle Android"
 FuriousRamsayEnemyAndroid6,entityclasses,Entity,"Black Shield Battle Android"
 FuriousRamsayEnemyAndroid7,entityclasses,Entity,"Black Shield Battle Android"
 
-qc_FuriousRamsayTier1_Defend,items,Quest,Defend (Tier 1)
-qc_FuriousRamsayTier2_Defend,items,Quest,Defend (Tier 2)
-qc_FuriousRamsayTier3_Defend,items,Quest,Defend (Tier 3)
-qc_FuriousRamsayTier4_Defend,items,Quest,Defend (Tier 4)
-qc_FuriousRamsayTier5_Defend,items,Quest,Defend (Tier 5)
+qc_FuriousRamsayTier1_Defend,items,Quest,Protect (Tier 1)
+qc_FuriousRamsayTier2_Defend,items,Quest,Protect (Tier 2)
+qc_FuriousRamsayTier3_Defend,items,Quest,Protect (Tier 3)
+qc_FuriousRamsayTier4_Defend,items,Quest,Protect (Tier 4)
+qc_FuriousRamsayTier5_Defend,items,Quest,Protect (Tier 5)
 
 qc_FuriousRamsayGhostsTier1,items,Challenge,Ghosts (Tier 1)
 qc_FuriousRamsayGhostsTier2,items,Challenge,Ghosts (Tier 2)
@@ -267,21 +270,21 @@ qc_FuriousRamsaySpawnAllyLionTier3Desc,items,Quest - Challenge,"A Trader Network
 qc_FuriousRamsaySpawnAllyBearTier4Desc,items,Quest - Challenge,"A Trader Network Dispatcher to call in a mechanical Bear prototype that knocks ennemies down via explosive damage.\n\nHas 3 minutes of power."
 qc_FuriousRamsaySpawnAllyNPCTier5Desc,items,Quest - Challenge,"A Trader Network Dispatcher to call in a mechanical Android prototype that stuns ennemies.\n\nHas 3 minutes of power."
 
-quest_FuriousRamsayDefend_subtitle,quests,Quests,"Defend"
+quest_FuriousRamsayDefend_subtitle,quests,Quests,"Protect"
 quest_FuriousRamsayDefend_description,quests,Quests,"The Trader wants me to defend one of their properties."
-quest_FuriousRamsayDefend_title,quests,Quests,"Defend"
-quest_FuriousRamsayDefendTier1_offer,quests,Quests,"The Black Shield faction is trying to expand their territory and has been attacking some of our properties.\n\nI need you to help defend [DECEA3]{poi.name}[-].\n\nOnce you give the signal, some of the locals will come lend a hand. They aren't trained fighters, but they'll fight for their territory.\n\nYou'll get about 5 seconds to prepare for the attack."
-quest_FuriousRamsayDefendTier2_offer,quests,Quests,"The Black Shield faction is at it again, damn these animals.\n\nNow they are targetting [DECEA3]{poi.name}[-].\n\nOnce you give the signal, some of the locals will come lend a hand. They aren't trained fighters, but they'll fight for their territory.\n\nYou'll get about 8 seconds to prepare for the attack."
-quest_FuriousRamsayDefendTier3_offer,quests,Quests,"Insane... I've had reports of the Black Shield experimenting on their own people as a means to increase their chance of success in attacking our properties.\n\nI need you to help defend [DECEA3]{poi.name}[-] from these monsters.\n\nOnce you give the signal, some of the locals will come lend a hand.\n\nYou'll get about 12 seconds to prepare for the attack."
-quest_FuriousRamsayDefendTier4_offer,quests,Quests,"They've pushed their experiments and these monsters are fast.\n\nReports are coming in on their next target. [DECEA3]{poi.name}[-].\n\nOnce you give the signal, some of the locals will come lend a hand, but I fear they'll get absolutely butchered by these things.\n\nYou'll get about 15 seconds to prepare for the attack. Brace yourself."
-quest_FuriousRamsayDefendTier5_offer,quests,Quests,"We need to develop some technology... their latest set of experiments are making them bigger and stronger.\n\nI don't even know how we'll be able to successfully defend [DECEA3]{poi.name}[-].\n\nOnce you give the signal, we'll send in as many of our people as we can to assist, but you'll have to do most of the work.\n\nYou'll get about 18 seconds to prepare for the attack. I'll pray for all of us."
-quest_FuriousRamsayDefend_response,quests,Quests,Defend ([DECEA3]{poi.distance} {poi.direction}[-])
+quest_FuriousRamsayDefend_title,quests,Quests,"Protect"
+quest_FuriousRamsayDefendTier1_offer,quests,Quests,"The Black Shield faction is trying to expand their territory and has been attacking some of our properties.\n\nI need you to help defend [DECEA3]{poi.name}[-].\n\nOnce you give the signal, some of the locals will come lend a hand. They aren't trained fighters, but they'll fight for their territory."
+quest_FuriousRamsayDefendTier2_offer,quests,Quests,"The Black Shield faction is at it again, damn these animals.\n\nNow they are targetting [DECEA3]{poi.name}[-].\n\nOnce you give the signal, some of the locals will come lend a hand. They aren't trained fighters, but they'll fight for their territory."
+quest_FuriousRamsayDefendTier3_offer,quests,Quests,"Insane... I've had reports of the Black Shield experimenting on their own people as a means to increase their chance of success in attacking our properties.\n\nI need you to help defend [DECEA3]{poi.name}[-] from these monsters.\n\nOnce you give the signal, some of the locals will come lend a hand."
+quest_FuriousRamsayDefendTier4_offer,quests,Quests,"They've pushed their experiments and these monsters are fast.\n\nReports are coming in on their next target. [DECEA3]{poi.name}[-].\n\nOnce you give the signal, some of the locals will come lend a hand, but I fear they'll get absolutely butchered by these things.\n\nBrace yourself and party up if you can."
+quest_FuriousRamsayDefendTier5_offer,quests,Quests,"Their latest set of experiments are making them bigger and stronger. We need to start using some of our technology.\n\nI don't even know if we'll be able to successfully defend [DECEA3]{poi.name}[-].\n\nOnce you give the signal, we'll send in as many of our people as we can to assist, but you'll have to do most of the work.\n\nI'll even send some of our wolf prototypes. Stand next to them to help you heal. You'll need it. Oh and party up, you might need some of your friend's help."
+quest_FuriousRamsayDefend_response,quests,Quests,Protect ([DECEA3]{poi.distance} {poi.direction}[-])
 quest_FuriousRamsayDefend_statement,quests,Quests,Defend Trader Network property
 quest_FuriousRamsayDefendTier1_completion,quests,Quests,"Thank you for helping protect our property. These attacks are increasing in frequency.\n\nWe may need your help for when they come back.\n\nHere's your reward, well earned."
 quest_FuriousRamsayDefendTier2_completion,quests,Quests,"Thank you for helping protect our property. Their faction is slowly growing in numbers.\n\nWe will need your help for when they come back.\n\nHere's your reward, well earned."
 quest_FuriousRamsayDefendTier3_completion,quests,Quests,"Thank you for helping protect our property. How are these monsters not attacking their own people?\n\nWe need to get better at building up our defenses.\n\nHere's your reward."
-quest_FuriousRamsayDefendTier4_completion,quests,Quests,"Thank you for helping protect our property. These attacks are increasing in frequency.\n\nWe may need your help for when they come back.\n\nHere's your reward, well earned."
-quest_FuriousRamsayDefendTier5_completion,quests,Quests,"Thank you for helping protect our property. These attacks are increasing in frequency.\n\nWe may need your help for when they come back.\n\nHere's your reward, well earned."
+quest_FuriousRamsayDefendTier4_completion,quests,Quests,"Thank you for helping protect our property. How fast were they? \n\nWe're going to ramp up on our production of mechanical prototypes to assit.\n\nHere's your reward, well earned."
+quest_FuriousRamsayDefendTier5_completion,quests,Quests,"Thank you for helping protect our property. I can't believe how strong these things are.\n\nI feel a faction war brewing.\n\nHere's your reward, well earned."
 
 quest_FuriousRamsayClearhold_subtitle,quests,Quests,"Hold and Fetch"
 quest_FuriousRamsayClearhold_description,quests,Quests,"The Trader wants me to fetch some supplies with a promise of a good reward."
