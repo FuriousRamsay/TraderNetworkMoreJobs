@@ -47,6 +47,10 @@
 			<item name="qc_FuriousRamsayGhostsTier5" prob="0.6"/>
 		</trader_item_group>
 
+		<trader_item_group name="FuriousRamsayGroupMiscItems">
+			<item name="qc_FuriousRamsayResetPOI" count="1" prob="0.15"/>
+		</trader_item_group>
+
 		<trader_item_group name="FuriousRamsayTraderGroupQuestChallengesTier1" >
 			<item group="FuriousRamsayGroupQuestChallengesTier1"/>
 		</trader_item_group>
@@ -67,6 +71,10 @@
 			<item group="FuriousRamsayGroupQuestChallengesTier5"/>
 		</trader_item_group>
 
+		<trader_item_group name="FuriousRamsayTraderMiscItems" >
+			<item group="FuriousRamsayGroupMiscItems"/>
+		</trader_item_group>
+
 	</append>
 
 	<remove xpath="/traders/trader_info[@id='5']"/>
@@ -79,6 +87,7 @@
 				<item group="FuriousRamsayTraderGroupQuestChallengesTier3" count="1"/>
 				<item group="FuriousRamsayTraderGroupQuestChallengesTier4" count="1"/>
 				<item group="FuriousRamsayTraderGroupQuestChallengesTier5" count="1"/>
+				<item group="FuriousRamsayTraderMiscItems"/>
 			</trader_items>
 		</trader_info>
 

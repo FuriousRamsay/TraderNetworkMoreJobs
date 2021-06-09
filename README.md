@@ -21,13 +21,16 @@ The following can be found as part of the Trader's job listing:
 	﻿Note: you do not have to stay within the limits of the POI
 
 	Protect (Tiers 1 through 5):
-	You are sent to a random POI which you have to protect.
-	- Tier 1: The Black Shield faction sends in some of their bandits.
+	You are sent to a random POI which you have to protect with the help of the locals (in white).
+	- Tier 1: The Black Shield faction sends in some of their bandits (in red).
 	- Tier 2: The Black Shield faction sends in more of their bandits.
 	- Tier 3: The Black Shield faction experimented on some of their people and are sending them in along with their bandits.
 	- Tier 4: The Black Shield faction pushed their experiments even further. Expect stronger and faster mutated bandits.
 	- Tier 5: The Black Shield faction created a beserker mutation. Party up if you can.
-	﻿Note: you do not have to stay within the limits of the POI
+﻿	Notes:
+		﻿﻿- you can loot the bandits (extra dukes, even when alive)
+		﻿﻿- you can loot the captains (even when alive) and they have a chance of dropping extra loot when they die
+		﻿﻿- you do not have to stay within the limits of the POI
 
 The following can be purchased from the player vending machines at each trader. Each Tier increases in difficulty:
 

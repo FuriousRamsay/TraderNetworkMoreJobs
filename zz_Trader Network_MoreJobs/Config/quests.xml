@@ -2,6 +2,31 @@
 
 	<insertAfter xpath="/quests/quest[@id='tier2_buried_supplies']">
 
+		<quest id="quest_FuriousRamsayResetPOI">
+			<property name="name_key" value="quest_FuriousRamsayResetPOI_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayResetPOI_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayResetPOI_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayResetPOI_offer"/>
+			
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="ClosestPOIGoto">
+				<property name="distance" value="30"/>
+				<property name="phase" value="1"/>
+			</objective>
+
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally"/>
+			</objective>
+		</quest>
+
 		<quest id="quest_FuriousRamsayTier1_Defend">
 			<property name="name_key" value="quest_FuriousRamsayDefend_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayDefend_subtitle"/>
@@ -2717,6 +2742,876 @@
 			<reward type="LootItem" id="groupQuestArmor,groupQuestTools,groupQuestMedical" ischosen="true" value="1"/>
 			<reward type="LootItem" id="FuriousRamsayGroupQuestCookedFoodsTier5" ischosen="true" isfixed="true" value="10"/>
 		</quest>
+		
+		<quest id="challenge_FuriousRamsayHordeTrainingTier1Wave1">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier1_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave1_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayHordeTraining_offer"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayTrainerTier1" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier1Wave2"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier1Wave2">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier1_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave2_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier1Wave3"/>
+		</quest>
+		
+		<quest id="challenge_FuriousRamsayHordeTrainingTier1Wave3">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier1_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave3_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier1Wave4"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier1Wave4">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier1_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave4_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier1Wave5"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier1Wave5">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier1_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave5_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier1Wave6"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier1Wave6">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier1_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave6_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier1Wave7"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier1Wave7">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier1_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave7_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier1Wave8"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier1Wave8">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier1_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave8_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier1Wave9"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier1Wave9">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier1_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave9_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier1Wave10"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier1Wave10">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier1_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave10_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayHordeTraining_offer"/>
+
+
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayHordeTraining_completion"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="3000"/>
+			<reward type="Item" id="casinoCoin" value="800"/>
+			<reward type="Item" id="resourceScrapBrass" ischosen="true" isfixed="true" value="500"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true"  value="1"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier2Wave1">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier2_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave1_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="2"/>
+			<property name="offer_key" value="quest_FuriousRamsayHordeTraining_offer"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayTrainerTier2" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieStripperTrainer,zombieFarmerTrainer,zombieBikerTrainer,zombieOldTimerTrainer,zombieCheerleaderTrainer,zombieSkateboarderTrainer,zombieSoldierTrainer,zombieUtilityWorkerTrainer,zombieFatCopTrainer,zombieFatHawaiianTrainer,zombieSpiderTrainer,zombieSteveCrawlerTrainer" value="4" phase="1"/>
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier2Wave2"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier2Wave2">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier2_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave2_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieStripperTrainer,zombieFarmerTrainer,zombieBikerTrainer,zombieOldTimerTrainer,zombieCheerleaderTrainer,zombieSkateboarderTrainer,zombieSoldierTrainer,zombieUtilityWorkerTrainer,zombieFatCopTrainer,zombieFatHawaiianTrainer,zombieSpiderTrainer,zombieSteveCrawlerTrainer" value="4" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier2Wave3"/>
+		</quest>
+		
+		<quest id="challenge_FuriousRamsayHordeTrainingTier2Wave3">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier2_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave3_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieStripperTrainer,zombieFarmerTrainer,zombieBikerTrainer,zombieOldTimerTrainer,zombieCheerleaderTrainer,zombieSkateboarderTrainer,zombieSoldierTrainer,zombieUtilityWorkerTrainer,zombieFatCopTrainer,zombieFatHawaiianTrainer,zombieSpiderTrainer,zombieSteveCrawlerTrainer" value="5" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier2Wave4"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier2Wave4">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier2_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave4_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="animalZombieDog" value="2" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieStripperTrainer,zombieFarmerTrainer,zombieBikerTrainer,zombieOldTimerTrainer,zombieCheerleaderTrainer,zombieSkateboarderTrainer,zombieSoldierTrainer,zombieUtilityWorkerTrainer,zombieFatCopTrainer,zombieFatHawaiianTrainer,zombieSpiderTrainer,zombieSteveCrawlerTrainer" value="5" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier2Wave5"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier2Wave5">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier2_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave5_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieStripperTrainer,zombieFarmerTrainer,zombieBikerTrainer,zombieOldTimerTrainer,zombieCheerleaderTrainer,zombieSkateboarderTrainer,zombieSoldierTrainer,zombieUtilityWorkerTrainer,zombieFatCopTrainer,zombieFatHawaiianTrainer,zombieSpiderTrainer,zombieSteveCrawlerTrainer" value="6" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier2Wave6"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier2Wave6">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier2_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave6_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieStripperTrainer,zombieFarmerTrainer,zombieBikerTrainer,zombieOldTimerTrainer,zombieCheerleaderTrainer,zombieSkateboarderTrainer,zombieSoldierTrainer,zombieUtilityWorkerTrainer,zombieFatCopTrainer,zombieFatHawaiianTrainer,zombieSpiderTrainer,zombieSteveCrawlerTrainer" value="6" phase="1"/>
+			<action type="SpawnEnemy" id="animalZombieVulture" value="2" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier2Wave7"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier2Wave7">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier2_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave7_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieStripperTrainer,zombieFarmerTrainer,zombieBikerTrainer,zombieOldTimerTrainer,zombieCheerleaderTrainer,zombieSkateboarderTrainer,zombieSoldierTrainer,zombieUtilityWorkerTrainer,zombieFatCopTrainer,zombieFatHawaiianTrainer,zombieSpiderTrainer,zombieSteveCrawlerTrainer" value="7" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier2Wave8"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier2Wave8">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier2_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave8_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="animalZombieDog" value="2" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier2Wave9"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier2Wave9">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier2_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave9_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieStripperTrainer,zombieFarmerTrainer,zombieBikerTrainer,zombieOldTimerTrainer,zombieCheerleaderTrainer,zombieSkateboarderTrainer,zombieSoldierTrainer,zombieUtilityWorkerTrainer,zombieFatCopTrainer,zombieFatHawaiianTrainer,zombieSpiderTrainer,zombieSteveCrawlerTrainer" value="7" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier2Wave10"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier2Wave10">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier2_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave10_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="2"/>
+			<property name="offer_key" value="quest_FuriousRamsayHordeTraining_offer"/>
+
+
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayHordeTraining_completion"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieStripperTrainer,zombieFarmerTrainer,zombieBikerTrainer,zombieOldTimerTrainer,zombieCheerleaderTrainer,zombieSkateboarderTrainer,zombieSoldierTrainer,zombieUtilityWorkerTrainer,zombieFatCopTrainer,zombieFatHawaiianTrainer,zombieSpiderTrainer,zombieSteveCrawlerTrainer" value="8" phase="1"/>
+			<action type="SpawnEnemy" id="animalZombieVulture" value="2" phase="1"/>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="6000"/>
+			<reward type="Item" id="casinoCoin" value="1600"/>
+			<reward type="Item" id="resourceScrapBrass" ischosen="true" isfixed="true" value="1000"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true"  value="1"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier3Wave1">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier3_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave1_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="3"/>
+			<property name="offer_key" value="quest_FuriousRamsayHordeTraining_offer"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayTrainerTier3" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="5" phase="1"/>
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier3Wave2"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier3Wave2">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier3_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave2_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="5" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier3Wave3"/>
+		</quest>
+		
+		<quest id="challenge_FuriousRamsayHordeTrainingTier3Wave3">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier3_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave3_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="6" phase="1"/>
+			<action type="SpawnEnemy" id="animalZombieVulture" value="4" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier3Wave4"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier3Wave4">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier3_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave4_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="6" phase="1"/>
+			<action type="SpawnEnemy" id="animalZombieDog" value="3" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier3Wave5"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier3Wave5">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier3_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave5_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="7" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier3Wave6"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier3Wave6">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier3_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave6_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="7" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier3Wave7"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier3Wave7">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier3_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave7_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="8" phase="1"/>
+			<action type="SpawnEnemy" id="animalZombieDog" value="3" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier3Wave8"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier3Wave8">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier3_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave8_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="animalZombieVultureRadiated" value="2" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier3Wave9"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier3Wave9">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier3_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave9_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="8" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier3Wave10"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier3Wave10">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier3_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave10_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="3"/>
+			<property name="offer_key" value="quest_FuriousRamsayHordeTraining_offer"/>
+
+
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayHordeTraining_completion"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="9" phase="1"/>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="9000"/>
+			<reward type="Item" id="casinoCoin" value="2400"/>
+			<reward type="Item" id="resourceScrapBrass" ischosen="true" isfixed="true" value="1500"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true"  value="1"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier4Wave1">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier4_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave1_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="4"/>
+			<property name="offer_key" value="quest_FuriousRamsayHordeTraining_offer"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayTrainerTier4" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral" value="6" phase="1"/>
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier4Wave2"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier4Wave2">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier4_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave2_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated" value="6" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier4Wave3"/>
+		</quest>
+		
+		<quest id="challenge_FuriousRamsayHordeTrainingTier4Wave3">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier4_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave3_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="7" phase="1"/>
+			<action type="SpawnEnemy" id="animalZombieDog" value="4" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier4Wave4"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier4Wave4">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier4_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave4_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated" value="7" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier4Wave5"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier4Wave5">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier4_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave5_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="legendaryZombieLab,legendaryZombieBusinessMan,legendaryZombieUtilityWorker,zombieDemolition,zombieFatCopRadiated,zombieBikerRadiated" value="8" phase="1"/>
+			<action type="SpawnEnemy" id="zombieScreamerFeral" value="3" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier4Wave6"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier4Wave6">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier4_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave6_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="animalZombieVultureRadiated" value="3" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier4Wave7"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier4Wave7">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier4_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave7_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="8" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier4Wave8"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier4Wave8">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier4_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave8_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated" value="9" phase="1"/>
+			<action type="SpawnEnemy" id="animalZombieDog" value="4" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier4Wave9"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier4Wave9">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier4_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave9_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="legendaryZombieLab,legendaryZombieBusinessMan,legendaryZombieUtilityWorker,zombieDemolition,zombieFatCopRadiated,zombieBikerRadiated" value="9" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier4Wave10"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier4Wave10">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier4_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave10_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="4"/>
+			<property name="offer_key" value="quest_FuriousRamsayHordeTraining_offer"/>
+
+
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayHordeTraining_completion"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated" value="10" phase="1"/>
+			<action type="SpawnEnemy" id="zombieScreamerRadiated" value="3" phase="1"/>
+			<action type="SpawnEnemy" id="animalZombieVultureRadiated" value="4" phase="1"/>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="12000"/>
+			<reward type="Item" id="casinoCoin" value="3200"/>
+			<reward type="Item" id="resourceScrapBrass" ischosen="true" isfixed="true" value="2000"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true"  value="1"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier5Wave1">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier5_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave1_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="5"/>
+			<property name="offer_key" value="quest_FuriousRamsayHordeTraining_offer"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayTrainerTier5" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated" value="7" phase="1"/>
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier5Wave2"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier5Wave2">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier5_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave2_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="legendaryZombieLab,legendaryZombieBusinessMan,legendaryZombieUtilityWorker,zombieDemolition,zombieFatCopRadiated,zombieBikerRadiated" value="7" phase="1"/>
+			<action type="SpawnEnemy" id="animalZombieVultureRadiated" value="4" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier5Wave3"/>
+		</quest>
+		
+		<quest id="challenge_FuriousRamsayHordeTrainingTier5Wave3">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier5_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave3_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated" value="8" phase="1"/>
+			<action type="SpawnEnemy" id="animalZombieDog" value="6" phase="1"/>
+			<action type="SpawnEnemy" id="zombieSnowFeral" value="5" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier5Wave4"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier5Wave4">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier5_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave4_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated" value="8" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier5Wave5"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier5Wave5">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier5_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave5_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="legendaryZombieLab,legendaryZombieBusinessMan,legendaryZombieUtilityWorker,zombieDemolition,zombieFatCopRadiated,zombieBikerRadiated" value="10" phase="1"/>
+			<action type="SpawnEnemy" id="zombieScreamerFeral" value="3" phase="1"/>
+			<action type="SpawnEnemy" id="animalZombieDog" value="6" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier5Wave6"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier5Wave6">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier5_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave6_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated" value="9" phase="1"/>
+			<action type="SpawnEnemy" id="animalZombieVultureRadiated" value="4" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier5Wave7"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier5Wave7">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier5_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave7_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zlegendaryZombieLab,legendaryZombieBusinessMan,legendaryZombieUtilityWorker,zombieDemolition,zombieFatCopRadiated,zombieBikerRadiated" value="9" phase="1"/>
+			<action type="SpawnEnemy" id="zombieSnowFeral" value="5" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier5Wave8"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier5Wave8">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier5_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave8_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated" value="10" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier5Wave9"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier5Wave9">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier5_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave9_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="animalZombieBear" value="4" phase="1"/>
+		
+			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier5Wave10"/>
+		</quest>
+
+		<quest id="challenge_FuriousRamsayHordeTrainingTier5Wave10">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier5_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave10_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="5"/>
+			<property name="offer_key" value="quest_FuriousRamsayHordeTraining_offer"/>
+
+
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayHordeTraining_completion"/>
+
+			<objective type="Time" value="20" phase="1"/>
+			<action type="SpawnEnemy" id="legendaryZombieLab,legendaryZombieBusinessMan,legendaryZombieUtilityWorker,zombieDemolition,zombieFatCopRadiated,zombieBikerRadiated" value="10" phase="1"/>
+			<action type="SpawnEnemy" id="zombieScreamerRadiated" value="4" phase="1"/>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="15000"/>
+			<reward type="Item" id="casinoCoin" value="4000"/>
+			<reward type="Item" id="resourceScrapBrass" ischosen="true" isfixed="true" value="2500"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true"  value="1"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+		</quest>
+
 	</insertAfter>
 
 	<append xpath="/quests/quest_list[@id='trader_quests']">
