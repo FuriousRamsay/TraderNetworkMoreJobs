@@ -2546,7 +2546,8 @@
             <property name="HasRagdoll" value="true" />
 			<property name="PhysicsBody" value="Player"/>
             <property name="HasDeathAnim" value="false" />
-            <property name="Mass" value="235" />
+   			<property name="Mass" value="235"/>
+			<property name="Weight" value="235"/>
 			<property name="WalkType" value="7"/>
 			<property name="AIPathCostScale" value=".9, 1"/>
 
@@ -2684,6 +2685,7 @@
 
         <entity_class name="FuriousRamsayUMATemplateSurvivorMale" extends="FuriousRamsayUMATemplateMale">
 		<!--Survivors: Earl, Jim, Mike -->
+            <property name="Tags" value="player" />
 			<property name="HideInSpawnMenu" value="true"/>
             <property name="Class" value="EntitySurvivor" />
             <property name="HandItem" value="FuriousRamsayMeleeHandZombieSurvivor" />
@@ -2715,16 +2717,11 @@
 
         <entity_class name="FuriousRamsayUMATemplateEnemyMale" extends="FuriousRamsayUMATemplateMale">
 		<!--Enemies: Aiden, Hodor, Clint, Richie, Willie, Kim -->
-			<property name="SoundRandom" value="malehateroam"/>
-			<property name="SoundAlert" value="malehatealert"/>
-			<property name="SoundSense" value="malehatesense"/>
-			<property name="SoundHurt" value="malehatepain"/>
-			<property name="SoundDeath" value="malehatedeath"/>
-			<property name="SoundAttack" value="malehateattack"/>
-
             <property name="HandItem" value="FuriousRamsayMeleeHandZombieEnemy" />
 			<property name="LootListAlive" value="1012"/>
 	
+			<property name="ExperienceGain" value="350"/>
+
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="150" />
                 <passive_effect name="HealthMax" operation="perc_set" value="1" />
@@ -2737,18 +2734,13 @@
         <entity_class name="FuriousRamsayUMATemplateZombieMale" extends="FuriousRamsayUMATemplateMale">
 			<property name="HideInSpawnMenu" value="true"/>
 
-            <property name="HandItem" value="FuriousRamsayMeleeHandZombieZombie" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombie" />
 			<property name="MoveSpeed" value="0.06"/>
 			<property name="MoveSpeedAggro" value="0.2, 1.1"/>
+   			<property name="Mass" value="300"/>
+			<property name="Weight" value="300"/>
 			
             <property name="ExperienceGain" value="750" />
-
-			<property name="SoundRandom" value="malehateroam"/>
-			<property name="SoundAlert" value="malehatealert"/>
-			<property name="SoundSense" value="malehatesense"/>
-			<property name="SoundHurt" value="malehatepain"/>
-			<property name="SoundDeath" value="malehatedeath"/>
-			<property name="SoundAttack" value="malehateattack"/>
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="250" />
@@ -2762,19 +2754,14 @@
         <entity_class name="FuriousRamsayUMATemplateZombieFeralMale" extends="FuriousRamsayUMATemplateMale">
 			<property name="HideInSpawnMenu" value="true"/>
 
-            <property name="HandItem" value="FuriousRamsayMeleeHandZombieZombieFeral" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieFeral" />
 			<property name="MoveSpeed" value="0.7"/>
 			<property name="MoveSpeedAggro" value="0.8, 1.1"/>
 			<property name="WalkType" value="6"/>
+   			<property name="Mass" value="400"/>
+			<property name="Weight" value="400"/>
 			
             <property name="ExperienceGain" value="1250" />
-
-			<property name="SoundRandom" value="malehateroam"/>
-			<property name="SoundAlert" value="malehatealert"/>
-			<property name="SoundSense" value="malehatesense"/>
-			<property name="SoundHurt" value="malehatepain"/>
-			<property name="SoundDeath" value="malehatedeath"/>
-			<property name="SoundAttack" value="malehateattack"/>
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="350" />
@@ -2788,7 +2775,7 @@
         <entity_class name="FuriousRamsayUMATemplateZombieRageMale" extends="FuriousRamsayUMATemplateMale">
 			<property name="HideInSpawnMenu" value="true"/>
 
-            <property name="HandItem" value="FuriousRamsayMeleeHandZombieZombieRage" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieRage" />
 			<property name="MoveSpeed" value="0.8"/>
 			<property name="MoveSpeedAggro" value="0.9, 1.1"/>
 			<property name="JumpDelay" value="10"/>
@@ -2808,15 +2795,10 @@
 			<property name="AITarget-3" value=""/>
 			<property name="AITarget-4" value=""/>
 			<property name="AITarget-5" value=""/>
+   			<property name="Mass" value="800"/>
+			<property name="Weight" value="800"/>
 		
             <property name="ExperienceGain" value="1750" />
-
-			<property name="SoundRandom" value="malehateroam"/>
-			<property name="SoundAlert" value="malehatealert"/>
-			<property name="SoundSense" value="malehatesense"/>
-			<property name="SoundHurt" value="malehatepain"/>
-			<property name="SoundDeath" value="malehatedeath"/>
-			<property name="SoundAttack" value="malehateattack"/>
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="650" />
@@ -2829,8 +2811,6 @@
 
         <entity_class name="FuriousRamsayUMATemplateFemale" extends="FuriousRamsayUMATemplateMale">
 			<property name="HideInSpawnMenu" value="true"/>
-            <property name="Mass" value="130" />
-            <property name="Weight" value="200" />
 
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
@@ -2852,6 +2832,7 @@
 
         <entity_class name="FuriousRamsayUMATemplateSurvivorFemale" extends="FuriousRamsayUMATemplateFemale">
 		<!-- Survivors: Emma, Maria, Rayah -->
+            <property name="Tags" value="player" />
 			<property name="HideInSpawnMenu" value="true"/>
             <property name="Class" value="EntitySurvivor" />
             <property name="HandItem" value="FuriousRamsayMeleeHandZombieSurvivor" />
@@ -2888,6 +2869,8 @@
             <property name="HandItem" value="FuriousRamsayMeleeHandZombieEnemy" />
 			<property name="LootListAlive" value="1012"/>
 
+            <property name="ExperienceGain" value="350" />
+
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="150" />
                 <passive_effect name="HealthMax" operation="perc_set" value="1" />
@@ -2898,6 +2881,9 @@
         </entity_class>
 
         <entity_class name="FuriousRamsayUMATemplateZombieFemale" extends="FuriousRamsayUMATemplateFemale">
+   			<property name="Mass" value="300"/>
+			<property name="Weight" value="300"/>
+
 			<property name="HideInSpawnMenu" value="true"/>
             <property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam" />
             <property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert" />
@@ -2906,7 +2892,7 @@
             <property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath" />
             <property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense" />
 
-            <property name="HandItem" value="FuriousRamsayMeleeHandZombieZombie" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombie" />
 			<property name="MoveSpeed" value="0.06"/>
 			<property name="MoveSpeedAggro" value="0.2, 1.1"/>
 
@@ -2924,6 +2910,9 @@
         </entity_class>
 		
         <entity_class name="FuriousRamsayUMATemplateZombieFeralFemale" extends="FuriousRamsayUMATemplateFemale">
+   			<property name="Mass" value="400"/>
+			<property name="Weight" value="400"/>
+
 			<property name="HideInSpawnMenu" value="true"/>
             <property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam" />
             <property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert" />
@@ -2932,7 +2921,7 @@
             <property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath" />
             <property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense" />
 
-            <property name="HandItem" value="FuriousRamsayMeleeHandZombieZombieFeral" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieFeral" />
 			<property name="MoveSpeed" value="0.7"/>
 			<property name="MoveSpeedAggro" value="0.9, 1.1"/>
 			<property name="WalkType" value="6"/>
@@ -2950,6 +2939,9 @@
 
         <entity_class name="FuriousRamsayUMATemplateZombieRageFemale" extends="FuriousRamsayUMATemplateFemale">
 			<property name="HideInSpawnMenu" value="true"/>
+   			<property name="Mass" value="800"/>
+			<property name="Weight" value="800"/>
+
 			<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
 			<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert"/>
 			<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack"/>
@@ -2957,7 +2949,7 @@
 			<property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death"/>
 			<property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense"/>
 
-            <property name="HandItem" value="FuriousRamsayMeleeHandZombieZombieRage" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieRage" />
 			<property name="MoveSpeed" value="0.9"/>
 			<property name="MoveSpeedAggro" value="1, 1.1"/>
 			<property name="JumpDelay" value="5"/>
@@ -3037,13 +3029,6 @@
 
 			<property name="NavObject" value="FuriousRamsayDotRed"/>
 
-			<property name="SoundRandom" value="femalehateroam"/>
-			<property name="SoundAlert" value="femalehatealert"/>
-			<property name="SoundSense" value="femalehatesense"/>
-			<property name="SoundHurt" value="femalehatepain"/>
-			<property name="SoundDeath" value="femalehatedeath"/>
-			<property name="SoundAttack" value="femalehateattack"/>			
-			
 			<property name="MoveSpeedAggro" value="1.1, 1.2"/> 
 			<property name="LootListAlive" value="1010"/>
 			<property name="LootDropProb" value="0.5"/>
@@ -3201,6 +3186,13 @@
 
 			<property name="NavObject" value="FuriousRamsayDotRed"/>
 
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundSense" value="malehatesense"/>
+			<property name="SoundHurt" value="malehatepain"/>
+			<property name="SoundDeath" value="malehatedeath"/>
+			<property name="SoundAttack" value="malehateattack"/>
+
 			<property name="MoveSpeedAggro" value="1.1, 1.2"/> 
 			<property name="LootListAlive" value="1010"/>
 			<property name="LootDropProb" value="0.5"/>
@@ -3307,13 +3299,20 @@
 			<property name="Faction" value="none"/>	
 		</entity_class>
 
-        <entity_class name="FuriousRamsayUMABlackShieldBoss" extends="FuriousRamsayUMATemplateEnemyMale">
+        <entity_class name="FuriousRamsayUMABlackShieldBoss" extends="FuriousRamsayUMATemplateMale">
 			<property name="NavObject" value="FuriousRamsayDotRed"/>
+
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundDeath" value="malehatedeath"/>
 
 			<property name="MoveSpeed" value="0.7"/>
 			<property name="MoveSpeedAggro" value="0.8, 1.0"/>
 			<property name="CanClimbVertical" value="true"/>
 			<property name="SoundFootstepModifier" value="bear_footstep"/>
+			<property name="TimeStayAfterDeath" value="60"/>
 
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15,EntityEnemyAnimal,15"/>
@@ -3328,19 +3327,6 @@
 			<property name="AITarget-3" value=""/>
 			<property name="AITarget-4" value=""/>
 			<property name="AITarget-5" value=""/>
-
-			<!--<property name="AITask-1" value=""/>
-			<property name="AITask-2" value=""/>
-			<property name="AITask-3" value=""/>
-			<property name="AITask-4" value=""/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value=""/>
-			<property name="AITarget-2" value=""/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>-->
         </entity_class>
 
         <entity_class name="FuriousRamsayUMABlackShieldBossTier1" extends="FuriousRamsayUMABlackShieldBoss">
@@ -3349,6 +3335,9 @@
 			<property name="Weight" value="200"/>
 
             <property name="HandItem" value="FuriousRamsayMeleeHandBlackShieldBossTier1" />
+
+            <property name="ExperienceGain" value="1500" />
+			<property name="LootListOnDeath" value="1013"/>
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="1000" />
@@ -3370,6 +3359,9 @@
 
    			<property name="Mass" value="350"/>
 			<property name="Weight" value="350"/>
+
+            <property name="ExperienceGain" value="3000" />
+			<property name="LootListOnDeath" value="1014"/>
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
@@ -3406,6 +3398,9 @@
 
    			<property name="Mass" value="600"/>
 			<property name="Weight" value="600"/>
+
+            <property name="ExperienceGain" value="6000" />
+			<property name="LootListOnDeath" value="1015"/>
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
@@ -3444,6 +3439,9 @@
    			<property name="Mass" value="900"/>
 			<property name="Weight" value="900"/>
 
+            <property name="ExperienceGain" value="9000" />
+			<property name="LootListOnDeath" value="1016"/>
+
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
 			<property name="AITask-3" value="RangedAttackTarget" data="itemType=1;cooldown=2;duration=2"/>
@@ -3480,6 +3478,9 @@
 
    			<property name="Mass" value="1400"/>
 			<property name="Weight" value="1400"/>
+
+            <property name="ExperienceGain" value="12000" />
+			<property name="LootListOnDeath" value="1017"/>
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>

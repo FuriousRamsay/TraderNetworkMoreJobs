@@ -28,11 +28,38 @@ The following can be found as part of the Trader's job listing:
 	- Tier 4: The Black Shield faction pushed their experiments even further. Expect stronger and faster mutated bandits.
 	- Tier 5: The Black Shield faction created a beserker mutation. Party up if you can.
 ﻿	Notes:
-		﻿﻿- you can loot the bandits (extra dukes, even when alive)
-		﻿﻿- you can loot the captains (even when alive) and they have a chance of dropping extra loot when they die
-		﻿﻿- you do not have to stay within the limits of the POI
+	  ﻿﻿- you can loot the bandits (extra dukes, even when alive)
+	  ﻿﻿- you can loot the captains (even when alive) and they have a chance of dropping extra loot when they die
+	﻿﻿  - you do not have to stay within the limits of the POI
 
 The following can be purchased from the player vending machines at each trader. Each Tier increases in difficulty:
+
+	POI Reset - Experimental:
+	- A note that can be used when standing close to a POI in order to reset it entirely.
+	- This can be useful when in need of specific resources (schematics, cement, cobblestone, etc)
+	Notes: A questable POI is one that the trader will select as a possible location for a quest.
+	       This item can rarely be found in the player vending machine or be potentially obtained by looting the corpse of one of the Black Shield Titans.
+
+	Black Shield Titans (Tiers 1 through 5) - Experimental:
+	You are sent to a random location where you have to fight one of the 5 Black Shield Titans with special abilities. Party up if possible.
+	- Tier 1: The Bully: doesn't have much in terms of armor. Watch out for the occasional knockdowns.
+	- Tier 2: The Giant: has leather armor which you can loot after the fight. It can shoot multiple arrows, make sure to dodge them.
+	- Tier 3: The Mammoth: has scrap armor which you can loot after the fight. It will shoot electrical darts, make sure to dodge them. It also has the ability to knock you down at a certain distance and shock you.
+	- Tier 4: The Goliath: has iron armor  which you can loot after the fight. It will breathe fire. It also has the ability to knock you down at a certain distance and burn you.
+	- Tier 5: The Colossus: has steel armor  which you can loot after the fight. It will fire rockets, make sure to dodge them. It also has the ability to knock you down at a certain distance and cause explosive damage.
+	Notes: This challenge yields the possibility of receiving the POI Reset note as a loot item. The higher the tier, the higher the probability of finding it.
+
+	Ghosts (Parts 1 through 5) - Experimental:
+	- Through each part you get to unveil a storyline involving the Trader Network and one of its enemy factions, the Black Shield
+	- In parts 1 though 3, you are asked to track down and kill a series of cloaked mechanical prototypes that have mysteriously "escaped" from the Trader 
+	﻿  Network's labs
+	- Parts 4 and 5 become more difficult as the Black Shield unleashes new types of mechanical prototypes
+	﻿- In part 5, you fight alongside the Trader Network's new line of white prototypes to defeat the Black Shield's robots and their plan to kill the 
+	﻿  entire colony
+	Note: Spawns occur over time and are essentially queued. You should do your best to stay and fight. If you leave and are in single player, the
+	﻿      game will not clear the spawn queue (bug that has been submitted) which will cause NullException errors when you go back in. The spawns
+	      will not occur, but the game will still attempt to action the queue until the queue is empty. Spawning usually lasts 6 minutes total. One way to
+	      clear the queue is to close the game
 
 	The Hunt (Tiers 1 through 5):
 	- Clear a number of mutant animals (current Vanilla set of animals with different skins and will retaliate)

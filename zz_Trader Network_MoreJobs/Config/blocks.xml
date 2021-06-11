@@ -1,0 +1,24 @@
+<Config>
+
+	<append xpath="/blocks">
+
+		<block name="FuriousRamsayLootTestCrate">
+			<property name="DescriptionKey" value="cntShippingCrateGroupDesc"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?crate_store_ShamwayPrefab.prefab"/>
+			<property name="DisplayInfo" value="Name"/>
+			<property name="Material" value="Mwood_regular"/>
+			<drop event="Destroy" count="0"/>
+			<property name="DowngradeBlock" value="FuriousRamsayLootTestBox"/>
+			<property name="FilterTags" value="floot"/>
+		</block>
+
+		<block name="FuriousRamsayLootTestBox">
+			<property name="Extends" value="cntGarageStorage"/>
+			<property name="LootList" value="1013"/>
+		</block>
+
+	</append>
+
+</Config>

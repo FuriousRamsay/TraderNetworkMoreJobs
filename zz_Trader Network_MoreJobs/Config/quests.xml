@@ -2,6 +2,256 @@
 
 	<insertAfter xpath="/quests/quest[@id='tier2_buried_supplies']">
 
+		<quest id="quest_FuriousRamsayTier1_BlackShieldBoss">
+			<property name="name_key" value="quest_FuriousRamsayBlackShieldBoss_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayBlackShieldBoss_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayBlackShieldBoss_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayBlackShieldBossTier1_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayBlackShieldBoss_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayBlackShieldBoss_response"/>
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayBlackShieldBoss_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomGoto" value="300-500" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+				
+			<objective type="ZombieKill" value="1" id="FuriousRamsayUMABlackShieldBossTier1" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMABlackShieldBossTier1" value="1" phase="3"/>
+		
+			<objective type="ReturnToNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="2500"/>
+			<reward type="Item" id="casinoCoin" value="500"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestSchematics,groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestTools,groupQuestMedical" ischosen="true" value="1"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestCookedFoodsTier1" ischosen="true" isfixed="true" value="2"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayTier2_BlackShieldBoss">
+			<property name="name_key" value="quest_FuriousRamsayBlackShieldBoss_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayBlackShieldBoss_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayBlackShieldBoss_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="2"/>
+			<property name="offer_key" value="quest_FuriousRamsayBlackShieldBossTier2_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayBlackShieldBoss_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayBlackShieldBoss_response"/>
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayBlackShieldBoss_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomGoto" value="350-550" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+				
+			<objective type="ZombieKill" value="1" id="FuriousRamsayUMABlackShieldBossTier2" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMABlackShieldBossTier2" value="1" phase="3"/>
+		
+			<objective type="ReturnToNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="6000"/>
+			<reward type="Item" id="casinoCoin" value="1250"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestSchematics,groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestTools,groupQuestMedical" ischosen="true" value="1"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestCookedFoodsTier2" ischosen="true" isfixed="true" value="2"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayTier3_BlackShieldBoss">
+			<property name="name_key" value="quest_FuriousRamsayBlackShieldBoss_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayBlackShieldBoss_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayBlackShieldBoss_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="3"/>
+			<property name="offer_key" value="quest_FuriousRamsayBlackShieldBossTier3_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayBlackShieldBoss_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayBlackShieldBoss_response"/>
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayBlackShieldBoss_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomGoto" value="400-600" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+				
+			<objective type="ZombieKill" value="1" id="FuriousRamsayUMABlackShieldBossTier3" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMABlackShieldBossTier3" value="1" phase="3"/>
+		
+			<objective type="ReturnToNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="9000"/>
+			<reward type="Item" id="casinoCoin" value="2000"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestSchematics,groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestTools,groupQuestMedical" ischosen="true" value="1"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestCookedFoodsTier3" ischosen="true" isfixed="true" value="2"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayTier4_BlackShieldBoss">
+			<property name="name_key" value="quest_FuriousRamsayBlackShieldBoss_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayBlackShieldBoss_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayBlackShieldBoss_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="4"/>
+			<property name="offer_key" value="quest_FuriousRamsayBlackShieldBossTier4_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayBlackShieldBoss_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayBlackShieldBoss_response"/>
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayBlackShieldBoss_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomGoto" value="450-650" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+				
+			<objective type="ZombieKill" value="1" id="FuriousRamsayUMABlackShieldBossTier4" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMABlackShieldBossTier4" value="1" phase="3"/>
+		
+			<objective type="ReturnToNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="12000"/>
+			<reward type="Item" id="casinoCoin" value="2750"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestSchematics,groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestTools,groupQuestMedical" ischosen="true" value="1"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestCookedFoodsTier4" ischosen="true" isfixed="true" value="2"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayTier5_BlackShieldBoss">
+			<property name="name_key" value="quest_FuriousRamsayBlackShieldBoss_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayBlackShieldBoss_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayBlackShieldBoss_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="5"/>
+			<property name="offer_key" value="quest_FuriousRamsayBlackShieldBossTier5_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayBlackShieldBoss_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayBlackShieldBoss_response"/>
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayBlackShieldBoss_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomGoto" value="500-700" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+				
+			<objective type="ZombieKill" value="1" id="FuriousRamsayUMABlackShieldBossTier5" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMABlackShieldBossTier5" value="1" phase="3"/>
+		
+			<objective type="ReturnToNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="15000"/>
+			<reward type="Item" id="casinoCoin" value="3500"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestSchematics,groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestTools,groupQuestMedical" ischosen="true" value="1"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestCookedFoodsTier5" ischosen="true" isfixed="true" value="2"/>
+		</quest>
+
 		<quest id="quest_FuriousRamsayResetPOI">
 			<property name="name_key" value="quest_FuriousRamsayResetPOI_name"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayResetPOI_subtitle"/>
@@ -64,30 +314,32 @@
 
 			<objective type="Time" value="5" phase="3"/>
 			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy,FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="4">
 				<property name="delay" value="3"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="4">
+				<property name="delay" value="4"/>
+			</action>		
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="1" phase="4">
 				<property name="delay" value="5"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="4">
 				<property name="delay" value="8"/>
 			</action>
 			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy,FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="1" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="5"/>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="1" phase="5">
 				<property name="delay" value="5"/>
 			</action>
 			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy,FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="2" phase="6"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="6"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="6"/>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="1" phase="6">
 				<property name="delay" value="5"/>
 			</action>
 			<objective type="ZombieKill" id="FuriousRamsayUMAClintEnemy,FuriousRamsayUMAGabrielleEnemy" value="1" phase="7"/>
 			<action type="SpawnEnemy" id="FuriousRamsayUMAClintEnemy" value="1" phase="7"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
 				<property name="delay" value="3"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMAGabrielleEnemy" value="1" phase="7">
@@ -142,27 +394,27 @@
 
 			<objective type="Time" value="5" phase="3"/>
 			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy,FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="2" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="2" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="2" phase="4">
 				<property name="delay" value="3"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="1" phase="4">
 				<property name="delay" value="8"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="4">
 				<property name="delay" value="11"/>
 			</action>
 			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy,FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="2" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="5">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="5">
 				<property name="delay" value="3"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="2" phase="5">
 				<property name="delay" value="5"/>
 			</action>
 			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy,FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="2" phase="6"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="2" phase="6"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="6">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="2" phase="6"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="6">
 				<property name="delay" value="3"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="1" phase="6">
@@ -171,13 +423,13 @@
 			<objective type="ZombieKill" id="FuriousRamsayUMAClintEnemy,FuriousRamsayUMAGabrielleEnemy" value="1" phase="7"/>
 			<objective type="ZombieKill" optional="true" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy,FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="2" phase="7"/>
 			<action type="SpawnEnemy" id="FuriousRamsayUMAClintEnemy" value="1" phase="7"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
 				<property name="delay" value="3"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="7">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="7">
 				<property name="delay" value="6"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="7">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="7">
 				<property name="delay" value="9"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="1" phase="7">
@@ -235,47 +487,47 @@
 
 			<objective type="Time" value="8" phase="3"/>
 			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy,FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="2" phase="4"/>
-			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombie, FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie,FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="2" phase="4">
+			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombie,FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie,FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="2" phase="4">
 				<property name="delay" value="3"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombie, FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie" value="1" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombie,FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie" value="1" phase="4">
 				<property name="delay" value="6"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="2" phase="4">
 				<property name="delay" value="9"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="4">
 				<property name="delay" value="12"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="2" phase="4">
 				<property name="delay" value="15"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="4">
 				<property name="delay" value="18"/>
 			</action>
 			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy,FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="2" phase="5"/>
-			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombie, FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie,FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="1" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="5">
+			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombie,FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie,FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="1" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="5">
 				<property name="delay" value="3"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="2" phase="5">
 				<property name="delay" value="5"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombie, FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie" value="2" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombie,FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie" value="2" phase="4">
 				<property name="delay" value="8"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="1" phase="4">
 				<property name="delay" value="11"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="4">
 				<property name="delay" value="14"/>
 			</action>
 			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy,FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="2" phase="6"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="2" phase="6"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="6">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="2" phase="6"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="6">
 				<property name="delay" value="3"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMARoxyEnemy" value="2" phase="6">
@@ -284,13 +536,13 @@
 			<!--<objective type="ZombieKill" id="FuriousRamsayUMAClintEnemy,FuriousRamsayUMAGabrielleEnemy" value="2" phase="7"/>-->
 			<objective type="ZombieKill" id="FuriousRamsayUMAClintZombie,FuriousRamsayUMAGabrielleZombie" value="1" phase="7"/>
 			<action type="SpawnEnemy" id="FuriousRamsayUMAGabrielleEnemy" value="1" phase="7"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
 				<property name="delay" value="3"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy, FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="7">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAKimEnemy" value="1" phase="7">
 				<property name="delay" value="6"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="7">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="7">
 				<property name="delay" value="9"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="1" phase="7">
@@ -299,7 +551,7 @@
 			<action type="SpawnEnemy" id="FuriousRamsayUMAClintEnemy" value="1" phase="7">
 				<property name="delay" value="15"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
 				<property name="delay" value="18"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMAClintZombie" value="1" phase="7">
@@ -358,47 +610,47 @@
 
 			<objective type="Time" value="10" phase="3"/>
 			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombie,FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie,FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="2" phase="4"/>
-			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombieFeral, FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral,FuriousRamsayUMACharlotteZombieFeral,FuriousRamsayUMARoxyZombieFeral" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombie, FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie" value="2" phase="4">
+			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombieFeral,FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral,FuriousRamsayUMACharlotteZombieFeral,FuriousRamsayUMARoxyZombieFeral" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombie,FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie" value="2" phase="4">
 				<property name="delay" value="3"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombieFeral, FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral" value="1" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombieFeral,FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral" value="1" phase="4">
 				<property name="delay" value="6"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteZombieFeral,FuriousRamsayUMARoxyZombieFeral" value="1" phase="4">
 				<property name="delay" value="9"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="4">
 				<property name="delay" value="12"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="1" phase="4">
 				<property name="delay" value="15"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="4">
 				<property name="delay" value="18"/>
 			</action>
 			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombie,FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie,FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="2" phase="5"/>
-			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombieFeral, FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral,FuriousRamsayUMACharlotteZombieFeral,FuriousRamsayUMARoxyZombieFeral" value="1" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombie, FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie" value="1" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="5">
+			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombieFeral,FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral,FuriousRamsayUMACharlotteZombieFeral,FuriousRamsayUMARoxyZombieFeral" value="1" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombie,FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie" value="1" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="5">
 				<property name="delay" value="3"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="2" phase="5">
 				<property name="delay" value="5"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombieFeral, FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral" value="2" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombieFeral,FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral" value="2" phase="4">
 				<property name="delay" value="8"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteZombieFeral,FuriousRamsayUMARoxyZombieFeral" value="1" phase="4">
 				<property name="delay" value="11"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="4">
 				<property name="delay" value="14"/>
 			</action>
 			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombie,FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie,FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="2" phase="6"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombie, FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie" value="2" phase="6"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="6">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombie,FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie" value="2" phase="6"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="6">
 				<property name="delay" value="3"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="1" phase="6">
@@ -406,13 +658,13 @@
 			</action>
 			<objective type="ZombieKill" id="FuriousRamsayUMAClintZombieRage,FuriousRamsayUMAGabrielleZombieRage" value="1" phase="7"/>
 			<action type="SpawnEnemy" id="FuriousRamsayUMAClintZombieRage" value="1" phase="7"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
 				<property name="delay" value="3"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombie, FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie" value="1" phase="7">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombie,FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie" value="1" phase="7">
 				<property name="delay" value="6"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="7">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="7">
 				<property name="delay" value="9"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="1" phase="7">
@@ -421,7 +673,7 @@
 			<action type="SpawnEnemy" id="FuriousRamsayUMAClintZombie" value="1" phase="7">
 				<property name="delay" value="15"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
 				<property name="delay" value="18"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMAClintZombieRage" value="1" phase="7">
@@ -480,30 +732,30 @@
 
 			<objective type="Time" value="10" phase="3"/>
 			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombieFeral,FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral,FuriousRamsayUMACharlotteZombieFeral,FuriousRamsayUMARoxyZombieFeral" value="2" phase="4"/>
-			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombieRage, FuriousRamsayUMAHodorZombieRage,FuriousRamsayUMARichieZombieRage,FuriousRamsayUMAWillieZombieRage,FuriousRamsayUMAKimZombieRage,FuriousRamsayUMACharlotteZombieRage,FuriousRamsayUMARoxyZombieRage" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombieFeral, FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral" value="2" phase="4">
+			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombieRage,FuriousRamsayUMAHodorZombieRage,FuriousRamsayUMARichieZombieRage,FuriousRamsayUMAWillieZombieRage,FuriousRamsayUMAKimZombieRage,FuriousRamsayUMACharlotteZombieRage,FuriousRamsayUMARoxyZombieRage" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombieFeral,FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral" value="2" phase="4">
 				<property name="delay" value="3"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombieRage, FuriousRamsayUMAHodorZombieRage,FuriousRamsayUMARichieZombieRage,FuriousRamsayUMAWillieZombieRage,FuriousRamsayUMAKimZombieRage" value="1" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombieRage,FuriousRamsayUMAHodorZombieRage,FuriousRamsayUMARichieZombieRage,FuriousRamsayUMAWillieZombieRage,FuriousRamsayUMAKimZombieRage" value="1" phase="4">
 				<property name="delay" value="6"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteZombieRage,FuriousRamsayUMARoxyZombieRage" value="1" phase="4">
 				<property name="delay" value="9"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="4">
 				<property name="delay" value="12"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteZombieFeral,FuriousRamsayUMARoxyZombieFeral" value="1" phase="4">
 				<property name="delay" value="15"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="4">
 				<property name="delay" value="18"/>
 			</action>
 			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombieFeral,FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral,FuriousRamsayUMACharlotteZombieFeral,FuriousRamsayUMARoxyZombieFeral" value="2" phase="5"/>
-			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombieRage, FuriousRamsayUMAHodorZombieRage,FuriousRamsayUMARichieZombieRage,FuriousRamsayUMAWillieZombieRage,FuriousRamsayUMAKimZombieRage,FuriousRamsayUMACharlotteZombieRage,FuriousRamsayUMARoxyZombieRage" value="1" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombieFeral, FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral" value="1" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="5">
+			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombieRage,FuriousRamsayUMAHodorZombieRage,FuriousRamsayUMARichieZombieRage,FuriousRamsayUMAWillieZombieRage,FuriousRamsayUMAKimZombieRage,FuriousRamsayUMACharlotteZombieRage,FuriousRamsayUMARoxyZombieRage" value="1" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombieFeral,FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral" value="1" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="5">
 				<property name="delay" value="3"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayAllyWolfTier2Quest" value="1" phase="5">
@@ -512,18 +764,18 @@
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteZombieFeral,FuriousRamsayUMARoxyZombieFeral" value="2" phase="5">
 				<property name="delay" value="5"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombieRage, FuriousRamsayUMAHodorZombieRage,FuriousRamsayUMARichieZombieRage,FuriousRamsayUMAWillieZombieRage,FuriousRamsayUMAKimZombieRage" value="2" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombieRage,FuriousRamsayUMAHodorZombieRage,FuriousRamsayUMARichieZombieRage,FuriousRamsayUMAWillieZombieRage,FuriousRamsayUMAKimZombieRage" value="2" phase="4">
 				<property name="delay" value="8"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteZombieRage,FuriousRamsayUMARoxyZombieRage" value="1" phase="4">
 				<property name="delay" value="11"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="4">
 				<property name="delay" value="14"/>
 			</action>
 			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombieFeral,FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral,FuriousRamsayUMACharlotteZombieFeral,FuriousRamsayUMARoxyZombieFeral" value="2" phase="6"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombieFeral, FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral" value="2" phase="6"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="6">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombieFeral,FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral" value="2" phase="6"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="6">
 				<property name="delay" value="3"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteZombieFeral,FuriousRamsayUMARoxyZombieFeral" value="1" phase="6">
@@ -531,16 +783,16 @@
 			</action>
 			<objective type="ZombieKill" id="FuriousRamsayUMAGabrielleZombieShockedRage,FuriousRamsayUMAGabrielleZombieShockedRage" value="1" phase="7"/>
 			<action type="SpawnEnemy" id="FuriousRamsayUMAGabrielleZombieShockedRage" value="1" phase="7"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
 				<property name="delay" value="3"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayAllyWolfTier2Quest" value="2" phase="7">
 				<property name="delay" value="3"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombieFeral, FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral" value="1" phase="7">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombieFeral,FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMARichieZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAKimZombieFeral" value="1" phase="7">
 				<property name="delay" value="6"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor, FuriousRamsayUMAMariaSurvivor, FuriousRamsayUMARayahSurvivor" value="1" phase="7">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="7">
 				<property name="delay" value="9"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteZombieFeral,FuriousRamsayUMARoxyZombieFeral" value="1" phase="7">
@@ -549,7 +801,7 @@
 			<action type="SpawnEnemy" id="FuriousRamsayUMAClintZombieFeral" value="1" phase="7">
 				<property name="delay" value="15"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor, FuriousRamsayUMAEarlSurvivor, FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
 				<property name="delay" value="18"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayUMAClintZombieShockedRage" value="1" phase="7">
@@ -2762,6 +3014,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="FuriousRamsayTrainerTier1" value="1" phase="1"/>
 			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
+			<reward type="Item" id="casinoCoin" value="5"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier1Wave2"/>
 		</quest>
 
@@ -2777,6 +3030,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="10"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier1Wave3"/>
 		</quest>
 		
@@ -2792,6 +3046,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="15"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier1Wave4"/>
 		</quest>
 
@@ -2807,6 +3062,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="20"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier1Wave5"/>
 		</quest>
 
@@ -2822,6 +3078,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="25"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier1Wave6"/>
 		</quest>
 
@@ -2837,6 +3094,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="30"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier1Wave7"/>
 		</quest>
 
@@ -2852,6 +3110,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="35"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier1Wave8"/>
 		</quest>
 
@@ -2867,6 +3126,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="40"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier1Wave9"/>
 		</quest>
 
@@ -2882,6 +3142,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieNurseTrainer,zombieBusinessManTrainer,zombieSteveTrainer,zombieYoTrainer,zombieMarleneTrainer,zombieDarleneTrainer,zombieLabTrainer,zombieArleneTrainer,zombieMoeTrainer,zombieJanitorTrainer,zombieJoeTrainer,zombieFemaleFatTrainer,zombieBoeTrainer" value="3" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="45"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier1Wave10"/>
 		</quest>
 
@@ -2908,7 +3169,7 @@
 			</objective>
 
 			<reward type="Exp" value="3000"/>
-			<reward type="Item" id="casinoCoin" value="800"/>
+			<reward type="Item" id="casinoCoin" value="500"/>
 			<reward type="Item" id="resourceScrapBrass" ischosen="true" isfixed="true" value="500"/>
 			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" isfixed="true" value="1"/>
 			<reward type="LootItem" id="groupQuestMods" ischosen="true"  value="1"/>
@@ -2932,6 +3193,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="FuriousRamsayTrainerTier2" value="1" phase="1"/>
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieStripperTrainer,zombieFarmerTrainer,zombieBikerTrainer,zombieOldTimerTrainer,zombieCheerleaderTrainer,zombieSkateboarderTrainer,zombieSoldierTrainer,zombieUtilityWorkerTrainer,zombieFatCopTrainer,zombieFatHawaiianTrainer,zombieSpiderTrainer,zombieSteveCrawlerTrainer" value="4" phase="1"/>
+			<reward type="Item" id="casinoCoin" value="50"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier2Wave2"/>
 		</quest>
 
@@ -2947,6 +3209,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieStripperTrainer,zombieFarmerTrainer,zombieBikerTrainer,zombieOldTimerTrainer,zombieCheerleaderTrainer,zombieSkateboarderTrainer,zombieSoldierTrainer,zombieUtilityWorkerTrainer,zombieFatCopTrainer,zombieFatHawaiianTrainer,zombieSpiderTrainer,zombieSteveCrawlerTrainer" value="4" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="55"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier2Wave3"/>
 		</quest>
 		
@@ -2962,6 +3225,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieStripperTrainer,zombieFarmerTrainer,zombieBikerTrainer,zombieOldTimerTrainer,zombieCheerleaderTrainer,zombieSkateboarderTrainer,zombieSoldierTrainer,zombieUtilityWorkerTrainer,zombieFatCopTrainer,zombieFatHawaiianTrainer,zombieSpiderTrainer,zombieSteveCrawlerTrainer" value="5" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="60"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier2Wave4"/>
 		</quest>
 
@@ -2978,6 +3242,7 @@
 			<action type="SpawnEnemy" id="animalZombieDog" value="2" phase="1"/>
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieStripperTrainer,zombieFarmerTrainer,zombieBikerTrainer,zombieOldTimerTrainer,zombieCheerleaderTrainer,zombieSkateboarderTrainer,zombieSoldierTrainer,zombieUtilityWorkerTrainer,zombieFatCopTrainer,zombieFatHawaiianTrainer,zombieSpiderTrainer,zombieSteveCrawlerTrainer" value="5" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="65"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier2Wave5"/>
 		</quest>
 
@@ -2993,6 +3258,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieStripperTrainer,zombieFarmerTrainer,zombieBikerTrainer,zombieOldTimerTrainer,zombieCheerleaderTrainer,zombieSkateboarderTrainer,zombieSoldierTrainer,zombieUtilityWorkerTrainer,zombieFatCopTrainer,zombieFatHawaiianTrainer,zombieSpiderTrainer,zombieSteveCrawlerTrainer" value="6" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="70"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier2Wave6"/>
 		</quest>
 
@@ -3009,6 +3275,7 @@
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieStripperTrainer,zombieFarmerTrainer,zombieBikerTrainer,zombieOldTimerTrainer,zombieCheerleaderTrainer,zombieSkateboarderTrainer,zombieSoldierTrainer,zombieUtilityWorkerTrainer,zombieFatCopTrainer,zombieFatHawaiianTrainer,zombieSpiderTrainer,zombieSteveCrawlerTrainer" value="6" phase="1"/>
 			<action type="SpawnEnemy" id="animalZombieVulture" value="2" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="75"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier2Wave7"/>
 		</quest>
 
@@ -3024,6 +3291,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieStripperTrainer,zombieFarmerTrainer,zombieBikerTrainer,zombieOldTimerTrainer,zombieCheerleaderTrainer,zombieSkateboarderTrainer,zombieSoldierTrainer,zombieUtilityWorkerTrainer,zombieFatCopTrainer,zombieFatHawaiianTrainer,zombieSpiderTrainer,zombieSteveCrawlerTrainer" value="7" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="80"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier2Wave8"/>
 		</quest>
 
@@ -3039,6 +3307,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="animalZombieDog" value="2" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="85"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier2Wave9"/>
 		</quest>
 
@@ -3054,6 +3323,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieStripperTrainer,zombieFarmerTrainer,zombieBikerTrainer,zombieOldTimerTrainer,zombieCheerleaderTrainer,zombieSkateboarderTrainer,zombieSoldierTrainer,zombieUtilityWorkerTrainer,zombieFatCopTrainer,zombieFatHawaiianTrainer,zombieSpiderTrainer,zombieSteveCrawlerTrainer" value="7" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="90"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier2Wave10"/>
 		</quest>
 
@@ -3081,7 +3351,7 @@
 			</objective>
 
 			<reward type="Exp" value="6000"/>
-			<reward type="Item" id="casinoCoin" value="1600"/>
+			<reward type="Item" id="casinoCoin" value="1000"/>
 			<reward type="Item" id="resourceScrapBrass" ischosen="true" isfixed="true" value="1000"/>
 			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" isfixed="true" value="1"/>
 			<reward type="LootItem" id="groupQuestMods" ischosen="true"  value="1"/>
@@ -3105,6 +3375,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="FuriousRamsayTrainerTier3" value="1" phase="1"/>
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="5" phase="1"/>
+			<reward type="Item" id="casinoCoin" value="75"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier3Wave2"/>
 		</quest>
 
@@ -3120,6 +3391,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="5" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="85"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier3Wave3"/>
 		</quest>
 		
@@ -3136,6 +3408,7 @@
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="6" phase="1"/>
 			<action type="SpawnEnemy" id="animalZombieVulture" value="4" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="95"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier3Wave4"/>
 		</quest>
 
@@ -3152,6 +3425,7 @@
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="6" phase="1"/>
 			<action type="SpawnEnemy" id="animalZombieDog" value="3" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="105"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier3Wave5"/>
 		</quest>
 
@@ -3167,6 +3441,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="7" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="115"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier3Wave6"/>
 		</quest>
 
@@ -3182,6 +3457,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="7" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="125"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier3Wave7"/>
 		</quest>
 
@@ -3198,6 +3474,7 @@
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="8" phase="1"/>
 			<action type="SpawnEnemy" id="animalZombieDog" value="3" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="135"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier3Wave8"/>
 		</quest>
 
@@ -3213,6 +3490,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="animalZombieVultureRadiated" value="2" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="145"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier3Wave9"/>
 		</quest>
 
@@ -3228,6 +3506,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="8" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="155"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier3Wave10"/>
 		</quest>
 
@@ -3254,7 +3533,7 @@
 			</objective>
 
 			<reward type="Exp" value="9000"/>
-			<reward type="Item" id="casinoCoin" value="2400"/>
+			<reward type="Item" id="casinoCoin" value="1500"/>
 			<reward type="Item" id="resourceScrapBrass" ischosen="true" isfixed="true" value="1500"/>
 			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" isfixed="true" value="1"/>
 			<reward type="LootItem" id="groupQuestMods" ischosen="true"  value="1"/>
@@ -3278,6 +3557,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="FuriousRamsayTrainerTier4" value="1" phase="1"/>
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral" value="6" phase="1"/>
+			<reward type="Item" id="casinoCoin" value="100"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier4Wave2"/>
 		</quest>
 
@@ -3293,6 +3573,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated" value="6" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="115"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier4Wave3"/>
 		</quest>
 		
@@ -3309,6 +3590,7 @@
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="7" phase="1"/>
 			<action type="SpawnEnemy" id="animalZombieDog" value="4" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="130"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier4Wave4"/>
 		</quest>
 
@@ -3324,6 +3606,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated" value="7" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="145"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier4Wave5"/>
 		</quest>
 
@@ -3340,6 +3623,7 @@
 			<action type="SpawnEnemy" id="legendaryZombieLab,legendaryZombieBusinessMan,legendaryZombieUtilityWorker,zombieDemolition,zombieFatCopRadiated,zombieBikerRadiated" value="8" phase="1"/>
 			<action type="SpawnEnemy" id="zombieScreamerFeral" value="3" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="160"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier4Wave6"/>
 		</quest>
 
@@ -3355,6 +3639,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="animalZombieVultureRadiated" value="3" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="175"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier4Wave7"/>
 		</quest>
 
@@ -3370,6 +3655,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral" value="8" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="190"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier4Wave8"/>
 		</quest>
 
@@ -3386,6 +3672,7 @@
 			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated" value="9" phase="1"/>
 			<action type="SpawnEnemy" id="animalZombieDog" value="4" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="205"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier4Wave9"/>
 		</quest>
 
@@ -3401,6 +3688,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="legendaryZombieLab,legendaryZombieBusinessMan,legendaryZombieUtilityWorker,zombieDemolition,zombieFatCopRadiated,zombieBikerRadiated" value="9" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="220"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier4Wave10"/>
 		</quest>
 
@@ -3429,7 +3717,7 @@
 			</objective>
 
 			<reward type="Exp" value="12000"/>
-			<reward type="Item" id="casinoCoin" value="3200"/>
+			<reward type="Item" id="casinoCoin" value="2000"/>
 			<reward type="Item" id="resourceScrapBrass" ischosen="true" isfixed="true" value="2000"/>
 			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" isfixed="true" value="1"/>
 			<reward type="LootItem" id="groupQuestMods" ischosen="true"  value="1"/>
@@ -3453,6 +3741,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="FuriousRamsayTrainerTier5" value="1" phase="1"/>
 			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated" value="7" phase="1"/>
+			<reward type="Item" id="casinoCoin" value="100"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier5Wave2"/>
 		</quest>
 
@@ -3469,6 +3758,7 @@
 			<action type="SpawnEnemy" id="legendaryZombieLab,legendaryZombieBusinessMan,legendaryZombieUtilityWorker,zombieDemolition,zombieFatCopRadiated,zombieBikerRadiated" value="7" phase="1"/>
 			<action type="SpawnEnemy" id="animalZombieVultureRadiated" value="4" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="125"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier5Wave3"/>
 		</quest>
 		
@@ -3486,6 +3776,7 @@
 			<action type="SpawnEnemy" id="animalZombieDog" value="6" phase="1"/>
 			<action type="SpawnEnemy" id="zombieSnowFeral" value="5" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="150"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier5Wave4"/>
 		</quest>
 
@@ -3501,6 +3792,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated" value="8" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="175"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier5Wave5"/>
 		</quest>
 
@@ -3518,6 +3810,7 @@
 			<action type="SpawnEnemy" id="zombieScreamerFeral" value="3" phase="1"/>
 			<action type="SpawnEnemy" id="animalZombieDog" value="6" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="200"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier5Wave6"/>
 		</quest>
 
@@ -3534,6 +3827,7 @@
 			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated" value="9" phase="1"/>
 			<action type="SpawnEnemy" id="animalZombieVultureRadiated" value="4" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="225"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier5Wave7"/>
 		</quest>
 
@@ -3550,6 +3844,7 @@
 			<action type="SpawnEnemy" id="zlegendaryZombieLab,legendaryZombieBusinessMan,legendaryZombieUtilityWorker,zombieDemolition,zombieFatCopRadiated,zombieBikerRadiated" value="9" phase="1"/>
 			<action type="SpawnEnemy" id="zombieSnowFeral" value="5" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="250"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier5Wave8"/>
 		</quest>
 
@@ -3565,6 +3860,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated" value="10" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="275"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier5Wave9"/>
 		</quest>
 
@@ -3580,6 +3876,7 @@
 			<objective type="Time" value="20" phase="1"/>
 			<action type="SpawnEnemy" id="animalZombieBear" value="4" phase="1"/>
 		
+			<reward type="Item" id="casinoCoin" value="300"/>
 			<reward type="Quest" id="challenge_FuriousRamsayHordeTrainingTier5Wave10"/>
 		</quest>
 
@@ -3607,7 +3904,7 @@
 			</objective>
 
 			<reward type="Exp" value="15000"/>
-			<reward type="Item" id="casinoCoin" value="4000"/>
+			<reward type="Item" id="casinoCoin" value="2500"/>
 			<reward type="Item" id="resourceScrapBrass" ischosen="true" isfixed="true" value="2500"/>
 			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" isfixed="true" value="1"/>
 			<reward type="LootItem" id="groupQuestMods" ischosen="true"  value="1"/>
