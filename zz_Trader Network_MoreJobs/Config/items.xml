@@ -23,7 +23,7 @@
 		<item name="qc_FuriousRamsayResetPOI">
 			<property name="DescriptionKey" value="qc_FuriousRamsayResetPOIDesc"/>
 			<property name="Extends" value="FuriousRamsayNoteMaster"/>
-			<property name="EconomicValue" value="2500"/>
+			<property name="EconomicValue" value="5000"/>
 			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
@@ -607,7 +607,7 @@
 			<property name="HoldType" value="55"/>
 			<property class="Action0">
 				<property name="Delay" value="2"/>
-				<property name="Range" value="1.2"/>
+				<property name="Range" value="1.3"/>
 				<property name="DamageEntity" value="3"/>
 				<property name="DamageBlock" value="3"/>
 			</property>
@@ -871,7 +871,7 @@
 			<property name="Degradation" value="99999" param1="true"/>
 			<property class="Action0">
 				<property name="Delay" value=".7"/>
-				<property name="Range" value="1.75"/>
+				<property name="Range" value="2"/>
 				<property name="DamageEntity" value="15"/>
 				<property name="DamageBlock" value="50"/>
 			</property>
@@ -931,7 +931,7 @@
 			<property name="Degradation" value="99999" param1="true"/>
 			<property class="Action0">
 				<property name="Delay" value=".7"/>
-				<property name="Range" value="1.75"/>
+				<property name="Range" value="2"/>
 				<property name="DamageEntity" value="15"/>
 				<property name="DamageBlock" value="50"/>
 			</property>
@@ -978,7 +978,7 @@
 				<property name="CollisionRadius" value="0.5"/>
 				<property name="Buff" value="FuriousRamsayAddBurningEnemyTier5"/>
 			</property>
-			<effect_group name="FuriousRamsayShockAmmo" tiered="false">
+			<effect_group name="FuriousRamsayBurnAmmo" tiered="false">
 				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
 				<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
@@ -997,55 +997,6 @@
 			</property>
 		</item>
 
-		<item name="gunBanditSMG5"> 
-			<property name="Tags" value="weapon,ranged"/>
-			<property name="DisplayType" value="rangedGun"/>
-			<property name="HoldType" value="6"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="Candrop" value="false"/>	<!--  required or it will drop an Uber gun that never needs reloading  -->		
-			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/MP5/MP5Prefab.prefab"/>
-			<property name="Material" value="MHandGunParts"/> <property name="Weight" value="6"/>
-			<property name="DegradationBreaksAfter" value="false"/>
-			<property name="SoundJammed" value="weapon_jam"/>
-			<property name="TintColor" value="255,255,255"/>
-			<property name="CrosshairOnAim" value="false"/> 
-			<property name="CrosshairUpAfterShot" value="false"/> 
-			<property name="Sound_Sight_In" value="smg_sight_in"/>
-			<property name="Sound_Sight_Out" value="smg_sight_out"/>
-			<property name="Group" value="Ammo/Weapons"/>
-			<property name="EconomicValue" value="0"/>
-			<property name="ShowQuality" value="true"/>
-			<property name="AutoReload" value="true"/> <!-- required  -->
-			<property class="Action0">
-				<property name="Class" value="Ranged" />
-				<property name="Auto_fire" value="true" /> 
-				<property name="Magazine_items" value="ammoNPC9mmBulletBall" />
-				<property name="Reload_time" value="0" /> 
-				<property name="Infinite_ammo" value="true" />
-				<property name="Single_magazine_usage" value="false"/>
-				<property name="Bullet_icon" value="uzi" />
-				<property name="Sound_start" value="Weapons/Ranged/MP5/mp5_fire_start" />
-				<property name="Sound_repeat" value="Weapons/Ranged/MP5/mp5_fire_lp" />
-				<property name="Sound_end" value="Weapons/Ranged/MP5/mp5_fire_end" />
-				<property name="Sound_empty" value="Weapons/weapon_empty" />
-				<property name="Sound_reload" value="Weapons/Ranged/MP5/mp5_reload" />
-				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
-				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
-			</property>
-			<effect_group name="Base Effects">
-				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="40"/> <!-- lowering this to a small number seemed to stop them from firing until in that range  -->
-				<passive_effect name="MaxRange" operation="base_set" value="40"/>
-				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="5"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="5"/>
-				<passive_effect name="RoundsPerMinute" operation="base_set" value="5000"/>
-				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/> <!-- Bullets per shot  -->
-				<passive_effect name="RoundRayCount" operation="base_set" value="1"/>  <!-- Rays per Round  -->
-				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> 
-			</effect_group> 
-		</item>	
-
 		<item name="meleeHandMaster">
 			<property name="Tags" value="blunt,melee,light"/>
 			<property name="CreativeMode" value="None"/>
@@ -1057,7 +1008,7 @@
 			<property class="Action0">
 				<property name="Class" value="Melee"/>
 				<property name="Delay" value=".8"/>
-				<property name="Range" value="1.65"/>
+				<property name="Range" value="2"/>
 				<property name="Sphere" value=".1"/>
 				<property name="Block_range" value="2.5"/>
 				<property name="DamageEntity" value="10"/>
@@ -1069,31 +1020,13 @@
 			</effect_group>
 		</item>
 
-		<item name="meleeHandZombieTemplate">
-			<property name="Extends" value="meleeHandMaster"/>
-			<property name="CreativeMode" value="None"/>
-			<property name="HoldType" value="12"/> 
-			<property class="Action0">
-				<property name="Delay" value=".6"/>
-				<property name="Range" value="1.5"/>
-				<property name="DamageEntity" value="20"/>
-				<property name="DamageBlock" value="10"/>
-				<property name="Sphere" value="1.2"/>
-			</property>
-			<effect_group name="meleeHandHumanTemplate" tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-				<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true" buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo" weights=".11,.07,.07,.05,.29,.36,.11"/>
-			</effect_group>
-		</item>	
-
-		<item name="meleeHandHumanTemplateSurvivor">
+		<item name="FuriousRamsayMeleeHandZombieSurvivor">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="12"/> 
 			<property class="Action0">
 				<property name="Delay" value="1.05"/>
-				<property name="Range" value="1.75"/>
+				<property name="Range" value="2"/>
 				<property name="DamageEntity" value="3"/>
 				<property name="DamageBlock" value="50"/>
 				<property name="Sphere" value="1.2"/>
@@ -1105,13 +1038,13 @@
 			</effect_group>
 		</item>	
 
-		<item name="meleeHandHumanTemplateEnemy">
+		<item name="FuriousRamsayMeleeHandZombieEnemy">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="12"/> 
 			<property class="Action0">
 				<property name="Delay" value=".9"/>
-				<property name="Range" value="1.75"/>
+				<property name="Range" value="2"/>
 				<property name="DamageEntity" value="10"/>
 				<property name="DamageBlock" value="50"/>
 				<property name="Sphere" value="1.2"/>
@@ -1124,13 +1057,13 @@
 			</effect_group>
 		</item>	
 
-		<item name="meleeHandHumanTemplateZombie">
+		<item name="FuriousRamsayMeleeHandZombie">
 			<property name="Extends" value="meleeHandZombie01"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="12"/> 
 			<property class="Action0">
 				<property name="Delay" value=".8"/>
-				<property name="Range" value="1.75"/>
+				<property name="Range" value="2"/>
 				<property name="DamageEntity" value="15"/>
 				<property name="DamageBlock" value="20"/>
 				<property name="Sphere" value="1.2"/>
@@ -1138,13 +1071,13 @@
 			</property>
 		</item>	
 
-		<item name="meleeHandHumanTemplateZombieFeral">
+		<item name="FuriousRamsayMeleeHandZombieFeral">
 			<property name="Extends" value="meleeHandZombie01"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="12"/> 
 			<property class="Action0">
 				<property name="Delay" value=".7"/>
-				<property name="Range" value="1.75"/>
+				<property name="Range" value="2.2"/>
 				<property name="DamageEntity" value="20"/>
 				<property name="DamageBlock" value="30"/>
 				<property name="Sphere" value="1.2"/>
@@ -1152,19 +1085,290 @@
 			</property>
 		</item>	
 
-		<item name="meleeHandHumanTemplateZombieRage">
+		<item name="FuriousRamsayMeleeHandZombieRage">
 			<property name="Extends" value="meleeHandZombie01"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="12"/> 
 			<property class="Action0">
 				<property name="Delay" value=".6"/>
-				<property name="Range" value="1.75"/>
+				<property name="Range" value="2.5"/>
 				<property name="DamageEntity" value="25"/>
 				<property name="DamageBlock" value="40"/>
 				<property name="Sphere" value="1.2"/>
 				<property name="Block_range" value="2.5"/>
 			</property>
 		</item>	
+
+		<item name="FuriousRamsayMeleeHandBlackShieldBossTier1">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.8"/>
+				<property name="Range" value="2.2"/>
+				<property name="DamageEntity" value="15"/>
+				<property name="DamageBlock" value="30"/>
+			</property>
+			<effect_group name="FuriousRamsayMeleeHandBlackShieldKnockDown">
+				<requirement name="EntityTagCompare" target="other" tags="player,robot"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="10000"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandBlackShieldBossTier2">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.5"/>
+				<property name="Range" value="2.5"/>
+				<property name="DamageEntity" value="20"/>
+				<property name="DamageBlock" value="50"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Vomit"/>
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value=".5"/>
+				<property name="Range" value="200"/>
+				<property name="Infinite_ammo" value="true"/>
+				<property name="Magazine_items" value="FuriousRamsayBlackShieldBossArrowAmmo"/>
+				<property name="Sound_warning" value="bow_unquiver"/>
+				<property name="Sound_start" value=""/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value=""/>
+				<property name="Sound_reload" value=""/>		
+			</property>
+			<effect_group name="FuriousRamsayMeleeHandBlackShieldBossTier2" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="20"/>
+				<passive_effect name="MaxRange" operation="base_set" value="200"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="1"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="10"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="5"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBlackShieldBossArrowAmmo">
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/WoodenBow/bodkinArrowPrefab.prefab"/>	
+			
+			<property name="Material" value="Morganic"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				<property name="DamageEntity" value="5"/>
+				<property name="DamageBlock" value="15"/>
+				<property name="Explosion.ParticleIndex" value="0"/>
+				<property name="Explosion.RadiusEntities" value="3"/>
+				<property name="Velocity" value="20"/>
+				<property name="FlyTime" value="2"/>
+				<property name="Gravity" value="-4"/>
+				<property name="LifeTime" value="2"/>
+				<property name="CollisionRadius" value="0.5"/>
+			</property>
+			<effect_group name="FuriousRamsayBlackShieldBossArrowAmmo" tiered="false">
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandBlackShieldBossTier3">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.4"/>
+				<property name="Range" value="2.6"/>
+				<property name="DamageEntity" value="25"/>
+				<property name="DamageBlock" value="75"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Vomit"/>
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value="0.3"/>
+				<property name="Range" value="200"/>
+				<property name="Infinite_ammo" value="true"/>
+				<property name="Magazine_items" value="FuriousRamsayBlackShieldBossShockAmmo"/>
+				<property name="Sound_warning" value="electric_fence_impact"/>
+				<property name="Sound_start" value="mp5_fire"/>
+				<property name="Sound_loop" value="mp5_fire"/>
+				<property name="Sound_end" value="mp5_fire_end"/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Sound_reload" value="mp5_reload"/>
+				<property name="Particles_muzzle_fire" value="gunfire_SMG"/>
+				<property name="Particles_muzzle_fire_fpv" value="gunfire_SMG_fpv"/>
+			</property>
+			<effect_group name="FuriousRamsayMeleeHandBlackShieldBossTier3" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="20"/>
+				<passive_effect name="MaxRange" operation="base_set" value="200"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="20"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="20"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="5"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="10"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayMeleeHandBlackShieldKnockDown">
+				<requirement name="EntityTagCompare" target="other" tags="player,robot"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="1000000"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBlackShieldBossShockAmmo">
+			<property name="Meshfile" value="Entities/Electrical/steel_dartPrefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				<property name="DamageEntity" value="5"/>
+				<property name="DamageBlock" value="15"/>
+				<property name="Explosion.ParticleIndex" value="0"/>
+				<property name="Explosion.RadiusEntities" value="2"/>
+				<property name="Velocity" value="20"/>
+				<property name="FlyTime" value="2"/>
+				<property name="LifeTime" value="2"/>
+				<property name="CollisionRadius" value="0.5"/>
+				<property name="Buff" value="FuriousRamsayAddShockEnemy"/>
+			</property>
+			<effect_group name="FuriousRamsayBlackShieldBossShockAmmo" tiered="false">
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandBlackShieldBossTier4">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.5"/>
+				<property name="Range" value="2.5"/>
+				<property name="DamageEntity" value="30"/>
+				<property name="DamageBlock" value="100"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Vomit"/>
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value=".5"/>
+				<property name="Range" value="15"/>
+				<property name="Infinite_ammo" value="true"/>
+				<property name="Magazine_items" value="FuriousRamsayBlackShieldBossBurnAmmo"/>
+				<property name="Sound_warning" value="hulkexplodewarning"/>
+				<property name="Sound_start" value=""/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value=""/>
+				<property name="Sound_reload" value=""/>		
+			</property>
+			<effect_group name="FuriousRamsayMeleeHandBlackShieldBossTier4" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="20"/>
+				<passive_effect name="MaxRange" operation="base_set" value="15"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="2"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="24"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="12"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayMeleeHandBlackShieldKnockDown">
+				<requirement name="EntityTagCompare" target="other" tags="player,robot"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="1000000"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBlackShieldBossBurnAmmo">
+			<property name="Meshfile" value="particleeffects/p_fire_small"/>
+			
+			<property name="Material" value="Morganic"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				<property name="DamageEntity" value="2"/>
+				<property name="DamageBlock" value="15"/>
+				<property name="Explosion.ParticleIndex" value="0"/>
+				<property name="Explosion.RadiusEntities" value="2"/>
+				<property name="Velocity" value="20"/>
+				<property name="FlyTime" value="2"/>
+				<property name="LifeTime" value="2"/>
+				<property name="CollisionRadius" value="0.5"/>
+				<property name="Buff" value="FuriousRamsayAddBurningEnemyTier5"/>
+			</property>
+			<effect_group name="FuriousRamsayBlackShieldBossBurnAmmo" tiered="false">
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandBlackShieldBossTier5">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.5"/>
+				<property name="Range" value="2.5"/>
+				<property name="DamageEntity" value="35"/>
+				<property name="DamageBlock" value="150"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Vomit"/>
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value=".5"/>
+				<property name="Range" value="15"/>
+				<property name="Infinite_ammo" value="true"/>
+				<property name="Magazine_items" value="FuriousRamsayBlackShieldBossRocketAmmo"/>
+				<property name="Sound_warning" value="Weapons/Ranged/MP5/mp5_reload"/>
+				<property name="Sound_start" value=""/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value=""/>
+				<property name="Sound_reload" value=""/>		
+			</property>
+			<effect_group name="FuriousRamsayMeleeHandBlackShieldBossTier5" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="20"/>
+				<passive_effect name="MaxRange" operation="base_set" value="15"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="1"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="30"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="15"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayMeleeHandBlackShieldKnockDown">
+				<requirement name="EntityTagCompare" target="other" tags="player,robot"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="1000000"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBlackShieldBossRocketAmmo">
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/RocketLauncher/rocketPrefab.prefab"/>	
+			
+			<property name="Material" value="Morganic"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				<property name="DamageEntity" value="6"/>
+				<property name="DamageBlock" value="15"/>
+				<property name="Explosion.ParticleIndex" value="5"/>
+				<property name="Explosion.RadiusEntities" value="4"/>
+				<property name="Velocity" value="20"/>
+				<property name="FlyTime" value="2"/>
+				<property name="Gravity" value="-4"/>
+				<property name="LifeTime" value="2"/>
+				<property name="CollisionRadius" value="0.5"/>
+			</property>
+			<effect_group name="FuriousRamsayBlackShieldBossRocketAmmo" tiered="false">
+				<passive_effect name="BlockDamage" operation="base_set" value="2"/><display_value name="dExDamageBlock" value="2"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="6"/><display_value name="dExDamageEntity" value="6"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
+			</effect_group>
+		</item>
 
 	</append>
 </Config>

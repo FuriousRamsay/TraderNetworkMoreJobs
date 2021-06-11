@@ -9,6 +9,7 @@
 			<item name="FuriousRamsaySpawnAllyDogTier1" count="1" prob="0.3"/>
 			<!--<item name="qc_FuriousRamsaySpawnAllyDogTier1" prob="0.3"/>-->
 			<item name="qc_FuriousRamsayGhostsTier1" prob="0.6"/>
+			<item name="qc_FuriousRamsayResetPOI" count="1" prob="0.05"/>
 		</trader_item_group>
 
 		<trader_item_group name="FuriousRamsayGroupQuestChallengesTier2">
@@ -48,7 +49,6 @@
 		</trader_item_group>
 
 		<trader_item_group name="FuriousRamsayGroupMiscItems">
-			<item name="qc_FuriousRamsayResetPOI" count="1" prob="0.15"/>
 		</trader_item_group>
 
 		<trader_item_group name="FuriousRamsayTraderGroupQuestChallengesTier1" >
@@ -80,8 +80,8 @@
 	<remove xpath="/traders/trader_info[@id='5']"/>
 
 	<append xpath="/traders">
-		<trader_info id="5" reset_interval="1" override_buy_markup="1.0" override_sell_markup="1.0" allow_sell="false" rentable="false" min_inventory="6" max_inventory="6" min_items_swapped="6" max_items_swapped="6">
-			<trader_items count="6">
+		<trader_info id="5" reset_interval="1" override_buy_markup="1.0" override_sell_markup="1.0" allow_sell="false" rentable="false" min_inventory="8" max_inventory="8" min_items_swapped="8" max_items_swapped="8">
+			<trader_items count="8">
 				<item group="FuriousRamsayTraderGroupQuestChallengesTier1" count="1"/>
 				<item group="FuriousRamsayTraderGroupQuestChallengesTier2" count="1"/>
 				<item group="FuriousRamsayTraderGroupQuestChallengesTier3" count="1"/>

@@ -822,6 +822,72 @@
 				</effect_group>
 			</buff>
 
+			<buff name="FuriousRamsayRegenHealth">
+				<stack_type value="ignore"/>
+				<duration value="2000000000"/>
+				<update_rate value="1"/>
+
+				<effect_group>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="@HealthRegenAmount"/>
+				</effect_group>
+
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayRegenHealth">
+						<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value="1"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+	
+			<buff name="FuriousRamsayEnemyKnockdownTimerTier3" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="18"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="3" buff="FuriousRamsayEnemyKnockdown"/>
+				</effect_group>
+			</buff>
+			
+			<buff name="FuriousRamsayEnemyKnockdownTimerTier4" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="12"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="4" buff="FuriousRamsayEnemyKnockdown"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayEnemyKnockdownTimerTier5" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="6"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="5" buff="FuriousRamsayEnemyKnockdown"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayEnemyKnockdown" hidden="true" remove_on_death="true">
+				<damage_type value="knockdown"/>
+				<stack_type value="ignore"/>
+				<duration value="1"/>
+				<display_value value=".knockdownDisplay"/><display_value_key value="{0}"/>
+
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="Ragdoll" duration="1" force="10000">
+						<requirement name="EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".knockdownDisplay" operation="set" value="4">
+						<requirement name="EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".knockdownDisplay" operation="add" value="-1">
+						<requirement name="EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".knockdownDisplay" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+
+
 		</append>		
 		
 </Config>

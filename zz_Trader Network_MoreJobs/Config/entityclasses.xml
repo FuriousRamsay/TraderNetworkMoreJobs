@@ -2686,7 +2686,7 @@
 		<!--Survivors: Earl, Jim, Mike -->
 			<property name="HideInSpawnMenu" value="true"/>
             <property name="Class" value="EntitySurvivor" />
-            <property name="HandItem" value="meleeHandHumanTemplateSurvivor" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieSurvivor" />
 
 			<property name="NavObject" value="FuriousRamsayDotGreen"/>
 
@@ -2722,7 +2722,7 @@
 			<property name="SoundDeath" value="malehatedeath"/>
 			<property name="SoundAttack" value="malehateattack"/>
 
-            <property name="HandItem" value="meleeHandHumanTemplateEnemy" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieEnemy" />
 			<property name="LootListAlive" value="1012"/>
 	
             <effect_group name="Base Effects">
@@ -2737,7 +2737,7 @@
         <entity_class name="FuriousRamsayUMATemplateZombieMale" extends="FuriousRamsayUMATemplateMale">
 			<property name="HideInSpawnMenu" value="true"/>
 
-            <property name="HandItem" value="meleeHandHumanTemplateZombie" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieZombie" />
 			<property name="MoveSpeed" value="0.06"/>
 			<property name="MoveSpeedAggro" value="0.2, 1.1"/>
 			
@@ -2762,7 +2762,7 @@
         <entity_class name="FuriousRamsayUMATemplateZombieFeralMale" extends="FuriousRamsayUMATemplateMale">
 			<property name="HideInSpawnMenu" value="true"/>
 
-            <property name="HandItem" value="meleeHandHumanTemplateZombieFeral" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieZombieFeral" />
 			<property name="MoveSpeed" value="0.7"/>
 			<property name="MoveSpeedAggro" value="0.8, 1.1"/>
 			<property name="WalkType" value="6"/>
@@ -2788,7 +2788,7 @@
         <entity_class name="FuriousRamsayUMATemplateZombieRageMale" extends="FuriousRamsayUMATemplateMale">
 			<property name="HideInSpawnMenu" value="true"/>
 
-            <property name="HandItem" value="meleeHandHumanTemplateZombieRage" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieZombieRage" />
 			<property name="MoveSpeed" value="0.8"/>
 			<property name="MoveSpeedAggro" value="0.9, 1.1"/>
 			<property name="JumpDelay" value="10"/>
@@ -2854,7 +2854,7 @@
 		<!-- Survivors: Emma, Maria, Rayah -->
 			<property name="HideInSpawnMenu" value="true"/>
             <property name="Class" value="EntitySurvivor" />
-            <property name="HandItem" value="meleeHandHumanTemplateSurvivor" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieSurvivor" />
 
 			<property name="NavObject" value="FuriousRamsayDotGreen"/>
 
@@ -2885,7 +2885,7 @@
 		<!--Enemies: Charlotte, Roxy, Gabrielle -->
 			<property name="HideInSpawnMenu" value="true"/>
 
-            <property name="HandItem" value="meleeHandHumanTemplateEnemy" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieEnemy" />
 			<property name="LootListAlive" value="1012"/>
 
             <effect_group name="Base Effects">
@@ -2906,7 +2906,7 @@
             <property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath" />
             <property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense" />
 
-            <property name="HandItem" value="meleeHandHumanTemplateZombie" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieZombie" />
 			<property name="MoveSpeed" value="0.06"/>
 			<property name="MoveSpeedAggro" value="0.2, 1.1"/>
 
@@ -2932,7 +2932,7 @@
             <property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath" />
             <property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense" />
 
-            <property name="HandItem" value="meleeHandHumanTemplateZombieFeral" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieZombieFeral" />
 			<property name="MoveSpeed" value="0.7"/>
 			<property name="MoveSpeedAggro" value="0.9, 1.1"/>
 			<property name="WalkType" value="6"/>
@@ -2957,7 +2957,7 @@
 			<property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death"/>
 			<property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense"/>
 
-            <property name="HandItem" value="meleeHandHumanTemplateZombieRage" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieZombieRage" />
 			<property name="MoveSpeed" value="0.9"/>
 			<property name="MoveSpeedAggro" value="1, 1.1"/>
 			<property name="JumpDelay" value="5"/>
@@ -3079,6 +3079,7 @@
 			<property name="MoveSpeed" value="1"/>
 			<property name="MoveSpeedAggro" value="1.1, 1.3"/>
 			<property name="JumpMaxDistance" value="11, 16"/>
+			<property name="JumpDelay" value="5"/>
 			<property name="CanClimbVertical" value="true"/>
 			
 			<property name="NavObject" value="FuriousRamsayDotRed"/>
@@ -3238,6 +3239,7 @@
 			<property name="MoveSpeed" value="1"/>
 			<property name="MoveSpeedAggro" value="1.1, 1.3"/>
 			<property name="JumpMaxDistance" value="11, 16"/>
+			<property name="JumpDelay" value="5"/>
 			<property name="CanClimbVertical" value="true"/>
 			
             <effect_group name="Rage Effects">
@@ -3304,6 +3306,209 @@
 			<property name="LootListOnDeath" value="1011"/>
 			<property name="Faction" value="none"/>	
 		</entity_class>
+
+        <entity_class name="FuriousRamsayUMABlackShieldBoss" extends="FuriousRamsayUMATemplateEnemyMale">
+			<property name="NavObject" value="FuriousRamsayDotRed"/>
+
+			<property name="MoveSpeed" value="0.7"/>
+			<property name="MoveSpeedAggro" value="0.8, 1.0"/>
+			<property name="CanClimbVertical" value="true"/>
+			<property name="SoundFootstepModifier" value="bear_footstep"/>
+
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15,EntityEnemyAnimal,15"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="Wander"/>
+			<property name="AITask-6" value="BreakBlock"/>
+			<property name="AITask-7" value="DestroyArea"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntitySurvivor,25,25,EntityEnemyAnimal,25,25"/>
+			<property name="AITarget-3" value=""/>
+			<property name="AITarget-4" value=""/>
+			<property name="AITarget-5" value=""/>
+
+			<!--<property name="AITask-1" value=""/>
+			<property name="AITask-2" value=""/>
+			<property name="AITask-3" value=""/>
+			<property name="AITask-4" value=""/>
+			<property name="AITask-5" value=""/>
+			<property name="AITask-6" value=""/>
+			<property name="AITask-7" value=""/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value=""/>
+			<property name="AITarget-2" value=""/>
+			<property name="AITarget-3" value=""/>
+			<property name="AITarget-4" value=""/>-->
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMABlackShieldBossTier1" extends="FuriousRamsayUMABlackShieldBoss">
+			<property name="Archetype" value="FuriousRamsayBlackShieldBossTier1" />
+   			<property name="Mass" value="200"/>
+			<property name="Weight" value="200"/>
+
+            <property name="HandItem" value="FuriousRamsayMeleeHandBlackShieldBossTier1" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="1000" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+            <effect_group name="Boss Effects">
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="HealthRegenAmount" operation="set" value="1"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayRegenHealth"/>
+            </effect_group>
+        </entity_class>
+		
+        <entity_class name="FuriousRamsayUMABlackShieldBossTier2" extends="FuriousRamsayUMABlackShieldBoss">
+            <property name="Archetype" value="FuriousRamsayBlackShieldBossTier2" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandBlackShieldBossTier2" />
+
+   			<property name="Mass" value="350"/>
+			<property name="Weight" value="350"/>
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="DestroyArea"/>
+			<property name="AITask-3" value="RangedAttackTarget" data="itemType=1;cooldown=2;duration=2"/>
+			<property name="AITask-4" value="ApproachSpot"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15,EntitySurvivor,15"/>
+			<property name="AITask-6" value="Look"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25,EntitySurvivor,25,25"/>
+			<property name="AITarget-3" value=""/>
+			<property name="AITarget-4" value=""/>
+			<property name="AITarget-5" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="2000" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="20" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+            <effect_group name="Boss Effects">
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="HealthRegenAmount" operation="set" value="2"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayRegenHealth"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMABlackShieldBossTier3" extends="FuriousRamsayUMABlackShieldBoss">
+            <property name="Archetype" value="FuriousRamsayBlackShieldBossTier3" />
+			<property name="SurfaceCategory" value="metal"/>
+            <property name="HandItem" value="FuriousRamsayMeleeHandBlackShieldBossTier3" />
+
+   			<property name="Mass" value="600"/>
+			<property name="Weight" value="600"/>
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="DestroyArea"/>
+			<property name="AITask-3" value="RangedAttackTarget" data="itemType=1;cooldown=2;duration=2"/>
+			<property name="AITask-4" value="ApproachSpot"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15,EntitySurvivor,15"/>
+			<property name="AITask-6" value="Look"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25,EntitySurvivor,25,25"/>
+			<property name="AITarget-3" value=""/>
+			<property name="AITarget-4" value=""/>
+			<property name="AITarget-5" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="3000" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="30" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+            <effect_group name="Boss Effects">
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="HealthRegenAmount" operation="set" value="3"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayRegenHealth"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayEnemyKnockdownTimerTier3"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMABlackShieldBossTier4" extends="FuriousRamsayUMABlackShieldBoss">
+            <property name="Archetype" value="FuriousRamsayBlackShieldBossTier4" />
+			<property name="SurfaceCategory" value="metal"/>
+            <property name="HandItem" value="FuriousRamsayMeleeHandBlackShieldBossTier4" />
+
+   			<property name="Mass" value="900"/>
+			<property name="Weight" value="900"/>
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="DestroyArea"/>
+			<property name="AITask-3" value="RangedAttackTarget" data="itemType=1;cooldown=2;duration=2"/>
+			<property name="AITask-4" value="ApproachSpot"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15,EntitySurvivor,15"/>
+			<property name="AITask-6" value="Look"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25,EntitySurvivor,25,25"/>
+			<property name="AITarget-3" value=""/>
+			<property name="AITarget-4" value=""/>
+			<property name="AITarget-5" value=""/>
+          
+			<effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="4000" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="40" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+            <effect_group name="Boss Effects">
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="HealthRegenAmount" operation="set" value="4"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayRegenHealth"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayEnemyKnockdownTimerTier4"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMABlackShieldBossTier5" extends="FuriousRamsayUMABlackShieldBoss">
+            <property name="Archetype" value="FuriousRamsayBlackShieldBossTier5" />
+			<property name="SurfaceCategory" value="metal"/>
+            <property name="HandItem" value="FuriousRamsayMeleeHandBlackShieldBossTier5" />
+
+   			<property name="Mass" value="1400"/>
+			<property name="Weight" value="1400"/>
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="DestroyArea"/>
+			<property name="AITask-3" value="RangedAttackTarget" data="itemType=1;cooldown=2;duration=2"/>
+			<property name="AITask-4" value="ApproachSpot"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntityEnemyAnimal,15,EntitySurvivor,15"/>
+			<property name="AITask-6" value="Look"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntityEnemyAnimal,25,25,EntitySurvivor,25,25"/>
+			<property name="AITarget-3" value=""/>
+			<property name="AITarget-4" value=""/>
+			<property name="AITarget-5" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="5000" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+            <effect_group name="Boss Effects">
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="HealthRegenAmount" operation="set" value="5"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayRegenHealth"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayEnemyKnockdownTimerTier5"/>
+            </effect_group>
+        </entity_class>
 
 	</append>
 
