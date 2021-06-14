@@ -2,6 +2,29 @@
 
 	<insertAfter xpath="/quests/quest[@id='tier2_buried_supplies']">
 
+		<quest id="quest_FuriousRamsayRandomTest">
+			<property name="name_key" value="quest_FuriousRamsayBlackShieldBoss_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayBlackShieldBoss_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayBlackShieldBoss_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayBlackShieldBossTier1_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayBlackShieldBoss_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayBlackShieldBoss_response"/>
+			
+			<property name="completiontype" value="AutoComplete"/>
+			
+			<objective type="InteractWithNPC" id="5">
+				<property name="phase" value="1"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<!--<reward type="LootItem" id="groupLoot"/>-->
+		</quest>
+
 		<quest id="quest_FuriousRamsayTier1_BlackShieldBoss">
 			<property name="name_key" value="quest_FuriousRamsayBlackShieldBoss_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayBlackShieldBoss_subtitle"/>

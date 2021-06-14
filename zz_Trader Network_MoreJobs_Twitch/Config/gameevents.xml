@@ -1,0 +1,420 @@
+﻿<Config>
+	
+<!--
+twitch_good_spawn
+twitch_bad_spawn
+
+wolfalert
+vulturealert
+hulkalert
+zombieferalalert
+boaralert
+zombiedogalert
+mlionalert
+bearalert
+zombiemalealert
+zombiefemale2alert
+spideralert
+-->
+
+	<append xpath="/gameevents">
+
+		<action_sequence name="spawn_FuriousRamsay_BS_Cloaked_Snake">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayCloakedSnake"/>
+				<property name="min_distance" value="4" />
+				<property name="max_distance" value="8" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_bad_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="snakealert"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_FuriousRamsay_BS_Cloaked_Vulture">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayCloakedVulture"/>
+				<property name="min_distance" value="4" />
+				<property name="max_distance" value="8" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_bad_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="vulturealert"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_FuriousRamsay_BS_BattleAndroid">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayEnemyAndroid1,FuriousRamsayEnemyAndroid2,FuriousRamsayEnemyAndroid3,FuriousRamsayEnemyAndroid4,FuriousRamsayEnemyAndroid5,FuriousRamsayEnemyAndroid6,FuriousRamsayEnemyAndroid7"/>
+				<property name="min_distance" value="4" />
+				<property name="max_distance" value="8" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_bad_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="hulkalert"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_FuriousRamsay_BS_BurnAndroid">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayCloakedBurnAndroid"/>
+				<property name="min_distance" value="4" />
+				<property name="max_distance" value="8" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_bad_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="hulkalert"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_FuriousRamsay_BS_ShockAndroid">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayCloakedShockAndroid"/>
+				<property name="min_distance" value="4" />
+				<property name="max_distance" value="8" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_bad_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="hulkalert"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+		
+		<action_sequence name="spawn_FuriousRamsay_BS_BurningRabbit">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayBurningRabbitTier5"/>
+				<property name="min_distance" value="4" />
+				<property name="max_distance" value="8" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="2"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_bad_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="rabbitpain"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_FuriousRamsay_BS_Bandit">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayUMAGabrielleEnemy,FuriousRamsayUMAAidenEnemy,FuriousRamsayUMACharlotteEnemy,FuriousRamsayUMAWillieEnemy,FuriousRamsayUMAHodorEnemy,FuriousRamsayUMAKimEnemy,FuriousRamsayUMARoxyEnemy,FuriousRamsayUMARichieEnemy,FuriousRamsayUMAGabrielleEnemy,FuriousRamsayUMAClintEnemy"/>
+				<property name="min_distance" value="4" />
+				<property name="max_distance" value="8" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_bad_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="malehatesense"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="twitch_FuriousRamsaySpawnBlackShieldBanditZombie">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayUMAGabrielleZombie,FuriousRamsayUMAAidenZombie,FuriousRamsayUMACharlotteZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAHodorZombie,FuriousRamsayUMAKimZombie,FuriousRamsayUMAClintZombie,FuriousRamsayUMARoxyZombie,FuriousRamsayUMARichieZombie"/>
+				<property name="min_distance" value="4" />
+				<property name="max_distance" value="8" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_bad_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="zombiemalealert"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="twitch_FuriousRamsaySpawnBlackShieldBanditZombieFeral">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayUMAGabrielleZombieFeral,FuriousRamsayUMAAidenZombieFeral,FuriousRamsayUMACharlotteZombieFeral,FuriousRamsayUMAWillieZombieFeral,FuriousRamsayUMAHodorZombieFeral,FuriousRamsayUMAKimZombieFeral,FuriousRamsayUMAClintZombieFeral,FuriousRamsayUMARoxyZombieFeral,FuriousRamsayUMARichieZombieFeral"/>
+				<property name="min_distance" value="4" />
+				<property name="max_distance" value="8" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_bad_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="zombieferalalert"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="twitch_FuriousRamsaySpawnBlackShieldBanditZombieRage">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayUMAGabrielleZombieRage,FuriousRamsayUMAAidenZombieRage,FuriousRamsayUMACharlotteZombieRage,FuriousRamsayUMAWillieZombieRage,FuriousRamsayUMAHodorZombieRage,FuriousRamsayUMAKimZombieRage,FuriousRamsayUMAClintZombieRage,FuriousRamsayUMARoxyZombieRage,FuriousRamsayUMARichieZombieRage"/>
+				<property name="min_distance" value="4" />
+				<property name="max_distance" value="8" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_bad_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="hulkalert"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_FuriousRamsay_BS_BanditZombieRageShock">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayUMAGabrielleZombieShockedRage,FuriousRamsayUMAClintZombieShockedRage"/>
+				<property name="min_distance" value="4" />
+				<property name="max_distance" value="8" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_bad_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="spideralert"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_FuriousRamsay_TN_Citizen">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayUMAJimSurvivorTwitch,FuriousRamsayUMAEmmaSurvivorTwitch,FuriousRamsayUMAMikeSurvivorTwitch,FuriousRamsayUMAMariaSurvivorTwitch,FuriousRamsayUMARayahSurvivorTwitch,FuriousRamsayUMAEarlSurvivorTwitch"/>
+				<property name="min_distance" value="2" />
+				<property name="max_distance" value="4" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_good_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="malehateroam"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_FuriousRamsay_MA_DogTier1">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayAllyDogTier1Twitch"/>
+				<property name="min_distance" value="2" />
+				<property name="max_distance" value="4" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_good_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="zombiedogalert"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_FuriousRamsay_MA_WolfTier2">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayAllyWolfTier2Twitch"/>
+				<property name="min_distance" value="2" />
+				<property name="max_distance" value="4" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_good_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="wolfalert"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_FuriousRamsay_MA_LionTier3">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayAllyLionTier3Twitch"/>
+				<property name="min_distance" value="2" />
+				<property name="max_distance" value="4" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_good_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="mlionalert"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_FuriousRamsay_MA_BearTier4">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayAllyBearTier4Twitch"/>
+				<property name="min_distance" value="2" />
+				<property name="max_distance" value="4" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_good_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="bearalert"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_FuriousRamsay_MA_NPCTier5">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayAllyNPCTier5Twitch"/>
+				<property name="min_distance" value="2" />
+				<property name="max_distance" value="4" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_good_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="hulkalert"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_FuriousRamsay_BS_BossTier1">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayUMABlackShieldBossTier1"/>
+				<property name="min_distance" value="4" />
+				<property name="max_distance" value="8" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_bad_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="malehatesense"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+	
+		<action_sequence name="spawn_FuriousRamsay_BS_BossTier2">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayUMABlackShieldBossTier2"/>
+				<property name="min_distance" value="4" />
+				<property name="max_distance" value="8" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_bad_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="malehatesense"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_FuriousRamsay_BS_BossTier3">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayUMABlackShieldBossTier3"/>
+				<property name="min_distance" value="4" />
+				<property name="max_distance" value="8" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_bad_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="malehatesense"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_FuriousRamsay_BS_BossTier4">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayUMABlackShieldBossTier4"/>
+				<property name="min_distance" value="4" />
+				<property name="max_distance" value="8" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_bad_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="malehatesense"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_FuriousRamsay_BS_BossTier5">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayUMABlackShieldBossTier5"/>
+				<property name="min_distance" value="4" />
+				<property name="max_distance" value="8" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_bad_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="malehatesense"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+	</append>
+	
+</Config>

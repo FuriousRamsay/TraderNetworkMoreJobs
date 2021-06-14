@@ -1484,6 +1484,17 @@
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyDogTier1"/>	
 		</entity_class>
 
+		<entity_class name="FuriousRamsayAllyDogTier1Twitch" extends="FuriousRamsayAllyDogTier1">
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyDogTier1Timer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddStaminaAllyTimer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+			</effect_group>
+		</entity_class>
+
 		<entity_class name="FuriousRamsayAllyDogTier1Quest" extends="FuriousRamsayAllyDogTier1">
 			<effect_group name="Base Effects">
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyDogTier1Timer"/>
@@ -1610,6 +1621,17 @@
 			<property name="TimeStayAfterDeath" value="30"/>
 
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyWolfTier2"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayAllyWolfTier2Twitch" extends="FuriousRamsayAllyWolfTier2">
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyWolfTier2Timer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddHealthAllyWolfTier2Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="600"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+			</effect_group>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayAllyWolfTier2Quest" extends="FuriousRamsayAllyWolfTier2">
@@ -1742,6 +1764,17 @@
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyLionTier3"/>	
 		</entity_class>
 
+		<entity_class name="FuriousRamsayAllyLionTier3Twitch" extends="FuriousRamsayAllyLionTier3">
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyLionTier3Timer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddBurningAllyLionTier3Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="1200"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+			</effect_group>
+		</entity_class>
+
 		<entity_class name="FuriousRamsayAllyLionTier3Quest" extends="FuriousRamsayAllyLionTier3">
 			<effect_group name="Base Effects">
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyLionTier3Timer"/>
@@ -1868,6 +1901,17 @@
 			<property name="TimeStayAfterDeath" value="30"/>
 
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyBearTier4"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayAllyBearTier4Twitch" extends="FuriousRamsayAllyBearTier4">
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyBearTier4Timer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayKnockdownAllyBearTier4Timer"/>
+				<passive_effect name="HealthMax" operation="base_set" value="1800"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+			</effect_group>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayAllyBearTier4Quest" extends="FuriousRamsayAllyBearTier4">
@@ -2003,6 +2047,17 @@
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyNPCTier5"/>	
 		</entity_class>
 		
+		<entity_class name="FuriousRamsayAllyNPCTier5Twitch" extends="FuriousRamsayAllyNPCTier5">
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyNPCTier5Timer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddShockAllyNPCTier5Timer"/>				
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+			</effect_group>		
+		</entity_class>
+
 		<entity_class name="FuriousRamsayAllyNPCTier5Quest" extends="FuriousRamsayAllyNPCTier5">
 			<effect_group name="Base Effects">
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyNPCTier5Timer"/>
@@ -2968,7 +3023,35 @@
             </effect_group>
         </entity_class>
 
+        <entity_class name="FuriousRamsayUMATemplateSurvivorMaleTwitch" extends="FuriousRamsayUMATemplateSurvivorMale">
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieSurvivorTwitch" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="200" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateSurvivorFemaleTwitch" extends="FuriousRamsayUMATemplateSurvivorFemale">
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieSurvivorTwitch" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="200" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
         <entity_class name="FuriousRamsayUMAJimSurvivor" extends="FuriousRamsayUMATemplateSurvivorMale">
+            <property name="Archetype" value="FuriousRamsayJim" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAJimSurvivorTwitch" extends="FuriousRamsayUMATemplateSurvivorMaleTwitch">
             <property name="Archetype" value="FuriousRamsayJim" />
         </entity_class>
 
@@ -2986,6 +3069,10 @@
             <property name="Archetype" value="FuriousRamsayEmma" />
         </entity_class>
 
+        <entity_class name="FuriousRamsayUMAEmmaSurvivorTwitch" extends="FuriousRamsayUMATemplateSurvivorFemaleTwitch">
+            <property name="Archetype" value="FuriousRamsayEmma" />
+        </entity_class>
+
         <entity_class name="FuriousRamsayUMAEmmaZombie" extends="FuriousRamsayUMATemplateZombieFemale">
             <property name="Archetype" value="FuriousRamsayEmmaZombie" />
 			<property name="WalkType" value="2"/>
@@ -3000,6 +3087,10 @@
             <property name="Archetype" value="FuriousRamsayMike" />
         </entity_class>
 
+        <entity_class name="FuriousRamsayUMAMikeSurvivorTwitch" extends="FuriousRamsayUMATemplateSurvivorMaleTwitch">
+            <property name="Archetype" value="FuriousRamsayMike" />
+        </entity_class>
+
         <entity_class name="FuriousRamsayUMAMikeZombie" extends="FuriousRamsayUMATemplateZombieMale">
             <property name="Archetype" value="FuriousRamsayMikeZombie" />
 			<property name="WalkType" value="5"/>
@@ -3011,6 +3102,10 @@
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAMariaSurvivor" extends="FuriousRamsayUMATemplateSurvivorFemale">
+            <property name="Archetype" value="FuriousRamsayMaria" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAMariaSurvivorTwitch" extends="FuriousRamsayUMATemplateSurvivorFemaleTwitch">
             <property name="Archetype" value="FuriousRamsayMaria" />
         </entity_class>
 
@@ -3149,6 +3244,10 @@
             <property name="Archetype" value="FuriousRamsayRayah" />
         </entity_class>
 
+        <entity_class name="FuriousRamsayUMARayahSurvivorTwitch" extends="FuriousRamsayUMATemplateSurvivorFemaleTwitch">
+            <property name="Archetype" value="FuriousRamsayRayah" />
+        </entity_class>
+
         <entity_class name="FuriousRamsayUMARayahZombie" extends="FuriousRamsayUMATemplateZombieFemale">
             <property name="Archetype" value="FuriousRamsayRayahZombie" />
 			<property name="WalkType" value="2"/> 
@@ -3257,6 +3356,10 @@
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAEarlSurvivor" extends="FuriousRamsayUMATemplateSurvivorMale">
+            <property name="Archetype" value="FuriousRamsayEarl" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAEarlSurvivorTwitch" extends="FuriousRamsayUMATemplateSurvivorMaleTwitch">
             <property name="Archetype" value="FuriousRamsayEarl" />
         </entity_class>
 

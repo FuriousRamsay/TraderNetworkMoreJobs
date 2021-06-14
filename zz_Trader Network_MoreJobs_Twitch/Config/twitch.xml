@@ -1,0 +1,318 @@
+<Config>
+	
+	<append xpath="/twitch">
+	
+		<category name="BlackShield" display_name="TwitchActionCategory_FuriousRamsayBlackShield" icon="ui_game_symbol_twitch_spawn"/>
+		<category name="TraderNetwork" display_name="TwitchActionCategory_FuriousRamsayTraderNetwork" icon="ui_game_symbol_twitch_spawn"/>
+	
+		<action name="twitch_FuriousRamsaySpawnBlackShieldCloackedSnake" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_cloaked_snake"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldCloakedSnake"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldCloakedSnakeCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldCloakedSnakeDesc"/>
+			<property name="start_gamestage" value="20"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_Cloaked_Snake"/>
+			<property name="default_cost" value="50"/>
+			<property name="cooldown" value="120"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnBlackShieldCloackedVulture" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_cloaked_vulture"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldCloakedVulture"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldCloakedVultureCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldCloakedVultureDesc"/>
+			<property name="start_gamestage" value="40"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_Cloaked_Vulture"/>
+			<property name="default_cost" value="75"/>
+			<property name="cooldown" value="120"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnBlackShieldBattleAndroid" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_battle_android"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBattleAndroid"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBattleAndroidCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBattleAndroidDesc"/>
+			<property name="start_gamestage" value="65"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_BattleAndroid"/>
+			<property name="default_cost" value="200"/>
+			<property name="cooldown" value="120"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnBlackShieldBurnAdroid" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_burn_android"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBurnAdroid"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBurnAdroidCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBurnAdroidDesc"/>
+			<property name="start_gamestage" value="100"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_BurnAndroid"/>
+			<property name="default_cost" value="500"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnBlackShieldShockAndroid" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_shock_android"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldShockAndroid"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldShockAndroidCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldShockAndroidDesc"/>
+			<property name="start_gamestage" value="100"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_ShockAndroid"/>
+			<property name="default_cost" value="500"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnBlackShieldBurningRabbit" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_burn_rabbits"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBurningRabbit"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBurningRabbitCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBurningRabbitDesc"/>
+			<property name="start_gamestage" value="50"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_BurningRabbit"/>
+			<property name="default_cost" value="200"/>
+			<property name="cooldown" value="120"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnBlackShieldBandit" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_bandit"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBandit"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBanditCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBanditDesc"/>
+			<property name="start_gamestage" value="5"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_Bandit"/>
+			<property name="default_cost" value="125"/>
+			<property name="cooldown" value="120"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnBlackShieldBanditZombie" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_bandit_zombie"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBanditZombie"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBanditZombieCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBanditZombieDesc"/>
+			<property name="start_gamestage" value="10"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_BanditZombie"/>
+			<property name="default_cost" value="125"/>
+			<property name="cooldown" value="120"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnBlackShieldBanditZombieFeral" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_bandit_feral"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBanditZombieFeral"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBanditZombieFeralCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBanditZombieFeralDesc"/>
+			<property name="start_gamestage" value="40"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_BanditZombieFeral"/>
+			<property name="default_cost" value="125"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnBlackShieldBanditZombieRage" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_bandit_rage"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBanditZombieRage"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBanditZombieRageCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBanditZombieRageDesc"/>
+			<property name="start_gamestage" value="100"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_BanditZombieRage"/>
+			<property name="default_cost" value="125"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnBlackShieldBanditZombieRageShock" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_bandit_shock"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBanditZombieRageShock"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBanditZombieRageShockCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBanditZombieRageShockDesc"/>
+			<property name="start_gamestage" value="150"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_BanditZombieRageShock"/>
+			<property name="default_cost" value="125"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnTraderNetworkCitizen" extends="twitch_normalZombie">
+			<property name="category" value="TraderNetwork"/>
+			<property name="command" value="#tn_ally_citizen"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnTraderNetworkCitizen"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnTraderNetworkCitizenCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnTraderNetworkCitizenDesc"/>
+			<property name="start_gamestage" value="5"/>
+			<property name="event_name" value="spawn_FuriousRamsay_TN_Citizen"/>
+			<property name="default_cost" value="150"/>
+			<property name="cooldown" value="120"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnMechanicalAllyDogTier1" extends="twitch_normalZombie">
+			<property name="category" value="TraderNetwork"/>
+			<property name="command" value="#tn_ally_dog"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnMechanicalAllyDogTier1"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnMechanicalAllyDogTier1Command"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnMechanicalAllyDogTier1Desc"/>
+			<property name="start_gamestage" value="10"/>
+			<property name="event_name" value="spawn_FuriousRamsay_MA_DogTier1"/>
+			<property name="default_cost" value="200"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnMechanicalAllyWolfTier2" extends="twitch_normalZombie">
+			<property name="category" value="TraderNetwork"/>
+			<property name="command" value="#tn_ally_wolf"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnMechanicalAllyWolfTier2"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnMechanicalAllyWolfTier2Command"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnMechanicalWolfTier2Desc"/>
+			<property name="start_gamestage" value="40"/>
+			<property name="event_name" value="spawn_FuriousRamsay_MA_WolfTier2"/>
+			<property name="default_cost" value="300"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnMechanicalAllyLionTier3" extends="twitch_normalZombie">
+			<property name="category" value="TraderNetwork"/>
+			<property name="command" value="#tn_ally_lion"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnMechanicalAllyLionTier3"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnMechanicalAllyLionTier3Command"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnMechanicalAllyLionTier3Desc"/>
+			<property name="start_gamestage" value="75"/>
+			<property name="event_name" value="spawn_FuriousRamsay_MA_LionTier3"/>
+			<property name="default_cost" value="400"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnMechanicalAllyBearTier4" extends="twitch_normalZombie">
+			<property name="category" value="TraderNetwork"/>
+			<property name="command" value="#tn_ally_bear"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnMechanicalAllyBearTier4"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnMechanicalAllyBearTier4Command"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnMechanicalAllyBearTier4Desc"/>
+			<property name="start_gamestage" value="100"/>
+			<property name="event_name" value="spawn_FuriousRamsay_MA_BearTier4"/>
+			<property name="default_cost" value="500"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnMechanicalAllyNPCTier5" extends="twitch_normalZombie">
+			<property name="category" value="TraderNetwork"/>
+			<property name="command" value="#tn_ally_android"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnMechanicalAllyNPCTier5"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnMechanicalAllyNPCTier5Command"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnMechanicalAllyNPCTier5Desc"/>
+			<property name="start_gamestage" value="150"/>
+			<property name="event_name" value="spawn_FuriousRamsay_MA_NPCTier5"/>
+			<property name="default_cost" value="600"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnBlackShieldBully" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_titan_bully"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBully"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBullyCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBullyDesc"/>
+			<property name="start_gamestage" value="25"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_BossTier1"/>
+			<property name="default_cost" value="200"/>
+			<property name="cooldown" value="360"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnBlackShieldGiant" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_titan_giant"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldGiant"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldGiantCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldGiantDesc"/>
+			<property name="start_gamestage" value="50"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_BossTier2"/>
+			<property name="default_cost" value="350"/>
+			<property name="cooldown" value="360"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnBlackShieldMammoth" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_titan_mammoth"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldMammoth"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldMammothCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldMammothDesc"/>
+			<property name="start_gamestage" value="100"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_BossTier3"/>
+			<property name="default_cost" value="500"/>
+			<property name="cooldown" value="360"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnBlackShieldGoliath" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_titan_goliath"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldGoliath"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldGoliathCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldGoliathDesc"/>
+			<property name="start_gamestage" value="150"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_BossTier4"/>
+			<property name="default_cost" value="750"/>
+			<property name="cooldown" value="360"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="twitch_FuriousRamsaySpawnBlackShieldColossus" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_titan_colossus"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldColossus"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldColossusCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldColossusDesc"/>
+			<property name="start_gamestage" value="200"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_BossTier5"/>
+			<property name="default_cost" value="1000"/>
+			<property name="cooldown" value="360"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+	</append>
+
+</Config>
