@@ -51,46 +51,46 @@
 	<append xpath="/lootcontainers">
 
 		<lootgroup name="FuriousRamsayGroupQuestCookedFoodsTier1">
-			<item name="foodBoiledMeat"/>
-			<item name="foodPumpkinBread"/>
-			<item name="foodBaconAndEggs"/>
+			<item name="foodBoiledMeat" count="2"/>
+			<item name="foodPumpkinBread" count="2"/>
+			<item name="foodBaconAndEggs" count="2"/>
 		</lootgroup>
 			
 		<lootgroup name="FuriousRamsayGroupQuestCookedFoodsTier2">
-			<item name="foodBlueberryPie"/>
-			<item name="foodPumpkinPie"/>
-			<item name="foodSteakAndPotato"/>
-			<item name="foodTunaFishGravyToast"/>
+			<item name="foodBlueberryPie" count="2"/>
+			<item name="foodPumpkinPie" count="2"/>
+			<item name="foodSteakAndPotato" count="2"/>
+			<item name="foodTunaFishGravyToast" count="2"/>
 		</lootgroup>
 
 		<lootgroup name="FuriousRamsayGroupQuestCookedFoodsTier3">
-			<item name="foodChiliDog"/>
-			<item name="foodPumpkinCheesecake"/>
-			<item name="foodSpaghetti"/>
-			<item name="foodVegetableStew"/>
+			<item name="foodChiliDog" count="2"/>
+			<item name="foodPumpkinCheesecake" count="2"/>
+			<item name="foodSpaghetti" count="2"/>
+			<item name="foodVegetableStew" count="2"/>
 		</lootgroup>
 
 		<lootgroup name="FuriousRamsayGroupQuestCookedFoodsTier4">
-			<item name="drinkYuccaJuiceSmoothie"/>
-			<item name="foodFishTacos"/>
-			<item name="foodShepardsPie"/>
-			<item name="foodMeatStew"/>
+			<item name="drinkYuccaJuiceSmoothie" count="2"/>
+			<item name="foodFishTacos" count="3"/>
+			<item name="foodShepardsPie" count="3"/>
+			<item name="foodMeatStew" count="3"/>
 		</lootgroup>
 
 		<lootgroup name="FuriousRamsayGroupQuestCookedFoodsTier5">
-			<item name="foodHoboStew"/>
-			<item name="foodShamChowder"/>
-			<item name="foodGumboStew"/>
+			<item name="foodHoboStew" count="4"/>
+			<item name="foodShamChowder" count="4"/>
+			<item name="foodGumboStew" count="4"/>
 		</lootgroup>
 	
 		<lootgroup name="FuriousRamsayGroupQuestMedicalLow">
-			<item name="drugPainkillers"/>
-			<item name="medicalFirstAidBandage"/>
+			<item name="drugPainkillers" count="3"/>
+			<item name="medicalFirstAidBandage" count="3"/>
 		</lootgroup>
 
 		<lootgroup name="FuriousRamsayGroupQuestMedicalHigh">
-			<item name="medicalFirstAidBandage"/>
-			<item name="medicalFirstAidKit"/>
+			<item name="medicalFirstAidBandage" count="4"/>
+			<item name="medicalFirstAidKit" count="4"/>
 		</lootgroup>
 
 		<lootgroup name="FuriousRamsayGroupBlackShieldCaptainDead" count="2">
@@ -201,6 +201,10 @@
 			<item group="FuriousRamsayGroupBlackShieldBossDeathItemsTier5" prob="1"/>
 		</lootgroup>
 		
+		<lootcontainer id="1009" size="3,2" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualPlus1Template">
+			<item group="FuriousRamsayGroupBlackShieldBossDeathTier5" />
+		</lootcontainer>
+
 		<lootcontainer id="1010" size="4,2" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" open_time="1" destroy_on_close="false">
 			<item group="FuriousRamsayGroupBlackShieldCaptainAlive" />
 		</lootcontainer>

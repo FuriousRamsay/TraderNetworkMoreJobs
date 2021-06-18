@@ -2,6 +2,30 @@
 
 		<append xpath="/buffs" >		
 
+			<buff name="FuriousRamsayTestStart" hidden="true" remove_on_death="true">
+				<stack_type value="replace"/>
+				<duration value="120"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FuriousRamsayAlarm"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your training has begun... good luck." />
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="FuriousRamsayTestUpdate"/>				
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="FuriousRamsayTestUpdate"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="FuriousRamsayTestUpdate"/>
+					<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="FuriousRamsayTestUpdate"/>
+					<triggered_effect trigger="onSelfLeaveGame" action="RemoveBuff" buff="FuriousRamsayTestUpdate"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="FuriousRamsayTestUpdate"/>
+				</effect_group>
+			</buff>
+
+			<!--<buff name="FuriousRamsayTestUpdate" hidden="true" remove_on_death="true">
+				<stack_type value="replace"/>
+				<update_rate value="5"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="FuriousRamsayAlarm"/>
+					<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" target="self" stat="Health" operation="add" value="99999" />
+				</effect_group>
+			</buff>-->
+
 			<buff name="FuriousRamsayStartTraining" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<duration value="3"/>
@@ -16,6 +40,46 @@
 				<update_rate value="0.1"/>
 				<effect_group>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" target="self" stat="Health" operation="add" value="-1"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVanishSoldierTimerTier1" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="300"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVanishSoldierTimerTier2" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="350"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVanishSoldierTimerTier3" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="400"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVanishSoldierTimerTier4" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="450"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVanishSoldierTimerTier5" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="500"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
 				</effect_group>
 			</buff>
 
@@ -842,7 +906,7 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayRegenHealth">
+			<buff name="FuriousRamsayRegenHealth" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<duration value="2000000000"/>
 				<update_rate value="1"/>

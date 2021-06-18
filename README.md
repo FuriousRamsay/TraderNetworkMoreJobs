@@ -126,14 +126,20 @@ Installation Instructions:
 
 Warning: Please back up your saved world and character before installing this mod. The game does not handle the removal of accepted or completed
 	 quests well and will reset your character should you decide to remove the mod after trying it out. This is unfortunately a known issue 
-	 with how the game is currently designed and out of modder's control. One option is to leave the mod in and simply not make use of the 
-	 additional challenges at the vending machines (which are pretty useless otherwise anyway). If you decide to not use the mod and wish to
-	 no longer have any references to the Hold and Fetch jobs from the trader list, you can remove the following code from quests.xml:
+	 with how the game is currently designed and out of modder's control. Other issues could include spamming of NullExceptionErrors which would
+	 require you to use your backed up copy.One option is to leave the mod in and simply not make use of the additional challenges at the vending
+	 machines (which are pretty useless otherwise anyway). If you decide to not use the mod and wish to no longer have any references to the new
+	 jobs from the trader list, you can remove the following code from quests.xml:
 
-	﻿<append xpath="/quests/quest_list[@id='trader_quests']">
-		<quest id="quest_FuriousRamsayTier1_clearhold"/>
-		<quest id="quest_FuriousRamsayTier2_clearhold"/>
-		<quest id="quest_FuriousRamsayTier3_clearhold"/>
-		<quest id="quest_FuriousRamsayTier4_clearhold"/>
-		<quest id="quest_FuriousRamsayTier5_clearhold"/>
+	<append xpath="/quests/quest_list[@id='trader_quests']">
+		<quest id="quest_FuriousRamsayTier1_clearhold" prob="0.7"/>
+		<quest id="quest_FuriousRamsayTier2_clearhold" prob="0.7"/>
+		<quest id="quest_FuriousRamsayTier3_clearhold" prob="0.7"/>
+		<quest id="quest_FuriousRamsayTier4_clearhold" prob="0.7"/>
+		<quest id="quest_FuriousRamsayTier5_clearhold" prob="0.7"/>
+		<quest id="quest_FuriousRamsayTier1_Defend" prob="1"/>
+		<quest id="quest_FuriousRamsayTier2_Defend" prob="0.8"/>
+		<quest id="quest_FuriousRamsayTier3_Defend" prob="0.7"/>
+		<quest id="quest_FuriousRamsayTier4_Defend" prob="0.6"/>
+		<quest id="quest_FuriousRamsayTier5_Defend" prob="0.5"/>
 	</append>

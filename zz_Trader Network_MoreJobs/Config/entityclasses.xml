@@ -2699,7 +2699,7 @@
 			<property name="Immunity" value="sickness;disease;wellness"/>
 			<property name="RotateToGround" value="false"/>	
 			<property name="PushFactor" value="10"/>
-			<property name="TimeStayAfterDeath" value="15"/>
+			<property name="TimeStayAfterDeath" value="30"/>
 
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15,EntityEnemyAnimal,15"/>
@@ -3172,8 +3172,6 @@
 
         <entity_class name="FuriousRamsayUMAAidenEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
             <property name="Archetype" value="FuriousRamsayAiden" />
-			<property name="WalkType" value="3"/>
-            <property name="Mass" value="225" />
         </entity_class>
 		
         <entity_class name="FuriousRamsayUMAAidenZombie" extends="FuriousRamsayUMATemplateZombieMale">
@@ -3276,140 +3274,123 @@
             <property name="WalkType" value="3"/>
         </entity_class>
 
-        <entity_class name="FuriousRamsayUMAJack" extends="FuriousRamsayUMATemplateSurvivorMale">
+        <entity_class name="FuriousRamsayUMATemplateSoldierMale" extends="FuriousRamsayUMATemplateSurvivorMale">
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachSpot" data="class=EntityAnimalStag,200,200,EntityZombie,200,200"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,20,EntityZombie,20"/>
+			<property name="AITask-4" value="ApproachDistraction"/>
+			<property name="AITask-5" value="Look"/>
+			<property name="AITask-6" value="BreakBlock"/>
+			<property name="AITask-7" value="DestroyArea"/>
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITask-9" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAnimalStag,EntityZombie"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAnimalStag,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-4" value=""/>
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandSoldier"/>		
+
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishSoldierTimerTier1"/>
+                <passive_effect name="HealthMax" operation="base_set" value="250" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateSoldierFemale" extends="FuriousRamsayUMATemplateSurvivorFemale">
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachSpot" data="class=EntityAnimalStag,200,200,EntityZombie,200,200"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,20,EntityZombie,20"/>
+			<property name="AITask-4" value="ApproachDistraction"/>
+			<property name="AITask-5" value="Look"/>
+			<property name="AITask-6" value="BreakBlock"/>
+			<property name="AITask-7" value="DestroyArea"/>
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITask-9" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAnimalStag,EntityZombie"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAnimalStag,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-4" value=""/>
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandSoldier"/>		
+
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishSoldierTimerTier1"/>
+                <passive_effect name="HealthMax" operation="base_set" value="300" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAJack" extends="FuriousRamsayUMATemplateSoldierMale">
             <property name="Archetype" value="FuriousRamsayJack" />
 
-			<property name="AITask-1" value=""/>
-			<property name="AITask-2" value=""/>
-			<property name="AITask-3" value=""/>
-			<property name="AITask-4" value=""/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value=""/>
-			<property name="AITarget-2" value=""/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
+			<property name="HandItem" value="FuriousRamsayMeleeHandSoldierJack"/>
+			
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishSoldierTimer"/>
+                <passive_effect name="HealthMax" operation="base_set" value="400" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
         </entity_class>
 		
-        <entity_class name="FuriousRamsayUMADante" extends="FuriousRamsayUMATemplateSurvivorMale">
+        <entity_class name="FuriousRamsayUMADante" extends="FuriousRamsayUMATemplateSoldierMale">
             <property name="Archetype" value="FuriousRamsayDante" />
 
-			<property name="AITask-1" value=""/>
-			<property name="AITask-2" value=""/>
-			<property name="AITask-3" value=""/>
-			<property name="AITask-4" value=""/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value=""/>
-			<property name="AITarget-2" value=""/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
+			<property name="HandItem" value="FuriousRamsayMeleeHandSoldierDante"/>
+			
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishSoldierTimer"/>
+                <passive_effect name="HealthMax" operation="base_set" value="400" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
         </entity_class>
 
-        <entity_class name="FuriousRamsayUMALee" extends="FuriousRamsayUMATemplateSurvivorFemale">
+        <entity_class name="FuriousRamsayUMALee" extends="FuriousRamsayUMATemplateSoldierFemale">
             <property name="Archetype" value="FuriousRamsayLee" />
 
-			<property name="AITask-1" value=""/>
-			<property name="AITask-2" value=""/>
-			<property name="AITask-3" value=""/>
-			<property name="AITask-4" value=""/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value=""/>
-			<property name="AITarget-2" value=""/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
+			<property name="HandItem" value="FuriousRamsayMeleeHandSoldierLee"/>
+			
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishSoldierTimer"/>
+                <passive_effect name="HealthMax" operation="base_set" value="400" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
         </entity_class>
 
-        <entity_class name="FuriousRamsayUMAMaleSoldier1" extends="FuriousRamsayUMATemplateSurvivorMale">
+        <entity_class name="FuriousRamsayUMAMaleSoldier1" extends="FuriousRamsayUMATemplateSoldierMale">
             <property name="Archetype" value="FuriousRamsayMaleSoldier1" />
-
-			<property name="AITask-1" value=""/>
-			<property name="AITask-2" value=""/>
-			<property name="AITask-3" value=""/>
-			<property name="AITask-4" value=""/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value=""/>
-			<property name="AITarget-2" value=""/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
         </entity_class>
 
-        <entity_class name="FuriousRamsayUMAMaleSoldier2" extends="FuriousRamsayUMATemplateSurvivorMale">
+        <entity_class name="FuriousRamsayUMAMaleSoldier2" extends="FuriousRamsayUMATemplateSoldierMale">
             <property name="Archetype" value="FuriousRamsayMaleSoldier2" />
-
-			<property name="AITask-1" value=""/>
-			<property name="AITask-2" value=""/>
-			<property name="AITask-3" value=""/>
-			<property name="AITask-4" value=""/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value=""/>
-			<property name="AITarget-2" value=""/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
         </entity_class>
 
-        <entity_class name="FuriousRamsayUMAMaleSoldier3" extends="FuriousRamsayUMATemplateSurvivorMale">
+        <entity_class name="FuriousRamsayUMAMaleSoldier3" extends="FuriousRamsayUMATemplateSoldierMale">
             <property name="Archetype" value="FuriousRamsayMaleSoldier3" />
-
-			<property name="AITask-1" value=""/>
-			<property name="AITask-2" value=""/>
-			<property name="AITask-3" value=""/>
-			<property name="AITask-4" value=""/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value=""/>
-			<property name="AITarget-2" value=""/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
         </entity_class>
 
-        <entity_class name="FuriousRamsayUMAFemaleSoldier1" extends="FuriousRamsayUMATemplateSurvivorFemale">
+        <entity_class name="FuriousRamsayUMAFemaleSoldier1" extends="FuriousRamsayUMATemplateSoldierFemale">
             <property name="Archetype" value="FuriousRamsayFemaleSoldier1" />
-
-			<property name="AITask-1" value=""/>
-			<property name="AITask-2" value=""/>
-			<property name="AITask-3" value=""/>
-			<property name="AITask-4" value=""/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value=""/>
-			<property name="AITarget-2" value=""/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
         </entity_class>
 
-        <entity_class name="FuriousRamsayUMAFemaleSoldier2" extends="FuriousRamsayUMATemplateSurvivorFemale">
+        <entity_class name="FuriousRamsayUMAFemaleSoldier2" extends="FuriousRamsayUMATemplateSoldierFemale">
             <property name="Archetype" value="FuriousRamsayFemaleSoldier2" />
-
-			<property name="AITask-1" value=""/>
-			<property name="AITask-2" value=""/>
-			<property name="AITask-3" value=""/>
-			<property name="AITask-4" value=""/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value=""/>
-			<property name="AITarget-2" value=""/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAClintEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
@@ -3744,6 +3725,386 @@
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayRegenHealth"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayEnemyKnockdownTimerTier5"/>
             </effect_group>
+        </entity_class>
+		
+        <entity_class name="FuriousRamsayUMATemplateEnemyTreasureMaleTier1" extends="FuriousRamsayUMATemplateMale">
+		<!--Enemies: Aiden, Hodor, Clint, Richie, Willie, Kim -->
+			<property name="HideInSpawnMenu" value="true"/>
+
+			<property name="MoveSpeedAggro" value="1.2, 1.35"/> 
+			<property name="LootListAlive" value="1012"/>
+
+            <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTier1" />
+
+            <property name="ExperienceGain" value="350" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="150" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateEnemyTreasureFemaleTier1" extends="FuriousRamsayUMATemplateFemale">
+		<!--Enemies: Charlotte, Roxy, Gabrielle -->
+			<property name="HideInSpawnMenu" value="true"/>
+
+			<property name="MoveSpeedAggro" value="1.2, 1.35"/> 
+			<property name="LootListAlive" value="1012"/>
+
+            <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTier2" />
+
+            <property name="ExperienceGain" value="350" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="150" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+		
+        <entity_class name="FuriousRamsayUMATemplateEnemyTreasureMaleTier2" extends="FuriousRamsayUMATemplateMale">
+		<!--Enemies: Aiden, Hodor, Clint, Richie, Willie, Kim -->
+			<property name="HideInSpawnMenu" value="true"/>
+
+			<property name="MoveSpeedAggro" value="1.3, 1.45"/> 
+			<property name="LootListAlive" value="1012"/>
+
+            <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTier3" />
+
+            <property name="ExperienceGain" value="350" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="300" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateEnemyTreasureFemaleTier2" extends="FuriousRamsayUMATemplateFemale">
+		<!--Enemies: Charlotte, Roxy, Gabrielle -->
+			<property name="HideInSpawnMenu" value="true"/>
+
+			<property name="MoveSpeedAggro" value="1.3, 1.45"/> 
+			<property name="LootListAlive" value="1012"/>
+
+            <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTier4" />
+
+            <property name="ExperienceGain" value="350" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="300" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateEnemyTreasureMaleTier3" extends="FuriousRamsayUMATemplateMale">
+		<!--Enemies: Aiden, Hodor, Clint, Richie, Willie, Kim -->
+			<property name="HideInSpawnMenu" value="true"/>
+
+			<property name="MoveSpeedAggro" value="1.4, 1.65"/> 
+			<property name="LootListAlive" value="1012"/>
+
+            <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTier5" />
+
+            <property name="ExperienceGain" value="350" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="450" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="25" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateEnemyTreasureFemaleTier3" extends="FuriousRamsayUMATemplateFemale">
+		<!--Enemies: Charlotte, Roxy, Gabrielle -->
+			<property name="HideInSpawnMenu" value="true"/>
+
+			<property name="MoveSpeedAggro" value="1.4, 1.65"/> 
+			<property name="LootListAlive" value="1012"/>
+
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieEnemy" />
+
+            <property name="ExperienceGain" value="350" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="450" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="25" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateEnemyTreasureMaleTier4" extends="FuriousRamsayUMATemplateMale">
+		<!--Enemies: Aiden, Hodor, Clint, Richie, Willie, Kim -->
+			<property name="HideInSpawnMenu" value="true"/>
+
+			<property name="MoveSpeedAggro" value="1.5, 1.75"/> 
+			<property name="LootListAlive" value="1012"/>
+
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieEnemy" />
+
+            <property name="ExperienceGain" value="350" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="600" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="35" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateEnemyTreasureFemaleTier4" extends="FuriousRamsayUMATemplateFemale">
+		<!--Enemies: Charlotte, Roxy, Gabrielle -->
+			<property name="HideInSpawnMenu" value="true"/>
+
+			<property name="MoveSpeedAggro" value="1.5, 1.75"/> 
+			<property name="LootListAlive" value="1012"/>
+
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieEnemy" />
+
+            <property name="ExperienceGain" value="350" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="600" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="35" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateEnemyTreasureMaleTier5" extends="FuriousRamsayUMATemplateMale">
+		<!--Enemies: Aiden, Hodor, Clint, Richie, Willie, Kim -->
+			<property name="HideInSpawnMenu" value="true"/>
+
+			<property name="MoveSpeedAggro" value="1.6, 1.85"/> 
+			<property name="LootListAlive" value="1012"/>
+
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieEnemy" />
+
+            <property name="ExperienceGain" value="350" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="750" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="45" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMATemplateEnemyTreasureFemaleTier5" extends="FuriousRamsayUMATemplateFemale">
+		<!--Enemies: Charlotte, Roxy, Gabrielle -->
+			<property name="HideInSpawnMenu" value="true"/>
+
+			<property name="MoveSpeedAggro" value="1.6, 1.85"/> 
+			<property name="LootListAlive" value="1012"/>
+
+            <property name="HandItem" value="FuriousRamsayMeleeHandZombieEnemy" />
+
+            <property name="ExperienceGain" value="350" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="750" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="45" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAAidenEnemyTreasureTier1" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier1">
+            <property name="Archetype" value="FuriousRamsayAiden" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAWillieEnemyTreasureTier1" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier1">
+            <property name="Archetype" value="FuriousRamsayWillie" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAHodorEnemyTreasureTier1" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier1">
+            <property name="Archetype" value="FuriousRamsayHodor" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAKimEnemyTreasureTier1" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier1">
+            <property name="Archetype" value="FuriousRamsayKim" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAClintEnemyTreasureTier1" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier1">
+            <property name="Archetype" value="FuriousRamsayClint" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARichieEnemyTreasureTier1" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier1">
+            <property name="Archetype" value="FuriousRamsayRichie" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAGabrielleEnemyTreasureTier1" extends="FuriousRamsayUMATemplateEnemyTreasureFemaleTier1">
+            <property name="Archetype" value="FuriousRamsayGabrielle" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMACharlotteEnemyTreasureTier1" extends="FuriousRamsayUMATemplateEnemyTreasureFemaleTier1">
+            <property name="Archetype" value="FuriousRamsayCharlotte" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARoxyEnemyTreasureTier1" extends="FuriousRamsayUMATemplateEnemyTreasureFemaleTier1">
+            <property name="Archetype" value="FuriousRamsayRoxy" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAAidenEnemyTreasureTier2" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier2">
+            <property name="Archetype" value="FuriousRamsayAiden" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAWillieEnemyTreasureTier2" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier2">
+            <property name="Archetype" value="FuriousRamsayWillie" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAHodorEnemyTreasureTier2" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier2">
+            <property name="Archetype" value="FuriousRamsayHodor" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAKimEnemyTreasureTier2" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier2">
+            <property name="Archetype" value="FuriousRamsayKim" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAClintEnemyTreasureTier2" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier2">
+            <property name="Archetype" value="FuriousRamsayClint" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARichieEnemyTreasureTier2" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier2">
+            <property name="Archetype" value="FuriousRamsayRichie" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAGabrielleEnemyTreasureTier2" extends="FuriousRamsayUMATemplateEnemyTreasureFemaleTier2">
+            <property name="Archetype" value="FuriousRamsayGabrielle" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMACharlotteEnemyTreasureTier2" extends="FuriousRamsayUMATemplateEnemyTreasureFemaleTier2">
+            <property name="Archetype" value="FuriousRamsayCharlotte" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARoxyEnemyTreasureTier2" extends="FuriousRamsayUMATemplateEnemyTreasureFemaleTier2">
+            <property name="Archetype" value="FuriousRamsayRoxy" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAAidenEnemyTreasureTier3" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier3">
+            <property name="Archetype" value="FuriousRamsayAiden" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAWillieEnemyTreasureTier3" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier3">
+            <property name="Archetype" value="FuriousRamsayWillie" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAHodorEnemyTreasureTier3" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier3">
+            <property name="Archetype" value="FuriousRamsayHodor" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAKimEnemyTreasureTier3" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier3">
+            <property name="Archetype" value="FuriousRamsayKim" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAClintEnemyTreasureTier3" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier3">
+            <property name="Archetype" value="FuriousRamsayClint" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARichieEnemyTreasureTier3" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier3">
+            <property name="Archetype" value="FuriousRamsayRichie" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAGabrielleEnemyTreasureTier3" extends="FuriousRamsayUMATemplateEnemyTreasureFemaleTier3">
+            <property name="Archetype" value="FuriousRamsayGabrielle" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMACharlotteEnemyTreasureTier3" extends="FuriousRamsayUMATemplateEnemyTreasureFemaleTier3">
+            <property name="Archetype" value="FuriousRamsayCharlotte" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARoxyEnemyTreasureTier3" extends="FuriousRamsayUMATemplateEnemyTreasureFemaleTier3">
+            <property name="Archetype" value="FuriousRamsayRoxy" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAAidenEnemyTreasureTier4" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier4">
+            <property name="Archetype" value="FuriousRamsayAiden" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAWillieEnemyTreasureTier4" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier4">
+            <property name="Archetype" value="FuriousRamsayWillie" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAHodorEnemyTreasureTier4" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier4">
+            <property name="Archetype" value="FuriousRamsayHodor" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAKimEnemyTreasureTier4" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier4">
+            <property name="Archetype" value="FuriousRamsayKim" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAClintEnemyTreasureTier4" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier4">
+            <property name="Archetype" value="FuriousRamsayClint" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARichieEnemyTreasureTier4" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier4">
+            <property name="Archetype" value="FuriousRamsayRichie" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAGabrielleEnemyTreasureTier4" extends="FuriousRamsayUMATemplateEnemyTreasureFemaleTier4">
+            <property name="Archetype" value="FuriousRamsayGabrielle" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMACharlotteEnemyTreasureTier4" extends="FuriousRamsayUMATemplateEnemyTreasureFemaleTier4">
+            <property name="Archetype" value="FuriousRamsayCharlotte" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARoxyEnemyTreasureTier4" extends="FuriousRamsayUMATemplateEnemyTreasureFemaleTier4">
+            <property name="Archetype" value="FuriousRamsayRoxy" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAAidenEnemyTreasureTier5" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier5">
+            <property name="Archetype" value="FuriousRamsayAiden" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAWillieEnemyTreasureTier5" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier5">
+            <property name="Archetype" value="FuriousRamsayWillie" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAHodorEnemyTreasureTier5" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier5">
+            <property name="Archetype" value="FuriousRamsayHodor" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAKimEnemyTreasureTier5" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier5">
+            <property name="Archetype" value="FuriousRamsayKim" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAClintEnemyTreasureTier5" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier5">
+            <property name="Archetype" value="FuriousRamsayClint" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARichieEnemyTreasureTier5" extends="FuriousRamsayUMATemplateEnemyTreasureMaleTier5">
+            <property name="Archetype" value="FuriousRamsayRichie" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAGabrielleEnemyTreasureTier5" extends="FuriousRamsayUMATemplateEnemyTreasureFemaleTier5">
+            <property name="Archetype" value="FuriousRamsayGabrielle" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMACharlotteEnemyTreasureTier5" extends="FuriousRamsayUMATemplateEnemyTreasureFemaleTier5">
+            <property name="Archetype" value="FuriousRamsayCharlotte" />
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMARoxyEnemyTreasureTier5" extends="FuriousRamsayUMATemplateEnemyTreasureFemaleTier5">
+            <property name="Archetype" value="FuriousRamsayRoxy" />
         </entity_class>
 
 	</append>
