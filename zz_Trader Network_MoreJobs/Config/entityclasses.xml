@@ -1,7 +1,7 @@
 <configs>
 
 	<set xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='Class']/@value">EntityAnimalStag</set>
-	<set xpath="/entity_classes/entity_class[@name='animalWolf']/property[@name='Class']/@value">EntityAnimalStag</set>
+	<!--<set xpath="/entity_classes/entity_class[@name='animalWolf']/property[@name='Class']/@value">EntityAnimalStag</set>-->
 
 	<set xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='LookAtAngle']/@value">0</set>
 
@@ -4106,6 +4106,79 @@
         <entity_class name="FuriousRamsayUMARoxyEnemyTreasureTier5" extends="FuriousRamsayUMATemplateEnemyTreasureFemaleTier5">
             <property name="Archetype" value="FuriousRamsayRoxy" />
         </entity_class>
+
+		<entity_class name="FuriousRamsayTraderUMATemplate">
+			<property name="Archetype" value="FuriousRamsayRoxy"/>
+			<property name="Tags" value="entity,npc,human"/>
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="EntityType" value="Player"/>
+			<property name="Faction" value="trader"/>
+			<property name="Mesh" value="Player/Male/player_maleRagdoll"/>
+			<property name="AvatarController" value="AvatarUMAController"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="ModelType" value="NpcUMA"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="Prefab" value="NPC"/> <!--
+			<property name="Class" value="EntityTrader"/> -->
+			<property name="Class" value="EntityNPC"/>
+			<property name="Parent" value="Players"/>
+			<property name="PhysicsBody" value="Player"/>
+			<property name="Weight" value="70"/>
+
+			<property name="AITask-1" value=""/>
+			<property name="AITarget-1" value=""/>
+
+			<property name="IsEnemyEntity" value="true"/>
+			<property name="SurfaceCategory" value="organic"/>
+			<property name="WalkType" value="7"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="ParticleOnDeath" value="blood_death"/>
+			<property name="SoundRandomTime" value="200.0"/>
+			<property name="SoundHurt" value="Player_Male/player1painlg"/>
+			<property name="SoundHurtSmall" value="Player_Male/player1painsm"/>
+			<property name="SoundDeath" value="Player_Male/player1death"/>
+			<property name="SoundStamina" value="Player_Male/player1stamina"/>
+			<property name="SoundDrownPain" value="Player_Male/player1drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Male/player1drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Male/player1drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player1Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player1LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player1LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+
+			<property name="MaxViewAngle" value="180"/>
+
+			<property name="LootListAlive" value="62"/>
+
+			<property name="AITask-1" value=""/>
+			<property name="AITarget-1" value=""/>
+			
+			<property name="ExperienceGain" value="0"/>
+			<property name="TimeStayAfterDeath" value="30"/>
+			<property name="DeadBodyHitPoints" value="100000"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon,buffShocked"/>
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="FuriousRamsayNPCTraderRoxy" extends="FuriousRamsayTraderUMATemplate">
+			<property name="Tags" value="entity,npc,human,trader"/>
+			<property name="Class" value="EntitySurvivor"/>
+			<property name="EntityType" value="Zombie"/>
+            <property name="Parent" value="Enemies" />
+			<property name="Archetype" value="FuriousRamsayRoxy"/>
+			<property name="NPCID" value="traderroxy"/>				
+
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundStamina" value=""/>
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+		</entity_class>
 
 	</append>
 

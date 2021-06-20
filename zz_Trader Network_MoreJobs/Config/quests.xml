@@ -1,11 +1,37 @@
 <Config>
 
 	<append xpath="//quest_items">
-		<quest_item id="90" name="questFuriousRamsayStealTech" description_key="questFuriousRamsayStealTechDesc" icon="cntBookPile03" icon_color="f56342"/>
-		<quest_item id="91" name="questFuriousRamsayStealTechBackPack" description_key="questFuriousRamsayStealTechBackPackDesc" icon="cntBackpack01" icon_color="f56342"/>
+		<quest_item id="90" name="questFuriousRamsayStealTech" description_key="questFuriousRamsayStealTechDesc" icon="schematicMaster" icon_color="f56342"/>
+		<quest_item id="91" name="questFuriousRamsayStealTechBackPack" description_key="questFuriousRamsayStealTechBackPackDesc" icon="backpackMedium" icon_color="f56342"/>
 	</append>
 
 	<insertAfter xpath="/quests/quest[@id='tier2_buried_supplies']">
+
+		<quest id="quest_FuriousRamsayFindNextTrader">
+			<property name="name_key" value="quest_FuriousRamsayFindNextTrader_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayFindNextTrader_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayFindNextTrader_description"/>
+			<property name="icon" value="ui_game_symbol_map_trader"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayFindNextTrader_offer"/>
+			
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Goto" id="trader" value="5" phase="1">
+				<property name="nav_object" value="go_to_trader" />
+				<property name="use_closest" value="true" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="return_to_trader" />
+				<property name="use_closest" value="true" />
+			</objective>
+		</quest>
 
 		<quest id="quest_FuriousRamsayTier1_StealTech">
 			<property name="name_key" value="quest_FuriousRamsayStealTech_subtitle"/>
@@ -5232,6 +5258,21 @@
 		<quest id="quest_FuriousRamsayTier3_StealTech" prob="0.7"/>
 		<quest id="quest_FuriousRamsayTier4_StealTech" prob="0.7"/>
 		<quest id="quest_FuriousRamsayTier5_StealTech" prob="0.6"/>-->
+	</append>
+
+	<append xpath="/quests">
+		<quest_list id="trader_quests_blackshield">
+			<quest id="quest_FuriousRamsayTier1_Defend" prob="1"/>
+			<quest id="quest_FuriousRamsayTier2_Defend" prob="0.8"/>
+			<quest id="quest_FuriousRamsayTier3_Defend" prob="0.7"/>
+			<quest id="quest_FuriousRamsayTier4_Defend" prob="0.6"/>
+			<quest id="quest_FuriousRamsayTier5_Defend" prob="0.5"/>
+			<quest id="quest_FuriousRamsayTier1_StealTech" prob="1"/>
+			<quest id="quest_FuriousRamsayTier2_StealTech" prob="0.8"/>
+			<quest id="quest_FuriousRamsayTier3_StealTech" prob="0.7"/>
+			<quest id="quest_FuriousRamsayTier4_StealTech" prob="0.7"/>
+			<quest id="quest_FuriousRamsayTier5_StealTech" prob="0.6"/>
+		</quest_list>
 	</append>
 
 </Config>

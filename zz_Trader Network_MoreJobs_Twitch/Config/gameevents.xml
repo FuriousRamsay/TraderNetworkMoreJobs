@@ -415,6 +415,42 @@ spideralert
 			</action>
 		</action_sequence>
 
+		<action_sequence name="spawn_FuriousRamsay_TD_Soldier">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayUMAMaleSoldier1,FuriousRamsayUMAMaleSoldier2,FuriousRamsayUMAMaleSoldier3,FuriousRamsayUMAFemaleSoldier1,FuriousRamsayUMAFemaleSoldier2"/>
+				<property name="min_distance" value="2" />
+				<property name="max_distance" value="4" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_good_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="malehateroam"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_FuriousRamsay_TD_Commander">
+			<action class="SpawnEntity">
+				<property name="entity_names" value="FuriousRamsayUMAJack,FuriousRamsayUMADante,FuriousRamsayUMALee"/>
+				<property name="min_distance" value="2" />
+				<property name="max_distance" value="4" />
+				<property name="safe_spawn" value="false" />
+				<property name="spawn_count" value="1"/> 
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="twitch_good_spawn"/>
+				<property name="phase" value="1"/>
+			</action>
+			<action class="PlaySound">
+				<property name="sound" value="malehateroam"/>
+				<property name="phase" value="1"/>
+			</action>
+		</action_sequence>
+
 	</append>
 	
 </Config>

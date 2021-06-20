@@ -1,13 +1,12 @@
 Key,Source,Context,English
 
-quest_FuriousRamsayStealTechNote_title,Journal Tip,,"Found something"
-quest_FuriousRamsayStealTechNote,Quest,Quest Info,"They probably thought I'd never bother to search a zombie infested location.\n\nLooking through the pages of these books I found a map and a strange lockpick.\n\nI probably need both to get to the blueprints I'm supposed to find.\n\nShit! I hear people nearby. Sounds like they spotted me. I need to find and kill them before they report back to their faction."
+FuriousRamsayNPCTraderRoxy,entityclasses,Entity,Trader Roxy
 
 cntFetchQuestSatchel,blocks,Quest,Satchel
 cntFuriousRamsayBuriedChest,blocks,Quest,Black Shield Buried Chest
 
-questFuriousRamsayStealTech,items,Quest,Black Shield Book Pile
-questFuriousRamsayStealTechDesc,items,Quest,A pile of books you found in one of the Black Shield's stash.
+questFuriousRamsayStealTech,items,Quest,Black Shield Book
+questFuriousRamsayStealTechDesc,items,Quest,A book you found in one of the Black Shield's stash.
 questFuriousRamsayStealTechBackPack,items,Quest,Black Shield Backpack
 questFuriousRamsayStealTechBackPackDesc,items,Quest,A backpack you dug out of the ground following directions off one of the Black Shield's maps.
 
@@ -29,6 +28,15 @@ qc_FuriousRamsayChallengeDesc,items,Quest - Challenge,A Challenge from the Trade
 
 qc_FuriousRamsayResetPOI,items,Quest - Challenge,POI Reset
 qc_FuriousRamsayResetPOIDesc,quests,Quests,"This offer will reset the POI closest to you. This POI must be valid (can be used in quests)."
+
+qc_FuriousRamsayFindNextTrader,items,Quest - Challenge,Trader Network Flyer
+qc_FuriousRamsayFindNextTraderDesc,quests,Quests,"This Flyer has an address to a new Trader Network location."
+
+quest_FuriousRamsayFindNextTrader_name,quests,Quests,"New Trader Network Location"
+quest_FuriousRamsayFindNextTrader_subtitle,quests,Quests,"New Trader Network Location"
+quest_FuriousRamsayFindNextTrader_description,quests,Quests,"Find a new Trader Network Location"
+quest_FuriousRamsayFindNextTrader_title,quests,Quests,"Find a new Trader Network Location"
+quest_FuriousRamsayFindNextTrader_offer,quests,Quests,"Hello fellow survivor!\n\nGot a bad case of the apocalypse? Have a bunch of useless items to trade or need that special weapon to help keep you safe?\n\nCome on down to one of our Trader Network locations and we'll get you all set up.\n\nBring a lot of money... our shit's expensive\n\nJoe"
 
 quest_FuriousRamsayResetPOI_name,quests,Quests,"POI Reset"
 quest_FuriousRamsayResetPOI_subtitle,quests,Quests,"Reset Closest POI"
@@ -153,6 +161,16 @@ FuriousRamsayUMAClintZombieRage,entityclasses,Entity,Black Shield Zombie Captain
 
 FuriousRamsayUMAGabrielleZombieShockedRage,entityclasses,Entity,Black Shield Zombie Captain (Shocking)
 FuriousRamsayUMAClintZombieShockedRage,entityclasses,Entity,Black Shield Zombie Captain (Shocking)
+
+FuriousRamsayUMAJack,entityclasses,Entity,Trader Network Commander
+FuriousRamsayUMADante,entityclasses,Entity,Trader Network Commander
+FuriousRamsayUMALee,entityclasses,Entity,Trader Network Commander
+
+FuriousRamsayUMAMaleSoldier1,entityclasses,Entity,Trader Network Soldier
+FuriousRamsayUMAMaleSoldier2,entityclasses,Entity,Trader Network Soldier
+FuriousRamsayUMAMaleSoldier3,entityclasses,Entity,Trader Network Soldier
+FuriousRamsayUMAFemaleSoldier1,entityclasses,Entity,Trader Network Soldier
+FuriousRamsayUMAFemaleSoldier2,entityclasses,Entity,Trader Network Soldier
 
 FuriousRamsayTrainerTier1,entityclasses,Entity,Horde Trainer
 FuriousRamsayTrainerTier2,entityclasses,Entity,Horde Trainer
@@ -384,15 +402,15 @@ quest_FuriousRamsayStealTech_title,quests,Quests,"Steal Tech"
 quest_FuriousRamsayStealTech_response,quests,Quests,Steal Tech ([DECEA3]{poi.distance} {poi.direction}[-])
 quest_FuriousRamsayStealTech_statement,quests,Quests,Bring back a clue to finding some Black Shield technology
 quest_FuriousRamsayStealTechTier1_offer,quests,Quests,"We're struggling to properly defend ourselves against the Black Shield faction. They are outpacing us in their development of new technology.\n\nI've heard they are keeping some of their blueprints safe and that you might find a clue at [DECEA3]{poi.name}[-].\n\nCould you investigate for us and see what you can find?"
-quest_FuriousRamsayStealTechTier1_completion,quests,Quests,"Well look at this. They had hidden a map in the stack of books you retrieved.\n\nThey must have hidden their blueprints at that location. You should check it out."
+quest_FuriousRamsayStealTechTier1_completion,quests,Quests,"Well look at this. They had hidden a map in the book you retrieved.\n\nThey must have hidden their blueprints at that location. You should check it out."
 quest_FuriousRamsayStealTechTier2_offer,quests,Quests,"We're struggling to properly defend ourselves against the Black Shield faction. They are outpacing us in their development of new technology.\n\nI've heard they are keeping some of their blueprints safe and that you might find a clue at [DECEA3]{poi.name}[-].\n\nCould you investigate for us and see what you can find?"
-quest_FuriousRamsayStealTechTier2_completion,quests,Quests,"Well look at this. They had hidden a map in the stack of books you retrieved.\n\nThey must have hidden their blueprints at that location. You should check it out."
+quest_FuriousRamsayStealTechTier2_completion,quests,Quests,"Well look at this. They had hidden a map in the book you retrieved.\n\nThey must have hidden their blueprints at that location. You should check it out."
 quest_FuriousRamsayStealTechTier3_offer,quests,Quests,"We're struggling to properly defend ourselves against the Black Shield faction. They are outpacing us in their development of new technology.\n\nI've heard they are keeping some of their blueprints safe and that you might find a clue at [DECEA3]{poi.name}[-].\n\nCould you investigate for us and see what you can find?"
-quest_FuriousRamsayStealTechTier3_completion,quests,Quests,"Well look at this. They had hidden a map in the stack of books you retrieved.\n\nThey must have hidden their blueprints at that location. You should check it out."
+quest_FuriousRamsayStealTechTier3_completion,quests,Quests,"Well look at this. They had hidden a map in the book you retrieved.\n\nThey must have hidden their blueprints at that location. You should check it out."
 quest_FuriousRamsayStealTechTier4_offer,quests,Quests,"We're struggling to properly defend ourselves against the Black Shield faction. They are outpacing us in their development of new technology.\n\nI've heard they are keeping some of their blueprints safe and that you might find a clue at [DECEA3]{poi.name}[-].\n\nCould you investigate for us and see what you can find?"
-quest_FuriousRamsayStealTechTier4_completion,quests,Quests,"Well look at this. They had hidden a map in the stack of books you retrieved.\n\nThey must have hidden their blueprints at that location. You should check it out."
+quest_FuriousRamsayStealTechTier4_completion,quests,Quests,"Well look at this. They had hidden a map in the book you retrieved.\n\nThey must have hidden their blueprints at that location. You should check it out."
 quest_FuriousRamsayStealTechTier5_offer,quests,Quests,"We're struggling to properly defend ourselves against the Black Shield faction. They are outpacing us in their development of new technology.\n\nI've heard they are keeping some of their blueprints safe and that you might find a clue at [DECEA3]{poi.name}[-].\n\nCould you investigate for us and see what you can find?"
-quest_FuriousRamsayStealTechTier5_completion,quests,Quests,"Well look at this. They had hidden a map in the stack of books you retrieved.\n\nThey must have hidden their blueprints at that location. You should check it out."
+quest_FuriousRamsayStealTechTier5_completion,quests,Quests,"Well look at this. They had hidden a map in the book you retrieved.\n\nThey must have hidden their blueprints at that location. You should check it out."
 
 quest_FuriousRamsayStealTechDig_subtitle,quests,Quests,"Technology Blueprint Map"
 quest_FuriousRamsayStealTechDig_description,quests,Quests,"The Trader wants me to investigate the location found on a Black Shield map I found."

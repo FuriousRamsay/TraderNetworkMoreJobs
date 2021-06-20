@@ -6,8 +6,8 @@
 			<item name="qc_FuriousRamsayTier1_minihorde" count="1" prob="0.6"/>
 			<item name="qc_FuriousRamsayHuntTier1" count="1" prob="0.5"/>
 			<item name="qc_FuriousRamsayHordeTrainingTier1" count="1" prob="0.4"/>
-			<!--<item name="FuriousRamsaySpawnAllyDogTier1" count="1" prob="0.3"/>-->
-			<item name="qc_FuriousRamsaySpawnAllyDogTier1" prob="0.3"/>
+			<item name="FuriousRamsaySpawnAllyDogTier1" count="1" prob="0.3"/>
+			<!--<item name="qc_FuriousRamsaySpawnAllyDogTier1" prob="0.3"/>-->
 			<item name="qc_FuriousRamsayGhostsTier1" prob="0.6"/>
 			<item name="qc_FuriousRamsayTier1_BlackShieldBoss" prob="0.4"/>
 			<item name="qc_FuriousRamsayResetPOI" count="1" prob="0.05"/>
@@ -17,8 +17,8 @@
 			<item name="qc_FuriousRamsayTier2_minihorde" count="1" prob="0.6"/>
 			<item name="qc_FuriousRamsayHuntTier2" count="1" prob="0.5"/>
 			<item name="qc_FuriousRamsayHordeTrainingTier2" count="1" prob="0.4"/>
-			<!--<item name="FuriousRamsaySpawnAllyWolfTier2" count="1" quality="1" prob="0.3"/>-->
-			<item name="qc_FuriousRamsaySpawnAllyWolfTier2" count="1" prob="0.3"/>
+			<item name="FuriousRamsaySpawnAllyWolfTier2" count="1" quality="1" prob="0.3"/>
+			<!--<item name="qc_FuriousRamsaySpawnAllyWolfTier2" count="1" prob="0.3"/>-->
 			<item name="qc_FuriousRamsayGhostsTier2" prob="0.6"/>
 			<item name="qc_FuriousRamsayTier2_BlackShieldBoss" prob="0.4"/>
 		</trader_item_group>
@@ -27,8 +27,8 @@
 			<item name="qc_FuriousRamsayTier3_minihorde" count="1" prob="0.6"/>
 			<item name="qc_FuriousRamsayHuntTier3" count="1" prob="0.5"/>
 			<item name="qc_FuriousRamsayHordeTrainingTier3" count="1" prob="0.4"/>
-			<!--<item name="FuriousRamsaySpawnAllyLionTier3" count="1" quality="1" prob="0.3"/>-->
-			<item name="qc_FuriousRamsaySpawnAllyLionTier3" count="1" prob="0.3"/>-->
+			<item name="FuriousRamsaySpawnAllyLionTier3" count="1" quality="1" prob="0.3"/>
+			<!--<item name="qc_FuriousRamsaySpawnAllyLionTier3" count="1" prob="0.3"/>-->
 			<item name="qc_FuriousRamsayGhostsTier3" prob="0.6"/>
 			<item name="qc_FuriousRamsayTier3_BlackShieldBoss" prob="0.4"/>
 		</trader_item_group>
@@ -37,8 +37,8 @@
 			<item name="qc_FuriousRamsayTier4_minihorde" count="1" prob="0.6"/>
 			<item name="qc_FuriousRamsayHuntTier4" count="1" prob="0.5"/>
 			<item name="qc_FuriousRamsayHordeTrainingTier4" count="1" prob="0.4"/>
-			<!--<item name="FuriousRamsaySpawnAllyBearTier4" count="1" quality="1" prob="0.3"/>-->
-			<item name="qc_FuriousRamsaySpawnAllyBearTier4" count="1" prob="0.3"/>
+			<item name="FuriousRamsaySpawnAllyBearTier4" count="1" quality="1" prob="0.3"/>
+			<!--<item name="qc_FuriousRamsaySpawnAllyBearTier4" count="1" prob="0.3"/>-->
 			<item name="qc_FuriousRamsayGhostsTier4" prob="0.6"/>
 			<item name="qc_FuriousRamsayTier4_BlackShieldBoss" prob="0.4"/>
 		</trader_item_group>
@@ -47,8 +47,8 @@
 			<item name="qc_FuriousRamsayTier5_minihorde" count="1" prob="0.6"/>
 			<item name="qc_FuriousRamsayHuntTier5" count="1" prob="0.5"/>
 			<item name="qc_FuriousRamsayHordeTrainingTier5" count="1" prob="0.4"/>
-			<!--<item name="FuriousRamsaySpawnAllyNPCTier5" count="1" quality="1" prob="0.3"/>-->
-			<item name="qc_FuriousRamsaySpawnAllyNPCTier5" count="1" prob="0.3"/>
+			<item name="FuriousRamsaySpawnAllyNPCTier5" count="1" quality="1" prob="0.3"/>
+			<!--<item name="qc_FuriousRamsaySpawnAllyNPCTier5" count="1" prob="0.3"/>-->
 			<item name="qc_FuriousRamsayGhostsTier5" prob="0.6"/>
 			<item name="qc_FuriousRamsayTier5_BlackShieldBoss" prob="0.4"/>
 		</trader_item_group>
@@ -85,6 +85,7 @@
 	<remove xpath="/traders/trader_info[@id='5']"/>
 
 	<append xpath="/traders">
+	
 		<trader_info id="5" reset_interval="1" override_buy_markup="1.0" override_sell_markup="1.0" allow_sell="false" rentable="false" min_inventory="8" max_inventory="8" min_items_swapped="8" max_items_swapped="8">
 			<trader_items count="8">
 				<item group="FuriousRamsayTraderGroupQuestChallengesTier1" count="1"/>
@@ -95,6 +96,111 @@
 				<item group="FuriousRamsayTraderMiscItems"/>
 			</trader_items>
 		</trader_info>
+
+		<!-- Trader Roxy -->
+		<trader_info id="90" full_reset="true" min_inventory="40" max_inventory="200" min_items_swapped="40" max_items_swapped="100" reset_interval="2" open_time="0:00" close_time="0:00">
+		<trader_items count="all">
+			<item group="rareMedicine" count="2" prob="1"/>
+			<item group="medicine" count="2,5" prob="1"/>
+			<item group="traderAlways"/>
+			<item group="traderGeneral" count="4,8"/>
+			<item group="generalResources" count="9,14"/>
+			<item group="constructionSupplies" count="2,8"/>
+			<item group="decorativeBlocks" count="2,7"/>
+			<item group="tools" count="1,2"/>
+			<item group="weaponsMeleeT0-1" count="1"/>
+			<item group="weaponsGunsT1" count="1"/>
+			<item group="weaponsGunParts" count="1"/>
+			<item group="clothes" count="1,4"/>
+			<item group="groupArmorLightMixed" count="1,2"/>
+			<item group="groupArmorHeavyMixed" count="1,2"/>
+			<item group="traderElectrical" count="1,2"/>
+			<item group="modAllT1SecretStash" count="1,2"/>
+		</trader_items>
+
+		<tier_items level="1,499" count="all"> <!-- requires Perk 0 -->
+			<!-- Bug: The count is overridden by "all" anyway so all probabilities are =1 -->
+			<item group="tools" count="1"/>
+			<item group="weaponsGunsMixed" count="1,2"/>
+			<item group="weaponsGunParts" count="1"/>
+			<item group="ammo" count="1,2"/>
+			<item group="groupArmorLightMixed" count="1"/>
+			<item group="groupArmorHeavyMixed" count="1"/>
+			<item group="commonBooks" count="1,2"/>
+			<item group="rareBooks" count="1"/>
+			<item group="perkBooks" count="1"/>
+			<item group="modMeleeT1"/>
+			<item group="modAllT2SecretStash" count="1,2"/>
+			<item group="vehiclePartsT0" count="1"/>
+			<item name="drinkJarGrandpasForgettingElixir" count="1"/>
+		</tier_items>
+
+		<tier_items level="3000,3999" count="all"> <!-- requires Perk 3 -->
+			<!-- Bug: The count is overridden by "all" anyway so all probabilities are =1 -->
+			<item group="traderElectrical" count="2,3"/>
+			<item name="cntVendingMachine" count="1"/>
+			<item group="tools" count="1"/>
+			<item group="rareTools" count="1"/>
+			<item group="weaponsMeleeMixed" count="1,2"/>
+			<item group="weaponsGunsMixed" count="1,2"/>
+			<item group="ammo" count="2,5"/>
+			<item group="groupArmorHeavyMixed" count="1,2"/>
+			<item group="groupArmorLightMixed" count="1,2"/>
+			<item group="commonBooks" count="2,3"/>
+			<item group="rareBooks" count="1,2"/>
+			<item group="perkBooks" count="1,2"/>
+			<item group="vehiclePartsMixed" count="1,2"/>
+			<item group="stashOnlyItemsLow" count="1,2"/>
+			<item group="modAllT3SecretStash" count="1,2"/>
+			<item name="drinkJarGrandpasForgettingElixir" count="1"/>
+		</tier_items>
+
+		<tier_items level="4000,4999" count="all"> <!-- requires Perk 4 -->
+			<item group="traderElectrical" count="2,3"/>
+			<item name="cntVendingMachine" count="1"/>
+			<item group="tools" count="1,2"/>
+			<item group="rareTools" count="1,2"/>
+			<item group="weaponsMeleeMixed" count="2,3"/>
+			<item group="weaponsGunsMixed" count="2,3"/>
+			<item group="ammo" count="3,6"/>
+			<item group="groupArmorHeavyT2" count="1,2"/>
+			<item group="groupArmorLightT2" count="1,2"/>
+			<item group="commonBooks" count="3,4"/>
+			<item group="rareBooks" count="2"/>
+			<item group="perkBooks" count="2"/>
+			<item name="armorMiningHelmet" quality="3,4" mods="modArmorHelmetLight" mod_chance="1"/>
+			<item group="vehiclePartsMixed" count="1,3"/>
+			<item group="stashOnlyItemsHigh" count="2,3"/>
+			<item group="weaponsGunsT3" count="1,2"/>
+			<item group="modAllT4SecretStash" count="1,2"/>
+			<item name="drinkJarGrandpasForgettingElixir" count="1"/>
+		</tier_items>
+
+		<tier_items level="5000,-1" count="all"> <!-- requires Perk 5 -->
+			<item group="traderElectrical" count="3,5"/>
+			<item group="tools" count="1,2"/>
+			<item group="rareTools" count="3,4"/>
+			<item name="cntVendingMachine" count="2"/>
+			<item group="weaponsMeleeMixed" count="2,3"/>
+			<item group="weaponsGunsMixed" count="2,3"/>
+			<item group="weaponsGunsT2" count="1"/>
+			<item group="ammo" count="5,8"/>
+			<item group="groupArmorHeavyT2" count="2,3"/>
+			<item group="groupArmorLightT2" count="2,3"/>
+			<item group="commonBooks" count="4,5"/>
+			<item group="rareBooks" count="2,3"/>
+			<item group="perkBooks" count="2,3"/>
+			<item name="armorMiningHelmet" quality="3,5" mods="modArmorHelmetLight" mod_chance="1"/>
+			<item group="vehiclePartsMixed" count="2,3"/>
+			<item name="apparelNightvisionGoggles" count="1"/>
+			<item name="solarbank" count="1"/>
+			<item name="solarCell" count="1,3" quality="3,6"/>
+			<item group="stashOnlyItemsHigh" count="3,4"/>
+			<item group="weaponsGunsT3QL5" count="1,2"/>
+			<item group="modAllT5SecretStash" count="1,4"/>
+			<item name="drinkJarGrandpasForgettingElixir" count="1"/>
+		</tier_items>
+	</trader_info>
 
 	</append>
 

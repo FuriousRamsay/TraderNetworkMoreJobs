@@ -111,7 +111,7 @@
 			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBanditZombieDesc"/>
 			<property name="start_gamestage" value="10"/>
 			<property name="event_name" value="spawn_FuriousRamsay_BS_BanditZombie"/>
-			<property name="default_cost" value="125"/>
+			<property name="default_cost" value="150"/>
 			<property name="cooldown" value="120"/>
 			<property name="enabled" value="true"/>
 			<property name="special_only" value="false"/>
@@ -125,7 +125,7 @@
 			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBanditZombieFeralDesc"/>
 			<property name="start_gamestage" value="40"/>
 			<property name="event_name" value="spawn_FuriousRamsay_BS_BanditZombieFeral"/>
-			<property name="default_cost" value="125"/>
+			<property name="default_cost" value="200"/>
 			<property name="cooldown" value="180"/>
 			<property name="enabled" value="true"/>
 			<property name="special_only" value="false"/>
@@ -139,7 +139,7 @@
 			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBanditZombieRageDesc"/>
 			<property name="start_gamestage" value="100"/>
 			<property name="event_name" value="spawn_FuriousRamsay_BS_BanditZombieRage"/>
-			<property name="default_cost" value="125"/>
+			<property name="default_cost" value="250"/>
 			<property name="cooldown" value="180"/>
 			<property name="enabled" value="true"/>
 			<property name="special_only" value="false"/>
@@ -153,7 +153,7 @@
 			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnBlackShieldBanditZombieRageShockDesc"/>
 			<property name="start_gamestage" value="150"/>
 			<property name="event_name" value="spawn_FuriousRamsay_BS_BanditZombieRageShock"/>
-			<property name="default_cost" value="125"/>
+			<property name="default_cost" value="275"/>
 			<property name="cooldown" value="180"/>
 			<property name="enabled" value="true"/>
 			<property name="special_only" value="false"/>
@@ -167,7 +167,7 @@
 			<property name="description_key" value="TwitchAction_FuriousRamsaySpawnTraderNetworkCitizenDesc"/>
 			<property name="start_gamestage" value="5"/>
 			<property name="event_name" value="spawn_FuriousRamsay_TN_Citizen"/>
-			<property name="default_cost" value="150"/>
+			<property name="default_cost" value="125"/>
 			<property name="cooldown" value="120"/>
 			<property name="enabled" value="true"/>
 			<property name="special_only" value="false"/>
@@ -309,6 +309,34 @@
 			<property name="event_name" value="spawn_FuriousRamsay_BS_BossTier5"/>
 			<property name="default_cost" value="1000"/>
 			<property name="cooldown" value="360"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="TwitchAction_FuriousRamsayTDCommander" extends="twitch_normalZombie">
+			<property name="category" value="TraderNetwork"/>
+			<property name="command" value="#bs_tn_commander"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsayTDCommander"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsayTDCommanderCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsayTDCommanderDesc"/>
+			<property name="start_gamestage" value="50"/>
+			<property name="event_name" value="spawn_FuriousRamsay_TD_Commander"/>
+			<property name="default_cost" value="300"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="TwitchAction_FuriousRamsayTDSoldier" extends="twitch_normalZombie">
+			<property name="category" value="TraderNetwork"/>
+			<property name="command" value="#bs_tn_soldier"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsayTDSoldier"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsayTDSoldierCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsayTDSoldierDesc"/>
+			<property name="start_gamestage" value="20"/>
+			<property name="event_name" value="spawn_FuriousRamsay_TD_Soldier"/>
+			<property name="default_cost" value="200"/>
+			<property name="cooldown" value="180"/>
 			<property name="enabled" value="true"/>
 			<property name="special_only" value="false"/>
 		</action>
