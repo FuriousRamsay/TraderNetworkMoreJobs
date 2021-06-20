@@ -17,6 +17,74 @@
 				</effect_group>
 			</buff>
 
+			<buff name="FuriousRamsayVanishBlackShieldTimer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="15"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInteractBlackShieldTimer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="5"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="4" buff="FuriousRamsayInteractBlackShield"/>
+					<!--<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$spiritRegen" operation="set" value="@$spiritRegen_base"/>-->
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInteractBlackShield">
+				<damage_type value="electrical"/>
+				<stack_type value="replace"/>
+				<duration value="2"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Test Message">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+					
+					<triggered_effect trigger="onSelfBuffStart" action="Ragdoll" duration="1" force="2000">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="ETrapHit" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="electric_fence_impact">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="electric_fence_impact">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="electric_fence_impact">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+
 			<!--<buff name="FuriousRamsayTestUpdate" hidden="true" remove_on_death="true">
 				<stack_type value="replace"/>
 				<update_rate value="5"/>

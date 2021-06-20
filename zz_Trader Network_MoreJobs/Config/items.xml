@@ -20,6 +20,26 @@
 			<property name="EconomicValue" value="100"/>
 		</item>
 
+		<item name="FuriousRamsayCallBlackShieldTrader">
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="124"/>
+			<property name="HoldType" value="0"/>
+			<property class="Action0">
+				<!--<requirement name="CVarCompare" cvar="$sorceryElementsLearned_Fire" operation="Equals" value="1"/>-->
+				<property name="Class" value="Quest"/>
+				<property name="Sound_start" value="password_set"/>
+				<property name="Sound_start" value="charge_beep"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayCallBlackShieldTrader"/>
+		<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
+			</property>
+			<effect_group tiered="false" name="Food Tier 2">
+				<!--<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="45"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>-->
+				<!--<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayStartTraining"/>-->
+			</effect_group>
+		</item>
+
 		<item name="qc_FuriousRamsayFindNextTrader">
 			<property name="Extends" value="questMaster"/>
 			<property name="DescriptionKey" value="qc_FuriousRamsayFindNextTraderDesc"/>
@@ -213,12 +233,12 @@
 			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
-			<!--<property class="Action0">
+			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="quest_FuriousRamsayResetPOI"/>
-			</property>-->
-			<!--<property name="TintColor" value="162, 220, 245"/>
-			<property name="CustomIconTint" value="a2dcf5"/>-->
+			</property>
+			<property name="TintColor" value="162, 220, 245"/>
+			<property name="CustomIconTint" value="a2dcf5"/>
 		</item>
 
 		<item name="qc_FuriousRamsayTier1_BlackShieldBoss">
