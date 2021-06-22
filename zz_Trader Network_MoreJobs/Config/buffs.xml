@@ -17,82 +17,46 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayVanishBlackShieldTimer" hidden="true" remove_on_death="true">
+			<buff name="FuriousRamsayBlackShieldDefendTimer" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
-				<duration value="15"/>
+				<update_rate value="2"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="3" buff="FuriousRamsayBlackShieldDefense1"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1" buff="FuriousRamsayBlackShieldDefense2"/>
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayInteractBlackShieldTimer" hidden="true" remove_on_death="true">
-				<stack_type value="ignore"/>
-				<update_rate value="5"/>
+			<buff name="FuriousRamsayBlackShieldDefense1">
+				<stack_type value="replace"/>
+				<duration value="10"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="4" buff="FuriousRamsayInteractBlackShield"/>
-					<!--<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$spiritRegen" operation="set" value="@$spiritRegen_base"/>-->
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-5">
+						<requirement name="EntityTagCompare" tags="walker"/>
+					</passive_effect>
+					<passive_effect name="WalkSpeed" operation="base_set" value="0" duration="0,10">
+						<requirement name="EntityTagCompare" tags="walker"/>
+					</passive_effect>			
+					<passive_effect name="RunSpeed" operation="base_set" value="0" duration="0,10">
+						<requirement name="EntityTagCompare" tags="walker"/>
+					</passive_effect>
+					<passive_effect name="AttacksPerMinute" operation="base_set" value="0" duration="0,10">
+						<requirement name="EntityTagCompare" tags="walker"/>
+					</passive_effect>
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayInteractBlackShield">
-				<damage_type value="electrical"/>
+			<buff name="FuriousRamsayBlackShieldDefense2">
 				<stack_type value="replace"/>
 				<duration value="2"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Test Message">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-					
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-20">
+						<requirement name="EntityTagCompare" tags="walker"/>
+					</passive_effect>
 					<triggered_effect trigger="onSelfBuffStart" action="Ragdoll" duration="1" force="2000">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-
-					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-
-					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-
-					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-
-					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-
-					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="ETrapHit" operation="set" value="0">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-
-					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-
-					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="electric_fence_impact">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-
-					<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="electric_fence_impact">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-
-					<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="electric_fence_impact">
-						<requirement name="EntityTagCompare" tags="player"/>
+						<requirement name="EntityTagCompare" tags="walker"/>
 					</triggered_effect>
 				</effect_group>
 			</buff>
-
-			<!--<buff name="FuriousRamsayTestUpdate" hidden="true" remove_on_death="true">
-				<stack_type value="replace"/>
-				<update_rate value="5"/>
-				<effect_group>
-					<triggered_effect trigger="onSelfBuffUpdate" action="PlaySound" sound="FuriousRamsayAlarm"/>
-					<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" target="self" stat="Health" operation="add" value="99999" />
-				</effect_group>
-			</buff>-->
 
 			<buff name="FuriousRamsayStartTraining" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
@@ -523,7 +487,6 @@
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-6">
 						<requirement name="!EntityTagCompare" tags="player,robot"/>
 					</passive_effect>
-					
 					<passive_effect name="RunSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
 						<requirement name="!EntityTagCompare" tags="player,robot"/>
 					</passive_effect>

@@ -2006,8 +2006,6 @@
 			<property name="AITarget-3" value=""/>
 			<property name="AITarget-4" value=""/>
 
-			<!--<property name="SoundAlertTime" value="10.0"/>-->
-
 			<property name="SoundRandom" value="demolitionzroam"/>
 			<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemaleroam"/>
 			<property name="SoundAttack" value="demolitionzroam"/>
@@ -3734,7 +3732,7 @@
 			<property name="MoveSpeedAggro" value="1.2, 1.35"/> 
 			<property name="LootListAlive" value="1012"/>
 
-            <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTier1" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTreasureTier1" />
 
             <property name="ExperienceGain" value="350" />
 
@@ -3754,7 +3752,7 @@
 			<property name="MoveSpeedAggro" value="1.2, 1.35"/> 
 			<property name="LootListAlive" value="1012"/>
 
-            <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTier2" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTreasureTier2" />
 
             <property name="ExperienceGain" value="350" />
 
@@ -3774,7 +3772,7 @@
 			<property name="MoveSpeedAggro" value="1.3, 1.45"/> 
 			<property name="LootListAlive" value="1012"/>
 
-            <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTier3" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTreasureTier3" />
 
             <property name="ExperienceGain" value="350" />
 
@@ -3794,7 +3792,7 @@
 			<property name="MoveSpeedAggro" value="1.3, 1.45"/> 
 			<property name="LootListAlive" value="1012"/>
 
-            <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTier4" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTreasureTier4" />
 
             <property name="ExperienceGain" value="350" />
 
@@ -3814,7 +3812,7 @@
 			<property name="MoveSpeedAggro" value="1.4, 1.65"/> 
 			<property name="LootListAlive" value="1012"/>
 
-            <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTier5" />
+            <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTreasureTier5" />
 
             <property name="ExperienceGain" value="350" />
 
@@ -4110,36 +4108,63 @@
 		<entity_class name="FuriousRamsayTraderUMATemplate">
 			<property name="Tags" value="entity,npc,human"/>
 			<property name="HideInSpawnMenu" value="true"/>
-			<property name="EntityType" value="EntityBandit"/>
+			<property name="EntityType" value="Player"/>
+			<property name="Faction" value="trader"/>
+			<property name="Mesh" value="Player/Male/player_maleRagdoll"/>
 			<property name="AvatarController" value="AvatarUMAController"/>
 			<property name="ModelType" value="NpcUMA"/>
+			<property name="HasRagdoll" value="true"/>
 			<property name="Prefab" value="NPC"/>
-			<property name="Class" value="EntityNPC"/>
+			<property name="Class" value="EntityTrader"/>
 			<property name="Parent" value="Players"/>
 			<property name="PhysicsBody" value="Player"/>
-			<property name="Weight" value="300"/>
+			<property name="Weight" value="70"/>
+
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="Look"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,20,EntityZombie,30,EntitySurvivor,25"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITask-5" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAlive"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAnimalStag,20,20,EntityZombie,30,30"/>
+			<property name="AITarget-5" value=""/>
 
 			<property name="IsEnemyEntity" value="true"/>
+			<property name="SurfaceCategory" value="organic"/>
+			<property name="WalkType" value="7"/>
 			<property name="HasDeathAnim" value="true"/>
+			<property name="ParticleOnDeath" value="blood_death"/>
+			<property name="SoundRandomTime" value="120"/>
+			<property name="SoundRandom" value="malehateroam"/>
 
-			<property name="AITask-1" value=""/>
-			<property name="AITarget-1" value=""/>
-			
-			<property name="TimeStayAfterDeath" value="1"/>
-		</entity_class>
-		
-		<entity_class name="FuriousRamsayNPCBlackShieldTrader1" extends="npcTraderUMATemplate">
-			<property name="Tags" value="entity,npc,human,trader"/>
-			<property name="Archetype" value="FuriousRamsayBlackShieldTrader1"/>
-			<property name="NPCID" value="FuriousRamsayBlackShieldTrader1"/>				
+			<property name="MaxViewAngle" value="360"/>
 
-			<property name="NavObject" value="FuriousRamsayBlackShieldTrader" />
+			<property name="LootListAlive" value="62"/>
+
+			<property name="MoveSpeed" value="0.7"/>
+			<property name="MoveSpeedAggro" value="2, 2"/>
+			<property name="MoveSpeedPanic" value="2"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="ExperienceGain" value="130"/>
+			<property name="TimeStayAfterDeath" value="30"/>
+			<property name="DeadBodyHitPoints" value="251"/>
 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="500"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishBlackShieldTimer"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayInteractBlackShieldTimer"/>				
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayBlackShieldDefendTimer"/>
+				<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon,buffShocked"/>
 			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayNPCBlackShieldTrader1" extends="FuriousRamsayTraderUMATemplate">
+			<property name="Archetype" value="FuriousRamsayBlackShieldTrader1"/>
+			<property name="NPCID" value="FuriousRamsayBlackShieldTrader1"/>
+
+			<property name="NavObject" value="FuriousRamsayBlackShieldTrader" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandBlackShieldTrader"/>
 		</entity_class>
 
 	</append>

@@ -20,27 +20,7 @@
 			<property name="EconomicValue" value="100"/>
 		</item>
 
-		<item name="FuriousRamsayCallBlackShieldTrader">
-			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="Stacknumber" value="1"/>
-			<property name="EconomicValue" value="124"/>
-			<property name="HoldType" value="0"/>
-			<property class="Action0">
-				<!--<requirement name="CVarCompare" cvar="$sorceryElementsLearned_Fire" operation="Equals" value="1"/>-->
-				<property name="Class" value="Quest"/>
-				<property name="Sound_start" value="password_set"/>
-				<property name="Sound_start" value="charge_beep"/>
-				<property name="QuestGiven" value="quest_FuriousRamsayCallBlackShieldTrader"/>
-		<!-- jar from cooking food <property name="Create_item" value="drinkJarEmpty"/> -->
-			</property>
-			<effect_group tiered="false" name="Food Tier 2">
-				<!--<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="45"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>-->
-				<!--<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayStartTraining"/>-->
-			</effect_group>
-		</item>
-
-		<item name="qc_FuriousRamsayFindNextTrader">
+		<!--<item name="qc_FuriousRamsayFindNextTrader">
 			<property name="Extends" value="questMaster"/>
 			<property name="DescriptionKey" value="qc_FuriousRamsayFindNextTraderDesc"/>
 			<property name="CustomIcon" value="signShopTraderJoel2x5Wall"/>
@@ -48,7 +28,7 @@
 			<property class="Action0">
 				<property name="QuestGiven" value="quest_FuriousRamsayFindNextTrader"/>
 			</property>
-		</item>
+		</item>-->
 
 		<item name="qc_FuriousStealTechTier1">
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
@@ -475,6 +455,7 @@
 				<property name="Class" value="SpawnTurret"/>
 				<property name="Turret" value="FuriousRamsayAllyDogTier1Spawn"/>
 				<property name="PreviewSize" value="1.4,1.4,1.4"/>
+				<property name="Sound_start" value="password_set"/>
 			</property>
 			<effect_group name="FuriousRamsaySpawnAllyDogTier1">
 				<passive_effect name="EntityDamage" operation="base_set" value="9"/>
@@ -504,6 +485,7 @@
 				<property name="Class" value="SpawnTurret"/>
 				<property name="Turret" value="FuriousRamsayAllyWolfTier2Spawn"/>
 				<property name="PreviewSize" value="1.4,1.4,1.4"/>
+				<property name="Sound_start" value="password_set"/>
 			</property>
 			<effect_group name="FuriousRamsaySpawnAllyWolfTier2">
 				<passive_effect name="EntityDamage" operation="base_set" value="14"/>
@@ -533,6 +515,7 @@
 				<property name="Class" value="SpawnTurret"/>
 				<property name="Turret" value="FuriousRamsayAllyLionTier3Spawn"/>
 				<property name="PreviewSize" value="1.4,1.4,1.4"/>
+				<property name="Sound_start" value="password_set"/>
 			</property>
 			<effect_group name="FuriousRamsaySpawnAllyLionTier3">
 				<passive_effect name="EntityDamage" operation="base_set" value="25"/>
@@ -562,6 +545,7 @@
 				<property name="Class" value="SpawnTurret"/>
 				<property name="Turret" value="FuriousRamsayAllyBearTier4Spawn"/>
 				<property name="PreviewSize" value="1.4,1.4,1.4"/>
+				<property name="Sound_start" value="password_set"/>
 			</property>
 			<effect_group name="FuriousRamsaySpawnAllyBearTier4">
 				<passive_effect name="EntityDamage" operation="base_set" value="40"/>
@@ -591,6 +575,7 @@
 				<property name="Class" value="SpawnTurret"/>
 				<property name="Turret" value="FuriousRamsayAllyNPCTier5Spawn"/>
 				<property name="PreviewSize" value="1.4,1.4,1.4"/>
+				<property name="Sound_start" value="password_set"/>
 			</property>
 			<effect_group name="FuriousRamsaySpawnAllyNPCTier5">
 				<passive_effect name="EntityDamage" operation="base_set" value="65"/>
@@ -1010,6 +995,7 @@
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsaySpawnAllyDogTier1"/>
+				<property name="Sound_start" value="charge_beep"/>
 			</property>
 			<property name="CustomIconTint" value="217, 0, 255"/>
 		</item>
@@ -1028,6 +1014,7 @@
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsaySpawnAllyWolfTier2"/>
+				<property name="Sound_start" value="charge_beep"/>
 			</property>
 			<property name="CustomIconTint" value="255, 66, 76"/>
 		</item>
@@ -1046,6 +1033,7 @@
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsaySpawnAllyLionTier3"/>
+				<property name="Sound_start" value="charge_beep"/>
 			</property>
 			<property name="CustomIconTint" value="5, 247, 110"/>		
 		</item>
@@ -1064,6 +1052,7 @@
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsaySpawnAllyBearTier4"/>
+				<property name="Sound_start" value="charge_beep"/>
 			</property>
 			<property name="CustomIconTint" value="0, 153, 255"/>		
 		</item>
@@ -1082,6 +1071,7 @@
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsaySpawnAllyNPCTier5"/>
+				<property name="Sound_start" value="charge_beep"/>
 			</property>
 			<property name="CustomIconTint" value="255, 255, 0"/>
 		</item>
@@ -1790,7 +1780,7 @@
 			</effect_group>
 		</item>
 
-		<item name="FuriousRamsayMeleeHandEnemyTier1">
+		<item name="FuriousRamsayMeleeHandEnemyTreasureTier1">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="12"/> 
@@ -1799,8 +1789,8 @@
 				<property name="Range" value="2.4"/>
 				<property name="DamageEntity" value="10"/>
 				<property name="DamageBlock" value="50"/>
-				<property name="Sphere" value="1.2"/>
-				<property name="Block_range" value="2.5"/>
+				<!--<property name="Sphere" value="1.2"/>
+				<property name="Block_range" value="2.5"/>-->
 			</property>
 			<effect_group name="meleeHandHumanTemplate" tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
@@ -1808,7 +1798,7 @@
 			</effect_group>
 		</item>	
 
-		<item name="FuriousRamsayMeleeHandEnemyTier2">
+		<item name="FuriousRamsayMeleeHandEnemyTreasureTier2">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="12"/> 
@@ -1817,8 +1807,8 @@
 				<property name="Range" value="2.5"/>
 				<property name="DamageEntity" value="15"/>
 				<property name="DamageBlock" value="60"/>
-				<property name="Sphere" value="1.2"/>
-				<property name="Block_range" value="2.5"/>
+				<!--<property name="Sphere" value="1.2"/>
+				<property name="Block_range" value="2.5"/>-->
 			</property>
 			<effect_group name="meleeHandHumanTemplate" tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
@@ -1826,7 +1816,7 @@
 			</effect_group>
 		</item>	
 
-		<item name="FuriousRamsayMeleeHandEnemyTier3">
+		<item name="FuriousRamsayMeleeHandEnemyTreasureTier3">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="12"/> 
@@ -1835,8 +1825,8 @@
 				<property name="Range" value="2.6"/>
 				<property name="DamageEntity" value="20"/>
 				<property name="DamageBlock" value="70"/>
-				<property name="Sphere" value="1.2"/>
-				<property name="Block_range" value="2.5"/>
+				<!--<property name="Sphere" value="1.2"/>
+				<property name="Block_range" value="2.5"/>-->
 			</property>
 			<effect_group name="meleeHandHumanTemplate" tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
@@ -1844,7 +1834,7 @@
 			</effect_group>
 		</item>	
 
-		<item name="FuriousRamsayMeleeHandEnemyTier4">
+		<item name="FuriousRamsayMeleeHandEnemyTreasureTier4">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="12"/> 
@@ -1853,8 +1843,8 @@
 				<property name="Range" value="2.7"/>
 				<property name="DamageEntity" value="25"/>
 				<property name="DamageBlock" value="80"/>
-				<property name="Sphere" value="1.2"/>
-				<property name="Block_range" value="2.5"/>
+				<!--<property name="Sphere" value="1.2"/>
+				<property name="Block_range" value="2.5"/>-->
 			</property>
 			<effect_group name="meleeHandHumanTemplate" tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
@@ -1862,7 +1852,7 @@
 			</effect_group>
 		</item>	
 
-		<item name="FuriousRamsayMeleeHandEnemyTier5">
+		<item name="FuriousRamsayMeleeHandEnemyTreasureTier5">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="12"/> 
@@ -1871,14 +1861,27 @@
 				<property name="Range" value="2.8"/>
 				<property name="DamageEntity" value="30"/>
 				<property name="DamageBlock" value="90"/>
-				<property name="Sphere" value="1.2"/>
-				<property name="Block_range" value="2.5"/>
+				<!--<property name="Sphere" value="1.2"/>
+				<property name="Block_range" value="2.5"/>-->
 			</property>
 			<effect_group name="meleeHandHumanTemplate" tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
 			</effect_group>
 		</item>	
+
+		<item name="FuriousRamsayMeleeHandBlackShieldTrader">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="12"/> 
+			<property class="Action0">
+				<property name="Delay" value="3"/>
+				<property name="Range" value="1.5"/>
+				<property name="DamageEntity" value="30"/>
+				<property name="DamageBlock" value="50"/>
+				<property name="Sound_start" value="malehatealert"/>
+			</property>
+		</item>
 
 	</append>
 </Config>
