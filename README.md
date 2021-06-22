@@ -10,8 +10,78 @@ Currently tested with:
 	﻿- Darkness Falls
 	- Sorcery
 
+Twitch Integration Spawns:
+		
+	The following spawns have been added to the list of commands to both help and hinder the player:
+
+	Help:
+		- Citizen [gamestage 5+]
+		- Mechanical Dog [gamestage 10+]
+		- Soldier [gamestage 20+]
+		- Mechanical Wolf [gamestage 40+]
+		- Commander [gamestage 50+]
+		- Mechanical Lion [gamestage 75+]
+		- Mechanical Bear [gamestage 100+]
+		- Android [gamestage 150+]
+
+	Hinder:
+		- Bandit [gamestage 5+]
+		- Bandit Zombie [gamestage 10+]
+		- Cloaked Snaked [gamestage 20+]
+		- Burning Rabbit [gamestage 20+]
+		- Titan Bully [gamestage 25+]
+		- Cloaked Vulture [gamestage 40+]
+		- Bandit Zombie (Feral) [gamestage 40+]
+		- Titan Giant [gamestage 50+]
+		- Battle Android [gamestage 65+]
+		- Burn Android [gamestage 100+]
+		- Shock Android [gamestage 100+]
+		- Bandit Zombie (Rage) [gamestage 100+]
+		- Titan Mammoth [gamestage 100+]
+		- Bandit Zombie (Shock) [gamestage 150+]
+		- Titan Goliath [gamestage 150+]
+		- Titan Colossus [gamestage 200+]
+
+A new trader has been added to the world:
+	
+	Black Shield Bandit Trader:
+	- The trader randomly spawns throughout the biomes
+	- A navigation marker will show up on the map, your compass and your screen when within 100 meters of the trader to help you find him
+	- The trader will hold more weapons, ammo, armor, shcematics and tools
+	- The inventory refreshes every day
+	- Items will cost 20% less than at the Trader Network locations
+	- The trader is available 24/7 and cannot be killed
+	- currently will only buy and sell goods but will eventually carry Black Shield Bandit specific jobs
+	- due to single player and multiplayer game behaviours not always matching, here are some differences:
+		Single-Player: 
+			- the trader will attack zombies that target him (with attack animations)
+		Multi-Player:
+			- the trader will seek out surrounding zombies and attack them (with no attack anomations)
+
+	
 The following can be found as part of the Trader's job listing:
 
+	Visit New Trader Location (Tier 1 through 3):
+	- New job with a low chance of appearing at Tiers 1 through 3 (percentage goes down as you go up in tiers)
+	- The objective is to visit another trader, in line with the theme of the mod (a network of traders)
+	- Allows you to find more traders early on rather than having to wait for the special jobs that show up as you move up in tiers
+
+	Steal Tech (Tiers 1 through 5):
+	- Part 1: 
+		- You are sent to a random POI
+		- Once you reach the marker, a number of bandits will attack
+		- You must clear the POI and retrieve a book from a hidden satchel
+		- Once retrieved, a number of Bandits will show up
+		- Once you turn in, the Trader will give you a map and will ask you to investigate
+	- Part 2:
+		- You are sent to the location marked on the map
+		- Once you reach the marker a number of zombies will attack
+		- Once the marker is activated, a dig location will appear and a number of Trader Network Soldiers will show up to help defend the area
+		- Over time, a number of bandits and zombies will show up to disrupt your digging
+		- When you find the buried chest, pick up the supplies and the Black Shield Backpack containing the Black Shield's Tech Blueprints
+		- Once the backpack is retrieved, more soldiers and bandits will show up
+		- Return the backpack to the trader for a reward
+				
 	Hold and Fetch (Tiers 1 through 5):
 	- Phase 1: You are sent to a random POI which you have to clear
 	- Phase 2: Once cleared, waves of zombies will spawn and you must kill a number of them in order to activate each subsequent wave
@@ -142,4 +212,12 @@ Warning: Please back up your saved world and character before installing this mo
 		<quest id="quest_FuriousRamsayTier3_Defend" prob="0.7"/>
 		<quest id="quest_FuriousRamsayTier4_Defend" prob="0.6"/>
 		<quest id="quest_FuriousRamsayTier5_Defend" prob="0.5"/>
+		<quest id="quest_FuriousRamsayFindNextTraderTier1" prob="0.5"/>
+		<quest id="quest_FuriousRamsayFindNextTraderTier2" prob="0.4"/>
+		<quest id="quest_FuriousRamsayFindNextTraderTier3" prob="0.3"/>
+		<quest id="quest_FuriousRamsayTier1_StealTech" prob="1"/>
+		<quest id="quest_FuriousRamsayTier2_StealTech" prob="0.8"/>
+		<quest id="quest_FuriousRamsayTier3_StealTech" prob="0.7"/>
+		<quest id="quest_FuriousRamsayTier4_StealTech" prob="0.7"/>
+		<quest id="quest_FuriousRamsayTier5_StealTech" prob="0.6"/>
 	</append>
