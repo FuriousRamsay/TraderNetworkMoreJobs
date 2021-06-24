@@ -67,6 +67,7 @@ The following can be found as part of the Black Shield's Trader's job listing:
 	- Phase 4: You unlock the possibility of placing the mines that were also contained in the backpack (quest objective). You have 30 seconds to place them within the POI bounds.
 	- Phase 5: Get your reward from the trader you received the mission from
 	Notes: You must closely respect the mission guidelines or risk not being able to complete the mission.
+               You cannot use the items provided in the backpack outside of this mission, they will not work.
 
 The following can be found as part of the Trader Network's Trader's job listing:
 
