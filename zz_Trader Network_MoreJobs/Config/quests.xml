@@ -3,9 +3,96 @@
 	<append xpath="//quest_items">
 		<quest_item id="90" name="questFuriousRamsayStealTech" description_key="questFuriousRamsayStealTechDesc" icon="schematicMaster" icon_color="f56342"/>
 		<quest_item id="91" name="questFuriousRamsayStealTechBackPack" description_key="questFuriousRamsayStealTechBackPackDesc" icon="backpackMedium" icon_color="f56342"/>
+		<quest_item id="92" name="questFuriousRamsaySurpriseQuestItem" description_key="questFuriousRamsaySurpriseQuestItemDesc" icon="cntShippingCrateShotgunMessiah" icon_color="f56342"/>
+
 	</append>
 
 	<insertAfter xpath="/quests/quest[@id='tier2_buried_supplies']">
+
+		<quest id="quest_FuriousRamsayTier1_Surprise">
+			<property name="name_key" value="quest_FuriousRamsaySurprise_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsaySurprise_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsaySurprise_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="easy"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsaySurpriseTier1_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsaySurprise_statement"/>
+			<property name="response_key" value="quest_FuriousRamsaySurprise_response"/>
+			<property name="login_rally_reset" value="true"/>
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsaySurpriseTier1_completion"/>
+			<property name="return_to_quest_giver" value="true" />
+
+			<action type="TrackQuest"/>
+
+			<reward type="Item" id="FuriousRamsayTimedChargeBackpackTier1" stage="start"/>
+
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="biome_filter_type" value="ExcludeBiome" />
+				<property name="biome_filter" value="wasteland" />
+				<property name="nav_object" value="quest" />
+			</objective>
+
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+			
+			<objective type="FetchFromContainer">
+				<property name="phase" value="3"/>
+				<property name="quest_item_ID" value="92"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="fetch_mode" value="Standard"/>
+				<property name="nav_object" value="fetch_container" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsayChargeInvisibleSurpriseEntity" value="5" phase="4"/>
+
+			<objective type="Time" value="45" phase="4"/>
+			<objective type="POIStayWithin">
+				<property name="phase" value="4"/>
+				<property name="radius" value="5"/>
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsayMineInvisibleSurpriseEntity" value="5" phase="5"/>
+
+			<objective type="BlockPlace" id="FuriousRamsayMineHubcap" value="3" phase="5"/>
+			<objective type="Time" value="30" phase="5"/>
+			<requirement type="Buff" id="FuriousRamsayPlacedCharge" phase="5"/>
+			<objective type="POIStayWithin">
+				<property name="phase" value="5"/>
+				<property name="radius" value="5"/>
+			</objective>-->
+
+			<action type="SpawnEnemy" id="zombieBoe,zombieFemaleFat,zombieJoe,zombieJanitor,zombieMoe,zombieArlene,zombieLab,zombieDarlene,zombieMarlene,zombieYo,zombieSteve,zombieBusinessMan" value="4" phase="5"/>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="2500"/>
+			<reward type="Item" id="casinoCoin" value="800"/>
+
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestTools,FuriousRamsayGroupQuestMedicalLow" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestArmor,FuriousRamsayGroupQuestCookedFoodsTier1" ischosen="true" value="1"/>
+		</quest>
 
 		<quest id="quest_FuriousRamsayFindNextTraderTier1">
 			<property name="name_key" value="quest_FuriousRamsayFindNextTrader_subtitle"/>
@@ -5344,16 +5431,7 @@
 
 	<append xpath="/quests">
 		<quest_list id="trader_quests_blackshield">
-			<quest id="quest_FuriousRamsayTier1_Defend" prob="1"/>
-			<quest id="quest_FuriousRamsayTier2_Defend" prob="0.8"/>
-			<quest id="quest_FuriousRamsayTier3_Defend" prob="0.7"/>
-			<quest id="quest_FuriousRamsayTier4_Defend" prob="0.6"/>
-			<quest id="quest_FuriousRamsayTier5_Defend" prob="0.5"/>
-			<quest id="quest_FuriousRamsayTier1_StealTech" prob="1"/>
-			<quest id="quest_FuriousRamsayTier2_StealTech" prob="0.8"/>
-			<quest id="quest_FuriousRamsayTier3_StealTech" prob="0.7"/>
-			<quest id="quest_FuriousRamsayTier4_StealTech" prob="0.7"/>
-			<quest id="quest_FuriousRamsayTier5_StealTech" prob="0.6"/>
+			<quest id="quest_FuriousRamsayTier1_Surprise" prob="1"/>
 		</quest_list>
 	</append>
 

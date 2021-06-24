@@ -6,9 +6,9 @@
 		<!-- Statements -->
 		<statement id="start" text="dialog_FuriousRamsayBlackShieldTrader_statement_start">
 			<response_entry id="shop" />
-			<!--<response_entry id="jobsnone" />
+			<response_entry id="jobsnone" />
 			<response_entry id="jobshave" />
-			<response_entry id="specialjobshave" />-->
+			<response_entry id="specialjobshave" />
 			<response_entry id="background" />
 			<response_entry id="admin" />
 			<response_entry id="done" />
@@ -16,11 +16,17 @@
 		
 		<statement id="background" text="dialog_FuriousRamsayBlackShieldTrader_statement_background">
 			<response_entry id="blackshield" />
+			<response_entry id="tradernetwork" />
+			<response_entry id="plan" />
+			<response_entry id="help" />
 			
 			<response_entry id="nevermind" />
 		</statement>
 		
 		<statement id="blackshield" text="dialog_FuriousRamsayBlackShieldTrader_statement_blackshield" nextstatementid="background" />
+		<statement id="tradernetwork" text="dialog_FuriousRamsayBlackShieldTrader_statement_tradernetwork" nextstatementid="background" />
+		<statement id="plan" text="dialog_FuriousRamsayBlackShieldTrader_statement_plan" nextstatementid="background" />
+		<statement id="help" text="dialog_FuriousRamsayBlackShieldTrader_statement_help" nextstatementid="background" />
 		
 		<statement id="currentjobs" text="dialog_trader_statement_currentjobs" nextstatementid="start" >
 			<quest_entry listindex="0" />
@@ -61,6 +67,9 @@
 		<response id="background" text="dialog_trader_response_background" nextstatementid="background"/>
 		
 		<response id="blackshield" text="dialog_FuriousRamsayBlackShieldTrader_response_blackshield" nextstatementid="blackshield"/>
+		<response id="tradernetwork" text="dialog_FuriousRamsayBlackShieldTrader_response_tradernetwork" nextstatementid="tradernetwork"/>
+		<response id="plan" text="dialog_FuriousRamsayBlackShieldTrader_response_plan" nextstatementid="plan"/>
+		<response id="help" text="dialog_FuriousRamsayBlackShieldTrader_response_help" nextstatementid="help"/>
 
 		<response id="nevermind" text="dialog_trader_response_nevermind" nextstatementid="start" />
 		

@@ -30,6 +30,139 @@
 			</property>
 		</item>-->
 
+		<item name="FuriousRamsayTimedChargeBackpackTier1">
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="ammo,weapon"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropScale" value="1.8"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="41"/>
+			<property name="Weight" value="0"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="SoundUnholster" value="charge_unholster"/>
+			<property class="Action0">
+				<requirement name="CVarCompare" cvar="$FuriousRamsayOpenChargeBackpack" operation="Equals" value="1"/>
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="UseActions/open_backpack"/>
+				<property name="UseAnimation" value="true"/>
+				<property name="Create_item" value="FuriousRamsayThrownTimedCharge,FuriousRamsayHubCapTier1"/>
+				<property name="Create_item_count" value="1,3"/>
+			</property>
+		</item>
+		
+		<item name="FuriousRamsayThrownTimedCharge">
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="ammo,weapon"/>
+			<property name="CustomIcon" value="thrownTimedCharge"/>
+			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="DisplayType" value="ammoGrenadeTimedCharge"/>
+			<property name="Class" value="ItemClassTimeBomb"/>
+			<property name="HoldType" value="62"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/TimedCharge/timedChargePrefab.prefab"/>
+			<property name="DropScale" value="1.8"/>
+			<property name="Stacknumber" value="5"/>
+			<property name="EconomicValue" value="100"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Weight" value="10"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Explosion.BlockTags" value="door,safes"/>
+			<property name="Explosion.DamageBonus.tags" value="38"/>
+			<property name="Explosion.ParticleIndex" value="13"/>
+			<property name="Explosion.RadiusBlocks" value="10"/>
+			<property name="Explosion.RadiusEntities" value="10"/>
+			<property name="Explosion.DamageBonus.stone" value="20000"/>
+			<property name="Explosion.DamageBonus.metal" value="20000"/>
+			<property name="Explosion.DamageBonus.earth" value="20000"/>
+			<property name="Explosion.DamageBonus.wood" value="20000"/>
+			<property name="Explosion.DamageBonus.water" value="20000"/>
+			<property name="Explosion.BlastPower" value="100"/>
+			<property name="FuseStartOnDrop" value="true"/>
+			<property name="FuseTime" value="10"/>
+			<property name="StickPercent" value="1"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="SoundUnholster" value="charge_unholster"/>
+			<property name="SoundStick" value="charge_stick"/>
+			<property name="SoundTick" value="charge_beep,.8"/>
+			<property name="Candrop" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="15"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value="2"/>
+				<property name="Sound_start" value="charge_throw"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayOpenChargeBackpack" operation="Equals" value="1"/>
+			</property>
+			<!--<property name="FusePrimeOnActivate" value="true"/>
+			<property class="Action1">
+				<property name="Class" value="Activate"/>
+				<property name="Delay" value="1"/>
+				<property name="Sound_start" value="password_set"/>
+			</property>-->
+			<property name="ThrowableDecoy" value="true"/>
+			<effect_group tiered="false">
+				<passive_effect name="BlockDamage" operation="base_set" value="1000"/><display_value name="dExDamageBlock" value="20000"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="500"/><display_value name="dExDamageEntity" value="10000"/>
+				<display_value name="dExRadius" value="10"/>
+				<display_value name="dFuseTime" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayPlacedCharge">
+					<requirement name="CVarCompare" cvar="$FuriousRamsayOpenChargeBackpack" operation="Equals" value="1"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHubCapTier1">
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="ammo,weapon"/>
+			<property name="CustomIcon" value="hubcapNoMine"/>
+			<property name="ItemTypeIcon" value="explosion"/>
+			<!--<property name="HoldType" value="54"/>
+			<property name="HoldType" value="52"/>-->
+			<property name="HoldType" value="37"/>
+			<property name="Meshfile" value="#Other/Items?Crafting/hubcap.prefab"/>
+			<property name="DropScale" value="2.5"/>
+			<property name="Weight" value="5"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayMineHubcap"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPlacedCharge" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPlaceMine" operation="Equals" value="1"/>
+			</property>
+		</item>
+
+		<!--<item name="qc_FuriousRamsaySurpriseTier1">
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="DescriptionKey" value="qc_FuriousRamsaySurpriseDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Candrop" value="true"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="QuestGiven" value="quest_FuriousRamsayTier1_Surprise"/>
+			</property>
+		</item>-->
+
+		<item name="qc_FuriousSurpriseTier1">
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="DescriptionKey" value="qc_FuriousSurpriseDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Candrop" value="true"/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="QuestGiven" value="quest_FuriousRamsayTier1_Surprise"/>
+			</property>
+		</item>
+
 		<item name="qc_FuriousStealTechTier1">
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="DescriptionKey" value="qc_FuriousStealTechDesc"/>

@@ -58,8 +58,17 @@ A new trader has been added to the world:
 		Multi-Player:
 			- the trader will seek out surrounding zombies and attack them (with no attack anomations)
 
-	
-The following can be found as part of the Trader's job listing:
+The following can be found as part of the Black Shield's Trader's job listing:
+
+	Surprise! (Tier 1 through 5):
+	- Phase 1: You are sent to a random POI to retrieve some supplies (weapons)
+	- Phase 2: Once retrieved, you unlock to possibility of opening the backpack that was given to you by the trader when you accepted the job
+	- Phase 3: You get 45 seconds to open the backpack and place one or more explosive charges inside the POI bounds. Each charge will explode within 10 seconds of placing them, in a 10 meter radius.
+	- Phase 4: You unlock the possibility of placing the mines that were also contained in the backpack (quest objective). You have 30 seconds to place them within the POI bounds.
+	- Phase 5: Get your reward from the trader you received the mission from
+	Notes: You must closely respect the mission guidelines or risk not being able to complete the mission.
+
+The following can be found as part of the Trader Network's Trader's job listing:
 
 	Visit New Trader Location (Tier 1 through 3):
 	- New job with a low chance of appearing at Tiers 1 through 3 (percentage goes down as you go up in tiers)
