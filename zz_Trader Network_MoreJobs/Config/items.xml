@@ -6,6 +6,7 @@
 			<property name="Extends" value="questMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="DescriptionKey" value="qc_NoteGroupDesc"/>
+			<property name="Weight" value="5"/>
 			<property name="CustomIcon" value="questMaster"/>
 			<property name="EconomicValue" value="100"/>
 			<property name="Stacknumber" value="100"/>
@@ -15,6 +16,7 @@
 		<item name="FuriousRamsayChallengeQuestMaster">
 			<property name="Extends" value="questMaster"/>
 			<property name="CreativeMode" value="None"/>
+			<property name="Weight" value="5"/>
 			<property name="DescriptionKey" value="qc_FuriousRamsayChallengeDesc"/>
 			<property name="CustomIcon" value="challengeQuestMaster"/>
 			<property name="EconomicValue" value="100"/>
@@ -56,8 +58,112 @@
 			</property>
 		</item>
 		
-		<item name="FuriousRamsayThrownTimedCharge">
+		<item name="FuriousRamsayTimedChargeBackpackTier2">
 			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="ammo,weapon"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropScale" value="1.8"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="41"/>
+			<property name="Weight" value="0"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="SoundUnholster" value="charge_unholster"/>
+			<property class="Action0">
+				<requirement name="CVarCompare" cvar="$FuriousRamsayOpenChargeBackpack" operation="Equals" value="1"/>
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="UseActions/open_backpack"/>
+				<property name="UseAnimation" value="true"/>
+				<property name="Create_item" value="FuriousRamsayThrownTimedCharge,FuriousRamsayHubCapTier2"/>
+				<property name="Create_item_count" value="2,4"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayTimedChargeBackpackTier3">
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="ammo,weapon"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropScale" value="1.8"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="41"/>
+			<property name="Weight" value="0"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="SoundUnholster" value="charge_unholster"/>
+			<property class="Action0">
+				<requirement name="CVarCompare" cvar="$FuriousRamsayOpenChargeBackpack" operation="Equals" value="1"/>
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="UseActions/open_backpack"/>
+				<property name="UseAnimation" value="true"/>
+				<property name="Create_item" value="FuriousRamsayThrownTimedCharge,FuriousRamsayHubCapTier3"/>
+				<property name="Create_item_count" value="3,5"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayTimedChargeBackpackTier4">
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="ammo,weapon"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropScale" value="1.8"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="41"/>
+			<property name="Weight" value="0"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="SoundUnholster" value="charge_unholster"/>
+			<property class="Action0">
+				<requirement name="CVarCompare" cvar="$FuriousRamsayOpenChargeBackpack" operation="Equals" value="1"/>
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="UseActions/open_backpack"/>
+				<property name="UseAnimation" value="true"/>
+				<property name="Create_item" value="FuriousRamsayThrownTimedCharge,FuriousRamsayHubCapTier4"/>
+				<property name="Create_item_count" value="4,6"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayTimedChargeBackpackTier5">
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="ammo,weapon"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropScale" value="1.8"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="41"/>
+			<property name="Weight" value="0"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="SoundUnholster" value="charge_unholster"/>
+			<property class="Action0">
+				<requirement name="CVarCompare" cvar="$FuriousRamsayOpenChargeBackpack" operation="Equals" value="1"/>
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="UseActions/open_backpack"/>
+				<property name="UseAnimation" value="true"/>
+				<property name="Create_item" value="FuriousRamsayThrownTimedCharge,FuriousRamsayHubCapTier5"/>
+				<property name="Create_item_count" value="5,7"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayThrownTimedCharge">
+			<!--<property name="CreativeMode" value="None"/>-->
 			<property name="Tags" value="ammo,weapon"/>
 			<property name="CustomIcon" value="thrownTimedCharge"/>
 			<property name="ItemTypeIcon" value="explosion"/>
@@ -106,12 +212,17 @@
 				<property name="Sound_start" value="password_set"/>
 			</property>-->
 			<property name="ThrowableDecoy" value="true"/>
-			<effect_group tiered="false">
+			<effect_group name="FuriousRamsayChargeDamage" tiered="false">
 				<passive_effect name="BlockDamage" operation="base_set" value="1000"/><display_value name="dExDamageBlock" value="20000"/>
 				<passive_effect name="EntityDamage" operation="base_set" value="500"/><display_value name="dExDamageEntity" value="10000"/>
 				<display_value name="dExRadius" value="10"/>
 				<display_value name="dFuseTime" value="10"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayPlacedCharge">
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="FuriousRamsayPlacedCharge">
+					<requirement name="CVarCompare" cvar="$FuriousRamsayOpenChargeBackpack" operation="Equals" value="1"/>
+				</triggered_effect>
+			</effect_group>
+			<effect_group name="FuriousRamsayChargeVariables" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="FuriousRamsayPlacedChargeVariable">
 					<requirement name="CVarCompare" cvar="$FuriousRamsayOpenChargeBackpack" operation="Equals" value="1"/>
 				</triggered_effect>
 			</effect_group>
@@ -122,8 +233,6 @@
 			<property name="Tags" value="ammo,weapon"/>
 			<property name="CustomIcon" value="hubcapNoMine"/>
 			<property name="ItemTypeIcon" value="explosion"/>
-			<!--<property name="HoldType" value="54"/>
-			<property name="HoldType" value="52"/>-->
 			<property name="HoldType" value="37"/>
 			<property name="Meshfile" value="#Other/Items?Crafting/hubcap.prefab"/>
 			<property name="DropScale" value="2.5"/>
@@ -137,6 +246,94 @@
 				<property name="Delay" value=".5"/>
 				<property name="Blockname" value="FuriousRamsayMineHubcap"/>
 				<requirement name="CVarCompare" cvar="$FuriousRamsayPlacedCharge" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPlaceMine" operation="Equals" value="1"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayHubCapTier2">
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="ammo,weapon"/>
+			<property name="CustomIcon" value="hubcapNoMine"/>
+			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="HoldType" value="37"/>
+			<property name="Meshfile" value="#Other/Items?Crafting/hubcap.prefab"/>
+			<property name="DropScale" value="2.5"/>
+			<property name="Weight" value="5"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayMineHubcap"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPlacedCharge" operation="Equals" value="2"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPlaceMine" operation="Equals" value="1"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayHubCapTier3">
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="ammo,weapon"/>
+			<property name="CustomIcon" value="hubcapNoMine"/>
+			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="HoldType" value="37"/>
+			<property name="Meshfile" value="#Other/Items?Crafting/hubcap.prefab"/>
+			<property name="DropScale" value="2.5"/>
+			<property name="Weight" value="5"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayMineHubcap"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPlacedCharge" operation="Equals" value="3"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPlaceMine" operation="Equals" value="1"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayHubCapTier4">
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="ammo,weapon"/>
+			<property name="CustomIcon" value="hubcapNoMine"/>
+			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="HoldType" value="37"/>
+			<property name="Meshfile" value="#Other/Items?Crafting/hubcap.prefab"/>
+			<property name="DropScale" value="2.5"/>
+			<property name="Weight" value="5"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayMineHubcap"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPlacedCharge" operation="Equals" value="4"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPlaceMine" operation="Equals" value="1"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayHubCapTier5">
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="ammo,weapon"/>
+			<property name="CustomIcon" value="hubcapNoMine"/>
+			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="HoldType" value="37"/>
+			<property name="Meshfile" value="#Other/Items?Crafting/hubcap.prefab"/>
+			<property name="DropScale" value="2.5"/>
+			<property name="Weight" value="5"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayMineHubcap"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPlacedCharge" operation="Equals" value="5"/>
 				<requirement name="CVarCompare" cvar="$FuriousRamsayPlaceMine" operation="Equals" value="1"/>
 			</property>
 		</item>
@@ -157,9 +354,53 @@
 			<property name="DescriptionKey" value="qc_FuriousSurpriseDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="Candrop" value="true"/>
-			<property name="Stacknumber" value="1"/>
+			<property name="Stacknumber" value="25"/>
 			<property class="Action0">
 				<property name="QuestGiven" value="quest_FuriousRamsayTier1_Surprise"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousSurpriseTier2">
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="DescriptionKey" value="qc_FuriousSurpriseDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Candrop" value="true"/>
+			<property name="Stacknumber" value="25"/>
+			<property class="Action0">
+				<property name="QuestGiven" value="quest_FuriousRamsayTier2_Surprise"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousSurpriseTier3">
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="DescriptionKey" value="qc_FuriousSurpriseDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Candrop" value="true"/>
+			<property name="Stacknumber" value="25"/>
+			<property class="Action0">
+				<property name="QuestGiven" value="quest_FuriousRamsayTier3_Surprise"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousSurpriseTier4">
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="DescriptionKey" value="qc_FuriousSurpriseDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Candrop" value="true"/>
+			<property name="Stacknumber" value="25"/>
+			<property class="Action0">
+				<property name="QuestGiven" value="quest_FuriousRamsayTier4_Surprise"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousSurpriseTier5">
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="DescriptionKey" value="qc_FuriousSurpriseDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Candrop" value="true"/>
+			<property name="Stacknumber" value="25"/>
+			<property class="Action0">
+				<property name="QuestGiven" value="quest_FuriousRamsayTier5_Surprise"/>
 			</property>
 		</item>
 
@@ -287,7 +528,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayTraderWarsHuntNoteDesc"/>
 			<property name="Extends" value="FuriousRamsayNoteMaster"/>
 			<property name="EconomicValue" value="50"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="162, 220, 245"/>
@@ -298,7 +538,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayTraderWarsHuntNoteDesc"/>
 			<property name="Extends" value="FuriousRamsayNoteMaster"/>
 			<property name="EconomicValue" value="50"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="162, 220, 245"/>
@@ -309,7 +548,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayTraderWarsHuntNoteDesc"/>
 			<property name="Extends" value="FuriousRamsayNoteMaster"/>
 			<property name="EconomicValue" value="50"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="162, 220, 245"/>
@@ -320,7 +558,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayTraderWarsHuntNoteDesc"/>
 			<property name="Extends" value="FuriousRamsayNoteMaster"/>
 			<property name="EconomicValue" value="50"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="162, 220, 245"/>
@@ -331,7 +568,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayTraderWarsHuntNoteDesc"/>
 			<property name="Extends" value="FuriousRamsayNoteMaster"/>
 			<property name="EconomicValue" value="50"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="162, 220, 245"/>
@@ -343,7 +579,6 @@
 			<property name="Extends" value="FuriousRamsayNoteMaster"/>
 			<property name="CustomIcon" value="questRallyMarker"/>
 			<property name="EconomicValue" value="5000"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -358,7 +593,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsay_BlackShieldBossDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="100"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -373,7 +607,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsay_BlackShieldBossDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="250"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -388,7 +621,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsay_BlackShieldBossDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="500"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -403,7 +635,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsay_BlackShieldBossDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="750"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -418,7 +649,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsay_BlackShieldBossDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="1000"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -433,7 +663,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayTier1_Defend"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="50"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -446,7 +675,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayTier2_Defend"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="50"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -459,7 +687,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayTier3_Defend"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="50"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -472,7 +699,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayTier4_Defend"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="50"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -485,7 +711,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayTier5_Defend"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="50"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -498,7 +723,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayGhostsTier1Desc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="50"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -513,7 +737,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayGhostsTier2Desc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="100"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -528,7 +751,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayGhostsTier3Desc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="200"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -543,7 +765,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayGhostsTier4Desc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="400"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -558,7 +779,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayGhostsTier5Desc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="625"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -721,7 +941,6 @@
 
 		<item name="qc_FuriousRamsayTier1_clearhold">
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -732,7 +951,6 @@
 
 		<item name="qc_FuriousRamsayTier2_clearhold">
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -743,7 +961,6 @@
 
 		<item name="qc_FuriousRamsayTier3_clearhold">
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -754,7 +971,6 @@
 
 		<item name="qc_FuriousRamsayTier4_clearhold">
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -765,8 +981,6 @@
 
 		<item name="qc_FuriousRamsayTier5_clearhold">
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="Weight" value="50"/>
-			<property name="Weight" value="0"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -779,7 +993,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsay_minihordeDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="125"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -794,7 +1007,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsay_minihordeDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="250"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -809,7 +1021,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsay_minihordeDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="375"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -824,7 +1035,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsay_minihordeDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="500"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -839,7 +1049,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsay_minihordeDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="625"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -854,7 +1063,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayHuntDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="50"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -869,7 +1077,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayHuntDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="100"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -884,7 +1091,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayHuntDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="200"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -899,7 +1105,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayHuntDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="300"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -914,7 +1119,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayHuntDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="400"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -929,7 +1133,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayHordeTrainingDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="125"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -944,7 +1147,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayHordeTrainingDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="250"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -959,7 +1161,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayHordeTrainingDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="375"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -974,7 +1175,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayHordeTrainingDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="500"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -989,7 +1189,6 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayHordeTrainingDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="625"/>
-			<property name="Weight" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -1119,7 +1318,7 @@
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="CustomIcon" value="controlPanelTop01"/>
-			<property name="Weight" value="10"/>
+			<property name="Weight" value="0"/>
 			<property name="CarryWeight" value="3"/>
 			<property name="Candrop" value="true"/>
 			<property name="Stacknumber" value="25"/>
@@ -1138,7 +1337,7 @@
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="CustomIcon" value="controlPanelTop02"/>
-			<property name="Weight" value="10"/>
+			<property name="Weight" value="0"/>
 			<property name="CarryWeight" value="3"/>
 			<property name="Candrop" value="true"/>
 			<property name="Stacknumber" value="25"/>
@@ -1157,7 +1356,7 @@
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="CustomIcon" value="controlPanelTop04"/>
-			<property name="Weight" value="10"/>
+			<property name="Weight" value="0"/>
 			<property name="CarryWeight" value="3"/>
 			<property name="Candrop" value="true"/>
 			<property name="Stacknumber" value="25"/>
@@ -1176,7 +1375,7 @@
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="CustomIcon" value="controlPanelTop05"/>
-			<property name="Weight" value="10"/>
+			<property name="Weight" value="0"/>
 			<property name="CarryWeight" value="3"/>
 			<property name="Candrop" value="true"/>
 			<property name="Stacknumber" value="25"/>
@@ -1195,7 +1394,7 @@
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="CustomIcon" value="controlPanelTop06"/>
-			<property name="Weight" value="10"/>
+			<property name="Weight" value="0"/>
 			<property name="CarryWeight" value="3"/>
 			<property name="Candrop" value="true"/>
 			<property name="Stacknumber" value="25"/>

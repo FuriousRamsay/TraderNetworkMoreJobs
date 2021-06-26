@@ -25,33 +25,99 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayInvisibleSurpriseChargeTimer" hidden="true" remove_on_death="true">
+			<buff name="FuriousRamsayInvisibleSurpriseChargeTier1Timer" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<duration value="2"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="100" buff="FuriousRamsayInvisibleSurpriseCharge"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="100" buff="FuriousRamsayInvisibleSurpriseChargeTier1"/>
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayInvisibleSurpriseMineTimer" hidden="true" remove_on_death="true">
+			<buff name="FuriousRamsayInvisibleSurpriseChargeTier2Timer" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<duration value="2"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="100" buff="FuriousRamsayInvisibleSurpriseMine"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="100" buff="FuriousRamsayInvisibleSurpriseChargeTier2"/>
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayInvisibleSurpriseCharge" hidden="true" remove_on_death="true">
+			<buff name="FuriousRamsayInvisibleSurpriseChargeTier3Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="2"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="100" buff="FuriousRamsayInvisibleSurpriseChargeTier3"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleSurpriseChargeTier4Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="2"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="100" buff="FuriousRamsayInvisibleSurpriseChargeTier4"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleSurpriseChargeTier5Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="2"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="100" buff="FuriousRamsayInvisibleSurpriseChargeTier5"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleSurpriseMineTier1Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="2"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="100" buff="FuriousRamsayInvisibleSurpriseMineTier1"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleSurpriseMineTier2Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="2"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="100" buff="FuriousRamsayInvisibleSurpriseMineTier2"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleSurpriseMineTier3Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="2"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="100" buff="FuriousRamsayInvisibleSurpriseMineTier3"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleSurpriseMineTier4Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="2"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="100" buff="FuriousRamsayInvisibleSurpriseMineTier4"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleSurpriseMineTier5Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="2"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="100" buff="FuriousRamsayInvisibleSurpriseMineTier5"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleSurpriseChargeTier1" hidden="true" remove_on_death="true">
 				<stack_type value="replace"/>
 				<duration value="50"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Approximately 45 seconds to open your backpack and lay down charge(s)" >
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You have approximately 45 seconds to open your backpack and lay down 1 charge" >
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayPlacedCharge" operation="set" value="0">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
+
+					<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayPlacedCharge"/>
 
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
 						<requirement name="EntityTagCompare" tags="player"/>
@@ -80,12 +146,346 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayInvisibleSurpriseMine" hidden="true" remove_on_death="true">
+			<buff name="FuriousRamsayInvisibleSurpriseChargeTier2" hidden="true" remove_on_death="true">
 				<stack_type value="replace"/>
-				<duration value="30"/>
+				<duration value="55"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Approximately 30 seconds to lay down your mines" >
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You have approximately 50 seconds to open your backpack and lay down 2 charges" >
 						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayPlacedCharge" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+
+					<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayPlacedCharge"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleSurpriseChargeTier3" hidden="true" remove_on_death="true">
+				<stack_type value="replace"/>
+				<duration value="60"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You have approximately 55 seconds to open your backpack and lay down 3 charges" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayPlacedCharge" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+
+					<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayPlacedCharge"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleSurpriseChargeTier4" hidden="true" remove_on_death="true">
+				<stack_type value="replace"/>
+				<duration value="65"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You have approximately 60 seconds to open your backpack and lay down 4 charges" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayPlacedCharge" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+
+					<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayPlacedCharge"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleSurpriseChargeTier5" hidden="true" remove_on_death="true">
+				<stack_type value="replace"/>
+				<duration value="70"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You have approximately 65 seconds to open your backpack and lay down 5 charges" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayPlacedCharge" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+
+					<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayPlacedCharge"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleSurpriseMineTier1" hidden="true" remove_on_death="true">
+				<stack_type value="replace"/>
+				<duration value="35"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You have approximately 30 seconds to lay down 3 mines" >
+						<requirement name="EntityTagCompare" tags="player"/>
+						<requirement name="CVarCompare" cvar="$FuriousRamsayPlacedCharge" operation="Equals" value="1"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You failed to place your charge. Your mission cannot be completed" >
+						<requirement name="EntityTagCompare" tags="player"/>
+						<requirement name="CVarCompare" cvar="$FuriousRamsayPlacedCharge" operation="LTE" value="0"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleSurpriseMineTier2" hidden="true" remove_on_death="true">
+				<stack_type value="replace"/>
+				<duration value="40"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You have approximately 35 seconds to lay down 4 mines" >
+						<requirement name="EntityTagCompare" tags="player"/>
+						<requirement name="CVarCompare" cvar="$FuriousRamsayPlacedCharge" operation="Equals" value="2"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You failed to place 2 charges. Your mission cannot be completed" >
+						<requirement name="EntityTagCompare" tags="player"/>
+						<requirement name="CVarCompare" cvar="$FuriousRamsayPlacedCharge" operation="LTE" value="1"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleSurpriseMineTier3" hidden="true" remove_on_death="true">
+				<stack_type value="replace"/>
+				<duration value="45"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You have approximately 40 seconds to lay down 5 mines" >
+						<requirement name="EntityTagCompare" tags="player"/>
+						<requirement name="CVarCompare" cvar="$FuriousRamsayPlacedCharge" operation="Equals" value="3"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You failed to place 3 charges. Your mission cannot be completed" >
+						<requirement name="EntityTagCompare" tags="player"/>
+						<requirement name="CVarCompare" cvar="$FuriousRamsayPlacedCharge" operation="LTE" value="2"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleSurpriseMineTier4" hidden="true" remove_on_death="true">
+				<stack_type value="replace"/>
+				<duration value="50"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You have approximately 45 seconds to lay down 6 mines" >
+						<requirement name="EntityTagCompare" tags="player"/>
+						<requirement name="CVarCompare" cvar="$FuriousRamsayPlacedCharge" operation="Equals" value="4"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You failed to place 4 charges. Your mission cannot be completed" >
+						<requirement name="EntityTagCompare" tags="player"/>
+						<requirement name="CVarCompare" cvar="$FuriousRamsayPlacedCharge" operation="LTE" value="3"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+
+					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleSurpriseMineTier5" hidden="true" remove_on_death="true">
+				<stack_type value="replace"/>
+				<duration value="55"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You have approximately 50 seconds to lay down 7 mines" >
+						<requirement name="EntityTagCompare" tags="player"/>
+						<requirement name="CVarCompare" cvar="$FuriousRamsayPlacedCharge" operation="Equals" value="5"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You failed to place 5 charges. Your mission cannot be completed" >
+						<requirement name="EntityTagCompare" tags="player"/>
+						<requirement name="CVarCompare" cvar="$FuriousRamsayPlacedCharge" operation="LTE" value="4"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="1">
@@ -116,20 +516,23 @@
 			</buff>
 
 			<buff name="FuriousRamsayPlacedCharge" hidden="true" remove_on_death="true">
-				<stack_type value="replace"/>
+				<stack_type value="ignore"/>
 				<duration value="90"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You placed a charge" >
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$FuriousRamsayPlacedCharge" operation="set" value="0">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>
+				</effect_group>
+			</buff>
 
+			<buff name="FuriousRamsayPlacedChargeVariable" hidden="true" remove_on_death="true">
+				<duration value="1"/>
+				<effect_group>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayPlacedCharge" operation="add" value="1">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
 
-					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayPlacedCharge" operation="set" value="0">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayPlacedCharge"/>
 				</effect_group>
 			</buff>
 
