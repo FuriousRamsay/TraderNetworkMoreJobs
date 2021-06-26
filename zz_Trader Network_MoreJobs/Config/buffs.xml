@@ -17,6 +17,14 @@
 				</effect_group>
 			</buff>
 
+			<buff name="FuriousRamsayBlackShieldDecoySpawned" hidden="true" remove_on_death="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Assembling Decoy... please be patient"/>
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayVanishInvisibleTimer" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<duration value="3"/>

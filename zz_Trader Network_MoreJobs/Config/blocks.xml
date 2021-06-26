@@ -16,6 +16,23 @@
 			<property name="EconomicValue" value="146"/>
 		</block>
 
+		<block name="FuriousRamsayBlackShieldDecoySpawner" extends="spawnTrader">
+			<property name="CreativeMode" value="None"/>
+			<property name="Class" value="SpawnEntity"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="CustomIcon" value="decoMannequinMale"/>
+			<property name="CustomIconTint" value="100,0,0"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="Mesh" value="models"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="#Other/Items?Misc/snowballPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="ModelOffset" value="0,-0.1,0"/>
+			<property name="SpawnClass" value="FuriousRamsayBlackShieldDecoy"/>			
+		</block>
+
 		<!--<block name="FuriousRamsayTimedChargeBox">
 			<property name="CreativeMode" value="None"/>
 			<property name="Extends" value="cntTrashPile01"/>
@@ -72,7 +89,6 @@
 
 		<block name="cntFuriousRamsayBuriedChest">
 			<property name="Extends" value="cntLootChestHeroInsecure" param1="DescriptionKey"/>
-			<property name="CustomIcon" value="cntHardenedChestSecure"/>
 			<property name="MaxDamage" value="999999"/>
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#Entities/LootContainers?super_chestPrefab.prefab"/>

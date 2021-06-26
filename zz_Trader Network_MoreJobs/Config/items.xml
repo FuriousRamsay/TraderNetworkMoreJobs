@@ -32,6 +32,76 @@
 			</property>
 		</item>-->
 
+		<item name="FuriousRamsayBlackShieldDecoy">
+			<property name="Tags" value="ammo,weapon"/>
+			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="CustomIcon" value="decoMannequinMale"/>
+			<property name="CustomIconTint" value="50,0,0"/>
+			<property name="HoldType" value="37"/>
+			<property name="Meshfile" value="Entities/Commercial/mannequinMalePrefab"/>
+			<property name="TintColor" value="50,0,0"/>
+			<property name="DropScale" value="2.5"/>
+			<property name="Weight" value="5"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayBlackShieldDecoySpawner"/>
+			</property>
+			<effect_group name="FuriousRamsayBlackShieldDecoy" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" target="self" buff="FuriousRamsayBlackShieldDecoySpawned"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayThrownBarrel">
+			<property name="Tags" value="ammo,weapon"/>
+			<property name="CustomIcon" value="thrownTimedCharge"/>
+			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="DisplayType" value="ammoGrenadeTimedCharge"/>
+			<property name="Class" value="ItemClassTimeBomb"/>
+			<property name="HoldType" value="8"/>
+			<property name="Meshfile" value="Entities/Lighting/barrel03_burningPrefab"/>
+			<property name="DropScale" value="1.8"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="EconomicValue" value="75"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Weight" value="10"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Explosion.DamageBonus.tags" value="38"/>
+			<property name="Explosion.ParticleIndex" value="15"/>
+			<property name="Explosion.RadiusBlocks" value="10"/>
+			<property name="Explosion.RadiusEntities" value="8"/>
+			<property name="Explosion.DamageBonus.stone" value="100"/>
+			<property name="Explosion.DamageBonus.metal" value="100"/>
+			<property name="Explosion.DamageBonus.earth" value="0"/>
+			<property name="Explosion.DamageBonus.wood" value="100"/>
+			<property name="Explosion.DamageBonus.water" value="0"/>
+			<property name="Explosion.BlastPower" value="100"/>
+			<property name="FuseStartOnDrop" value="true"/>
+			<property name="FuseTime" value="3"/>
+			<property name="StickPercent" value="0"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="SoundUnholster" value="charge_unholster"/>
+			<property name="Candrop" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<property name="Delay" value="1.2"/>
+				<property name="Throw_strength_default" value="15"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value="2"/>
+				<property name="Sound_start" value="charge_throw"/>
+			</property>
+			<property name="ThrowableDecoy" value="true"/>
+			<effect_group name="FuriousRamsayBarrelDamage" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="650"/><display_value name="dExDamageEntity" value="650"/>
+				<display_value name="dExRadius" value="10"/>
+				<display_value name="dFuseTime" value="3"/>
+			</effect_group>
+		</item>
+
 		<item name="FuriousRamsayTimedChargeBackpackTier1">
 			<property name="CreativeMode" value="None"/>
 			<property name="Tags" value="ammo,weapon"/>
@@ -163,7 +233,7 @@
 		</item>
 
 		<item name="FuriousRamsayThrownTimedCharge">
-			<!--<property name="CreativeMode" value="None"/>-->
+			<property name="CreativeMode" value="None"/>
 			<property name="Tags" value="ammo,weapon"/>
 			<property name="CustomIcon" value="thrownTimedCharge"/>
 			<property name="ItemTypeIcon" value="explosion"/>
