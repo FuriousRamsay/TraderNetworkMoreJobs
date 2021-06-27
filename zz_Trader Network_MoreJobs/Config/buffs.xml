@@ -2,26 +2,11 @@
 
 		<append xpath="/buffs" >		
 
-			<buff name="FuriousRamsayTestStart" hidden="true" remove_on_death="true">
-				<stack_type value="replace"/>
-				<duration value="120"/>
-				<effect_group>
-					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FuriousRamsayAlarm"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your training has begun... good luck." />
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="FuriousRamsayTestUpdate"/>				
-					<triggered_effect trigger="onSelfBuffFinish" action="RemoveBuff" buff="FuriousRamsayTestUpdate"/>
-					<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="FuriousRamsayTestUpdate"/>
-					<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="FuriousRamsayTestUpdate"/>
-					<triggered_effect trigger="onSelfLeaveGame" action="RemoveBuff" buff="FuriousRamsayTestUpdate"/>
-					<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="FuriousRamsayTestUpdate"/>
-				</effect_group>
-			</buff>
-
 			<buff name="FuriousRamsayBlackShieldDecoySpawned" hidden="true" remove_on_death="true">
 				<stack_type value="replace"/>
 				<duration value="1"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Assembling Decoy... please be patient"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Attempting to assemble Decoy..."/>
 				</effect_group>
 			</buff>
 
@@ -113,6 +98,146 @@
 				</effect_group>
 			</buff>
 
+			<buff name="FuriousRamsayDecoyPlacedTimer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="2"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="100" buff="FuriousRamsayDecoyPlaced"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayDecoyPlaced" hidden="true" remove_on_death="true">
+				<stack_type value="replace"/>
+				<duration value="2"/>
+				<effect_group>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayDecoyPlaced" operation="add" value="-1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+
+					<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayDecoyPlaced"/>
+
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleDecoyDoneTimer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="2"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="100" buff="FuriousRamsayInvisibleDecoyDone"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleDecoyDone" hidden="true" remove_on_death="true">
+				<stack_type value="replace"/>
+				<duration value="600"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You have up to 5 minutes to use the remainder of your Decoys" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayDecoyPlaced" operation="set" value="999">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$FuriousRamsayDecoyPlaced" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleDecoyCompletedTimer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="2"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="100" buff="FuriousRamsayInvisibleDecoyCompleted"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleDecoyCompleted" hidden="true" remove_on_death="true">
+				<stack_type value="replace"/>
+				<duration value="2"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayDecoyPlaced" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Any Decoys left in your inventory will now be disabled" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleDecoyTier1Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="2"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="100" buff="FuriousRamsayInvisibleDecoyTier1"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleDecoyTier1" hidden="true" remove_on_death="true">
+				<stack_type value="replace"/>
+				<duration value="2"/>
+				<effect_group>
+					<!--<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You can place a Decoy" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>-->
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayDecoyPlaced" operation="set" value="1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleDecoyBackpackTier1Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="2"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="100" buff="FuriousRamsayInvisibleDecoyBackpackTier1"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayInvisibleDecoyBackpackTier1" hidden="true" remove_on_death="true">
+				<stack_type value="replace"/>
+				<duration value="50"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You have approximately 45 seconds to open your backpack and pick up the decoys" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayOpenDecoyBackpack" operation="set" value="1">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayDecoyPlaced" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>	
+
+					<!--<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayOpenDecoyBackpack"/>-->
+
+					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayOpenDecoyBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="$FuriousRamsayOpenDecoyBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$FuriousRamsayOpenDecoyBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+					<!--<triggered_effect trigger="onSelfBuffRemove" action="CVarLogValue" cvar="$FuriousRamsayOpenDecoyBackpack"/>-->
+
+					<triggered_effect trigger="onSelfLeaveGame" action="ModifyCVar" cvar="$FuriousRamsayOpenDecoyBackpack" operation="set" value="0">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayInvisibleSurpriseChargeTier1" hidden="true" remove_on_death="true">
 				<stack_type value="replace"/>
 				<duration value="50"/>
@@ -125,15 +250,13 @@
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
 
-					<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayPlacedCharge"/>
+					<!--<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayPlacedCharge"/>-->
 
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
 
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
+					<!--<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayOpenChargeBackpack"/>-->
 
 					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
 						<requirement name="EntityTagCompare" tags="player"/>
@@ -146,6 +269,8 @@
 					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>
+
+					<!--<triggered_effect trigger="onSelfBuffRemove" action="CVarLogValue" cvar="$FuriousRamsayOpenChargeBackpack"/>-->
 
 					<triggered_effect trigger="onSelfLeaveGame" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
 						<requirement name="EntityTagCompare" tags="player"/>
@@ -166,15 +291,9 @@
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
 
-					<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayPlacedCharge"/>
-
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
-
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
 
 					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
 						<requirement name="EntityTagCompare" tags="player"/>
@@ -207,15 +326,9 @@
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
 
-					<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayPlacedCharge"/>
-
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
-
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
 
 					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
 						<requirement name="EntityTagCompare" tags="player"/>
@@ -248,15 +361,9 @@
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
 
-					<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayPlacedCharge"/>
-
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
-
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
 
 					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
 						<requirement name="EntityTagCompare" tags="player"/>
@@ -289,15 +396,9 @@
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
 
-					<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayPlacedCharge"/>
-
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
-
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="1">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
 
 					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayOpenChargeBackpack" operation="set" value="0">
 						<requirement name="EntityTagCompare" tags="player"/>
@@ -336,10 +437,6 @@
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
 
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="1">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-
 					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>
@@ -376,10 +473,6 @@
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="1">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
-
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="1">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
 
 					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
 						<requirement name="EntityTagCompare" tags="player"/>
@@ -418,10 +511,6 @@
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
 
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="1">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-
 					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>
@@ -458,10 +547,6 @@
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="1">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
-
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="1">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
 
 					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
 						<requirement name="EntityTagCompare" tags="player"/>
@@ -500,10 +585,6 @@
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
 
-					<triggered_effect trigger="onSelfEnteredGame" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="1">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-
 					<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="$FuriousRamsayPlaceMine" operation="set" value="0">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>
@@ -540,7 +621,7 @@
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
 
-					<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayPlacedCharge"/>
+					<!--<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayPlacedCharge"/>-->
 				</effect_group>
 			</buff>
 

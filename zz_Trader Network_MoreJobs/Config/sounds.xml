@@ -50,11 +50,28 @@
 			<CrouchNoiseScale value="1"/> 
 			<NoiseScale value="1"/> 
 			<MaxVoices value="3"/> 
-			<MaxRepeatRate value="0.001"/> 
-			<LowestPitch name="0.5"/>
-			<HighestPitch name="0.5"/>
+			<MaxRepeatRate value="0.01"/> 
+			<LowestPitch name="0.2"/>
+			<HighestPitch name="0.2"/>
 			<Channel name="Mouth"/>
 		</SoundDataNode>		
+		
+		<SoundDataNode name="FuriousRamsayScoutAlert"> 
+			<AudioSource name="Sounds/AudioSource_Screamer"/>
+			<AudioClip ClipName="Sounds/Enemies/Scout_Zombie/zombiefemalescoutalert1"/>
+			<AudioClip ClipName="Sounds/Enemies/Scout_Zombie/zombiefemalescoutalert2"/>
+			<AudioClip ClipName="Sounds/Enemies/Scout_Zombie/zombiefemalescoutalert3"/>
+			<Channel name="Mouth"/>
+			<Priority name="3"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="-50"/>
+			<HighestPitch name="-50"/>
+			<LocalCrouchVolumeScale value="1.0"/> 
+			<CrouchNoiseScale value="0.5"/> 
+			<NoiseScale value="2"/> 
+			<MaxVoices value="10"/> 
+			<MaxRepeatRate value="3"/> 
+		</SoundDataNode>
 		
 	</append>
 		

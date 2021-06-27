@@ -4196,6 +4196,8 @@
 			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
 			<property name="AITarget-2" value=""/>
 
+			<property name="NavObject" value="" />
+
 			<effect_group name="Base Effects">		
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishInvisibleTimer"/>
 				<passive_effect name="HealthMax" operation="base_set" value="50"/>
@@ -4203,8 +4205,32 @@
 			</effect_group>
 		</entity_class>
 
+		<entity_class name="FuriousRamsayInvisibleDecoyBackpackEntityTier1" extends="FuriousRamsayInvisibleEntity">
+			<effect_group name="Surprise Effects" tiered="false">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayInvisibleDecoyBackpackTier1Timer"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayInvisibleDecoyEntityTier1" extends="FuriousRamsayInvisibleEntity">
+			<effect_group name="Surprise Effects" tiered="false">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayInvisibleDecoyTier1Timer"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayInvisibleDecoyEntityDone" extends="FuriousRamsayInvisibleEntity">
+			<effect_group name="Surprise Effects" tiered="false">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayInvisibleDecoyDoneTimer"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayInvisibleDecoyEntityCompleted" extends="FuriousRamsayInvisibleEntity">
+			<effect_group name="Surprise Effects" tiered="false">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayInvisibleDecoyCompletedTimer"/>
+			</effect_group>
+		</entity_class>
+
 		<entity_class name="FuriousRamsayChargeInvisibleSurpriseEntityTier1" extends="FuriousRamsayInvisibleEntity">
-			<effect_group name="Surprise Effects">
+			<effect_group name="Surprise Effects" tiered="false">
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayInvisibleSurpriseChargeTier1Timer"/>
 			</effect_group>
 		</entity_class>
@@ -4263,7 +4289,7 @@
 			</effect_group>
 		</entity_class>
 
-		<entity_class name="FuriousRamsayBlackShieldDecoy" extends="zombieTemplateMale">
+		<entity_class name="FuriousRamsayBlackShieldDecoyMaster" extends="FuriousRamsayUMATemplateMale">
 			<property name="Archetype" value="FuriousRamsayBlackShieldDecoy" />
 			<property name="Tags" value="entity,decoy" />
 			<property name="Class" value="EntityZombieCop"/>
@@ -4277,14 +4303,16 @@
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="ParticleOnDeath" value="blockdestroy_metal"/>
 			<property name="IsAnimalEntity" value="false"/>
-			<property name="IsEnemyEntity" value="false"/>
+			<property name="IsEnemyEntity" value="true"/>
             <property name="RootMotion" value="true" />
             <property name="HasRagdoll" value="true" />
 			<property name="PhysicsBody" value="Player"/>
-            <property name="HasDeathAnim" value="false" />
+            <property name="HasDeathAnim" value="true" />
 			<property name="Faction" value="none"/>
 			<property name="ExperienceGain" value="0"/>
 			<property name="WalkType" value="7"/>
+
+			<property name="NavObject" value="" />
 
 			<property name="SoundRandom" value=""/>
 			<property name="SoundAlert" value=""/>
@@ -4299,7 +4327,7 @@
 			<property name="AITarget-1" value=""/>
 			<property name="AITarget-2" value=""/>
 
-			<property name="SoundExplodeWarn" value="charge_beep"/>
+			<property name="SoundExplodeWarn" value=""/>
 			<property name="SoundTick" value="FuriousRamsayBeep,1,1"/>
 
 			<property name="DismemberMultiplierLegs" value="0"/>
@@ -4321,17 +4349,1456 @@
 			<property name="Explosion.DamageBonus.water" value="0"/>
 			<property name="Explosion.BlockDamage" value="0"/>
 			<property name="Explosion.EntityDamage" value="500"/>
-			<property name="ExplodeHealthThreshold" value="0.5"/>
-			<property name="ExplodeDelay" value="4"/>
+			<property name="ExplodeHealthThreshold" value="0.6"/>
+			<property name="ExplodeDelay" value="3"/>
 
 			<property name="JumpMaxDistance" value="0, 0"/>
 			<property name="MoveSpeed" value="0"/>
-			<property name="PainResistPerHit" value=".7"/>
+			<property name="PainResistPerHit" value="0"/>
 			<property name="MoveSpeedAggro" value="0, 0"/>
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<!--<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayDecoyPlacedTimer"/>-->
 			</effect_group>
 		</entity_class>
+		
+		<entity_class name="FuriousRamsayBlackShieldDecoyTier1" extends="FuriousRamsayBlackShieldDecoyMaster">
+			<property name="Archetype" value="FuriousRamsayBlackShieldDecoyTier1" />
+			<property name="Explosion.EntityDamage" value="250"/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldDecoyTier2" extends="FuriousRamsayBlackShieldDecoyMaster">
+			<property name="Archetype" value="FuriousRamsayBlackShieldDecoyTier2" />
+			<property name="Explosion.EntityDamage" value="350"/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldDecoyTier3" extends="FuriousRamsayBlackShieldDecoyMaster">
+			<property name="Archetype" value="FuriousRamsayBlackShieldDecoyTier3" />
+			<property name="Explosion.EntityDamage" value="550"/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldDecoyTier4" extends="FuriousRamsayBlackShieldDecoyMaster">
+			<property name="Archetype" value="FuriousRamsayBlackShieldDecoyTier4" />
+			<property name="Explosion.EntityDamage" value="1000"/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldDecoyTier5" extends="FuriousRamsayBlackShieldDecoyMaster">
+			<property name="Archetype" value="FuriousRamsayBlackShieldDecoyTier5" />
+			<property name="Explosion.EntityDamage" value="1500"/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieBoe" extends="zombieBoe">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,30,EntityEnemyAnimal,10,EntityPlayer,4"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieFemaleFat" extends="zombieFemaleFat">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieJoe" extends="zombieJoe">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieJanitor" extends="zombieJanitor">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieMoe" extends="zombieMoe">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieArlene" extends="zombieArlene">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieLab" extends="zombieLab">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieDarlene" extends="zombieDarlene">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieMarlene" extends="zombieMarlene">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieYo" extends="zombieYo">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieSteve" extends="zombieSteve">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieBusinessMan" extends="zombieBusinessMan">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieCheerleader" extends="zombieCheerleader">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieSkateboarder" extends="zombieSkateboarder">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieUtilityWorker" extends="zombieUtilityWorker">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieNurse" extends="zombieNurse">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieStripper" extends="zombieStripper">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieSteveCrawler" extends="zombieSteveCrawler">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieSpider" extends="zombieSpider">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieFatHawaiian" extends="zombieFatHawaiian">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieBiker" extends="zombieBiker">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieSoldier" extends="zombieSoldier">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieMaleHazmat" extends="zombieMaleHazmat">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieFarmer" extends="zombieFarmer">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieOldTimer" extends="zombieOldTimer">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieFootballPlayer" extends="zombieFootballPlayer">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieNurseFeral" extends="zombieNurseFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieBusinessManFeral" extends="zombieBusinessManFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieSteveFeral" extends="zombieSteveFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieYoFeral" extends="zombieYoFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieMarleneFeral" extends="zombieMarleneFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieDarleneFeral" extends="zombieDarleneFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieLabFeral" extends="zombieLabFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieArleneFeral" extends="zombieArleneFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieMoeFeral" extends="zombieMoeFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieJanitorFeral" extends="zombieJanitorFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieJoeFeral" extends="zombieJoeFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieFemaleFatFeral" extends="zombieFemaleFatFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieBoeFeral" extends="zombieBoeFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieFootballPlayer" extends="zombieFootballPlayer">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieNurseFeral" extends="zombieNurseFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieBusinessManFeral" extends="zombieBusinessManFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieSteveFeral" extends="zombieSteveFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieYoFeral" extends="zombieYoFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieMarleneFeral" extends="zombieMarleneFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieDarleneFeral" extends="zombieDarleneFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieLabFeral" extends="zombieLabFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieArleneFeral" extends="zombieArleneFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieMoeFeral" extends="zombieMoeFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieJanitorFeral" extends="zombieJanitorFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieJoeFeral" extends="zombieJoeFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieFemaleFatFeral" extends="zombieFemaleFatFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieBoeFeral" extends="zombieBoeFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieStripperFeral" extends="zombieStripperFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieFarmerFeral" extends="zombieFarmerFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieBikerFeral" extends="zombieBikerFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieOldTimerFeral" extends="zombieOldTimerFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieCheerleaderFeral" extends="zombieCheerleaderFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieSkateboarderFeral" extends="zombieSkateboarderFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieSoldierFeral" extends="zombieSoldierFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieUtilityWorkerFeral" extends="zombieUtilityWorkerFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieFatHawaiianFeral" extends="zombieFatHawaiianFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieSpiderFeral" extends="zombieSpiderFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieSteveCrawlerFeral" extends="zombieSteveCrawlerFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieWightFeral" extends="zombieWightFeral">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieBikerRadiated" extends="zombieBikerRadiated">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieOldTimerRadiated" extends="zombieOldTimerRadiated">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieCheerleaderRadiated" extends="zombieCheerleaderRadiated">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieSkateboarderRadiated" extends="zombieSkateboarderRadiated">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieSoldierRadiated" extends="zombieSoldierRadiated">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieSpiderRadiated" extends="zombieSpiderRadiated">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieSteveRadiated" extends="zombieSteveRadiated">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieYoRadiated" extends="zombieYoRadiated">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieMarleneRadiated" extends="zombieMarleneRadiated">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieDarleneRadiated" extends="zombieDarleneRadiated">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieLabRadiated" extends="zombieLabRadiated">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieArleneRadiated" extends="zombieArleneRadiated">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieMoeRadiated" extends="zombieMoeRadiated">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieJanitorRadiated" extends="zombieJanitorRadiated">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieJoeRadiated" extends="zombieJoeRadiated">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieFemaleFatRadiated" extends="zombieFemaleFatRadiated">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieBoeRadiated" extends="zombieBoeRadiated">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackDecoyZombieWightRadiated" extends="zombieWightRadiated">
+            <property name="Class" value="EntitySurvivor" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/>
+			<property name="AITask-6" value="DestroyArea"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
+			<property name="AITarget-4" value=""/>
+		</entity_class>
+
+
 	</append>
 
 </configs>
