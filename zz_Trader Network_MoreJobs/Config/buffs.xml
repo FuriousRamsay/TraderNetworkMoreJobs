@@ -132,7 +132,7 @@
 				<stack_type value="replace"/>
 				<duration value="600"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You have up to 5 minutes to use the remainder of your Decoys" >
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You have up to 10 minutes to use the remainder of your Decoys" >
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>
 
@@ -718,6 +718,14 @@
 			<buff name="FuriousRamsayVanishSoldierTimerTier5" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<duration value="500"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVanishTimer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="600"/>
 				<effect_group>
 					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
 				</effect_group>

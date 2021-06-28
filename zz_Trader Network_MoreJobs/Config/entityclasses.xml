@@ -5,6 +5,8 @@
 
 	<set xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='LookAtAngle']/@value">0</set>
 
+	<setattribute xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='AITarget-4']" name="data">class=EntityPlayer,0,0,EntitySurvivor,0,0</setattribute>
+
 	<setattribute xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='AITask-2']" name="data">class=EntityEnemyAnimal,20,EntityPlayer,5,EntitySurvivor,20</setattribute>
 
 	<setattribute xpath="/entity_classes/entity_class[@name='animalSnake']/property[@name='AITask-3']" name="data">class=EntityEnemyAnimal,20,EntityPlayer,15,EntitySurvivor,15</setattribute>
@@ -4364,32 +4366,32 @@
 		
 		<entity_class name="FuriousRamsayBlackShieldDecoyTier1" extends="FuriousRamsayBlackShieldDecoyMaster">
 			<property name="Archetype" value="FuriousRamsayBlackShieldDecoyTier1" />
-			<property name="Explosion.EntityDamage" value="250"/>
+			<property name="Explosion.EntityDamage" value="200"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackShieldDecoyTier2" extends="FuriousRamsayBlackShieldDecoyMaster">
 			<property name="Archetype" value="FuriousRamsayBlackShieldDecoyTier2" />
-			<property name="Explosion.EntityDamage" value="350"/>
+			<property name="Explosion.EntityDamage" value="250"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackShieldDecoyTier3" extends="FuriousRamsayBlackShieldDecoyMaster">
 			<property name="Archetype" value="FuriousRamsayBlackShieldDecoyTier3" />
-			<property name="Explosion.EntityDamage" value="550"/>
+			<property name="Explosion.EntityDamage" value="300"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackShieldDecoyTier4" extends="FuriousRamsayBlackShieldDecoyMaster">
 			<property name="Archetype" value="FuriousRamsayBlackShieldDecoyTier4" />
-			<property name="Explosion.EntityDamage" value="1000"/>
+			<property name="Explosion.EntityDamage" value="450"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackShieldDecoyTier5" extends="FuriousRamsayBlackShieldDecoyMaster">
 			<property name="Archetype" value="FuriousRamsayBlackShieldDecoyTier5" />
-			<property name="Explosion.EntityDamage" value="1500"/>
+			<property name="Explosion.EntityDamage" value="800"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieBoe" extends="zombieBoe">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,30,EntityEnemyAnimal,10,EntityPlayer,4"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4401,12 +4403,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieFemaleFat" extends="zombieFemaleFat">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4418,12 +4420,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieJoe" extends="zombieJoe">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4435,12 +4437,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieJanitor" extends="zombieJanitor">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4452,12 +4454,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieMoe" extends="zombieMoe">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4469,12 +4471,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieArlene" extends="zombieArlene">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4486,12 +4488,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieLab" extends="zombieLab">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4503,12 +4505,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieDarlene" extends="zombieDarlene">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4520,12 +4522,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieMarlene" extends="zombieMarlene">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4537,12 +4539,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieYo" extends="zombieYo">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4554,12 +4556,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieSteve" extends="zombieSteve">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4571,12 +4573,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieBusinessMan" extends="zombieBusinessMan">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4588,12 +4590,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieCheerleader" extends="zombieCheerleader">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4605,12 +4607,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieSkateboarder" extends="zombieSkateboarder">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4622,12 +4624,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieUtilityWorker" extends="zombieUtilityWorker">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4639,12 +4641,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieNurse" extends="zombieNurse">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4656,12 +4658,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieStripper" extends="zombieStripper">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4673,12 +4675,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieSteveCrawler" extends="zombieSteveCrawler">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4690,12 +4692,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieSpider" extends="zombieSpider">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4707,12 +4709,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieFatHawaiian" extends="zombieFatHawaiian">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4724,12 +4726,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieBiker" extends="zombieBiker">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4741,12 +4743,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieSoldier" extends="zombieSoldier">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4758,12 +4760,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieMaleHazmat" extends="zombieMaleHazmat">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4775,12 +4777,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieFarmer" extends="zombieFarmer">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4792,12 +4794,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieOldTimer" extends="zombieOldTimer">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4809,12 +4811,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieFootballPlayer" extends="zombieFootballPlayer">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4826,12 +4828,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieNurseFeral" extends="zombieNurseFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4843,12 +4845,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieBusinessManFeral" extends="zombieBusinessManFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4860,12 +4862,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieSteveFeral" extends="zombieSteveFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4877,12 +4879,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieYoFeral" extends="zombieYoFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4894,12 +4896,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieMarleneFeral" extends="zombieMarleneFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4911,12 +4913,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieDarleneFeral" extends="zombieDarleneFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4928,12 +4930,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieLabFeral" extends="zombieLabFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4945,12 +4947,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieArleneFeral" extends="zombieArleneFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4962,12 +4964,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieMoeFeral" extends="zombieMoeFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4979,12 +4981,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieJanitorFeral" extends="zombieJanitorFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -4996,12 +4998,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieJoeFeral" extends="zombieJoeFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5013,12 +5015,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieFemaleFatFeral" extends="zombieFemaleFatFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5030,12 +5032,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieBoeFeral" extends="zombieBoeFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5047,12 +5049,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieFootballPlayer" extends="zombieFootballPlayer">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5064,12 +5066,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieNurseFeral" extends="zombieNurseFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5081,12 +5083,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieBusinessManFeral" extends="zombieBusinessManFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5098,12 +5100,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieSteveFeral" extends="zombieSteveFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5115,12 +5117,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieYoFeral" extends="zombieYoFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5132,12 +5134,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieMarleneFeral" extends="zombieMarleneFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5149,12 +5151,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieDarleneFeral" extends="zombieDarleneFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5166,12 +5168,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieLabFeral" extends="zombieLabFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5183,12 +5185,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieArleneFeral" extends="zombieArleneFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5200,12 +5202,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieMoeFeral" extends="zombieMoeFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5217,12 +5219,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieJanitorFeral" extends="zombieJanitorFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5234,12 +5236,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieJoeFeral" extends="zombieJoeFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5251,12 +5253,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieFemaleFatFeral" extends="zombieFemaleFatFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5268,12 +5270,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieBoeFeral" extends="zombieBoeFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5285,12 +5287,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieStripperFeral" extends="zombieStripperFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5302,12 +5304,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieFarmerFeral" extends="zombieFarmerFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5319,12 +5321,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieBikerFeral" extends="zombieBikerFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5336,12 +5338,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieOldTimerFeral" extends="zombieOldTimerFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5353,12 +5355,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieCheerleaderFeral" extends="zombieCheerleaderFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5370,12 +5372,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieSkateboarderFeral" extends="zombieSkateboarderFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5387,12 +5389,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieSoldierFeral" extends="zombieSoldierFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5404,12 +5406,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieUtilityWorkerFeral" extends="zombieUtilityWorkerFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5421,12 +5423,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieFatHawaiianFeral" extends="zombieFatHawaiianFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5438,12 +5440,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieSpiderFeral" extends="zombieSpiderFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5455,12 +5457,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieSteveCrawlerFeral" extends="zombieSteveCrawlerFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5472,12 +5474,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieWightFeral" extends="zombieWightFeral">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5489,12 +5491,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieBikerRadiated" extends="zombieBikerRadiated">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5506,12 +5508,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieOldTimerRadiated" extends="zombieOldTimerRadiated">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5523,12 +5525,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieCheerleaderRadiated" extends="zombieCheerleaderRadiated">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5540,12 +5542,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieSkateboarderRadiated" extends="zombieSkateboarderRadiated">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5557,12 +5559,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieSoldierRadiated" extends="zombieSoldierRadiated">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5574,12 +5576,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieSpiderRadiated" extends="zombieSpiderRadiated">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5591,12 +5593,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieSteveRadiated" extends="zombieSteveRadiated">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5608,12 +5610,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieYoRadiated" extends="zombieYoRadiated">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5625,12 +5627,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieMarleneRadiated" extends="zombieMarleneRadiated">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5642,12 +5644,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieDarleneRadiated" extends="zombieDarleneRadiated">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5659,12 +5661,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieLabRadiated" extends="zombieLabRadiated">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5676,12 +5678,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieArleneRadiated" extends="zombieArleneRadiated">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5693,12 +5695,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieMoeRadiated" extends="zombieMoeRadiated">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5710,12 +5712,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieJanitorRadiated" extends="zombieJanitorRadiated">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5727,12 +5729,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieJoeRadiated" extends="zombieJoeRadiated">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5744,12 +5746,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieFemaleFatRadiated" extends="zombieFemaleFatRadiated">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5761,12 +5763,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieBoeRadiated" extends="zombieBoeRadiated">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5778,12 +5780,12 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackDecoyZombieWightRadiated" extends="zombieWightRadiated">
-            <property name="Class" value="EntitySurvivor" />
-			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/>
+            <property name="Class" value="EntitySurvivor" /><property name="Class" value="EntityBandit" />
+			<property name="MaxViewAngle" value="360"/><property name="LookAtAngle" value="0"/><effect_group name="Vanish Effect"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombieCop,20,EntityEnemyAnimal,20,EntityPlayer,20"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -5795,9 +5797,8 @@
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombieCop,EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,100,100,EntityZombieCop,150,150,EntityEnemyAnimal,120,120"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-4" value=""/><property name="TimeStayAfterDeath" value="600"/><drop event="Harvest" name="FuriousRamsayZombieRemains" tag="allToolsHarvest" count="1"/><property name="DeadBodyHitPoints" value="10"/>
 		</entity_class>
-
 
 	</append>
 
