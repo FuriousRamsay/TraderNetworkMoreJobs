@@ -2,9 +2,67 @@
 
 		<append xpath="/buffs" >		
 
+			<buff name="FuriousRamsayVanishTimer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="600"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayResistHeat" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<effect_group>
+					<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="heat"/>
+					<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffBurningFlamingArrow,buffBurningMolotov,buffBurningEnvironmentHack,buffBurningEnvironment,buffBurningElement"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayAttachFireParticles" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="600"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true"/>
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire"/>
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_onFire"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_onFire"/>
+				</effect_group>
+			</buff>
+			
+			<buff name="FuriousRamsayFireZombieAoEDamageTimer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="3"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="FuriousRamsayFireZombieAoEDamage"/>
+				</effect_group>
+			</buff>
+			
+			<buff name="FuriousRamsayFireZombieAoEDamage" name_key="buffIsOnFireName" description_key="buffIsOnFireDesc" tooltip_key="buffIsOnFireTooltip" icon="ui_game_symbol_fire" icon_color="255,0,0" icon_blink="true">
+				<damage_type value="heat"/>
+				<stack_type value="replace"/>
+				<duration value="3"/>
+				<effect_group>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-3">
+						<requirement name="EntityTagCompare" tags="player,robot,decoy"/>
+					</passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
+						<requirement name="EntityTagCompare" tags="player,robot,decoy"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire">
+						<requirement name="EntityTagCompare" tags="player,robot,decoy"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_onFire">
+						<requirement name="EntityTagCompare" tags="player,robot,decoy"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_onFire">
+						<requirement name="EntityTagCompare" tags="player,robot,decoy"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+		
 			<buff name="FuriousRamsayBlackShieldDecoySpawned" hidden="true" remove_on_death="true">
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="2"/>
 				<effect_group>
 					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Attempting to assemble Decoy..."/>
 				</effect_group>
@@ -718,14 +776,6 @@
 			<buff name="FuriousRamsayVanishSoldierTimerTier5" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<duration value="500"/>
-				<effect_group>
-					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
-				</effect_group>
-			</buff>
-
-			<buff name="FuriousRamsayVanishTimer" hidden="true" remove_on_death="true">
-				<stack_type value="ignore"/>
-				<duration value="600"/>
 				<effect_group>
 					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
 				</effect_group>
