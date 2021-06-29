@@ -25,6 +25,13 @@
 				</effect_group>
 			</buff>
 
+			<buff name="FuriousRamsayResistSmoke" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<effect_group>
+					<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="heat"/>
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayAttachFireParticles" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<duration value="600"/>
@@ -47,6 +54,17 @@
 				</effect_group>
 			</buff>
 
+			<buff name="FuriousRamsayAttachSmokeParticles" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="600"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="burntZombieSmoke" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true"/>
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="burntZombieSmoke"/>
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="burntZombieSmoke"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="burntZombieSmoke"/>
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayFireZombieAoEDamageTimer" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<update_rate value="3"/>
@@ -63,19 +81,19 @@
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-3">
 						<requirement name="EntityTagCompare" tags="player,robot"/>
 					</passive_effect>
-					<passive_effect name="HealthChangeOT" operation="base_add" value="-6">
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-8">
 						<requirement name="EntityTagCompare" tags="decoyTier1"/>
 					</passive_effect>
-					<passive_effect name="HealthChangeOT" operation="base_add" value="-8">
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-10">
 						<requirement name="EntityTagCompare" tags="decoyTier2"/>
 					</passive_effect>
-					<passive_effect name="HealthChangeOT" operation="base_add" value="-10">
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-12">
 						<requirement name="EntityTagCompare" tags="decoyTier3"/>
 					</passive_effect>
-					<passive_effect name="HealthChangeOT" operation="base_add" value="-12">
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-14">
 						<requirement name="EntityTagCompare" tags="decoyTier4"/>
 					</passive_effect>
-					<passive_effect name="HealthChangeOT" operation="base_add" value="-14">
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-16">
 						<requirement name="EntityTagCompare" tags="decoyTier5"/>
 					</passive_effect>
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
@@ -109,19 +127,19 @@
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-3">
 						<requirement name="EntityTagCompare" tags="player,robot"/>
 					</passive_effect>
-					<passive_effect name="HealthChangeOT" operation="base_add" value="-6">
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-8">
 						<requirement name="EntityTagCompare" tags="decoyTier1"/>
 					</passive_effect>
-					<passive_effect name="HealthChangeOT" operation="base_add" value="-8">
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-10">
 						<requirement name="EntityTagCompare" tags="decoyTier2"/>
 					</passive_effect>
-					<passive_effect name="HealthChangeOT" operation="base_add" value="-10">
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-12">
 						<requirement name="EntityTagCompare" tags="decoyTier3"/>
 					</passive_effect>
-					<passive_effect name="HealthChangeOT" operation="base_add" value="-12">
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-14">
 						<requirement name="EntityTagCompare" tags="decoyTier4"/>
 					</passive_effect>
-					<passive_effect name="HealthChangeOT" operation="base_add" value="-14">
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-16">
 						<requirement name="EntityTagCompare" tags="decoyTier5"/>
 					</passive_effect>
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
@@ -267,9 +285,9 @@
 
 			<buff name="FuriousRamsayInvisibleDecoyDone" hidden="true" remove_on_death="true">
 				<stack_type value="replace"/>
-				<duration value="600"/>
+				<duration value="180"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You have up to 10 minutes to use the remainder of your Decoys" >
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You have up to 3 minutes to use the remainder of your Decoys" >
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>
 

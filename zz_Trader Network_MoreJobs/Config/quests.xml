@@ -17,7 +17,7 @@
 			<property name="repeatable" value="true"/>
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="quest"/>
-			<property name="difficulty" value="hard"/>
+			<property name="difficulty" value="medium"/>
 			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="quest_FuriousRamsayDecoysTier1_offer"/>
 			<property name="statement_key" value="quest_FuriousRamsayDecoys_statement"/>
@@ -46,31 +46,31 @@
 				
 			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier1" value="1" phase="3"/>
 			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyEntityTier1" value="5" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieBoe,FuriousRamsayBlackDecoyShockZombieJoe,FuriousRamsayBlackDecoyShockZombieJanitor,FuriousRamsayBlackDecoyShockZombieArlene,FuriousRamsayBlackDecoyShockZombieLab,FuriousRamsayBlackDecoyShockZombieDarlene,FuriousRamsayBlackDecoyShockZombieMarlene,FuriousRamsayBlackDecoyShockZombieYo,FuriousRamsayBlackDecoyShockZombieSteve,FuriousRamsayBlackDecoyShockZombieBusinessMan" value="4" phase="3">
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyFireZombieBoe,FuriousRamsayBlackDecoyFireZombieJoe,FuriousRamsayBlackDecoyFireZombieJanitor,FuriousRamsayBlackDecoyFireZombieArlene,FuriousRamsayBlackDecoyFireZombieLab,FuriousRamsayBlackDecoyFireZombieDarlene,FuriousRamsayBlackDecoyFireZombieMarlene,FuriousRamsayBlackDecoyFireZombieYo,FuriousRamsayBlackDecoyFireZombieSteve,FuriousRamsayBlackDecoyFireZombieBusinessMan" value="4" phase="3">
 				<property name="delay" value="3"/>
 			</action>
 		
 			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier1" value="2" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyFireZombieBoe,FuriousRamsayBlackDecoyFireZombieJoe,FuriousRamsayBlackDecoyFireZombieJanitor,FuriousRamsayBlackDecoyFireZombieArlene,FuriousRamsayBlackDecoyFireZombieLab,FuriousRamsayBlackDecoyFireZombieDarlene,FuriousRamsayBlackDecoyFireZombieMarlene,FuriousRamsayBlackDecoyFireZombieYo,FuriousRamsayBlackDecoyFireZombieSteve,FuriousRamsayBlackDecoyFireZombieBusinessMan" value="4" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyFireZombieBoe,FuriousRamsayBlackDecoyFireZombieJoe,FuriousRamsayBlackDecoyFireZombieJanitor,FuriousRamsayBlackDecoyFireZombieArlene,FuriousRamsayBlackDecoyFireZombieLab,FuriousRamsayBlackDecoyFireZombieDarlene,FuriousRamsayBlackDecoyFireZombieMarlene,FuriousRamsayBlackDecoyFireZombieYo,FuriousRamsayBlackDecoyFireZombieSteve,FuriousRamsayBlackDecoyFireZombieBusinessMan" value="6" phase="4">
 				<property name="delay" value="3"/>
 			</action>
 
 			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier1" value="3" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieBoe,FuriousRamsayBlackDecoyShockZombieJoe,FuriousRamsayBlackDecoyShockZombieJanitor,FuriousRamsayBlackDecoyShockZombieArlene,FuriousRamsayBlackDecoyShockZombieLab,FuriousRamsayBlackDecoyShockZombieDarlene,FuriousRamsayBlackDecoyShockZombieMarlene,FuriousRamsayBlackDecoyShockZombieYo,FuriousRamsayBlackDecoyShockZombieSteve,FuriousRamsayBlackDecoyShockZombieBusinessMan" value="6" phase="5">
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyFireZombieBoe,FuriousRamsayBlackDecoyFireZombieJoe,FuriousRamsayBlackDecoyFireZombieJanitor,FuriousRamsayBlackDecoyFireZombieArlene,FuriousRamsayBlackDecoyFireZombieLab,FuriousRamsayBlackDecoyFireZombieDarlene,FuriousRamsayBlackDecoyFireZombieMarlene,FuriousRamsayBlackDecoyFireZombieYo,FuriousRamsayBlackDecoyFireZombieSteve,FuriousRamsayBlackDecoyFireZombieBusinessMan" value="8" phase="5">
 				<property name="delay" value="3"/>
 			</action>
 
 			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier1" value="4" phase="6"/>
-			<objective type="FetchKeep" id="FuriousRamsayZombieRemains" value="15" phase="6"/>
+			<objective type="FetchKeep" id="FuriousRamsayZombieRemainsFire" value="10" phase="6"/>
 			<objective type="Craft">
 				<property name="phase" value="6"/>
-				<property name="item" value="FuriousRamsayZombieBodyBagPile"/>
+				<property name="item" value="FuriousRamsayZombieBodyBagPileTier1"/>
 				<property name="count" value="1"/>
 			</objective>
 			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyEntityDone" value="5" phase="6">
 				<property name="delay" value="3"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieBoe,FuriousRamsayBlackDecoyShockZombieJoe,FuriousRamsayBlackDecoyShockZombieJanitor,FuriousRamsayBlackDecoyShockZombieArlene,FuriousRamsayBlackDecoyShockZombieLab,FuriousRamsayBlackDecoyShockZombieDarlene,FuriousRamsayBlackDecoyShockZombieMarlene,FuriousRamsayBlackDecoyShockZombieYo,FuriousRamsayBlackDecoyShockZombieSteve,FuriousRamsayBlackDecoyShockZombieBusinessMan" value="8" phase="6">
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyFireZombieBoe,FuriousRamsayBlackDecoyFireZombieJoe,FuriousRamsayBlackDecoyFireZombieJanitor,FuriousRamsayBlackDecoyFireZombieArlene,FuriousRamsayBlackDecoyFireZombieLab,FuriousRamsayBlackDecoyFireZombieDarlene,FuriousRamsayBlackDecoyFireZombieMarlene,FuriousRamsayBlackDecoyFireZombieYo,FuriousRamsayBlackDecoyFireZombieSteve,FuriousRamsayBlackDecoyFireZombieBusinessMan" value="10" phase="6">
 				<property name="delay" value="6"/>
 			</action>
 
@@ -102,7 +102,7 @@
 			<property name="repeatable" value="true"/>
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="quest"/>
-			<property name="difficulty" value="hard"/>
+			<property name="difficulty" value="medium"/>
 			<property name="difficulty_tier" value="2"/>
 			<property name="offer_key" value="quest_FuriousRamsayDecoysTier2_offer"/>
 			<property name="statement_key" value="quest_FuriousRamsayDecoys_statement"/>
@@ -121,7 +121,7 @@
 				<property name="nav_object" value="quest" />
 			</objective>
 			
-			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyBackpackEntityTier2" value="5" phase="2"/>
+			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyBackpackEntityTier1" value="5" phase="2"/>
 
 			<objective type="RallyPoint">
 				<property name="start_mode" value="Create"/>
@@ -129,33 +129,33 @@
 				<property name="nav_object" value="rally" />
 			</objective>
 				
-			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier2" value="2" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyEntityTier2" value="5" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieBoe,FuriousRamsayBlackDecoyShockZombieFemaleFat,FuriousRamsayBlackDecoyShockZombieJoe,FuriousRamsayBlackDecoyShockZombieJanitor,FuriousRamsayBlackDecoyShockZombieMoe,FuriousRamsayBlackDecoyShockZombieArlene,FuriousRamsayBlackDecoyShockZombieLab,FuriousRamsayBlackDecoyShockZombieDarlene,FuriousRamsayBlackDecoyShockZombieMarlene,FuriousRamsayBlackDecoyShockZombieYo,FuriousRamsayBlackDecoyShockZombieSteve,FuriousRamsayBlackDecoyShockZombieBusinessMan,FuriousRamsayBlackDecoyShockZombieCheerleader,FuriousRamsayBlackDecoyShockZombieSkateboarder,FuriousRamsayBlackDecoyShockZombieUtilityWorker,FuriousRamsayBlackDecoyShockZombieNurse,FuriousRamsayBlackDecoyShockZombieStripper,FuriousRamsayBlackDecoyShockZombieSteveCrawler,FuriousRamsayBlackDecoyShockZombieSpider,FuriousRamsayBlackDecoyShockZombieFatHawaiian,FuriousRamsayBlackDecoyShockZombieBiker,FuriousRamsayBlackDecoyShockZombieSoldier,FuriousRamsayBlackDecoyShockZombieMaleHazmat,FuriousRamsayBlackDecoyShockZombieFarmer,FuriousRamsayBlackDecoyShockZombieOldTimer" value="2" phase="3">
+			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier2" value="1" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyEntityTier1" value="5" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieCheerleader,FuriousRamsayBlackDecoyShockZombieSkateboarder,FuriousRamsayBlackDecoyShockZombieUtilityWorker,FuriousRamsayBlackDecoyShockZombieNurse,FuriousRamsayBlackDecoyShockZombieStripper,FuriousRamsayBlackDecoyShockZombieSteveCrawler,FuriousRamsayBlackDecoyShockZombieSpider,FuriousRamsayBlackDecoyShockZombieFatHawaiian,FuriousRamsayBlackDecoyShockZombieBiker,FuriousRamsayBlackDecoyShockZombieSoldier,FuriousRamsayBlackDecoyShockZombieMaleHazmat,FuriousRamsayBlackDecoyShockZombieFarmer,FuriousRamsayBlackDecoyShockZombieOldTimer" value="4" phase="3">
 				<property name="delay" value="3"/>
 			</action>
 		
-			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier2" value="3" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieBoe,FuriousRamsayBlackDecoyShockZombieFemaleFat,FuriousRamsayBlackDecoyShockZombieJoe,FuriousRamsayBlackDecoyShockZombieJanitor,FuriousRamsayBlackDecoyShockZombieMoe,FuriousRamsayBlackDecoyShockZombieArlene,FuriousRamsayBlackDecoyShockZombieLab,FuriousRamsayBlackDecoyShockZombieDarlene,FuriousRamsayBlackDecoyShockZombieMarlene,FuriousRamsayBlackDecoyShockZombieYo,FuriousRamsayBlackDecoyShockZombieSteve,FuriousRamsayBlackDecoyShockZombieBusinessMan,FuriousRamsayBlackDecoyShockZombieCheerleader,FuriousRamsayBlackDecoyShockZombieSkateboarder,FuriousRamsayBlackDecoyShockZombieUtilityWorker,FuriousRamsayBlackDecoyShockZombieNurse,FuriousRamsayBlackDecoyShockZombieStripper,FuriousRamsayBlackDecoyShockZombieSteveCrawler,FuriousRamsayBlackDecoyShockZombieSpider,FuriousRamsayBlackDecoyShockZombieFatHawaiian,FuriousRamsayBlackDecoyShockZombieBiker,FuriousRamsayBlackDecoyShockZombieSoldier,FuriousRamsayBlackDecoyShockZombieMaleHazmat,FuriousRamsayBlackDecoyShockZombieFarmer,FuriousRamsayBlackDecoyShockZombieOldTimer" value="4" phase="4">
+			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier2" value="2" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieCheerleader,FuriousRamsayBlackDecoyShockZombieSkateboarder,FuriousRamsayBlackDecoyShockZombieUtilityWorker,FuriousRamsayBlackDecoyShockZombieNurse,FuriousRamsayBlackDecoyShockZombieStripper,FuriousRamsayBlackDecoyShockZombieSteveCrawler,FuriousRamsayBlackDecoyShockZombieSpider,FuriousRamsayBlackDecoyShockZombieFatHawaiian,FuriousRamsayBlackDecoyShockZombieBiker,FuriousRamsayBlackDecoyShockZombieSoldier,FuriousRamsayBlackDecoyShockZombieMaleHazmat,FuriousRamsayBlackDecoyShockZombieFarmer,FuriousRamsayBlackDecoyShockZombieOldTimer" value="6" phase="4">
 				<property name="delay" value="3"/>
 			</action>
 
-			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier2" value="4" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieBoe,FuriousRamsayBlackDecoyShockZombieFemaleFat,FuriousRamsayBlackDecoyShockZombieJoe,FuriousRamsayBlackDecoyShockZombieJanitor,FuriousRamsayBlackDecoyShockZombieMoe,FuriousRamsayBlackDecoyShockZombieArlene,FuriousRamsayBlackDecoyShockZombieLab,FuriousRamsayBlackDecoyShockZombieDarlene,FuriousRamsayBlackDecoyShockZombieMarlene,FuriousRamsayBlackDecoyShockZombieYo,FuriousRamsayBlackDecoyShockZombieSteve,FuriousRamsayBlackDecoyShockZombieBusinessMan,FuriousRamsayBlackDecoyShockZombieCheerleader,FuriousRamsayBlackDecoyShockZombieSkateboarder,FuriousRamsayBlackDecoyShockZombieUtilityWorker,FuriousRamsayBlackDecoyShockZombieNurse,FuriousRamsayBlackDecoyShockZombieStripper,FuriousRamsayBlackDecoyShockZombieSteveCrawler,FuriousRamsayBlackDecoyShockZombieSpider,FuriousRamsayBlackDecoyShockZombieFatHawaiian,FuriousRamsayBlackDecoyShockZombieBiker,FuriousRamsayBlackDecoyShockZombieSoldier,FuriousRamsayBlackDecoyShockZombieMaleHazmat,FuriousRamsayBlackDecoyShockZombieFarmer,FuriousRamsayBlackDecoyShockZombieOldTimer" value="6" phase="5">
+			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier2" value="3" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieCheerleader,FuriousRamsayBlackDecoyShockZombieSkateboarder,FuriousRamsayBlackDecoyShockZombieUtilityWorker,FuriousRamsayBlackDecoyShockZombieNurse,FuriousRamsayBlackDecoyShockZombieStripper,FuriousRamsayBlackDecoyShockZombieSteveCrawler,FuriousRamsayBlackDecoyShockZombieSpider,FuriousRamsayBlackDecoyShockZombieFatHawaiian,FuriousRamsayBlackDecoyShockZombieBiker,FuriousRamsayBlackDecoyShockZombieSoldier,FuriousRamsayBlackDecoyShockZombieMaleHazmat,FuriousRamsayBlackDecoyShockZombieFarmer,FuriousRamsayBlackDecoyShockZombieOldTimer" value="8" phase="5">
 				<property name="delay" value="3"/>
 			</action>
 
-			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier2" value="5" phase="6"/>
-			<objective type="FetchKeep" id="FuriousRamsayZombieRemains" value="15" phase="6"/>
+			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier2" value="4" phase="6"/>
+			<objective type="FetchKeep" id="FuriousRamsayZombieRemainsShock" value="10" phase="6"/>
 			<objective type="Craft">
 				<property name="phase" value="6"/>
-				<property name="item" value="FuriousRamsayZombieBodyBagPile"/>
+				<property name="item" value="FuriousRamsayZombieBodyBagPileTier2"/>
 				<property name="count" value="1"/>
 			</objective>
 			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyEntityDone" value="5" phase="6">
 				<property name="delay" value="3"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieBoe,FuriousRamsayBlackDecoyShockZombieFemaleFat,FuriousRamsayBlackDecoyShockZombieJoe,FuriousRamsayBlackDecoyShockZombieJanitor,FuriousRamsayBlackDecoyShockZombieMoe,FuriousRamsayBlackDecoyShockZombieArlene,FuriousRamsayBlackDecoyShockZombieLab,FuriousRamsayBlackDecoyShockZombieDarlene,FuriousRamsayBlackDecoyShockZombieMarlene,FuriousRamsayBlackDecoyShockZombieYo,FuriousRamsayBlackDecoyShockZombieSteve,FuriousRamsayBlackDecoyShockZombieBusinessMan,FuriousRamsayBlackDecoyShockZombieCheerleader,FuriousRamsayBlackDecoyShockZombieSkateboarder,FuriousRamsayBlackDecoyShockZombieUtilityWorker,FuriousRamsayBlackDecoyShockZombieNurse,FuriousRamsayBlackDecoyShockZombieStripper,FuriousRamsayBlackDecoyShockZombieSteveCrawler,FuriousRamsayBlackDecoyShockZombieSpider,FuriousRamsayBlackDecoyShockZombieFatHawaiian,FuriousRamsayBlackDecoyShockZombieBiker,FuriousRamsayBlackDecoyShockZombieSoldier,FuriousRamsayBlackDecoyShockZombieMaleHazmat,FuriousRamsayBlackDecoyShockZombieFarmer,FuriousRamsayBlackDecoyShockZombieOldTimer" value="8" phase="6">
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieCheerleader,FuriousRamsayBlackDecoyShockZombieSkateboarder,FuriousRamsayBlackDecoyShockZombieUtilityWorker,FuriousRamsayBlackDecoyShockZombieNurse,FuriousRamsayBlackDecoyShockZombieStripper,FuriousRamsayBlackDecoyShockZombieSteveCrawler,FuriousRamsayBlackDecoyShockZombieSpider,FuriousRamsayBlackDecoyShockZombieFatHawaiian,FuriousRamsayBlackDecoyShockZombieBiker,FuriousRamsayBlackDecoyShockZombieSoldier,FuriousRamsayBlackDecoyShockZombieMaleHazmat,FuriousRamsayBlackDecoyShockZombieFarmer,FuriousRamsayBlackDecoyShockZombieOldTimer" value="10" phase="6">
 				<property name="delay" value="6"/>
 			</action>
 
@@ -206,7 +206,7 @@
 				<property name="nav_object" value="quest" />
 			</objective>
 			
-			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyBackpackEntityTier3" value="5" phase="2"/>
+			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyBackpackEntityTier1" value="5" phase="2"/>
 
 			<objective type="RallyPoint">
 				<property name="start_mode" value="Create"/>
@@ -214,33 +214,33 @@
 				<property name="nav_object" value="rally" />
 			</objective>
 				
-			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier3" value="3" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyEntityTier3" value="5" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieCheerleader,FuriousRamsayBlackDecoyShockZombieSkateboarder,FuriousRamsayBlackDecoyShockZombieUtilityWorker,FuriousRamsayBlackDecoyShockZombieNurse,FuriousRamsayBlackDecoyShockZombieStripper,FuriousRamsayBlackDecoyShockZombieSteveCrawler,FuriousRamsayBlackDecoyShockZombieSpider,FuriousRamsayBlackDecoyShockZombieFatHawaiian,FuriousRamsayBlackDecoyShockZombieBiker,FuriousRamsayBlackDecoyShockZombieSoldier,FuriousRamsayBlackDecoyShockZombieMaleHazmat,FuriousRamsayBlackDecoyShockZombieFarmer,FuriousRamsayBlackDecoyShockZombieOldTimer,FuriousRamsayBlackDecoyShockZombieFootballPlayer,FuriousRamsayBlackDecoyShockZombieNurseFeral,FuriousRamsayBlackDecoyShockZombieBusinessManFeral,FuriousRamsayBlackDecoyShockZombieSteveFeral,FuriousRamsayBlackDecoyShockZombieYoFeral,FuriousRamsayBlackDecoyShockZombieMarleneFeral,FuriousRamsayBlackDecoyShockZombieDarleneFeral,FuriousRamsayBlackDecoyShockZombieLabFeral,FuriousRamsayBlackDecoyShockZombieArleneFeral,FuriousRamsayBlackDecoyShockZombieMoeFeral,FuriousRamsayBlackDecoyShockZombieJanitorFeral,FuriousRamsayBlackDecoyShockZombieJoeFeral,FuriousRamsayBlackDecoyShockZombieFemaleFatFeral,FuriousRamsayBlackDecoyShockZombieBoeFeral" value="2" phase="3">
+			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier3" value="1" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyEntityTier1" value="5" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyFireShockZombieCheerleader,FuriousRamsayBlackDecoyFireShockZombieSkateboarder,FuriousRamsayBlackDecoyFireShockZombieUtilityWorker,FuriousRamsayBlackDecoyFireShockZombieNurse,FuriousRamsayBlackDecoyFireShockZombieStripper,FuriousRamsayBlackDecoyFireShockZombieSteveCrawler,FuriousRamsayBlackDecoyFireShockZombieSpider,FuriousRamsayBlackDecoyFireShockZombieFatHawaiian,FuriousRamsayBlackDecoyFireShockZombieBiker,FuriousRamsayBlackDecoyFireShockZombieSoldier,FuriousRamsayBlackDecoyFireShockZombieMaleHazmat,FuriousRamsayBlackDecoyFireShockZombieFarmer,FuriousRamsayBlackDecoyFireShockZombieOldTimer,FuriousRamsayBlackDecoyFireShockZombieFootballPlayer,FuriousRamsayBlackDecoyFireShockZombieNurseFeral,FuriousRamsayBlackDecoyFireShockZombieBusinessManFeral,FuriousRamsayBlackDecoyFireShockZombieSteveFeral,FuriousRamsayBlackDecoyFireShockZombieYoFeral,FuriousRamsayBlackDecoyFireShockZombieMarleneFeral,FuriousRamsayBlackDecoyFireShockZombieDarleneFeral,FuriousRamsayBlackDecoyFireShockZombieLabFeral,FuriousRamsayBlackDecoyFireShockZombieArleneFeral,FuriousRamsayBlackDecoyFireShockZombieMoeFeral,FuriousRamsayBlackDecoyFireShockZombieJanitorFeral,FuriousRamsayBlackDecoyFireShockZombieJoeFeral,FuriousRamsayBlackDecoyFireShockZombieFemaleFatFeral,FuriousRamsayBlackDecoyFireShockZombieBoeFeral" value="4" phase="3">
 				<property name="delay" value="3"/>
 			</action>
 		
-			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier3" value="4" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieCheerleader,FuriousRamsayBlackDecoyShockZombieSkateboarder,FuriousRamsayBlackDecoyShockZombieUtilityWorker,FuriousRamsayBlackDecoyShockZombieNurse,FuriousRamsayBlackDecoyShockZombieStripper,FuriousRamsayBlackDecoyShockZombieSteveCrawler,FuriousRamsayBlackDecoyShockZombieSpider,FuriousRamsayBlackDecoyShockZombieFatHawaiian,FuriousRamsayBlackDecoyShockZombieBiker,FuriousRamsayBlackDecoyShockZombieSoldier,FuriousRamsayBlackDecoyShockZombieMaleHazmat,FuriousRamsayBlackDecoyShockZombieFarmer,FuriousRamsayBlackDecoyShockZombieOldTimer,FuriousRamsayBlackDecoyShockZombieFootballPlayer,FuriousRamsayBlackDecoyShockZombieNurseFeral,FuriousRamsayBlackDecoyShockZombieBusinessManFeral,FuriousRamsayBlackDecoyShockZombieSteveFeral,FuriousRamsayBlackDecoyShockZombieYoFeral,FuriousRamsayBlackDecoyShockZombieMarleneFeral,FuriousRamsayBlackDecoyShockZombieDarleneFeral,FuriousRamsayBlackDecoyShockZombieLabFeral,FuriousRamsayBlackDecoyShockZombieArleneFeral,FuriousRamsayBlackDecoyShockZombieMoeFeral,FuriousRamsayBlackDecoyShockZombieJanitorFeral,FuriousRamsayBlackDecoyShockZombieJoeFeral,FuriousRamsayBlackDecoyShockZombieFemaleFatFeral,FuriousRamsayBlackDecoyShockZombieBoeFeral" value="4" phase="4">
+			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier3" value="2" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyFireShockZombieCheerleader,FuriousRamsayBlackDecoyFireShockZombieSkateboarder,FuriousRamsayBlackDecoyFireShockZombieUtilityWorker,FuriousRamsayBlackDecoyFireShockZombieNurse,FuriousRamsayBlackDecoyFireShockZombieStripper,FuriousRamsayBlackDecoyFireShockZombieSteveCrawler,FuriousRamsayBlackDecoyFireShockZombieSpider,FuriousRamsayBlackDecoyFireShockZombieFatHawaiian,FuriousRamsayBlackDecoyFireShockZombieBiker,FuriousRamsayBlackDecoyFireShockZombieSoldier,FuriousRamsayBlackDecoyFireShockZombieMaleHazmat,FuriousRamsayBlackDecoyFireShockZombieFarmer,FuriousRamsayBlackDecoyFireShockZombieOldTimer,FuriousRamsayBlackDecoyFireShockZombieFootballPlayer,FuriousRamsayBlackDecoyFireShockZombieNurseFeral,FuriousRamsayBlackDecoyFireShockZombieBusinessManFeral,FuriousRamsayBlackDecoyFireShockZombieSteveFeral,FuriousRamsayBlackDecoyFireShockZombieYoFeral,FuriousRamsayBlackDecoyFireShockZombieMarleneFeral,FuriousRamsayBlackDecoyFireShockZombieDarleneFeral,FuriousRamsayBlackDecoyFireShockZombieLabFeral,FuriousRamsayBlackDecoyFireShockZombieArleneFeral,FuriousRamsayBlackDecoyFireShockZombieMoeFeral,FuriousRamsayBlackDecoyFireShockZombieJanitorFeral,FuriousRamsayBlackDecoyFireShockZombieJoeFeral,FuriousRamsayBlackDecoyFireShockZombieFemaleFatFeral,FuriousRamsayBlackDecoyFireShockZombieBoeFeral" value="6" phase="4">
 				<property name="delay" value="3"/>
 			</action>
 
-			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier3" value="5" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieCheerleader,FuriousRamsayBlackDecoyShockZombieSkateboarder,FuriousRamsayBlackDecoyShockZombieUtilityWorker,FuriousRamsayBlackDecoyShockZombieNurse,FuriousRamsayBlackDecoyShockZombieStripper,FuriousRamsayBlackDecoyShockZombieSteveCrawler,FuriousRamsayBlackDecoyShockZombieSpider,FuriousRamsayBlackDecoyShockZombieFatHawaiian,FuriousRamsayBlackDecoyShockZombieBiker,FuriousRamsayBlackDecoyShockZombieSoldier,FuriousRamsayBlackDecoyShockZombieMaleHazmat,FuriousRamsayBlackDecoyShockZombieFarmer,FuriousRamsayBlackDecoyShockZombieOldTimer,FuriousRamsayBlackDecoyShockZombieFootballPlayer,FuriousRamsayBlackDecoyShockZombieNurseFeral,FuriousRamsayBlackDecoyShockZombieBusinessManFeral,FuriousRamsayBlackDecoyShockZombieSteveFeral,FuriousRamsayBlackDecoyShockZombieYoFeral,FuriousRamsayBlackDecoyShockZombieMarleneFeral,FuriousRamsayBlackDecoyShockZombieDarleneFeral,FuriousRamsayBlackDecoyShockZombieLabFeral,FuriousRamsayBlackDecoyShockZombieArleneFeral,FuriousRamsayBlackDecoyShockZombieMoeFeral,FuriousRamsayBlackDecoyShockZombieJanitorFeral,FuriousRamsayBlackDecoyShockZombieJoeFeral,FuriousRamsayBlackDecoyShockZombieFemaleFatFeral,FuriousRamsayBlackDecoyShockZombieBoeFeral" value="6" phase="5">
+			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier3" value="3" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyFireShockZombieCheerleader,FuriousRamsayBlackDecoyFireShockZombieSkateboarder,FuriousRamsayBlackDecoyFireShockZombieUtilityWorker,FuriousRamsayBlackDecoyFireShockZombieNurse,FuriousRamsayBlackDecoyFireShockZombieStripper,FuriousRamsayBlackDecoyFireShockZombieSteveCrawler,FuriousRamsayBlackDecoyFireShockZombieSpider,FuriousRamsayBlackDecoyFireShockZombieFatHawaiian,FuriousRamsayBlackDecoyFireShockZombieBiker,FuriousRamsayBlackDecoyFireShockZombieSoldier,FuriousRamsayBlackDecoyFireShockZombieMaleHazmat,FuriousRamsayBlackDecoyFireShockZombieFarmer,FuriousRamsayBlackDecoyFireShockZombieOldTimer,FuriousRamsayBlackDecoyFireShockZombieFootballPlayer,FuriousRamsayBlackDecoyFireShockZombieNurseFeral,FuriousRamsayBlackDecoyFireShockZombieBusinessManFeral,FuriousRamsayBlackDecoyFireShockZombieSteveFeral,FuriousRamsayBlackDecoyFireShockZombieYoFeral,FuriousRamsayBlackDecoyFireShockZombieMarleneFeral,FuriousRamsayBlackDecoyFireShockZombieDarleneFeral,FuriousRamsayBlackDecoyFireShockZombieLabFeral,FuriousRamsayBlackDecoyFireShockZombieArleneFeral,FuriousRamsayBlackDecoyFireShockZombieMoeFeral,FuriousRamsayBlackDecoyFireShockZombieJanitorFeral,FuriousRamsayBlackDecoyFireShockZombieJoeFeral,FuriousRamsayBlackDecoyFireShockZombieFemaleFatFeral,FuriousRamsayBlackDecoyFireShockZombieBoeFeral" value="8" phase="5">
 				<property name="delay" value="3"/>
 			</action>
 
 			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier3" value="4" phase="6"/>
-			<objective type="FetchKeep" id="FuriousRamsayZombieRemains" value="15" phase="6"/>
+			<objective type="FetchKeep" id="FuriousRamsayZombieRemainsFireShock" value="10" phase="6"/>
 			<objective type="Craft">
 				<property name="phase" value="6"/>
-				<property name="item" value="FuriousRamsayZombieBodyBagPile"/>
+				<property name="item" value="FuriousRamsayZombieBodyBagPileTier3"/>
 				<property name="count" value="1"/>
 			</objective>
 			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyEntityDone" value="6" phase="6">
 				<property name="delay" value="3"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieCheerleader,FuriousRamsayBlackDecoyShockZombieSkateboarder,FuriousRamsayBlackDecoyShockZombieUtilityWorker,FuriousRamsayBlackDecoyShockZombieNurse,FuriousRamsayBlackDecoyShockZombieStripper,FuriousRamsayBlackDecoyShockZombieSteveCrawler,FuriousRamsayBlackDecoyShockZombieSpider,FuriousRamsayBlackDecoyShockZombieFatHawaiian,FuriousRamsayBlackDecoyShockZombieBiker,FuriousRamsayBlackDecoyShockZombieSoldier,FuriousRamsayBlackDecoyShockZombieMaleHazmat,FuriousRamsayBlackDecoyShockZombieFarmer,FuriousRamsayBlackDecoyShockZombieOldTimer,FuriousRamsayBlackDecoyShockZombieFootballPlayer,FuriousRamsayBlackDecoyShockZombieNurseFeral,FuriousRamsayBlackDecoyShockZombieBusinessManFeral,FuriousRamsayBlackDecoyShockZombieSteveFeral,FuriousRamsayBlackDecoyShockZombieYoFeral,FuriousRamsayBlackDecoyShockZombieMarleneFeral,FuriousRamsayBlackDecoyShockZombieDarleneFeral,FuriousRamsayBlackDecoyShockZombieLabFeral,FuriousRamsayBlackDecoyShockZombieArleneFeral,FuriousRamsayBlackDecoyShockZombieMoeFeral,FuriousRamsayBlackDecoyShockZombieJanitorFeral,FuriousRamsayBlackDecoyShockZombieJoeFeral,FuriousRamsayBlackDecoyShockZombieFemaleFatFeral,FuriousRamsayBlackDecoyShockZombieBoeFeral" value="8" phase="6">
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyFireShockZombieCheerleader,FuriousRamsayBlackDecoyFireShockZombieSkateboarder,FuriousRamsayBlackDecoyFireShockZombieUtilityWorker,FuriousRamsayBlackDecoyFireShockZombieNurse,FuriousRamsayBlackDecoyFireShockZombieStripper,FuriousRamsayBlackDecoyFireShockZombieSteveCrawler,FuriousRamsayBlackDecoyFireShockZombieSpider,FuriousRamsayBlackDecoyFireShockZombieFatHawaiian,FuriousRamsayBlackDecoyFireShockZombieBiker,FuriousRamsayBlackDecoyFireShockZombieSoldier,FuriousRamsayBlackDecoyFireShockZombieMaleHazmat,FuriousRamsayBlackDecoyFireShockZombieFarmer,FuriousRamsayBlackDecoyFireShockZombieOldTimer,FuriousRamsayBlackDecoyFireShockZombieFootballPlayer,FuriousRamsayBlackDecoyFireShockZombieNurseFeral,FuriousRamsayBlackDecoyFireShockZombieBusinessManFeral,FuriousRamsayBlackDecoyFireShockZombieSteveFeral,FuriousRamsayBlackDecoyFireShockZombieYoFeral,FuriousRamsayBlackDecoyFireShockZombieMarleneFeral,FuriousRamsayBlackDecoyFireShockZombieDarleneFeral,FuriousRamsayBlackDecoyFireShockZombieLabFeral,FuriousRamsayBlackDecoyFireShockZombieArleneFeral,FuriousRamsayBlackDecoyFireShockZombieMoeFeral,FuriousRamsayBlackDecoyFireShockZombieJanitorFeral,FuriousRamsayBlackDecoyFireShockZombieJoeFeral,FuriousRamsayBlackDecoyFireShockZombieFemaleFatFeral,FuriousRamsayBlackDecoyFireShockZombieBoeFeral" value="10" phase="6">
 				<property name="delay" value="6"/>
 			</action>
 
@@ -291,7 +291,7 @@
 				<property name="nav_object" value="quest" />
 			</objective>
 			
-			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyBackpackEntityTier4" value="5" phase="2"/>
+			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyBackpackEntityTier1" value="5" phase="2"/>
 
 			<objective type="RallyPoint">
 				<property name="start_mode" value="Create"/>
@@ -300,32 +300,32 @@
 			</objective>
 				
 			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier4" value="1" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyEntityTier4" value="5" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieFootballPlayer,FuriousRamsayBlackDecoyShockZombieNurseFeral,FuriousRamsayBlackDecoyShockZombieBusinessManFeral,FuriousRamsayBlackDecoyShockZombieSteveFeral,FuriousRamsayBlackDecoyShockZombieYoFeral,FuriousRamsayBlackDecoyShockZombieMarleneFeral,FuriousRamsayBlackDecoyShockZombieDarleneFeral,FuriousRamsayBlackDecoyShockZombieLabFeral,FuriousRamsayBlackDecoyShockZombieArleneFeral,FuriousRamsayBlackDecoyShockZombieMoeFeral,FuriousRamsayBlackDecoyShockZombieJanitorFeral,FuriousRamsayBlackDecoyShockZombieJoeFeral,FuriousRamsayBlackDecoyShockZombieFemaleFatFeral,FuriousRamsayBlackDecoyShockZombieBoeFeral,FuriousRamsayBlackDecoyShockZombieStripperFeral,FuriousRamsayBlackDecoyShockZombieFarmerFeral,FuriousRamsayBlackDecoyShockZombieBikerFeral,FuriousRamsayBlackDecoyShockZombieOldTimerFeral,FuriousRamsayBlackDecoyShockZombieCheerleaderFeral,FuriousRamsayBlackDecoyShockZombieSkateboarderFeral,FuriousRamsayBlackDecoyShockZombieSoldierFeral,FuriousRamsayBlackDecoyShockZombieUtilityWorkerFeral,FuriousRamsayBlackDecoyShockZombieFatHawaiianFeral,FuriousRamsayBlackDecoyShockZombieSpiderFeral,FuriousRamsayBlackDecoyShockZombieSteveCrawlerFeral,FuriousRamsayBlackDecoyShockZombieWightFeral" value="2" phase="3">
+			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyEntityTier1" value="5" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoySmokeZombieFootballPlayer,FuriousRamsayBlackDecoySmokeZombieNurseFeral,FuriousRamsayBlackDecoySmokeZombieBusinessManFeral,FuriousRamsayBlackDecoySmokeZombieSteveFeral,FuriousRamsayBlackDecoySmokeZombieYoFeral,FuriousRamsayBlackDecoySmokeZombieMarleneFeral,FuriousRamsayBlackDecoySmokeZombieDarleneFeral,FuriousRamsayBlackDecoySmokeZombieLabFeral,FuriousRamsayBlackDecoySmokeZombieArleneFeral,FuriousRamsayBlackDecoySmokeZombieMoeFeral,FuriousRamsayBlackDecoySmokeZombieJanitorFeral,FuriousRamsayBlackDecoySmokeZombieJoeFeral,FuriousRamsayBlackDecoySmokeZombieFemaleFatFeral,FuriousRamsayBlackDecoySmokeZombieBoeFeral,FuriousRamsayBlackDecoySmokeZombieStripperFeral,FuriousRamsayBlackDecoySmokeZombieFarmerFeral,FuriousRamsayBlackDecoySmokeZombieBikerFeral,FuriousRamsayBlackDecoySmokeZombieOldTimerFeral,FuriousRamsayBlackDecoySmokeZombieCheerleaderFeral,FuriousRamsayBlackDecoySmokeZombieSkateboarderFeral,FuriousRamsayBlackDecoySmokeZombieSoldierFeral,FuriousRamsayBlackDecoySmokeZombieUtilityWorkerFeral,FuriousRamsayBlackDecoySmokeZombieFatHawaiianFeral,FuriousRamsayBlackDecoySmokeZombieSpiderFeral,FuriousRamsayBlackDecoySmokeZombieSteveCrawlerFeral,FuriousRamsayBlackDecoySmokeZombieWightFeral" value="4" phase="3">
 				<property name="delay" value="3"/>
 			</action>
 		
 			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier4" value="2" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieFootballPlayer,FuriousRamsayBlackDecoyShockZombieNurseFeral,FuriousRamsayBlackDecoyShockZombieBusinessManFeral,FuriousRamsayBlackDecoyShockZombieSteveFeral,FuriousRamsayBlackDecoyShockZombieYoFeral,FuriousRamsayBlackDecoyShockZombieMarleneFeral,FuriousRamsayBlackDecoyShockZombieDarleneFeral,FuriousRamsayBlackDecoyShockZombieLabFeral,FuriousRamsayBlackDecoyShockZombieArleneFeral,FuriousRamsayBlackDecoyShockZombieMoeFeral,FuriousRamsayBlackDecoyShockZombieJanitorFeral,FuriousRamsayBlackDecoyShockZombieJoeFeral,FuriousRamsayBlackDecoyShockZombieFemaleFatFeral,FuriousRamsayBlackDecoyShockZombieBoeFeral,FuriousRamsayBlackDecoyShockZombieStripperFeral,FuriousRamsayBlackDecoyShockZombieFarmerFeral,FuriousRamsayBlackDecoyShockZombieBikerFeral,FuriousRamsayBlackDecoyShockZombieOldTimerFeral,FuriousRamsayBlackDecoyShockZombieCheerleaderFeral,FuriousRamsayBlackDecoyShockZombieSkateboarderFeral,FuriousRamsayBlackDecoyShockZombieSoldierFeral,FuriousRamsayBlackDecoyShockZombieUtilityWorkerFeral,FuriousRamsayBlackDecoyShockZombieFatHawaiianFeral,FuriousRamsayBlackDecoyShockZombieSpiderFeral,FuriousRamsayBlackDecoyShockZombieSteveCrawlerFeral,FuriousRamsayBlackDecoyShockZombieWightFeral" value="4" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoySmokeZombieFootballPlayer,FuriousRamsayBlackDecoySmokeZombieNurseFeral,FuriousRamsayBlackDecoySmokeZombieBusinessManFeral,FuriousRamsayBlackDecoySmokeZombieSteveFeral,FuriousRamsayBlackDecoySmokeZombieYoFeral,FuriousRamsayBlackDecoySmokeZombieMarleneFeral,FuriousRamsayBlackDecoySmokeZombieDarleneFeral,FuriousRamsayBlackDecoySmokeZombieLabFeral,FuriousRamsayBlackDecoySmokeZombieArleneFeral,FuriousRamsayBlackDecoySmokeZombieMoeFeral,FuriousRamsayBlackDecoySmokeZombieJanitorFeral,FuriousRamsayBlackDecoySmokeZombieJoeFeral,FuriousRamsayBlackDecoySmokeZombieFemaleFatFeral,FuriousRamsayBlackDecoySmokeZombieBoeFeral,FuriousRamsayBlackDecoySmokeZombieStripperFeral,FuriousRamsayBlackDecoySmokeZombieFarmerFeral,FuriousRamsayBlackDecoySmokeZombieBikerFeral,FuriousRamsayBlackDecoySmokeZombieOldTimerFeral,FuriousRamsayBlackDecoySmokeZombieCheerleaderFeral,FuriousRamsayBlackDecoySmokeZombieSkateboarderFeral,FuriousRamsayBlackDecoySmokeZombieSoldierFeral,FuriousRamsayBlackDecoySmokeZombieUtilityWorkerFeral,FuriousRamsayBlackDecoySmokeZombieFatHawaiianFeral,FuriousRamsayBlackDecoySmokeZombieSpiderFeral,FuriousRamsayBlackDecoySmokeZombieSteveCrawlerFeral,FuriousRamsayBlackDecoySmokeZombieWightFeral" value="6" phase="4">
 				<property name="delay" value="3"/>
 			</action>
 
 			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier4" value="3" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieFootballPlayer,FuriousRamsayBlackDecoyShockZombieNurseFeral,FuriousRamsayBlackDecoyShockZombieBusinessManFeral,FuriousRamsayBlackDecoyShockZombieSteveFeral,FuriousRamsayBlackDecoyShockZombieYoFeral,FuriousRamsayBlackDecoyShockZombieMarleneFeral,FuriousRamsayBlackDecoyShockZombieDarleneFeral,FuriousRamsayBlackDecoyShockZombieLabFeral,FuriousRamsayBlackDecoyShockZombieArleneFeral,FuriousRamsayBlackDecoyShockZombieMoeFeral,FuriousRamsayBlackDecoyShockZombieJanitorFeral,FuriousRamsayBlackDecoyShockZombieJoeFeral,FuriousRamsayBlackDecoyShockZombieFemaleFatFeral,FuriousRamsayBlackDecoyShockZombieBoeFeral,FuriousRamsayBlackDecoyShockZombieStripperFeral,FuriousRamsayBlackDecoyShockZombieFarmerFeral,FuriousRamsayBlackDecoyShockZombieBikerFeral,FuriousRamsayBlackDecoyShockZombieOldTimerFeral,FuriousRamsayBlackDecoyShockZombieCheerleaderFeral,FuriousRamsayBlackDecoyShockZombieSkateboarderFeral,FuriousRamsayBlackDecoyShockZombieSoldierFeral,FuriousRamsayBlackDecoyShockZombieUtilityWorkerFeral,FuriousRamsayBlackDecoyShockZombieFatHawaiianFeral,FuriousRamsayBlackDecoyShockZombieSpiderFeral,FuriousRamsayBlackDecoyShockZombieSteveCrawlerFeral,FuriousRamsayBlackDecoyShockZombieWightFeral" value="6" phase="5">
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoySmokeZombieFootballPlayer,FuriousRamsayBlackDecoySmokeZombieNurseFeral,FuriousRamsayBlackDecoySmokeZombieBusinessManFeral,FuriousRamsayBlackDecoySmokeZombieSteveFeral,FuriousRamsayBlackDecoySmokeZombieYoFeral,FuriousRamsayBlackDecoySmokeZombieMarleneFeral,FuriousRamsayBlackDecoySmokeZombieDarleneFeral,FuriousRamsayBlackDecoySmokeZombieLabFeral,FuriousRamsayBlackDecoySmokeZombieArleneFeral,FuriousRamsayBlackDecoySmokeZombieMoeFeral,FuriousRamsayBlackDecoySmokeZombieJanitorFeral,FuriousRamsayBlackDecoySmokeZombieJoeFeral,FuriousRamsayBlackDecoySmokeZombieFemaleFatFeral,FuriousRamsayBlackDecoySmokeZombieBoeFeral,FuriousRamsayBlackDecoySmokeZombieStripperFeral,FuriousRamsayBlackDecoySmokeZombieFarmerFeral,FuriousRamsayBlackDecoySmokeZombieBikerFeral,FuriousRamsayBlackDecoySmokeZombieOldTimerFeral,FuriousRamsayBlackDecoySmokeZombieCheerleaderFeral,FuriousRamsayBlackDecoySmokeZombieSkateboarderFeral,FuriousRamsayBlackDecoySmokeZombieSoldierFeral,FuriousRamsayBlackDecoySmokeZombieUtilityWorkerFeral,FuriousRamsayBlackDecoySmokeZombieFatHawaiianFeral,FuriousRamsayBlackDecoySmokeZombieSpiderFeral,FuriousRamsayBlackDecoySmokeZombieSteveCrawlerFeral,FuriousRamsayBlackDecoySmokeZombieWightFeral" value="8" phase="5">
 				<property name="delay" value="3"/>
 			</action>
 
 			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier4" value="4" phase="6"/>
-			<objective type="FetchKeep" id="FuriousRamsayZombieRemains" value="15" phase="6"/>
+			<objective type="FetchKeep" id="FuriousRamsayZombieRemainsSmoke" value="10" phase="6"/>
 			<objective type="Craft">
 				<property name="phase" value="6"/>
-				<property name="item" value="FuriousRamsayZombieBodyBagPile"/>
+				<property name="item" value="FuriousRamsayZombieBodyBagPileTier4"/>
 				<property name="count" value="1"/>
 			</objective>
 			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyEntityDone" value="5" phase="6">
 				<property name="delay" value="3"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieFootballPlayer,FuriousRamsayBlackDecoyShockZombieNurseFeral,FuriousRamsayBlackDecoyShockZombieBusinessManFeral,FuriousRamsayBlackDecoyShockZombieSteveFeral,FuriousRamsayBlackDecoyShockZombieYoFeral,FuriousRamsayBlackDecoyShockZombieMarleneFeral,FuriousRamsayBlackDecoyShockZombieDarleneFeral,FuriousRamsayBlackDecoyShockZombieLabFeral,FuriousRamsayBlackDecoyShockZombieArleneFeral,FuriousRamsayBlackDecoyShockZombieMoeFeral,FuriousRamsayBlackDecoyShockZombieJanitorFeral,FuriousRamsayBlackDecoyShockZombieJoeFeral,FuriousRamsayBlackDecoyShockZombieFemaleFatFeral,FuriousRamsayBlackDecoyShockZombieBoeFeral,FuriousRamsayBlackDecoyShockZombieStripperFeral,FuriousRamsayBlackDecoyShockZombieFarmerFeral,FuriousRamsayBlackDecoyShockZombieBikerFeral,FuriousRamsayBlackDecoyShockZombieOldTimerFeral,FuriousRamsayBlackDecoyShockZombieCheerleaderFeral,FuriousRamsayBlackDecoyShockZombieSkateboarderFeral,FuriousRamsayBlackDecoyShockZombieSoldierFeral,FuriousRamsayBlackDecoyShockZombieUtilityWorkerFeral,FuriousRamsayBlackDecoyShockZombieFatHawaiianFeral,FuriousRamsayBlackDecoyShockZombieSpiderFeral,FuriousRamsayBlackDecoyShockZombieSteveCrawlerFeral,FuriousRamsayBlackDecoyShockZombieWightFeral" value="8" phase="6">
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoySmokeZombieFootballPlayer,FuriousRamsayBlackDecoySmokeZombieNurseFeral,FuriousRamsayBlackDecoySmokeZombieBusinessManFeral,FuriousRamsayBlackDecoySmokeZombieSteveFeral,FuriousRamsayBlackDecoySmokeZombieYoFeral,FuriousRamsayBlackDecoySmokeZombieMarleneFeral,FuriousRamsayBlackDecoySmokeZombieDarleneFeral,FuriousRamsayBlackDecoySmokeZombieLabFeral,FuriousRamsayBlackDecoySmokeZombieArleneFeral,FuriousRamsayBlackDecoySmokeZombieMoeFeral,FuriousRamsayBlackDecoySmokeZombieJanitorFeral,FuriousRamsayBlackDecoySmokeZombieJoeFeral,FuriousRamsayBlackDecoySmokeZombieFemaleFatFeral,FuriousRamsayBlackDecoySmokeZombieBoeFeral,FuriousRamsayBlackDecoySmokeZombieStripperFeral,FuriousRamsayBlackDecoySmokeZombieFarmerFeral,FuriousRamsayBlackDecoySmokeZombieBikerFeral,FuriousRamsayBlackDecoySmokeZombieOldTimerFeral,FuriousRamsayBlackDecoySmokeZombieCheerleaderFeral,FuriousRamsayBlackDecoySmokeZombieSkateboarderFeral,FuriousRamsayBlackDecoySmokeZombieSoldierFeral,FuriousRamsayBlackDecoySmokeZombieUtilityWorkerFeral,FuriousRamsayBlackDecoySmokeZombieFatHawaiianFeral,FuriousRamsayBlackDecoySmokeZombieSpiderFeral,FuriousRamsayBlackDecoySmokeZombieSteveCrawlerFeral,FuriousRamsayBlackDecoySmokeZombieWightFeral" value="10" phase="6">
 				<property name="delay" value="6"/>
 			</action>
 
@@ -376,7 +376,7 @@
 				<property name="nav_object" value="quest" />
 			</objective>
 			
-			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyBackpackEntityTier5" value="5" phase="2"/>
+			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyBackpackEntityTier1" value="5" phase="2"/>
 
 			<objective type="RallyPoint">
 				<property name="start_mode" value="Create"/>
@@ -385,32 +385,32 @@
 			</objective>
 				
 			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier5" value="1" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyEntityTier5" value="5" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieBikerRadiated,FuriousRamsayBlackDecoyShockZombieOldTimerRadiated,FuriousRamsayBlackDecoyShockZombieCheerleaderRadiated,FuriousRamsayBlackDecoyShockZombieSkateboarderRadiated,FuriousRamsayBlackDecoyShockZombieSoldierRadiated,FuriousRamsayBlackDecoyShockZombieSpiderRadiated,FuriousRamsayBlackDecoyShockZombieSteveRadiated,FuriousRamsayBlackDecoyShockZombieYoRadiated,FuriousRamsayBlackDecoyShockZombieMarleneRadiated,FuriousRamsayBlackDecoyShockZombieDarleneRadiated,FuriousRamsayBlackDecoyShockZombieLabRadiated,FuriousRamsayBlackDecoyShockZombieArleneRadiated,FuriousRamsayBlackDecoyShockZombieMoeRadiated,FuriousRamsayBlackDecoyShockZombieJanitorRadiated,FuriousRamsayBlackDecoyShockZombieJoeRadiated,FuriousRamsayBlackDecoyShockZombieFemaleFatRadiated,FuriousRamsayBlackDecoyShockZombieBoeRadiated,FuriousRamsayBlackDecoyShockZombieWightRadiated" value="6" phase="3">
+			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyEntityTier1" value="5" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyFireShockSmokeZombieBikerRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieOldTimerRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieCheerleaderRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieSkateboarderRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieSoldierRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieSpiderRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieSteveRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieYoRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieMarleneRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieDarleneRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieLabRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieArleneRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieMoeRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieJanitorRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieJoeRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieFemaleFatRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieBoeRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated" value="4" phase="3">
 				<property name="delay" value="3"/>
 			</action>
 		
 			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier5" value="2" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieBikerRadiated,FuriousRamsayBlackDecoyShockZombieOldTimerRadiated,FuriousRamsayBlackDecoyShockZombieCheerleaderRadiated,FuriousRamsayBlackDecoyShockZombieSkateboarderRadiated,FuriousRamsayBlackDecoyShockZombieSoldierRadiated,FuriousRamsayBlackDecoyShockZombieSpiderRadiated,FuriousRamsayBlackDecoyShockZombieSteveRadiated,FuriousRamsayBlackDecoyShockZombieYoRadiated,FuriousRamsayBlackDecoyShockZombieMarleneRadiated,FuriousRamsayBlackDecoyShockZombieDarleneRadiated,FuriousRamsayBlackDecoyShockZombieLabRadiated,FuriousRamsayBlackDecoyShockZombieArleneRadiated,FuriousRamsayBlackDecoyShockZombieMoeRadiated,FuriousRamsayBlackDecoyShockZombieJanitorRadiated,FuriousRamsayBlackDecoyShockZombieJoeRadiated,FuriousRamsayBlackDecoyShockZombieFemaleFatRadiated,FuriousRamsayBlackDecoyShockZombieBoeRadiated,FuriousRamsayBlackDecoyShockZombieWightRadiated" value="6" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyFireShockSmokeZombieBikerRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieOldTimerRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieCheerleaderRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieSkateboarderRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieSoldierRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieSpiderRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieSteveRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieYoRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieMarleneRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieDarleneRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieLabRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieArleneRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieMoeRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieJanitorRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieJoeRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieFemaleFatRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieBoeRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated" value="6" phase="4">
 				<property name="delay" value="3"/>
 			</action>
 
 			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier5" value="3" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieBikerRadiated,FuriousRamsayBlackDecoyShockZombieOldTimerRadiated,FuriousRamsayBlackDecoyShockZombieCheerleaderRadiated,FuriousRamsayBlackDecoyShockZombieSkateboarderRadiated,FuriousRamsayBlackDecoyShockZombieSoldierRadiated,FuriousRamsayBlackDecoyShockZombieSpiderRadiated,FuriousRamsayBlackDecoyShockZombieSteveRadiated,FuriousRamsayBlackDecoyShockZombieYoRadiated,FuriousRamsayBlackDecoyShockZombieMarleneRadiated,FuriousRamsayBlackDecoyShockZombieDarleneRadiated,FuriousRamsayBlackDecoyShockZombieLabRadiated,FuriousRamsayBlackDecoyShockZombieArleneRadiated,FuriousRamsayBlackDecoyShockZombieMoeRadiated,FuriousRamsayBlackDecoyShockZombieJanitorRadiated,FuriousRamsayBlackDecoyShockZombieJoeRadiated,FuriousRamsayBlackDecoyShockZombieFemaleFatRadiated,FuriousRamsayBlackDecoyShockZombieBoeRadiated,FuriousRamsayBlackDecoyShockZombieWightRadiated" value="6" phase="5">
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyFireShockSmokeZombieBikerRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieOldTimerRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieCheerleaderRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieSkateboarderRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieSoldierRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieSpiderRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieSteveRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieYoRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieMarleneRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieDarleneRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieLabRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieArleneRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieMoeRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieJanitorRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieJoeRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieFemaleFatRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieBoeRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated" value="8" phase="5">
 				<property name="delay" value="3"/>
 			</action>
 
 			<objective type="BlockPlace" id="FuriousRamsayBlackShieldDecoyTier5" value="4" phase="6"/>
-			<objective type="FetchKeep" id="FuriousRamsayZombieRemains" value="15" phase="6"/>
+			<objective type="FetchKeep" id="FuriousRamsayZombieRemainsFireShockSmoke" value="10" phase="6"/>
 			<objective type="Craft">
 				<property name="phase" value="6"/>
-				<property name="item" value="FuriousRamsayZombieBodyBagPile"/>
+				<property name="item" value="FuriousRamsayZombieBodyBagPileTier5"/>
 				<property name="count" value="1"/>
 			</objective>
 			<action type="SpawnEnemy" id="FuriousRamsayInvisibleDecoyEntityDone" value="5" phase="6">
 				<property name="delay" value="3"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyShockZombieBikerRadiated,FuriousRamsayBlackDecoyShockZombieOldTimerRadiated,FuriousRamsayBlackDecoyShockZombieCheerleaderRadiated,FuriousRamsayBlackDecoyShockZombieSkateboarderRadiated,FuriousRamsayBlackDecoyShockZombieSoldierRadiated,FuriousRamsayBlackDecoyShockZombieSpiderRadiated,FuriousRamsayBlackDecoyShockZombieSteveRadiated,FuriousRamsayBlackDecoyShockZombieYoRadiated,FuriousRamsayBlackDecoyShockZombieMarleneRadiated,FuriousRamsayBlackDecoyShockZombieDarleneRadiated,FuriousRamsayBlackDecoyShockZombieLabRadiated,FuriousRamsayBlackDecoyShockZombieArleneRadiated,FuriousRamsayBlackDecoyShockZombieMoeRadiated,FuriousRamsayBlackDecoyShockZombieJanitorRadiated,FuriousRamsayBlackDecoyShockZombieJoeRadiated,FuriousRamsayBlackDecoyShockZombieFemaleFatRadiated,FuriousRamsayBlackDecoyShockZombieBoeRadiated,FuriousRamsayBlackDecoyShockZombieWightRadiated" value="15" phase="6">
+			<action type="SpawnEnemy" id="FuriousRamsayBlackDecoyFireShockSmokeZombieBikerRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieOldTimerRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieCheerleaderRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieSkateboarderRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieSoldierRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieSpiderRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieSteveRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieYoRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieMarleneRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieDarleneRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieLabRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieArleneRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieMoeRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieJanitorRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieJoeRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieFemaleFatRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieBoeRadiated,FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated" value="10" phase="6">
 				<property name="delay" value="6"/>
 			</action>
 
@@ -6168,16 +6168,16 @@
 
 	<append xpath="/quests">
 		<quest_list id="trader_quests_blackshield">
-			<quest id="quest_FuriousRamsayTier1_Surprise" prob="1"/>
-			<quest id="quest_FuriousRamsayTier2_Surprise" prob="1"/>
-			<quest id="quest_FuriousRamsayTier3_Surprise" prob="1"/>
-			<quest id="quest_FuriousRamsayTier4_Surprise" prob="1"/>
-			<quest id="quest_FuriousRamsayTier5_Surprise" prob="1"/>
 			<quest id="quest_FuriousRamsayTier1_Decoys" prob="1"/>
 			<quest id="quest_FuriousRamsayTier2_Decoys" prob="1"/>
 			<quest id="quest_FuriousRamsayTier3_Decoys" prob="1"/>
 			<quest id="quest_FuriousRamsayTier4_Decoys" prob="1"/>
 			<quest id="quest_FuriousRamsayTier5_Decoys" prob="1"/>
+			<quest id="quest_FuriousRamsayTier1_Surprise" prob="1"/>
+			<quest id="quest_FuriousRamsayTier2_Surprise" prob="1"/>
+			<quest id="quest_FuriousRamsayTier3_Surprise" prob="1"/>
+			<quest id="quest_FuriousRamsayTier4_Surprise" prob="1"/>
+			<quest id="quest_FuriousRamsayTier5_Surprise" prob="1"/>
 		</quest_list>
 	</append>
 
