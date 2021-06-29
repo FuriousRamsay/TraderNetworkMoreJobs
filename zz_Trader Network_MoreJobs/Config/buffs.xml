@@ -10,11 +10,18 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayResistHeat" hidden="true" remove_on_death="true">
+			<buff name="FuriousRamsayResistFire" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<effect_group>
-					<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="heat"/>
 					<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffBurningFlamingArrow,buffBurningMolotov,buffBurningEnvironmentHack,buffBurningEnvironment,buffBurningElement"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayResistShock" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<effect_group>
+					<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="electrical"/>
+					<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffShocked"/>
 				</effect_group>
 			</buff>
 
@@ -29,6 +36,17 @@
 				</effect_group>
 			</buff>
 			
+			<buff name="FuriousRamsayAttachShockParticles" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="600"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0"/>
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayFireZombieAoEDamageTimer" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<update_rate value="3"/>
@@ -43,23 +61,84 @@
 				<duration value="3"/>
 				<effect_group>
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-3">
-						<requirement name="EntityTagCompare" tags="player,robot,decoy"/>
+						<requirement name="EntityTagCompare" tags="player,robot"/>
+					</passive_effect>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-6">
+						<requirement name="EntityTagCompare" tags="decoyTier1"/>
+					</passive_effect>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-8">
+						<requirement name="EntityTagCompare" tags="decoyTier2"/>
+					</passive_effect>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-10">
+						<requirement name="EntityTagCompare" tags="decoyTier3"/>
+					</passive_effect>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-12">
+						<requirement name="EntityTagCompare" tags="decoyTier4"/>
+					</passive_effect>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-14">
+						<requirement name="EntityTagCompare" tags="decoyTier5"/>
 					</passive_effect>
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="EntityTagCompare" tags="player,robot,decoy"/>
+						<requirement name="EntityTagCompare" tags="player,robot,decoyTier1,decoyTier2,decoyTier3,decoyTier4,decoyTier5"/>
 					</triggered_effect>
 					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="EntityTagCompare" tags="player,robot,decoy"/>
+						<requirement name="EntityTagCompare" tags="player,robot,decoyTier1,decoyTier2,decoyTier3,decoyTier4,decoyTier5"/>
 					</triggered_effect>
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="EntityTagCompare" tags="player,robot,decoy"/>
+						<requirement name="EntityTagCompare" tags="player,robot,decoyTier1,decoyTier2,decoyTier3,decoyTier4,decoyTier5"/>
 					</triggered_effect>
 					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="EntityTagCompare" tags="player,robot,decoy"/>
+						<requirement name="EntityTagCompare" tags="player,robot,decoyTier1,decoyTier2,decoyTier3,decoyTier4,decoyTier5"/>
 					</triggered_effect>
 				</effect_group>
 			</buff>
 		
+			<buff name="FuriousRamsayShockZombieAoEDamageTimer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="3"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="FuriousRamsayShockZombieAoEDamage"/>
+				</effect_group>
+			</buff>
+			
+			<buff name="FuriousRamsayShockZombieAoEDamage" description_key="buffShockedDesc" tooltip_key="buffShockedTooltip" icon="ui_game_symbol_electric_power" name_key="buffShockedName" icon_color="255,0,0">
+				<damage_type value="heat"/>
+				<stack_type value="replace"/>
+				<duration value="3"/>
+				<effect_group>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-3">
+						<requirement name="EntityTagCompare" tags="player,robot"/>
+					</passive_effect>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-6">
+						<requirement name="EntityTagCompare" tags="decoyTier1"/>
+					</passive_effect>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-8">
+						<requirement name="EntityTagCompare" tags="decoyTier2"/>
+					</passive_effect>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-10">
+						<requirement name="EntityTagCompare" tags="decoyTier3"/>
+					</passive_effect>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-12">
+						<requirement name="EntityTagCompare" tags="decoyTier4"/>
+					</passive_effect>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-14">
+						<requirement name="EntityTagCompare" tags="decoyTier5"/>
+					</passive_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
+						<requirement name="EntityTagCompare" tags="player,robot,decoyTier1,decoyTier2,decoyTier3,decoyTier4,decoyTier5"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="EntityTagCompare" tags="player,robot,decoyTier1,decoyTier2,decoyTier3,decoyTier4,decoyTier5"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="EntityTagCompare" tags="player,robot,decoyTier1,decoyTier2,decoyTier3,decoyTier4,decoyTier5"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="EntityTagCompare" tags="player,robot,decoyTier1,decoyTier2,decoyTier3,decoyTier4,decoyTier5"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayBlackShieldDecoySpawned" hidden="true" remove_on_death="true">
 				<stack_type value="replace"/>
 				<duration value="2"/>

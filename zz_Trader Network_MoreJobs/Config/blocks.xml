@@ -17,6 +17,7 @@
 		</block>
 
 		<block name="FuriousRamsayBlackShieldDecoyBlockBreak">
+			<property name="CreativeMode" value="None"/>
 			<property name="Extends" value="woodWeakNoUpgradeMaster"/>
 			<property name="Class" value="TrapDoor"/>
 			<property name="Material" value="Mmetal_weak"/>
@@ -30,8 +31,52 @@
 			<drop event="Fall" count="0" prob="0"/>
 			<property name="ShowModelOnFall" value="true"/>
 		</block>
+	
+		<block name="FuriousRamsayBlackShieldDecoyPlate">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>			
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Texture" value="352"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldDecoyBlockBreak"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>
 
-		<block name="FuriousRamsayBlackShieldDecoyBase">
+		<block name="FuriousRamsayBlackShieldDecoyTier1">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoMannequinFemale"/>
+		
+			<property name="Shape" value="New"/>
+			<property name="Model" value="plate"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Texture" value="352"/>
+
+			<property name="StabilitySupport" value="true"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldDecoyPlate"/>
+			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayBlackShieldDecoySpawnerTier1" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		
+		<block name="FuriousRamsayBlackShieldDecoySpawnerTier1">
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="FuriousRamsayBlackShieldDecoyTier1"/>			
+		</block>
+
+		<!--<block name="FuriousRamsayBlackShieldDecoyBase">
 			<property name="CreativeMode" value="None"/>
 			<property name="Extends" value="FuriousRamsayBlackShieldDecoyBlockBreak"/>			
 
@@ -44,7 +89,7 @@
 			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
 			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldDecoyBlockBreak"/>
 			<property name="PlantGrowing.FertileLevel" value="0"/>
-			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
 		</block>
@@ -66,9 +111,9 @@
 			<property name="PlantGrowing.GrowthRate" value="0.01"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
-		</block>	
+		</block>	-->
 
-		<block name="FuriousRamsayBlackShieldDecoySpawnerTier1">
+		<!--<block name="FuriousRamsayBlackShieldDecoySpawnerTier1">
 			<property name="CreativeMode" value="None"/>
 			<property name="Class" value="SpawnEntity"/>
 			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
@@ -78,129 +123,125 @@
 			<property name="ModelOffset" value="0,-10,0"/>
 			<drop event="Fall" count="0" prob="0"/>
 			<property name="SpawnClass" value="FuriousRamsayBlackShieldDecoyTier1"/>
-		</block>
-
+		</block>-->
+		
 		<block name="FuriousRamsayBlackShieldDecoyTier2">
 			<property name="CreativeMode" value="None"/>
-			<property name="Material" value="Mmetal"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Texture" value="282"/>
-			<property name="IsTerrainDecoration" value="true"/>
-			<property name="Model" value="#Other/Items?Misc/snowballPrefab.prefab"/>
-			<property name="ModelOffset" value="0,-0.1,0"/>
-			<property name="StabilitySupport" value="false"/>
+			<property name="Extends" value="decoMannequinFemale"/>
+		
+			<property name="Shape" value="New"/>
+			<property name="Model" value="plate"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Texture" value="352"/>
+
+			<property name="StabilitySupport" value="true"/>
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
-			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldDecoyBase"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldDecoyPlate"/>
 			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayBlackShieldDecoySpawnerTier2" />
 			<property name="PlantGrowing.FertileLevel" value="0"/>
 			<property name="PlantGrowing.GrowthRate" value="0.01"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
 		</block>	
-
+		
 		<block name="FuriousRamsayBlackShieldDecoySpawnerTier2">
 			<property name="CreativeMode" value="None"/>
-			<property name="Class" value="SpawnEntity"/>
 			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
 			<property name="Shape" value="ModelEntity"/>			
-			<property name="Mesh" value="models"/>
-			<property name="Model" value="#Other/Items?Misc/snowballPrefab.prefab"/>
-			<property name="ModelOffset" value="0,-10,0"/>
-			<drop event="Fall" count="0" prob="0"/>
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
 			<property name="SpawnClass" value="FuriousRamsayBlackShieldDecoyTier2"/>
 		</block>
-
+		
 		<block name="FuriousRamsayBlackShieldDecoyTier3">
 			<property name="CreativeMode" value="None"/>
-			<property name="Material" value="Mmetal"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Texture" value="282"/>
-			<property name="IsTerrainDecoration" value="true"/>
-			<property name="Model" value="#Other/Items?Misc/snowballPrefab.prefab"/>
-			<property name="ModelOffset" value="0,-0.1,0"/>
-			<property name="StabilitySupport" value="false"/>
+			<property name="Extends" value="decoMannequinFemale"/>
+		
+			<property name="Shape" value="New"/>
+			<property name="Model" value="plate"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Texture" value="352"/>
+
+			<property name="StabilitySupport" value="true"/>
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
-			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldDecoyBase"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldDecoyPlate"/>
 			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayBlackShieldDecoySpawnerTier3" />
 			<property name="PlantGrowing.FertileLevel" value="0"/>
 			<property name="PlantGrowing.GrowthRate" value="0.01"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
 		</block>	
-
+		
 		<block name="FuriousRamsayBlackShieldDecoySpawnerTier3">
 			<property name="CreativeMode" value="None"/>
-			<property name="Class" value="SpawnEntity"/>
 			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
 			<property name="Shape" value="ModelEntity"/>			
-			<property name="Mesh" value="models"/>
-			<property name="Model" value="#Other/Items?Misc/snowballPrefab.prefab"/>
-			<property name="ModelOffset" value="0,-10,0"/>
-			<drop event="Fall" count="0" prob="0"/>
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
 			<property name="SpawnClass" value="FuriousRamsayBlackShieldDecoyTier3"/>
 		</block>
 
 		<block name="FuriousRamsayBlackShieldDecoyTier4">
 			<property name="CreativeMode" value="None"/>
-			<property name="Material" value="Mmetal"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Texture" value="282"/>
-			<property name="IsTerrainDecoration" value="true"/>
-			<property name="Model" value="#Other/Items?Misc/snowballPrefab.prefab"/>
-			<property name="ModelOffset" value="0,-0.1,0"/>
-			<property name="StabilitySupport" value="false"/>
+			<property name="Extends" value="decoMannequinFemale"/>
+		
+			<property name="Shape" value="New"/>
+			<property name="Model" value="plate"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Texture" value="352"/>
+
+			<property name="StabilitySupport" value="true"/>
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
-			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldDecoyBase"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldDecoyPlate"/>
 			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayBlackShieldDecoySpawnerTier4" />
 			<property name="PlantGrowing.FertileLevel" value="0"/>
 			<property name="PlantGrowing.GrowthRate" value="0.01"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
 		</block>	
-
+		
 		<block name="FuriousRamsayBlackShieldDecoySpawnerTier4">
 			<property name="CreativeMode" value="None"/>
-			<property name="Class" value="SpawnEntity"/>
 			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
 			<property name="Shape" value="ModelEntity"/>			
-			<property name="Mesh" value="models"/>
-			<property name="Model" value="#Other/Items?Misc/snowballPrefab.prefab"/>
-			<property name="ModelOffset" value="0,-10,0"/>
-			<drop event="Fall" count="0" prob="0"/>
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
 			<property name="SpawnClass" value="FuriousRamsayBlackShieldDecoyTier4"/>
 		</block>
 
 		<block name="FuriousRamsayBlackShieldDecoyTier5">
 			<property name="CreativeMode" value="None"/>
-			<property name="Material" value="Mmetal"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Texture" value="282"/>
-			<property name="IsTerrainDecoration" value="true"/>
-			<property name="Model" value="#Other/Items?Misc/snowballPrefab.prefab"/>
-			<property name="ModelOffset" value="0,-0.1,0"/>
-			<property name="StabilitySupport" value="false"/>
+			<property name="Extends" value="decoMannequinFemale"/>
+		
+			<property name="Shape" value="New"/>
+			<property name="Model" value="plate"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Texture" value="352"/>
+
+			<property name="StabilitySupport" value="true"/>
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
-			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldDecoyBase"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldDecoyPlate"/>
 			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayBlackShieldDecoySpawnerTier5" />
 			<property name="PlantGrowing.FertileLevel" value="0"/>
 			<property name="PlantGrowing.GrowthRate" value="0.01"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
 		</block>	
-
+		
 		<block name="FuriousRamsayBlackShieldDecoySpawnerTier5">
 			<property name="CreativeMode" value="None"/>
-			<property name="Class" value="SpawnEntity"/>
 			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
 			<property name="Shape" value="ModelEntity"/>			
-			<property name="Mesh" value="models"/>
-			<property name="Model" value="#Other/Items?Misc/snowballPrefab.prefab"/>
-			<property name="ModelOffset" value="0,-10,0"/>
-			<drop event="Fall" count="0" prob="0"/>
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
 			<property name="SpawnClass" value="FuriousRamsayBlackShieldDecoyTier5"/>
 		</block>
 
