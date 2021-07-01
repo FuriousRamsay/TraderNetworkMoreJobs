@@ -2,6 +2,101 @@
 
 		<append xpath="/buffs" >		
 
+			<buff name="FuriousRamsayVerifyArmorFire" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="0.1"/>
+					<effect_group name="FuriousRamsayVerifyArmorFire">
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayResistFire">
+							<requirement name="WornItems" tags="FuriousRamsayArmorFire" operation="Equals" value="5"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStack" action="AddBuff" buff="FuriousRamsayResistFire">
+							<requirement name="WornItems" tags="FuriousRamsayArmorFire" operation="Equals" value="5"/>
+						</triggered_effect>						
+						<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="FuriousRamsayResistFire">
+							<requirement name="WornItems" tags="FuriousRamsayArmorFire" operation="LT" value="5"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStack" action="RemoveBuff" buff="FuriousRamsayResistFire">
+							<requirement name="WornItems" tags="FuriousRamsayArmorFire" operation="LT" value="5"/>
+						</triggered_effect>						
+					</effect_group>
+			</buff>			
+			
+			<buff name="FuriousRamsayVerifyArmorShock" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="0.1"/>
+					<effect_group name="FuriousRamsayVerifyArmorShock">
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayResistShock">
+							<requirement name="WornItems" tags="FuriousRamsayArmorShock" operation="Equals" value="5"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStack" action="AddBuff" buff="FuriousRamsayResistShock">
+							<requirement name="WornItems" tags="FuriousRamsayArmorShock" operation="Equals" value="5"/>
+						</triggered_effect>						
+						<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="FuriousRamsayResistShock">
+							<requirement name="WornItems" tags="FuriousRamsayArmorShock" operation="LT" value="5"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStack" action="RemoveBuff" buff="FuriousRamsayResistShock">
+							<requirement name="WornItems" tags="FuriousRamsayArmorShock" operation="LT" value="5"/>
+						</triggered_effect>						
+					</effect_group>
+			</buff>			
+
+			<buff name="FuriousRamsayVerifyArmorFireShock" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="0.1"/>
+					<effect_group name="FuriousRamsayVerifyArmorFireShock">
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayResistFireShock">
+							<requirement name="WornItems" tags="FuriousRamsayArmorFireShock" operation="Equals" value="5"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStack" action="AddBuff" buff="FuriousRamsayResistFireShock">
+							<requirement name="WornItems" tags="FuriousRamsayArmorFireShock" operation="Equals" value="5"/>
+						</triggered_effect>						
+						<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="FuriousRamsayResistFireShock">
+							<requirement name="WornItems" tags="FuriousRamsayArmorFireShock" operation="LT" value="5"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStack" action="RemoveBuff" buff="FuriousRamsayResistFireShock">
+							<requirement name="WornItems" tags="FuriousRamsayArmorFireShock" operation="LT" value="5"/>
+						</triggered_effect>						
+					</effect_group>
+			</buff>			
+			
+			<buff name="FuriousRamsayVerifyArmorSmoke" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="0.1"/>
+					<effect_group name="FuriousRamsayVerifyArmorSmoke">
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayResistSmoke">
+							<requirement name="WornItems" tags="FuriousRamsayArmorSmoke" operation="Equals" value="5"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStack" action="AddBuff" buff="FuriousRamsayResistSmoke">
+							<requirement name="WornItems" tags="FuriousRamsayArmorSmoke" operation="Equals" value="5"/>
+						</triggered_effect>						
+						<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="FuriousRamsayResistSmoke">
+							<requirement name="WornItems" tags="FuriousRamsayArmorSmoke" operation="LT" value="5"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStack" action="RemoveBuff" buff="FuriousRamsayResistSmoke">
+							<requirement name="WornItems" tags="FuriousRamsayArmorSmoke" operation="LT" value="5"/>
+						</triggered_effect>						
+					</effect_group>
+			</buff>			
+			
+			<buff name="FuriousRamsayVerifyArmorFireShockSmoke" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="0.1"/>
+					<effect_group name="FuriousRamsayVerifyArmorFireShockSmoke">
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayResistFireShockSmoke">
+							<requirement name="WornItems" tags="FuriousRamsayArmorFireShockSmoke" operation="Equals" value="5"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStack" action="AddBuff" buff="FuriousRamsayResistFireShockSmoke">
+							<requirement name="WornItems" tags="FuriousRamsayArmorFireShockSmoke" operation="Equals" value="5"/>
+						</triggered_effect>						
+						<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="FuriousRamsayResistFireShockSmoke">
+							<requirement name="WornItems" tags="FuriousRamsayArmorFireShockSmoke" operation="LT" value="5"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStack" action="RemoveBuff" buff="FuriousRamsayResistFireShockSmoke">
+							<requirement name="WornItems" tags="FuriousRamsayArmorFireShockSmoke" operation="LT" value="5"/>
+						</triggered_effect>						
+					</effect_group>
+			</buff>			
+			
 			<buff name="FuriousRamsayVanishTimer" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<duration value="600"/>
@@ -11,9 +106,21 @@
 			</buff>
 
 			<buff name="FuriousRamsayResistFire" hidden="true" remove_on_death="true">
-				<stack_type value="ignore"/>
+				<stack_type value="replace"/>
 				<effect_group>
-					<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffBurningFlamingArrow,buffBurningMolotov,buffBurningEnvironmentHack,buffBurningEnvironment,buffBurningElement"/>
+					<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffBurningFlamingArrow,buffBurningMolotov,buffBurningEnvironmentHack,buffBurningEnvironment,buffBurningElement,buffIsOnFire"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You are immune to fire" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurningFlamingArrow"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurningMolotov"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurningEnvironmentHack"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurningEnvironment"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurningElement"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffIsOnFire"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ShowToolbeltMessage" message="You are no longer immune to fire" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
 				</effect_group>
 			</buff>
 
@@ -22,6 +129,35 @@
 				<effect_group>
 					<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="electrical"/>
 					<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffShocked"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You are immune to shock" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffShocked"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ShowToolbeltMessage" message="You are no longer immune to shock" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayResistFireShock" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<effect_group>
+					<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffBurningFlamingArrow,buffBurningMolotov,buffBurningEnvironmentHack,buffBurningEnvironment,buffBurningElement,buffBurning"/>
+					<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="electrical"/>
+					<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffShocked"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You are immune to fire and shock" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurningFlamingArrow"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurningMolotov"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurningEnvironmentHack"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurningEnvironment"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurningElement"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffIsOnFire"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffShocked"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ShowToolbeltMessage" message="You are no longer immune to fire and shock" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
 				</effect_group>
 			</buff>
 
@@ -29,6 +165,35 @@
 				<stack_type value="ignore"/>
 				<effect_group>
 					<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="heat"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You are immune to explosions" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffRemove" action="ShowToolbeltMessage" message="You are no longer immune to explosions" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayResistFireShockSmoke" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<effect_group>
+					<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="heat"/>
+					<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffBurningFlamingArrow,buffBurningMolotov,buffBurningEnvironmentHack,buffBurningEnvironment,buffBurningElement,buffBurning"/>
+					<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="electrical"/>
+					<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffShocked"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You are immune to fire, shock and explosions" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurningFlamingArrow"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurningMolotov"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurningEnvironmentHack"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurningEnvironment"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurningElement"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffIsOnFire"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffShocked"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ShowToolbeltMessage" message="You are no longer immune to fire, shock and explosions" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
 				</effect_group>
 			</buff>
 
@@ -1948,7 +2113,228 @@
 				</effect_group>
 			</buff>
 
+			<buff name="VerifyFuriousRamsayBlackShieldShockMotorcycleShock">
+				<damage_type value="electrical"/>
+				<stack_type value="replace"/>
+				<duration value="4"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="20" buff="VerifyFuriousRamsayBlackShieldShockMotorcycleShockTrigger">
+						<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldShockMotorcycle"/>
+						<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldShockMotorcycleShockTrigger"/>
+					</triggered_effect>
+
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-3">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</passive_effect>
+					<passive_effect name="RunSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</passive_effect>
+					
+					<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</passive_effect>
+					
+					<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</passive_effect>
+					
+					<passive_effect name="JumpStrength" operation="perc_subtract" value="0.9,0" duration="0,4.3">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</passive_effect>
+					
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+					
+					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="ETrapHit" operation="set" value="0">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="electric_fence_impact">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="electric_fence_impact">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="electric_fence_impact">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+			
+			<buff name="VerifyFuriousRamsayBlackShieldFireMotorcycleFire">
+				<damage_type value="heat"/>
+				<stack_type value="replace"/>
+				<duration value="4"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="20" buff="VerifyFuriousRamsayBlackShieldShockMotorcycleFireTrigger">
+						<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldFireMotorcycle"/>
+						<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldFireMotorcycleFireTrigger"/>
+					</triggered_effect>
+
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-3">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</passive_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+					
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="molotov_explosion">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+									
+					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+					
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_onFire">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_onFire">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_onFire">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FireMediumLoop">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+				</effect_group>
+			</buff>
+
+
+			<buff name="VerifyFuriousRamsayBlackShieldFireMotorcycleShockTrigger" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" local_offset="0,.7,1.8" local_rotation="0,0,0" parent_transform="Origin"/>
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+				</effect_group>
+			</buff>
+			
+			<buff name="VerifyFuriousRamsayBlackShieldShockMotorcycleFireTrigger" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,.7,1.7" local_rotation="0,0,0" parent_transform="Origin"/>
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_onFire"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayBlackShieldShockMotorcycleSpark" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="2"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_fence_sparks" local_offset=".15,-0.86,0.7" local_rotation="0,0,0" parent_transform="Origin/handlebar_joint"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="particleeffects/p_electric_fence_sparks" local_offset="-.15,-0.86,0.7" local_rotation="0,0,0" parent_transform="Origin/handlebar_joint"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayBlackShieldShockMotorcycle" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<update_rate value=".1"/>
+				<effect_group>
+
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true"  transform_path="headlight"/>
+					<!--<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="burntZombieSmoke" local_offset=".15,.1,-2.2" local_rotation="90,0,0" parent_transform="headlight"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="particleeffects/burntZombieSmoke" local_offset="-.15,.1,-2.2" local_rotation="90,0,0" parent_transform="headlight"/>-->
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  transform_path="headlight"/>
+			
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#Other/Items?Weapons/Melee/taserbaton/taserBaton.prefab" local_offset=".15,-.5,0.25" local_rotation="130,0,0" parent_transform="Origin/handlebar_joint"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/taserbaton/taserBaton.prefab" local_offset="-.15,-.5,0.25" local_rotation="130,0,0" parent_transform="Origin/handlebar_joint"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Chainsaw/chainsawPrefab.prefab" local_offset=".24,.78,0.58" local_rotation="0,0,0" parent_transform="Origin"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#Other/Items?Weapons/Ranged/DoubleBarrelShotgun/doubleBarrelShotgunPrefab.prefab" local_offset="-.24,.68,0.32" local_rotation="0,0,0" parent_transform="Origin"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#Entities/LootContainers?metalToolBoxClosedPrefab.prefab" local_offset="0,1.16,-0.75" local_rotation="0,180,0" parent_transform="Origin"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Knives/hunting_knifePrefab.prefab" local_offset="0.1,1.03,-0.63" local_rotation="180,0,90" parent_transform="Origin"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/nailgunPrefab.prefab" local_offset=".4,.8,-0.73" local_rotation="270,0,90" parent_transform="Origin"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Axe/fireaxe_ironPrefab.prefab" local_offset="-.36,0.85,-0.73" local_rotation="0,180,0" parent_transform="Origin"/>
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1.5" buff="VerifyFuriousRamsayBlackShieldShockMotorcycleShock">
+						<requirement name="EntityTagCompare" target="other" tags="zombie,enemy"/>
+						<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldShockMotorcycleShock"/>
+					</triggered_effect>
+
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayBlackShieldFireMotorcycle" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<update_rate value=".1"/>
+				<effect_group>
+
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true"  transform_path="headlight"/>
+					<!--<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="burntZombieSmoke" local_offset=".15,.1,-2.2" local_rotation="90,0,0" parent_transform="headlight"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="particleeffects/burntZombieSmoke" local_offset="-.15,.1,-2.2" local_rotation="90,0,0" parent_transform="headlight"/>-->
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  transform_path="headlight"/>
+			
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#Other/Items?Weapons/Ranged/Molotov/molotovPrefab.prefab" local_offset=".15,-0.6,0.38" local_rotation="130,0,0" parent_transform="Origin/handlebar_joint"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/Molotov/molotovPrefab.prefab" local_offset="-.15,-0.6,0.38" local_rotation="130,0,0" parent_transform="Origin/handlebar_joint"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/augerPrefab.prefab" local_offset=".3,.58,0.37" local_rotation="0,0,0" parent_transform="Origin"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#Other/Items?Weapons/Ranged/Magnums/magnumPrefab.prefab" local_offset="-.24,.68,0.32" local_rotation="0,0,0" parent_transform="Origin"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Industrial/barrelOilPrefab" local_offset="0.08,1.09,-1.03" local_rotation="0,180,90" parent_transform="Origin"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/SawedOffPumpShotgun/PumpShotgunPrefab.prefab" local_offset="0.05,1.22,-0.85" local_rotation="180,90,90" parent_transform="Origin"/>
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1.5" buff="VerifyFuriousRamsayBlackShieldFireMotorcycleFire">
+						<requirement name="EntityTagCompare" target="other" tags="zombie,enemy"/>
+						<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldFireMotorcycleFire"/>
+					</triggered_effect>
+
+				</effect_group>
+			</buff>
+
 		</append>		
+
+		<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldShockMotorcycle">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldShockMotorcycle"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldShockMotorcycle"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldShockMotorcycleSpark">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldShockMotorcycle"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldShockMotorcycleSpark"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldFireMotorcycle">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldFireMotorcycle"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldFireMotorcycle"/>
+			</triggered_effect>
+		</append>
 		
 </Config>
 

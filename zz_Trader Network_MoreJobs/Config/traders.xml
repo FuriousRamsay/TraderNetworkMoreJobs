@@ -224,7 +224,47 @@
 		<trader_item_group name="FuriousRamsayTraderMiscItems" >
 			<item group="FuriousRamsayGroupMiscItems"/>
 		</trader_item_group>
+		
+		<trader_item_group name="FuriousRamsayTraderArmorFire" >
+			<item name="FuriousRamsayArmorHelmetFire"/>
+			<item name="FuriousRamsayArmorChestFire"/>
+			<item name="FuriousRamsayArmorGloveFire"/>
+			<item name="FuriousRamsayArmorLegFire"/>
+			<item name="FuriousRamsayArmorBootFire"/>
+		</trader_item_group>
 
+		<trader_item_group name="FuriousRamsayTraderArmorShock" >
+			<item name="FuriousRamsayArmorHelmetShock"/>
+			<item name="FuriousRamsayArmorChestShock"/>
+			<item name="FuriousRamsayArmorGloveShock"/>
+			<item name="FuriousRamsayArmorLegShock"/>
+			<item name="FuriousRamsayArmorBootShock"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayTraderArmorFireShock" >
+			<item name="FuriousRamsayArmorHelmetFireShock"/>
+			<item name="FuriousRamsayArmorChestFireShock"/>
+			<item name="FuriousRamsayArmorGloveFireShock"/>
+			<item name="FuriousRamsayArmorLegFireShock"/>
+			<item name="FuriousRamsayArmorBootFireShock"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayTraderArmorSmoke" >
+			<item name="FuriousRamsayArmorHelmetSmoke"/>
+			<item name="FuriousRamsayArmorChestSmoke"/>
+			<item name="FuriousRamsayArmorGloveSmoke"/>
+			<item name="FuriousRamsayArmorLegSmoke"/>
+			<item name="FuriousRamsayArmorBootSmoke"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayTraderArmorFireShockSmoke" >
+			<item name="FuriousRamsayArmorHelmetFireShockSmoke"/>
+			<item name="FuriousRamsayArmorChestFireShockSmoke"/>
+			<item name="FuriousRamsayArmorGloveFireShockSmoke"/>
+			<item name="FuriousRamsayArmorLegFireShockSmoke"/>
+			<item name="FuriousRamsayArmorBootFireShockSmoke"/>
+		</trader_item_group>
+		
 	</append>
 
 	<remove xpath="/traders/trader_info[@id='5']"/>
@@ -254,22 +294,9 @@
 				<item group="FuriousRamsayGroupArmorLightMixed" count="1,2"/>
 				<item group="FuriousRamsayGroupArmorHeavyMixed" count="1,2"/>
 				<item group="modAllT1SecretStash" count="1,2"/>
+				<item group="FuriousRamsayTraderArmorFire" count="1" prob="0.25"/>
+				<item group="FuriousRamsayTraderArmorShock" count="1" prob="0.2"/>
 			</trader_items>
-
-			<tier_items level="1,499" count="all"> <!-- requires Perk 0 -->
-				<!-- Bug: The count is overridden by "all" anyway so all probabilities are =1 -->
-				<item group="tools" count="1"/>
-				<item group="FuriousRamsayWeaponsGunsMixed" count="1,2"/>
-				<item group="FuriousRamsayWeaponsGunParts" count="1"/>
-				<item group="ammo" count="1,2"/>
-				<item group="ammoSupplies" count="1,2"/>
-				<item group="FuriousRamsayGroupArmorLightMixed" count="1"/>
-				<item group="FuriousRamsayGroupArmorHeavyMixed" count="1"/>
-				<item group="commonBooks" count="1,2"/>
-				<item group="rareBooks" count="1"/>
-				<item group="modMeleeT1"/>
-				<item group="modAllT2SecretStash" count="1,2"/>
-			</tier_items>
 
 			<tier_items level="3000,3999" count="all"> <!-- requires Perk 3 -->
 				<!-- Bug: The count is overridden by "all" anyway so all probabilities are =1 -->
@@ -285,7 +312,7 @@
 				<item group="rareBooks" count="1,2"/>
 				<item group="stashOnlyItemsLow" count="1,2"/>
 				<item group="modAllT3SecretStash" count="1,2"/>
-				<item name="drinkJarGrandpasForgettingElixir" count="1"/>
+				<item group="FuriousRamsayTraderArmorFireShock" count="1" prob="0.15"/>
 			</tier_items>
 
 			<tier_items level="4000,4999" count="all"> <!-- requires Perk 4 -->
@@ -301,6 +328,7 @@
 				<item group="stashOnlyItemsHigh" count="2,3"/>
 				<item group="FuriousRamsayWeaponsGunsT3" count="1,2"/>
 				<item group="modAllT4SecretStash" count="1,2"/>
+				<item group="FuriousRamsayTraderArmorSmoke" count="1" prob="0.10"/>
 			</tier_items>
 
 			<tier_items level="5000,-1" count="all"> <!-- requires Perk 5 -->
@@ -317,6 +345,7 @@
 				<item group="stashOnlyItemsHigh" count="3,4"/>
 				<item group="FuriousRamsayWeaponsGunsT3QL5" count="1,2"/>
 				<item group="modAllT5SecretStash" count="1,4"/>
+				<item group="FuriousRamsayTraderArmorFireShockSmoke" count="1" prob="0.05"/>
 			</tier_items>
 		</trader_info>
 	

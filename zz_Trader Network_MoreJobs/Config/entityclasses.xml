@@ -30,6 +30,48 @@
 
 	<append xpath="/entity_classes">		
 
+		<entity_class name="FuriousRamsayBlackShieldShockMotorcycle">
+			<property name="Tags" value="FuriousRamsayBlackShieldShockMotorcycle"/>
+			<property name="Class" value="EntityMotorcycle"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#Entities/Vehicles?motorcycle_Prefab.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="62"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.RadiusBlocks" value="4"/>
+			<property name="Explosion.RadiusEntities" value="4"/>
+			<property name="Explosion.BlockDamage" value="50"/>
+			<property name="Explosion.EntityDamage" value="50"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="ui_game_symbol_motorcycle"/>
+			<property name="NavObject" value="FuriousRamsayBlackShieldShockMotorcycle" />
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldFireMotorcycle">
+			<property name="Tags" value="FuriousRamsayBlackShieldFireMotorcycle"/>
+			<property name="Class" value="EntityMotorcycle"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#Entities/Vehicles?motorcycle_Prefab.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="62"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.RadiusBlocks" value="4"/>
+			<property name="Explosion.RadiusEntities" value="4"/>
+			<property name="Explosion.BlockDamage" value="50"/>
+			<property name="Explosion.EntityDamage" value="50"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="ui_game_symbol_motorcycle"/>
+			<property name="NavObject" value="FuriousRamsayBlackShieldFireMotorcycle" />
+		</entity_class>
+
 		<entity_class name="FuriousRamsayTrainer">		
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Class" value="EntityZombie"/>
@@ -1981,7 +2023,6 @@
 			<property name="SizeScale" value="1.9"/>
 			<property name="SizeScale" value="1.1"/>
 			<property name="Tags" value="entity,robot"/>
-			<property name="Class" value="EntityEnemyAnimal"/>
             <property name="Class" value="EntitySurvivor" />
 			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/junkturret/material/junkTurret.mat"/>
 			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/melee/junksledge/materials/junkSledge.mat"/>
@@ -2604,7 +2645,7 @@
 
         <entity_class name="FuriousRamsayUMATemplateMale" extends="zombieTemplateMale">
 			<property name="HideInSpawnMenu" value="true"/>
-            <property name="Tags" value="entity" />
+            <property name="Tags" value="entity,enemy" />
 			<property name="EntityType" value="Zombie"/>
             <property name="Mesh" value="#Entities/Zombies?Zombies/zombie01Ragdoll.prefab" />
             <property name="Prefab" value="NPC" />
