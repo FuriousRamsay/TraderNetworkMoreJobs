@@ -30,6 +30,25 @@
 
 	<append xpath="/entity_classes">		
 
+		<entity_class name="FuriousRamsayBlackShieldBicycle">
+			<property name="Tags" value="FuriousRamsayBlackShieldBicycle"/>
+			<property name="Class" value="EntityBicycle"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#Entities/Vehicles?bicycle_Prefab.prefab"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="77"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.RadiusBlocks" value="1"/>
+			<property name="Explosion.RadiusEntities" value="1"/>
+			<property name="RotateToGround" value="true"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="ui_game_symbol_bicycle"/>
+			<property name="NavObject" value="bicycle" />
+		</entity_class>
+
 		<entity_class name="FuriousRamsayBlackShieldShockMotorcycle">
 			<property name="Tags" value="FuriousRamsayBlackShieldShockMotorcycle"/>
 			<property name="Class" value="EntityMotorcycle"/>

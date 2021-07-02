@@ -954,7 +954,7 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayBlackShieldDefense1">
+			<buff name="FuriousRamsayBlackShieldDefense1" hidden="true" remove_on_death="true">
 				<stack_type value="replace"/>
 				<duration value="10"/>
 				<effect_group>
@@ -973,7 +973,7 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayBlackShieldDefense2">
+			<buff name="FuriousRamsayBlackShieldDefense2" hidden="true" remove_on_death="true">
 				<stack_type value="replace"/>
 				<duration value="2"/>
 				<effect_group>
@@ -2066,7 +2066,7 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayAddExplosionEnemyBoss">
+			<buff name="FuriousRamsayAddExplosionEnemyBoss" hidden="true" remove_on_death="true">
 				<damage_type value="knockdown"/>
 				<stack_type value="replace"/>
 				<duration value="4"/>
@@ -2113,7 +2113,7 @@
 				</effect_group>
 			</buff>
 
-			<buff name="VerifyFuriousRamsayBlackShieldShockMotorcycleShock">
+			<buff name="VerifyFuriousRamsayBlackShieldShockMotorcycleShock" hidden="true" remove_on_death="true">
 				<damage_type value="electrical"/>
 				<stack_type value="replace"/>
 				<duration value="4"/>
@@ -2184,7 +2184,7 @@
 				</effect_group>
 			</buff>
 			
-			<buff name="VerifyFuriousRamsayBlackShieldFireMotorcycleFire">
+			<buff name="VerifyFuriousRamsayBlackShieldFireMotorcycleFire" hidden="true" remove_on_death="true">
 				<damage_type value="heat"/>
 				<stack_type value="replace"/>
 				<duration value="4"/>
@@ -2234,12 +2234,14 @@
 			</buff>
 
 
-			<buff name="VerifyFuriousRamsayBlackShieldFireMotorcycleShockTrigger" hidden="true">	
+			<buff name="VerifyFuriousRamsayBlackShieldShockMotorcycleShockTrigger" hidden="true">	
 				<stack_type value="replace"/>
 				<duration value="1"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" local_offset="0,.7,1.8" local_rotation="0,0,0" parent_transform="Origin"/>
-					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+					<!--<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" local_offset="0,.7,1.8" local_rotation="0,0,0" parent_transform="Origin"/>-->
+					<!--<triggered_effect trigger="onSelfBuffStart" action="RemoveParticleEffectFromEntity" particle="p_electric_fence_sparks" parent_transform="Origin/handlebar_joint"/>-->
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" local_offset="0,-0.86,0.7" local_rotation="0,0,0" parent_transform="Origin/handlebar_joint"/>
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock" parent_transform="Origin/handlebar_joint"/>
 				</effect_group>
 			</buff>
 			
@@ -2247,8 +2249,8 @@
 				<stack_type value="replace"/>
 				<duration value="1"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,.7,1.7" local_rotation="0,0,0" parent_transform="Origin"/>
-					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_onFire"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-0.86,0.7" local_rotation="0,0,0" parent_transform="Origin/handlebar_joint"/>
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_onFire" parent_transform="Origin/handlebar_joint"/>
 				</effect_group>
 			</buff>
 
@@ -2266,10 +2268,7 @@
 				<duration value="10"/>
 				<update_rate value=".1"/>
 				<effect_group>
-
 					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true"  transform_path="headlight"/>
-					<!--<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="burntZombieSmoke" local_offset=".15,.1,-2.2" local_rotation="90,0,0" parent_transform="headlight"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="particleeffects/burntZombieSmoke" local_offset="-.15,.1,-2.2" local_rotation="90,0,0" parent_transform="headlight"/>-->
 					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  transform_path="headlight"/>
 			
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#Other/Items?Weapons/Melee/taserbaton/taserBaton.prefab" local_offset=".15,-.5,0.25" local_rotation="130,0,0" parent_transform="Origin/handlebar_joint"/>
@@ -2282,24 +2281,26 @@
 					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Knives/hunting_knifePrefab.prefab" local_offset="0.1,1.03,-0.63" local_rotation="180,0,90" parent_transform="Origin"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/nailgunPrefab.prefab" local_offset=".4,.8,-0.73" local_rotation="270,0,90" parent_transform="Origin"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Axe/fireaxe_ironPrefab.prefab" local_offset="-.36,0.85,-0.73" local_rotation="0,180,0" parent_transform="Origin"/>
+				</effect_group>
+			</buff>
 
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1.5" buff="VerifyFuriousRamsayBlackShieldShockMotorcycleShock">
+			<buff name="VerifyFuriousRamsayBlackShieldShockMotorcycleEffects" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<update_rate value=".1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="VerifyFuriousRamsayBlackShieldShockMotorcycleShock">
 						<requirement name="EntityTagCompare" target="other" tags="zombie,enemy"/>
 						<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldShockMotorcycleShock"/>
 					</triggered_effect>
-
 				</effect_group>
 			</buff>
 
 			<buff name="VerifyFuriousRamsayBlackShieldFireMotorcycle" hidden="true">	
 				<stack_type value="replace"/>
 				<duration value="10"/>
-				<update_rate value=".1"/>
 				<effect_group>
-
 					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="true"  transform_path="headlight"/>
-					<!--<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="burntZombieSmoke" local_offset=".15,.1,-2.2" local_rotation="90,0,0" parent_transform="headlight"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="particleeffects/burntZombieSmoke" local_offset="-.15,.1,-2.2" local_rotation="90,0,0" parent_transform="headlight"/>-->
 					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  transform_path="headlight"/>
 			
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#Other/Items?Weapons/Ranged/Molotov/molotovPrefab.prefab" local_offset=".15,-0.6,0.38" local_rotation="130,0,0" parent_transform="Origin/handlebar_joint"/>
@@ -2310,30 +2311,89 @@
 					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Industrial/barrelOilPrefab" local_offset="0.08,1.09,-1.03" local_rotation="0,180,90" parent_transform="Origin"/>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/SawedOffPumpShotgun/PumpShotgunPrefab.prefab" local_offset="0.05,1.22,-0.85" local_rotation="180,90,90" parent_transform="Origin"/>
+				</effect_group>
+			</buff>
 
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1.5" buff="VerifyFuriousRamsayBlackShieldFireMotorcycleFire">
+			<buff name="VerifyFuriousRamsayBlackShieldFireMotorcycleEffects" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<update_rate value=".1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="VerifyFuriousRamsayBlackShieldFireMotorcycleFire">
 						<requirement name="EntityTagCompare" target="other" tags="zombie,enemy"/>
 						<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldFireMotorcycleFire"/>
 					</triggered_effect>
+				</effect_group>
+			</buff>
 
+			<buff name="VerifyFuriousRamsayBlackShieldMotorcycleSmokeStart" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="burntZombieSmoke" local_offset="0,0.5,-1.4" local_rotation="0,0,0" parent_transform="Origin"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayBlackShieldMotorcycleSmokeEnd" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveParticleEffectFromEntity" particle="burntZombieSmoke" parent_transform="Origin"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayBlackShieldBicycle" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Entities/Vehicles?bicycle_Prefab.prefab" local_offset="0,0,-1.3" local_rotation="0,0,0" parent_transform="Origin"/>
+					<!--<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#Entities/Vehicles?bicycle_Prefab.prefab" local_offset="0,1,1" local_rotation="0,0,0" parent_transform="Origin"/>-->
 				</effect_group>
 			</buff>
 
 		</append>		
 
 		<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldBicycle">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldBicycle"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldBicycle"/>
+			</triggered_effect>
+
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldShockMotorcycle">
 				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldShockMotorcycle"/>
 				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldShockMotorcycle"/>
 			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldShockMotorcycleSpark">
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldShockMotorcycleEffects">
+				<requirement name="EntityHasMovementTag" tags="driving"/>
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldShockMotorcycle"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldShockMotorcycleEffects"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1" buff="VerifyFuriousRamsayBlackShieldShockMotorcycleSpark">
+				<requirement name="EntityHasMovementTag" tags="driving"/>
 				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldShockMotorcycle"/>
 				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldShockMotorcycleSpark"/>
 			</triggered_effect>
+			
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldFireMotorcycle">
 				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldFireMotorcycle"/>
 				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldFireMotorcycle"/>
 			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldFireMotorcycleEffects">
+				<requirement name="EntityHasMovementTag" tags="driving"/>
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldFireMotorcycle"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldFireMotorcycleEffects"/>
+			</triggered_effect>
+			<!--<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1" buff="VerifyFuriousRamsayBlackShieldMotorcycleSmokeStart">
+				<requirement name="EntityHasMovementTag" tags="driving"/>
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldFireMotorcycle,FuriousRamsayBlackShieldShockMotorcycle"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldMotorcycleSmokeStart"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1" buff="VerifyFuriousRamsayBlackShieldMotorcycleSmokeEnd">
+				<requirement name="!EntityHasMovementTag" tags="driving"/>
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldFireMotorcycle,FuriousRamsayBlackShieldShockMotorcycle"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldMotorcycleSmokeEnd"/>
+			</triggered_effect>-->
 		</append>
 		
 </Config>
