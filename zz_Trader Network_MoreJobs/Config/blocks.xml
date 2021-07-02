@@ -1,5 +1,15 @@
 <Config>
 
+	<append xpath="/blocks/block[@name='cntCar03SedanDamage0Master']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="FuriousRamsayBlackShieldWhiteCarBlock"/>
+			<property name="Item" value="FuriousRamsaySedanRepairKit"/>
+			<property name="ItemCount" value="1"/>
+			<property name="UpgradeHitCount" value="16"/>
+		</property>
+		<property name="CustomUpgradeSound" value="place_block_wood"/>
+	</append>
+
 	<append xpath="/blocks">
 
 		<block name="FuriousRamsayMineHubcap">
@@ -20,8 +30,9 @@
 			<property name="CreativeMode" value="None"/>
 			<property name="Extends" value="woodWeakNoUpgradeMaster"/>
 			<property name="Class" value="TrapDoor"/>
-			<property name="Material" value="Mmetal_weak"/>
-			<property name="Texture" value="352"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
 			<property name="TriggerDelay" value="0.01"/>
 			<property name="TriggerSound" value=""/>
 			<property name="Shape" value="New"/>
@@ -29,14 +40,81 @@
 			<property name="Model" value="Plate"/>
 			<property name="ImposterExchange" value="imposterBlock" param1="86"/>
 			<drop event="Fall" count="0" prob="0"/>
-			<property name="ShowModelOnFall" value="true"/>
+			<property name="ShowModelOnFall" value="false"/>
+		</block>
+	
+		<block name="FuriousRamsayBlackShieldCarBlockBreak">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="woodWeakNoUpgradeMaster"/>
+			<property name="Class" value="TrapDoor"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
+			<property name="TriggerDelay" value="0.01"/>
+			<property name="TriggerSound" value=""/>
+			<property name="Shape" value="New"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="Plate"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="86"/>
+			<drop event="Fall" count="0" prob="0"/>
+			<property name="ShowModelOnFall" value="false"/>
+		</block>
+
+		<block name="FuriousRamsayBlackShieldCarPlate">
+			<property name="Tags" value="FuriousRamsayBlackShieldWhiteCarBlock"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>			
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldCarBlockBreak"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>
+
+		<block name="FuriousRamsayBlackShieldWhiteCarBlock">
+			<property name="Tags" value="FuriousRamsayBlackShieldWhiteCarBlock"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="CustomIconTint" value="255, 255, 255"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="plate"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldCarPlate"/>
+			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayBlackShieldWhiteCarSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		
+		<block name="FuriousRamsayBlackShieldWhiteCarSpawner">
+			<property name="Tags" value="FuriousRamsayBlackShieldWhiteCarBlock"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="FuriousRamsayBlackShieldWhiteCar"/>			
 		</block>
 	
 		<block name="FuriousRamsayBlackShieldDecoyPlate">
 			<property name="CreativeMode" value="None"/>
 			<property name="Extends" value="looseBoardsTrapPlate1x1"/>			
 			<property name="Material" value="Mmetal_weak"/>
-			<property name="Texture" value="352"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
 			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldDecoyBlockBreak"/>
@@ -53,8 +131,8 @@
 			<property name="Shape" value="New"/>
 			<property name="Model" value="plate"/>
 			<property name="Material" value="Mmetal_weak"/>
-			<property name="Texture" value="352"/>
-
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
 			<property name="StabilitySupport" value="true"/>
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
@@ -132,8 +210,8 @@
 			<property name="Shape" value="New"/>
 			<property name="Model" value="plate"/>
 			<property name="Material" value="Mmetal_weak"/>
-			<property name="Texture" value="352"/>
-
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
 			<property name="StabilitySupport" value="true"/>
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
@@ -162,8 +240,8 @@
 			<property name="Shape" value="New"/>
 			<property name="Model" value="plate"/>
 			<property name="Material" value="Mmetal_weak"/>
-			<property name="Texture" value="352"/>
-
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
 			<property name="StabilitySupport" value="true"/>
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
@@ -192,8 +270,8 @@
 			<property name="Shape" value="New"/>
 			<property name="Model" value="plate"/>
 			<property name="Material" value="Mmetal_weak"/>
-			<property name="Texture" value="352"/>
-
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
 			<property name="StabilitySupport" value="true"/>
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
@@ -222,8 +300,8 @@
 			<property name="Shape" value="New"/>
 			<property name="Model" value="plate"/>
 			<property name="Material" value="Mmetal_weak"/>
-			<property name="Texture" value="352"/>
-
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
 			<property name="StabilitySupport" value="true"/>
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>

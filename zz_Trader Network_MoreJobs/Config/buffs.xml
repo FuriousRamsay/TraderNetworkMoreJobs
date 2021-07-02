@@ -105,6 +105,14 @@
 				</effect_group>
 			</buff>
 
+			<buff name="FuriousRamsayVanishTimer5M" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="300"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Degradation" operation="add" value="-99999"/>
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayResistFire" hidden="true" remove_on_death="true">
 				<stack_type value="replace"/>
 				<effect_group>
@@ -2351,9 +2359,182 @@
 				</effect_group>
 			</buff>
 
+			<buff name="VerifyFuriousRamsayBlackShieldWhiteCar" hidden="true">
+				<stack_type value="ignore"/>		
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="Box2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxL"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxR"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxPipeL"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxPipeR"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  transform_path="car_mesh"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Entities/Vehicles?Car/car_white_dmg0Prefab" local_offset="0,0,-1" local_rotation="0,0,0" parent_transform="Origin"/>
+					<!-- 
+					#Entities/Vehicles?bus_shortPrefab.prefab
+					#Entities/Vehicles?bus_shuttlePrefab.prefab
+					#Entities/Vehicles?bus_cityPrefab.prefab
+					#Entities/Vehicles?Truck/armyTruckPrefab.prefab
+					#Entities/Vehicles?busPrefab.prefab
+					-->
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayBlackShieldBlueCar" hidden="true">
+				<stack_type value="ignore"/>		
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="Box2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxL"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxR"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxPipeL"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxPipeR"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  transform_path="car_mesh"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Entities/Vehicles?Car/car_blue_dmg0Prefab" local_offset="0,0,-1" local_rotation="0,0,0" parent_transform="Origin"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayBlackShieldYellowCar" hidden="true">
+				<stack_type value="ignore"/>		
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="Box2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxL"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxR"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxPipeL"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxPipeR"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  transform_path="car_mesh"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Entities/Vehicles?Car/car_yellow_dmg0Prefab" local_offset="0,0,-1" local_rotation="0,0,0" parent_transform="Origin"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayBlackShieldRedCar" hidden="true">
+				<stack_type value="ignore"/>		
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="Box2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxL"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxR"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxPipeL"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxPipeR"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  transform_path="car_mesh"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Entities/Vehicles?Car/car_red_dmg0Prefab" local_offset="0,0,-1" local_rotation="0,0,0" parent_transform="Origin"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayBlackShieldMixedCar" hidden="true">
+				<stack_type value="ignore"/>		
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="Box2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxL"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxR"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxPipeL"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxPipeR"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  transform_path="car_mesh"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Entities/Vehicles?Car/car_mixed_dmg0Prefab" local_offset="0,0,-1" local_rotation="0,0,0" parent_transform="Origin"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayBlackShieldGreenCar" hidden="true">
+				<stack_type value="ignore"/>		
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="Box2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxL"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxR"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxPipeL"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxPipeR"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  transform_path="car_mesh"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Entities/Vehicles?Car/car_green_dmg0Prefab" local_offset="0,0,-1" local_rotation="0,0,0" parent_transform="Origin"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayBlackShieldBlackCar" hidden="true">
+				<stack_type value="ignore"/>		
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="Box2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxL"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxR"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxPipeL"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxPipeR"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  transform_path="car_mesh"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Entities/Vehicles?Car/car_black_dmg0Prefab" local_offset="0,0,-1" local_rotation="0,0,0" parent_transform="Origin"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayBlackShieldCopCar" hidden="true">
+				<stack_type value="ignore"/>		
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your Sedan is being repaired..." />
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="Box2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxL"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxR"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxPipeL"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxPipeR"/>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  transform_path="car_mesh"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Entities/Vehicles?Car/car_cop_dmg0Prefab" local_offset="0,0,-1" local_rotation="0,0,0" parent_transform="Origin"/>
+				</effect_group>
+			</buff>
+
+			<buff name="InitiateFuriousRamsayBlackShieldWhiteCarBlock" hidden="true">
+				<stack_type value="ignore"/>		
+				<duration value="4"/>
+				<update_rate value=".1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FuriousRamsayAlarm"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="10" buff="VerifyFuriousRamsayBlackShieldWhiteCarBlock">
+						<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldWhiteCarBlock"/>
+						<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldWhiteCarBlock"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayBlackShieldWhiteCarBlock" hidden="true">
+				<stack_type value="ignore"/>		
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Attempting to repair the Sedan..." />
+				</effect_group>
+			</buff>
+
 		</append>		
 
 		<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldWhiteCar">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldWhiteCar"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldWhiteCar"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldBlueCar">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldBlueCar"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldBlueCar"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldYellowCar">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldYellowCar"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldYellowCar"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldMixedCar">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldMixedCar"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldMixedCar"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldRedCar">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldRedCar"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldRedCar"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldGreenCar">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldGreenCar"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldGreenCar"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldBlackCar">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldBlackCar"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldBlackCar"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldCopCar">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldCopCar"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldCopCar"/>
+			</triggered_effect>
 
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldBicycle">
 				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldBicycle"/>

@@ -22,19 +22,265 @@
 			<property name="Stacknumber" value="25"/>
 		</item>
 
+		<item name="FuriousRamsayBlackShieldRepairRatchet">
+			<property name="CustomIcon" value="meleeToolSalvageT2Ratchet"/>
+			<property name="CustomIconTint" value="155, 78, 194"/>
+			<property name="TintColor" value="155, 78, 194"/>
+			<property name="Tags" value="tool,nailgun,noMods"/>
+			<property name="DisplayType" value="rangedRepairTool"/>
+			<property name="HoldType" value="72"/>
+			<property name="Meshfile" value="#Other/Items?Tools/ratchetPrefab.prefab"/>
+			<property name="Material" value="MmechanicalParts"/> 
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="ItemNeedsRepair"/>
+			<property name="SoundDestroy" value="metaldestroy"/>
+			<property name="CrosshairUpAfterShot" value="true"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="ShowQuality" value="true"/>
+			<property class="Action0">
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value=".73"/>
+				<property name="Repair_amount" value="1000"/>
+				<property name="Upgrade_hit_offset" value="-5"/>
+				<property name="Repair_action_sound" value="ratchet"/>
+				<property name="Upgrade_action_sound" value="ratchet"/>
+				<property name="Allowed_upgrade_items" value="FuriousRamsaySedanRepairKit"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value=".73"/>
+				<property name="Repair_amount" value="1000"/>
+				<property name="Upgrade_hit_offset" value="-5"/>
+				<property name="Repair_action_sound" value="ratchet"/>
+				<property name="Upgrade_action_sound" value="ratchet"/>
+				<property name="Allowed_upgrade_items" value="FuriousRamsaySedanRepairKit"/>
+				<property name="Sound_start" value="swoosh"/>
+				<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+			</property>
+			<property name="Group" value="Tools/Traps"/>
+			<property name="RepairExpMultiplier" value="10.8"/>
+			<property name="EconomicValue" value="1000"/>
+			<effect_group name="FuriousRamsayBlackShieldRepairRatchetStats" tiered="false">
+				<display_value name="dBlockRepairAmount" value="1000"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1000" tags="nailgun"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="nailgun"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayBlackShieldRepairRatchetEffects" tiered="false">
+				<triggered_effect trigger="onSelfUpgradedBlock" action="ShowToolbeltMessage" message="Attempting to repair the Sedan..."/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsaySedanRepairKit">
+			<property name="CustomIcon" value="resourceRepairKit"/>
+			<property name="CustomIconTint" value="125, 192, 255"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Msteel"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="10"/> 
+			<property name="EconomicValue" value="1000"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="Group" value="Resources"/>
+			<property name="RepairTime" value="0.5"/>
+			<property name="RepairAmount" value="100"/>
+			<property name="CraftingIngredientTime" value=".2"/>
+		</item>
+
+		<item name="FuriousRamsayBlackShieldWhiteCar">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Tags" value="vehicle"/>
+			<property name="DescriptionKey" value="FuriousRamsayBlackShieldWhiteCarDesc"/>
+
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="CustomIconTint" value="255, 255, 255"/>
+
+			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
+			
+			<property name="EconomicValue" value="2500"/>
+			<property class="Action1">
+				<property name="Vehicle" value="FuriousRamsayBlackShieldWhiteCar"/>
+				<property name="VehicleSize" value="2.5, 2.1, 5"/>
+			</property>
+			<effect_group name="FuriousRamsayBlackShieldCarStats" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="4"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1500"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBlackShieldBlueCar">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Tags" value="vehicle"/>
+			<property name="DescriptionKey" value="FuriousRamsayBlackShieldBlueCarDesc"/>
+
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="CustomIconTint" value="66, 81, 112"/>
+
+			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
+			
+			<property name="EconomicValue" value="2500"/>
+			<property class="Action1">
+				<property name="Vehicle" value="FuriousRamsayBlackShieldBlueCar"/>
+				<property name="VehicleSize" value="2.5, 2.1, 5"/>
+			</property>
+			<effect_group name="FuriousRamsayBlackShieldCarStats" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="4"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1500"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBlackShieldYellowCar">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Tags" value="vehicle"/>
+			<property name="DescriptionKey" value="FuriousRamsayBlackShieldYellowCarDesc"/>
+
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="CustomIconTint" value="189, 165, 47"/>
+
+			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
+			
+			<property name="EconomicValue" value="2500"/>
+			<property class="Action1">
+				<property name="Vehicle" value="FuriousRamsayBlackShieldYellowCar"/>
+				<property name="VehicleSize" value="2.5, 2.1, 5"/>
+			</property>
+			<effect_group name="FuriousRamsayBlackShieldCarStats" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="4"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1500"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBlackShieldRedCar">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Tags" value="vehicle"/>
+			<property name="DescriptionKey" value="FuriousRamsayBlackShieldRedCarDesc"/>
+
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="CustomIconTint" value="140, 58, 52"/>
+
+			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
+			
+			<property name="EconomicValue" value="2500"/>
+			<property class="Action1">
+				<property name="Vehicle" value="FuriousRamsayBlackShieldRedCar"/>
+				<property name="VehicleSize" value="2.5, 2.1, 5"/>
+			</property>
+			<effect_group name="FuriousRamsayBlackShieldCarStats" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="4"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1500"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBlackShieldMixedCar">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Tags" value="vehicle"/>
+			<property name="DescriptionKey" value="FuriousRamsayBlackShieldMixedCarDesc"/>
+
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="CustomIconTint" value="191, 186, 186"/>
+
+			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
+			
+			<property name="EconomicValue" value="2500"/>
+			<property class="Action1">
+				<property name="Vehicle" value="FuriousRamsayBlackShieldMixedCar"/>
+				<property name="VehicleSize" value="2.5, 2.1, 5"/>
+			</property>
+			<effect_group name="FuriousRamsayBlackShieldCarStats" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="4"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1500"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBlackShieldGreenCar">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Tags" value="vehicle"/>
+			<property name="DescriptionKey" value="FuriousRamsayBlackShieldGreenCarDesc"/>
+
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="CustomIconTint" value="191, 209, 188"/>
+
+			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
+			
+			<property name="EconomicValue" value="2500"/>
+			<property class="Action1">
+				<property name="Vehicle" value="FuriousRamsayBlackShieldGreenCar"/>
+				<property name="VehicleSize" value="2.5, 2.1, 5"/>
+			</property>
+			<effect_group name="vehicleBicyclePlaceable" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="4"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1500"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBlackShieldBlackCar">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Tags" value="vehicle"/>
+			<property name="DescriptionKey" value="FuriousRamsayBlackShieldBlackCarDesc"/>
+
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="CustomIconTint" value="67, 69, 67"/>
+
+			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
+			
+			<property name="EconomicValue" value="2500"/>
+			<property class="Action1">
+				<property name="Vehicle" value="FuriousRamsayBlackShieldBlackCar"/>
+				<property name="VehicleSize" value="2.5, 2.1, 5"/>
+			</property>
+			<effect_group name="FuriousRamsayBlackShieldCarStats" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="4"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1500"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBlackShieldCopCar">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Tags" value="vehicle"/>
+			<property name="DescriptionKey" value="FuriousRamsayBlackShieldCopCarDesc"/>
+
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="CustomIconTint" value="50, 50, 50"/>
+
+			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
+			
+			<property name="EconomicValue" value="2500"/>
+			<property class="Action1">
+				<property name="Vehicle" value="FuriousRamsayBlackShieldCopCar"/>
+				<property name="VehicleSize" value="2.5, 2.1, 5"/>
+			</property>
+			<effect_group name="FuriousRamsayBlackShieldCarStats" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="4"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1500"/>
+			</effect_group>
+		</item>
+
 		<item name="FuriousRamsayBlackShieldBicycle">
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Tags" value="vehicle"/>
 			<property name="DescriptionKey" value="FuriousRamsayBlackShieldBicycleDesc"/>
 
 			<property name="CustomIcon" value="vehicleBicyclePlaceable"/>
 			<property name="CustomIconTint" value="168, 81, 91"/>
 
 			<property name="Meshfile" value="#Entities/Vehicles?bicycle_Prefab.prefab"/>
+			
 			<property name="EconomicValue" value="2500"/>
 			<property class="Action1">
 				<property name="Vehicle" value="FuriousRamsayBlackShieldBicycle"/>
+				<property name="VehicleSize" value="2.5, 2.1, 5"/>
 			</property>
-			<effect_group name="vehicleBicyclePlaceable" tiered="false">
+			<effect_group name="FuriousRamsayBlackShieldBicycleStats" tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="4"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="1500"/>
@@ -43,6 +289,7 @@
 		
 		<item name="FuriousRamsayBlackShieldShockMotorcycle">
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Tags" value="vehicle"/>
 			<property name="DescriptionKey" value="FuriousRamsayBlackShieldShockMotorcycleDesc"/>
 			<property name="CustomIcon" value="vehicleMotorcyclePlaceable"/>
 			<property name="CustomIconTint" value="70, 182, 219"/>
@@ -52,7 +299,7 @@
 				<property name="Vehicle" value="FuriousRamsayBlackShieldShockMotorcycle"/>
 				<property name="VehicleSize" value="1.3, 1.9, 3"/>
 			</property>
-			<effect_group name="vehicleMotorcyclePlaceable" tiered="false">
+			<effect_group name="FuriousRamsayBlackShieldShockMotorcycleStats" tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="4"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="6000"/>
@@ -61,6 +308,7 @@
 
 		<item name="FuriousRamsayBlackShieldFireMotorcycle">
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="Tags" value="vehicle"/>
 			<property name="DescriptionKey" value="FuriousRamsayBlackShieldFireMotorcycleDesc"/>
 			<property name="CustomIcon" value="vehicleMotorcyclePlaceable"/>
 			<property name="CustomIconTint" value="168, 81, 91"/>
@@ -70,7 +318,7 @@
 				<property name="Vehicle" value="FuriousRamsayBlackShieldFireMotorcycle"/>
 				<property name="VehicleSize" value="1.3, 1.9, 3"/>
 			</property>
-			<effect_group name="vehicleMotorcyclePlaceable" tiered="false">
+			<effect_group name="FuriousRamsayBlackShieldFireMotorcycleStats" tiered="false">
 				<passive_effect name="ModSlots" operation="base_set" value="4"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="6000"/>
@@ -1345,9 +1593,6 @@
 			<property name="EconomicValue" value="20"/>
 			<property name="Candrop" value="false"/>
 			<property name="SellableToTrader" value="false"/>
-			<effect_group name="FuriousRamsayBlackShieldDecoy" tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" target="self" buff="FuriousRamsayBlackShieldDecoySpawned"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayBlackShieldDecoyTier1">
@@ -1356,14 +1601,20 @@
 				<property name="Class" value="PlaceAsBlock"/>
 				<property name="Delay" value=".5"/>
 				<property name="Blockname" value="FuriousRamsayBlackShieldDecoyTier1"/>
-				<requirement name="CVarCompare" cvar="$FuriousRamsayDecoyPlaced" operation="GTE" value="1"/>
+				<!--<requirement name="CVarCompare" cvar="$FuriousRamsayDecoyPlaced" operation="GTE" value="1"/>-->
 			</property>
 			<property class="Action1">
 				<property name="Class" value="PlaceAsBlock"/>
 				<property name="Delay" value=".5"/>
 				<property name="Blockname" value="FuriousRamsayBlackShieldDecoyTier1"/>
-				<requirement name="CVarCompare" cvar="$FuriousRamsayDecoyPlaced" operation="GTE" value="1"/>
+				<!--<requirement name="CVarCompare" cvar="$FuriousRamsayDecoyPlaced" operation="GTE" value="1"/>-->
 			</property>
+			<effect_group name="FuriousRamsayBlackShieldDecoy" tiered="false">
+				<!--<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" target="self" buff="FuriousRamsayBlackShieldDecoySpawned"/>
+				<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" target="self" buff="FuriousRamsayBlackShieldDecoySpawned"/>-->
+				<!--<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Attempting to assemble Decoy..."/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" target="self" message="Attempting to assemble Decoy..."/>-->
+			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayBlackShieldDecoyTier2">

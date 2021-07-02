@@ -42,6 +42,20 @@
 			
 		</SoundDataNode>
 
+		<SoundDataNode name="FuriousRamsayHonk">
+
+			<AudioSource name="Sounds/AudioSource_VO_Announce"/>
+			<AudioClip ClipName="Sounds/Electricity/Alarms/alarm1_lp"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/> 
+			<LowestPitch name="0.1"/>
+			<HighestPitch name="0.1"/>
+			<NoiseScale value="1"/> 
+			<MaxVoices value="10"/> 
+			<MaxRepeatRate value="0"/> 
+		
+		</SoundDataNode>
+
 		<SoundDataNode name="FuriousRamsayBeep"> 
 			<AudioSource name="Sounds/AudioSource_PainLG"/>
 			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
@@ -55,6 +69,88 @@
 			<HighestPitch name="0.2"/>
 			<Channel name="Mouth"/>
 		</SoundDataNode>		
+
+		<SoundDataNode name="FuriousRamsayCarAccel1"> 
+			<AudioSource name="Sounds/AudioSource_Vehicle"/>
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="Sounds/Vehicles/Suv/suv_accel1"/>
+			<LowestPitch name="0.1"/>
+			<HighestPitch name="0.1"/>
+			<LocalCrouchVolumeScale value="1.0"/> 
+			<CrouchNoiseScale value="0.5"/> 
+			<NoiseScale value="1"/> 
+			<MaxVoices value="2"/> 
+			<MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="FuriousRamsayCarAccel2"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="Sounds/Vehicles/Suv/suv_accel2"/>
+			<LowestPitch name="0.1"/>
+			<HighestPitch name="0.1"/>
+			<LocalCrouchVolumeScale value="1.0"/> 
+			<CrouchNoiseScale value="0.5"/> 
+			<NoiseScale value="1"/> 
+			<MaxVoices value="2"/> 
+			<MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="FuriousRamsayCarAccel3"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="Sounds/Vehicles/Suv/suv_accel3"/>
+			<LowestPitch name="0.1"/>
+			<HighestPitch name="0.1"/>
+			<LocalCrouchVolumeScale value="1.0"/> 
+			<CrouchNoiseScale value="0.5"/> 
+			<NoiseScale value="1"/> 
+			<MaxVoices value="2"/> 
+			<MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="FuriousRamsayCarTurbo"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+			<Noise ID="3" noise="30" time="3" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60"/>
+			<AudioClip ClipName="Sounds/Vehicles/Suv/suv_turbo"/>
+			<LowestPitch name="0.1"/>
+			<HighestPitch name="0.1"/>
+			<LocalCrouchVolumeScale value="1.0"/> 
+			<CrouchNoiseScale value="0.5"/> 
+			<NoiseScale value="1"/> 
+			<MaxVoices value="2"/> 
+			<MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="FuriousRamsayCarDecel1"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+			<AudioClip ClipName="Sounds/Vehicles/Suv/suv_decel1"/>
+			<LowestPitch name="0.1"/>
+			<HighestPitch name="0.1"/>
+			<LocalCrouchVolumeScale value="1.0"/> 
+			<CrouchNoiseScale value="0.5"/> 
+			<NoiseScale value="1"/> 
+			<MaxVoices value="2"/> 
+			<MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="FuriousRamsayCarDecel2"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+			<AudioClip ClipName="Sounds/Vehicles/Suv/suv_decel2"/>
+			<LowestPitch name="0.1"/>
+			<HighestPitch name="0.1"/>
+			<LocalCrouchVolumeScale value="1.0"/> 
+			<CrouchNoiseScale value="0.5"/> 
+			<NoiseScale value="1"/> 
+			<MaxVoices value="2"/> 
+			<MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
+
+		<SoundDataNode name="FuriousRamsayCarSpeed_lp"> <AudioSource name="Sounds/AudioSource_Vehicle"/>
+			<AudioClip ClipName="Sounds/Vehicles/Suv/suv_max_speed_lp" Loop="true"/>
+			<LowestPitch name="0.1"/>
+			<HighestPitch name="0.1"/>
+			<LocalCrouchVolumeScale value="1.0"/> 
+			<CrouchNoiseScale value="0.5"/> 
+			<NoiseScale value="1"/> 
+			<MaxVoices value="2"/> 
+			<MaxRepeatRate value="0.01"/> 
+		</SoundDataNode>
 
 		<SoundDataNode name="FuriousRamsayMotorcycleStart"> 
 			<AudioSource name="Sounds/AudioSource_Vehicle"/>
@@ -153,6 +249,7 @@
 		</SoundDataNode>
 
 		<SoundDataNode name="FuriousRamsayMotorcycleEmpty"> 
+			<AudioSource name="Sounds/AudioSource_Vehicle"/>
 			<AudioClip ClipName="Sounds/Vehicles/Motorbike/motorbike_empty_1"/>
 			<AudioClip ClipName="Sounds/Vehicles/Motorbike/motorbike_empty_2"/>
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
