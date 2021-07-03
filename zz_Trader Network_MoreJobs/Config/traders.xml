@@ -265,6 +265,30 @@
 			<item name="FuriousRamsayArmorBootFireShockSmoke"/>
 		</trader_item_group>
 		
+		<trader_item_group name="FuriousRamsayTraderSedans" >
+			<item name="FuriousRamsayBlackShieldWhiteCar"/>
+			<item name="FuriousRamsayBlackShieldBlueCar"/>
+			<item name="FuriousRamsayBlackShieldYellowCar"/>
+			<item name="FuriousRamsayBlackShieldRedCar"/>
+			<item name="FuriousRamsayBlackShieldMixedCar"/>
+			<item name="FuriousRamsayBlackShieldGreenCar"/>
+			<item name="FuriousRamsayBlackShieldBlackCar"/>
+			<item name="FuriousRamsayBlackShieldCopCar"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayTraderEarlyVehicles" >
+			<item name="vehicleBicyclePlaceable"/>
+			<item name="FuriousRamsayBlackShieldBicycle"/>
+			<item name="vehicleMinibikePlaceable"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayTraderLaterVehicles" >
+			<item name="vehicleMotorcyclePlaceable"/>
+			<item name="vehicle4x4TruckPlaceable"/>
+			<item name="FuriousRamsayBlackShieldFireMotorcycle"/>
+			<item name="FuriousRamsayBlackShieldShockMotorcycle"/>
+		</trader_item_group>
+
 	</append>
 
 	<remove xpath="/traders/trader_info[@id='5']"/>
@@ -297,7 +321,7 @@
 				<item group="modAllT1SecretStash" count="1,2"/>
 				<item group="FuriousRamsayTraderArmorFire" count="1"/>
 				<item group="FuriousRamsayTraderArmorShock" count="1"/>
-				<item name="FuriousRamsayBlackShieldBicycle" count="1"/>
+				<item group="FuriousRamsayTraderEarlyVehicles" count="1"/>
 			</trader_items>
 
 			<tier_items level="3000,3999" count="all"> <!-- requires Perk 3 -->
@@ -316,9 +340,9 @@
 				<item group="FuriousRamsayTraderArmorFire" count="1"/>
 				<item group="FuriousRamsayTraderArmorShock" count="1"/>
 				<item group="FuriousRamsayTraderArmorFireShock" count="1"/>
-				<item name="FuriousRamsayBlackShieldBicycle" count="1"/>
-				<item name="FuriousRamsayBlackShieldFireMotorcycle" count="1"/>
-				<item name="FuriousRamsayBlackShieldShockMotorcycle" count="1"/>
+				<item group="FuriousRamsayTraderEarlyVehicles" count="1"/>
+				<item group="FuriousRamsayTraderSedans" count="1"/>
+				<item group="FuriousRamsayTraderLaterVehicles" count="1"/>			
 			</tier_items>
 
 			<tier_items level="4000,4999" count="all"> <!-- requires Perk 4 -->
@@ -337,8 +361,8 @@
 				<item group="FuriousRamsayTraderArmorShock" count="1"/>
 				<item group="FuriousRamsayTraderArmorFireShock" count="1"/>
 				<item group="FuriousRamsayTraderArmorSmoke" count="1"/>
-				<item name="FuriousRamsayBlackShieldFireMotorcycle" count="1"/>
-				<item name="FuriousRamsayBlackShieldShockMotorcycle" count="1"/>
+				<item group="FuriousRamsayTraderSedans" count="1"/>
+				<item group="FuriousRamsayTraderLaterVehicles" count="1"/>			
 			</tier_items>
 
 			<tier_items level="5000,-1" count="all"> <!-- requires Perk 5 -->
@@ -359,8 +383,8 @@
 				<item group="FuriousRamsayTraderArmorFireShock" count="1"/>
 				<item group="FuriousRamsayTraderArmorSmoke" count="1"/>
 				<item group="FuriousRamsayTraderArmorFireShockSmoke" count="1"/>
-				<item name="FuriousRamsayBlackShieldFireMotorcycle" count="1"/>
-				<item name="FuriousRamsayBlackShieldShockMotorcycle" count="1"/>
+				<item group="FuriousRamsayTraderSedans" count="1"/>
+				<item group="FuriousRamsayTraderLaterVehicles" count="1"/>			
 			</tier_items>
 		</trader_info>
 	

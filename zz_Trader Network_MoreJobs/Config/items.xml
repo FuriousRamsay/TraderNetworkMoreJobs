@@ -1,5 +1,7 @@
 <Config>
 
+	<set xpath="/items/item[@name='vehicle4x4TruckPlaceable']/property[@name='EconomicValue']/@value">15000</set>
+
 	<append xpath="/items">
 
 		<item name="FuriousRamsayNoteMaster">
@@ -9,6 +11,7 @@
 			<property name="Weight" value="5"/>
 			<property name="CustomIcon" value="questMaster"/>
 			<property name="EconomicValue" value="100"/>
+			<property name="SellableToTrader" value="false"/>
 			<property name="Stacknumber" value="25"/>
 		</item>
 
@@ -19,7 +22,178 @@
 			<property name="DescriptionKey" value="qc_FuriousRamsayChallengeDesc"/>
 			<property name="CustomIcon" value="challengeQuestMaster"/>
 			<property name="EconomicValue" value="100"/>
+			<property name="SellableToTrader" value="false"/>
 			<property name="Stacknumber" value="25"/>
+		</item>
+
+		<item name="FuriousRamsayFireZombieBonePowder">
+			<property name="CustomIcon" value="resourceCement"/>
+			<property name="CustomIconTint" value="168, 81, 91"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="FuriousRamsayFireZombieBonePowderMaterial"/>
+			<property name="Weight" value="4"/>
+			<property name="Stacknumber" value="100"/>
+			<property name="EconomicValue" value="25"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicBundleSize" value="50"/>
+			<property name="Group" value="Resources"/>
+			<property name="CraftingIngredientTime" value="2"/>
+		</item>
+
+		<item name="FuriousRamsayShockZombieBonePowder">
+			<property name="CustomIcon" value="resourceCement"/>
+			<property name="CustomIconTint" value="70, 182, 219"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="FuriousRamsayShockZombieBonePowderMaterial"/>
+			<property name="Weight" value="4"/>
+			<property name="Stacknumber" value="100"/>
+			<property name="EconomicValue" value="25"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicBundleSize" value="50"/>
+			<property name="Group" value="Resources"/>
+			<property name="CraftingIngredientTime" value="2"/>
+		</item>
+
+		<item name="FuriousRamsayFireShockZombieBonePowder">
+			<property name="CustomIcon" value="resourceCement"/>
+			<property name="CustomIconTint" value="222, 141, 49"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="FuriousRamsayFireShockZombieBonePowderMaterial"/>
+			<property name="Weight" value="4"/>
+			<property name="Stacknumber" value="100"/>
+			<property name="EconomicValue" value="25"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicBundleSize" value="50"/>
+			<property name="Group" value="Resources"/>
+			<property name="CraftingIngredientTime" value="2"/>
+		</item>
+
+		<item name="FuriousRamsaySmokeZombieBonePowder">
+			<property name="CustomIcon" value="resourceCement"/>
+			<property name="CustomIconTint" value="160, 60, 176"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="FuriousRamsaySmokeZombieBonePowderMaterial"/>
+			<property name="Weight" value="4"/>
+			<property name="Stacknumber" value="100"/>
+			<property name="EconomicValue" value="25"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicBundleSize" value="50"/>
+			<property name="Group" value="Resources"/>
+			<property name="CraftingIngredientTime" value="2"/>
+		</item>
+
+		<item name="FuriousRamsayFireShockSmokeZombieBonePowder">
+			<property name="CustomIcon" value="resourceCement"/>
+			<property name="CustomIconTint" value="214, 209, 51"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="FuriousRamsayFireShockSmokeZombieBonePowderMaterial"/>
+			<property name="Weight" value="4"/>
+			<property name="Stacknumber" value="100"/>
+			<property name="EconomicValue" value="25"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicBundleSize" value="50"/>
+			<property name="Group" value="Resources"/>
+			<property name="CraftingIngredientTime" value="2"/>
+		</item>
+
+		<item name="FuriousRamsayFireArmorRepairKit">
+			<property name="CustomIcon" value="resourceRepairKit"/>
+			<property name="CustomIconTint" value="168, 81, 91"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Msteel"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="25"/> 
+			<property name="EconomicValue" value="100"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="Group" value="Resources"/>
+			<property name="RepairTime" value="0.5"/>
+			<property name="RepairAmount" value="100"/>
+			<property name="CraftingIngredientTime" value=".2"/>
+		</item>
+
+		<item name="FuriousRamsayShockArmorRepairKit">
+			<property name="CustomIcon" value="resourceRepairKit"/>
+			<property name="CustomIconTint" value="70, 182, 219"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Msteel"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="25"/> 
+			<property name="EconomicValue" value="100"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="Group" value="Resources"/>
+			<property name="RepairTime" value="0.5"/>
+			<property name="RepairAmount" value="100"/>
+			<property name="CraftingIngredientTime" value=".2"/>
+		</item>
+
+		<item name="FuriousRamsayFireShockArmorRepairKit">
+			<property name="CustomIcon" value="resourceRepairKit"/>
+			<property name="CustomIconTint" value="222, 141, 49"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Msteel"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="25"/> 
+			<property name="EconomicValue" value="100"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="Group" value="Resources"/>
+			<property name="RepairTime" value="0.5"/>
+			<property name="RepairAmount" value="100"/>
+			<property name="CraftingIngredientTime" value=".2"/>
+		</item>
+
+		<item name="FuriousRamsaySmokeArmorRepairKit">
+			<property name="CustomIcon" value="resourceRepairKit"/>
+			<property name="CustomIconTint" value="160, 60, 176"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Msteel"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="25"/> 
+			<property name="EconomicValue" value="100"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="Group" value="Resources"/>
+			<property name="RepairTime" value="0.5"/>
+			<property name="RepairAmount" value="100"/>
+			<property name="CraftingIngredientTime" value=".2"/>
+		</item>
+
+		<item name="FuriousRamsayFireShockSmokeArmorRepairKit">
+			<property name="CustomIcon" value="resourceRepairKit"/>
+			<property name="CustomIconTint" value="214, 209, 51"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Msteel"/>
+			<property name="Weight" value="1"/>
+			<property name="Stacknumber" value="25"/> 
+			<property name="EconomicValue" value="100"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicBundleSize" value="10"/>
+			<property name="Group" value="Resources"/>
+			<property name="RepairTime" value="0.5"/>
+			<property name="RepairAmount" value="100"/>
+			<property name="CraftingIngredientTime" value=".2"/>
 		</item>
 
 		<item name="FuriousRamsayBlackShieldRepairRatchet">
@@ -38,6 +212,7 @@
 			<property name="CrosshairUpAfterShot" value="true"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="ShowQuality" value="true"/>
+			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="Class" value="Repair"/>
 				<property name="Delay" value=".73"/>
@@ -83,6 +258,7 @@
 			<property name="Stacknumber" value="10"/> 
 			<property name="EconomicValue" value="1000"/>
 			<property name="EconomicBundleSize" value="10"/>
+			<property name="SellableToTrader" value="false"/>
 			<property name="Group" value="Resources"/>
 			<property name="RepairTime" value="0.5"/>
 			<property name="RepairAmount" value="100"/>
@@ -99,7 +275,8 @@
 
 			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
 			
-			<property name="EconomicValue" value="2500"/>
+			<property name="EconomicValue" value="7500"/>
+			<property name="SellableToTrader" value="false"/>
 			<property class="Action1">
 				<property name="Vehicle" value="FuriousRamsayBlackShieldWhiteCar"/>
 				<property name="VehicleSize" value="2.5, 2.1, 5"/>
@@ -121,7 +298,8 @@
 
 			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
 			
-			<property name="EconomicValue" value="2500"/>
+			<property name="EconomicValue" value="7500"/>
+			<property name="SellableToTrader" value="false"/>
 			<property class="Action1">
 				<property name="Vehicle" value="FuriousRamsayBlackShieldBlueCar"/>
 				<property name="VehicleSize" value="2.5, 2.1, 5"/>
@@ -143,7 +321,8 @@
 
 			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
 			
-			<property name="EconomicValue" value="2500"/>
+			<property name="EconomicValue" value="7500"/>
+			<property name="SellableToTrader" value="false"/>
 			<property class="Action1">
 				<property name="Vehicle" value="FuriousRamsayBlackShieldYellowCar"/>
 				<property name="VehicleSize" value="2.5, 2.1, 5"/>
@@ -165,7 +344,8 @@
 
 			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
 			
-			<property name="EconomicValue" value="2500"/>
+			<property name="EconomicValue" value="7500"/>
+			<property name="SellableToTrader" value="false"/>
 			<property class="Action1">
 				<property name="Vehicle" value="FuriousRamsayBlackShieldRedCar"/>
 				<property name="VehicleSize" value="2.5, 2.1, 5"/>
@@ -187,7 +367,8 @@
 
 			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
 			
-			<property name="EconomicValue" value="2500"/>
+			<property name="EconomicValue" value="7500"/>
+			<property name="SellableToTrader" value="false"/>
 			<property class="Action1">
 				<property name="Vehicle" value="FuriousRamsayBlackShieldMixedCar"/>
 				<property name="VehicleSize" value="2.5, 2.1, 5"/>
@@ -209,7 +390,8 @@
 
 			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
 			
-			<property name="EconomicValue" value="2500"/>
+			<property name="EconomicValue" value="7500"/>
+			<property name="SellableToTrader" value="false"/>
 			<property class="Action1">
 				<property name="Vehicle" value="FuriousRamsayBlackShieldGreenCar"/>
 				<property name="VehicleSize" value="2.5, 2.1, 5"/>
@@ -231,7 +413,8 @@
 
 			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
 			
-			<property name="EconomicValue" value="2500"/>
+			<property name="EconomicValue" value="7500"/>
+			<property name="SellableToTrader" value="false"/>
 			<property class="Action1">
 				<property name="Vehicle" value="FuriousRamsayBlackShieldBlackCar"/>
 				<property name="VehicleSize" value="2.5, 2.1, 5"/>
@@ -253,7 +436,8 @@
 
 			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
 			
-			<property name="EconomicValue" value="2500"/>
+			<property name="EconomicValue" value="7500"/>
+			<property name="SellableToTrader" value="false"/>
 			<property class="Action1">
 				<property name="Vehicle" value="FuriousRamsayBlackShieldCopCar"/>
 				<property name="VehicleSize" value="2.5, 2.1, 5"/>
@@ -276,6 +460,7 @@
 			<property name="Meshfile" value="#Entities/Vehicles?bicycle_Prefab.prefab"/>
 			
 			<property name="EconomicValue" value="2500"/>
+			<property name="SellableToTrader" value="false"/>
 			<property class="Action1">
 				<property name="Vehicle" value="FuriousRamsayBlackShieldBicycle"/>
 				<property name="VehicleSize" value="2.5, 2.1, 5"/>
@@ -295,6 +480,7 @@
 			<property name="CustomIconTint" value="70, 182, 219"/>
 			<property name="Meshfile" value="#Entities/Vehicles?motorcycle_Prefab.prefab"/>
 			<property name="EconomicValue" value="12500"/>
+			<property name="SellableToTrader" value="false"/>
 			<property class="Action1">
 				<property name="Vehicle" value="FuriousRamsayBlackShieldShockMotorcycle"/>
 				<property name="VehicleSize" value="1.3, 1.9, 3"/>
@@ -314,6 +500,7 @@
 			<property name="CustomIconTint" value="168, 81, 91"/>
 			<property name="Meshfile" value="#Entities/Vehicles?motorcycle_Prefab.prefab"/>
 			<property name="EconomicValue" value="12500"/>
+			<property name="SellableToTrader" value="false"/>
 			<property class="Action1">
 				<property name="Vehicle" value="FuriousRamsayBlackShieldFireMotorcycle"/>
 				<property name="VehicleSize" value="1.3, 1.9, 3"/>
@@ -339,7 +526,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Group" value="Clothing"/>
 			<property name="RepairExpMultiplier" value="10.8"/>
-			<property name="RepairTools" value="FuriousRamsayZombieGasFire"/>
+			<property name="RepairTools" value="FuriousRamsayFireArmorRepairKit"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="ShowQuality" value="true"/>
 			<property name="EconomicValue" value="200"/>
@@ -359,7 +546,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Group" value="Clothing"/>
 			<property name="RepairExpMultiplier" value="10.8"/>
-			<property name="RepairTools" value="FuriousRamsayZombieGasShock"/>
+			<property name="RepairTools" value="FuriousRamsayShockArmorRepairKit"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="ShowQuality" value="true"/>
 			<property name="EconomicValue" value="300"/>
@@ -379,7 +566,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Group" value="Clothing"/>
 			<property name="RepairExpMultiplier" value="10.8"/>
-			<property name="RepairTools" value="FuriousRamsayZombieGasFireShock"/>
+			<property name="RepairTools" value="FuriousRamsayFireShockArmorRepairKit"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="ShowQuality" value="true"/>
 			<property name="EconomicValue" value="400"/>
@@ -391,7 +578,7 @@
 			<property name="DescriptionKey" value="FuriousRamsayArmorMasterSmokeDesc"/>
 			<property name="CustomIcon" value="armorIronHelmet"/>
 			<property name="CustomIconTint" value="160, 60, 176"/>
-			<property name="RepairTools" value="FuriousRamsayZombieGasSmoke"/>
+			<property name="RepairTools" value="FuriousRamsaySmokeArmorRepairKit"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="ShowQuality" value="true"/>
 			<property name="DisplayType" value="armorHeavy"/>
@@ -414,12 +601,12 @@
 			<property name="DisplayType" value="armorHeavy"/>
 			<property name="Material" value="MarmorSteelSet"/> <property name="Weight" value="4"/>
 			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="RepairTools" value="FuriousRamsayFireShockSmokeArmorRepairKit"/>
 			<property name="HoldType" value="45"/>
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Group" value="Clothing"/>
 			<property name="RepairExpMultiplier" value="10.8"/>
-			<property name="RepairTools" value="FuriousRamsayZombieGasFireShockSmoke"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="ShowQuality" value="true"/>
 			<property name="EconomicValue" value="1250"/>
@@ -1428,14 +1615,14 @@
 		</item>
 
 		<item name="FuriousRamsayZombieBodyBagPileTier1">
-			<!--<property name="CreativeMode" value="None"/>-->
+			<property name="CreativeMode" value="None"/>
 			<property name="CustomIcon" value="bodyBagPile"/>
 			<property name="CustomIconTint" value="168, 81, 91"/>
 			<property name="HoldType" value="0"/>
 			<property name="Meshfile" value="Entities/Misc/body_bag_pilePrefab"/>
 			<property name="DropScale" value="1"/>
 			<property name="Weight" value="12"/>
-			<property name="Material" value="Mplastics"/>
+			<property name="Material" value="FuriousRamsayFireZombieBonePowderMaterial"/>
 			<property name="Stacknumber" value="50"/>
 			<property name="EconomicValue" value="20"/>
 			<property name="Candrop" value="true"/>
@@ -1443,14 +1630,14 @@
 		</item>
 
 		<item name="FuriousRamsayZombieBodyBagPileTier2">
-			<!--<property name="CreativeMode" value="None"/>-->
+			<property name="CreativeMode" value="None"/>
 			<property name="CustomIcon" value="bodyBagPile"/>
 			<property name="CustomIconTint" value="70, 182, 219"/>
 			<property name="HoldType" value="0"/>
 			<property name="Meshfile" value="Entities/Misc/body_bag_pilePrefab"/>
 			<property name="DropScale" value="1"/>
 			<property name="Weight" value="12"/>
-			<property name="Material" value="Mplastics"/>
+			<property name="Material" value="FuriousRamsayShockZombieBonePowderMaterial"/>
 			<property name="Stacknumber" value="50"/>
 			<property name="EconomicValue" value="20"/>
 			<property name="Candrop" value="true"/>
@@ -1458,14 +1645,14 @@
 		</item>
 
 		<item name="FuriousRamsayZombieBodyBagPileTier3">
-			<!--<property name="CreativeMode" value="None"/>-->
+			<property name="CreativeMode" value="None"/>
 			<property name="CustomIcon" value="bodyBagPile"/>
 			<property name="CustomIconTint" value="222, 141, 49"/>
 			<property name="HoldType" value="0"/>
 			<property name="Meshfile" value="Entities/Misc/body_bag_pilePrefab"/>
 			<property name="DropScale" value="1"/>
 			<property name="Weight" value="12"/>
-			<property name="Material" value="Mplastics"/>
+			<property name="Material" value="FuriousRamsayFireShockZombieBonePowderMaterial"/>
 			<property name="Stacknumber" value="50"/>
 			<property name="EconomicValue" value="20"/>
 			<property name="Candrop" value="true"/>
@@ -1473,14 +1660,14 @@
 		</item>
 
 		<item name="FuriousRamsayZombieBodyBagPileTier4">
-			<!--<property name="CreativeMode" value="None"/>-->
+			<property name="CreativeMode" value="None"/>
 			<property name="CustomIcon" value="bodyBagPile"/>
 			<property name="CustomIconTint" value="160, 60, 176"/>
 			<property name="HoldType" value="0"/>
 			<property name="Meshfile" value="Entities/Misc/body_bag_pilePrefab"/>
 			<property name="DropScale" value="1"/>
 			<property name="Weight" value="12"/>
-			<property name="Material" value="Mplastics"/>
+			<property name="Material" value="FuriousRamsaySmokeZombieBonePowderMaterial"/>
 			<property name="Stacknumber" value="50"/>
 			<property name="EconomicValue" value="20"/>
 			<property name="Candrop" value="true"/>
@@ -1488,14 +1675,14 @@
 		</item>
 
 		<item name="FuriousRamsayZombieBodyBagPileTier5">
-			<!--<property name="CreativeMode" value="None"/>-->
+			<property name="CreativeMode" value="None"/>
 			<property name="CustomIcon" value="bodyBagPile"/>
 			<property name="CustomIconTint" value="214, 209, 51"/>
 			<property name="HoldType" value="0"/>
 			<property name="Meshfile" value="Entities/Misc/body_bag_pilePrefab"/>
 			<property name="DropScale" value="1"/>
 			<property name="Weight" value="12"/>
-			<property name="Material" value="Mplastics"/>
+			<property name="Material" value="FuriousRamsayFireShockSmokeZombieBonePowderMaterial"/>
 			<property name="Stacknumber" value="50"/>
 			<property name="EconomicValue" value="20"/>
 			<property name="Candrop" value="true"/>
