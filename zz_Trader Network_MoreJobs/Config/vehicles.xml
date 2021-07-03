@@ -2,6 +2,38 @@
 
 	<append xpath="/vehicles">
 		
+		<append xpath="vehicles/vehicle[@name='vehicleBicycle']">
+			<property class="seat1">
+				<property name="position" value="0, .392, -.63"/>
+				<property name="rotation" value="0, 0, 0"/>
+				<property name="exit" value=".8,0,0 ~ -.8,0,0 ~ 0,0,1.4 ~ 0,0,-1.4 ~ 0,-1.5,0"/>
+			</property>
+		</append>
+	
+		<append xpath="vehicles/vehicle[@name='vehicle4x4Truck']">
+			<property class="seat2">
+				<property name="position" value="-.4, .56, -2.46"/>
+				<property name="rotation" value="-25, 180, 0"/>
+				<property name="exit" value="-1.6,0,0 ~ 1.6,0,-1 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+			</property>
+		</append>
+
+		<append xpath="vehicles/vehicle[@name='vehicle4x4Truck']">
+			<property class="seat2">
+				<property name="position" value="-.4, .56, -2.46"/>
+				<property name="rotation" value="-25, 180, 0"/>
+				<property name="exit" value="-1.6,0,0 ~ 1.6,0,-1 ~ -.4,0,-2.8 ~ -.4,0,2.6 ~ -.4,2.1,0"/>
+			</property>
+		</append>
+	
+		<append xpath="vehicles/vehicle[@name='vehicleMotorcycle']">
+			<property class="seat1">
+				<property name="position" value="0, 0.14, -.498"/>
+				<property name="rotation" value="0, 0, 0"/>
+				<property name="exit" value="-.9,0,0 ~ .9,0,0 ~ 0,0,-1.5 ~ 0,0,1.6 ~ 0,1.5,0"/>
+			</property>
+		</append>
+
 		<vehicle name="FuriousRamsayBlackShieldWhiteCar">
 			<property name="cameraDistance" value="5.5, 7"/>
 			<property name="cameraTurnRate" value=".2, .35"/>
@@ -1593,9 +1625,21 @@
 			</property>
 
 			<property class="seat1">
+				<property name="position" value="0, .392, -.63"/>
+				<property name="rotation" value="0, 0, 0"/>
+				<property name="exit" value=".8,0,0 ~ -.8,0,0 ~ 0,0,1.4 ~ 0,0,-1.4 ~ 0,-1.5,0"/>
+			</property>
+
+			<property class="seat2">
 				<property name="position" value="0, .292, -1.5"/>
 				<property name="rotation" value="0, 0, 0"/>
 				<property name="exit" value="-.8,0,0 ~ .8,0,0 ~ 0,0,-1.4 ~ 0,0,1.4 ~ 0,1.5,0"/>
+			</property>
+
+			<property class="seat3">
+				<property name="position" value="0, .392, -.2"/>
+				<property name="rotation" value="0, 0, 0"/>
+				<property name="exit" value=".8,0,0 ~ -.8,0,0 ~ 0,0,1.4 ~ 0,0,-1.4 ~ 0,-1.5,0"/>
 			</property>
 
 			<property class="wheel0">

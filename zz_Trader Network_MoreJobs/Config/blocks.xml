@@ -1,13 +1,83 @@
 <Config>
 
-	<append xpath="/blocks/block[@name='cntCar03SedanDamage0Master']">
+	<append xpath="/blocks/block[@name='cntCar03SedanDamage0v04']">
 		<property class="UpgradeBlock">
-			<property name="ToBlock" value="FuriousRamsayBlackShieldWhiteCarBlock"/>
+			<property name="ToBlock" value="FuriousRamsayBlackShieldWhiteCarSpawner"/>
 			<property name="Item" value="FuriousRamsaySedanRepairKit"/>
 			<property name="ItemCount" value="1"/>
 			<property name="UpgradeHitCount" value="16"/>
 		</property>
-		<property name="CustomUpgradeSound" value="place_block_wood"/>
+		<property name="CustomUpgradeSound" value="place_block_metal"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='cntCar03SedanDamage0v01']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="FuriousRamsayBlackShieldBlueCarBlock"/>
+			<property name="Item" value="FuriousRamsaySedanRepairKit"/>
+			<property name="ItemCount" value="1"/>
+			<property name="UpgradeHitCount" value="16"/>
+		</property>
+		<property name="CustomUpgradeSound" value="place_block_metal"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='cntCar03SedanDamage0v02']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="FuriousRamsayBlackShieldYellowCarBlock"/>
+			<property name="Item" value="FuriousRamsaySedanRepairKit"/>
+			<property name="ItemCount" value="1"/>
+			<property name="UpgradeHitCount" value="16"/>
+		</property>
+		<property name="CustomUpgradeSound" value="place_block_metal"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='cntCar03SedanDamage0v03']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="FuriousRamsayBlackShieldMixedCarBlock"/>
+			<property name="Item" value="FuriousRamsaySedanRepairKit"/>
+			<property name="ItemCount" value="1"/>
+			<property name="UpgradeHitCount" value="16"/>
+		</property>
+		<property name="CustomUpgradeSound" value="place_block_metal"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='cntCar03SedanDamage0v05']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="FuriousRamsayBlackShieldRedCarBlock"/>
+			<property name="Item" value="FuriousRamsaySedanRepairKit"/>
+			<property name="ItemCount" value="1"/>
+			<property name="UpgradeHitCount" value="16"/>
+		</property>
+		<property name="CustomUpgradeSound" value="place_block_metal"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='cntCar03SedanDamage0v06']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="FuriousRamsayBlackShieldGreenCarBlock"/>
+			<property name="Item" value="FuriousRamsaySedanRepairKit"/>
+			<property name="ItemCount" value="1"/>
+			<property name="UpgradeHitCount" value="16"/>
+		</property>
+		<property name="CustomUpgradeSound" value="place_block_metal"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='cntCar03SedanDamage0v07']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="FuriousRamsayBlackShieldBlackCarBlock"/>
+			<property name="Item" value="FuriousRamsaySedanRepairKit"/>
+			<property name="ItemCount" value="1"/>
+			<property name="UpgradeHitCount" value="16"/>
+		</property>
+		<property name="CustomUpgradeSound" value="place_block_metal"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='cntCar03SedanDamage0v08']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="FuriousRamsayBlackShieldCopCarBlock"/>
+			<property name="Item" value="FuriousRamsaySedanRepairKit"/>
+			<property name="ItemCount" value="1"/>
+			<property name="UpgradeHitCount" value="16"/>
+		</property>
+		<property name="CustomUpgradeSound" value="place_block_metal"/>
 	</append>
 
 	<append xpath="/blocks">
@@ -31,14 +101,14 @@
 			<property name="Extends" value="woodWeakNoUpgradeMaster"/>
 			<property name="Class" value="TrapDoor"/>
 			<property name="Material" value="Mcloth"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="Plate"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="86"/>
 			<property name="Mesh" value="transparent"/>
 			<property name="Texture" value="285"/>
 			<property name="TriggerDelay" value="0.01"/>
 			<property name="TriggerSound" value=""/>
-			<property name="Shape" value="New"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="Plate"/>
-			<property name="ImposterExchange" value="imposterBlock" param1="86"/>
 			<drop event="Fall" count="0" prob="0"/>
 			<property name="ShowModelOnFall" value="false"/>
 		</block>
@@ -48,14 +118,14 @@
 			<property name="Extends" value="woodWeakNoUpgradeMaster"/>
 			<property name="Class" value="TrapDoor"/>
 			<property name="Material" value="Mcloth"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="Plate"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="86"/>
 			<property name="Mesh" value="transparent"/>
 			<property name="Texture" value="285"/>
 			<property name="TriggerDelay" value="0.01"/>
 			<property name="TriggerSound" value=""/>
-			<property name="Shape" value="New"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="Plate"/>
-			<property name="ImposterExchange" value="imposterBlock" param1="86"/>
 			<drop event="Fall" count="0" prob="0"/>
 			<property name="ShowModelOnFall" value="false"/>
 		</block>
@@ -101,14 +171,249 @@
 		<block name="FuriousRamsayBlackShieldWhiteCarSpawner">
 			<property name="Tags" value="FuriousRamsayBlackShieldWhiteCarBlock"/>
 			<property name="CreativeMode" value="None"/>
+			<property name="Class" value="SpawnEntity"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<property name="Mesh" value="models"/>
+			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Collide" value="sight"/>
+			<drop event="Fall" count="0" prob="0"/>
+			<property name="SpawnClass" value="FuriousRamsayBlackShieldWhiteCar"/>			
+		</block>
+	
+		<block name="FuriousRamsayBlackShieldBlueCarBlock">
+			<property name="Tags" value="FuriousRamsayBlackShieldBlueCarBlock"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="CustomIconTint" value="255, 255, 255"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="plate"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldCarPlate"/>
+			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayBlackShieldBlueCarSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		
+		<block name="FuriousRamsayBlackShieldBlueCarSpawner">
+			<property name="Tags" value="FuriousRamsayBlackShieldBlueCarBlock"/>
+			<property name="CreativeMode" value="None"/>
 			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
 			<property name="Extends" value="spawnTrader"/>
 			<property name="Shape" value="ModelEntity"/>			
 			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
 			<drop event="Fall" count="0" prob="0"/>		
-			<property name="SpawnClass" value="FuriousRamsayBlackShieldWhiteCar"/>			
+			<property name="SpawnClass" value="FuriousRamsayBlackShieldBlueCar"/>			
 		</block>
-	
+
+		<block name="FuriousRamsayBlackShieldYellowCarBlock">
+			<property name="Tags" value="FuriousRamsayBlackShieldYellowCarBlock"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="CustomIconTint" value="255, 255, 255"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="plate"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldCarPlate"/>
+			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayBlackShieldYellowCarSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		
+		<block name="FuriousRamsayBlackShieldYellowCarSpawner">
+			<property name="Tags" value="FuriousRamsayBlackShieldYellowCarBlock"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="FuriousRamsayBlackShieldYellowCar"/>			
+		</block>
+
+		<block name="FuriousRamsayBlackShieldRedCarBlock">
+			<property name="Tags" value="FuriousRamsayBlackShieldRedCarBlock"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="CustomIconTint" value="255, 255, 255"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="plate"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldCarPlate"/>
+			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayBlackShieldRedCarSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		
+		<block name="FuriousRamsayBlackShieldRedCarSpawner">
+			<property name="Tags" value="FuriousRamsayBlackShieldRedCarBlock"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="FuriousRamsayBlackShieldRedCar"/>			
+		</block>
+
+		<block name="FuriousRamsayBlackShieldMixedCarBlock">
+			<property name="Tags" value="FuriousRamsayBlackShieldMixedCarBlock"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="CustomIconTint" value="255, 255, 255"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="plate"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldCarPlate"/>
+			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayBlackShieldMixedCarSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		
+		<block name="FuriousRamsayBlackShieldMixedCarSpawner">
+			<property name="Tags" value="FuriousRamsayBlackShieldMixedCarBlock"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="FuriousRamsayBlackShieldMixedCar"/>			
+		</block>
+
+		<block name="FuriousRamsayBlackShieldGreenCarBlock">
+			<property name="Tags" value="FuriousRamsayBlackShieldGreenCarBlock"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="CustomIconTint" value="255, 255, 255"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="plate"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldCarPlate"/>
+			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayBlackShieldGreenCarSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		
+		<block name="FuriousRamsayBlackShieldGreenCarSpawner">
+			<property name="Tags" value="FuriousRamsayBlackShieldGreenCarBlock"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="FuriousRamsayBlackShieldGreenCar"/>			
+		</block>
+
+		<block name="FuriousRamsayBlackShieldBlackCarBlock">
+			<property name="Tags" value="FuriousRamsayBlackShieldBlackCarBlock"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="CustomIconTint" value="255, 255, 255"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="plate"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldCarPlate"/>
+			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayBlackShieldBlackCarSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		
+		<block name="FuriousRamsayBlackShieldBlackCarSpawner">
+			<property name="Tags" value="FuriousRamsayBlackShieldBlackCarBlock"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="FuriousRamsayBlackShieldBlackCar"/>			
+		</block>
+
+		<block name="FuriousRamsayBlackShieldCopCarBlock">
+			<property name="Tags" value="FuriousRamsayBlackShieldCopCarBlock"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoMannequinFemale"/>
+			<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+			<property name="CustomIconTint" value="255, 255, 255"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="plate"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBlackShieldCarPlate"/>
+			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayBlackShieldCopCarSpawner" />
+			<property name="HarvestOverdamage" value="true"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+		
+		<block name="FuriousRamsayBlackShieldCopCarSpawner">
+			<property name="Tags" value="FuriousRamsayBlackShieldCopCarBlock"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="FuriousRamsayBlackShieldCopCar"/>			
+		</block>
+
 		<block name="FuriousRamsayBlackShieldDecoyPlate">
 			<property name="CreativeMode" value="None"/>
 			<property name="Extends" value="looseBoardsTrapPlate1x1"/>			
