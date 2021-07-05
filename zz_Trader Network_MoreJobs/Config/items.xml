@@ -1788,19 +1788,16 @@
 				<property name="Class" value="PlaceAsBlock"/>
 				<property name="Delay" value=".5"/>
 				<property name="Blockname" value="FuriousRamsayBlackShieldDecoyTier1"/>
-				<!--<requirement name="CVarCompare" cvar="$FuriousRamsayDecoyPlaced" operation="GTE" value="1"/>-->
+				<requirement name="CVarCompare" cvar="$FuriousRamsayDecoyPlaced" operation="GTE" value="1"/>
 			</property>
 			<property class="Action1">
 				<property name="Class" value="PlaceAsBlock"/>
 				<property name="Delay" value=".5"/>
 				<property name="Blockname" value="FuriousRamsayBlackShieldDecoyTier1"/>
-				<!--<requirement name="CVarCompare" cvar="$FuriousRamsayDecoyPlaced" operation="GTE" value="1"/>-->
+				<requirement name="CVarCompare" cvar="$FuriousRamsayDecoyPlaced" operation="GTE" value="1"/>
 			</property>
 			<effect_group name="FuriousRamsayBlackShieldDecoy" tiered="false">
-				<!--<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" target="self" buff="FuriousRamsayBlackShieldDecoySpawned"/>
-				<triggered_effect trigger="onSelfSecondaryActionStart" action="AddBuff" target="self" buff="FuriousRamsayBlackShieldDecoySpawned"/>-->
-				<!--<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" target="self" message="Attempting to assemble Decoy..."/>
-				<triggered_effect trigger="onSelfSecondaryActionEnd" action="ShowToolbeltMessage" target="self" message="Attempting to assemble Decoy..."/>-->
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble the Decoy..."/>
 			</effect_group>
 		</item>
 
@@ -1818,6 +1815,9 @@
 				<property name="Blockname" value="FuriousRamsayBlackShieldDecoyTier2"/>
 				<requirement name="CVarCompare" cvar="$FuriousRamsayDecoyPlaced" operation="GTE" value="1"/>
 			</property>
+			<effect_group name="FuriousRamsayBlackShieldDecoy" tiered="false">
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble the Decoy..."/>
+			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayBlackShieldDecoyTier3">
@@ -1834,6 +1834,9 @@
 				<property name="Blockname" value="FuriousRamsayBlackShieldDecoyTier3"/>
 				<requirement name="CVarCompare" cvar="$FuriousRamsayDecoyPlaced" operation="GTE" value="1"/>
 			</property>
+			<effect_group name="FuriousRamsayBlackShieldDecoy" tiered="false">
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble the Decoy..."/>
+			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayBlackShieldDecoyTier4">
@@ -1850,6 +1853,9 @@
 				<property name="Blockname" value="FuriousRamsayBlackShieldDecoyTier4"/>
 				<requirement name="CVarCompare" cvar="$FuriousRamsayDecoyPlaced" operation="GTE" value="1"/>
 			</property>
+			<effect_group name="FuriousRamsayBlackShieldDecoy" tiered="false">
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble the Decoy..."/>
+			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayBlackShieldDecoyTier5">
@@ -1866,6 +1872,9 @@
 				<property name="Blockname" value="FuriousRamsayBlackShieldDecoyTier5"/>
 				<requirement name="CVarCompare" cvar="$FuriousRamsayDecoyPlaced" operation="GTE" value="1"/>
 			</property>
+			<effect_group name="FuriousRamsayBlackShieldDecoy" tiered="false">
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble the Decoy..."/>
+			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayThrownBarrel">
@@ -2698,7 +2707,7 @@
 		<item name="qc_FuriousRamsayTier1_BlackShieldBoss">
 			<property name="DescriptionKey" value="qc_FuriousRamsay_BlackShieldBossDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="EconomicValue" value="100"/>
+			<property name="EconomicValue" value="50"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -2712,7 +2721,7 @@
 		<item name="qc_FuriousRamsayTier2_BlackShieldBoss">
 			<property name="DescriptionKey" value="qc_FuriousRamsay_BlackShieldBossDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="EconomicValue" value="250"/>
+			<property name="EconomicValue" value="100"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -2726,7 +2735,7 @@
 		<item name="qc_FuriousRamsayTier3_BlackShieldBoss">
 			<property name="DescriptionKey" value="qc_FuriousRamsay_BlackShieldBossDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="EconomicValue" value="500"/>
+			<property name="EconomicValue" value="150"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -2740,7 +2749,7 @@
 		<item name="qc_FuriousRamsayTier4_BlackShieldBoss">
 			<property name="DescriptionKey" value="qc_FuriousRamsay_BlackShieldBossDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="EconomicValue" value="750"/>
+			<property name="EconomicValue" value="200"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -2754,7 +2763,7 @@
 		<item name="qc_FuriousRamsayTier5_BlackShieldBoss">
 			<property name="DescriptionKey" value="qc_FuriousRamsay_BlackShieldBossDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="EconomicValue" value="1000"/>
+			<property name="EconomicValue" value="250"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -2856,7 +2865,7 @@
 		<item name="qc_FuriousRamsayGhostsTier3">
 			<property name="DescriptionKey" value="qc_FuriousRamsayGhostsTier3Desc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="EconomicValue" value="200"/>
+			<property name="EconomicValue" value="150"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -2870,7 +2879,7 @@
 		<item name="qc_FuriousRamsayGhostsTier4">
 			<property name="DescriptionKey" value="qc_FuriousRamsayGhostsTier4Desc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="EconomicValue" value="400"/>
+			<property name="EconomicValue" value="200"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -2884,7 +2893,7 @@
 		<item name="qc_FuriousRamsayGhostsTier5">
 			<property name="DescriptionKey" value="qc_FuriousRamsayGhostsTier5Desc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="EconomicValue" value="625"/>
+			<property name="EconomicValue" value="250"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -3098,7 +3107,7 @@
 		<item name="qc_FuriousRamsayTier1_minihorde">
 			<property name="DescriptionKey" value="qc_FuriousRamsay_minihordeDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="EconomicValue" value="125"/>
+			<property name="EconomicValue" value="100"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -3112,7 +3121,7 @@
 		<item name="qc_FuriousRamsayTier2_minihorde">
 			<property name="DescriptionKey" value="qc_FuriousRamsay_minihordeDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="EconomicValue" value="250"/>
+			<property name="EconomicValue" value="150"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -3126,7 +3135,7 @@
 		<item name="qc_FuriousRamsayTier3_minihorde">
 			<property name="DescriptionKey" value="qc_FuriousRamsay_minihordeDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="EconomicValue" value="375"/>
+			<property name="EconomicValue" value="200"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -3140,7 +3149,7 @@
 		<item name="qc_FuriousRamsayTier4_minihorde">
 			<property name="DescriptionKey" value="qc_FuriousRamsay_minihordeDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="EconomicValue" value="500"/>
+			<property name="EconomicValue" value="250"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -3154,7 +3163,7 @@
 		<item name="qc_FuriousRamsayTier5_minihorde">
 			<property name="DescriptionKey" value="qc_FuriousRamsay_minihordeDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="EconomicValue" value="625"/>
+			<property name="EconomicValue" value="300"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -3196,7 +3205,7 @@
 		<item name="qc_FuriousRamsayHuntTier3">
 			<property name="DescriptionKey" value="qc_FuriousRamsayHuntDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="EconomicValue" value="200"/>
+			<property name="EconomicValue" value="150"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -3210,7 +3219,7 @@
 		<item name="qc_FuriousRamsayHuntTier4">
 			<property name="DescriptionKey" value="qc_FuriousRamsayHuntDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="EconomicValue" value="300"/>
+			<property name="EconomicValue" value="200"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -3224,7 +3233,7 @@
 		<item name="qc_FuriousRamsayHuntTier5">
 			<property name="DescriptionKey" value="qc_FuriousRamsayHuntDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
-			<property name="EconomicValue" value="400"/>
+			<property name="EconomicValue" value="250"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -4313,6 +4322,19 @@
 				<property name="DamageEntity" value="30"/>
 				<property name="DamageBlock" value="50"/>
 				<property name="Sound_start" value="malehatealert"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandFarmerTrader">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="12"/> 
+			<property class="Action0">
+				<property name="Delay" value="3"/>
+				<property name="Range" value="1.5"/>
+				<property name="DamageEntity" value="30"/>
+				<property name="DamageBlock" value="50"/>
+				<property name="Sound_start" value="club_swinglight"/>
 			</property>
 		</item>
 

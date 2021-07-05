@@ -2492,6 +2492,24 @@
 				</effect_group>
 			</buff>
 
+			<buff name="VerifyFuriousRamsayBlackShieldTrader1Visuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/ClubIron/ClubIronPrefab.prefab" local_offset="-.066,-.05,-.041" local_rotation="0,21.38574,23.00002" parent_transform="RightHand"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Traps/hubcapPrefab" local_offset="0,0.04,0.42" local_rotation="86.00008,359,0.4" parent_transform="LeftHand"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayFarmerKatieVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/hoe_ironPrefab.prefab" local_offset="-.193,.259,.002" local_rotation="0,21.38574,23.00002" parent_transform="RightHand"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Misc/sackPrefab.prefab" local_offset="-0.08014,0.00004,-0.03001" local_rotation="18.0006,180.9691,158.9987" parent_transform="LeftHand"/>
+				</effect_group>
+			</buff>
+
 		</append>		
 
 		<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
@@ -2565,6 +2583,15 @@
 				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldFireMotorcycle"/>
 				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldFireMotorcycleEffects"/>
 			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayFarmerKatieVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="FarmerKatie"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayFarmerKatieVisuals"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldTrader1Visuals">
+				<requirement name="EntityTagCompare" target="other" tags="BlackShieldTrader1"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldTrader1Visuals"/>
+			</triggered_effect>
+
 			<!--<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1" buff="VerifyFuriousRamsayBlackShieldMotorcycleSmokeStart">
 				<requirement name="EntityHasMovementTag" tags="driving"/>
 				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldFireMotorcycle,FuriousRamsayBlackShieldShockMotorcycle"/>

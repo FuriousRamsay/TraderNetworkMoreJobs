@@ -4439,12 +4439,35 @@
 		</entity_class>
 
 		<entity_class name="FuriousRamsayNPCBlackShieldTrader1" extends="FuriousRamsayTraderUMATemplate">
+			<property name="Tags" value="entity,npc,human,BlackShieldTrader1"/>
 			<property name="Archetype" value="FuriousRamsayBlackShieldTrader1"/>
 			<property name="NPCID" value="FuriousRamsayBlackShieldTrader1"/>
 
 			<property name="NavObject" value="FuriousRamsayBlackShieldTrader" />
 		
 			<property name="HandItem" value="FuriousRamsayMeleeHandBlackShieldTrader"/>
+		</entity_class>
+		
+		<entity_class name="FuriousRamsayNPCFarmerKatieTrader" extends="FuriousRamsayTraderUMATemplate">
+			<property name="Tags" value="entity,npc,human,FarmerKatie"/>
+			<property name="Archetype" value="FuriousRamsayFarmerKatie"/>
+			<property name="NPCID" value="FuriousRamsayFarmerKatie"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="Look"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,20,EntityZombie,30"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITask-5" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAlive"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAnimalStag,20,20,EntityZombie,30,30"/>
+			<property name="AITarget-5" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayFarmerTrader" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandFarmerTrader"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayInvisibleEntity" extends="FuriousRamsayCloakedAnimal">
