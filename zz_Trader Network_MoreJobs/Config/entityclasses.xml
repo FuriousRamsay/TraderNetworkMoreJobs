@@ -4926,6 +4926,28 @@
 			<property name="HandItem" value="FuriousRamsayMeleeHandFarmerTrader"/>
 		</entity_class>
 
+		<entity_class name="FuriousRamsayNPCHandymanLukeTrader" extends="FuriousRamsayTraderUMATemplate">
+			<property name="Tags" value="entity,npc,human,HandymanLuke"/>
+			<property name="Archetype" value="FuriousRamsayHandymanLuke"/>
+			<property name="NPCID" value="FuriousRamsayHandymanLuke"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="AITask-1" value="Territorial"/>
+			<property name="AITask-2" value="Look"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,20,EntityZombie,30"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITask-5" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAlive"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAnimalStag,20,20,EntityZombie,30,30"/>
+			<property name="AITarget-5" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayHandymanTrader" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandHandymanTrader"/>
+		</entity_class>
+
 		<entity_class name="FuriousRamsayInvisibleEntity" extends="FuriousRamsayCloakedAnimal">
 			<property name="SizeScale" value="0.1"/>
 			<property name="Tags" value="entity,enemy,animal,blackshield"/>

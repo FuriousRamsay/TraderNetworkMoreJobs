@@ -2540,6 +2540,14 @@
 				</effect_group>
 			</buff>
 
+			<buff name="VerifyFuriousRamsayHandymanLukeVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/wrenchPrefab.prefab" local_offset="-0.054,-0.05,-0.035" local_rotation="339.9999,64.38472,9.00002" parent_transform="RightHand"/>
+				</effect_group>
+			</buff>
+
 		</append>		
 
 		<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
@@ -2617,13 +2625,18 @@
 				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldFireMotorcycle"/>
 				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldFireMotorcycleEffects"/>
 			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldTrader1Visuals">
+				<requirement name="EntityTagCompare" target="other" tags="BlackShieldTrader1"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldTrader1Visuals"/>
+			</triggered_effect>
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayFarmerKatieVisuals">
 				<requirement name="EntityTagCompare" target="other" tags="FarmerKatie"/>
 				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayFarmerKatieVisuals"/>
 			</triggered_effect>
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldTrader1Visuals">
-				<requirement name="EntityTagCompare" target="other" tags="BlackShieldTrader1"/>
-				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldTrader1Visuals"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayHandymanLukeVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="HandymanLuke"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayHandymanLukeVisuals"/>
 			</triggered_effect>
 
 			<!--<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1" buff="VerifyFuriousRamsayBlackShieldMotorcycleSmokeStart">

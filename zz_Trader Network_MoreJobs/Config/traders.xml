@@ -755,6 +755,22 @@
 				<item group="FuriousRamsayMechanicalPets" prob="0.8" />
 			</tier_items>
 		</trader_info>
+
+		<!-- Handyman Luke, id=92, carries tools, materials, vehicles -->
+		<trader_info id="92" full_reset="true" min_inventory="30" max_inventory="80" min_items_swapped="30" max_items_swapped="80" reset_interval="1" open_time="0:00" close_time="0:00">
+			<trader_items count="all">
+			</trader_items>
+
+			<tier_items level="3000,3999" count="all"> <!-- requires Perk 3 -->
+				<!-- Bug: The count is overridden by "all" anyway so all probabilities are =1 -->
+			</tier_items>
+
+			<tier_items level="4000,4999" count="all"> <!-- requires Perk 4 -->
+			</tier_items>
+
+			<tier_items level="5000,-1" count="all"> <!-- requires Perk 5 -->
+			</tier_items>
+		</trader_info>
 		
 	</append>
 
