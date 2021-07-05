@@ -1764,6 +1764,216 @@
 			<property name="SellableToTrader" value="false"/>
 		</item>
 
+		<item name="FuriousRamsayPetMaster">
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="pet"/>
+			<property name="ItemTypeIcon" value="computer"/>
+			<property name="CustomIcon" value="cntChest01"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="255,255,255"/>
+			<property name="HoldType" value="73"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Weight" value="0"/>
+			<property name="CarryWeight" value="40"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicValue" value="1500"/>
+			<property name="Candrop" value="true"/>
+		</item>
+
+		<item name="FuriousRamsayPetMechanicalDog">
+			<!--<property name="CreativeMode" value="None"/>-->
+			<property name="CustomIconTint" value="255, 21, 0"/>
+			<property name="Extends" value="FuriousRamsayPetMaster"/>
+			<property class="Action0">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayDogPet"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPetPlaced" operation="Equals" value="0"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayDogPet"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPetPlaced" operation="Equals" value="0"/>
+			</property>
+			<property name="EconomicValue" value="1250"/>
+			<effect_group name="FuriousRamsayPetMechanicalDog" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="CVarLogValue" cvar="$FuriousRamsayPetPlaced"/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="AddBuff" buff="FuriousRamsayPetPlaced"/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Dog..."/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayPetMechanicalWolf">
+			<!--<property name="CreativeMode" value="None"/>-->
+			<property name="CustomIconTint" value="255, 136, 0"/>
+			<property name="Extends" value="FuriousRamsayPetMaster"/>
+			<property class="Action0">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayWolfPet"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPetPlaced" operation="Equals" value="0"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayWolfPet"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPetPlaced" operation="Equals" value="0"/>
+			</property>
+			<effect_group name="FuriousRamsayPetMechanicalWolf" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="CVarLogValue" cvar="$FuriousRamsayPetPlaced"/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="AddBuff" buff="FuriousRamsayPetPlaced"/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Wolf..."/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayPetMechanicalLion">
+			<!--<property name="CreativeMode" value="None"/>-->
+			<property name="CustomIconTint" value="255, 225, 0"/>		
+			<property name="Extends" value="FuriousRamsayPetMaster"/>
+			<property class="Action0">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayLionPet"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPetPlaced" operation="Equals" value="0"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayLionPet"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPetPlaced" operation="Equals" value="0"/>
+			</property>
+			<property name="EconomicValue" value="1750"/>
+			<effect_group name="FuriousRamsayPetMechanicalLion" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="CVarLogValue" cvar="$FuriousRamsayPetPlaced"/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="AddBuff" buff="FuriousRamsayPetPlaced"/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Lion..."/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayPetMechanicalBear">
+			<!--<property name="CreativeMode" value="None"/>-->
+			<property name="CustomIconTint" value="111, 255, 0"/>		
+			<property name="Extends" value="FuriousRamsayPetMaster"/>
+			<property class="Action0">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayBearPet"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPetPlaced" operation="Equals" value="0"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayBearPet"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPetPlaced" operation="Equals" value="0"/>
+			</property>
+			<property name="EconomicValue" value="2000"/>
+			<effect_group name="FuriousRamsayPetMechanicalBear" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="CVarLogValue" cvar="$FuriousRamsayPetPlaced"/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="AddBuff" buff="FuriousRamsayPetPlaced"/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Bear..."/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayPetMechanicalCoyote">
+			<!--<property name="CreativeMode" value="None"/>-->
+			<property name="CustomIconTint" value="0, 255, 213"/>		
+			<property name="Extends" value="FuriousRamsayPetMaster"/>
+			<property class="Action0">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayCoyotePet"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPetPlaced" operation="Equals" value="0"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayCoyotePet"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPetPlaced" operation="Equals" value="0"/>
+			</property>
+			<property name="EconomicValue" value="1250"/>
+			<effect_group name="FuriousRamsayPetMechanicalCoyote" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="CVarLogValue" cvar="$FuriousRamsayPetPlaced"/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="AddBuff" buff="FuriousRamsayPetPlaced"/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Coyote..."/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayPetMechanicalBoar">
+			<!--<property name="CreativeMode" value="None"/>-->
+			<property name="CustomIconTint" value="0, 145, 255"/>		
+			<property name="Extends" value="FuriousRamsayPetMaster"/>
+			<property class="Action0">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayBoarPet"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPetPlaced" operation="Equals" value="0"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayBoarPet"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPetPlaced" operation="Equals" value="0"/>
+			</property>
+			<property name="EconomicValue" value="1250"/>
+			<effect_group name="FuriousRamsayPetMechanicalBoar" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="CVarLogValue" cvar="$FuriousRamsayPetPlaced"/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="AddBuff" buff="FuriousRamsayPetPlaced"/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Coyote..."/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayPetMechanicalRabbit">
+			<!--<property name="CreativeMode" value="None"/>-->
+			<property name="CustomIconTint" value="170, 0, 255"/>		
+			<property name="Extends" value="FuriousRamsayPetMaster"/>
+			<property class="Action0">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayRabbitPet"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPetPlaced" operation="Equals" value="0"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayRabbitPet"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPetPlaced" operation="Equals" value="0"/>
+			</property>
+			<property name="EconomicValue" value="500"/>
+			<effect_group name="FuriousRamsayPetMechanicalRabbit" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="CVarLogValue" cvar="$FuriousRamsayPetPlaced"/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="AddBuff" buff="FuriousRamsayPetPlaced"/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Coyote..."/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayPetMechanicalChicken">
+			<!--<property name="CreativeMode" value="None"/>-->
+			<property name="CustomIconTint" value="255, 0, 204"/>		
+			<property name="Extends" value="FuriousRamsayPetMaster"/>
+			<property class="Action0">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayChickenPet"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPetPlaced" operation="Equals" value="0"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayChickenPet"/>
+				<requirement name="CVarCompare" cvar="$FuriousRamsayPetPlaced" operation="Equals" value="0"/>
+			</property>
+			<property name="EconomicValue" value="500"/>
+			<effect_group name="FuriousRamsayPetMechanicalChicken" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="CVarLogValue" cvar="$FuriousRamsayPetPlaced"/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="AddBuff" buff="FuriousRamsayPetPlaced"/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Coyote..."/>
+			</effect_group>
+		</item>
+
 		<item name="FuriousRamsayBlackShieldDecoyMaster">
 			<property name="CreativeMode" value="None"/>
 			<property name="Tags" value="ammo,weapon"/>

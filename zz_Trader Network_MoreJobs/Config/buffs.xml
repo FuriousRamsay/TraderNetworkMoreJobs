@@ -438,13 +438,10 @@
 				<stack_type value="replace"/>
 				<duration value="2"/>
 				<effect_group>
-
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayDecoyPlaced" operation="add" value="-1">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>	
-
-					<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayDecoyPlaced"/>
-
+					<!--<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayDecoyPlaced"/>-->
 				</effect_group>
 			</buff>
 
@@ -1192,6 +1189,39 @@
 				<duration value="0.1"/>
 				<effect_group>
 					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="2"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayPetTimer" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="10800"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayPetPlaced" operation="set" value="0"/>
+					<!--<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayPetPlaced"/>-->
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayResetPetPlaced" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" target="other" cvar="$FuriousRamsayPetPlaced" operation="set" value="0"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayPetPlaced" hidden="true">
+				<stack_type value="ignore"/>
+				<duration value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$FuriousRamsayPetPlaced" operation="set" value="1"/>
+					<!--<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="$FuriousRamsayPetPlaced"/>-->
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayPetHealTimer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="3"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" target="self" stat="Health" operation="add" value="1"/>
 				</effect_group>
 			</buff>
 
@@ -2513,6 +2543,10 @@
 		</append>		
 
 		<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="VerifyFuriousRamsayPetTimer">
+				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayPetTimer"/>
+			</triggered_effect>
 
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldWhiteCar">
 				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldWhiteCar"/>
