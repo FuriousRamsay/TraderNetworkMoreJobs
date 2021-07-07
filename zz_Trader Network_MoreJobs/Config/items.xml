@@ -265,6 +265,28 @@
 			<property name="CraftingIngredientTime" value=".2"/>
 		</item>
 
+<item name="FuriousRamsayAllTerrain">
+	<property name="Tags" value="vehicle"/>
+	<property name="DescriptionKey" value="vehicleJetSkiPlaceableDesc"/>
+	<property name="HoldType" value="7"/>
+	<property name="CustomIcon" value="cntCar03SedanDamage0Master"/>
+	<property name="HoldingItemHidden" value="true"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="EconomicValue" value="10000"/>
+	<property name="SellableToTrader" value="false"/>
+	<property class="Action1">
+		<property name="Class" value="SpawnVehicle"/>
+		<property name="Vehicle" value="FuriousRamsayAllTerrain"/>
+	</property>
+	<effect_group name="FuriousRamsayAllTerrain" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="1"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="1000"/>
+	</effect_group>
+	</item>
+
 		<item name="FuriousRamsayBlackShieldWhiteCar">
 			<property name="Extends" value="vehicleMinibikePlaceable"/>
 			<property name="Tags" value="vehicle"/>
@@ -274,6 +296,7 @@
 			<property name="CustomIconTint" value="255, 255, 255"/>
 
 			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
 			
 			<property name="EconomicValue" value="7500"/>
 			<property name="SellableToTrader" value="false"/>
@@ -297,6 +320,7 @@
 			<property name="CustomIconTint" value="66, 81, 112"/>
 
 			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
 			
 			<property name="EconomicValue" value="7500"/>
 			<property name="SellableToTrader" value="false"/>
@@ -320,6 +344,7 @@
 			<property name="CustomIconTint" value="189, 165, 47"/>
 
 			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
 			
 			<property name="EconomicValue" value="7500"/>
 			<property name="SellableToTrader" value="false"/>
@@ -343,6 +368,7 @@
 			<property name="CustomIconTint" value="140, 58, 52"/>
 
 			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
 			
 			<property name="EconomicValue" value="7500"/>
 			<property name="SellableToTrader" value="false"/>
@@ -366,6 +392,7 @@
 			<property name="CustomIconTint" value="191, 186, 186"/>
 
 			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
 			
 			<property name="EconomicValue" value="7500"/>
 			<property name="SellableToTrader" value="false"/>
@@ -389,6 +416,7 @@
 			<property name="CustomIconTint" value="191, 209, 188"/>
 
 			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
 			
 			<property name="EconomicValue" value="7500"/>
 			<property name="SellableToTrader" value="false"/>
@@ -412,6 +440,7 @@
 			<property name="CustomIconTint" value="67, 69, 67"/>
 
 			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
 			
 			<property name="EconomicValue" value="7500"/>
 			<property name="SellableToTrader" value="false"/>
@@ -435,6 +464,7 @@
 			<property name="CustomIconTint" value="50, 50, 50"/>
 
 			<property name="Meshfile" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
 			
 			<property name="EconomicValue" value="7500"/>
 			<property name="SellableToTrader" value="false"/>

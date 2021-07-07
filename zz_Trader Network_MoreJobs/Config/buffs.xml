@@ -2392,12 +2392,12 @@
 			<buff name="VerifyFuriousRamsayBlackShieldWhiteCar" hidden="true">
 				<stack_type value="ignore"/>		
 				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  transform_path="car_mesh"/>
 					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="Box2"/>
 					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxL"/>
 					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxR"/>
 					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxPipeL"/>
 					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false" parent_transform="Physics" transform_path="BoxPipeR"/>
-					<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  transform_path="car_mesh"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Entities/Vehicles?Car/car_white_dmg0Prefab" local_offset="0,0,-1" local_rotation="0,0,0" parent_transform="Origin"/>
 					<!-- 
 					#Entities/Vehicles?bus_shortPrefab.prefab
@@ -2501,6 +2501,17 @@
 				</effect_group>
 			</buff>
 
+			<buff name="VerifyFuriousRamsayAllTerrain" hidden="true">
+				<stack_type value="ignore"/>		
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Industrial/barrelPlasticPrefab" local_offset="0.653,0.123,-2" local_rotation="0,0,269.5" parent_transform="Origin"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Industrial/barrelPlastic45Prefab" local_offset="-0.61,0.50,-2.17" local_rotation="0,48.6,0" parent_transform="Origin"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Industrial/barrelPlasticPrefab" local_offset="-0.147,-0.307,3.62" local_rotation="0,0,269.5" parent_transform="Origin/backRightWheelJoint"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Industrial/barrelPlastic45Prefab" local_offset="0.29,0.07,3.44" local_rotation="0,48.6,0" parent_transform="Origin/backLeftWheelJoint"/>
+
+				</effect_group>
+			</buff>
+
 			<buff name="InitiateFuriousRamsayBlackShieldWhiteCarBlock" hidden="true">
 				<stack_type value="ignore"/>		
 				<duration value="4"/>
@@ -2554,6 +2565,11 @@
 
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="VerifyFuriousRamsayPetTimer">
 				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayPetTimer"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayAllTerrain">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayAllTerrain"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayAllTerrain"/>
 			</triggered_effect>
 
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldWhiteCar">

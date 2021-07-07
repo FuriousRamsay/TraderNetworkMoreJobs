@@ -30,11 +30,34 @@
 
 	<append xpath="/entity_classes">		
 
+		<entity_class name="FuriousRamsayAllTerrain">
+			<property name="Tags" value="FuriousRamsayAllTerrain"/>
+			<property name="Class" value="EntityVJeep"/>
+			<property name="Parent" value="Cars"/>
+			<property name="Prefab" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
+			
+			<property name="ModelType" value="Standard"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="IgnoreTrigger" value="true"/>
+			<property name="LootListAlive" value="62"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Explosion.ParticleIndex" value="6"/>
+			<property name="Explosion.RadiusBlocks" value="5"/>
+			<property name="Explosion.RadiusEntities" value="5"/>
+			<property name="Explosion.BlockDamage" value="100"/>
+			<property name="Explosion.EntityDamage" value="100"/>
+			<property name="RotateToGround" value="false"/>
+			<property name="Faction" value="none"/>
+			<property name="MapIcon" value="ui_game_symbol_4x4"/>
+			<property name="NavObject" value="FuriousRamsayVehicle" />
+		</entity_class>
+
 		<entity_class name="FuriousRamsayBlackShieldWhiteCar">
 			<property name="Tags" value="FuriousRamsayBlackShieldWhiteCar"/>
 			<property name="Class" value="EntityVJeep"/>
 			<property name="Parent" value="Cars"/>
 			<property name="Prefab" value="#Entities/Vehicles?jeep_Prefab.prefab"/>
+			
 			<property name="ModelType" value="Standard"/>
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="IgnoreTrigger" value="true"/>

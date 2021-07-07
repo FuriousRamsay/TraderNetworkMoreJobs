@@ -151,8 +151,8 @@
 			<item name="qc_FuriousRamsayTier1_minihorde" count="1" prob="0.6"/>
 			<item name="qc_FuriousRamsayHuntTier1" count="1" prob="0.5"/>
 			<item name="qc_FuriousRamsayHordeTrainingTier1" count="1" prob="0.4"/>
-			<!--<item name="FuriousRamsaySpawnAllyDogTier1" count="1" prob="0.3"/>-->
-			<item name="qc_FuriousRamsaySpawnAllyDogTier1" prob="0.3"/>
+			<item name="FuriousRamsaySpawnAllyDogTier1" count="1" prob="0.3"/>
+			<!--<item name="qc_FuriousRamsaySpawnAllyDogTier1" prob="0.3"/>-->
 			<item name="qc_FuriousRamsayGhostsTier1" prob="0.6"/>
 			<item name="qc_FuriousRamsayTier1_BlackShieldBoss" prob="0.4"/>
 			<item name="qc_FuriousRamsayResetPOI" count="1" prob="0.05"/>
@@ -277,14 +277,10 @@
 		</trader_item_group>
 
 		<trader_item_group name="FuriousRamsayTraderEarlyVehicles" >
-			<item name="vehicleBicyclePlaceable"/>
 			<item name="FuriousRamsayBlackShieldBicycle"/>
-			<item name="vehicleMinibikePlaceable"/>
 		</trader_item_group>
 
 		<trader_item_group name="FuriousRamsayTraderLaterVehicles" >
-			<item name="vehicleMotorcyclePlaceable"/>
-			<item name="vehicle4x4TruckPlaceable"/>
 			<item name="FuriousRamsayBlackShieldFireMotorcycle"/>
 			<item name="FuriousRamsayBlackShieldShockMotorcycle"/>
 		</trader_item_group>
@@ -591,6 +587,130 @@
 			<item name="FuriousRamsayPetMechanicalChicken" prob="1" count="1"/>
 		</trader_item_group>
 
+		<trader_item_group name="FuriousRamsayTools1">
+			<item name="meleeToolPickT1IronPickaxe" count="1" prob="0.5"/>
+			<item name="meleeToolShovelT1IronShovel" count="1" prob="0.5"/>
+			<item name="meleeToolAxeT1IronFireaxe" count="1" prob="0.5"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayTools2">
+			<item name="meleeToolRepairT1ClawHammer" count="1" prob="1"/>
+			<item name="meleeToolSalvageT1Wrench" count="1" prob="0.8"/>
+			<item name="meleeToolWireTool" count="1" prob="0.2"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayTool3">
+			<item name="meleeToolShovelT2SteelShovel" count="1" prob="1"/>
+			<item name="meleeToolPickT2SteelPickaxe" count="1" prob="0.8"/>
+			<item name="meleeToolSalvageT2Ratchet" count="1" prob="0.5"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayTools4">
+			<item name="meleeToolAxeT3Chainsaw" count="1" prob="0.4"/>
+			<item name="meleeToolPickT3Auger" count="1" prob="0.2"/>
+			<item name="meleeToolRepairT3Nailgun" count="1" prob="1"/>
+			<item name="meleeToolSalvageT3ImpactDriver" count="1" prob="0.6"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayVehicleResources">
+			<item name="resourceGlue" count="2,4" prob="1"/>
+			<item name="resourceDuctTape" count="2,4" prob="0.8"/>
+			<item name="resourceScrapPolymers" count="4,8" prob="1"/>
+			<item name="resourceOil" count="2,4" prob="0.6"/>
+			<item name="resourceAcid" count="1" prob="0.3"/>
+			<item name="resourceMetalPipe" count="2,4" prob="1"/>
+			<item name="resourceSpring" count="2,4" prob="1"/>
+			<item name="resourceElectricParts" count="2,4" prob="1"/>
+			<item name="resourceMechanicalParts" count="2,4" prob="1"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayVehicleParts">
+			<item name="ammoGasCan" count="4,8" prob="0.8"/>
+			<item name="resourceHeadlight" count="1" prob="0.2"/>
+			<item name="carBattery" count="1" prob="0.4"/>
+			<item name="smallEngine" count="1" prob="0.3"/>
+			<item name="vehicleWheels" count="1" prob="0.2"/>
+			<item name="resourceRepairKit" count="1,2" prob="1"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayBuildingMaterials">
+			<item name="resourceConcreteMix" count="10,20" prob="1"/>
+			<item name="resourceCobblestones" count="20,20" prob="1"/>
+			<item name="resourceForgedIron" count="4,8" prob="0.8"/>
+			<item name="resourceForgedSteel" count="4,8" prob="0.3"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayCraftingTools">
+			<item name="toolAnvil" count="1" prob="1"/>
+			<item name="toolBellows" count="1" prob="0.6"/>
+			<item name="toolForgeCrucible" count="1" prob="0.2"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayVehicleSchematics1">
+			<item name="vehicleBicycleChassisSchematic" count="1" prob="1"/>
+			<item name="vehicleBicycleHandlebarsSchematic" count="1" prob="0.8"/>
+			<item name="vehicleMinibikeChassisSchematic" count="1" prob="0.4"/>
+			<item name="vehicleMinibikeHandlebarsSchematic" count="1" prob="0.2"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayVehicleSchematics2">
+			<item name="vehicleMotorcycleChassisSchematic" count="1" prob="1"/>
+			<item name="vehicleMotorcycleHandlebarsSchematic" count="1" prob="0.8"/>
+			<item name="vehicle4x4TruckChassisSchematic" count="1" prob="0.4"/>
+			<item name="vehicle4x4TruckAccessoriesSchematic" count="1" prob="0.2"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayVehicleSchematics3">
+			<item name="vehicle4x4TruckChassisSchematic" count="1" prob="1"/>
+			<item name="vehicle4x4TruckAccessoriesSchematic" count="1" prob="0.8"/>
+			<item name="vehicleGyroCopterChassisSchematic" count="1" prob="0.1"/>
+			<item name="vehicleGyroCopterAccessoriesSchematic" count="1" prob="0.05"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayToolSchematics1">
+			<item name="meleeToolRepairT3NailgunSchematic" count="1" prob="1"/>
+			<item name="meleeToolSteelSetSchematic" count="1" prob="0.6"/>
+			<item name="meleeToolSalvageT2RatchetSchematic" count="1" prob="0.8"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayToolSchematics2">
+			<item name="meleeToolPickT3AugerSchematic" count="1" prob="0.1"/>
+			<item name="meleeToolAxeT3ChainsawSchematic" count="1" prob="0.3"/>
+			<item name="meleeToolSalvageT3ImpactDriverSchematic" count="1" prob="0.4"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayCraftingToolSchematics">
+			<item name="ammoGasCanSchematic" count="1" prob="0.6"/>
+			<item name="resourceOilSchematic" count="1" prob="1"/>
+			<item name="toolBellowsSchematic" count="1" prob="0.3"/>
+			<item name="toolAnvilSchematic" count="1" prob="0.8"/>
+			<item name="toolForgeCrucibleSchematic" count="1" prob="0.1"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayCraftingStationSchematics">
+			<item name="forgeSchematic" count="1" prob="1"/>
+			<item name="cementMixerSchematic" count="1" prob="0.4"/>
+			<item name="workbenchSchematic" count="1" prob="0.6"/>
+			<item name="chemistryStationSchematic" count="1" prob="0.2"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayVehicles1">
+			<item name="vehicleBicyclePlaceable" count="1" prob="1"/>
+			<item name="vehicleMinibikePlaceable" count="1" prob="0.3"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayVehicles2">
+			<item name="vehicleMotorcyclePlaceable" count="1" prob="1"/>
+			<item group="FuriousRamsayTraderSedans" count="1" prob="0.5"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayVehicles3">
+			<item name="vehicleMotorcyclePlaceable" count="1" prob="1"/>
+			<item group="FuriousRamsayTraderSedans" count="1" prob="0.5"/>
+			<item name="vehicle4x4TruckPlaceable" count="1" prob="0.2"/>
+			<item name="vehicleGyrocopterPlaceable" count="1" prob="0.05"/>
+		</trader_item_group>
+
 	</append>
 
 	<remove xpath="/traders/trader_info[@id='5']"/>
@@ -623,7 +743,7 @@
 				<item group="modAllT1SecretStash" count="1,2"/>
 				<item group="FuriousRamsayTraderArmorFire" count="1"/>
 				<item group="FuriousRamsayTraderArmorShock" count="1"/>
-				<item group="FuriousRamsayTraderEarlyVehicles" count="1"/>
+				<item group="FuriousRamsayTraderEarlyVehicles" count="1" prob="0.5"/>
 			</trader_items>
 
 			<tier_items level="3000,3999" count="all"> <!-- requires Perk 3 -->
@@ -636,15 +756,11 @@
 				<item group="ammoSupplies" count="1,2"/>
 				<item group="FuriousRamsayGroupArmorHeavyMixed" count="1,2"/>
 				<item group="FuriousRamsayGroupArmorLightMixed" count="1,2"/>
-				<item group="commonBooks" count="2,3"/>
-				<item group="rareBooks" count="1,2"/>
 				<item group="modAllT3SecretStash" count="1,2"/>
 				<item group="FuriousRamsayTraderArmorFire" count="1"/>
 				<item group="FuriousRamsayTraderArmorShock" count="1"/>
 				<item group="FuriousRamsayTraderArmorFireShock" count="1"/>
-				<item group="FuriousRamsayTraderEarlyVehicles" count="1"/>
-				<item group="FuriousRamsayTraderSedans" count="1"/>
-				<item group="FuriousRamsayTraderLaterVehicles" count="1"/>			
+				<item group="FuriousRamsayTraderLaterVehicles" count="1" prob="0.5"/>
 			</tier_items>
 
 			<tier_items level="4000,4999" count="all"> <!-- requires Perk 4 -->
@@ -655,16 +771,13 @@
 				<item group="ammo" count="2,4"/>
 				<item group="FuriousRamsayGroupArmorHeavyT2" count="1,2"/>
 				<item group="FuriousRamsayGroupArmorLightT2" count="1,2"/>
-				<item group="commonBooks" count="3,4"/>
-				<item group="rareBooks" count="2"/>
 				<item group="FuriousRamsayWeaponsGunsT3" count="1,2"/>
 				<item group="modAllT4SecretStash" count="1,2"/>
 				<item group="FuriousRamsayTraderArmorFire" count="1"/>
 				<item group="FuriousRamsayTraderArmorShock" count="1"/>
 				<item group="FuriousRamsayTraderArmorFireShock" count="1"/>
 				<item group="FuriousRamsayTraderArmorSmoke" count="1"/>
-				<item group="FuriousRamsayTraderSedans" count="1"/>
-				<item group="FuriousRamsayTraderLaterVehicles" count="1"/>			
+				<item group="FuriousRamsayTraderLaterVehicles" count="1" prob="0.6"/>
 			</tier_items>
 
 			<tier_items level="5000,-1" count="all"> <!-- requires Perk 5 -->
@@ -676,8 +789,6 @@
 				<item group="ammo" count="5,8"/>
 				<item group="FuriousRamsayGroupArmorHeavyT2" count="2,3"/>
 				<item group="FuriousRamsayGroupArmorLightT2" count="2,3"/>
-				<item group="commonBooks" count="4,5"/>
-				<item group="rareBooks" count="2,3"/>
 				<item group="FuriousRamsayWeaponsGunsT3QL5" count="1,2"/>
 				<item group="modAllT5SecretStash" count="1,4"/>
 				<item group="FuriousRamsayTraderArmorFire" count="1"/>
@@ -685,13 +796,12 @@
 				<item group="FuriousRamsayTraderArmorFireShock" count="1"/>
 				<item group="FuriousRamsayTraderArmorSmoke" count="1"/>
 				<item group="FuriousRamsayTraderArmorFireShockSmoke" count="1"/>
-				<item group="FuriousRamsayTraderSedans" count="1"/>
-				<item group="FuriousRamsayTraderLaterVehicles" count="1"/>			
+				<item group="FuriousRamsayTraderLaterVehicles" count="1" prob="0.7"/>
 			</tier_items>
 		</trader_info>
 	
 		<!-- Farmer Katie, id=91, carries food, seeds and recipes -->
-		<trader_info id="91" full_reset="true" min_inventory="30" max_inventory="80" min_items_swapped="30" max_items_swapped="80" reset_interval="1" open_time="0:00" close_time="0:00">
+		<trader_info id="91" full_reset="true" min_inventory="20" max_inventory="50" min_items_swapped="20" max_items_swapped="50" reset_interval="1" open_time="0:00" close_time="0:00">
 			<trader_items count="all">
 				<item group="FuriousRamsayFarmerTraderCans1" />
 				<item group="FuriousRamsayFarmerTraderFresh1" />
@@ -757,18 +867,51 @@
 		</trader_info>
 
 		<!-- Handyman Luke, id=92, carries tools, materials, vehicles -->
-		<trader_info id="92" full_reset="true" min_inventory="30" max_inventory="80" min_items_swapped="30" max_items_swapped="80" reset_interval="1" open_time="0:00" close_time="0:00">
+		<trader_info id="92" full_reset="true" min_inventory="20" max_inventory="50" min_items_swapped="20" max_items_swapped="50" reset_interval="1" open_time="0:00" close_time="0:00">
 			<trader_items count="all">
+				<item group="FuriousRamsayTools1" count="1" prob="0.5"/>
+				<item group="FuriousRamsayVehicleResources"/>
+				<item group="FuriousRamsayVehicleParts"/>
+				<item group="FuriousRamsayBuildingMaterials"/>
 			</trader_items>
 
 			<tier_items level="3000,3999" count="all"> <!-- requires Perk 3 -->
 				<!-- Bug: The count is overridden by "all" anyway so all probabilities are =1 -->
+				<item group="FuriousRamsayVehicleResources"/>
+				<item group="FuriousRamsayVehicleParts"/>
+				<item group="FuriousRamsayBuildingMaterials"/>
+				<item group="FuriousRamsayTools2"/>
+				<item group="FuriousRamsayToolSchematics1"/>
+				<item group="FuriousRamsayVehicles1"/>
+				<item group="FuriousRamsayCraftingStationSchematics"/>
+				<item group="FuriousRamsayCraftingToolSchematics"/>
+				<item group="FuriousRamsayVehicleSchematics1"/>
 			</tier_items>
 
 			<tier_items level="4000,4999" count="all"> <!-- requires Perk 4 -->
+				<item group="FuriousRamsayVehicleResources"/>
+				<item group="FuriousRamsayVehicleParts"/>
+				<item group="FuriousRamsayBuildingMaterials"/>
+				<item group="FuriousRamsayTool3"/>
+				<item group="FuriousRamsayVehicles2"/>
+				<item group="FuriousRamsayCraftingStationSchematics"/>
+				<item group="FuriousRamsayCraftingToolSchematics"/>
+				<item group="FuriousRamsayToolSchematics2"/>
+				<item group="FuriousRamsayVehicleSchematics2"/>
+				<item group="FuriousRamsayCraftingTools"/>
 			</tier_items>
 
 			<tier_items level="5000,-1" count="all"> <!-- requires Perk 5 -->
+				<item group="FuriousRamsayVehicleResources"/>
+				<item group="FuriousRamsayVehicleParts"/>
+				<item group="FuriousRamsayBuildingMaterials"/>
+				<item group="FuriousRamsayTools4"/>
+				<item group="FuriousRamsayVehicles3"/>
+				<item group="FuriousRamsayCraftingStationSchematics"/>
+				<item group="FuriousRamsayCraftingToolSchematics"/>
+				<item group="FuriousRamsayToolSchematics2"/>
+				<item group="FuriousRamsayVehicleSchematics3"/>
+				<item group="FuriousRamsayCraftingTools"/>
 			</tier_items>
 		</trader_info>
 		
