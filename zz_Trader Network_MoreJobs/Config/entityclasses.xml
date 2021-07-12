@@ -1845,30 +1845,6 @@
 			</effect_group>
 		</entity_class>
 
-		<entity_class name="FuriousRamsayAllyDogTier1Biome" extends="FuriousRamsayAllyDogTier1">
-			<property name="NavObject" value=""/>
-
-			<property name="AITask-1" value="Wander"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Territorial"/>
-			<property name="AITask-5" value="ApproachDistraction"/>
-			<property name="AITask-6" value="ApproachSpot"/>
-			<property name="AITask-7" value="BreakBlock"/>
-			<property name="AITask-8" value="DestroyArea"/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
-			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-
-			<effect_group name="Base Effects">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddStaminaAllyTimer"/>
-				<passive_effect name="HealthMax" operation="base_set" value="200"/>
-				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
-				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
-			</effect_group>
-		</entity_class>
-
 		<entity_class name="FuriousRamsayAllyWolfTier2">
 			<property name="SizeScale" value="1.7"/>
 			<property name="SizeScale" value="1.1"/>
@@ -2012,30 +1988,6 @@
 			</effect_group>
 		</entity_class>
 
-		<entity_class name="FuriousRamsayAllyWolfTier2Biome" extends="FuriousRamsayAllyWolfTier2">
-			<property name="NavObject" value=""/>
-
-			<property name="AITask-1" value="Wander"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Territorial"/>
-			<property name="AITask-5" value="ApproachDistraction"/>
-			<property name="AITask-6" value="ApproachSpot"/>
-			<property name="AITask-7" value="BreakBlock"/>
-			<property name="AITask-8" value="DestroyArea"/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
-			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-
-			<effect_group name="Base Effects">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddHealthAllyWolfTier2Timer"/>
-				<passive_effect name="HealthMax" operation="base_set" value="300"/>
-				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
-				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
-			</effect_group>
-		</entity_class>
-		
 		<entity_class name="FuriousRamsayAllyLionTier3">
 			<property name="SizeScale" value="2.2"/>
 			<property name="SizeScale" value="1.2"/>
@@ -2176,30 +2128,6 @@
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyTimer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddBurningAllyLionTier3Timer"/>
 				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
-				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
-				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
-			</effect_group>
-		</entity_class>
-
-		<entity_class name="FuriousRamsayAllyLionTier3Biome" extends="FuriousRamsayAllyLionTier3">
-			<property name="NavObject" value=""/>
-
-			<property name="AITask-1" value="Wander"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Territorial"/>
-			<property name="AITask-5" value="ApproachDistraction"/>
-			<property name="AITask-6" value="ApproachSpot"/>
-			<property name="AITask-7" value="BreakBlock"/>
-			<property name="AITask-8" value="DestroyArea"/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
-			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-
-			<effect_group name="Base Effects">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddBurningAllyLionTier3Timer"/>
-				<passive_effect name="HealthMax" operation="base_set" value="600"/>
 				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
@@ -2350,30 +2278,6 @@
 			</effect_group>
 		</entity_class>
 
-		<entity_class name="FuriousRamsayAllyBearTier4Biome" extends="FuriousRamsayAllyBearTier4">
-			<property name="NavObject" value=""/>
-
-			<property name="AITask-1" value="Wander"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Territorial"/>
-			<property name="AITask-5" value="ApproachDistraction"/>
-			<property name="AITask-6" value="ApproachSpot"/>
-			<property name="AITask-7" value="BreakBlock"/>
-			<property name="AITask-8" value="DestroyArea"/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
-			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-
-			<effect_group name="Base Effects">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayKnockdownAllyBearTier4Timer"/>
-				<passive_effect name="HealthMax" operation="base_set" value="900"/>
-				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
-				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
-			</effect_group>
-		</entity_class>
-
 		<entity_class name="FuriousRamsayAllyNPCTier5" extends="zombieBoeFeral">
 			<property name="SizeScale" value="1.9"/>
 			<property name="SizeScale" value="1.1"/>
@@ -2512,30 +2416,7 @@
 			</effect_group>
 		</entity_class>
 
-		<entity_class name="FuriousRamsayAllyNPCTier5Biome" extends="FuriousRamsayAllyNPCTier5">
-			<property name="NavObject" value=""/>
-
-			<property name="AITask-1" value="Wander"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Territorial"/>
-			<property name="AITask-5" value="ApproachDistraction"/>
-			<property name="AITask-6" value="ApproachSpot"/>
-			<property name="AITask-7" value="BreakBlock"/>
-			<property name="AITask-8" value="DestroyArea"/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
-			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-
-			<effect_group name="Base Effects">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddShockAllyNPCTier5Timer"/>				
-				<passive_effect name="HealthMax" operation="base_set" value="800"/>
-				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
-				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
-			</effect_group>
-		</entity_class>
-		
+	
 		<entity_class name="FuriousRamsayAllyCoyote">
 			<property name="SizeScale" value="1.2"/>
 			<property name="Tags" value="entity,robot"/>
@@ -2992,7 +2873,7 @@
 			<property name="TimeStayAfterDeath" value="2"/>
 
 			<effect_group name="Base Effects">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier2Timer"/>
+				<!--<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier2Timer"/>-->
 				<passive_effect name="HealthMax" operation="base_set" value="75"/>
 				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
 			</effect_group>
