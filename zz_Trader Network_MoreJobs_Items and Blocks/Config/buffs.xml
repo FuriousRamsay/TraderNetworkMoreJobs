@@ -1,0 +1,75 @@
+<Config>
+
+		<append xpath="/buffs" >		
+
+			<buff name="FuriousRamsayAddShockDamage">
+				<damage_type value="electrical"/>
+				<stack_type value="replace"/>
+				<duration value="2"/>
+				<effect_group>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-10">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</passive_effect>
+					
+					<passive_effect name="RunSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</passive_effect>
+					
+					<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</passive_effect>
+					
+					<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</passive_effect>
+					
+					<passive_effect name="JumpStrength" operation="perc_subtract" value="0.9,0" duration="0,4.3">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</passive_effect>
+					
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+					
+					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="ETrapHit" operation="set" value="0">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="electric_fence_impact">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="electric_fence_impact">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="electric_fence_impact">
+						<requirement name="!EntityTagCompare" tags="player,robot"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+
+		</append>
+		
+</Config>
+
