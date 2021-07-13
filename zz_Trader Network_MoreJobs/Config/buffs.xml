@@ -985,7 +985,7 @@
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-20">
 						<requirement name="EntityTagCompare" tags="walker"/>
 					</passive_effect>
-					<triggered_effect trigger="onSelfBuffStart" action="Ragdoll" duration="1" force="2000">
+					<triggered_effect trigger="onSelfBuffStart" action="Ragdoll" duration="1" force="100">
 						<requirement name="EntityTagCompare" tags="walker"/>
 					</triggered_effect>
 				</effect_group>
@@ -1419,7 +1419,7 @@
 						<requirement name="!EntityTagCompare" tags="player,robot"/>
 					</triggered_effect>
 
-					<triggered_effect trigger="onSelfBuffStart" action="Ragdoll" duration="1" force="2000">
+					<triggered_effect trigger="onSelfBuffStart" action="Ragdoll" duration="1" force="100">
 						<requirement name="!EntityTagCompare" tags="player,robot"/>
 					</triggered_effect>
 
@@ -1968,7 +1968,7 @@
 				<display_value value=".knockdownDisplay"/><display_value_key value="{0}"/>
 
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffStart" action="Ragdoll" duration="1" force="2000">
+					<triggered_effect trigger="onSelfBuffStart" action="Ragdoll" duration="1" force="100">
 						<requirement name="EntityTagCompare" tags="player,robot"/>
 					</triggered_effect>
 
