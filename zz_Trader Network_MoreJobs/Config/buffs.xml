@@ -2578,6 +2578,78 @@
 				</effect_group>
 			</buff>
 
+			<buff name="VerifyFuriousRamsayUMAAidenEnemyVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Bat/bat_Prefab.prefab" local_offset="-0.094,-0.02,-0.025" local_rotation="353.36,284.9846,350.9999" parent_transform="RightHand"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayUMACharlotteEnemyVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Knives/machetePrefab.prefab" local_offset="-0.084,0,-0.025" local_rotation="353.36,244.38472,350.9999" parent_transform="RightHand"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayUMAWillieEnemyVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Axe/stone_axePrefab.prefab" local_offset="-0.084,0.04,-0.025" local_rotation="353.36,244.38472,350.9999" parent_transform="RightHand"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayUMAHodorEnemyVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/pickaxe_steelPrefab.prefab" local_offset="-0.074,0.18,0.005" local_rotation="353.36,244.38472,350.9999" parent_transform="RightHand"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayUMAKimEnemyVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/pickaxe_ironPrefab.prefab" local_offset="-0.084,0.11,-0.005" local_rotation="353.36,244.38472,350.9999" parent_transform="RightHand"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayUMARoxyEnemyVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/hammerPrefab.prefab" local_offset="-0.084,-0.02,-0.025" local_rotation="353.36,244.38472,350.9999" parent_transform="RightHand"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayUMARichieEnemyVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Tools/wrenchPrefab.prefab" local_offset="-0.084,-0.02,-0.005" local_rotation="353.36,64.38472,350.9999" parent_transform="RightHand"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayUMAGabrielleEnemyVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/ClubIron/ClubIronPrefab.prefab" local_offset="-0.084,-0.07,-0.035" local_rotation="353.36,244.38472,350.9999" parent_transform="RightHand"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayUMAClintEnemyVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Axe/fireaxe_ironPrefab.prefab" local_offset="-0.084,0.18,0.005" local_rotation="353.36,244.38472,350.9999" parent_transform="RightHand"/>
+				</effect_group>
+			</buff>
+
 		</append>		
 
 		<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
@@ -2661,6 +2733,7 @@
 				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldFireMotorcycleEffects"/>
 			</triggered_effect>
 
+			<!-- Trader Visuals -->
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldTrader1Visuals">
 				<requirement name="EntityTagCompare" target="other" tags="BlackShieldTrader1"/>
 				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldTrader1Visuals"/>
@@ -2674,6 +2747,44 @@
 				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayHandymanLukeVisuals"/>
 			</triggered_effect>
 
+			<!-- Bandit Visuals -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayUMAAidenEnemyVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayUMAAidenEnemy"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayUMAAidenEnemyVisuals"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayUMACharlotteEnemyVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayUMACharlotteEnemy"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayUMACharlotteEnemyVisuals"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayUMAWillieEnemyVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayUMAWillieEnemy"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayUMAWillieEnemyVisuals"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayUMAHodorEnemyVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayUMAHodorEnemy"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayUMAHodorEnemyVisuals"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayUMAKimEnemyVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayUMAKimEnemy"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayUMAKimEnemyVisuals"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayUMARoxyEnemyVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayUMARoxyEnemy"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayUMARoxyEnemyVisuals"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayUMARichieEnemyVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayUMARichieEnemy"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayUMARichieEnemyVisuals"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayUMAGabrielleEnemyVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayUMAGabrielleEnemy"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayUMAGabrielleEnemyVisuals"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayUMAClintEnemyVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayUMAClintEnemy"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayUMAClintEnemyVisuals"/>
+			</triggered_effect>
+			
 			<!--<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1" buff="VerifyFuriousRamsayBlackShieldMotorcycleSmokeStart">
 				<requirement name="EntityHasMovementTag" tags="driving"/>
 				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayBlackShieldFireMotorcycle,FuriousRamsayBlackShieldShockMotorcycle"/>
