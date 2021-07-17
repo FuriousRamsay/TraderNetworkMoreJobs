@@ -2,6 +2,51 @@
 
 		<append xpath="/buffs" >		
 
+			<buff name="FuriousRamsayAshBoomStickDamage" hidden="true" remove_on_death="true">
+				<damage_type value="heat"/>
+				<stack_type value="ignore"/>
+				<duration value="3"/>
+
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FuriousRamsayExplosion">
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="burntZombieSmoke" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+																	
+					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="burntZombieSmoke" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+					
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="burntZombieSmoke">
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="burntZombieSmoke">
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="burntZombieSmoke">
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="burntZombieSmoke">
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="-100">
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="Ragdoll" duration="3" force="100">
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayAddBurningDamageAoETimer" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<update_rate value="0.1"/>
