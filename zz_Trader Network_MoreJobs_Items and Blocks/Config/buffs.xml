@@ -183,36 +183,6 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayAddBurningDamageAoETimer" hidden="true" remove_on_death="true">
-				<stack_type value="ignore"/>
-				<update_rate value="0.1"/>
-				<duration value="3"/>
-				<effect_group>
-					<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayAddBurningThrownDamage"/>
-					<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayAddKnockdownThrownDamage"/>
-				</effect_group>
-			</buff>
-
-			<buff name="FuriousRamsayAddKnockdownThrownDamage" hidden="true" remove_on_death="true">
-				<damage_type value="knockdown"/>
-				<stack_type value="ignore"/>
-				<duration value="1"/>
-				<display_value value=".knockdownDisplay"/><display_value_key value="{0}"/>
-				<requirements compare_type="or">
-					<requirement name="NotHasBuff" buff="buffInjuryKnockdown01Cooldown"/>
-				</requirements>
-
-				<effect_group>
-					<passive_effect name="HealthChangeOT" operation="base_add" value="-10">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
-					</passive_effect>
-
-					<triggered_effect trigger="onSelfBuffStart" action="Ragdoll" duration="3" force="100">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
-					</triggered_effect>
-				</effect_group>
-			</buff>
-
 			<buff name="FuriousRamsayAddBurningThrownDamage" hidden="true" remove_on_death="true">
 				<damage_type value="heat"/>
 				<stack_type value="replace"/>

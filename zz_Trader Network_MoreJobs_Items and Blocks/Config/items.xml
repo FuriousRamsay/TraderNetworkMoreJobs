@@ -5,7 +5,6 @@
 		<item name="FuriousRamsayStormBreaker">
 			<property name="CustomIcon" value="meleeWpnSledgeT3SteelSledgehammer"/>
 			<property name="CustomIconTint" value="70, 182, 219"/>
-			<!--<property name="TintColor" value="70, 182, 219"/>-->
 			<property name="Tags" value="blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,longShaft,attStrength,perkSkullCrusher,canHaveCosmetic"/>
 			<property name="DisplayType" value="meleeHeavy"/>
 			<property name="HoldType" value="33"/>
@@ -15,11 +14,9 @@
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="SoundJammed" value="ItemNeedsRepair"/>
 			<property name="SoundDestroy" value="metaldestroy1"/>
-			<property name="FuelValue" value="250"/>
-			<property name="EconomicValue" value="700"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="Group" value="Ammo/Weapons"/>
-			<property name="UnlockedBy" value="meleeWpnSledgeT3SteelSledgehammerSchematic"/>
 			<property name="ShowQuality" value="true"/>
 
 			<property name="StickyMaterial" value="#Other/Items?Weapons/Melee/SledgeHammer/steelSledgeHammer/Materials/steelSledgeHammer.mat"/>
@@ -35,7 +32,7 @@
 
 			<property class="Action0">
 				<property name="Class" value="DynamicMelee"/>
-				<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->
+				<property name="Sphere" value=".15"/>
 				<property name="Sound_start" value="sledge_swinglight"/>
 				<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
 				<property name="UseGrazingHits" value="true"/>
@@ -72,7 +69,7 @@
 				</property>
 			</property>
 			<effect_group name="FuriousRamsayStormBreaker">
-				<passive_effect name="EntityDamage" operation="base_set" value="30" tags="perkSkullCrusher"/> <!-- meleeWpnSledgeT3SteelSledgehammer -->
+				<passive_effect name="EntityDamage" operation="base_set" value="30" tags="perkSkullCrusher"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="85" tags="perkSkullCrusher"/>
 				<passive_effect name="AttacksPerMinute" operation="base_set" value="60" tags="primary"/>
 				<passive_effect name="AttacksPerMinute" operation="base_set" value="35" tags="secondary"/>
@@ -87,10 +84,10 @@
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
 
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkSkullCrusher"/> <!-- random EntityDmg -->
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
-				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkSkullCrusher"/> <!-- random BlockDmg -->
-				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/> <!-- tier bonus -->
+				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkSkullCrusher"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkSkullCrusher"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkSkullCrusher"/>
 
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.95" tags="earth"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.2" tags="stone"/>
@@ -153,7 +150,7 @@
 			<property name="SoundIdle" value="chainsaw_idle"/>
 			<property name="Group" value="Tools/Traps"/>
 			<property name="RepairExpMultiplier" value="10.8"/>
-			<property name="EconomicValue" value="1500"/>
+			<property name="EconomicValue" value="2500"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="ShowQuality" value="true"/>
 
@@ -180,9 +177,9 @@
 				<passive_effect name="DismemberChance" operation="base_add" value="50">
 					<requirement name="!EntityTagCompare" tags="metal"/>
 				</passive_effect>
-				<passive_effect name="EntityDamage" operation="base_set" value="15"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="8"/>
-				<passive_effect name="RoundsPerMinute" operation="base_set" value="300"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="5"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="20"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="2000"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="1400,4200" tier="1,6"/>
 				<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
 				<passive_effect name="MaxRange" operation="base_set" value="2.5"/>
@@ -206,7 +203,7 @@
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.2" tags="metal"/>
 
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1000"/>
-				<passive_effect name="MagazineSize" operation="base_set" value="200"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="500"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/>
 
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value=".5"/>
@@ -254,7 +251,7 @@
 			<property name="RepairExpMultiplier" value="10.8"/>
 			<property name="PickupJournalEntry" value="alternateAmmoTip"/>
 			<property name="LightValue" value=".45"/>
-			<property name="EconomicValue" value="500"/>
+			<property name="EconomicValue" value="2000"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="ShowQuality" value="true"/>
 			<property class="Action0">
@@ -438,7 +435,7 @@
 
 			<effect_group name="FuriousRamsayBurningKnifeDebuff" tiered="false">
 					<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayAddBurningDamage"/>
-					<triggered_effect trigger="onSelfHoldingItemThrown" action="AddBuff" buff="FuriousRamsayAddBurningDamageAoETimer"/>
+					<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="FuriousRamsayAddBurningThrownDamage"/>
 			</effect_group>
 		</item>
 
