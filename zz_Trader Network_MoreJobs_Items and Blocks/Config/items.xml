@@ -133,10 +133,10 @@
 			</effect_group>
 			
 			<effect_group name="FuriousRamsayStormBreakerDebuff" tiered="false">
-					<triggered_effect trigger="onSelfDamagedBlock" action="AddBuff" target="positionAOE" range="3" buff="FuriousRamsayStormBreakerShockDamageAoE"/>
-					<triggered_effect trigger="onSelfDamagedBlock" action="AddBuff" target="positionAOE" range="3" buff="FuriousRamsayStormBreakerKnockdownDamageAoE"/>
-					<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" target="positionAOE" range="3" buff="FuriousRamsayStormBreakerShockDamageAoE"/>
-					<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" target="positionAOE" range="3" buff="FuriousRamsayStormBreakerKnockdownDamageAoE"/>
+					<triggered_effect trigger="onSelfDamagedBlock" action="AddBuff" target="positionAOE" range="3.5" buff="FuriousRamsayStormBreakerShockDamageAoE"/>
+					<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" target="positionAOE" range="3.5" buff="FuriousRamsayStormBreakerShockDamageAoE"/>
+					<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="positionAOE" range="3.5" buff="FuriousRamsayStormBreakerShockDamageAoE"/>
+					<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="positionAOE" range="3.5" buff="FuriousRamsayStormBreakerKnockdownDamageAoE"/>
 			</effect_group>
 		</item>
 
@@ -494,8 +494,8 @@
 				<property name="Class" value="ThrownWeapon"/>
 				<property name="Hitmask_override" value="Bullet"/>
 				<property name="Delay" value="1.2"/>
-				<property name="Throw_strength_default" value="8"/>
-				<property name="Throw_strength_max" value="20"/>
+				<property name="Throw_strength_default" value="20"/>
+				<property name="Throw_strength_max" value="40"/>
 				<property name="Max_strain_time" value="1"/>
 				<property name="Sound_start" value="spear_throw"/>
 
@@ -503,7 +503,7 @@
 				<property name="DamageBlock" value="50"/>
 				<property name="Explosion.ParticleIndex" value="0"/>
 
-				<property name="FlyTime" value="0"/>
+				<property name="FlyTime" value="0.1"/>
 				<property name="Gravity" value="-7.5"/>
 				<property name="LifeTime" value="3600"/>
 				<property class="HitSounds">
@@ -547,7 +547,8 @@
 
 			<effect_group name="FuriousRamsayShockSpearDebuff" tiered="false">
 					<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="FuriousRamsayAddShockDamage"/>
-					<triggered_effect trigger="onSelfHoldingItemThrown" action="AddBuff" buff="FuriousRamsayAddShockDamageAoETimer"/>
+					<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="positionAOE" range="7" buff="FuriousRamsayAddShockDamageAoE"/>
+					<!--<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="positionAOE" range="7" buff="FuriousRamsayAddKnockdownDamageAoE"/>-->
 			</effect_group>
 			
 		</item>
