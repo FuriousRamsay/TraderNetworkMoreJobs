@@ -1318,7 +1318,7 @@
 				<duration value="3"/>
 				<effect_group>
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-1">
-						<requirement name="!EntityTagCompare" tags="metal,player,mutantsmallanimal,robot"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot"/>
 					</passive_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
@@ -1337,82 +1337,56 @@
 						<requirement name="EntityTagCompare" tags="UMA"/>
 					</triggered_effect>
 
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="RABBIT_ Pelvis/RABBIT_ Spine/RABBIT_ Spine1" local_offset="0,0,0">
+						<requirement name="EntityTagCompare" tags="rabbit"/>
+					</triggered_effect>
 
-					<!-- These throw contant warning mesages in the console -->
-					<!--<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="RightArm">
-						<requirement name="EntityTagCompare" tags="mutantanimal"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="CHICKEN_ Pelvis/CHICKEN_ Spine" local_offset="0,0,0">
+						<requirement name="EntityTagCompare" tags="chicken"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="LeftArm">
-						<requirement name="EntityTagCompare" tags="mutantanimal"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="RightLeg">
-						<requirement name="EntityTagCompare" tags="mutantanimal"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="LeftLeg">
-						<requirement name="EntityTagCompare" tags="mutantanimal"/>
-					</triggered_effect>-->
-					
-					<!-- tried everything for the very small animals, but no effects will stick 
-					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="spine1">
-						<requirement name="EntityTagCompare" tags="mutantsmallanimal"/>
-					</triggered_effect>-->
-					
+		
 					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="molotov_explosion">
-						<requirement name="!EntityTagCompare" tags="metal,player,mutantsmallanimal,robot"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot"/>
 					</triggered_effect>
 									
 					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
 						<requirement name="!EntityTagCompare" tags="metal,player,mutantsmallanimal,robot"/>
 					</triggered_effect>
 					
-					<!-- These throw contant warning mesages in the console -->
-					<!--<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="RightArm">
-						<requirement name="EntityTagCompare" tags="mutantanimal"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="LeftArm">
-						<requirement name="EntityTagCompare" tags="mutantanimal"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="RightLeg">
-						<requirement name="EntityTagCompare" tags="mutantanimal"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="LeftLeg">
-						<requirement name="EntityTagCompare" tags="mutantanimal"/>
-					</triggered_effect>-->
-
 					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,mutantsmallanimal,robot"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,mutantsmallanimal,robot"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,mutantsmallanimal,robot"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,mutantsmallanimal,robot"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,mutantsmallanimal,robot"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfEnteredGame" action="PlaySound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="FadeOutSound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot"/>
 					</triggered_effect>
 				</effect_group>
 			</buff>
@@ -1440,13 +1414,17 @@
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="burntZombieSmoke" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="!EntityTagCompare" tags="player,robot"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,UMA"/>
 					</triggered_effect>
 																	
 					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="burntZombieSmoke" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="!EntityTagCompare" tags="player,robot"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,UMA"/>
 					</triggered_effect>
 					
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="burntZombieSmoke" parent_transform="Spine1" local_offset="0,0,0">
+						<requirement name="EntityTagCompare" tags="UMA"/>
+					</triggered_effect>
+
 					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="burntZombieSmoke">
 						<requirement name="!EntityTagCompare" tags="player,robot"/>
 					</triggered_effect>
@@ -1525,6 +1503,14 @@
 						<requirement name="!EntityTagCompare" tags="player,robot"/>
 					</triggered_effect>
 					
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="RABBIT_ Pelvis/RABBIT_ Spine/RABBIT_ Spine1" local_offset="0,0,0">
+						<requirement name="EntityTagCompare" tags="rabbit"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="CHICKEN_ Pelvis/CHICKEN_ Spine" local_offset="0,0,0">
+						<requirement name="EntityTagCompare" tags="chicken"/>
+					</triggered_effect>
+
 					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
 						<requirement name="!EntityTagCompare" tags="player,robot"/>
 					</triggered_effect>
@@ -1957,6 +1943,14 @@
 						<requirement name="EntityTagCompare" tags="player,robot"/>
 					</triggered_effect>
 					
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="RABBIT_ Pelvis/RABBIT_ Spine/RABBIT_ Spine1" local_offset="0,0,0">
+						<requirement name="EntityTagCompare" tags="rabbit"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="CHICKEN_ Pelvis/CHICKEN_ Spine" local_offset="0,0,0">
+						<requirement name="EntityTagCompare" tags="chicken"/>
+					</triggered_effect>
+
 					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
 						<requirement name="EntityTagCompare" tags="player,robot"/>
 					</triggered_effect>
@@ -2308,6 +2302,14 @@
 						<requirement name="!EntityTagCompare" tags="player,robot"/>
 					</triggered_effect>
 					
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="RABBIT_ Pelvis/RABBIT_ Spine/RABBIT_ Spine1" local_offset="0,0,0">
+						<requirement name="EntityTagCompare" tags="rabbit"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="CHICKEN_ Pelvis/CHICKEN_ Spine" local_offset="0,0,0">
+						<requirement name="EntityTagCompare" tags="chicken"/>
+					</triggered_effect>
+
 					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
 						<requirement name="!EntityTagCompare" tags="player,robot"/>
 					</triggered_effect>
@@ -2372,6 +2374,14 @@
 						<requirement name="!EntityTagCompare" tags="metal,player,robot"/>
 					</triggered_effect>
 					
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="RABBIT_ Pelvis/RABBIT_ Spine/RABBIT_ Spine1" local_offset="0,0,0">
+						<requirement name="EntityTagCompare" tags="rabbit"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="CHICKEN_ Pelvis/CHICKEN_ Spine" local_offset="0,0,0">
+						<requirement name="EntityTagCompare" tags="chicken"/>
+					</triggered_effect>
+
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_burning_barrel" parent_transform="Spine1" local_offset="0,-1.1,0">
 						<requirement name="EntityTagCompare" tags="UMA"/>
 					</triggered_effect>
