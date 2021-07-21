@@ -98,12 +98,6 @@
 				<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
 				<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
 			</effect_group>
-			<effect_group name="Power Attack">
-				<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
-				<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
-				<passive_effect name="StaminaLoss" operation="base_set" value="50" tags="secondary"/>
-				<passive_effect name="DismemberChance" operation="base_add" value=".5" tags="secondary"/>
-			</effect_group>
 			<effect_group name="FuriousRamsayStormBreakerEffects">
 				<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="Sparks" prefab="ItemModEffects/baton_electricityPrefab" parentTransform="#HeldItemRoot" localPos="0,.3,-0.38" localRot="90,0,0"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="SparksB" prefab="ItemModEffects/baton_electricityPrefab" parentTransform="Handle" localPos="0,.42,-0.33" localRot="90,0,0"/>
@@ -112,9 +106,6 @@
 				<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="SparksE" prefab="ItemModEffects/baton_electricityPrefab" parentTransform="steelSledgehammer_LOD2" localPos="0,-.34,0" localRot="0,0,0"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="SparksF" prefab="ParticleEffects/p_electric_shock_small" parentTransform="#HeldItemRoot" localPos="0,-.6,0" localRot="0,0,0"/>
 				<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="SparksG" prefab="ParticleEffects/p_electric_shock_small" parentTransform="Handle" localPos="0,-.86,0" localRot="0,0,0"/>
-				<!--<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="SparksH" prefab="#Other/Items?Weapons/Melee/Spear/spear_steel_Prefab.prefab" parentTransform="Handle" localPos="0,-0.5,0" localRot="0,0,0"/>-->
-
-				<!--<triggered_effect trigger="onSelfEquipStart" action="AddPart" part="SparksH" prefab="#Other/Items?Weapons/Melee/Spear/spear_stone_Prefab.prefab" parentTransform="Handle" localPos="0,-0.5,0" localRot="0,0,0"/>-->
 
 				<triggered_effect trigger="onSelfDamagedBlock" action="AddBuff" buff="FuriousRamsayStormBreakerEffects"/>
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" buff="FuriousRamsayStormBreakerEffects"/>
@@ -126,7 +117,6 @@
 				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="SparksE"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="SparksF"/>
 				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="SparksG"/>
-				<triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="SparksH"/>
 			</effect_group>
 			
 			<effect_group name="FuriousRamsayStormBreakerDebuff" tiered="false">
@@ -134,6 +124,16 @@
 					<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" target="positionAOE" range="3.5" buff="FuriousRamsayStormBreakerShockDamageAoE"/>
 					<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="positionAOE" range="3.5" buff="FuriousRamsayStormBreakerShockDamageAoE"/>
 					<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="positionAOE" range="3.5" buff="FuriousRamsayStormBreakerKnockdownDamageAoE"/>
+
+					<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="self" buff="FuriousRamsayShockSelfAoE">
+						<requirement name="WornItems" tags="FuriousRamsayArmorShock" operation="Equals" value="5"/>
+					</triggered_effect>
+					<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="self" buff="FuriousRamsayShockSelfAoE">
+						<requirement name="WornItems" tags="FuriousRamsayArmorFireShock" operation="Equals" value="5"/>
+					</triggered_effect>
+					<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="self" buff="FuriousRamsayShockSelfAoE">
+						<requirement name="WornItems" tags="FuriousRamsayArmorFireShockSmoke" operation="Equals" value="5"/>
+					</triggered_effect>
 			</effect_group>
 		</item>
 
@@ -436,6 +436,16 @@
 			<effect_group name="FuriousRamsayBurningKnifeDebuff" tiered="false">
 					<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayAddBurningDamage"/>
 					<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="FuriousRamsayAddBurningThrownDamage"/>
+
+					<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="self" buff="FuriousRamsayBurningSelfAoE">
+						<requirement name="WornItems" tags="FuriousRamsayArmorFire" operation="Equals" value="5"/>
+					</triggered_effect>
+					<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="self" buff="FuriousRamsayBurningSelfAoE">
+						<requirement name="WornItems" tags="FuriousRamsayArmorFireShock" operation="Equals" value="5"/>
+					</triggered_effect>
+					<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="self" buff="FuriousRamsayBurningSelfAoE">
+						<requirement name="WornItems" tags="FuriousRamsayArmorFireShockSmoke" operation="Equals" value="5"/>
+					</triggered_effect>
 			</effect_group>
 		</item>
 

@@ -3643,7 +3643,7 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="SpreadDegreesVertical" operation="perc_subtract" value=".8"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="perc_subtract" value=".8"/>
-				<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="selfAOE" range="3" duration="0" force="400"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="selfAOE" range="3" duration="0"/>
 			</effect_group>
 		</item>
 
@@ -4170,7 +4170,7 @@
 			<effect_group name="FuriousRamsayMeleeHandBlackShieldKnockDown">
 				<requirement name="EntityTagCompare" target="other" tags="player,robot"/>
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
-					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="2000"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="1000"/>
 					<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="other" sound="malehateattack"/>
 			</effect_group>
 		</item>
@@ -4211,7 +4211,7 @@
 			<effect_group name="FuriousRamsayMeleeHandBlackShieldKnockDown">
 				<requirement name="EntityTagCompare" target="other" tags="player,robot"/>
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
-					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="2000"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="1000"/>
 					<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="other" sound="malehateattack"/>
 			</effect_group>
 		</item>
@@ -4278,7 +4278,7 @@
 			<effect_group name="FuriousRamsayMeleeHandBlackShieldKnockDown">
 				<requirement name="EntityTagCompare" target="other" tags="player,robot"/>
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
-					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="2000"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="1000"/>
 					<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="other" sound="malehateattack"/>
 					<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="FuriousRamsayAddShockEnemyBoss"/>
 			</effect_group>
@@ -4343,7 +4343,7 @@
 			<effect_group name="FuriousRamsayMeleeHandBlackShieldKnockDown">
 				<requirement name="EntityTagCompare" target="other" tags="player,robot"/>
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
-					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="2000"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="1000"/>
 					<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="other" sound="malehateattack"/>
 					<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="FuriousRamsayAddBurningEnemyBoss"/>			
 			</effect_group>
@@ -4409,7 +4409,7 @@
 			<effect_group name="FuriousRamsayMeleeHandBlackShieldKnockDown">
 				<requirement name="EntityTagCompare" target="other" tags="player,robot"/>
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
-					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="2000"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="1000"/>
 					<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="other" sound="malehateattack"/>
 					<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="FuriousRamsayAddExplosionEnemyBoss"/>			
 			</effect_group>
