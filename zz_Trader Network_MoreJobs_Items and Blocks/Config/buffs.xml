@@ -2,6 +2,55 @@
 
 		<append xpath="/buffs" >		
 
+			<buff name="FuriousRamsayBurningTrapDamage" hidden="true" remove_on_death="true">
+				<damage_type value="heat"/>
+				<stack_type value="duration"/>
+				<duration value="6"/>
+				<update_rate value="1.5"/>
+				<effect_group>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-5">
+						<requirement name="!EntityTagCompare" tags="robot,trader,mutantsmallanimal"/>
+					</passive_effect>
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="FuriousRamsayFireZombieAoEDamage">
+						<requirement name="!EntityTagCompare" tags="robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="molotov_explosion">
+						<requirement name="!EntityTagCompare" tags="robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
+						<requirement name="!EntityTagCompare" tags="robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+												
+					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
+						<requirement name="!EntityTagCompare" tags="robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+					
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire">
+						<requirement name="!EntityTagCompare" tags="robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_onFire">
+						<requirement name="!EntityTagCompare" tags="robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_onFire">
+						<requirement name="!EntityTagCompare" tags="robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_onFire">
+						<requirement name="!EntityTagCompare" tags="robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FireMediumLoop">
+						<requirement name="!EntityTagCompare" tags="robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayStormBreakerEffects" hidden="true">
 				<stack_type value="replace"/>
 				<duration value="1"/>
@@ -98,7 +147,12 @@
 				<damage_type value="heat"/>
 				<stack_type value="ignore"/>
 				<duration value="5"/>
+				<update_rate value="2"/>
 				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="FuriousRamsayFireZombieAoEDamage">
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-10">
 						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
 					</passive_effect>
@@ -187,7 +241,12 @@
 				<damage_type value="heat"/>
 				<stack_type value="replace"/>
 				<duration value="5"/>
+				<update_rate value="1"/>
 				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="FuriousRamsayFireZombieAoEDamage">
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-10">
 						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
 					</passive_effect>
@@ -231,7 +290,12 @@
 				<damage_type value="heat"/>
 				<stack_type value="replace"/>
 				<duration value="3"/>
+				<update_rate value="2"/>
 				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="FuriousRamsayFireZombieAoEDamage">
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+					</triggered_effect>
+
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-10">
 						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
 					</passive_effect>

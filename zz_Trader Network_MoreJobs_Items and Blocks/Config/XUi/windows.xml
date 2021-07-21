@@ -1,0 +1,142 @@
+<Config>
+
+	<append xpath="/windows">
+
+		<window name="FuriousRamsaywindowOutput" width="0" height="0" anchor="CenterTop" panel="Right" cursor_area="false" >
+		</window>
+
+		<window name="FuriousRamsaywindowToolsCampfire" width="0" height="0" panel="Right" cursor_area="false" >
+		</window>
+
+		<window name="FuriousRamsaywindowCraftingQueue" width="0" height="0" panel="Left" cursor_area="false" >
+			<rect depth="0" pos="-1000,-1000" width="0" controller="CraftingQueue">
+				<grid name="queue" rows="1" cols="4" pos="0,0" cell_width="0" cell_height="0" repeat_content="true">
+					<recipe_stack name="0"/>
+				</grid>
+			</rect>
+		</window>
+
+		<window name="FuriousRamsaywindowFuel" width="228" height="166" panel="Right" cursor_area="true">
+			<panel style="header.panel">
+				<sprite style="header.icon" sprite="ui_game_symbol_fire"/>
+				<label style="header.name" text="FUEL" text_key="xuiFuel" />
+				<label style="header.timer"/>
+			</panel>
+
+			<rect name="content" depth="0" pos="0,-46" height="79" >
+				<rect disablefallthrough="true">
+					<grid rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationFuelGrid" repeat_content="true">
+						<item_stack name="0"/>
+					</grid>
+				</rect>
+				<grid name="slot_preview" depth="1" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="SlotPreview">
+					<rect>
+						<sprite name="slot" depth="2" width="64" height="64" sprite="resourceWood" atlas="ItemIconAtlasGreyscale" pos="35,-35" pivot="center" foregroundlayer="true"/>
+					</rect>
+					<rect>
+						<sprite name="slot" depth="2" width="64" height="64" sprite="resourceWood" atlas="ItemIconAtlasGreyscale" pos="35,-35" pivot="center" foregroundlayer="true"/>
+					</rect>
+					<rect>
+						<sprite name="slot" depth="2" width="64" height="64" sprite="resourceWood" atlas="ItemIconAtlasGreyscale" pos="35,-35" pivot="center" foregroundlayer="true"/>
+					</rect>
+				</grid>
+			</rect>
+
+			<panel name="buttonContent" depth="5" pos="0, -121" height="40" backgroundcolor="[black]" bordercolor="[black]">
+				<sprite depth="5" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" />
+				<rect depth="1" pos="3,-3" width="225" height="34">
+					<button name="button" sprite="menu_empty" defaultcolor="[mediumGrey]" disabledcolor="[mediumGrey]" hoversprite="ui_game_select_row" hovercolor="[white]" type="sliced" width="222"  hoverscale="1.0" />
+					<sprite depth="2" name="flameIcon" style="icon32px" pos="5,0" sprite="ui_game_symbol_fire" />
+					<label depth="2" name="onoff" pos="0,-6" justify="center" text="TURN ON" text_key="xuiTurnOn" font_size="26" />
+				</rect>
+			</panel>
+		</window>
+
+		<window name="FuriousRamsaywindowCraftingList" width="0" height="0" controller="CraftingListInfo" panel="Left" cursor_area="true" >
+			<panel name="header" height="0" depth="0" backgroundspritename="ui_game_panel_header">
+				<label style="header.name" text="basics" text_key="xuiBasics" />
+			</panel>
+			<panel name="content" width="0" height="0" depth="0" pos="0,0" on_scroll="true" disableautobackground="true">
+				<rect depth="0" name="categorySelector" width="0" height="0" pos="0,0">
+					<grid name="categories" pos="0,0" rows="1" cols="9" width="0" height="0" cell_width="0" cell_height="0" repeat_content="true" controller="CategoryList">
+						<category_icon />
+					</grid>
+				</rect>
+				<rect depth="0" name="searchControls" width="0" height="0" pos="0,0">
+					<button depth="0" name="favorites" style="icon30px, press" pos="0,0" sprite="" pivot="center" sound="[paging_click]" tooltip="Favorites" tooltip_key="lblFavorites" collider_scale="1.5" />
+					<panel pos="0,0" width="0" height="0" disableautobackground="true">
+						<button depth="0" name="pageDown" style="icon30px, press" pos="0,0" sprite="" pivot="center" sound="[paging_click]" />
+						<rect depth="0" pos="0,0" >
+							<label depth="0" name="pageNumber" pos="0,0" width="0" height="0" text="1" font_size="26" justify="center"/>
+						</rect>
+						<button depth="0" name="pageUp" style="icon30px, press" pos="0,0" sprite="" pivot="center" sound="[paging_click]" />
+					</panel>
+				</rect>
+				<grid name="recipes" rows="12" cols="1" pos="0,0" width="0" height="0" cell_width="0" cell_height="0" controller="RecipeList" repeat_content="true" arrangement="vertical" >
+					<recipe_entry name="0"/>
+				</grid>
+			</panel>
+		</window>
+	
+		<window name="FuriousRamsaycraftingInfoPanel" width="0" height="0" controller="CraftingInfoWindow" style="crafting.info.window" panel="Center" cursor_area="true" >
+			<panel name="header" height="0" depth="0" backgroundspritename="ui_game_panel_header">
+				<rect pos="0,0" name="requiredToolOverlay">
+					<label depth="0" pos="0,0" name="requiredToolText" width="0" height="0" text="Required" text_key="xuiRequired" font_size="32" upper_case="true" justify="left"/>
+				</rect>
+			</panel>
+			<rect name="contentCraftingInfo" height="0" depth="0" pos="0,0">
+				<rect depth="0" pos="0,0" name="preview" width="0" height="0">
+					<filledsprite depth="0" name="durabilityBar" height="0" width="0" color="{durabilitycolor}" type="filled" pos="0,0" fill="{durabilityfill}" visible="{hasdurability}" />
+					<label depth="0" name="durabilityValue" pos="0,0" width="0" height="0" text="{durabilitytext}" font_size="30" justify="{durabilityjustify}" effect="outline" visible="false"/>
+					<label depth="0" name="craftingTime" width="0" height="0" pos="0,0" text="{craftingtime}" font_size="26" color="[beige]"/>
+				</rect>
+				<grid name="itemActions" rows="4" cols="1" pos="0,0" width="0" cell_width="0" cell_height="0" controller="ItemActionList">
+					<rect depth="0" name="actions" width="0" height="0">
+						<rect name="recipeCraftCountControl" width="0" height="0" pos="0,0" controller="RecipeCraftCount">
+							<button depth="0" name="countDown" style="icon30px, press" pos="0,0" sprite="" pivot="center" sound="[paging_click]"/>
+							<count_control_input name="count_input" depth="0" pos="0,0" />
+							<button depth="0" name="countUp" style="icon30px, press" pos="0,0" sprite="" pivot="center" sound="[paging_click]"/>
+							<button depth="0" name="countMax" style="icon30px, press" pos="0,0" sprite="" pivot="center" sound="[paging_click]"/>
+						</rect>
+					</rect>
+					<item_action_entry />
+					<item_action_entry />
+					<item_action_entry />
+				</grid>
+				<rect depth="0" name="searchControls" width="0" height="0" pos="0,0">
+					<button depth="0" name="ingredientsButton" style="icon30px, press" pos="0,0" sprite="" pivot="center" tooltip_key="ingredient" sound="[paging_click]" selected="true" />
+					<button depth="0" name="descriptionButton" style="icon30px, press" pos="0,0" sprite="" pivot="center" tooltip_key="lblBookDesc" sound="[paging_click]" />
+					<button depth="0" name="showunlocksButton" style="icon30px, press" pos="0,0" sprite="" pivot="center" tooltip_key="xuiSkillUnlocks" sound="[paging_click]" visible="{showunlockedbytab}" />
+				</rect>
+				<rect depth="0" pos="0,0" name="description" width="0" height="0" visible="{showdescription}">
+					<rect visible="true">
+						<sprite depth="0" color="[darkGrey]" type="sliced" globalopacity="true" height="0" />
+						<label depth="0" name="descriptionText" pos="0,0" text="{itemdescription}"  width="0" height="0" />
+					</rect>
+				</rect>
+				<rect depth="0" pos="0,0" name="ingredients" width="0" height="0" visible="{showingredients}">
+					<grid rows="6" width="0" height="0" cell_height="0" cell_width="0" controller="IngredientList" arrangement="vertical">
+						<ingredient_header name="0"/>
+						<ingredient_row name="1"/>
+						<ingredient_row name="2"/>
+						<ingredient_row name="3"/>
+						<ingredient_row name="4"/>
+						<ingredient_row name="5"/>
+					</grid>
+				</rect>
+				<rect depth="0" pos="0,0" name="unlockedBy" width="0" height="0" visible="{showunlockedby}">
+					<grid rows="6" width="0" height="0" cell_height="0" cell_width="0" controller="UnlockByList" arrangement="vertical">
+						<unlocked_by_header name="0"/>
+						<unlocked_by_row name="1"/>
+						<unlocked_by_row name="2"/>
+						<unlocked_by_row name="3"/>
+						<unlocked_by_row name="4"/>
+						<unlocked_by_row name="5"/>
+					</grid>
+				</rect>
+			</rect>
+		</window>
+
+	</append>
+
+</Config>
