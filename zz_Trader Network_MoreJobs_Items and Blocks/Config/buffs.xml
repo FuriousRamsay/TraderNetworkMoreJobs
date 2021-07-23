@@ -2,6 +2,26 @@
 
 		<append xpath="/buffs" >		
 
+			<buff hidden="true" name="buffFlamethrowerFire">
+				<stack_type value="ignore"/>
+				<duration value="0"/>
+				<update_rate value=".17"/>
+
+				<effect_group name="Play Sounds">
+					<triggered_effect sound="FireMediumLoop" action="PlaySound" trigger="onSelfBuffStart"/>
+					<triggered_effect sound="FireMediumLoop" action="PlaySound" trigger="onSelfBuffUpdate"/>
+					<triggered_effect sound="FireMediumLoop" action="StopSound" trigger="onSelfBuffFinish"/>
+					<triggered_effect sound="FireMediumLoop" action="StopSound" trigger="onSelfBuffRemove"/>
+				</effect_group>
+
+				<effect_group name="Attach Particles">
+					<triggered_effect action="RemoveBuff" trigger="onSelfPrimaryActionEnd" buff="buffFlamethrowerFire" target="self"/>
+					<triggered_effect action="AddPart" trigger="onSelfBuffStart" parentTransform="#HeldItemRoot" localRot="0,0,0" localPos="0,-0.4,0.6" prefab="ItemModEffects/mod_flame_defaultPrefab" part="FlamethrowerFire"/>
+					<triggered_effect action="RemovePart" trigger="onSelfBuffFinish" part="FlamethrowerFire"/>
+					<triggered_effect action="RemovePart" trigger="onSelfBuffRemove" part="FlamethrowerFire"/>
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayBurningSelfAoE" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<duration value="8"/>

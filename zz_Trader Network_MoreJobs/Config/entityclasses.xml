@@ -25,6 +25,401 @@
 
 	<append xpath="/entity_classes">		
 
+<!-- 
+TIER 1: 
+FuriousRamsayBoeToxic
+FuriousRamsayJoeToxic
+FuriousRamsayJanitorToxic
+FuriousRamsayArleneToxic
+FuriousRamsayLabToxic
+FuriousRamsayDarleneToxic
+FuriousRamsayMarleneToxic
+FuriousRamsayYoToxic
+FuriousRamsaySteveToxic
+FuriousRamsayBusinessManToxic
+FuriousRamsayZombieAlexToxic
+FuriousRamsayOldTimerToxic
+ -->
+		<entity_class name="FuriousRamsayZombieBoeToxic" extends="zombieBoe">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>
+
+		<entity_class name="FuriousRamsayZombieJoeToxic" extends="zombieJoe">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh1"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieJanitorToxic" extends="zombieJanitor">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh1"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieArleneToxic" extends="zombieArlene">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh3"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieLabToxic" extends="zombieLab">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieDarleneToxic" extends="zombieDarlene">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh1"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieMarleneToxic" extends="zombieMarlene">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh1"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieYoToxic" extends="zombieYo">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieSteveToxic" extends="zombieSteve">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh1"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieBusinessManToxic" extends="zombieBusinessMan">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh2"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieAlexToxic" extends="zombieSpider">
+		<property name="WalkType" value="7"/>
+		<property name="SoundRandom" value="Enemies/Base_Zombie_Male/zombiemaleroam"/>
+		<property name="SoundAlert" value="Enemies/Base_Zombie_Male/zombiemalealert"/>
+		<property name="SoundSense" value="Enemies/Base_Zombie_Male/zombiemalesense"/>
+		<property name="SoundHurt" value="Enemies/Base_Zombie_Male/zombiemalepain"/>
+		<property name="SoundDeath" value="Enemies/Base_Zombie_Male/zombiemaledeath"/>
+		<property name="SoundAttack" value="Enemies/Base_Zombie_Male/zombiemaleattack"/>
+		<property name="SoundSleeperSense" value="sleepersense"/>
+		<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>		
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieOldTimerToxic" extends="zombieOldTimer">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+<!-- 
+TIER 2: 
+FuriousRamsayCheerleaderToxic
+FuriousRamsaySkateboarderToxic
+FuriousRamsayUtilityWorkerToxic
+FuriousRamsayNurseToxic
+FuriousRamsayStripperToxic
+FuriousRamsaySteveCrawlerToxic
+FuriousRamsaySpiderToxic
+FuriousRamsayZombieFatCopToxic
+FuriousRamsayFatHawaiianToxic
+FuriousRamsayBikerToxic
+FuriousRamsaySoldierToxic
+FuriousRamsayMaleHazmatToxic
+FuriousRamsayFarmerToxic
+FuriousRamsayZombieMoeToxic
+FuriousRamsayZombieFemaleFatToxic
+ -->
+
+		<entity_class name="FuriousRamsayZombieCheerleaderToxic" extends="zombieCheerleader">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieSkateboarderToxic" extends="zombieSkateboarder">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieUtilityWorkerToxic" extends="zombieUtilityWorker">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieNurseToxic" extends="zombieNurse">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieStripperToxic" extends="zombieStripper">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh1"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieSteveCrawlerToxic" extends="zombieSteveCrawler">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieSpiderToxic" extends="zombieSpider">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieFatCopToxic" extends="zombieFatCop">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieFatHawaiianToxic" extends="zombieFatHawaiian">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieBikerToxic" extends="zombieBiker">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh3"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieSoldierToxic" extends="zombieSoldier">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieMaleHazmatToxic" extends="zombieMaleHazmat">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieFarmerToxic" extends="zombieFarmer">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieMoeToxic" extends="zombieMoe">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieFemaleFatToxic" extends="zombieFemaleFat">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh1"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+<!-- 
+TIER 3: 
+FuriousRamsayZombieFootballPlayerToxicFeral
+FuriousRamsayBoeToxicFeral
+FuriousRamsayJoeToxicFeral
+FuriousRamsayJanitorToxicFeral
+FuriousRamsayArleneToxicFeral
+FuriousRamsayLabToxicFeral
+FuriousRamsayDarleneToxicFeral
+FuriousRamsayMarleneToxicFeral
+FuriousRamsayYoToxicFeral
+FuriousRamsaySteveToxicFeral
+FuriousRamsayBusinessManToxicFeral
+FuriousRamsayZombieAlexToxicFeral
+FuriousRamsayOldTimerToxicFeral
+FuriousRamsayCheerleaderToxicFeral
+FuriousRamsaySkateboarderToxicFeral
+FuriousRamsayUtilityWorkerToxicFeral
+FuriousRamsayNurseToxicFeral
+FuriousRamsayStripperToxicFeral
+FuriousRamsaySteveCrawlerToxicFeral
+FuriousRamsaySpiderToxicFeral
+FuriousRamsayZombieFatCopToxicFeral
+FuriousRamsayFatHawaiianToxicFeral
+FuriousRamsayBikerToxicFeral
+FuriousRamsaySoldierToxicFeral
+FuriousRamsayMaleHazmatToxicFeral
+FuriousRamsayFarmerToxicFeral
+FuriousRamsayZombieMoeToxicFeral
+FuriousRamsayZombieFemaleFatToxicFeral
+FuriousRamsayZombieWightToxicFeral
+ -->
+		<entity_class name="FuriousRamsayZombieFootballPlayerToxicFeral" extends="zombieFootballPlayer">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>
+
+		<entity_class name="FuriousRamsayZombieBoeToxicFeral" extends="zombieBoeFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>
+
+		<entity_class name="FuriousRamsayZombieJoeToxicFeral" extends="zombieJoeFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh2"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieJanitorToxicFeral" extends="zombieJanitorFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh2"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieArleneToxicFeral" extends="zombieArleneFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh3"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieLabToxicFeral" extends="zombieLabFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieDarleneToxicFeral" extends="zombieDarleneFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh2"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieMarleneToxicFeral" extends="zombieMarleneFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh2"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieYoToxicFeral" extends="zombieYoFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh1"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieSteveToxicFeral" extends="zombieSteveFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh2"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieBusinessManToxicFeral" extends="zombieBusinessManFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh3"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieAlexToxicFeral" extends="zombieSpiderFeral">
+		<property name="WalkType" value="7"/>
+		<property name="SoundRandom" value="Enemies/Base_Zombie_Male/zombiemaleroam"/>
+		<property name="SoundAlert" value="Enemies/Base_Zombie_Male/zombiemalealert"/>
+		<property name="SoundSense" value="Enemies/Base_Zombie_Male/zombiemalesense"/>
+		<property name="SoundHurt" value="Enemies/Base_Zombie_Male/zombiemalepain"/>
+		<property name="SoundDeath" value="Enemies/Base_Zombie_Male/zombiemaledeath"/>
+		<property name="SoundAttack" value="Enemies/Base_Zombie_Male/zombiemaleattack"/>
+		<property name="SoundSleeperSense" value="sleepersense"/>
+		<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieOldTimerToxicFeral" extends="zombieOldTimerFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieCheerleaderToxicFeral" extends="zombieCheerleaderFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieSkateboarderToxicFeral" extends="zombieSkateboarderFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieUtilityWorkerToxicFeral" extends="zombieUtilityWorkerFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh1"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieNurseToxicFeral" extends="zombieNurseFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieStripperToxicFeral" extends="zombieStripperFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh2"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieSteveCrawlerToxicFeral" extends="zombieSteveCrawlerFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieSpiderToxicFeral" extends="zombieSpiderFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieFatCopToxicFeral" extends="zombieFatCopFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieFatHawaiianToxicFeral" extends="zombieFatHawaiianFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh1"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieBikerToxicFeral" extends="zombieBikerFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh3"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieSoldierToxicFeral" extends="zombieSoldierFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieMaleHazmatToxicFeral" extends="zombieMaleHazmat">
+		<property name="ReplaceMaterial1" value="#Entities/Zombies?Zombies/Materials/feral_eye.mat"/>
+		<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+		<property name="PainResistPerHit" value=".7"/><!-- Feral -->
+		<property name="HandItem" value="meleeHandZombieFeral"/>
+		<property name="MoveSpeedAggro" value=".5, 1.35"/>
+		<property name="ExperienceGain" value="750"/> <!-- XP grunt feral -->
+		<property name="LootDropProb" value=".03"/> <!-- Feral -->
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="237"/>
+			<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+		</effect_group>
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieFarmerToxicFeral" extends="zombieFarmerFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieMoeToxicFeral" extends="zombieMoeFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh1"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieFemaleFatToxicFeral" extends="zombieFemaleFatFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh2"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieWightToxicFeral" extends="zombieWightFeral">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>
+
+<!-- 
+TIER 4: 
+FuriousRamsayCheerleaderToxicRadiated
+FuriousRamsayBoeToxicRadiated
+FuriousRamsayJoeToxicRadiated
+FuriousRamsayJanitorToxicRadiated
+FuriousRamsayArleneToxicRadiated
+FuriousRamsayDarleneToxicRadiated
+FuriousRamsayMarleneToxicRadiated
+FuriousRamsayYoToxicRadiated
+FuriousRamsaySteveToxicRadiated
+FuriousRamsayBusinessManToxicRadiated
+FuriousRamsayZombieAlexToxicRadiated
+FuriousRamsayOldTimerToxicRadiated
+ -->
+		<entity_class name="FuriousRamsayZombieCheerleaderToxicRadiated" extends="zombieCheerleaderRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieBoeToxicRadiated" extends="zombieBoeRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>
+
+		<entity_class name="FuriousRamsayZombieJoeToxicRadiated" extends="zombieJoeRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh2"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieJanitorToxicRadiated" extends="zombieJanitorRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh2"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieArleneToxicRadiated" extends="zombieArleneRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh3"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<!--<entity_class name="FuriousRamsayZombieLabToxicRadiated" extends="zombieLabRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		-->
+
+		<entity_class name="FuriousRamsayZombieDarleneToxicRadiated" extends="zombieDarleneRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh2"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieMarleneToxicRadiated" extends="zombieMarleneRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh2"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieYoToxicRadiated" extends="zombieYoRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh1"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieSteveToxicRadiated" extends="zombieSteveRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh2"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieBusinessManToxicRadiated" extends="legendaryZombieBusinessMan">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh3"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieAlexToxicRadiated" extends="zombieSpiderRadiated">
+		<property name="WalkType" value="7"/>
+		<property name="SoundRandom" value="Enemies/Base_Zombie_Male/zombiemaleroam"/>
+		<property name="SoundAlert" value="Enemies/Base_Zombie_Male/zombiemalealert"/>
+		<property name="SoundSense" value="Enemies/Base_Zombie_Male/zombiemalesense"/>
+		<property name="SoundHurt" value="Enemies/Base_Zombie_Male/zombiemalepain"/>
+		<property name="SoundDeath" value="Enemies/Base_Zombie_Male/zombiemaledeath"/>
+		<property name="SoundAttack" value="Enemies/Base_Zombie_Male/zombiemaleattack"/>
+		<property name="SoundSleeperSense" value="sleepersense"/>
+		<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieOldTimerToxicRadiated" extends="zombieOldTimerRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+<!-- 
+TIER 5: 
+FuriousRamsaySkateboarderToxicRadiated
+FuriousRamsayUtilityWorkerToxicRadiated
+FuriousRamsaySpiderToxicRadiated
+FuriousRamsayZombieFatCopToxicRadiated
+FuriousRamsayBikerToxicRadiated
+FuriousRamsaySoldierToxicRadiated
+FuriousRamsayZombieMoeToxicRadiated
+FuriousRamsayZombieFemaleFatToxicRadiated
+FuriousRamsayZombieWightToxicRadiated
+ -->
+
+		<entity_class name="FuriousRamsayZombieSkateboarderToxicRadiated" extends="zombieSkateboarderRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieUtilityWorkerToxicRadiated" extends="legendaryZombieUtilityWorker">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh1"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<!--<entity_class name="FuriousRamsayZombieNurseToxicRadiated" extends="zombieNurseRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		-->
+
+		<!--<entity_class name="FuriousRamsayZombieStripperToxicRadiated" extends="zombieStripperRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh2"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		-->
+
+		<!--<entity_class name="FuriousRamsayZombieSteveCrawlerToxicRadiated" extends="zombieSteveCrawlerRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		-->
+
+		<entity_class name="FuriousRamsayZombieSpiderToxicRadiated" extends="zombieSpiderRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieFatCopToxicRadiated" extends="zombieFatCopRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<!--<entity_class name="FuriousRamsayZombieFatHawaiianToxicRadiated" extends="zombieFatHawaiianRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh1"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		-->
+
+		<entity_class name="FuriousRamsayZombieBikerToxicRadiated" extends="zombieBikerRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh4"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieSoldierToxicRadiated" extends="zombieSoldierRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<!--<entity_class name="FuriousRamsayZombieFarmerToxicRadiated" extends="zombieFarmerRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		-->
+
+		<entity_class name="FuriousRamsayZombieMoeToxicRadiated" extends="zombieMoeRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh1"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieFemaleFatToxicRadiated" extends="zombieFemaleFatRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh2"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>		
+
+		<entity_class name="FuriousRamsayZombieWightToxicRadiated" extends="zombieWightRadiated">
+		<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="AITask-1" value=""/><property name="AITarget-1" value=""/></entity_class>
+
+<!-- ===================================================================================== -->
+
+		<entity_class name="FuriousRamsayBossVulture" extends="animalZombieVultureRadiated">
+			<property name="SizeScale" value="1.2"/>
+			<property name="Tags" value="entity,enemy,animal,vulture"/>			
+			<!--<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/molotov/materials/molotov_flame.mat"/>-->
+			<property name="ReplaceMaterial0" value="#Entities/Zombies?Zombies/Materials/feral_radiated.mat"/>
+			<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+
+			<property name="HandItem" value="FuriousRamsayBossVulture"/>
+		</entity_class>
+
 		<entity_class name="FuriousRamsayAllTerrain">
 			<property name="Tags" value="FuriousRamsayAllTerrain"/>
 			<property name="Class" value="EntityVJeep"/>

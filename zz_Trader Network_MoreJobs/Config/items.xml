@@ -4606,5 +4606,88 @@
 			</property>
 		</item>
 
+		<item name="FuriousRamsayBossVulture">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Degradation" value="99999" param1="true"/>
+			<property class="Action0">
+				<property name="Range" value="1.75"/>
+				<property name="DamageEntity" value="25"/>
+				<property name="DamageBlock" value="50"/>
+				<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,buffInjuryStunned01"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="Vomit"/>
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value="0"/>
+				<property name="Range" value="30"/>
+				<property name="Infinite_ammo" value="true"/>
+				<property name="Magazine_items" value="FuriousRamsayVomitAmmo"/>
+				<property name="Sound_warning" value=""/>
+				<property name="Sound_start" value=""/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value=""/>
+				<property name="Sound_reload" value=""/>
+				<!--<property name="Buff" value="buffBurningZombie"/>-->
+			</property>
+			<effect_group name="meleeHandZombieCop" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="1000"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="2"/>
+				<passive_effect name="MaxRange" operation="base_set" value="30"/>
+				<passive_effect name="ProjectileVelocity" operation="base_set" value="20"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="10"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0"/>
+				<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="0"/>
+				<!--<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="buffInjuryBleedingZombie"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="buffInfectionCatch"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffInjuryStunned01"/>-->
+				<!--<triggered_effect trigger="onProjectileImpact" action="PlaySound" target="positionAOE" range="30" sound="" />-->
+				<!--<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="infectionZombieHit" operation="set" value="30"/>-->
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayVomitAmmo">
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Vomit/vomitBulbPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				<property name="DamageEntity" value="2"/>
+				<property name="DamageBlock" value="10"/>
+				<property name="Explosion.ParticleIndex" value="0"/>
+				<property name="FlyTime" value="0.2"/>
+				<property name="Gravity" value="-2"/>
+				<property name="LifeTime" value="4"/>
+				<property name="CollisionRadius" value=".5"/>
+				<property name="DamageBonus.earth" value="0"/>
+				<!--<property name="Buff" value="buffBurningZombie"/>-->
+			</property>
+			<effect_group name="FuriousRamsayVomitAmmo" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
+				<!--<passive_effect name="BuffProcChance" operation="base_set" value=".8" tags="buffBurningZombie"/>-->
+			</effect_group>
+		</item>
+	
+		<item name="qc_FuriousRamsayFuriousRamsayBossVulture">
+			<property name="DescriptionKey" value="qc_FuriousRamsayGhostsTier1Desc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="challenge_FuriousRamsayBossVulture"/>
+			</property>
+			<property name="TintColor" value="223, 113, 240"/>
+			<property name="CustomIconTint" value="df71f0"/>
+		</item>
+
 	</append>
 </Config>
