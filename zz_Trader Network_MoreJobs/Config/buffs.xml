@@ -2,6 +2,156 @@
 
 		<append xpath="/buffs" >		
 
+			<buff name="FuriousRamsayRadiatedAoEDamageTimerTier1" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1.8" buff="FuriousRamsayRadiatedAoEDamageTier1"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayRadiatedAoEDamageTimerTier2" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1.9" buff="FuriousRamsayRadiatedAoEDamageTier2"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayRadiatedAoEDamageTimerTier3" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="FuriousRamsayRadiatedAoEDamageTier3"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayRadiatedAoEDamageTimerTier4" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2.1" buff="FuriousRamsayRadiatedAoEDamageTier4"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayRadiatedAoEDamageTimerTier5" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2.2" buff="FuriousRamsayRadiatedAoEDamageTier5"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayRadiatedAoEDamageTier1" showonhud="true" description_key="FuriousRamsayRadiationDamageDesc" tooltip_key="FuriousRamsayRadiationDamageTooltip" icon="ui_game_symbol_radiation" name_key="FuriousRamsayRadiationDamageName" icon_color="0,255,0"  remove_on_death="true">
+				<damage_type value="Radiation"/>
+				<stack_type value="replace"/>
+				<duration value="6"/>
+				<update_rate value="1"/>
+				<display_value value=".FuriousRamsayRadiatedDamageDurationDisplay"/><display_value_format value="time"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="set" value="6"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="set" value="6"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="add" value="-1"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Radiation" intensity=".6" fade="0.5"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="1"/>
+					<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
+
+					<passive_effect name="HealthChangeOT" operation="base_subtract" value="2">
+						<requirement name="EntityTagCompare" tags="player,UMA"/>
+					</passive_effect>	
+				</effect_group>
+			</buff>
+			
+			<buff name="FuriousRamsayRadiatedAoEDamageTier2" showonhud="true" description_key="FuriousRamsayRadiationDamageDesc" tooltip_key="FuriousRamsayRadiationDamageTooltip" icon="ui_game_symbol_radiation" name_key="FuriousRamsayRadiationDamageName" icon_color="0,255,0"  remove_on_death="true">
+				<damage_type value="Radiation"/>
+				<stack_type value="replace"/>
+				<duration value="8"/>
+				<update_rate value="1"/>
+				<display_value value=".FuriousRamsayRadiatedDamageDurationDisplay"/><display_value_format value="time"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="set" value="8"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="set" value="8"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="add" value="-1"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Radiation" intensity=".6" fade="0.5"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="1"/>
+					<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
+
+					<passive_effect name="HealthChangeOT" operation="base_subtract" value="2">
+						<requirement name="EntityTagCompare" tags="player,UMA"/>
+					</passive_effect>	
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayRadiatedAoEDamageTier3" showonhud="true" description_key="FuriousRamsayRadiationDamageDesc" tooltip_key="FuriousRamsayRadiationDamageTooltip" icon="ui_game_symbol_radiation" name_key="FuriousRamsayRadiationDamageName" icon_color="0,255,0"  remove_on_death="true">
+				<damage_type value="Radiation"/>
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<update_rate value="1"/>
+				<display_value value=".FuriousRamsayRadiatedDamageDurationDisplay"/><display_value_format value="time"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="set" value="10"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="set" value="10"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="add" value="-1"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Radiation" intensity=".6" fade="0.5"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="1"/>
+					<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
+
+					<passive_effect name="HealthChangeOT" operation="base_subtract" value="2">
+						<requirement name="EntityTagCompare" tags="player,UMA"/>
+					</passive_effect>	
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayRadiatedAoEDamageTier4" showonhud="true" description_key="FuriousRamsayRadiationDamageDesc" tooltip_key="FuriousRamsayRadiationDamageTooltip" icon="ui_game_symbol_radiation" name_key="FuriousRamsayRadiationDamageName" icon_color="0,255,0"  remove_on_death="true">
+				<damage_type value="Radiation"/>
+				<stack_type value="replace"/>
+				<duration value="12"/>
+				<update_rate value="1"/>
+				<display_value value=".FuriousRamsayRadiatedDamageDurationDisplay"/><display_value_format value="time"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="set" value="12"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="set" value="12"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="add" value="-1"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Radiation" intensity=".6" fade="0.5"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="1"/>
+					<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
+
+					<passive_effect name="HealthChangeOT" operation="base_subtract" value="2">
+						<requirement name="EntityTagCompare" tags="player,UMA"/>
+					</passive_effect>	
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayRadiatedAoEDamageTier5" showonhud="true" description_key="FuriousRamsayRadiationDamageDesc" tooltip_key="FuriousRamsayRadiationDamageTooltip" icon="ui_game_symbol_radiation" name_key="FuriousRamsayRadiationDamageName" icon_color="0,255,0"  remove_on_death="true">
+				<damage_type value="Radiation"/>
+				<stack_type value="replace"/>
+				<duration value="15"/>
+				<update_rate value="1"/>
+				<display_value value=".FuriousRamsayRadiatedDamageDurationDisplay"/><display_value_format value="time"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="set" value="15"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="set" value="15"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayRadiatedDamageDurationDisplay" operation="add" value="-1"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Radiation" intensity=".6" fade="0.5"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="1"/>
+					<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
+
+					<passive_effect name="HealthChangeOT" operation="base_subtract" value="2">
+						<requirement name="EntityTagCompare" tags="player,UMA"/>
+					</passive_effect>	
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayVerifyArmorFire" hidden="true">
 				<stack_type value="replace"/>
 				<duration value="0.1"/>
