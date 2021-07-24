@@ -2,6 +2,167 @@
 
 		<append xpath="/buffs" >		
 
+			<buff name="FuriousRamsayVisionGrayscale" showonhud="true" name_key="FuriousRamsayVisionGrayscale" description_key="FuriousRamsayVisionGrayscaleDesc" icon="ui_game_symbol_twitch_blur" icon_color="125,125,125">
+				<stack_type value="replace"/>
+				<duration value="5"/>
+				<update_rate value="1"/>
+				<display_value value=".FuriousRamsayVisionGrayscaleDurationDisplay"/>
+				<display_value_format value="time"/>
+
+				<effect_group>
+					<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="FuriousRamsayVisionGrayscale"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayVisionGrayscaleDurationDisplay" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FuriousRamsayVisionGrayscaleDurationDisplay" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayVisionGrayscaleDurationDisplay" operation="add" value="-1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FuriousRamsayVisionGrayscaleDurationDisplay" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="FuriousRamsayVisionGrayscale"/>
+				</effect_group>
+
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Grayscale" intensity="1" fade="1" />
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Grayscale" intensity="0" fade="1"/>
+					<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Grayscale" intensity="0" fade="0"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVisionVibrantDeSat" showonhud="true" name_key="FuriousRamsayVisionVibrantDeSat" description_key="FuriousRamsayVisionVibrantDeSatDesc" icon="ui_game_symbol_twitch_blur" icon_color="255,255,255">
+				<stack_type value="replace"/>
+				<duration value="5"/>
+				<update_rate value="1"/>
+				<display_value value=".FuriousRamsayVisionVibrantDeSatDurationDisplay"/>
+				<display_value_format value="time"/>
+
+				<effect_group>
+					<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="FuriousRamsayVisionVibrantDeSat"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayVisionVibrantDeSatDurationDisplay" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FuriousRamsayVisionVibrantDeSatDurationDisplay" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayVisionVibrantDeSatDurationDisplay" operation="add" value="-1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FuriousRamsayVisionVibrantDeSatDurationDisplay" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="FuriousRamsayVisionVibrantDeSat"/>
+				</effect_group>
+
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="VibrantDeSat" intensity="1" fade="1" />
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="VibrantDeSat" intensity="0" fade="1"/>
+					<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="VibrantDeSat" intensity="0" fade="0"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVisionUnderwater" showonhud="true" name_key="FuriousRamsayVisionUnderwater" description_key="FuriousRamsayVisionUnderwaterDesc" icon="ui_game_symbol_twitch_blur" icon_color="0,0,0">
+				<stack_type value="replace"/>
+				<duration value="5"/>
+				<update_rate value="1"/>
+				<display_value value=".FuriousRamsayVisionUnderwaterDurationDisplay"/>
+				<display_value_format value="time"/>
+
+				<effect_group>
+					<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="FuriousRamsayVisionUnderwater"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayVisionUnderwaterDurationDisplay" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FuriousRamsayVisionUnderwaterDurationDisplay" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayVisionUnderwaterDurationDisplay" operation="add" value="-1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FuriousRamsayVisionUnderwaterDurationDisplay" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="FuriousRamsayVisionUnderwater"/>
+				</effect_group>
+
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Underwater" intensity="1" fade="1" />
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Underwater" intensity="0" fade="1"/>
+					<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Underwater" intensity="0" fade="0"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVisionPosterize" showonhud="true" name_key="FuriousRamsayVisionPosterize" description_key="FuriousRamsayVisionPosterizeDesc" icon="ui_game_symbol_twitch_blur" icon_color="255,200,200">
+				<stack_type value="replace"/>
+				<duration value="5"/>
+				<update_rate value="1"/>
+				<display_value value=".FuriousRamsayVisionPosterizeDurationDisplay"/>
+				<display_value_format value="time"/>
+
+				<effect_group>
+					<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="FuriousRamsayVisionPosterize"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayVisionPosterizeDurationDisplay" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FuriousRamsayVisionPosterizeDurationDisplay" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayVisionPosterizeDurationDisplay" operation="add" value="-1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FuriousRamsayVisionPosterizeDurationDisplay" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="FuriousRamsayVisionPosterize"/>
+				</effect_group>
+
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Posterize" intensity="1" fade="1" />
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Posterize" intensity="0" fade="1"/>
+					<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Posterize" intensity="0" fade="0"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVisionDistortion" showonhud="true" name_key="FuriousRamsayVisionDistortion" description_key="FuriousRamsayVisionDistortionDesc" icon="ui_game_symbol_twitch_blur" icon_color="128,54,181">
+				<stack_type value="replace"/>
+				<duration value="5"/>
+				<update_rate value="1"/>
+				<display_value value=".FuriousRamsayVisionDistortionDurationDisplay"/>
+				<display_value_format value="time"/>
+
+				<effect_group>
+					<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="FuriousRamsayVisionDistortion"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayVisionDistortionDurationDisplay" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FuriousRamsayVisionDistortionDurationDisplay" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayVisionDistortionDurationDisplay" operation="add" value="-1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FuriousRamsayVisionDistortionDurationDisplay" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="FuriousRamsayVisionDistortion"/>
+				</effect_group>
+
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Distortion" intensity="1" fade="1" />
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Distortion" intensity="0" fade="1"/>
+					<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Distortion" intensity="0" fade="0"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVisionDrunk" showonhud="true" name_key="FuriousRamsayVisionDrunk" description_key="FuriousRamsayVisionDrunkDesc" icon="ui_game_symbol_twitch_blur" icon_color="201,174,52">
+				<stack_type value="replace"/>
+				<duration value="5"/>
+				<update_rate value="1"/>
+				<display_value value=".FuriousRamsayVisionDrunkDurationDisplay"/>
+				<display_value_format value="time"/>
+
+				<effect_group>
+					<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="FuriousRamsayVisionDrunk"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayVisionDrunkDurationDisplay" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FuriousRamsayVisionDrunkDurationDisplay" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayVisionDrunkDurationDisplay" operation="add" value="-1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FuriousRamsayVisionDrunkDurationDisplay" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="FuriousRamsayVisionDrunk"/>
+				</effect_group>
+
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Drunk" intensity="1" fade="1" />
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Drunk" intensity="0" fade="1"/>
+					<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Drunk" intensity="0" fade="0"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVisionBlur" showonhud="true" name_key="FuriousRamsayVisionBlur" description_key="FuriousRamsayVisionBlurDesc" icon="ui_game_symbol_twitch_blur" icon_color="253,255,163">
+				<stack_type value="replace"/>
+				<duration value="5"/>
+				<update_rate value="1"/>
+				<display_value value=".FuriousRamsayVisionBlurDurationDisplay"/>
+				<display_value_format value="time"/>
+
+				<effect_group>
+					<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="FuriousRamsayVisionBlur"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayVisionBlurDurationDisplay" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FuriousRamsayVisionBlurDurationDisplay" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayVisionBlurDurationDisplay" operation="add" value="-1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FuriousRamsayVisionBlurDurationDisplay" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="FuriousRamsayVisionBlur"/>
+				</effect_group>
+
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyScreenEffect" effect_name="Blur" intensity="1" fade="1" />
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Blur" intensity="0" fade="1"/>
+					<triggered_effect trigger="onSelfDied" action="ModifyScreenEffect" effect_name="Blur" intensity="0" fade="0"/>
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayResistRadiation" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<effect_group>

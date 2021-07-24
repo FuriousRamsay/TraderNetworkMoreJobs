@@ -4193,9 +4193,14 @@
 				<property name="DamageBlock" value="30"/>
 			</property>
 			<effect_group name="FuriousRamsayMeleeHandBlackShieldKnockDown">
-				<requirement name="EntityTagCompare" target="other" tags="player,robot"/>
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
-					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="1000"/>
+				<requirement name="EntityTagCompare" target="other" tags="player,robot,UMA"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="100">
+						<requirement name="!EntityTagCompare" target="other" tags="UMA"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1">
+						<requirement name="EntityTagCompare" target="other" tags="UMA"/>
+					</triggered_effect>
 					<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="other" sound="malehateattack"/>
 			</effect_group>
 		</item>
@@ -4234,9 +4239,14 @@
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="5"/>
 			</effect_group>
 			<effect_group name="FuriousRamsayMeleeHandBlackShieldKnockDown">
-				<requirement name="EntityTagCompare" target="other" tags="player,robot"/>
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
-					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="1000"/>
+				<requirement name="EntityTagCompare" target="other" tags="player,robot,UMA"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="100">
+						<requirement name="!EntityTagCompare" target="other" tags="UMA"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1">
+						<requirement name="EntityTagCompare" target="other" tags="UMA"/>
+					</triggered_effect>
 					<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="other" sound="malehateattack"/>
 			</effect_group>
 		</item>
@@ -4301,11 +4311,15 @@
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="10"/>
 			</effect_group>
 			<effect_group name="FuriousRamsayMeleeHandBlackShieldKnockDown">
-				<requirement name="EntityTagCompare" target="other" tags="player,robot"/>
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
-					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="1000"/>
+				<requirement name="EntityTagCompare" target="other" tags="player,robot,UMA"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="100">
+						<requirement name="!EntityTagCompare" target="other" tags="UMA"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1">
+						<requirement name="EntityTagCompare" target="other" tags="UMA"/>
+					</triggered_effect>
 					<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="other" sound="malehateattack"/>
-					<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="FuriousRamsayAddShockEnemyBoss"/>
 			</effect_group>
 		</item>
 
@@ -4366,11 +4380,15 @@
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="12"/>
 			</effect_group>
 			<effect_group name="FuriousRamsayMeleeHandBlackShieldKnockDown">
-				<requirement name="EntityTagCompare" target="other" tags="player,robot"/>
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
-					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="1000"/>
+				<requirement name="EntityTagCompare" target="other" tags="player,robot,UMA"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="100">
+						<requirement name="!EntityTagCompare" target="other" tags="UMA"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1">
+						<requirement name="EntityTagCompare" target="other" tags="UMA"/>
+					</triggered_effect>
 					<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="other" sound="malehateattack"/>
-					<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="FuriousRamsayAddBurningEnemyBoss"/>			
 			</effect_group>
 		</item>
 
@@ -4432,11 +4450,15 @@
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="15"/>
 			</effect_group>
 			<effect_group name="FuriousRamsayMeleeHandBlackShieldKnockDown">
-				<requirement name="EntityTagCompare" target="other" tags="player,robot"/>
-				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
-					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="1000"/>
+				<requirement name="EntityTagCompare" target="other" tags="player,robot,UMA"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1" force="100">
+						<requirement name="!EntityTagCompare" target="other" tags="UMA"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="1">
+						<requirement name="EntityTagCompare" target="other" tags="UMA"/>
+					</triggered_effect>
 					<triggered_effect trigger="onSelfAttackedOther" action="PlaySound" target="other" sound="malehateattack"/>
-					<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="FuriousRamsayAddExplosionEnemyBoss"/>			
 			</effect_group>
 		</item>
 
@@ -4712,6 +4734,101 @@
 			</property>
 			<property name="TintColor" value="223, 113, 240"/>
 			<property name="CustomIconTint" value="df71f0"/>
+		</item>
+
+		<item name="FuriousRamsayHazmatMeleeHandTier1">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.8"/>
+				<property name="Range" value="1.65"/>
+				<property name="DamageEntity" value="4"/>
+				<property name="DamageBlock" value="20"/>
+			</property>
+			<effect_group name="FuriousRamsayHazmatMeleeHandTier1" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="FuriousRamsayVisionGrayscale,FuriousRamsayVisionVibrantDeSat"
+					weights=".5,.5">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHazmatMeleeHandTier2">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.8"/>
+				<property name="Range" value="1.85"/>
+				<property name="DamageEntity" value="4"/>
+				<property name="DamageBlock" value="20"/>
+			</property>
+			<effect_group name="FuriousRamsayHazmatMeleeHandTier2" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="FuriousRamsayVisionGrayscale,FuriousRamsayVisionVibrantDeSat,FuriousRamsayVisionUnderwater"
+					weights=".25,.25,.5">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="55"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHazmatMeleeHandTier3">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.8"/>
+				<property name="Range" value="2.05"/>
+				<property name="DamageEntity" value="4"/>
+				<property name="DamageBlock" value="20"/>
+			</property>
+			<effect_group name="FuriousRamsayHazmatMeleeHandTier3" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="FuriousRamsayVisionGrayscale,FuriousRamsayVisionVibrantDeSat,FuriousRamsayVisionUnderwater,FuriousRamsayVisionPosterize,FuriousRamsayVisionDistortion"
+					weights=".15,.15,.3,.4">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHazmatMeleeHandTier4">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.8"/>
+				<property name="Range" value="2.25"/>
+				<property name="DamageEntity" value="4"/>
+				<property name="DamageBlock" value="20"/>
+			</property>
+			<effect_group name="FuriousRamsayHazmatMeleeHandTier4" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="FuriousRamsayVisionGrayscale,FuriousRamsayVisionVibrantDeSat,FuriousRamsayVisionUnderwater,FuriousRamsayVisionPosterize,FuriousRamsayVisionDistortion,FuriousRamsayVisionDrunk"
+					weights=".05,.05,.15,.25,.5">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="65"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHazmatMeleeHandTier5">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.8"/>
+				<property name="Range" value="2.45"/>
+				<property name="DamageEntity" value="4"/>
+				<property name="DamageBlock" value="20"/>
+			</property>
+			<effect_group name="FuriousRamsayHazmatMeleeHandTier5" tiered="false">
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+					buff="FuriousRamsayVisionGrayscale,FuriousRamsayVisionVibrantDeSat,FuriousRamsayVisionUnderwater,FuriousRamsayVisionPosterize,FuriousRamsayVisionDistortion,FuriousRamsayVisionDrunk,FuriousRamsayVisionBlur"
+					weights=".02,.03,.05,.15,.25,.5">
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="70"/>
+				</triggered_effect>
+			</effect_group>
 		</item>
 
 	</append>
