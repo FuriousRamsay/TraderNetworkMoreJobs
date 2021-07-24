@@ -2,6 +2,79 @@
 
 		<append xpath="/buffs" >		
 
+			<buff name="FuriousRamsayResistRadiation" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<effect_group>
+					<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="radiation"/>
+					<passive_effect name="BuffResistance" operation="base_add" value="2" tags="FuriousRamsayRadiatedAoEDamageTier1,FuriousRamsayRadiatedAoEDamageTier2,FuriousRamsayRadiatedAoEDamageTier3,FuriousRamsayRadiatedAoEDamageTier4,FuriousRamsayRadiatedAoEDamageTier5,buffRadiation03,buffRadiationNew,buffRadiationNew2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You are immune to radiation" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="FuriousRamsayRadiatedAoEDamageTier1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="FuriousRamsayRadiatedAoEDamageTier2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="FuriousRamsayRadiatedAoEDamageTier3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="FuriousRamsayRadiatedAoEDamageTier4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="FuriousRamsayRadiatedAoEDamageTier5"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRadiation03"/> <!-- Vanilla -->
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRadiationNew"/> <!-- Darkness Falls -->
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRadiationNew2"/> <!-- Darkness Falls -->
+					<triggered_effect trigger="onSelfBuffRemove" action="ShowToolbeltMessage" message="You are no longer immune to radiation" >
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVerifyArmorModRadiation" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="0.1"/>
+					<effect_group name="FuriousRamsayVerifyArmorModRadiation">
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayResistRadiation">
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationHeadMod" operation="Equals" value="1"/>
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationChestMod" operation="Equals" value="1"/>
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationGlovesMod" operation="Equals" value="1"/>
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationLegsMod" operation="Equals" value="1"/>
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationBootsMod" operation="Equals" value="1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStack" action="AddBuff" buff="FuriousRamsayResistRadiation">
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationHeadMod" operation="Equals" value="1"/>
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationChestMod" operation="Equals" value="1"/>
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationGlovesMod" operation="Equals" value="1"/>
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationLegsMod" operation="Equals" value="1"/>
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationBootsMod" operation="Equals" value="1"/>
+						</triggered_effect>						
+						<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="FuriousRamsayResistRadiation">
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationHeadMod" operation="Equals" value="0"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="FuriousRamsayResistRadiation">
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationChestMod" operation="Equals" value="0"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="FuriousRamsayResistRadiation">
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationGlovesMod" operation="Equals" value="0"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="FuriousRamsayResistRadiation">
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationLegsMod" operation="Equals" value="0"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="FuriousRamsayResistRadiation">
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationBootsMod" operation="Equals" value="0"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStack" action="RemoveBuff" buff="FuriousRamsayResistRadiation">
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationHeadMod" operation="Equals" value="0"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStack" action="RemoveBuff" buff="FuriousRamsayResistRadiation">
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationChestMod" operation="Equals" value="0"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStack" action="RemoveBuff" buff="FuriousRamsayResistRadiation">
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationGlovesMod" operation="Equals" value="0"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStack" action="RemoveBuff" buff="FuriousRamsayResistRadiation">
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationLegsMod" operation="Equals" value="0"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStack" action="RemoveBuff" buff="FuriousRamsayResistRadiation">
+							<requirement name="CVarCompare" cvar="$FuriousRamsayResistRadiationBootsMod" operation="Equals" value="0"/>
+						</triggered_effect>
+					</effect_group>
+			</buff>			
+
 			<buff name="FuriousRamsayRadiatedAoEDamageTimerTier1" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<update_rate value="1"/>
