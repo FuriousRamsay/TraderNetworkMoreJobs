@@ -472,6 +472,7 @@ FuriousRamsayZombieWightToxicFeral
 		<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 		<property name="PainResistPerHit" value=".7"/>
 		<property name="HandItem" value="meleeHandZombieFeral"/>
+		<property name="MoveSpeed" value="0.5"/>
 		<property name="MoveSpeedAggro" value=".5, 1.35"/>
 		<property name="ExperienceGain" value="750"/>
 		<property name="LootDropProb" value=".03"/>
@@ -626,6 +627,7 @@ FuriousRamsayZombieOldTimerToxicRadiated
 
 <!-- 
 TIER 5: 
+FuriousRamsayZombieDemolitionToxic
 FuriousRamsayZombieSkateboarderToxicRadiated
 FuriousRamsayZombieUtilityWorkerToxicRadiated
 FuriousRamsayZombieSpiderToxicRadiated
@@ -636,6 +638,19 @@ FuriousRamsayZombieMoeToxicRadiated
 FuriousRamsayZombieFemaleFatToxicRadiated
 FuriousRamsayZombieWightToxicRadiated
  -->
+
+		<entity_class name="FuriousRamsayZombieDemolitionToxic" extends="zombieDemolition">
+			<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="TimeStayAfterDeath" value="30"/><property name="NavObject" value="FuriousRamsayDotOrange" />
+
+			<property name="Explosion.BlockDamage" value="0"/>
+			<property name="ExplodeDelay" value="3"/>
+			<property name="MoveSpeed" value="0.5"/>
+			<property name="MoveSpeedAggro" value=".5, 1.25"/>
+
+			<effect_group name="FuriousRamsayTier3ToxicRadiatedDebuffs">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayRadiatedAoEDamageTimerTier3"/>
+			</effect_group>
+		</entity_class>
 
 		<entity_class name="FuriousRamsayZombieSkateboarderToxicRadiated" extends="zombieSkateboarderRadiated">
 			<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/><property name="TimeStayAfterDeath" value="30"/><property name="NavObject" value="FuriousRamsayDotOrange" />
@@ -1197,6 +1212,507 @@ FuriousRamsayVultureToxicRadiated
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayRadiatedAoEDamageTimerTier2"/>
 			</effect_group>
 		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieBoeToxicQuest" extends="FuriousRamsayZombieBoeToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieJoeToxicQuest" extends="FuriousRamsayZombieJoeToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieJanitorToxicQuest" extends="FuriousRamsayZombieJanitorToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieArleneToxicQuest" extends="FuriousRamsayZombieArleneToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieLabToxicQuest" extends="FuriousRamsayZombieLabToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieDarleneToxicQuest" extends="FuriousRamsayZombieDarleneToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieMarleneToxicQuest" extends="FuriousRamsayZombieMarleneToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieYoToxicQuest" extends="FuriousRamsayZombieYoToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSteveToxicQuest" extends="FuriousRamsayZombieSteveToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieBusinessManToxicQuest" extends="FuriousRamsayZombieBusinessManToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieAlexToxicQuest" extends="FuriousRamsayZombieAlexToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieOldTimerToxicQuest" extends="FuriousRamsayZombieOldTimerToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieCheerleaderToxicQuest" extends="FuriousRamsayZombieCheerleaderToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSkateboarderToxicQuest" extends="FuriousRamsayZombieSkateboarderToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieUtilityWorkerToxicQuest" extends="FuriousRamsayZombieUtilityWorkerToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieNurseToxicQuest" extends="FuriousRamsayZombieNurseToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieStripperToxicQuest" extends="FuriousRamsayZombieStripperToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSteveCrawlerToxicQuest" extends="FuriousRamsayZombieSteveCrawlerToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSpiderToxicQuest" extends="FuriousRamsayZombieSpiderToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieFatCopToxicQuest" extends="FuriousRamsayZombieFatCopToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieFatHawaiianToxicQuest" extends="FuriousRamsayZombieFatHawaiianToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieBikerToxicQuest" extends="FuriousRamsayZombieBikerToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSoldierToxicQuest" extends="FuriousRamsayZombieSoldierToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieMaleHazmatToxicQuest" extends="FuriousRamsayZombieMaleHazmatToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieFarmerToxicQuest" extends="FuriousRamsayZombieFarmerToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieMoeToxicQuest" extends="FuriousRamsayZombieMoeToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieFemaleFatToxicQuest" extends="FuriousRamsayZombieFemaleFatToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieFootballPlayerToxicFeralQuest" extends="FuriousRamsayZombieFootballPlayerToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieBoeToxicFeralQuest" extends="FuriousRamsayZombieBoeToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieJoeToxicFeralQuest" extends="FuriousRamsayZombieJoeToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieJanitorToxicFeralQuest" extends="FuriousRamsayZombieJanitorToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieArleneToxicFeralQuest" extends="FuriousRamsayZombieArleneToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieLabToxicFeralQuest" extends="FuriousRamsayZombieLabToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieDarleneToxicFeralQuest" extends="FuriousRamsayZombieDarleneToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieMarleneToxicFeralQuest" extends="FuriousRamsayZombieMarleneToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieYoToxicFeralQuest" extends="FuriousRamsayZombieYoToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSteveToxicFeralQuest" extends="FuriousRamsayZombieSteveToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieBusinessManToxicFeralQuest" extends="FuriousRamsayZombieBusinessManToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieAlexToxicFeralQuest" extends="FuriousRamsayZombieAlexToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieOldTimerToxicFeralQuest" extends="FuriousRamsayZombieOldTimerToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieCheerleaderToxicFeralQuest" extends="FuriousRamsayZombieCheerleaderToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSkateboarderToxicFeralQuest" extends="FuriousRamsayZombieSkateboarderToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieUtilityWorkerToxicFeralQuest" extends="FuriousRamsayZombieUtilityWorkerToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieNurseToxicFeralQuest" extends="FuriousRamsayZombieNurseToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieStripperToxicFeralQuest" extends="FuriousRamsayZombieStripperToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSteveCrawlerToxicFeralQuest" extends="FuriousRamsayZombieSteveCrawlerToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSpiderToxicFeralQuest" extends="FuriousRamsayZombieSpiderToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieFatCopToxicFeralQuest" extends="FuriousRamsayZombieFatCopToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieFatHawaiianToxicFeralQuest" extends="FuriousRamsayZombieFatHawaiianToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieBikerToxicFeralQuest" extends="FuriousRamsayZombieBikerToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSoldierToxicFeralQuest" extends="FuriousRamsayZombieSoldierToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieMaleHazmatToxicFeralQuest" extends="FuriousRamsayZombieMaleHazmatToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieFarmerToxicFeralQuest" extends="FuriousRamsayZombieFarmerToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieMoeToxicFeralQuest" extends="FuriousRamsayZombieMoeToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieFemaleFatToxicFeralQuest" extends="FuriousRamsayZombieFemaleFatToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieWightToxicFeralQuest" extends="FuriousRamsayZombieWightToxicFeral">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayZombieDemolitionToxicQuest" extends="FuriousRamsayZombieDemolitionToxic">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieCheerleaderToxicRadiatedQuest" extends="FuriousRamsayZombieCheerleaderToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieBoeToxicRadiatedQuest" extends="FuriousRamsayZombieBoeToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieJoeToxicRadiatedQuest" extends="FuriousRamsayZombieJoeToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieJanitorToxicRadiatedQuest" extends="FuriousRamsayZombieJanitorToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieArleneToxicRadiatedQuest" extends="FuriousRamsayZombieArleneToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieDarleneToxicRadiatedQuest" extends="FuriousRamsayZombieDarleneToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieMarleneToxicRadiatedQuest" extends="FuriousRamsayZombieMarleneToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieYoToxicRadiatedQuest" extends="FuriousRamsayZombieYoToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSteveToxicRadiatedQuest" extends="FuriousRamsayZombieSteveToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieBusinessManToxicRadiatedQuest" extends="FuriousRamsayZombieBusinessManToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieAlexToxicRadiatedQuest" extends="FuriousRamsayZombieAlexToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieOldTimerToxicRadiatedQuest" extends="FuriousRamsayZombieOldTimerToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSkateboarderToxicRadiatedQuest" extends="FuriousRamsayZombieSkateboarderToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieUtilityWorkerToxicRadiatedQuest" extends="FuriousRamsayZombieUtilityWorkerToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSpiderToxicRadiatedQuest" extends="FuriousRamsayZombieSpiderToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieFatCopToxicRadiatedQuest" extends="FuriousRamsayZombieFatCopToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieBikerToxicRadiatedQuest" extends="FuriousRamsayZombieBikerToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSoldierToxicRadiatedQuest" extends="FuriousRamsayZombieSoldierToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieMoeToxicRadiatedQuest" extends="FuriousRamsayZombieMoeToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieFemaleFatToxicRadiatedQuest" extends="FuriousRamsayZombieFemaleFatToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieWightToxicRadiatedQuest" extends="FuriousRamsayZombieWightToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieCheerleaderToxicAllFoursQuest" extends="FuriousRamsayZombieCheerleaderToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieBoeToxicAllFoursQuest" extends="FuriousRamsayZombieBoeToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieJoeToxicAllFoursQuest" extends="FuriousRamsayZombieJoeToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieJanitorToxicAllFoursQuest" extends="FuriousRamsayZombieJanitorToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieArleneToxicAllFoursQuest" extends="FuriousRamsayZombieArleneToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieDarleneToxicAllFoursQuest" extends="FuriousRamsayZombieDarleneToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieMarleneToxicAllFoursQuest" extends="FuriousRamsayZombieMarleneToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieYoToxicAllFoursQuest" extends="FuriousRamsayZombieYoToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSteveToxicAllFoursQuest" extends="FuriousRamsayZombieSteveToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieBusinessManToxicAllFoursQuest" extends="FuriousRamsayZombieBusinessManToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieOldTimerToxicAllFoursQuest" extends="FuriousRamsayZombieOldTimerToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSkateboarderToxicAllFoursQuest" extends="FuriousRamsayZombieSkateboarderToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieUtilityWorkerToxicAllFoursQuest" extends="FuriousRamsayZombieUtilityWorkerToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSpiderToxicAllFoursQuest" extends="FuriousRamsayZombieSpiderToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieFatCopToxicAllFoursQuest" extends="FuriousRamsayZombieFatCopToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieBikerToxicAllFoursQuest" extends="FuriousRamsayZombieBikerToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSoldierToxicAllFoursQuest" extends="FuriousRamsayZombieSoldierToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieMoeToxicAllFoursQuest" extends="FuriousRamsayZombieMoeToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieFemaleFatToxicAllFoursQuest" extends="FuriousRamsayZombieFemaleFatToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieWightToxicAllFoursQuest" extends="FuriousRamsayZombieWightToxicAllFours">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieCheerleaderToxicCrawlerQuest" extends="FuriousRamsayZombieCheerleaderToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieBoeToxicCrawlerQuest" extends="FuriousRamsayZombieBoeToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieJoeToxicCrawlerQuest" extends="FuriousRamsayZombieJoeToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieJanitorToxicCrawlerQuest" extends="FuriousRamsayZombieJanitorToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieArleneToxicCrawlerQuest" extends="FuriousRamsayZombieArleneToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieDarleneToxicCrawlerQuest" extends="FuriousRamsayZombieDarleneToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieMarleneToxicCrawlerQuest" extends="FuriousRamsayZombieMarleneToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieYoToxicCrawlerQuest" extends="FuriousRamsayZombieYoToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSteveToxicCrawlerQuest" extends="FuriousRamsayZombieSteveToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieBusinessManToxicCrawlerQuest" extends="FuriousRamsayZombieBusinessManToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieOldTimerToxicCrawlerQuest" extends="FuriousRamsayZombieOldTimerToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSkateboarderToxicCrawlerQuest" extends="FuriousRamsayZombieSkateboarderToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieUtilityWorkerToxicCrawlerQuest" extends="FuriousRamsayZombieUtilityWorkerToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSpiderToxicCrawlerQuest" extends="FuriousRamsayZombieSpiderToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieFatCopToxicCrawlerQuest" extends="FuriousRamsayZombieFatCopToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieBikerToxicCrawlerQuest" extends="FuriousRamsayZombieBikerToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieSoldierToxicCrawlerQuest" extends="FuriousRamsayZombieSoldierToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieMoeToxicCrawlerQuest" extends="FuriousRamsayZombieMoeToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieFemaleFatToxicCrawlerQuest" extends="FuriousRamsayZombieFemaleFatToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayZombieWightToxicCrawlerQuest" extends="FuriousRamsayZombieWightToxicCrawler">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayBoarToxicRadiatedQuest" extends="FuriousRamsayBoarToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayCoyoteToxicRadiatedQuest" extends="FuriousRamsayCoyoteToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayWolfToxicRadiatedQuest" extends="FuriousRamsayWolfToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayDireWolfToxicRadiatedQuest" extends="FuriousRamsayDireWolfToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayMountainLionToxicRadiatedQuest" extends="FuriousRamsayMountainLionToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayBearToxicRadiatedQuest" extends="FuriousRamsayBearToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayVultureToxicRadiatedQuest" extends="FuriousRamsayVultureToxicRadiated">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
+		</entity_class>
+
 
 <!-- ===================================================================================== -->
 
