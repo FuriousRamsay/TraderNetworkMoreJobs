@@ -2635,9 +2635,13 @@
 				</triggered_effect>
 			</effect_group>
 			<effect_group name="FuriousRamsayChargeVariables" tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="FuriousRamsayPlacedChargeVariable">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$FuriousRamsayPlacedCharge" operation="add" value="1">
+						<requirement name="CVarCompare" cvar="$FuriousRamsayOpenChargeBackpack" operation="Equals" value="1"/>
+					</triggered_effect>	
+
+				<!--<triggered_effect trigger="onSelfPrimaryActionStart" action="AddBuff" buff="FuriousRamsayPlacedChargeVariable">
 					<requirement name="CVarCompare" cvar="$FuriousRamsayOpenChargeBackpack" operation="Equals" value="1"/>
-				</triggered_effect>
+				</triggered_effect>-->
 			</effect_group>
 		</item>
 
