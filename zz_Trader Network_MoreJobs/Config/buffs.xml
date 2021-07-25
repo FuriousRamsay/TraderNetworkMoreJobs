@@ -167,7 +167,7 @@
 				<stack_type value="ignore"/>
 				<effect_group>
 					<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="radiation"/>
-					<passive_effect name="BuffResistance" operation="base_add" value="2" tags="FuriousRamsayRadiatedAoEDamageTier1,FuriousRamsayRadiatedAoEDamageTier2,FuriousRamsayRadiatedAoEDamageTier3,FuriousRamsayRadiatedAoEDamageTier4,FuriousRamsayRadiatedAoEDamageTier5,buffRadiation03,buffRadiationNew,buffRadiationNew2"/>
+					<passive_effect name="BuffResistance" operation="base_add" value="2" tags="FuriousRamsayRadiatedAoEDamageTier1,FuriousRamsayRadiatedAoEDamageTier2,FuriousRamsayRadiatedAoEDamageTier3,FuriousRamsayRadiatedAoEDamageTier4,FuriousRamsayRadiatedAoEDamageTier5,buffRadiation03,buffRadiationNew,buffRadiationNew2,buffRadiationWeak,buffRadiationStrong"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You are immune to radiation" >
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>
@@ -179,6 +179,8 @@
 					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRadiation03"/> <!-- Vanilla -->
 					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRadiationNew"/> <!-- Darkness Falls -->
 					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRadiationNew2"/> <!-- Darkness Falls -->
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRadiationWeak"/> <!-- Darkness Falls -->
+					<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffRadiationStrong"/> <!-- Darkness Falls -->
 					<triggered_effect trigger="onSelfBuffRemove" action="ShowToolbeltMessage" message="You are no longer immune to radiation" >
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>

@@ -1,8 +1,16 @@
 <configs>
 
-	<setattribute xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='AITarget-4']" name="data">class=EntityPlayer,0,0,EntitySurvivor,0,0</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='AITarget-4']" name="data">class=EntityPlayer,200,200,EntitySurvivor,150,150</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='MaxViewAngle']" name="value">110</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='SightRange']" name="value">200</setattribute>
 
-	<setattribute xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='AITask-2']" name="data">class=EntityPlayer,5,EntitySurvivor,20</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='AITask-2']" name="data">class=EntityPlayer,20,EntitySurvivor,25</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='MaxViewAngle']" name="value">150</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='SightRange']" name="value">200</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='AINoiseSeekDist']" name="value">200</setattribute>
+
+	<setattribute xpath="/entity_classes/entity_class[@name='animalZombieVulture']/property[@name='SightRange']" name="value">200</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalZombieVulture']/property[@name='AINoiseSeekDist']" name="value">200</setattribute>
 
 	<setattribute xpath="/entity_classes/entity_class[@name='animalSnake']/property[@name='AITask-3']" name="data">class=EntityPlayer,15,EntitySurvivor,15</setattribute>
 
@@ -945,8 +953,8 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="LookAtAngle" value="0"/>
 			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="10"/> 
-			<property name="AINoiseSeekDist" value="10"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
 
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
@@ -987,8 +995,8 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="LookAtAngle" value="0"/>
 			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="15"/> 
-			<property name="AINoiseSeekDist" value="15"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
 
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
@@ -1029,8 +1037,8 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="LookAtAngle" value="0"/>
 			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="20"/> 
-			<property name="AINoiseSeekDist" value="20"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
 
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntitySurvivor,10"/>
@@ -1071,8 +1079,8 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="LookAtAngle" value="0"/>
 			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="25"/> 
-			<property name="AINoiseSeekDist" value="25"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
 
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntitySurvivor,10"/>
@@ -1113,8 +1121,8 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="LookAtAngle" value="0"/>
 			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="25"/> 
-			<property name="AINoiseSeekDist" value="25"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
 
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntitySurvivor,10"/>
@@ -1155,8 +1163,8 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="LookAtAngle" value="0"/>
 			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="25"/> 
-			<property name="AINoiseSeekDist" value="25"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
 
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntitySurvivor,10"/>
@@ -1703,8 +1711,8 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="LookAtAngle" value="0"/>
 			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="5"/> 
-			<property name="AINoiseSeekDist" value="5"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
 
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
@@ -1957,8 +1965,8 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="LookAtAngle" value="0"/>
 			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="10"/> 
-			<property name="AINoiseSeekDist" value="10"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
 
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
@@ -2113,8 +2121,8 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="LookAtAngle" value="0"/>
 			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="10"/> 
-			<property name="AINoiseSeekDist" value="10"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
 
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
@@ -2205,8 +2213,8 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="LookAtAngle" value="0"/>
 			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="15"/> 
-			<property name="AINoiseSeekDist" value="15"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
 
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
@@ -2325,8 +2333,8 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="LookAtAngle" value="0"/>
 			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="20"/> 
-			<property name="AINoiseSeekDist" value="20"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
 
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntitySurvivor,10"/>
@@ -2445,8 +2453,8 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="LookAtAngle" value="0"/>
 			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="25"/> 
-			<property name="AINoiseSeekDist" value="25"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
 
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntitySurvivor,10"/>
@@ -2565,8 +2573,8 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="LookAtAngle" value="0"/>
 			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="25"/> 
-			<property name="AINoiseSeekDist" value="25"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
 
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntitySurvivor,10"/>
@@ -2706,8 +2714,8 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="LookAtAngle" value="0"/>
 			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="25"/> 
-			<property name="AINoiseSeekDist" value="25"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
 
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntitySurvivor,10"/>
@@ -2839,8 +2847,8 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="LookAtAngle" value="0"/>
 			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="25"/> 
-			<property name="AINoiseSeekDist" value="25"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
 
 			<property name="AITask-1" value="Territorial"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,5,EntitySurvivor,10"/>
@@ -4004,8 +4012,8 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="LookAtAngle" value="0"/>
 			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="5"/> 
-			<property name="AINoiseSeekDist" value="5"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
 
 			<property name="AITask-1" value="Leap"/>
 			<property name="AITask-1" value="Territorial"/>
@@ -4183,6 +4191,9 @@ FuriousRamsayVultureToxicRadiated
 			<property name="TimeStayAfterDeath" value="2"/>
 			<property name="HandItem" value="FuriousRamsayMeleeHandCloakedAndroidShock"/>
 						
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
+
 			<property name="SoundRandom" value="zombiemaleroam"/>
 			<property name="SoundAlert" value="zombiemaleroam"/>
 			<property name="SoundAttack" value="zombiemaleroam"/>
@@ -4232,6 +4243,9 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="TimeStayAfterDeath" value="2"/>
 						
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
+
 			<property name="SoundRandom" value="zombiemaleroam"/>
 			<property name="SoundAlert" value="zombiemaleroam"/>
 			<property name="SoundAttack" value="zombiemaleroam"/>
@@ -4353,8 +4367,8 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="LookAtAngle" value="0"/>
 			<property name="MaxViewAngle" value="360"/>
-			<property name="SightRange" value="25"/> 
-			<property name="AINoiseSeekDist" value="25"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
 
 			<property name="CanClimbVertical" value="true"/>
 			<property name="JumpMaxDistance" value="11, 13"/>
@@ -4568,7 +4582,7 @@ FuriousRamsayVultureToxicRadiated
 			<property name="TimeStayAfterDeath" value="30"/>
 
 			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,60,EntitySurvivor,30"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
 			<property name="AITask-4" value="Look"/>
 			<property name="AITask-5" value="Wander"/>
@@ -4576,7 +4590,7 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AITask-7" value="DestroyArea"/>
 			<property name="AITask-8" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntitySurvivor,25,25"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntitySurvivor,150,150"/>
 			<property name="AITarget-3" value=""/>
 			<property name="AITarget-4" value=""/>
 			<property name="AITarget-5" value=""/>
@@ -16163,6 +16177,8 @@ FuriousRamsayBlackDecoyZombieYo
 
 <!-- Hazmats -->
         <entity_class name="FuriousRamsayHazmatMaster" extends="FuriousRamsayUMATemplateMale">
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
 			<property name="MoveSpeed" value="0.06"/>
 			<property name="MoveSpeedAggro" value="0.2, 1.1"/>
 			<property name="NavObject" value="FuriousRamsayDotOrange" />
@@ -16175,6 +16191,9 @@ FuriousRamsayBlackDecoyZombieYo
             <property name="HandItem" value="FuriousRamsayHazmatMeleeHandTier1" />
 	
 			<property name="ExperienceGain" value="350"/>
+
+			<property name="MoveSpeed" value="0.2"/>
+			<property name="MoveSpeedAggro" value="0.2, 1.1"/>
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="150" />
@@ -16193,6 +16212,9 @@ FuriousRamsayBlackDecoyZombieYo
 	
 			<property name="ExperienceGain" value="550"/>
 
+			<property name="MoveSpeed" value="0.5"/>
+			<property name="MoveSpeedAggro" value="0.35, 1.2175"/>
+
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="225" />
                 <passive_effect name="HealthMax" operation="perc_set" value="1" />
@@ -16209,7 +16231,9 @@ FuriousRamsayBlackDecoyZombieYo
             <property name="HandItem" value="FuriousRamsayHazmatMeleeHandTier3" />
 	
 			<property name="ExperienceGain" value="750"/>
-			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+
+			<property name="MoveSpeed" value="0.7"/>
+			<property name="MoveSpeedAggro" value=".7, 1.35"/>
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="350" />
@@ -16227,7 +16251,9 @@ FuriousRamsayBlackDecoyZombieYo
             <property name="HandItem" value="FuriousRamsayHazmatMeleeHandTier4" />
 	
 			<property name="ExperienceGain" value="950"/>
-			<property name="MoveSpeedAggro" value=".7, 1.55"/>
+
+			<property name="MoveSpeed" value="0.9"/>
+			<property name="MoveSpeedAggro" value=".9, 1.55"/>
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="750" />
@@ -16245,7 +16271,9 @@ FuriousRamsayBlackDecoyZombieYo
             <property name="HandItem" value="FuriousRamsayHazmatMeleeHandTier5" />
 	
 			<property name="ExperienceGain" value="1250"/>
-			<property name="MoveSpeedAggro" value=".9, 1.75"/>
+
+			<property name="MoveSpeed" value="1.1"/>
+			<property name="MoveSpeedAggro" value="1.1, 1.75"/>
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="1000" />

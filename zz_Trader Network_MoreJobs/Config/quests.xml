@@ -4,38 +4,617 @@
 		<quest_item id="90" name="questFuriousRamsayStealTech" description_key="questFuriousRamsayStealTechDesc" icon="schematicMaster" icon_color="f56342"/>
 		<quest_item id="91" name="questFuriousRamsayStealTechBackPack" description_key="questFuriousRamsayStealTechBackPackDesc" icon="backpackMedium" icon_color="f56342"/>
 		<quest_item id="92" name="questFuriousRamsaySurpriseQuestItem" description_key="questFuriousRamsaySurpriseQuestItemDesc" icon="cntShippingCrateShotgunMessiah" icon_color="f56342"/>
-
 	</append>
 
 	<insertAfter xpath="/quests/quest[@id='tier2_buried_supplies']">
 
-		<quest id="challenge_FuriousRamsayBossVulture">
-			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier5_name"/>
-			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave10_subtitle"/>
-			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+		<quest id="quest_FuriousRamsayTier1_Toxic">
+			<property name="name_key" value="quest_FuriousRamsayToxic_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayToxic_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayToxic_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="medium"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayToxic_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayToxic_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayToxic_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayToxic_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomGoto" value="300-600" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+				
+ 			<objective type="ZombieKill" id="FuriousRamsayZombieBoeToxic,FuriousRamsayZombieJoeToxic,FuriousRamsayZombieJanitorToxic,FuriousRamsayZombieArleneToxic,FuriousRamsayZombieLabToxic,FuriousRamsayZombieDarleneToxic,FuriousRamsayZombieMarleneToxic,FuriousRamsayZombieYoToxic,FuriousRamsayZombieSteveToxic,FuriousRamsayZombieBusinessManToxic,FuriousRamsayZombieZombieAlexToxic,FuriousRamsayZombieOldTimerToxic" value="1" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieBoeToxic,FuriousRamsayZombieJoeToxic,FuriousRamsayZombieJanitorToxic,FuriousRamsayZombieArleneToxic,FuriousRamsayZombieLabToxic,FuriousRamsayZombieDarleneToxic,FuriousRamsayZombieMarleneToxic,FuriousRamsayZombieYoToxic,FuriousRamsayZombieSteveToxic,FuriousRamsayZombieBusinessManToxic,FuriousRamsayZombieZombieAlexToxic,FuriousRamsayZombieOldTimerToxic" value="3" phase="3"/>
+		
+			<objective type="ZombieKill" id="FuriousRamsayZombieBoeToxic,FuriousRamsayZombieJoeToxic,FuriousRamsayZombieJanitorToxic,FuriousRamsayZombieArleneToxic,FuriousRamsayZombieLabToxic,FuriousRamsayZombieDarleneToxic,FuriousRamsayZombieMarleneToxic,FuriousRamsayZombieYoToxic,FuriousRamsayZombieSteveToxic,FuriousRamsayZombieBusinessManToxic,FuriousRamsayZombieZombieAlexToxic,FuriousRamsayZombieOldTimerToxic" value="2" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieBoeToxic,FuriousRamsayZombieJoeToxic,FuriousRamsayZombieJanitorToxic,FuriousRamsayZombieArleneToxic,FuriousRamsayZombieLabToxic,FuriousRamsayZombieDarleneToxic,FuriousRamsayZombieMarleneToxic,FuriousRamsayZombieYoToxic,FuriousRamsayZombieSteveToxic,FuriousRamsayZombieBusinessManToxic,FuriousRamsayZombieZombieAlexToxic,FuriousRamsayZombieOldTimerToxic" value="4" phase="4"/>
+
+			<objective type="ZombieKill" id="FuriousRamsayZombieBoeToxic,FuriousRamsayZombieJoeToxic,FuriousRamsayZombieJanitorToxic,FuriousRamsayZombieArleneToxic,FuriousRamsayZombieLabToxic,FuriousRamsayZombieDarleneToxic,FuriousRamsayZombieMarleneToxic,FuriousRamsayZombieYoToxic,FuriousRamsayZombieSteveToxic,FuriousRamsayZombieBusinessManToxic,FuriousRamsayZombieZombieAlexToxic,FuriousRamsayZombieOldTimerToxic" value="3" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieBoeToxic,FuriousRamsayZombieJoeToxic,FuriousRamsayZombieJanitorToxic,FuriousRamsayZombieArleneToxic,FuriousRamsayZombieLabToxic,FuriousRamsayZombieDarleneToxic,FuriousRamsayZombieMarleneToxic,FuriousRamsayZombieYoToxic,FuriousRamsayZombieSteveToxic,FuriousRamsayZombieBusinessManToxic,FuriousRamsayZombieZombieAlexToxic,FuriousRamsayZombieOldTimerToxic" value="5" phase="5"/>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieBoeToxic,FuriousRamsayZombieJoeToxic,FuriousRamsayZombieJanitorToxic,FuriousRamsayZombieArleneToxic,FuriousRamsayZombieLabToxic,FuriousRamsayZombieDarleneToxic,FuriousRamsayZombieMarleneToxic,FuriousRamsayZombieYoToxic,FuriousRamsayZombieSteveToxic,FuriousRamsayZombieBusinessManToxic,FuriousRamsayZombieZombieAlexToxic,FuriousRamsayZombieOldTimerToxic" value="6" phase="6"/>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="3000"/>
+			<reward type="Item" id="casinoCoin" value="300"/>
+			<reward type="LootItem" id="groupQuestTools,FuriousRamsayGroupQuestMedicalLow" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestArmor,FuriousRamsayGroupQuestCookedFoodsTier1" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="1"/>
+		</quest>
+	
+		<quest id="quest_FuriousRamsayTier2_Toxic">
+			<property name="name_key" value="quest_FuriousRamsayToxic_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayToxic_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayToxic_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="medium"/>
+			<property name="difficulty_tier" value="2"/>
+			<property name="offer_key" value="quest_FuriousRamsayToxic_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayToxic_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayToxic_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayToxic_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomGoto" value="300-600" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+				
+			<objective type="ZombieKill" id="FuriousRamsayZombieCheerleaderToxic,FuriousRamsayZombieSkateboarderToxic,FuriousRamsayZombieUtilityWorkerToxic,FuriousRamsayZombieNurseToxic,FuriousRamsayZombieStripperToxic,FuriousRamsayZombieSteveCrawlerToxic,FuriousRamsayZombieSpiderToxic,FuriousRamsayZombieFatCopToxic,FuriousRamsayZombieFatHawaiianToxic,FuriousRamsayZombieBikerToxic,FuriousRamsayZombieSoldierToxic,FuriousRamsayZombieMaleHazmatToxic,FuriousRamsayZombieFarmerToxic,FuriousRamsayZombieMoeToxic,FuriousRamsayZombieFemaleFatToxic,FuriousRamsayZombieCheerleaderToxicCrawler,FuriousRamsayZombieBoeToxicCrawler,FuriousRamsayZombieJoeToxicCrawler,FuriousRamsayZombieJanitorToxicCrawler,FuriousRamsayZombieArleneToxicCrawler,FuriousRamsayZombieDarleneToxicCrawler,FuriousRamsayZombieMarleneToxicCrawler,FuriousRamsayZombieYoToxicCrawler,FuriousRamsayZombieSteveToxicCrawler,FuriousRamsayZombieBusinessManToxicCrawler,FuriousRamsayZombieOldTimerToxicCrawler,FuriousRamsayZombieSkateboarderToxicCrawler,FuriousRamsayZombieUtilityWorkerToxicCrawler,FuriousRamsayZombieSpiderToxicCrawler,FuriousRamsayZombieFatCopToxicCrawler,FuriousRamsayZombieBikerToxicCrawler,FuriousRamsayZombieSoldierToxicCrawler,FuriousRamsayZombieMoeToxicCrawler,FuriousRamsayZombieFemaleFatToxicCrawler,FuriousRamsayZombieWightToxicCrawler" value="2" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieCheerleaderToxic,FuriousRamsayZombieSkateboarderToxic,FuriousRamsayZombieUtilityWorkerToxic,FuriousRamsayZombieNurseToxic,FuriousRamsayZombieStripperToxic,FuriousRamsayZombieSteveCrawlerToxic,FuriousRamsayZombieSpiderToxic,FuriousRamsayZombieFatCopToxic,FuriousRamsayZombieFatHawaiianToxic,FuriousRamsayZombieBikerToxic,FuriousRamsayZombieSoldierToxic,FuriousRamsayZombieMaleHazmatToxic,FuriousRamsayZombieFarmerToxic,FuriousRamsayZombieMoeToxic,FuriousRamsayZombieFemaleFatToxic,FuriousRamsayZombieCheerleaderToxicCrawler,FuriousRamsayZombieBoeToxicCrawler,FuriousRamsayZombieJoeToxicCrawler,FuriousRamsayZombieJanitorToxicCrawler,FuriousRamsayZombieArleneToxicCrawler,FuriousRamsayZombieDarleneToxicCrawler,FuriousRamsayZombieMarleneToxicCrawler,FuriousRamsayZombieYoToxicCrawler,FuriousRamsayZombieSteveToxicCrawler,FuriousRamsayZombieBusinessManToxicCrawler,FuriousRamsayZombieOldTimerToxicCrawler,FuriousRamsayZombieSkateboarderToxicCrawler,FuriousRamsayZombieUtilityWorkerToxicCrawler,FuriousRamsayZombieSpiderToxicCrawler,FuriousRamsayZombieFatCopToxicCrawler,FuriousRamsayZombieBikerToxicCrawler,FuriousRamsayZombieSoldierToxicCrawler,FuriousRamsayZombieMoeToxicCrawler,FuriousRamsayZombieFemaleFatToxicCrawler,FuriousRamsayZombieWightToxicCrawler" value="4" phase="3"/>
+		
+			<objective type="ZombieKill" id="FuriousRamsayZombieCheerleaderToxic,FuriousRamsayZombieSkateboarderToxic,FuriousRamsayZombieUtilityWorkerToxic,FuriousRamsayZombieNurseToxic,FuriousRamsayZombieStripperToxic,FuriousRamsayZombieSteveCrawlerToxic,FuriousRamsayZombieSpiderToxic,FuriousRamsayZombieFatCopToxic,FuriousRamsayZombieFatHawaiianToxic,FuriousRamsayZombieBikerToxic,FuriousRamsayZombieSoldierToxic,FuriousRamsayZombieMaleHazmatToxic,FuriousRamsayZombieFarmerToxic,FuriousRamsayZombieMoeToxic,FuriousRamsayZombieFemaleFatToxic,FuriousRamsayZombieCheerleaderToxicCrawler,FuriousRamsayZombieBoeToxicCrawler,FuriousRamsayZombieJoeToxicCrawler,FuriousRamsayZombieJanitorToxicCrawler,FuriousRamsayZombieArleneToxicCrawler,FuriousRamsayZombieDarleneToxicCrawler,FuriousRamsayZombieMarleneToxicCrawler,FuriousRamsayZombieYoToxicCrawler,FuriousRamsayZombieSteveToxicCrawler,FuriousRamsayZombieBusinessManToxicCrawler,FuriousRamsayZombieOldTimerToxicCrawler,FuriousRamsayZombieSkateboarderToxicCrawler,FuriousRamsayZombieUtilityWorkerToxicCrawler,FuriousRamsayZombieSpiderToxicCrawler,FuriousRamsayZombieFatCopToxicCrawler,FuriousRamsayZombieBikerToxicCrawler,FuriousRamsayZombieSoldierToxicCrawler,FuriousRamsayZombieMoeToxicCrawler,FuriousRamsayZombieFemaleFatToxicCrawler,FuriousRamsayZombieWightToxicCrawler" value="3" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieCheerleaderToxic,FuriousRamsayZombieSkateboarderToxic,FuriousRamsayZombieUtilityWorkerToxic,FuriousRamsayZombieNurseToxic,FuriousRamsayZombieStripperToxic,FuriousRamsayZombieSteveCrawlerToxic,FuriousRamsayZombieSpiderToxic,FuriousRamsayZombieFatCopToxic,FuriousRamsayZombieFatHawaiianToxic,FuriousRamsayZombieBikerToxic,FuriousRamsayZombieSoldierToxic,FuriousRamsayZombieMaleHazmatToxic,FuriousRamsayZombieFarmerToxic,FuriousRamsayZombieMoeToxic,FuriousRamsayZombieFemaleFatToxic,FuriousRamsayZombieCheerleaderToxicCrawler,FuriousRamsayZombieBoeToxicCrawler,FuriousRamsayZombieJoeToxicCrawler,FuriousRamsayZombieJanitorToxicCrawler,FuriousRamsayZombieArleneToxicCrawler,FuriousRamsayZombieDarleneToxicCrawler,FuriousRamsayZombieMarleneToxicCrawler,FuriousRamsayZombieYoToxicCrawler,FuriousRamsayZombieSteveToxicCrawler,FuriousRamsayZombieBusinessManToxicCrawler,FuriousRamsayZombieOldTimerToxicCrawler,FuriousRamsayZombieSkateboarderToxicCrawler,FuriousRamsayZombieUtilityWorkerToxicCrawler,FuriousRamsayZombieSpiderToxicCrawler,FuriousRamsayZombieFatCopToxicCrawler,FuriousRamsayZombieBikerToxicCrawler,FuriousRamsayZombieSoldierToxicCrawler,FuriousRamsayZombieMoeToxicCrawler,FuriousRamsayZombieFemaleFatToxicCrawler,FuriousRamsayZombieWightToxicCrawler" value="5" phase="4"/>
+
+			<objective type="ZombieKill" id="FuriousRamsayZombieCheerleaderToxic,FuriousRamsayZombieSkateboarderToxic,FuriousRamsayZombieUtilityWorkerToxic,FuriousRamsayZombieNurseToxic,FuriousRamsayZombieStripperToxic,FuriousRamsayZombieSteveCrawlerToxic,FuriousRamsayZombieSpiderToxic,FuriousRamsayZombieFatCopToxic,FuriousRamsayZombieFatHawaiianToxic,FuriousRamsayZombieBikerToxic,FuriousRamsayZombieSoldierToxic,FuriousRamsayZombieMaleHazmatToxic,FuriousRamsayZombieFarmerToxic,FuriousRamsayZombieMoeToxic,FuriousRamsayZombieFemaleFatToxic,FuriousRamsayZombieCheerleaderToxicCrawler,FuriousRamsayZombieBoeToxicCrawler,FuriousRamsayZombieJoeToxicCrawler,FuriousRamsayZombieJanitorToxicCrawler,FuriousRamsayZombieArleneToxicCrawler,FuriousRamsayZombieDarleneToxicCrawler,FuriousRamsayZombieMarleneToxicCrawler,FuriousRamsayZombieYoToxicCrawler,FuriousRamsayZombieSteveToxicCrawler,FuriousRamsayZombieBusinessManToxicCrawler,FuriousRamsayZombieOldTimerToxicCrawler,FuriousRamsayZombieSkateboarderToxicCrawler,FuriousRamsayZombieUtilityWorkerToxicCrawler,FuriousRamsayZombieSpiderToxicCrawler,FuriousRamsayZombieFatCopToxicCrawler,FuriousRamsayZombieBikerToxicCrawler,FuriousRamsayZombieSoldierToxicCrawler,FuriousRamsayZombieMoeToxicCrawler,FuriousRamsayZombieFemaleFatToxicCrawler,FuriousRamsayZombieWightToxicCrawler" value="4" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieCheerleaderToxic,FuriousRamsayZombieSkateboarderToxic,FuriousRamsayZombieUtilityWorkerToxic,FuriousRamsayZombieNurseToxic,FuriousRamsayZombieStripperToxic,FuriousRamsayZombieSteveCrawlerToxic,FuriousRamsayZombieSpiderToxic,FuriousRamsayZombieFatCopToxic,FuriousRamsayZombieFatHawaiianToxic,FuriousRamsayZombieBikerToxic,FuriousRamsayZombieSoldierToxic,FuriousRamsayZombieMaleHazmatToxic,FuriousRamsayZombieFarmerToxic,FuriousRamsayZombieMoeToxic,FuriousRamsayZombieFemaleFatToxic,FuriousRamsayZombieCheerleaderToxicCrawler,FuriousRamsayZombieBoeToxicCrawler,FuriousRamsayZombieJoeToxicCrawler,FuriousRamsayZombieJanitorToxicCrawler,FuriousRamsayZombieArleneToxicCrawler,FuriousRamsayZombieDarleneToxicCrawler,FuriousRamsayZombieMarleneToxicCrawler,FuriousRamsayZombieYoToxicCrawler,FuriousRamsayZombieSteveToxicCrawler,FuriousRamsayZombieBusinessManToxicCrawler,FuriousRamsayZombieOldTimerToxicCrawler,FuriousRamsayZombieSkateboarderToxicCrawler,FuriousRamsayZombieUtilityWorkerToxicCrawler,FuriousRamsayZombieSpiderToxicCrawler,FuriousRamsayZombieFatCopToxicCrawler,FuriousRamsayZombieBikerToxicCrawler,FuriousRamsayZombieSoldierToxicCrawler,FuriousRamsayZombieMoeToxicCrawler,FuriousRamsayZombieFemaleFatToxicCrawler,FuriousRamsayZombieWightToxicCrawler" value="6" phase="5"/>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieCheerleaderToxic,FuriousRamsayZombieSkateboarderToxic,FuriousRamsayZombieUtilityWorkerToxic,FuriousRamsayZombieNurseToxic,FuriousRamsayZombieStripperToxic,FuriousRamsayZombieSteveCrawlerToxic,FuriousRamsayZombieSpiderToxic,FuriousRamsayZombieFatCopToxic,FuriousRamsayZombieFatHawaiianToxic,FuriousRamsayZombieBikerToxic,FuriousRamsayZombieSoldierToxic,FuriousRamsayZombieMaleHazmatToxic,FuriousRamsayZombieFarmerToxic,FuriousRamsayZombieMoeToxic,FuriousRamsayZombieFemaleFatToxic,FuriousRamsayZombieCheerleaderToxicCrawler,FuriousRamsayZombieBoeToxicCrawler,FuriousRamsayZombieJoeToxicCrawler,FuriousRamsayZombieJanitorToxicCrawler,FuriousRamsayZombieArleneToxicCrawler,FuriousRamsayZombieDarleneToxicCrawler,FuriousRamsayZombieMarleneToxicCrawler,FuriousRamsayZombieYoToxicCrawler,FuriousRamsayZombieSteveToxicCrawler,FuriousRamsayZombieBusinessManToxicCrawler,FuriousRamsayZombieOldTimerToxicCrawler,FuriousRamsayZombieSkateboarderToxicCrawler,FuriousRamsayZombieUtilityWorkerToxicCrawler,FuriousRamsayZombieSpiderToxicCrawler,FuriousRamsayZombieFatCopToxicCrawler,FuriousRamsayZombieBikerToxicCrawler,FuriousRamsayZombieSoldierToxicCrawler,FuriousRamsayZombieMoeToxicCrawler,FuriousRamsayZombieFemaleFatToxicCrawler,FuriousRamsayZombieWightToxicCrawler" value="7" phase="6"/>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="6000"/>
+			<reward type="Item" id="casinoCoin" value="500"/>
+			<reward type="LootItem" id="groupQuestTools,FuriousRamsayGroupQuestMedicalLow" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="groupQuestArmor,FuriousRamsayGroupQuestCookedFoodsTier2" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="2"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayTier3_Toxic">
+			<property name="name_key" value="quest_FuriousRamsayToxic_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayToxic_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayToxic_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="medium"/>
+			<property name="difficulty_tier" value="3"/>
+			<property name="offer_key" value="quest_FuriousRamsayToxic_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayToxic_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayToxic_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayToxic_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomGoto" value="300-600" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+				
+			<objective type="ZombieKill" id="FuriousRamsayZombieFootballPlayerToxicFeral,FuriousRamsayZombieBoeToxicFeral,FuriousRamsayZombieJoeToxicFeral,FuriousRamsayZombieJanitorToxicFeral,FuriousRamsayZombieArleneToxicFeral,FuriousRamsayZombieLabToxicFeral,FuriousRamsayZombieDarleneToxicFeral,FuriousRamsayZombieMarleneToxicFeral,FuriousRamsayZombieYoToxicFeral,FuriousRamsayZombieSteveToxicFeral,FuriousRamsayZombieBusinessManToxicFeral,FuriousRamsayZombieZombieAlexToxicFeral,FuriousRamsayZombieOldTimerToxicFeral,FuriousRamsayZombieCheerleaderToxicFeral,FuriousRamsayZombieSkateboarderToxicFeral,FuriousRamsayZombieUtilityWorkerToxicFeral,FuriousRamsayZombieNurseToxicFeral,FuriousRamsayZombieStripperToxicFeral,FuriousRamsayZombieSteveCrawlerToxicFeral,FuriousRamsayZombieSpiderToxicFeral,FuriousRamsayZombieZombieFatCopToxicFeral,FuriousRamsayZombieFatHawaiianToxicFeral,FuriousRamsayZombieBikerToxicFeral,FuriousRamsayZombieSoldierToxicFeral,FuriousRamsayZombieMaleHazmatToxicFeral,FuriousRamsayZombieFarmerToxicFeral,FuriousRamsayZombieMoeToxicFeral,FuriousRamsayZombieFemaleFatToxicFeral,FuriousRamsayZombieWightToxicFeral" value="3" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieFootballPlayerToxicFeral,FuriousRamsayZombieBoeToxicFeral,FuriousRamsayZombieJoeToxicFeral,FuriousRamsayZombieJanitorToxicFeral,FuriousRamsayZombieArleneToxicFeral,FuriousRamsayZombieLabToxicFeral,FuriousRamsayZombieDarleneToxicFeral,FuriousRamsayZombieMarleneToxicFeral,FuriousRamsayZombieYoToxicFeral,FuriousRamsayZombieSteveToxicFeral,FuriousRamsayZombieBusinessManToxicFeral,FuriousRamsayZombieZombieAlexToxicFeral,FuriousRamsayZombieOldTimerToxicFeral,FuriousRamsayZombieCheerleaderToxicFeral,FuriousRamsayZombieSkateboarderToxicFeral,FuriousRamsayZombieUtilityWorkerToxicFeral,FuriousRamsayZombieNurseToxicFeral,FuriousRamsayZombieStripperToxicFeral,FuriousRamsayZombieSteveCrawlerToxicFeral,FuriousRamsayZombieSpiderToxicFeral,FuriousRamsayZombieZombieFatCopToxicFeral,FuriousRamsayZombieFatHawaiianToxicFeral,FuriousRamsayZombieBikerToxicFeral,FuriousRamsayZombieSoldierToxicFeral,FuriousRamsayZombieMaleHazmatToxicFeral,FuriousRamsayZombieFarmerToxicFeral,FuriousRamsayZombieMoeToxicFeral,FuriousRamsayZombieFemaleFatToxicFeral,FuriousRamsayZombieWightToxicFeral" value="6" phase="3"/>
+		
+			<objective type="ZombieKill" id="FuriousRamsayZombieFootballPlayerToxicFeral,FuriousRamsayZombieBoeToxicFeral,FuriousRamsayZombieJoeToxicFeral,FuriousRamsayZombieJanitorToxicFeral,FuriousRamsayZombieArleneToxicFeral,FuriousRamsayZombieLabToxicFeral,FuriousRamsayZombieDarleneToxicFeral,FuriousRamsayZombieMarleneToxicFeral,FuriousRamsayZombieYoToxicFeral,FuriousRamsayZombieSteveToxicFeral,FuriousRamsayZombieBusinessManToxicFeral,FuriousRamsayZombieZombieAlexToxicFeral,FuriousRamsayZombieOldTimerToxicFeral,FuriousRamsayZombieCheerleaderToxicFeral,FuriousRamsayZombieSkateboarderToxicFeral,FuriousRamsayZombieUtilityWorkerToxicFeral,FuriousRamsayZombieNurseToxicFeral,FuriousRamsayZombieStripperToxicFeral,FuriousRamsayZombieSteveCrawlerToxicFeral,FuriousRamsayZombieSpiderToxicFeral,FuriousRamsayZombieZombieFatCopToxicFeral,FuriousRamsayZombieFatHawaiianToxicFeral,FuriousRamsayZombieBikerToxicFeral,FuriousRamsayZombieSoldierToxicFeral,FuriousRamsayZombieMaleHazmatToxicFeral,FuriousRamsayZombieFarmerToxicFeral,FuriousRamsayZombieMoeToxicFeral,FuriousRamsayZombieFemaleFatToxicFeral,FuriousRamsayZombieWightToxicFeral" value="4" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieFootballPlayerToxicFeral,FuriousRamsayZombieBoeToxicFeral,FuriousRamsayZombieJoeToxicFeral,FuriousRamsayZombieJanitorToxicFeral,FuriousRamsayZombieArleneToxicFeral,FuriousRamsayZombieLabToxicFeral,FuriousRamsayZombieDarleneToxicFeral,FuriousRamsayZombieMarleneToxicFeral,FuriousRamsayZombieYoToxicFeral,FuriousRamsayZombieSteveToxicFeral,FuriousRamsayZombieBusinessManToxicFeral,FuriousRamsayZombieZombieAlexToxicFeral,FuriousRamsayZombieOldTimerToxicFeral,FuriousRamsayZombieCheerleaderToxicFeral,FuriousRamsayZombieSkateboarderToxicFeral,FuriousRamsayZombieUtilityWorkerToxicFeral,FuriousRamsayZombieNurseToxicFeral,FuriousRamsayZombieStripperToxicFeral,FuriousRamsayZombieSteveCrawlerToxicFeral,FuriousRamsayZombieSpiderToxicFeral,FuriousRamsayZombieZombieFatCopToxicFeral,FuriousRamsayZombieFatHawaiianToxicFeral,FuriousRamsayZombieBikerToxicFeral,FuriousRamsayZombieSoldierToxicFeral,FuriousRamsayZombieMaleHazmatToxicFeral,FuriousRamsayZombieFarmerToxicFeral,FuriousRamsayZombieMoeToxicFeral,FuriousRamsayZombieFemaleFatToxicFeral,FuriousRamsayZombieWightToxicFeral" value="7" phase="4"/>
+
+			<objective type="ZombieKill" id="FuriousRamsayZombieFootballPlayerToxicFeral,FuriousRamsayZombieBoeToxicFeral,FuriousRamsayZombieJoeToxicFeral,FuriousRamsayZombieJanitorToxicFeral,FuriousRamsayZombieArleneToxicFeral,FuriousRamsayZombieLabToxicFeral,FuriousRamsayZombieDarleneToxicFeral,FuriousRamsayZombieMarleneToxicFeral,FuriousRamsayZombieYoToxicFeral,FuriousRamsayZombieSteveToxicFeral,FuriousRamsayZombieBusinessManToxicFeral,FuriousRamsayZombieZombieAlexToxicFeral,FuriousRamsayZombieOldTimerToxicFeral,FuriousRamsayZombieCheerleaderToxicFeral,FuriousRamsayZombieSkateboarderToxicFeral,FuriousRamsayZombieUtilityWorkerToxicFeral,FuriousRamsayZombieNurseToxicFeral,FuriousRamsayZombieStripperToxicFeral,FuriousRamsayZombieSteveCrawlerToxicFeral,FuriousRamsayZombieSpiderToxicFeral,FuriousRamsayZombieZombieFatCopToxicFeral,FuriousRamsayZombieFatHawaiianToxicFeral,FuriousRamsayZombieBikerToxicFeral,FuriousRamsayZombieSoldierToxicFeral,FuriousRamsayZombieMaleHazmatToxicFeral,FuriousRamsayZombieFarmerToxicFeral,FuriousRamsayZombieMoeToxicFeral,FuriousRamsayZombieFemaleFatToxicFeral,FuriousRamsayZombieWightToxicFeral" value="5" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieFootballPlayerToxicFeral,FuriousRamsayZombieBoeToxicFeral,FuriousRamsayZombieJoeToxicFeral,FuriousRamsayZombieJanitorToxicFeral,FuriousRamsayZombieArleneToxicFeral,FuriousRamsayZombieLabToxicFeral,FuriousRamsayZombieDarleneToxicFeral,FuriousRamsayZombieMarleneToxicFeral,FuriousRamsayZombieYoToxicFeral,FuriousRamsayZombieSteveToxicFeral,FuriousRamsayZombieBusinessManToxicFeral,FuriousRamsayZombieZombieAlexToxicFeral,FuriousRamsayZombieOldTimerToxicFeral,FuriousRamsayZombieCheerleaderToxicFeral,FuriousRamsayZombieSkateboarderToxicFeral,FuriousRamsayZombieUtilityWorkerToxicFeral,FuriousRamsayZombieNurseToxicFeral,FuriousRamsayZombieStripperToxicFeral,FuriousRamsayZombieSteveCrawlerToxicFeral,FuriousRamsayZombieSpiderToxicFeral,FuriousRamsayZombieZombieFatCopToxicFeral,FuriousRamsayZombieFatHawaiianToxicFeral,FuriousRamsayZombieBikerToxicFeral,FuriousRamsayZombieSoldierToxicFeral,FuriousRamsayZombieMaleHazmatToxicFeral,FuriousRamsayZombieFarmerToxicFeral,FuriousRamsayZombieMoeToxicFeral,FuriousRamsayZombieFemaleFatToxicFeral,FuriousRamsayZombieWightToxicFeral" value="8" phase="5"/>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieFootballPlayerToxicFeral,FuriousRamsayZombieBoeToxicFeral,FuriousRamsayZombieJoeToxicFeral,FuriousRamsayZombieJanitorToxicFeral,FuriousRamsayZombieArleneToxicFeral,FuriousRamsayZombieLabToxicFeral,FuriousRamsayZombieDarleneToxicFeral,FuriousRamsayZombieMarleneToxicFeral,FuriousRamsayZombieYoToxicFeral,FuriousRamsayZombieSteveToxicFeral,FuriousRamsayZombieBusinessManToxicFeral,FuriousRamsayZombieZombieAlexToxicFeral,FuriousRamsayZombieOldTimerToxicFeral,FuriousRamsayZombieCheerleaderToxicFeral,FuriousRamsayZombieSkateboarderToxicFeral,FuriousRamsayZombieUtilityWorkerToxicFeral,FuriousRamsayZombieNurseToxicFeral,FuriousRamsayZombieStripperToxicFeral,FuriousRamsayZombieSteveCrawlerToxicFeral,FuriousRamsayZombieSpiderToxicFeral,FuriousRamsayZombieZombieFatCopToxicFeral,FuriousRamsayZombieFatHawaiianToxicFeral,FuriousRamsayZombieBikerToxicFeral,FuriousRamsayZombieSoldierToxicFeral,FuriousRamsayZombieMaleHazmatToxicFeral,FuriousRamsayZombieFarmerToxicFeral,FuriousRamsayZombieMoeToxicFeral,FuriousRamsayZombieFemaleFatToxicFeral,FuriousRamsayZombieWightToxicFeral" value="9" phase="6"/>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="9000"/>
+			<reward type="Item" id="casinoCoin" value="700"/>
+			<reward type="LootItem" id="groupQuestTools,groupQuestAmmo" ischosen="true" isfixed="true" value="3"/>
+			<reward type="LootItem" id="groupQuestArmor,FuriousRamsayGroupQuestMedicalLow,FuriousRamsayGroupQuestCookedFoodsTier3" ischosen="true" isfixed="true" value="3"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayTier4_Toxic">
+			<property name="name_key" value="quest_FuriousRamsayToxic_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayToxic_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayToxic_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="4"/>
+			<property name="offer_key" value="quest_FuriousRamsayToxic_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayToxic_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayToxic_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayToxic_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomGoto" value="300-600" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+				
+			<objective type="ZombieKill" id="FuriousRamsayZombieCheerleaderToxicRadiated,FuriousRamsayZombieBoeToxicRadiated,FuriousRamsayZombieJoeToxicRadiated,FuriousRamsayZombieJanitorToxicRadiated,FuriousRamsayZombieArleneToxicRadiated,FuriousRamsayZombieDarleneToxicRadiated,FuriousRamsayZombieMarleneToxicRadiated,FuriousRamsayZombieYoToxicRadiated,FuriousRamsayZombieSteveToxicRadiated,FuriousRamsayZombieBusinessManToxicRadiated,FuriousRamsayZombieZombieAlexToxicRadiated,FuriousRamsayZombieOldTimerToxicRadiated" value="4" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieCheerleaderToxicRadiated,FuriousRamsayZombieBoeToxicRadiated,FuriousRamsayZombieJoeToxicRadiated,FuriousRamsayZombieJanitorToxicRadiated,FuriousRamsayZombieArleneToxicRadiated,FuriousRamsayZombieDarleneToxicRadiated,FuriousRamsayZombieMarleneToxicRadiated,FuriousRamsayZombieYoToxicRadiated,FuriousRamsayZombieSteveToxicRadiated,FuriousRamsayZombieBusinessManToxicRadiated,FuriousRamsayZombieZombieAlexToxicRadiated,FuriousRamsayZombieOldTimerToxicRadiated" value="8" phase="3"/>
+		
+			<objective type="ZombieKill" id="FuriousRamsayZombieCheerleaderToxicRadiated,FuriousRamsayZombieBoeToxicRadiated,FuriousRamsayZombieJoeToxicRadiated,FuriousRamsayZombieJanitorToxicRadiated,FuriousRamsayZombieArleneToxicRadiated,FuriousRamsayZombieDarleneToxicRadiated,FuriousRamsayZombieMarleneToxicRadiated,FuriousRamsayZombieYoToxicRadiated,FuriousRamsayZombieSteveToxicRadiated,FuriousRamsayZombieBusinessManToxicRadiated,FuriousRamsayZombieZombieAlexToxicRadiated,FuriousRamsayZombieOldTimerToxicRadiated" value="5" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieCheerleaderToxicRadiated,FuriousRamsayZombieBoeToxicRadiated,FuriousRamsayZombieJoeToxicRadiated,FuriousRamsayZombieJanitorToxicRadiated,FuriousRamsayZombieArleneToxicRadiated,FuriousRamsayZombieDarleneToxicRadiated,FuriousRamsayZombieMarleneToxicRadiated,FuriousRamsayZombieYoToxicRadiated,FuriousRamsayZombieSteveToxicRadiated,FuriousRamsayZombieBusinessManToxicRadiated,FuriousRamsayZombieZombieAlexToxicRadiated,FuriousRamsayZombieOldTimerToxicRadiated" value="9" phase="4"/>
+
+			<objective type="ZombieKill" id="FuriousRamsayZombieCheerleaderToxicRadiated,FuriousRamsayZombieBoeToxicRadiated,FuriousRamsayZombieJoeToxicRadiated,FuriousRamsayZombieJanitorToxicRadiated,FuriousRamsayZombieArleneToxicRadiated,FuriousRamsayZombieDarleneToxicRadiated,FuriousRamsayZombieMarleneToxicRadiated,FuriousRamsayZombieYoToxicRadiated,FuriousRamsayZombieSteveToxicRadiated,FuriousRamsayZombieBusinessManToxicRadiated,FuriousRamsayZombieZombieAlexToxicRadiated,FuriousRamsayZombieOldTimerToxicRadiated" value="6" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieCheerleaderToxicRadiated,FuriousRamsayZombieBoeToxicRadiated,FuriousRamsayZombieJoeToxicRadiated,FuriousRamsayZombieJanitorToxicRadiated,FuriousRamsayZombieArleneToxicRadiated,FuriousRamsayZombieDarleneToxicRadiated,FuriousRamsayZombieMarleneToxicRadiated,FuriousRamsayZombieYoToxicRadiated,FuriousRamsayZombieSteveToxicRadiated,FuriousRamsayZombieBusinessManToxicRadiated,FuriousRamsayZombieZombieAlexToxicRadiated,FuriousRamsayZombieOldTimerToxicRadiated" value="10" phase="5"/>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieCheerleaderToxicRadiated,FuriousRamsayZombieBoeToxicRadiated,FuriousRamsayZombieJoeToxicRadiated,FuriousRamsayZombieJanitorToxicRadiated,FuriousRamsayZombieArleneToxicRadiated,FuriousRamsayZombieDarleneToxicRadiated,FuriousRamsayZombieMarleneToxicRadiated,FuriousRamsayZombieYoToxicRadiated,FuriousRamsayZombieSteveToxicRadiated,FuriousRamsayZombieBusinessManToxicRadiated,FuriousRamsayZombieZombieAlexToxicRadiated,FuriousRamsayZombieOldTimerToxicRadiated" value="11" phase="6"/>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="12000"/>
+			<reward type="Item" id="casinoCoin" value="900"/>
+			<reward type="LootItem" id="groupQuestAmmo,groupQuestWeapons" ischosen="true" isfixed="true" value="4"/>
+			<reward type="LootItem" id="groupQuestSchematics,groupQuestMods" isfixed="true" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestArmor" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="4"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalHigh,FuriousRamsayGroupQuestCookedFoodsTier4" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="4"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayTier5_Toxic">
+			<property name="name_key" value="quest_FuriousRamsayToxic_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayToxic_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayToxic_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="hard"/>
 			<property name="difficulty_tier" value="5"/>
-			<property name="offer_key" value="quest_FuriousRamsayHordeTraining_offer"/>
-
+			<property name="offer_key" value="quest_FuriousRamsayToxic_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayToxic_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayToxic_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
 			<property name="completiontype" value="TurnIn"/>
-			<property name="completion_key" value="quest_FuriousRamsayHordeTraining_completion"/>
+			<property name="completion_key" value="quest_FuriousRamsayToxic_completion"/>
 
-			<objective type="Time" value="20" phase="1"/>
-			<action type="SpawnEnemy" id="FuriousRamsayBossVulture" value="1" phase="1"/>
+			<action type="TrackQuest"/>
+
+			<objective type="RandomGoto" value="300-600" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+				
+			<objective type="ZombieKill" id="FuriousRamsayZombieSkateboarderToxicRadiated,FuriousRamsayZombieUtilityWorkerToxicRadiated,FuriousRamsayZombieSpiderToxicRadiated,FuriousRamsayZombieFatCopToxicRadiated,FuriousRamsayZombieBikerToxicRadiated,FuriousRamsayZombieSoldierToxicRadiated,FuriousRamsayZombieMoeToxicRadiated,FuriousRamsayZombieFemaleFatToxicRadiated,FuriousRamsayZombieWightToxicRadiated,FuriousRamsayZombieCheerleaderToxicAllFours,FuriousRamsayZombieBoeToxicAllFours,FuriousRamsayZombieJoeToxicAllFours,FuriousRamsayZombieJanitorToxicAllFours,FuriousRamsayZombieArleneToxicAllFours,FuriousRamsayZombieDarleneToxicAllFours,FuriousRamsayZombieMarleneToxicAllFours,FuriousRamsayZombieYoToxicAllFours,FuriousRamsayZombieSteveToxicAllFours,FuriousRamsayZombieBusinessManToxicAllFours,FuriousRamsayZombieOldTimerToxicAllFours,FuriousRamsayZombieSkateboarderToxicAllFours,FuriousRamsayZombieUtilityWorkerToxicAllFours,FuriousRamsayZombieSpiderToxicAllFours,FuriousRamsayZombieFatCopToxicAllFours,FuriousRamsayZombieBikerToxicAllFours,FuriousRamsayZombieSoldierToxicAllFours,FuriousRamsayZombieMoeToxicAllFours,FuriousRamsayZombieFemaleFatToxicAllFours,FuriousRamsayZombieWightToxicAllFours" value="5" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieSkateboarderToxicRadiated,FuriousRamsayZombieUtilityWorkerToxicRadiated,FuriousRamsayZombieSpiderToxicRadiated,FuriousRamsayZombieFatCopToxicRadiated,FuriousRamsayZombieBikerToxicRadiated,FuriousRamsayZombieSoldierToxicRadiated,FuriousRamsayZombieMoeToxicRadiated,FuriousRamsayZombieFemaleFatToxicRadiated,FuriousRamsayZombieWightToxicRadiated,FuriousRamsayZombieCheerleaderToxicAllFours,FuriousRamsayZombieBoeToxicAllFours,FuriousRamsayZombieJoeToxicAllFours,FuriousRamsayZombieJanitorToxicAllFours,FuriousRamsayZombieArleneToxicAllFours,FuriousRamsayZombieDarleneToxicAllFours,FuriousRamsayZombieMarleneToxicAllFours,FuriousRamsayZombieYoToxicAllFours,FuriousRamsayZombieSteveToxicAllFours,FuriousRamsayZombieBusinessManToxicAllFours,FuriousRamsayZombieOldTimerToxicAllFours,FuriousRamsayZombieSkateboarderToxicAllFours,FuriousRamsayZombieUtilityWorkerToxicAllFours,FuriousRamsayZombieSpiderToxicAllFours,FuriousRamsayZombieFatCopToxicAllFours,FuriousRamsayZombieBikerToxicAllFours,FuriousRamsayZombieSoldierToxicAllFours,FuriousRamsayZombieMoeToxicAllFours,FuriousRamsayZombieFemaleFatToxicAllFours,FuriousRamsayZombieWightToxicAllFours" value="9" phase="3"/>
+		
+			<objective type="ZombieKill" id="FuriousRamsayZombieSkateboarderToxicRadiated,FuriousRamsayZombieUtilityWorkerToxicRadiated,FuriousRamsayZombieSpiderToxicRadiated,FuriousRamsayZombieFatCopToxicRadiated,FuriousRamsayZombieBikerToxicRadiated,FuriousRamsayZombieSoldierToxicRadiated,FuriousRamsayZombieMoeToxicRadiated,FuriousRamsayZombieFemaleFatToxicRadiated,FuriousRamsayZombieWightToxicRadiated,FuriousRamsayZombieCheerleaderToxicAllFours,FuriousRamsayZombieBoeToxicAllFours,FuriousRamsayZombieJoeToxicAllFours,FuriousRamsayZombieJanitorToxicAllFours,FuriousRamsayZombieArleneToxicAllFours,FuriousRamsayZombieDarleneToxicAllFours,FuriousRamsayZombieMarleneToxicAllFours,FuriousRamsayZombieYoToxicAllFours,FuriousRamsayZombieSteveToxicAllFours,FuriousRamsayZombieBusinessManToxicAllFours,FuriousRamsayZombieOldTimerToxicAllFours,FuriousRamsayZombieSkateboarderToxicAllFours,FuriousRamsayZombieUtilityWorkerToxicAllFours,FuriousRamsayZombieSpiderToxicAllFours,FuriousRamsayZombieFatCopToxicAllFours,FuriousRamsayZombieBikerToxicAllFours,FuriousRamsayZombieSoldierToxicAllFours,FuriousRamsayZombieMoeToxicAllFours,FuriousRamsayZombieFemaleFatToxicAllFours,FuriousRamsayZombieWightToxicAllFours" value="6" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieSkateboarderToxicRadiated,FuriousRamsayZombieUtilityWorkerToxicRadiated,FuriousRamsayZombieSpiderToxicRadiated,FuriousRamsayZombieFatCopToxicRadiated,FuriousRamsayZombieBikerToxicRadiated,FuriousRamsayZombieSoldierToxicRadiated,FuriousRamsayZombieMoeToxicRadiated,FuriousRamsayZombieFemaleFatToxicRadiated,FuriousRamsayZombieWightToxicRadiated,FuriousRamsayZombieCheerleaderToxicAllFours,FuriousRamsayZombieBoeToxicAllFours,FuriousRamsayZombieJoeToxicAllFours,FuriousRamsayZombieJanitorToxicAllFours,FuriousRamsayZombieArleneToxicAllFours,FuriousRamsayZombieDarleneToxicAllFours,FuriousRamsayZombieMarleneToxicAllFours,FuriousRamsayZombieYoToxicAllFours,FuriousRamsayZombieSteveToxicAllFours,FuriousRamsayZombieBusinessManToxicAllFours,FuriousRamsayZombieOldTimerToxicAllFours,FuriousRamsayZombieSkateboarderToxicAllFours,FuriousRamsayZombieUtilityWorkerToxicAllFours,FuriousRamsayZombieSpiderToxicAllFours,FuriousRamsayZombieFatCopToxicAllFours,FuriousRamsayZombieBikerToxicAllFours,FuriousRamsayZombieSoldierToxicAllFours,FuriousRamsayZombieMoeToxicAllFours,FuriousRamsayZombieFemaleFatToxicAllFours,FuriousRamsayZombieWightToxicAllFours" value="10" phase="4"/>
+
+			<objective type="ZombieKill" id="FuriousRamsayZombieSkateboarderToxicRadiated,FuriousRamsayZombieUtilityWorkerToxicRadiated,FuriousRamsayZombieSpiderToxicRadiated,FuriousRamsayZombieFatCopToxicRadiated,FuriousRamsayZombieBikerToxicRadiated,FuriousRamsayZombieSoldierToxicRadiated,FuriousRamsayZombieMoeToxicRadiated,FuriousRamsayZombieFemaleFatToxicRadiated,FuriousRamsayZombieWightToxicRadiated,FuriousRamsayZombieCheerleaderToxicAllFours,FuriousRamsayZombieBoeToxicAllFours,FuriousRamsayZombieJoeToxicAllFours,FuriousRamsayZombieJanitorToxicAllFours,FuriousRamsayZombieArleneToxicAllFours,FuriousRamsayZombieDarleneToxicAllFours,FuriousRamsayZombieMarleneToxicAllFours,FuriousRamsayZombieYoToxicAllFours,FuriousRamsayZombieSteveToxicAllFours,FuriousRamsayZombieBusinessManToxicAllFours,FuriousRamsayZombieOldTimerToxicAllFours,FuriousRamsayZombieSkateboarderToxicAllFours,FuriousRamsayZombieUtilityWorkerToxicAllFours,FuriousRamsayZombieSpiderToxicAllFours,FuriousRamsayZombieFatCopToxicAllFours,FuriousRamsayZombieBikerToxicAllFours,FuriousRamsayZombieSoldierToxicAllFours,FuriousRamsayZombieMoeToxicAllFours,FuriousRamsayZombieFemaleFatToxicAllFours,FuriousRamsayZombieWightToxicAllFours" value="7" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieSkateboarderToxicRadiated,FuriousRamsayZombieUtilityWorkerToxicRadiated,FuriousRamsayZombieSpiderToxicRadiated,FuriousRamsayZombieFatCopToxicRadiated,FuriousRamsayZombieBikerToxicRadiated,FuriousRamsayZombieSoldierToxicRadiated,FuriousRamsayZombieMoeToxicRadiated,FuriousRamsayZombieFemaleFatToxicRadiated,FuriousRamsayZombieWightToxicRadiated,FuriousRamsayZombieCheerleaderToxicAllFours,FuriousRamsayZombieBoeToxicAllFours,FuriousRamsayZombieJoeToxicAllFours,FuriousRamsayZombieJanitorToxicAllFours,FuriousRamsayZombieArleneToxicAllFours,FuriousRamsayZombieDarleneToxicAllFours,FuriousRamsayZombieMarleneToxicAllFours,FuriousRamsayZombieYoToxicAllFours,FuriousRamsayZombieSteveToxicAllFours,FuriousRamsayZombieBusinessManToxicAllFours,FuriousRamsayZombieOldTimerToxicAllFours,FuriousRamsayZombieSkateboarderToxicAllFours,FuriousRamsayZombieUtilityWorkerToxicAllFours,FuriousRamsayZombieSpiderToxicAllFours,FuriousRamsayZombieFatCopToxicAllFours,FuriousRamsayZombieBikerToxicAllFours,FuriousRamsayZombieSoldierToxicAllFours,FuriousRamsayZombieMoeToxicAllFours,FuriousRamsayZombieFemaleFatToxicAllFours,FuriousRamsayZombieWightToxicAllFours" value="11" phase="5"/>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="6"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieSkateboarderToxicRadiated,FuriousRamsayZombieUtilityWorkerToxicRadiated,FuriousRamsayZombieSpiderToxicRadiated,FuriousRamsayZombieFatCopToxicRadiated,FuriousRamsayZombieBikerToxicRadiated,FuriousRamsayZombieSoldierToxicRadiated,FuriousRamsayZombieMoeToxicRadiated,FuriousRamsayZombieFemaleFatToxicRadiated,FuriousRamsayZombieWightToxicRadiated,FuriousRamsayZombieCheerleaderToxicAllFours,FuriousRamsayZombieBoeToxicAllFours,FuriousRamsayZombieJoeToxicAllFours,FuriousRamsayZombieJanitorToxicAllFours,FuriousRamsayZombieArleneToxicAllFours,FuriousRamsayZombieDarleneToxicAllFours,FuriousRamsayZombieMarleneToxicAllFours,FuriousRamsayZombieYoToxicAllFours,FuriousRamsayZombieSteveToxicAllFours,FuriousRamsayZombieBusinessManToxicAllFours,FuriousRamsayZombieOldTimerToxicAllFours,FuriousRamsayZombieSkateboarderToxicAllFours,FuriousRamsayZombieUtilityWorkerToxicAllFours,FuriousRamsayZombieSpiderToxicAllFours,FuriousRamsayZombieFatCopToxicAllFours,FuriousRamsayZombieBikerToxicAllFours,FuriousRamsayZombieSoldierToxicAllFours,FuriousRamsayZombieMoeToxicAllFours,FuriousRamsayZombieFemaleFatToxicAllFours,FuriousRamsayZombieWightToxicAllFours" value="12" phase="6"/>
 
 			<objective type="InteractWithNPC">
-				<property name="phase" value="2"/>
+				<property name="phase" value="6"/>
 				<property name="nav_object" value="return_to_trader" />
 			</objective>
 
 			<reward type="Exp" value="15000"/>
+			<reward type="Item" id="casinoCoin" value="1200"/>
+			<reward type="LootItem" id="groupQuestAmmo,groupQuestWeapons" ischosen="true" isfixed="true" value="5"/>
+			<reward type="LootItem" id="groupQuestSchematics,groupQuestMods" isfixed="true" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestArmor" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="5"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalHigh,FuriousRamsayGroupQuestCookedFoodsTier5" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="5"/>
+		</quest>
+		
+		<quest id="quest_FuriousRamsayTier1_Hazmats">
+			<property name="name_key" value="quest_FuriousRamsayHazmats_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHazmats_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHazmats_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="medium"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayHazmats_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayHazmats_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayHazmats_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayHazmats_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomGoto" value="300-600" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+				
+			<objective type="ZombieKill" id="FuriousRamsayHazmatTier1" value="10" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayHazmatTier1" value="15" phase="3">
+				<property name="delay" value="3"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayBoarToxicRadiated,FuriousRamsayCoyoteToxicRadiated" value="1" phase="3">
+				<property name="delay" value="30"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="3000"/>
+			<reward type="Item" id="casinoCoin" value="300"/>
+			<reward type="LootItem" id="FuriousRamsayGroupHazmatModTier1" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestTools" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="1"/>
+		</quest>
+	
+		<quest id="quest_FuriousRamsayTier2_Hazmats">
+			<property name="name_key" value="quest_FuriousRamsayHazmats_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHazmats_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHazmats_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="medium"/>
+			<property name="difficulty_tier" value="2"/>
+			<property name="offer_key" value="quest_FuriousRamsayHazmats_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayHazmats_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayHazmats_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayHazmats_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomGoto" value="300-600" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+				
+			<objective type="ZombieKill" id="FuriousRamsayHazmatTier2" value="8" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayHazmatTier2" value="16" phase="3">
+				<property name="delay" value="3"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayBoarToxicRadiated,FuriousRamsayWolfToxicRadiated" value="1" phase="3">
+				<property name="delay" value="30"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="6000"/>
+			<reward type="Item" id="casinoCoin" value="500"/>
+			<reward type="LootItem" id="FuriousRamsayGroupHazmatModTier2" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestTools" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="2"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayTier3_Hazmats">
+			<property name="name_key" value="quest_FuriousRamsayHazmats_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHazmats_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHazmats_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="medium"/>
+			<property name="difficulty_tier" value="3"/>
+			<property name="offer_key" value="quest_FuriousRamsayHazmats_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayHazmats_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayHazmats_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayHazmats_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomGoto" value="300-600" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+				
+			<objective type="ZombieKill" id="FuriousRamsayHazmatTier3" value="10" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayHazmatTier3" value="20" phase="3">
+				<property name="delay" value="3"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayVultureToxicRadiated" value="1" phase="3">
+				<property name="delay" value="20"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayWolfToxicRadiated,FuriousRamsayDireWolfToxicRadiated" value="1" phase="3">
+				<property name="delay" value="30"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="9000"/>
 			<reward type="Item" id="casinoCoin" value="700"/>
-			<reward type="Item" id="resourceScrapBrass" ischosen="true" isfixed="true" value="2500"/>
-			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" isfixed="true" value="5"/>
-			<reward type="LootItem" id="groupQuestMods" ischosen="true"  value="5"/>
-			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+			<reward type="LootItem" id="FuriousRamsayGroupHazmatModTier3" ischosen="true" isfixed="true" value="3"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestTools" ischosen="true" isfixed="true" value="3"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayTier4_Hazmats">
+			<property name="name_key" value="quest_FuriousRamsayHazmats_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHazmats_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHazmats_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="4"/>
+			<property name="offer_key" value="quest_FuriousRamsayHazmats_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayHazmats_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayHazmats_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayHazmats_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomGoto" value="300-600" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+				
+			<objective type="ZombieKill" id="FuriousRamsayHazmatTier4" value="12" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayHazmatTier4" value="24" phase="3">
+				<property name="delay" value="3"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayVultureToxicRadiated" value="2" phase="3">
+				<property name="delay" value="20"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayDireWolfToxicRadiated,FuriousRamsayMountainLionToxicRadiated" value="1" phase="3">
+				<property name="delay" value="30"/>
+			</action>
+		
+			<objective type="ReturnToNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="12000"/>
+			<reward type="Item" id="casinoCoin" value="900"/>
+			<reward type="LootItem" id="FuriousRamsayGroupHazmatModTier4" ischosen="true" isfixed="true" value="4"/>
+			<reward type="LootItem" id="groupQuestSchematics,groupQuestMods,groupQuestAmmo,groupQuestWeapons" isfixed="true" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestArmor" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="4"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalHigh,FuriousRamsayGroupQuestCookedFoodsTier4" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="4"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayTier5_Hazmats">
+			<property name="name_key" value="quest_FuriousRamsayHazmats_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHazmats_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHazmats_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="5"/>
+			<property name="offer_key" value="quest_FuriousRamsayHazmats_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayHazmats_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayHazmats_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayHazmats_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomGoto" value="300-600" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+				
+			<objective type="ZombieKill" id="FuriousRamsayHazmatTier5" value="15" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayHazmatTier5" value="30" phase="3">
+				<property name="delay" value="3"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayVultureToxicRadiated" value="3" phase="3">
+				<property name="delay" value="20"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayBearToxicRadiated,FuriousRamsayMountainLionToxicRadiated" value="1" phase="3">
+				<property name="delay" value="30"/>
+			</action>
+		
+			<objective type="ReturnToNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="15000"/>
+			<reward type="Item" id="casinoCoin" value="1200"/>
+			<reward type="LootItem" id="FuriousRamsayGroupHazmatModTier5" ischosen="true" isfixed="true" value="5"/>
+			<reward type="LootItem" id="groupQuestSchematics,groupQuestMods,groupQuestAmmo,groupQuestWeapons" isfixed="true" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestArmor" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="5"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalHigh,FuriousRamsayGroupQuestCookedFoodsTier5" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="5"/>
 		</quest>
 
 		<quest id="quest_FuriousRamsayTier1_Decoys">
@@ -6198,11 +6777,6 @@
 	</insertAfter>
 
 	<append xpath="/quests/quest_list[@id='trader_quests']">
-		<quest id="quest_FuriousRamsayTier1_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier2_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier3_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier4_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier5_clearhold" prob="0.7"/>
 		<quest id="quest_FuriousRamsayTier1_Defend" prob="1"/>
 		<quest id="quest_FuriousRamsayTier2_Defend" prob="0.8"/>
 		<quest id="quest_FuriousRamsayTier3_Defend" prob="0.7"/>
@@ -6219,11 +6793,6 @@
 	</append>
 
 	<append xpath="/quests/quest_list[@id='trader_quests_joel']">
-		<quest id="quest_FuriousRamsayTier1_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier2_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier3_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier4_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier5_clearhold" prob="0.7"/>
 		<quest id="quest_FuriousRamsayTier1_Defend" prob="1"/>
 		<quest id="quest_FuriousRamsayTier2_Defend" prob="0.8"/>
 		<quest id="quest_FuriousRamsayTier3_Defend" prob="0.7"/>
@@ -6240,11 +6809,6 @@
 	</append>
 
 	<append xpath="/quests/quest_list[@id='trader_quests_rekt']">
-		<quest id="quest_FuriousRamsayTier1_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier2_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier3_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier4_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier5_clearhold" prob="0.7"/>
 		<quest id="quest_FuriousRamsayTier1_Defend" prob="1"/>
 		<quest id="quest_FuriousRamsayTier2_Defend" prob="0.8"/>
 		<quest id="quest_FuriousRamsayTier3_Defend" prob="0.7"/>
@@ -6261,11 +6825,6 @@
 	</append>
 
 	<append xpath="/quests/quest_list[@id='trader_quests_bob']">
-		<quest id="quest_FuriousRamsayTier1_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier2_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier3_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier4_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier5_clearhold" prob="0.7"/>
 		<quest id="quest_FuriousRamsayTier1_Defend" prob="1"/>
 		<quest id="quest_FuriousRamsayTier2_Defend" prob="0.8"/>
 		<quest id="quest_FuriousRamsayTier3_Defend" prob="0.7"/>
@@ -6282,11 +6841,6 @@
 	</append>
 
 	<append xpath="/quests/quest_list[@id='trader_quests_hugh']">
-		<quest id="quest_FuriousRamsayTier1_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier2_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier3_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier4_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier5_clearhold" prob="0.7"/>
 		<quest id="quest_FuriousRamsayTier1_Defend" prob="1"/>
 		<quest id="quest_FuriousRamsayTier2_Defend" prob="0.8"/>
 		<quest id="quest_FuriousRamsayTier3_Defend" prob="0.7"/>
@@ -6303,11 +6857,6 @@
 	</append>
 
 	<append xpath="/quests/quest_list[@id='trader_quests_jen']">
-		<quest id="quest_FuriousRamsayTier1_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier2_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier3_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier4_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier5_clearhold" prob="0.7"/>
 		<quest id="quest_FuriousRamsayTier1_Defend" prob="1"/>
 		<quest id="quest_FuriousRamsayTier2_Defend" prob="0.8"/>
 		<quest id="quest_FuriousRamsayTier3_Defend" prob="0.7"/>
@@ -6324,11 +6873,6 @@
 	</append>
 
 	<append xpath="/quests/quest_list[@id='trader_quests_caitlin']">
-		<quest id="quest_FuriousRamsayTier1_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier2_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier3_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier4_clearhold" prob="0.7"/>
-		<quest id="quest_FuriousRamsayTier5_clearhold" prob="0.7"/>
 		<quest id="quest_FuriousRamsayTier1_Defend" prob="1"/>
 		<quest id="quest_FuriousRamsayTier2_Defend" prob="0.8"/>
 		<quest id="quest_FuriousRamsayTier3_Defend" prob="0.7"/>
@@ -6352,22 +6896,37 @@
 			<quest id="quest_FuriousRamsayTier3_Decoys" prob="1"/>
 			<quest id="quest_FuriousRamsayTier4_Decoys" prob="1"/>
 			<quest id="quest_FuriousRamsayTier5_Decoys" prob="1"/>
-			<quest id="quest_FuriousRamsayTier1_Surprise" prob="0.85"/>
-			<quest id="quest_FuriousRamsayTier2_Surprise" prob="0.85"/>
-			<quest id="quest_FuriousRamsayTier3_Surprise" prob="0.85"/>
-			<quest id="quest_FuriousRamsayTier4_Surprise" prob="0.85"/>
-			<quest id="quest_FuriousRamsayTier5_Surprise" prob="0.85"/>
+			<quest id="quest_FuriousRamsayTier1_Surprise" prob="1"/>
+			<quest id="quest_FuriousRamsayTier2_Surprise" prob="1"/>
+			<quest id="quest_FuriousRamsayTier3_Surprise" prob="1"/>
+			<quest id="quest_FuriousRamsayTier4_Surprise" prob="1"/>
+			<quest id="quest_FuriousRamsayTier5_Surprise" prob="1"/>
 		</quest_list>
 
 		<quest_list id="trader_quests_farmerkatie">
+			<quest id="quest_FuriousRamsayTier1_Hazmats" prob="1"/>
+			<quest id="quest_FuriousRamsayTier2_Hazmats" prob="1"/>
+			<quest id="quest_FuriousRamsayTier3_Hazmats" prob="1"/>
+			<quest id="quest_FuriousRamsayTier4_Hazmats" prob="1"/>
+			<quest id="quest_FuriousRamsayTier5_Hazmats" prob="1"/>
+			<quest id="quest_FuriousRamsayTier1_Toxic" prob="1"/>
+			<quest id="quest_FuriousRamsayTier2_Toxic" prob="1"/>
+			<quest id="quest_FuriousRamsayTier3_Toxic" prob="1"/>
+			<quest id="quest_FuriousRamsayTier4_Toxic" prob="1"/>
+			<quest id="quest_FuriousRamsayTier5_Toxic" prob="1"/>
+		</quest_list>
+
+		<quest_list id="trader_quests_handymanluke">
+			<quest id="quest_FuriousRamsayTier1_clearhold" prob="1"/>
+			<quest id="quest_FuriousRamsayTier2_clearhold" prob="1"/>
+			<quest id="quest_FuriousRamsayTier3_clearhold" prob="1"/>
+			<quest id="quest_FuriousRamsayTier4_clearhold" prob="1"/>
+			<quest id="quest_FuriousRamsayTier5_clearhold" prob="1"/>
 			<quest id="challenge_FuriousRamsayHuntTier1" prob="1"/>
 			<quest id="challenge_FuriousRamsayHuntTier2" prob="1"/>
 			<quest id="challenge_FuriousRamsayHuntTier3" prob="1"/>
 			<quest id="challenge_FuriousRamsayHuntTier4" prob="1"/>
 			<quest id="challenge_FuriousRamsayHuntTier5" prob="1"/>
-		</quest_list>
-
-		<quest_list id="trader_quests_handymanluke">
 			<quest id="challenge_FuriousRamsayGhostsTier1" prob="1"/>
 			<quest id="challenge_FuriousRamsayGhostsTier2" prob="1"/>
 			<quest id="challenge_FuriousRamsayGhostsTier3" prob="1"/>
