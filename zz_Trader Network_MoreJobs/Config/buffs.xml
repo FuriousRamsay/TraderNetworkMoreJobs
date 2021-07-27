@@ -1,5 +1,53 @@
 <Config>
 
+		<append xpath="/buffs/buff[@name='buffIsOnFire']/effect_group[@name='run particles, cleanup']" >		
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_burning_barrel" parent_transform="Spine1" local_offset="0,-1.1,0">
+				<requirement name="EntityTagCompare" tags="UMA"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
+				<requirement name="EntityTagCompare" tags="UMA"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
+				<requirement name="EntityTagCompare" tags="UMA"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
+				<requirement name="EntityTagCompare" tags="UMA"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="RABBIT_ Pelvis/RABBIT_ Spine/RABBIT_ Spine1" local_offset="0,0,0">
+				<requirement name="EntityTagCompare" tags="rabbit"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="Hips/LowerBack/Spine" local_offset="0,0,0">
+				<requirement name="EntityTagCompare" tags="wolf,dog,deer"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="Hip/Spine1/Spine2" local_offset="0,0,0">
+				<requirement name="EntityTagCompare" tags="vulture"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="CHICKEN_ Pelvis/CHICKEN_ Spine" local_offset="0,0,0">
+				<requirement name="EntityTagCompare" tags="chicken"/>
+			</triggered_effect>
+
+		</append>
+		
+		<append xpath="/buffs/buff[@name='buffShocked']/effect_group" >		
+		
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="RABBIT_ Pelvis/RABBIT_ Spine/RABBIT_ Spine1" local_offset="0,0,0">
+				<requirement name="EntityTagCompare" tags="rabbit"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="CHICKEN_ Pelvis/CHICKEN_ Spine" local_offset="0,0,0">
+				<requirement name="EntityTagCompare" tags="chicken"/>
+			</triggered_effect>
+		
+		</append>
+		
 		<append xpath="/buffs" >		
 
 			<buff name="FuriousRamsayVisionGrayscale" showonhud="true" name_key="FuriousRamsayVisionGrayscale" description_key="FuriousRamsayVisionGrayscaleDesc" icon="ui_game_symbol_twitch_blur" icon_color="125,125,125">
@@ -650,11 +698,31 @@
 				</effect_group>
 			</buff>
 			
-			<buff name="FuriousRamsayFireZombieAoEDamage" name_key="buffIsOnFireName" description_key="buffIsOnFireDesc" tooltip_key="buffIsOnFireTooltip" icon="ui_game_symbol_fire" icon_color="255,0,0" icon_blink="true">
+			<buff name="FuriousRamsayFireZombieAoEDamageDisplay" name_key="buffIsOnFireName" description_key="buffIsOnFireDesc" tooltip_key="buffIsOnFireTooltip" icon="ui_game_symbol_fire" icon_color="255,0,0" icon_blink="true">
+				<stack_type value="replace"/>
+				<duration value="3"/>
+				<update_rate value="1"/>
+				<display_value value=".FuriousRamsayOnFireDurationDisplay"/>
+				<display_value_format value="time"/>
+
+				<effect_group>
+					<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="FuriousRamsayOnFire"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayOnFireDurationDisplay" operation="set" value="3"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FuriousRamsayOnFireDurationDisplay" operation="set" value="3"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayOnFireDurationDisplay" operation="add" value="-1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FuriousRamsayOnFireDurationDisplay" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="FuriousRamsayOnFire"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayFireZombieAoEDamage" hidden="true">
 				<damage_type value="heat"/>
 				<stack_type value="replace"/>
 				<duration value="3"/>
 				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayFireZombieAoEDamageDisplay">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-3">
 						<requirement name="EntityTagCompare" tags="player,robot"/>
 					</passive_effect>
@@ -709,11 +777,32 @@
 				</effect_group>
 			</buff>
 			
-			<buff name="FuriousRamsayShockZombieAoEDamage" description_key="buffShockedDesc" tooltip_key="buffShockedTooltip" icon="ui_game_symbol_electric_power" name_key="buffShockedName" icon_color="255,0,0">
+			<buff name="FuriousRamsayShockZombieAoEDamageDisplay" description_key="buffShockedDesc" tooltip_key="buffShockedTooltip" icon="ui_game_symbol_electric_power" name_key="buffShockedName" icon_color="255,0,0">
+				<stack_type value="replace"/>
+				<duration value="3"/>
+				<update_rate value="1"/>
+				<display_value value=".FuriousRamsayShockedDurationDisplay"/>
+				<display_value_format value="time"/>
+
+				<effect_group>
+					<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="FuriousRamsayShocked"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayShockedDurationDisplay" operation="set" value="3"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FuriousRamsayShockedDurationDisplay" operation="set" value="3"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayShockedDurationDisplay" operation="add" value="-1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FuriousRamsayShockedDurationDisplay" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="FuriousRamsayShocked"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayShockZombieAoEDamage" hidden="true">
 				<damage_type value="heat"/>
 				<stack_type value="replace"/>
 				<duration value="3"/>
 				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayShockZombieAoEDamageDisplay">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-3">
 						<requirement name="EntityTagCompare" tags="player,robot"/>
 					</passive_effect>
@@ -1727,6 +1816,14 @@
 						<requirement name="EntityTagCompare" tags="rabbit"/>
 					</triggered_effect>
 
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="Hips/LowerBack/Spine" local_offset="0,0,0">
+						<requirement name="EntityTagCompare" tags="wolf,dog,deer"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="Hip/Spine1/Spine2" local_offset="0,0,0">
+						<requirement name="EntityTagCompare" tags="vulture"/>
+					</triggered_effect>
+
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="CHICKEN_ Pelvis/CHICKEN_ Spine" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="chicken"/>
 					</triggered_effect>
@@ -1965,11 +2062,31 @@
 				</effect_group>
 			</buff>
 
+			<buff name="FuriousRamsayAddBurningEnemyDisplay" name_key="buffIsOnFireName" description_key="buffIsOnFireDesc" tooltip_key="buffIsOnFireTooltip" icon="ui_game_symbol_fire" icon_color="255,0,0" icon_blink="true">
+				<stack_type value="replace"/>
+				<duration value="5"/>
+				<update_rate value="1"/>
+				<display_value value=".FuriousRamsayOnFireDurationDisplay"/>
+				<display_value_format value="time"/>
+
+				<effect_group>
+					<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="FuriousRamsayOnFire"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayOnFireDurationDisplay" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FuriousRamsayOnFireDurationDisplay" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayOnFireDurationDisplay" operation="add" value="-1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FuriousRamsayOnFireDurationDisplay" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="FuriousRamsayOnFire"/>
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayAddBurningEnemyTier1" hidden="true" remove_on_death="true">
 				<damage_type value="heat"/>
 				<stack_type value="replace"/>
 				<duration value="5"/>
 				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddBurningEnemyDisplay">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-1">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</passive_effect>
@@ -2037,6 +2154,9 @@
 				<stack_type value="replace"/>
 				<duration value="5"/>
 				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddBurningEnemyDisplay">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-2">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</passive_effect>
@@ -2104,6 +2224,9 @@
 				<stack_type value="replace"/>
 				<duration value="5"/>
 				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddBurningEnemyDisplay">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-3">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</passive_effect>
@@ -2171,6 +2294,9 @@
 				<stack_type value="replace"/>
 				<duration value="5"/>
 				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddBurningEnemyDisplay">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-4">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</passive_effect>
@@ -2238,6 +2364,9 @@
 				<stack_type value="replace"/>
 				<duration value="5"/>
 				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddBurningEnemyDisplay">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-5">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</passive_effect>
@@ -2300,11 +2429,31 @@
 				</effect_group>
 			</buff>
 
+			<buff name="FuriousRamsayAddShockEnemyDisplay" description_key="buffShockedDesc" tooltip_key="buffShockedTooltip" icon="ui_game_symbol_electric_power" name_key="buffShockedName" icon_color="255,0,0">
+				<stack_type value="replace"/>
+				<duration value="3"/>
+				<update_rate value="1"/>
+				<display_value value=".FuriousRamsayShockedDurationDisplay"/>
+				<display_value_format value="time"/>
+
+				<effect_group>
+					<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="FuriousRamsayShocked"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayShockedDurationDisplay" operation="set" value="3"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FuriousRamsayShockedDurationDisplay" operation="set" value="3"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayShockedDurationDisplay" operation="add" value="-1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FuriousRamsayShockedDurationDisplay" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="FuriousRamsayShocked"/>
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayAddShockEnemy">
 				<damage_type value="electrical"/>
 				<stack_type value="replace"/>
 				<duration value="1"/>
 				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddShockEnemyDisplay">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-4">
 						<requirement name="EntityTagCompare" tags="player,robot"/>
 					</passive_effect>
@@ -2474,11 +2623,32 @@
 				</effect_group>
 			</buff>
 
+			<buff name="FuriousRamsayAddShockEnemyBossDisplay" description_key="buffShockedDesc" tooltip_key="buffShockedTooltip" icon="ui_game_symbol_electric_power" name_key="buffShockedName" icon_color="255,0,0">
+				<stack_type value="replace"/>
+				<duration value="4"/>
+				<update_rate value="1"/>
+				<display_value value=".FuriousRamsayShockedDurationDisplay"/>
+				<display_value_format value="time"/>
+
+				<effect_group>
+					<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="FuriousRamsayShocked"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayShockedDurationDisplay" operation="set" value="4"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FuriousRamsayShockedDurationDisplay" operation="set" value="4"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayShockedDurationDisplay" operation="add" value="-1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FuriousRamsayShockedDurationDisplay" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="FuriousRamsayShocked"/>
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayAddShockEnemyBoss">
 				<damage_type value="electrical"/>
 				<stack_type value="replace"/>
 				<duration value="4"/>
 				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddShockEnemyBossDisplay">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-3">
 						<requirement name="EntityTagCompare" tags="player,robot"/>
 					</passive_effect>
@@ -2549,11 +2719,31 @@
 				</effect_group>
 			</buff>
 
+			<buff name="FuriousRamsayAddBurningEnemyBossDisplay" name_key="buffIsOnFireName" description_key="buffIsOnFireDesc" tooltip_key="buffIsOnFireTooltip" icon="ui_game_symbol_fire" icon_color="255,0,0" icon_blink="true">
+				<stack_type value="replace"/>
+				<duration value="4"/>
+				<update_rate value="1"/>
+				<display_value value=".FuriousRamsayOnFireDurationDisplay"/>
+				<display_value_format value="time"/>
+
+				<effect_group>
+					<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="FuriousRamsayOnFire"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayOnFireDurationDisplay" operation="set" value="4"/>
+					<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar=".FuriousRamsayOnFireDurationDisplay" operation="set" value="4"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayOnFireDurationDisplay" operation="add" value="-1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FuriousRamsayOnFireDurationDisplay" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="FuriousRamsayOnFire"/>
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayAddBurningEnemyBoss" hidden="true" remove_on_death="true">
 				<damage_type value="heat"/>
 				<stack_type value="replace"/>
 				<duration value="4"/>
 				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddBurningEnemyBossDisplay">
+						<requirement name="EntityTagCompare" tags="player"/>
+					</triggered_effect>
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-3">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</passive_effect>
@@ -2764,6 +2954,14 @@
 						<requirement name="EntityTagCompare" tags="rabbit"/>
 					</triggered_effect>
 
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="Hips/LowerBack/Spine" local_offset="0,0,0">
+						<requirement name="EntityTagCompare" tags="wolf,dog,deer"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="Hip/Spine1/Spine2" local_offset="0,0,0">
+						<requirement name="EntityTagCompare" tags="vulture"/>
+					</triggered_effect>
+
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="CHICKEN_ Pelvis/CHICKEN_ Spine" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="chicken"/>
 					</triggered_effect>
@@ -2890,7 +3088,7 @@
 				<update_rate value=".1"/>
 				<effect_group>
 					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="VerifyFuriousRamsayBlackShieldShockMotorcycleShock">
-						<requirement name="EntityTagCompare" target="other" tags="zombie,enemy"/>
+						<requirement name="EntityTagCompare" target="other" tags="zombie,enemy,wolf,dog,deer,vulture,rabbit,chicken"/>
 						<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldShockMotorcycleShock"/>
 					</triggered_effect>
 				</effect_group>
@@ -2920,7 +3118,7 @@
 				<update_rate value=".1"/>
 				<effect_group>
 					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="VerifyFuriousRamsayBlackShieldFireMotorcycleFire">
-						<requirement name="EntityTagCompare" target="other" tags="zombie,enemy"/>
+						<requirement name="EntityTagCompare" target="other" tags="zombie,enemy,wolf,dog,deer,vulture,rabbit,chicken"/>
 						<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldFireMotorcycleFire"/>
 					</triggered_effect>
 				</effect_group>
