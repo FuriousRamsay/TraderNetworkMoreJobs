@@ -1,0 +1,81 @@
+<configs>
+
+	<append xpath="/entity_classes">		
+
+		<entity_class name="FuriousRamsayTrainerTier1Quest" extends="FuriousRamsayTrainer">
+			<property name="SizeScale" value="0.85"/>
+
+			<property name="TimeStayAfterDeath" value="15"/>
+			<property name="LootListAlive" value="804"/>
+
+			<!--<property name="ReplaceMaterial0" value="#Entities/Zombies?Zombies/Materials/spiderzombie_radiated.mat"/>-->
+
+	<property name="AITask-1" value=""/><property name="AITarget-1" value=""/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayStartTrainingEnd"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishHuntDecayTier1"/>
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="FuriousRamsayTrainerTier2Quest" extends="FuriousRamsayTrainer">
+			<property name="SizeScale" value="1"/>
+
+			<property name="TimeStayAfterDeath" value="15"/>
+			<property name="LootListAlive" value="805"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayStartTrainingEnd"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishHuntDecayTier2"/>
+				<passive_effect name="HealthMax" operation="base_set" value="800"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayTrainerTier3Quest" extends="FuriousRamsayTrainer">
+			<property name="SizeScale" value="1.2"/>
+
+			<property name="TimeStayAfterDeath" value="15"/>
+			<property name="LootListAlive" value="806"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayStartTrainingEnd"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishHuntDecayTier3"/>
+				<passive_effect name="HealthMax" operation="base_set" value="1200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayTrainerTier4Quest" extends="FuriousRamsayTrainer">
+			<property name="SizeScale" value="1.5"/>
+
+			<property name="TimeStayAfterDeath" value="15"/>
+			<property name="LootListAlive" value="807"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayStartTrainingEnd"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishHuntDecayTier4"/>
+				<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayTrainerTier5Quest" extends="FuriousRamsayTrainer">
+			<property name="SizeScale" value="2"/>
+
+			<property name="TimeStayAfterDeath" value="15"/>
+			<property name="LootListAlive" value="808"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayStartTrainingEnd"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishHuntDecayTier5"/>
+				<passive_effect name="HealthMax" operation="base_set" value="4000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+		</entity_class>
+
+	</append>
+
+</configs>

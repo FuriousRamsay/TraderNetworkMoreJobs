@@ -2,6 +2,15 @@
 
 		<append xpath="/buffs" >		
 
+			<buff name="FuriousRamsayStartTrainingEnd" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="3"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FuriousRamsayAlarm"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="This is your last wave." />
+				</effect_group>
+			</buff>
+
 			<buff hidden="true" name="buffFlamethrowerFire">
 				<stack_type value="ignore"/>
 				<duration value="0"/>

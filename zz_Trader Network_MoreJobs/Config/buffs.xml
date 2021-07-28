@@ -1506,9 +1506,41 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayVanishHuntDecay" hidden="true" remove_on_death="true">
+			<buff name="FuriousRamsayVanishHuntDecayTier1" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
-				<update_rate value="0.1"/>
+				<update_rate value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" target="self" stat="Health" operation="add" value="-1"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVanishHuntDecayTier2" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="0.8"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" target="self" stat="Health" operation="add" value="-1"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVanishHuntDecayTier3" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="0.6"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" target="self" stat="Health" operation="add" value="-1"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVanishHuntDecayTier4" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="0.4"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" target="self" stat="Health" operation="add" value="-1"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVanishHuntDecayTier5" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="0.2"/>
 				<effect_group>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" target="self" stat="Health" operation="add" value="-1"/>
 				</effect_group>
