@@ -96,6 +96,23 @@
 			<property name="EconomicValue" value="146"/>
 		</block>
 
+		<block name="FuriousRamsayMechanicalAllyBlockBreak">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="woodWeakNoUpgradeMaster"/>
+			<property name="Class" value="TrapDoor"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="Plate"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="86"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
+			<property name="TriggerDelay" value="0.01"/>
+			<property name="TriggerSound" value=""/>
+			<property name="Path" value="solid"/>
+			<drop event="Fall" count="0" prob="0"/>
+			<property name="ShowModelOnFall" value="false"/>
+		</block>
+
 		<block name="FuriousRamsayPetBlockBreak">
 			<property name="CreativeMode" value="None"/>
 			<property name="Extends" value="woodWeakNoUpgradeMaster"/>
@@ -461,6 +478,171 @@
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
 		</block>
 
+		<block name="FuriousRamsayMechanicalAllyPlate">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>			
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayMechanicalAllyBlockBreak"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>
+
+		<block name="FuriousRamsayMechanicalAllyDog">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoMannequinFemale"/>
+		
+			<property name="Shape" value="New"/>
+			<property name="Model" value="plate"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayMechanicalAllyPlate"/>
+			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayMechanicalAllyDogSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+
+		<block name="FuriousRamsayMechanicalAllyDogSpawner">
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="FuriousRamsayAllyDogTier1Spawn"/>			
+		</block>
+		
+		<block name="FuriousRamsayMechanicalAllyWolf">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoMannequinFemale"/>
+		
+			<property name="Shape" value="New"/>
+			<property name="Model" value="plate"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayMechanicalAllyPlate"/>
+			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayMechanicalAllyWolfSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+
+		<block name="FuriousRamsayMechanicalAllyWolfSpawner">
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="FuriousRamsayAllyWolfTier2Spawn"/>			
+		</block>
+
+		<block name="FuriousRamsayMechanicalAllyLion">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoMannequinFemale"/>
+		
+			<property name="Shape" value="New"/>
+			<property name="Model" value="plate"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayMechanicalAllyPlate"/>
+			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayMechanicalAllyLionSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+
+		<block name="FuriousRamsayMechanicalAllyLionSpawner">
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="FuriousRamsayAllyLionTier3Spawn"/>			
+		</block>
+
+		<block name="FuriousRamsayMechanicalAllyBear">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoMannequinFemale"/>
+		
+			<property name="Shape" value="New"/>
+			<property name="Model" value="plate"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayMechanicalAllyPlate"/>
+			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayMechanicalAllyBearSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+
+		<block name="FuriousRamsayMechanicalAllyBearSpawner">
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="FuriousRamsayAllyBearTier4Spawn"/>
+		</block>
+
+		<block name="FuriousRamsayMechanicalAllyAndroid">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoMannequinFemale"/>
+		
+			<property name="Shape" value="New"/>
+			<property name="Model" value="plate"/>
+			<property name="Material" value="Mmetal_weak"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayMechanicalAllyPlate"/>
+			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayMechanicalAllyAndroidSpawner" />
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.01"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>	
+
+		<block name="FuriousRamsayMechanicalAllyAndroidSpawner">
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
+			<property name="Extends" value="spawnTrader"/>
+			<property name="Shape" value="ModelEntity"/>			
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<drop event="Fall" count="0" prob="0"/>		
+			<property name="SpawnClass" value="FuriousRamsayAllyNPCTier5Spawn"/>
+		</block>
+
 		<block name="FuriousRamsayDogPet">
 			<property name="CreativeMode" value="None"/>
 			<property name="Extends" value="decoMannequinFemale"/>
@@ -480,7 +662,7 @@
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
 		</block>	
-		
+
 		<block name="FuriousRamsayDogPetSpawner">
 			<property name="CreativeMode" value="None"/>
 			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>

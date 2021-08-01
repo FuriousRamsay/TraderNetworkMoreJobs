@@ -3884,11 +3884,13 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 		
 		<entity_class name="FuriousRamsayAllyDogTier1Spawn" extends="FuriousRamsayAllyDogTier1">
+			<property name="HandItem" value="FuriousRamsayMeleeHandAllyDogTier1Spawn"/>
+
 			<effect_group name="Base Effects">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyTimer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishMechanicalAllySpawnTimer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddStaminaAllyTimer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayResistFire"/>
-				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
 				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
@@ -4033,11 +4035,13 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayAllyWolfTier2Spawn" extends="FuriousRamsayAllyWolfTier2">
+			<property name="HandItem" value="FuriousRamsayMeleeHandAllyWolfTier2"/>
+
 			<effect_group name="Base Effects">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyTimer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishMechanicalAllySpawnTimer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddHealthAllyWolfTier2Timer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayResistFire"/>
-				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
 				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
@@ -4195,11 +4199,13 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayAllyLionTier3Spawn" extends="FuriousRamsayAllyLionTier3">
+			<property name="HandItem" value="FuriousRamsayMeleeHandAllyLionTier3Spawn"/>
+
 			<effect_group name="Base Effects">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyTimer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishMechanicalAllySpawnTimer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddBurningAllyLionTier3Timer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayResistFire"/>
-				<passive_effect name="HealthMax" operation="base_set" value="600"/>
+				<passive_effect name="HealthMax" operation="base_set" value="750"/>
 				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
@@ -4344,8 +4350,10 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayAllyBearTier4Spawn" extends="FuriousRamsayAllyBearTier4">
+			<property name="HandItem" value="FuriousRamsayMeleeHandAllyBearTier4Spawn"/>
+
 			<effect_group name="Base Effects">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyTimer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishMechanicalAllySpawnTimer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayKnockdownAllyBearTier4Timer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayResistFire"/>
 				<passive_effect name="HealthMax" operation="base_set" value="900"/>
@@ -4486,11 +4494,13 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayAllyNPCTier5Spawn" extends="FuriousRamsayAllyNPCTier5">
+			<property name="HandItem" value="FuriousRamsayMeleeHandAllyBearTier4Spawn"/>
+
 			<effect_group name="Base Effects">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishAllyTimer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishMechanicalAllySpawnTimer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddShockAllyNPCTier5Timer"/>				
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayResistFire"/>
-				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="base_set" value="1250"/>
 				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>

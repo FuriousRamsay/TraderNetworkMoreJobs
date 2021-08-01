@@ -1937,6 +1937,128 @@
 			<property name="SellableToTrader" value="false"/>
 		</item>
 
+		<item name="FuriousRamsayMechanicalAllyMaster">
+			<property name="CreativeMode" value="None"/>
+			<property name="ItemTypeIcon" value="computer"/>
+			<property name="CustomIcon" value="cntChest01"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="255,255,255"/>
+			<property name="HoldType" value="73"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Weight" value="0"/>
+			<property name="CarryWeight" value="3"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicValue" value="1500"/>
+			<property name="Candrop" value="true"/>
+		</item>
+		
+		<item name="FuriousRamsayMechanicalAllyDogChest">
+			<property name="Extends" value="FuriousRamsayMechanicalAllyMaster"/>
+			<property name="CustomIcon" value="cntHardenedChestSecure"/>
+			<property name="CustomIconTint" value="217, 0, 255"/>
+			<property name="EconomicValue" value="100"/>
+			<property class="Action0">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayMechanicalAllyDog"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayMechanicalAllyDog"/>
+			</property>
+			<effect_group name="FuriousRamsayMechanicalAllyDogChest" tiered="false">
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your Dog... Stay Clear"/>
+			</effect_group>
+		</item>		
+
+		<item name="FuriousRamsayMechanicalAllyWolfChest">
+			<property name="Extends" value="FuriousRamsayMechanicalAllyMaster"/>
+			<property name="CustomIcon" value="cntHardenedChestSecure"/>
+			<property name="CustomIconTint" value="255, 66, 76"/>
+			<property name="EconomicValue" value="200"/>
+			<property name="CarryWeight" value="3.2"/>
+			<property class="Action0">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayMechanicalAllyWolf"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayMechanicalAllyWolf"/>
+			</property>
+			<effect_group name="FuriousRamsayMechanicalAllyWolfChest" tiered="false">
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your Wolf... Stay Clear"/>
+			</effect_group>
+		</item>		
+
+		<item name="FuriousRamsayMechanicalAllyLionChest">
+			<property name="Extends" value="FuriousRamsayMechanicalAllyMaster"/>
+			<property name="CustomIcon" value="cntHardenedChestSecure"/>
+			<property name="CustomIconTint" value="5, 247, 110"/>		
+			<property name="EconomicValue" value="250"/>
+			<property name="CarryWeight" value="3.5"/>
+			<property class="Action0">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayMechanicalAllyLion"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayMechanicalAllyLion"/>
+			</property>
+			<effect_group name="FuriousRamsayMechanicalAllyLionChest" tiered="false">
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your Lion... Stay Clear"/>
+			</effect_group>
+		</item>		
+
+		<item name="FuriousRamsayMechanicalAllyBearChest">
+			<property name="Extends" value="FuriousRamsayMechanicalAllyMaster"/>
+			<property name="CustomIcon" value="cntHardenedChestSecure"/>
+			<property name="CustomIconTint" value="0, 153, 255"/>		
+			<property name="EconomicValue" value="350"/>
+			<property name="CarryWeight" value="4.5"/>
+			<property class="Action0">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayMechanicalAllyBear"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayMechanicalAllyBear"/>
+			</property>
+			<effect_group name="FuriousRamsayMechanicalAllyBearChest" tiered="false">
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your Bear... Stay Clear"/>
+			</effect_group>
+		</item>		
+
+		<item name="FuriousRamsayMechanicalAllyAndroidChest">
+			<property name="Extends" value="FuriousRamsayMechanicalAllyMaster"/>
+			<property name="CustomIcon" value="cntHardenedChestSecure"/>
+			<property name="CustomIconTint" value="255, 255, 0"/>
+			<property name="EconomicValue" value="450"/>
+			<property name="CarryWeight" value="3"/>
+			<property class="Action0">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayMechanicalAllyAndroid"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayMechanicalAllyAndroid"/>
+			</property>
+			<effect_group name="FuriousRamsayMechanicalAllyAndroidChest" tiered="false">
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your Android... Stay Clear"/>
+			</effect_group>
+		</item>		
+
 		<item name="FuriousRamsayPetMaster">
 			<property name="CreativeMode" value="None"/>
 			<property name="Tags" value="pet"/>
@@ -1949,7 +2071,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="Weight" value="0"/>
-			<property name="CarryWeight" value="40"/>
+			<property name="CarryWeight" value="3"/>
 			<property name="Stacknumber" value="10"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="EconomicValue" value="1500"/>
@@ -1976,7 +2098,7 @@
 			<effect_group name="FuriousRamsayPetMechanicalDog" tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="CVarLogValue" cvar="$FuriousRamsayPetPlaced"/>
 				<triggered_effect trigger="onSelfPlaceBlock" action="AddBuff" buff="FuriousRamsayPetPlaced"/>
-				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Dog..."/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Dog... Stay Clear"/>
 			</effect_group>
 		</item>
 
@@ -1999,7 +2121,7 @@
 			<effect_group name="FuriousRamsayPetMechanicalWolf" tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="CVarLogValue" cvar="$FuriousRamsayPetPlaced"/>
 				<triggered_effect trigger="onSelfPlaceBlock" action="AddBuff" buff="FuriousRamsayPetPlaced"/>
-				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Wolf..."/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Wolf... Stay Clear"/>
 			</effect_group>
 		</item>
 
@@ -2023,7 +2145,7 @@
 			<effect_group name="FuriousRamsayPetMechanicalLion" tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="CVarLogValue" cvar="$FuriousRamsayPetPlaced"/>
 				<triggered_effect trigger="onSelfPlaceBlock" action="AddBuff" buff="FuriousRamsayPetPlaced"/>
-				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Lion..."/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Lion... Stay Clear"/>
 			</effect_group>
 		</item>
 
@@ -2047,7 +2169,7 @@
 			<effect_group name="FuriousRamsayPetMechanicalBear" tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="CVarLogValue" cvar="$FuriousRamsayPetPlaced"/>
 				<triggered_effect trigger="onSelfPlaceBlock" action="AddBuff" buff="FuriousRamsayPetPlaced"/>
-				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Bear..."/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Bear... Stay Clear"/>
 			</effect_group>
 		</item>
 
@@ -2071,7 +2193,7 @@
 			<effect_group name="FuriousRamsayPetMechanicalCoyote" tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="CVarLogValue" cvar="$FuriousRamsayPetPlaced"/>
 				<triggered_effect trigger="onSelfPlaceBlock" action="AddBuff" buff="FuriousRamsayPetPlaced"/>
-				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Coyote..."/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Coyote... Stay Clear"/>
 			</effect_group>
 		</item>
 
@@ -2095,7 +2217,7 @@
 			<effect_group name="FuriousRamsayPetMechanicalBoar" tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="CVarLogValue" cvar="$FuriousRamsayPetPlaced"/>
 				<triggered_effect trigger="onSelfPlaceBlock" action="AddBuff" buff="FuriousRamsayPetPlaced"/>
-				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Coyote..."/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Coyote... Stay Clear"/>
 			</effect_group>
 		</item>
 
@@ -2119,7 +2241,7 @@
 			<effect_group name="FuriousRamsayPetMechanicalRabbit" tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="CVarLogValue" cvar="$FuriousRamsayPetPlaced"/>
 				<triggered_effect trigger="onSelfPlaceBlock" action="AddBuff" buff="FuriousRamsayPetPlaced"/>
-				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Coyote..."/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Rabbit... Stay Clear"/>
 			</effect_group>
 		</item>
 
@@ -2143,7 +2265,7 @@
 			<effect_group name="FuriousRamsayPetMechanicalChicken" tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionStart" action="CVarLogValue" cvar="$FuriousRamsayPetPlaced"/>
 				<triggered_effect trigger="onSelfPlaceBlock" action="AddBuff" buff="FuriousRamsayPetPlaced"/>
-				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Coyote..."/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your pet Chicken... Stay Clear"/>
 			</effect_group>
 		</item>
 
@@ -2180,7 +2302,7 @@
 				<requirement name="CVarCompare" cvar="$FuriousRamsayDecoyPlaced" operation="GTE" value="1"/>
 			</property>
 			<effect_group name="FuriousRamsayBlackShieldDecoy" tiered="false">
-				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble the Decoy..."/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble the Decoy... Stay Clear"/>
 			</effect_group>
 		</item>
 
@@ -2199,7 +2321,7 @@
 				<requirement name="CVarCompare" cvar="$FuriousRamsayDecoyPlaced" operation="GTE" value="1"/>
 			</property>
 			<effect_group name="FuriousRamsayBlackShieldDecoy" tiered="false">
-				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble the Decoy..."/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble the Decoy... Stay Clear"/>
 			</effect_group>
 		</item>
 
@@ -2218,7 +2340,7 @@
 				<requirement name="CVarCompare" cvar="$FuriousRamsayDecoyPlaced" operation="GTE" value="1"/>
 			</property>
 			<effect_group name="FuriousRamsayBlackShieldDecoy" tiered="false">
-				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble the Decoy..."/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble the Decoy... Stay Clear"/>
 			</effect_group>
 		</item>
 
@@ -2237,7 +2359,7 @@
 				<requirement name="CVarCompare" cvar="$FuriousRamsayDecoyPlaced" operation="GTE" value="1"/>
 			</property>
 			<effect_group name="FuriousRamsayBlackShieldDecoy" tiered="false">
-				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble the Decoy..."/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble the Decoy... Stay Clear"/>
 			</effect_group>
 		</item>
 
@@ -2256,7 +2378,7 @@
 				<requirement name="CVarCompare" cvar="$FuriousRamsayDecoyPlaced" operation="GTE" value="1"/>
 			</property>
 			<effect_group name="FuriousRamsayBlackShieldDecoy" tiered="false">
-				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble the Decoy..."/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble the Decoy... Stay Clear"/>
 			</effect_group>
 		</item>
 
@@ -3294,6 +3416,8 @@
 		<item name="FuriousRamsaySpawnAllyDogTier1">
 			<property name="Tags" value="robot"/>
 			<property name="CustomIcon" value="cntHardenedChestSecure"/>
+			<property name="CustomIconTint" value="217, 0, 255"/>
+			<property name="ItemTypeIcon" value="computer"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="DisplayType" value="meleeTurret"/>
 			<property name="HoldType" value="73"/>
@@ -3301,11 +3425,13 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="Weight" value="0"/>
-			<property name="CarryWeight" value="30"/>
-			<property name="Stacknumber" value="1"/>
+			<property name="CarryWeight" value="3"/>
+			<property name="Stacknumber" value="25"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="EconomicValue" value="250"/>
 			<property name="Candrop" value="true"/>
+			<effect_group tiered="false">
+			</effect_group>
 			<property class="Action0">
 				<property name="Class" value="SpawnTurret"/>
 				<property name="Turret" value="FuriousRamsayAllyDogTier1Spawn"/>
@@ -3313,17 +3439,18 @@
 				<property name="Sound_start" value="password_set"/>
 			</property>
 			<effect_group name="FuriousRamsaySpawnAllyDogTier1">
-				<passive_effect name="EntityDamage" operation="base_set" value="9"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="15"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="40"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="80"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="40"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="200"/>
 			</effect_group>
-			<property name="CustomIconTint" value="217, 0, 255"/>
 		</item>
 
 		<item name="FuriousRamsaySpawnAllyWolfTier2">
 			<property name="Tags" value="robot"/>
 			<property name="CustomIcon" value="cntHardenedChestSecure"/>
+			<property name="CustomIconTint" value="255, 66, 76"/>
+			<property name="ItemTypeIcon" value="computer"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="DisplayType" value="meleeTurret"/>
 			<property name="HoldType" value="73"/>
@@ -3331,11 +3458,13 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="Weight" value="0"/>
-			<property name="CarryWeight" value="40"/>
-			<property name="Stacknumber" value="1"/>
+			<property name="CarryWeight" value="3.2"/>
+			<property name="Stacknumber" value="25"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="EconomicValue" value="500"/>
 			<property name="Candrop" value="true"/>
+			<effect_group tiered="false">
+			</effect_group>
 			<property class="Action0">
 				<property name="Class" value="SpawnTurret"/>
 				<property name="Turret" value="FuriousRamsayAllyWolfTier2Spawn"/>
@@ -3343,17 +3472,18 @@
 				<property name="Sound_start" value="password_set"/>
 			</property>
 			<effect_group name="FuriousRamsaySpawnAllyWolfTier2">
-				<passive_effect name="EntityDamage" operation="base_set" value="14"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="30"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="50"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="100"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="46"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="300"/>
 			</effect_group>
-			<property name="CustomIconTint" value="255, 66, 76"/>
 		</item>
 
 		<item name="FuriousRamsaySpawnAllyLionTier3">
 			<property name="Tags" value="robot"/>
 			<property name="CustomIcon" value="cntHardenedChestSecure"/>
+			<property name="CustomIconTint" value="5, 247, 110"/>		
+			<property name="ItemTypeIcon" value="computer"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="DisplayType" value="meleeTurret"/>
 			<property name="HoldType" value="73"/>
@@ -3361,11 +3491,13 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="Weight" value="0"/>
-			<property name="CarryWeight" value="50"/>
-			<property name="Stacknumber" value="1"/>
+			<property name="CarryWeight" value="3.5"/>
+			<property name="Stacknumber" value="25"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="EconomicValue" value="1000"/>
+			<property name="EconomicValue" value="625"/>
 			<property name="Candrop" value="true"/>
+			<effect_group tiered="false">
+			</effect_group>
 			<property class="Action0">
 				<property name="Class" value="SpawnTurret"/>
 				<property name="Turret" value="FuriousRamsayAllyLionTier3Spawn"/>
@@ -3373,17 +3505,18 @@
 				<property name="Sound_start" value="password_set"/>
 			</property>
 			<effect_group name="FuriousRamsaySpawnAllyLionTier3">
-				<passive_effect name="EntityDamage" operation="base_set" value="25"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="45"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="75"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="150"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="54"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="600"/>
 			</effect_group>
-			<property name="CustomIconTint" value="5, 247, 110"/>		
 		</item>
 
 		<item name="FuriousRamsaySpawnAllyBearTier4">
 			<property name="Tags" value="robot"/>
 			<property name="CustomIcon" value="cntHardenedChestSecure"/>
+			<property name="CustomIconTint" value="0, 153, 255"/>		
+			<property name="ItemTypeIcon" value="computer"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="DisplayType" value="meleeTurret"/>
 			<property name="HoldType" value="73"/>
@@ -3391,11 +3524,13 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="Weight" value="0"/>
-			<property name="CarryWeight" value="80"/>
-			<property name="Stacknumber" value="1"/>
+			<property name="CarryWeight" value="4.5"/>
+			<property name="Stacknumber" value="25"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="EconomicValue" value="1250"/>
 			<property name="Candrop" value="true"/>
+			<effect_group tiered="false">
+			</effect_group>
 			<property class="Action0">
 				<property name="Class" value="SpawnTurret"/>
 				<property name="Turret" value="FuriousRamsayAllyBearTier4Spawn"/>
@@ -3403,17 +3538,18 @@
 				<property name="Sound_start" value="password_set"/>
 			</property>
 			<effect_group name="FuriousRamsaySpawnAllyBearTier4">
-				<passive_effect name="EntityDamage" operation="base_set" value="40"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="60"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="100"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="200"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="66"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="900"/>
 			</effect_group>
-			<property name="CustomIconTint" value="0, 153, 255"/>		
 		</item>
 
 		<item name="FuriousRamsaySpawnAllyNPCTier5">
 			<property name="Tags" value="robot"/>
 			<property name="CustomIcon" value="cntHardenedChestSecure"/>
+			<property name="CustomIconTint" value="255, 255, 0"/>
+			<property name="ItemTypeIcon" value="computer"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="DisplayType" value="meleeTurret"/>
 			<property name="HoldType" value="73"/>
@@ -3421,11 +3557,13 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mmetal"/>
 			<property name="Weight" value="0"/>
-			<property name="CarryWeight" value="40"/>
-			<property name="Stacknumber" value="1"/>
+			<property name="CarryWeight" value="3"/>
+			<property name="Stacknumber" value="25"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="EconomicValue" value="1500"/>
+			<property name="EconomicValue" value="1875"/>
 			<property name="Candrop" value="true"/>
+			<effect_group tiered="false">
+			</effect_group>
 			<property class="Action0">
 				<property name="Class" value="SpawnTurret"/>
 				<property name="Turret" value="FuriousRamsayAllyNPCTier5Spawn"/>
@@ -3433,12 +3571,11 @@
 				<property name="Sound_start" value="password_set"/>
 			</property>
 			<effect_group name="FuriousRamsaySpawnAllyNPCTier5">
-				<passive_effect name="EntityDamage" operation="base_set" value="65"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="75"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="125"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="250"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="85"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="1000"/>
 			</effect_group>
-			<property name="CustomIconTint" value="255, 255, 0"/>
 		</item>
 
 		<item name="qc_FuriousRamsayTier1_clearhold">
@@ -3814,6 +3951,73 @@
 				<property name="DamageBlock" value="75"/>
 			</property>
 		</item>
+		
+		<item name="FuriousRamsayMeleeHandAllyDogTier1Spawn">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="1.5"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="40"/>
+				<property name="DamageBlock" value="80"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandAllyWolfTier2Spawn">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="1.3"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="50"/>
+				<property name="DamageBlock" value="100"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandAllyLionTier3Spawn">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="1.1"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="75"/>
+				<property name="DamageBlock" value="150"/>
+			</property>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="SpreadDegreesVertical" operation="perc_subtract" value=".8"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="perc_subtract" value=".8"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="selfAOE" range="3" duration="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandAllyBearTier4Spawn">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.9"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="100"/>
+				<property name="DamageBlock" value="200"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandAllyNPCTier5Spawn">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.7"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="125"/>
+				<property name="DamageBlock" value="250"/>
+			</property>
+		</item>
+		
 
 		<item name="FuriousRamsayMeleeHandAllyQuest">
 			<property name="Extends" value="meleeHandMaster"/>
@@ -3835,7 +4039,7 @@
 			<property name="Weight" value="0"/>
 			<property name="CarryWeight" value="3"/>
 			<property name="Candrop" value="true"/>
-			<property name="EconomicValue" value="250"/>
+			<property name="EconomicValue" value="100"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
@@ -3853,7 +4057,7 @@
 			<property name="Weight" value="0"/>
 			<property name="CarryWeight" value="3"/>
 			<property name="Candrop" value="true"/>
-			<property name="EconomicValue" value="500"/>
+			<property name="EconomicValue" value="200"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
@@ -3871,7 +4075,7 @@
 			<property name="Weight" value="0"/>
 			<property name="CarryWeight" value="3"/>
 			<property name="Candrop" value="true"/>
-			<property name="EconomicValue" value="1000"/>
+			<property name="EconomicValue" value="250"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
@@ -3890,7 +4094,7 @@
 			<property name="CarryWeight" value="3"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="EconomicValue" value="1250"/>
+			<property name="EconomicValue" value="500"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="challenge_FuriousRamsaySpawnAllyBearTier4"/>
@@ -3907,7 +4111,7 @@
 			<property name="Weight" value="0"/>
 			<property name="CarryWeight" value="3"/>
 			<property name="Candrop" value="true"/>
-			<property name="EconomicValue" value="1500"/>
+			<property name="EconomicValue" value="750"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>

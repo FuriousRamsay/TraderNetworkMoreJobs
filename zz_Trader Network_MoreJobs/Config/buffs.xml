@@ -1650,6 +1650,14 @@
 				</effect_group>
 			</buff>
 
+			<buff name="FuriousRamsayVanishMechanicalAllySpawnTimer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="600"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayVanishAllyTimer" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<duration value="180"/>
