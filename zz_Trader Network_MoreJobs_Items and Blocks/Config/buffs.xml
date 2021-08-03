@@ -2,15 +2,6 @@
 
 		<append xpath="/buffs" >		
 
-			<buff name="FuriousRamsayStartTrainingEnd" hidden="true" remove_on_death="true">
-				<stack_type value="ignore"/>
-				<duration value="3"/>
-				<effect_group>
-					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FuriousRamsayAlarm"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="This is your last wave." />
-				</effect_group>
-			</buff>
-
 			<buff hidden="true" name="buffFlamethrowerFire">
 				<stack_type value="ignore"/>
 				<duration value="0"/>
@@ -80,23 +71,28 @@
 				<update_rate value="1.5"/>
 				<effect_group>
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-5">
-						<requirement name="!EntityTagCompare" tags="metal,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,robot,trader,fireresist"/>
 					</passive_effect>
 
 					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="FuriousRamsayFireZombieAoEDamage">
-						<requirement name="!EntityTagCompare" tags="metal,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="molotov_explosion">
-						<requirement name="!EntityTagCompare" tags="metal,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,robot,trader,fireresist"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayFireChainedAoEDamageTimer">
+						<requirement name="!EntityTagCompare" tags="player,metal,firesist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="!EntityTagCompare" tags="metal,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="metal,robot,trader,mutantsmallanimal,fireresist"/>
 					</triggered_effect>
 												
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_burning_barrel" parent_transform="Spine1" local_offset="0,-1.1,0">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
@@ -105,66 +101,77 @@
 					
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="RABBIT_ Pelvis/RABBIT_ Spine/RABBIT_ Spine1" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="rabbit"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="Hips/LowerBack/Spine" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="wolf,dog,deer"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="Hip/Spine1/Spine2" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="vulture"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="CHICKEN_ Pelvis/CHICKEN_ Spine" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="chicken"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire">
 						<requirement name="!EntityTagCompare" tags="metal,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_onFire">
 						<requirement name="!EntityTagCompare" tags="metal,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_onFire">
 						<requirement name="!EntityTagCompare" tags="metal,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_onFire">
 						<requirement name="!EntityTagCompare" tags="metal,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfEnteredGame" action="PlaySound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="FadeOutSound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,robot,trader,fireresist"/>
 					</triggered_effect>
 
 				</effect_group>
@@ -186,83 +193,85 @@
 				<update_rate value="1.5"/>
 				<effect_group>
 					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="FuriousRamsayShockZombieAoEDamage">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-3">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<passive_effect name="RunSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<passive_effect name="JumpStrength" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal,shockresist"/>
 					</triggered_effect>
 					
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="RABBIT_ Pelvis/RABBIT_ Spine/RABBIT_ Spine1" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="rabbit"/>
+						<requirement name="!EntityTagCompare" tags="shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="CHICKEN_ Pelvis/CHICKEN_ Spine" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="chicken"/>
+						<requirement name="!EntityTagCompare" tags="shockresist"/>
 					</triggered_effect>
 			
 					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="ETrapHit" operation="set" value="0">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfEnteredGame" action="PlaySound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="FadeOutSound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 				</effect_group>
 			</buff>
@@ -290,12 +299,16 @@
 				<update_rate value="1.5"/>
 				<effect_group>
 					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="FuriousRamsayFireZombieAoEDamage">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-10">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</passive_effect>
+
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayFireChainedAoEDamageTimer">
+						<requirement name="!EntityTagCompare" tags="player,metal,firesist"/>
+					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
 						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,mutantsmallanimal"/>
@@ -303,22 +316,27 @@
 									
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_burning_barrel" parent_transform="Spine1" local_offset="0,-1.1,0">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="RABBIT_ Pelvis/RABBIT_ Spine/RABBIT_ Spine1" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="rabbit"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="Hips/LowerBack/Spine" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="wolf,dog,deer"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="Hip/Spine1/Spine2" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="vulture"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="CHICKEN_ Pelvis/CHICKEN_ Spine" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="chicken"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="molotov_explosion">
@@ -326,55 +344,58 @@
 					</triggered_effect>
 									
 					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,mutantsmallanimal,fireresist"/>
 					</triggered_effect>
 					
 					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfEnteredGame" action="PlaySound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="FadeOutSound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 				</effect_group>
@@ -432,92 +453,173 @@
 				<update_rate value="1.5"/>
 				<effect_group>
 					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="FuriousRamsayFireZombieAoEDamage">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,firesist"/>
 					</triggered_effect>
 
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-10">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,firesist"/>
 					</passive_effect>
 
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayFireChainedAoEDamageTimer">
+						<requirement name="!EntityTagCompare" tags="player,metal,firesist"/>
+					</triggered_effect>
+
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,mutantsmallanimal,firesist"/>
 					</triggered_effect>
 									
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_burning_barrel" parent_transform="Spine1" local_offset="0,-1.1,0">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="RABBIT_ Pelvis/RABBIT_ Spine/RABBIT_ Spine1" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="rabbit"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="Hips/LowerBack/Spine" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="wolf,dog,deer"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="Hip/Spine1/Spine2" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="vulture"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="CHICKEN_ Pelvis/CHICKEN_ Spine" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="chicken"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="molotov_explosion">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,firesist"/>
 					</triggered_effect>
 									
 					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,mutantsmallanimal,firesist"/>
 					</triggered_effect>
 					
 					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,firesist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,firesist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,firesist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,firesist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,firesist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfEnteredGame" action="PlaySound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,firesist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,firesist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="FadeOutSound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,firesist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,firesist"/>
 					</triggered_effect>
+
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayAddToxicDamage" hidden="true" remove_on_death="true">
+				<damage_type value="heat"/>
+				<stack_type value="replace"/>
+				<duration value="6"/>
+				<update_rate value="1.5"/>
+				<effect_group>
+					<!--<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="FuriousRamsayToxicZombieAoEDamage">
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
+					</triggered_effect>-->
+
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-5">
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,toxicresist"/>
+					</passive_effect>
+
+					<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayToxicChainedAoEDamageTimer">
+						<requirement name="!EntityTagCompare" tags="player,metal,firesist"/>
+					</triggered_effect>-->
+
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="RadiatedParticlesOnMesh" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,mutantsmallanimal,toxicresist,UMA,rabbit,wolf,dog,deer,vulture,chicken"/>
+					</triggered_effect>
+					
+					<!--<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="molotov_explosion">
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,toxicresist"/>
+					</triggered_effect>-->
+									
+					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="RadiatedParticlesOnMesh" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,mutantsmallanimal,toxicresist"/>
+					</triggered_effect>
+					
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="RadiatedParticlesOnMesh">
+						<requirement name="!EntityTagCompare" tags="toxicresist,toxic"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="RadiatedParticlesOnMesh">
+						<requirement name="!EntityTagCompare" tags="toxicresist,toxic"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="RadiatedParticlesOnMesh">
+						<requirement name="!EntityTagCompare" tags="toxicresist,toxic"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="RadiatedParticlesOnMesh">
+						<requirement name="!EntityTagCompare" tags="toxicresist,toxic"/>
+					</triggered_effect>
+
+					<!--<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FireMediumLoop">
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,toxicresist"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfEnteredGame" action="PlaySound" sound="FireMediumLoop">
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,toxicresist"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="FireMediumLoop">
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,toxicresist"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="FadeOutSound" sound="FireMediumLoop">
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,toxicresist"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="FireMediumLoop">
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,toxicresist"/>
+					</triggered_effect>-->
 
 				</effect_group>
 			</buff>
@@ -529,91 +631,103 @@
 				<update_rate value="1.5"/>
 				<effect_group>
 					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="FuriousRamsayFireZombieAoEDamage">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-10">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</passive_effect>
 
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayFireChainedAoEDamageTimer">
+						<requirement name="!EntityTagCompare" tags="player,metal,firesist"/>
+					</triggered_effect>
+
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,mutantsmallanimal,fireresist"/>
 					</triggered_effect>
 									
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_burning_barrel" parent_transform="Spine1" local_offset="0,-1.1,0">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="RABBIT_ Pelvis/RABBIT_ Spine/RABBIT_ Spine1" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="rabbit"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="Hips/LowerBack/Spine" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="wolf,dog,deer"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="Hip/Spine1/Spine2" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="vulture"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="CHICKEN_ Pelvis/CHICKEN_ Spine" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="chicken"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="molotov_explosion">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 									
 					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,mutantsmallanimal,fireresist"/>
 					</triggered_effect>
 					
 					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfEnteredGame" action="PlaySound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="FadeOutSound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 				</effect_group>
@@ -626,91 +740,103 @@
 				<update_rate value="1.5"/>
 				<effect_group>
 					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="FuriousRamsayFireZombieAoEDamage">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-10">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</passive_effect>
 
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayFireChainedAoEDamageTimer">
+						<requirement name="!EntityTagCompare" tags="player,metal,firesist"/>
+					</triggered_effect>
+
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,mutantsmallanimal,fireresist"/>
 					</triggered_effect>
 									
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_burning_barrel" parent_transform="Spine1" local_offset="0,-1.1,0">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="RABBIT_ Pelvis/RABBIT_ Spine/RABBIT_ Spine1" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="rabbit"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="Hips/LowerBack/Spine" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="wolf,dog,deer"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="Hip/Spine1/Spine2" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="vulture"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" parent_transform="CHICKEN_ Pelvis/CHICKEN_ Spine" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="chicken"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="molotov_explosion">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 									
 					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,mutantsmallanimal,fireresist"/>
 					</triggered_effect>
 					
 					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="UMA,player"/>
+						<requirement name="!EntityTagCompare" tags="fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfEnteredGame" action="PlaySound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="FadeOutSound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="FireMediumLoop">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,trader,fireresist"/>
 					</triggered_effect>
 
 				</effect_group>
@@ -722,79 +848,81 @@
 				<duration value="1"/>
 				<effect_group>
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-10">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal,shockresist"/>
 					</passive_effect>
 					
 					<passive_effect name="RunSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<passive_effect name="JumpStrength" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal,shockresist"/>
 					</triggered_effect>
 					
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="RABBIT_ Pelvis/RABBIT_ Spine/RABBIT_ Spine1" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="rabbit"/>
+						<requirement name="!EntityTagCompare" tags="shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="CHICKEN_ Pelvis/CHICKEN_ Spine" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="chicken"/>
+						<requirement name="!EntityTagCompare" tags="shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="ETrapHit" operation="set" value="0">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfEnteredGame" action="PlaySound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="FadeOutSound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 				</effect_group>
 			</buff>
@@ -805,79 +933,81 @@
 				<duration value="4"/>
 				<effect_group>
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-5">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<passive_effect name="RunSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<passive_effect name="JumpStrength" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 					
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="RABBIT_ Pelvis/RABBIT_ Spine/RABBIT_ Spine1" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="rabbit"/>
+						<requirement name="!EntityTagCompare" tags="shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="CHICKEN_ Pelvis/CHICKEN_ Spine" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="chicken"/>
+						<requirement name="!EntityTagCompare" tags="shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="ETrapHit" operation="set" value="0">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfEnteredGame" action="PlaySound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="FadeOutSound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 				</effect_group>
 			</buff>
@@ -889,83 +1019,85 @@
 				<update_rate value="1.5"/>
 				<effect_group>
 					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="FuriousRamsayShockZombieAoEDamage">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-10">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<passive_effect name="RunSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<passive_effect name="JumpStrength" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</passive_effect>
 					
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal,shockresist"/>
 					</triggered_effect>
 					
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="RABBIT_ Pelvis/RABBIT_ Spine/RABBIT_ Spine1" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="rabbit"/>
+						<requirement name="!EntityTagCompare" tags="shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="CHICKEN_ Pelvis/CHICKEN_ Spine" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="chicken"/>
+						<requirement name="!EntityTagCompare" tags="shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="ETrapHit" operation="set" value="0">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfEnteredGame" action="PlaySound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="FadeOutSound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="electric_fence_impact">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,trader,shockresist"/>
 					</triggered_effect>
 				</effect_group>
 			</buff>

@@ -1,0 +1,83 @@
+<Config>
+
+	<remove xpath="/quests/quest_list/quest[@id='tier2_nexttrader']" />
+	<remove xpath="/quests/quest_list/quest[@id='tier3_nexttrader']" />
+
+	<insertAfter xpath="/quests/quest[@id='tier2_buried_supplies']">
+
+	<quest id="tier2_nexttrader">
+		<property name="group_name_key" value="quest_next_trader"/>
+		<property name="name_key" value="quest_next_trader"/>
+		<property name="subtitle_key" value="quest_next_trader_subtitle"/>
+		<property name="description_key" value="quest_next_trader_description"/>
+		<property name="icon" value="ui_game_symbol_map_trader"/>
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="shareable" value="false"/>
+		<property name="repeatable" value="false"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="2"/>
+
+		<property name="unique_key" value="traderquest" />
+
+		<property name="offer_key" value="quest_next_trader_offer"/>
+		<property name="statement_key" value="quest_next_trader_statement"/>
+		<property name="response_key" value="quest_next_trader_response"/>
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_next_trader_completion"/>
+
+		<property name="return_to_quest_giver" value="false" />
+
+		<property name="quest_type" value="special" />
+
+		<!-- <action type="ShowTip" value="quest_WhiteRiverCitizen1_description"> -->
+			<!-- <property name="delay" value="3"/> -->
+		<!-- </action> -->
+		<objective type="Goto" id="trader" value="5" phase="1">
+			<property name="nav_object" value="go_to_trader" />
+			<property name="biome_filter_type" value="ExcludeBiome" />
+			<property name="biome_filter" value="wasteland" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="Exp" value="500"/>
+		</quest>
+
+	</insertAfter>
+
+	<append xpath="/quests/quest_list[@id='trader_quests']">
+		<quest id="quest_FuriousRamsayTier1_Defend" prob="1"/>
+		<quest id="quest_FuriousRamsayTier2_Defend" prob="0.8"/>
+	</append>
+
+	<append xpath="/quests/quest_list[@id='trader_quests_joel']">
+	</append>
+
+	<append xpath="/quests/quest_list[@id='trader_quests_rekt']">
+	</append>
+
+	<append xpath="/quests/quest_list[@id='trader_quests_bob']">
+	</append>
+
+	<append xpath="/quests/quest_list[@id='trader_quests_hugh']">
+	</append>
+
+	<append xpath="/quests/quest_list[@id='trader_quests_jen']">
+	</append>
+
+	<append xpath="/quests/quest_list[@id='trader_quests_caitlin']">
+	</append>
+
+	<append xpath="/quests/quest_list[@id='trader_quests_caitlin']">
+	</append>
+
+	<append xpath="/quests/quest_list[@id='trader_quests_farmerkatie']">
+	</append>
+
+</Config>
