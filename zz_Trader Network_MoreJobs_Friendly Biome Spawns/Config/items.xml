@@ -1,0 +1,129 @@
+<Config>
+
+	<append xpath="/items">
+
+		<item name="FuriousRamsayMeleeHandSurvivorBiome">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="12"/> 
+			<property class="Action0">
+				<property name="Delay" value="0.7"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="25"/>
+				<property name="DamageBlock" value="50"/>
+				<property name="Sphere" value="1.2"/>
+				<property name="Block_range" value="2.5"/>
+			</property>
+		</item>	
+
+		<item name="FuriousRamsayMeleeHandSoldierJackBiome">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="12"/> 
+			<property class="Action0">
+				<property name="Delay" value="0.7"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="50"/>
+				<property name="DamageBlock" value="100"/>
+				<property name="Sphere" value="1.2"/>
+				<property name="Block_range" value="2.5"/>
+			</property>
+		</item>	
+
+		<item name="FuriousRamsayMeleeHandSoldierDanteBiome">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="12"/> 
+			<property class="Action0">
+				<property name="Delay" value="0.7"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="50"/>
+				<property name="DamageBlock" value="100"/>
+				<property name="Sphere" value="1.2"/>
+				<property name="Block_range" value="2.5"/>
+			</property>
+		</item>	
+
+		<item name="FuriousRamsayMeleeHandSoldierLeeBiome">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="12"/> 
+			<property name="HoldType" value="12"/> 
+			<property class="Action0">
+				<property name="Delay" value="0.7"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="50"/>
+				<property name="DamageBlock" value="100"/>
+				<property name="Sphere" value="1.2"/>
+				<property name="Block_range" value="2.5"/>
+			</property>
+		</item>	
+
+		<item name="FuriousRamsayMeleeHandAllyDogTier1Biome">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.7"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="50"/>
+				<property name="DamageBlock" value="100"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandAllyWolfTier2Biome">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.7"/>
+				<property name="Range" value="2.2"/>
+				<property name="DamageEntity" value="75"/>
+				<property name="DamageBlock" value="150"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandAllyLionTier3Biome">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.7"/>
+				<property name="Range" value="2.5"/>
+				<property name="DamageEntity" value="100"/>
+				<property name="DamageBlock" value="200"/>
+			</property>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="SpreadDegreesVertical" operation="perc_subtract" value=".8"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="perc_subtract" value=".8"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="selfAOE" range="3" duration="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandAllyBearTier4Biome">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.7"/>
+				<property name="Range" value="3"/>
+				<property name="DamageEntity" value="125"/>
+				<property name="DamageBlock" value="250"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandAllyNPCTier5Biome">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="55"/>
+			<property class="Action0">
+				<property name="Delay" value="0.7"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="150"/>
+				<property name="DamageBlock" value="300"/>
+			</property>
+		</item>
+
+	</append>
+</Config>
