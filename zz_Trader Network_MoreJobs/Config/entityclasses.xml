@@ -7052,7 +7052,7 @@ FuriousRamsayVultureToxicRadiated
             <property name="Archetype" value="FuriousRamsayRoxy" />
         </entity_class>
 
-		<entity_class name="FuriousRamsayTraderUMATemplate">
+		<entity_class name="FuriousRamsayTraderUMATemplate" extends="npcTraderTemplate">
 			<property name="Tags" value="entity,npc,human,trader"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="EntityType" value="Player"/>
@@ -17527,11 +17527,12 @@ FuriousRamsayBlackDecoyZombieYo
 			<property name="SoundAttack" value="Enemies/Base_Zombie_Male/zombiemaleattack"/>
 			<property name="SoundSleeperSense" value="sleepersense"/>
 			<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>		
-			<property name="JumpMaxDistance" value="2.8, 3.9"/>
+			<property name="JumpMaxDistance" value="4, 10"/>
 
 			<property name="AITask-1" value="BreakBlock"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value=""/>
+			<property name="AITask-2" value="Leap"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
+			<property name="AITask-4" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntitySurvivor,25,25"/>
 			<property name="AITarget-3" value=""/>
