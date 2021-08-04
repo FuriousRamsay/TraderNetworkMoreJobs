@@ -5606,7 +5606,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="MoveSpeedRand" value="-.2, .25"/> 
 			<property name="CanClimbLadders" value="true"/>
 			<property name="CanClimbVertical" value="false"/>
-			<property name="JumpMaxDistance" value="2.8, 3.9"/>
 			<property name="Immunity" value="sickness;disease;wellness"/>
 			<property name="RotateToGround" value="false"/>	
 			<property name="PushFactor" value="10"/>
@@ -17451,6 +17450,52 @@ FuriousRamsayBlackDecoyZombieYo
 
 			<effect_group name="FuriousRamsayHazmatGasEffects">
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayHazmatGasTier5Timer"/>
+			</effect_group>
+        </entity_class>
+		
+        <entity_class name="FuriousRamsayJumpTest" extends="zombieBoe">
+			<property name="MoveSpeed" value="0.3"/>
+			<property name="MoveSpeedAggro" value="0.4, 1.1"/>
+			<property name="JumpDelay" value="5"/>
+			<property name="JumpMaxDistance" value="0, 40"/>
+
+			<property name="AITask-1" value="Leap"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
+			<property name="AITask-3" value="BreakBlock"/>
+			<property name="AITask-4" value="DestroyArea"/>
+			<property name="AITask-5" value="ApproachDistraction"/>
+			<property name="AITask-6" value="Look"/>
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,25,25,EntitySurvivor,25,25"/>
+			<property name="AITarget-3" value=""/>
+			<property name="AITarget-4" value=""/>
+			<property name="AITarget-5" value=""/>
+   			<property name="Mass" value="800"/>
+			<property name="Weight" value="800"/>
+
+			<property name="AITask-1" value=""/><property name="AITarget-1" value=""/>
+		
+            <property name="ExperienceGain" value="1750" />
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="650" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="30" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+			<effect_group name="FuriousRamsayJumpEffects">
+				<triggered_effect trigger="onSelfLandJump" action="AddBuff" buff="FuriousRamsayHazmatGasTier5Timer"/> <!-- aoe damage when lands -->
+			</effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayJump1" extends="FuriousRamsayJumpTest">
+			<effect_group name="FuriousRamsayVisualEffects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/TimedCharge/timedChargePrefab.prefab" local_offset="-0.02,.25,.05" local_rotation="90,0,0" parent_transform="Spine1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/TimedCharge/timedChargePrefab.prefab" local_offset="-0.02,.1,-.1" local_rotation="-90,0,0" parent_transform="Spine2"/>
 			</effect_group>
         </entity_class>
 		
