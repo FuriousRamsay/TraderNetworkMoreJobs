@@ -50,6 +50,46 @@
 		
 		<append xpath="/buffs" >		
 
+			<buff name="FuriousRamsayKamikazeDecayTier1" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" target="self" stat="Health" operation="add" value="-3"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayKamikazeDecayTier2" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" target="self" stat="Health" operation="add" value="-5"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayKamikazeDecayTier3" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" target="self" stat="Health" operation="add" value="-8"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayKamikazeDecayTier4" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" target="self" stat="Health" operation="add" value="-11"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayKamikazeDecayTier5" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" target="self" stat="Health" operation="add" value="-15"/>
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayStartTrainingEnd" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<duration value="3"/>

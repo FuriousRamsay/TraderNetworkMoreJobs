@@ -8,6 +8,481 @@
 
 	<insertAfter xpath="/quests/quest[@id='tier2_buried_supplies']">
 
+		<quest id="quest_FuriousRamsayTier1_Kamikaze">
+			<property name="name_key" value="quest_FuriousRamsayKamikaze_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayKamikaze_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayKamikaze_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="easy"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayKamikaze_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayKamikaze_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayKamikaze_response"/>
+			<property name="login_rally_reset" value="true"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayKamikaze_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="biome_filter_type" value="ExcludeBiome" />
+				<property name="biome_filter" value="wasteland" />
+				<property name="nav_object" value="quest" />
+			</objective>
+
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+
+			<objective type="ZombieKill" value="1" phase="3"/>
+			<objective type="POIStayWithin">
+				<property name="phase" value="3"/>
+				<property name="radius" value="5"/>
+			</objective>
+
+			<objective type="FetchFromContainer">
+				<property name="phase" value="4"/>
+				<property name="quest_item_ID" value="91"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="fetch_mode" value="Standard"/>
+				<property name="nav_object" value="fetch_container" />
+			</objective>
+			<objective type="POIStayWithin">
+				<property name="phase" value="4"/>
+				<property name="radius" value="5"/>
+			</objective>
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier1" value="1" phase="4">
+				<property name="delay" value="3"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier1" value="1" phase="4">
+				<property name="delay" value="13"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier1" value="1" phase="4">
+				<property name="delay" value="33"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier1" value="1" phase="4">
+				<property name="delay" value="43"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier1" value="1" phase="4">
+				<property name="delay" value="63"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier1" value="4" phase="5">
+				<property name="delay" value="3"/>
+			</action>
+
+			<reward type="Exp" value="3000"/>
+			<reward type="Item" id="casinoCoin" value="400"/>
+			<reward type="LootItem" id="groupQuestTools,FuriousRamsayGroupQuestMedicalLow" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestArmor,FuriousRamsayGroupQuestCookedFoodsTier1" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="1"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayTier2_Kamikaze">
+			<property name="name_key" value="quest_FuriousRamsayKamikaze_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayKamikaze_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayKamikaze_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="easy"/>
+			<property name="difficulty_tier" value="2"/>
+			<property name="offer_key" value="quest_FuriousRamsayKamikaze_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayKamikaze_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayKamikaze_response"/>
+			<property name="login_rally_reset" value="true"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayKamikaze_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="biome_filter_type" value="ExcludeBiome" />
+				<property name="biome_filter" value="wasteland" />
+				<property name="nav_object" value="quest" />
+			</objective>
+
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+
+			<objective type="ZombieKill" value="2" phase="3"/>
+			<objective type="POIStayWithin">
+				<property name="phase" value="3"/>
+				<property name="radius" value="5"/>
+			</objective>
+
+			<objective type="FetchFromContainer">
+				<property name="phase" value="4"/>
+				<property name="quest_item_ID" value="91"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="fetch_mode" value="Standard"/>
+				<property name="nav_object" value="fetch_container" />
+			</objective>
+			<objective type="POIStayWithin">
+				<property name="phase" value="4"/>
+				<property name="radius" value="5"/>
+			</objective>
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier2" value="1" phase="4">
+				<property name="delay" value="3"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier2" value="1" phase="4">
+				<property name="delay" value="13"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier2" value="1" phase="4">
+				<property name="delay" value="33"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier2" value="1" phase="4">
+				<property name="delay" value="43"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier2" value="2" phase="4">
+				<property name="delay" value="63"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier2" value="4" phase="5">
+				<property name="delay" value="3"/>
+			</action>
+
+			<reward type="Exp" value="6000"/>
+			<reward type="Item" id="casinoCoin" value="500"/>
+			<reward type="LootItem" id="groupQuestTools,FuriousRamsayGroupQuestMedicalLow" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="groupQuestArmor,FuriousRamsayGroupQuestCookedFoodsTier2" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="2"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayTier3_Kamikaze">
+			<property name="name_key" value="quest_FuriousRamsayKamikaze_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayKamikaze_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayKamikaze_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="medium"/>
+			<property name="difficulty_tier" value="3"/>
+			<property name="offer_key" value="quest_FuriousRamsayKamikaze_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayKamikaze_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayKamikaze_response"/>
+			<property name="login_rally_reset" value="true"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayKamikaze_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="biome_filter_type" value="ExcludeBiome" />
+				<property name="biome_filter" value="wasteland" />
+				<property name="nav_object" value="quest" />
+			</objective>
+
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+
+			<objective type="ZombieKill" value="3" phase="3"/>
+			<objective type="POIStayWithin">
+				<property name="phase" value="3"/>
+				<property name="radius" value="5"/>
+			</objective>
+
+			<objective type="FetchFromContainer">
+				<property name="phase" value="4"/>
+				<property name="quest_item_ID" value="91"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="fetch_mode" value="Standard"/>
+				<property name="nav_object" value="fetch_container" />
+			</objective>
+			<objective type="POIStayWithin">
+				<property name="phase" value="4"/>
+				<property name="radius" value="5"/>
+			</objective>
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier3" value="1" phase="4">
+				<property name="delay" value="3"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier3" value="1" phase="4">
+				<property name="delay" value="13"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier3" value="1" phase="4">
+				<property name="delay" value="33"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier3" value="2" phase="4">
+				<property name="delay" value="43"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier3" value="2" phase="4">
+				<property name="delay" value="63"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier3" value="4" phase="5">
+				<property name="delay" value="3"/>
+			</action>
+
+			<reward type="Exp" value="9000"/>
+			<reward type="Item" id="casinoCoin" value="700"/>
+			<reward type="LootItem" id="groupQuestTools,groupQuestAmmo" ischosen="true" isfixed="true" value="3"/>
+			<reward type="LootItem" id="groupQuestArmor,FuriousRamsayGroupQuestMedicalLow,FuriousRamsayGroupQuestCookedFoodsTier3" ischosen="true" isfixed="true" value="3"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayTier4_Kamikaze">
+			<property name="name_key" value="quest_FuriousRamsayKamikaze_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayKamikaze_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayKamikaze_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="4"/>
+			<property name="offer_key" value="quest_FuriousRamsayKamikaze_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayKamikaze_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayKamikaze_response"/>
+			<property name="login_rally_reset" value="true"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayKamikaze_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="biome_filter_type" value="ExcludeBiome" />
+				<property name="biome_filter" value="wasteland" />
+				<property name="nav_object" value="quest" />
+			</objective>
+
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+
+			<objective type="ZombieKill" value="4" phase="3"/>
+			<objective type="POIStayWithin">
+				<property name="phase" value="3"/>
+				<property name="radius" value="5"/>
+			</objective>
+
+			<objective type="FetchFromContainer">
+				<property name="phase" value="4"/>
+				<property name="quest_item_ID" value="91"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="fetch_mode" value="Standard"/>
+				<property name="nav_object" value="fetch_container" />
+			</objective>
+			<objective type="POIStayWithin">
+				<property name="phase" value="4"/>
+				<property name="radius" value="5"/>
+			</objective>
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier4" value="1" phase="4">
+				<property name="delay" value="3"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier4" value="2" phase="4">
+				<property name="delay" value="13"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier4" value="2" phase="4">
+				<property name="delay" value="33"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier4" value="2" phase="4">
+				<property name="delay" value="43"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier4" value="2" phase="4">
+				<property name="delay" value="63"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier4" value="4" phase="5">
+				<property name="delay" value="3"/>
+			</action>
+
+			<reward type="Exp" value="12000"/>
+			<reward type="Item" id="casinoCoin" value="900"/>
+			<reward type="LootItem" id="groupQuestAmmo,groupQuestWeapons" ischosen="true" isfixed="true" value="4"/>
+			<reward type="LootItem" id="groupQuestSchematics,groupQuestMods" isfixed="true" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestArmor" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="4"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalHigh,FuriousRamsayGroupQuestCookedFoodsTier4" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="4"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayTier5_Kamikaze">
+			<property name="name_key" value="quest_FuriousRamsayKamikaze_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayKamikaze_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayKamikaze_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="5"/>
+			<property name="offer_key" value="quest_FuriousRamsayKamikaze_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayKamikaze_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayKamikaze_response"/>
+			<property name="login_rally_reset" value="true"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayKamikaze_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="biome_filter_type" value="ExcludeBiome" />
+				<property name="biome_filter" value="wasteland" />
+				<property name="nav_object" value="quest" />
+			</objective>
+
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+
+			<objective type="ZombieKill" value="5" phase="3"/>
+			<objective type="POIStayWithin">
+				<property name="phase" value="3"/>
+				<property name="radius" value="5"/>
+			</objective>
+
+			<objective type="FetchFromContainer">
+				<property name="phase" value="4"/>
+				<property name="quest_item_ID" value="91"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="fetch_mode" value="Standard"/>
+				<property name="nav_object" value="fetch_container" />
+			</objective>
+			<objective type="POIStayWithin">
+				<property name="phase" value="4"/>
+				<property name="radius" value="5"/>
+			</objective>
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier5" value="2" phase="4">
+				<property name="delay" value="3"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier5" value="2" phase="4">
+				<property name="delay" value="13"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier5" value="2" phase="4">
+				<property name="delay" value="33"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier5" value="2" phase="4">
+				<property name="delay" value="43"/>
+			</action>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier5" value="2" phase="4">
+				<property name="delay" value="63"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsayKamikazeTier5" value="4" phase="5">
+				<property name="delay" value="3"/>
+			</action>
+
+			<reward type="Exp" value="15000"/>
+			<reward type="Item" id="casinoCoin" value="1200"/>
+			<reward type="LootItem" id="groupQuestAmmo,groupQuestWeapons" ischosen="true" isfixed="true" value="5"/>
+			<reward type="LootItem" id="groupQuestSchematics,groupQuestMods" isfixed="true" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestArmor" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="5"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalHigh,FuriousRamsayGroupQuestCookedFoodsTier5" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="5"/>
+		</quest>
+
 		<quest id="quest_FuriousRamsayTier1_Toxic">
 			<property name="name_key" value="quest_FuriousRamsayToxic_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayToxic_subtitle"/>
@@ -6989,6 +7464,11 @@
 			<quest id="quest_FuriousRamsayTier3_Surprise" prob="1"/>
 			<quest id="quest_FuriousRamsayTier4_Surprise" prob="1"/>
 			<quest id="quest_FuriousRamsayTier5_Surprise" prob="1"/>
+			<quest id="quest_FuriousRamsayTier1_Kamikaze" prob="1"/>
+			<quest id="quest_FuriousRamsayTier2_Kamikaze" prob="1"/>
+			<quest id="quest_FuriousRamsayTier3_Kamikaze" prob="1"/>
+			<quest id="quest_FuriousRamsayTier4_Kamikaze" prob="1"/>
+			<quest id="quest_FuriousRamsayTier5_Kamikaze" prob="1"/>
 		</quest_list>
 
 		<quest_list id="trader_quests_farmerkatie">
