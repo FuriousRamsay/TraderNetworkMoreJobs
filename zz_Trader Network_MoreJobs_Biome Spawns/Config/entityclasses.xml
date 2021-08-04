@@ -8,6 +8,81 @@
 
 	<append xpath="/entity_classes">		
 
+        <entity_class name="FuriousRamsayKamikazeTier1Biome" extends="FuriousRamsayKamikazeTier1">
+			<property name="Explosion.BlockDamage" value="150"/>
+			<property name="Explosion.EntityDamage" value="200"/>
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandKamikazeTier1Biome"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="200" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayKamikazeTier2Biome" extends="FuriousRamsayKamikazeTier2">
+			<property name="Explosion.BlockDamage" value="150"/>
+			<property name="Explosion.EntityDamage" value="300"/>
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandKamikazeTier2Biome"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="250" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayKamikazeTier3Biome" extends="FuriousRamsayKamikazeTier3">
+			<property name="Explosion.BlockDamage" value="150"/>
+			<property name="Explosion.EntityDamage" value="500"/>
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandKamikazeTier3Biome"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="300" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="20" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayKamikazeTier4Biome" extends="FuriousRamsayKamikazeTier4">
+			<property name="Explosion.BlockDamage" value="150"/>
+			<property name="Explosion.EntityDamage" value="800"/>
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandKamikazeTier4Biome"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="600" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="40" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayKamikazeTier5Biome" extends="FuriousRamsayKamikazeTier5">
+			<property name="Explosion.BlockDamage" value="150"/>
+			<property name="Explosion.EntityDamage" value="1000"/>
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandKamikazeTier5Biome"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="800" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="60" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+        </entity_class>
+
         <entity_class name="FuriousRamsayZombieBoeToxicBiome" extends="FuriousRamsayZombieBoeToxic">
 			<property name="NavObject" value="" />
 		</entity_class>
@@ -1138,25 +1213,12 @@
 
 		<entity_class name="FuriousRamsayHostileChickenBiome" extends="FuriousRamsayHostileChicken">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalChicken -->
+			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="23"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1164,25 +1226,12 @@
 		
 		<entity_class name="FuriousRamsayHostileChicken2Biome" extends="FuriousRamsayHostileChicken2">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalChicken -->
+			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="23"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1190,25 +1239,12 @@
 
 		<entity_class name="FuriousRamsayHostileChicken3Biome" extends="FuriousRamsayHostileChicken3">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalChicken -->
+			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="23"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1216,25 +1252,12 @@
 
 		<entity_class name="FuriousRamsayHostileChicken4Biome" extends="FuriousRamsayHostileChicken4">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalChicken -->
+			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="23"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1242,25 +1265,12 @@
 
 		<entity_class name="FuriousRamsayHostileChicken5Biome" extends="FuriousRamsayHostileChicken5">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalChicken -->
+			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="23"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1268,25 +1278,12 @@
 
 		<entity_class name="FuriousRamsayHostileRabbitBiome" extends="FuriousRamsayHostileRabbit">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalRabbit -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1294,25 +1291,12 @@
 		
 		<entity_class name="FuriousRamsayHostileRabbit2Biome" extends="FuriousRamsayHostileRabbit2">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalRabbit -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1320,25 +1304,12 @@
 
 		<entity_class name="FuriousRamsayHostileRabbit3Biome" extends="FuriousRamsayHostileRabbit3">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalRabbit -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1346,25 +1317,12 @@
 
 		<entity_class name="FuriousRamsayHostileRabbit4Biome" extends="FuriousRamsayHostileRabbit4">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalRabbit -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1372,25 +1330,13 @@
 
 		<entity_class name="FuriousRamsayHostileDoeBiome" extends="FuriousRamsayHostileDoe">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 
-			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/> <!-- this triggers the special harvesting animation like on the knife -->
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="30"/> <!-- animalStag -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="9"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="7"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1398,25 +1344,13 @@
 		
 		<entity_class name="FuriousRamsayHostileDoe2Biome" extends="FuriousRamsayHostileDoe2">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 
-			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/> <!-- this triggers the special harvesting animation like on the knife -->
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="30"/> <!-- animalStag -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="9"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="7"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1424,25 +1358,13 @@
 
 		<entity_class name="FuriousRamsayHostileDoe3Biome" extends="FuriousRamsayHostileDoe3">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 
-			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/> <!-- this triggers the special harvesting animation like on the knife -->
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="30"/> <!-- animalStag -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="9"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="7"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1450,25 +1372,13 @@
 
 		<entity_class name="FuriousRamsayHostileDoe4Biome" extends="FuriousRamsayHostileDoe4">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 
-			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/> <!-- this triggers the special harvesting animation like on the knife -->
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="30"/> <!-- animalStag -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="9"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="7"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1476,26 +1386,13 @@
 
 		<entity_class name="FuriousRamsayHostileStagBiome" extends="FuriousRamsayHostileStag">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 
-			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/> <!-- this triggers the special harvesting animation like on the knife -->
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="30"/> <!-- animalStag -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="9"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="7"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1503,26 +1400,13 @@
 
 		<entity_class name="FuriousRamsayHostileStag2Biome" extends="FuriousRamsayHostileStag2">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 
-			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/> <!-- this triggers the special harvesting animation like on the knife -->
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="30"/> <!-- animalStag -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="9"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="7"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1530,26 +1414,13 @@
 
 		<entity_class name="FuriousRamsayHostileStag3Biome" extends="FuriousRamsayHostileStag3">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 
-			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/> <!-- this triggers the special harvesting animation like on the knife -->
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="30"/> <!-- animalStag -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="9"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="7"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1557,26 +1428,13 @@
 
 		<entity_class name="FuriousRamsayHostileStag4Biome" extends="FuriousRamsayHostileStag4">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 
-			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/> <!-- this triggers the special harvesting animation like on the knife -->
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="30"/> <!-- animalStag -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="9"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="7"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1586,11 +1444,11 @@
 			<property name="NavObject" value="" />
 			
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="25"/> <!-- animalWolf -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1600,11 +1458,11 @@
 			<property name="NavObject" value="" />
 			
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="25"/> <!-- animalWolf -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1614,11 +1472,11 @@
 			<property name="NavObject" value="" />
 			
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="25"/> <!-- animalWolf -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1628,11 +1486,11 @@
 			<property name="NavObject" value="" />
 			
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="25"/> <!-- animalWolf -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1642,11 +1500,11 @@
 			<property name="NavObject" value="" />
 			
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="25"/> <!-- animalWolf -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1656,11 +1514,11 @@
 			<property name="NavObject" value="" />
 			
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="25"/> <!-- animalWolf -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1668,26 +1526,13 @@
 
 		<entity_class name="FuriousRamsayHostileBoarBiome" extends="FuriousRamsayHostileBoar">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 			
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceAnimalFat" count="2" tag="butcherHarvest"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="30"/> <!-- animalBoar -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="7"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="4" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1695,26 +1540,13 @@
 
 		<entity_class name="FuriousRamsayHostileBoar2Biome" extends="FuriousRamsayHostileBoar2">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 			
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceAnimalFat" count="2" tag="butcherHarvest"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="30"/> <!-- animalBoar -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="7"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="4" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1722,26 +1554,13 @@
 
 		<entity_class name="FuriousRamsayHostileBoar3Biome" extends="FuriousRamsayHostileBoar3">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 			
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceAnimalFat" count="2" tag="butcherHarvest"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="30"/> <!-- animalBoar -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="7"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="4" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1749,26 +1568,13 @@
 
 		<entity_class name="FuriousRamsayHostileBoar4Biome" extends="FuriousRamsayHostileBoar4">
 			<property name="NavObject" value="" />
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
-			<property name="AITask-6" value=""/>
-			<property name="AITask-7" value=""/>
-			<property name="AITask-8" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,15,EntitySurvivor,15,15"/>
-			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
-			<property name="AITarget-5" value=""/>
 			
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceAnimalFat" count="2" tag="butcherHarvest"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="30"/> <!-- animalBoar -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="7"/>
+			<drop event="Harvest" name="resourceAnimalFat" count="4" tag="butcherHarvest"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1778,11 +1584,11 @@
 			<property name="NavObject" value="" />
 
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceAnimalFat" count="1" tag="butcherHarvest"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="12"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1792,11 +1598,11 @@
 			<property name="NavObject" value="" />
 
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceAnimalFat" count="1" tag="butcherHarvest"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="12"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1806,11 +1612,11 @@
 			<property name="NavObject" value="" />
 
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceAnimalFat" count="1" tag="butcherHarvest"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="12"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1820,11 +1626,11 @@
 			<property name="NavObject" value="" />
 
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceAnimalFat" count="1" tag="butcherHarvest"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="12"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1834,11 +1640,11 @@
 			<property name="NavObject" value="" />
 
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceAnimalFat" count="1" tag="butcherHarvest"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="12"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1848,11 +1654,11 @@
 			<property name="NavObject" value="" />
 
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceAnimalFat" count="1" tag="butcherHarvest"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="12"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1862,11 +1668,11 @@
 			<property name="NavObject" value="" />
 						
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="35"/> <!-- animalDireWolf -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="12"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1876,11 +1682,11 @@
 			<property name="NavObject" value="" />
 						
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="35"/> <!-- animalDireWolf -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="12"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1890,11 +1696,11 @@
 			<property name="NavObject" value="" />
 						
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="35"/> <!-- animalDireWolf -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="12"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1904,11 +1710,11 @@
 			<property name="NavObject" value="" />
 						
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="35"/> <!-- animalDireWolf -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="12"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1918,11 +1724,11 @@
 			<property name="NavObject" value="" />
 						
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="35"/> <!-- animalDireWolf -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="12"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1932,11 +1738,11 @@
 			<property name="NavObject" value="" />
 						
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="35"/> <!-- animalDireWolf -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="12"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1946,12 +1752,12 @@
 			<property name="NavObject" value="" />
 								
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="6"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
-			<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="50"/> <!-- animalBear -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+			<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="2"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1961,12 +1767,12 @@
 			<property name="NavObject" value="" />
 								
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="6"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
-			<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="50"/> <!-- animalBear -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+			<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="2"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1976,12 +1782,12 @@
 			<property name="NavObject" value="" />
 								
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="6"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
-			<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="50"/> <!-- animalBear -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+			<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="2"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -1991,12 +1797,12 @@
 			<property name="NavObject" value="" />
 								
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="6"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
-			<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="50"/> <!-- animalBear -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+			<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="2"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -2006,12 +1812,12 @@
 			<property name="NavObject" value="" />
 								
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="6"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
-			<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="50"/> <!-- animalBear -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+			<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="2"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -2021,12 +1827,12 @@
 			<property name="NavObject" value="" />
 								
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="6"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
-			<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="50"/> <!-- animalBear -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+			<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="2"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -2036,12 +1842,12 @@
 			<property name="NavObject" value="" />
 								
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="6"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
-			<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="50"/> <!-- animalBear -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+			<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="2"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -2051,11 +1857,11 @@
 			<property name="NavObject" value="" />
 					
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -2065,11 +1871,11 @@
 			<property name="NavObject" value="" />
 					
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -2079,11 +1885,11 @@
 			<property name="NavObject" value="" />
 					
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -2093,11 +1899,11 @@
 			<property name="NavObject" value="" />
 					
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -2107,11 +1913,11 @@
 			<property name="NavObject" value="" />
 					
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -2121,11 +1927,11 @@
 			<property name="NavObject" value="" />
 					
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
@@ -2135,11 +1941,11 @@
 			<property name="NavObject" value="" />
 					
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
-			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
