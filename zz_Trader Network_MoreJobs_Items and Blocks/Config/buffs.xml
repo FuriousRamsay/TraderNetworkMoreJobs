@@ -2,6 +2,25 @@
 
 		<append xpath="/buffs" >		
 
+			<buff name="FuriousRamsayExplode" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="4"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FuriousRamsayExplosion"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="burntZombieSmoke" parent_transform="Spine1" local_offset="0,0,-.2"/>
+					<triggered_effect trigger="onSelfBuffStart" target="self" action="Ragdoll" duration="5" force="100"/>
+					<triggered_effect trigger="onSelfBuffStart" target="selfAOE" range="8" action="Ragdoll" duration="5" force="10000"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="selfAOE" range="8" stat="Health" operation="add" value="-1000"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="RemovePrefabFromEntity" target="self" prefab="timedChargePrefab" parent_transform="LeftArm"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemovePrefabFromEntity" target="self" prefab="timedChargePrefab" parent_transform="Spine1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemovePrefabFromEntity" target="self" prefab="timedChargePrefab" parent_transform="Spine"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemovePrefabFromEntity" target="self" prefab="timedChargePrefab" parent_transform="LowerBack"/>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="ModifyStats" target="self" stat="Health" operation="add" value="-9999"/>
+				</effect_group>
+			</buff>
+
 			<buff hidden="true" name="buffFlamethrowerFire">
 				<stack_type value="ignore"/>
 				<duration value="0"/>

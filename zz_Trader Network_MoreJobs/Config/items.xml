@@ -2017,6 +2017,7 @@
 		
 		<item name="FuriousRamsayMechanicalAllyDogChest">
 			<property name="Extends" value="FuriousRamsayMechanicalAllyMaster"/>
+			<property name="CreativeMode" value="None"/>
 			<property name="CustomIcon" value="cntHardenedChestSecure"/>
 			<property name="CustomIconTint" value="217, 0, 255"/>
 			<property name="EconomicValue" value="100"/>
@@ -2037,6 +2038,7 @@
 
 		<item name="FuriousRamsayMechanicalAllyWolfChest">
 			<property name="Extends" value="FuriousRamsayMechanicalAllyMaster"/>
+			<property name="CreativeMode" value="None"/>
 			<property name="CustomIcon" value="cntHardenedChestSecure"/>
 			<property name="CustomIconTint" value="255, 66, 76"/>
 			<property name="EconomicValue" value="200"/>
@@ -2058,6 +2060,7 @@
 
 		<item name="FuriousRamsayMechanicalAllyLionChest">
 			<property name="Extends" value="FuriousRamsayMechanicalAllyMaster"/>
+			<property name="CreativeMode" value="None"/>
 			<property name="CustomIcon" value="cntHardenedChestSecure"/>
 			<property name="CustomIconTint" value="5, 247, 110"/>		
 			<property name="EconomicValue" value="250"/>
@@ -2079,6 +2082,7 @@
 
 		<item name="FuriousRamsayMechanicalAllyBearChest">
 			<property name="Extends" value="FuriousRamsayMechanicalAllyMaster"/>
+			<property name="CreativeMode" value="None"/>
 			<property name="CustomIcon" value="cntHardenedChestSecure"/>
 			<property name="CustomIconTint" value="0, 153, 255"/>		
 			<property name="EconomicValue" value="350"/>
@@ -2100,6 +2104,7 @@
 
 		<item name="FuriousRamsayMechanicalAllyAndroidChest">
 			<property name="Extends" value="FuriousRamsayMechanicalAllyMaster"/>
+			<property name="CreativeMode" value="None"/>
 			<property name="CustomIcon" value="cntHardenedChestSecure"/>
 			<property name="CustomIconTint" value="255, 255, 0"/>
 			<property name="EconomicValue" value="450"/>
@@ -3492,9 +3497,10 @@
 			<property name="Material" value="Mmetal"/>
 			<property name="Weight" value="0"/>
 			<property name="CarryWeight" value="3"/>
-			<property name="Stacknumber" value="25"/>
+			<property name="Stacknumber" value="1"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="EconomicValue" value="250"/>
+			<property name="EconomicValue" value="100"/>
+			<!--<property name="EconomicValue" value="250"/>-->
 			<property name="Candrop" value="true"/>
 			<effect_group tiered="false">
 			</effect_group>
@@ -3504,7 +3510,7 @@
 				<property name="PreviewSize" value="1.4,1.4,1.4"/>
 				<property name="Sound_start" value="password_set"/>
 			</property>
-			<effect_group name="FuriousRamsaySpawnAllyDogTier1">
+			<effect_group name="FuriousRamsaySpawnAllyDogTier1" tiered="false">
 				<passive_effect name="EntityDamage" operation="base_set" value="40"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="80"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="40"/>
@@ -3525,9 +3531,10 @@
 			<property name="Material" value="Mmetal"/>
 			<property name="Weight" value="0"/>
 			<property name="CarryWeight" value="3.2"/>
-			<property name="Stacknumber" value="25"/>
+			<property name="Stacknumber" value="1"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="EconomicValue" value="500"/>
+			<!--<property name="EconomicValue" value="500"/>-->
+			<property name="EconomicValue" value="200"/>
 			<property name="Candrop" value="true"/>
 			<effect_group tiered="false">
 			</effect_group>
@@ -3537,7 +3544,7 @@
 				<property name="PreviewSize" value="1.4,1.4,1.4"/>
 				<property name="Sound_start" value="password_set"/>
 			</property>
-			<effect_group name="FuriousRamsaySpawnAllyWolfTier2">
+			<effect_group name="FuriousRamsaySpawnAllyWolfTier2" tiered="false">
 				<passive_effect name="EntityDamage" operation="base_set" value="50"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="100"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="46"/>
@@ -3558,9 +3565,10 @@
 			<property name="Material" value="Mmetal"/>
 			<property name="Weight" value="0"/>
 			<property name="CarryWeight" value="3.5"/>
-			<property name="Stacknumber" value="25"/>
+			<property name="Stacknumber" value="1"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="EconomicValue" value="625"/>
+			<!--<property name="EconomicValue" value="625"/>-->
+			<property name="EconomicValue" value="250"/>
 			<property name="Candrop" value="true"/>
 			<effect_group tiered="false">
 			</effect_group>
@@ -3570,7 +3578,7 @@
 				<property name="PreviewSize" value="1.4,1.4,1.4"/>
 				<property name="Sound_start" value="password_set"/>
 			</property>
-			<effect_group name="FuriousRamsaySpawnAllyLionTier3">
+			<effect_group name="FuriousRamsaySpawnAllyLionTier3" tiered="false">
 				<passive_effect name="EntityDamage" operation="base_set" value="75"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="150"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="54"/>
@@ -3591,9 +3599,10 @@
 			<property name="Material" value="Mmetal"/>
 			<property name="Weight" value="0"/>
 			<property name="CarryWeight" value="4.5"/>
-			<property name="Stacknumber" value="25"/>
+			<property name="Stacknumber" value="1"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="EconomicValue" value="1250"/>
+			<!--<property name="EconomicValue" value="1250"/>-->
+			<property name="EconomicValue" value="500"/>
 			<property name="Candrop" value="true"/>
 			<effect_group tiered="false">
 			</effect_group>
@@ -3603,7 +3612,7 @@
 				<property name="PreviewSize" value="1.4,1.4,1.4"/>
 				<property name="Sound_start" value="password_set"/>
 			</property>
-			<effect_group name="FuriousRamsaySpawnAllyBearTier4">
+			<effect_group name="FuriousRamsaySpawnAllyBearTier4" tiered="false">
 				<passive_effect name="EntityDamage" operation="base_set" value="100"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="200"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="66"/>
@@ -3624,9 +3633,10 @@
 			<property name="Material" value="Mmetal"/>
 			<property name="Weight" value="0"/>
 			<property name="CarryWeight" value="3"/>
-			<property name="Stacknumber" value="25"/>
+			<property name="Stacknumber" value="1"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="EconomicValue" value="1875"/>
+			<!--<property name="EconomicValue" value="1875"/>-->
+			<property name="EconomicValue" value="750"/>
 			<property name="Candrop" value="true"/>
 			<effect_group tiered="false">
 			</effect_group>
@@ -3636,7 +3646,7 @@
 				<property name="PreviewSize" value="1.4,1.4,1.4"/>
 				<property name="Sound_start" value="password_set"/>
 			</property>
-			<effect_group name="FuriousRamsaySpawnAllyNPCTier5">
+			<effect_group name="FuriousRamsaySpawnAllyNPCTier5" tiered="false">
 				<passive_effect name="EntityDamage" operation="base_set" value="125"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="250"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="85"/>
@@ -5492,6 +5502,78 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="quest_FuriousRamsayTier5_Kamikaze"/>
 			</property>
+		</item>
+		
+				<item name="FuriousRamsaySpawnMaster">
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="pet"/>
+			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="CustomIcon" value="cntHardenedChestSecure"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="255,255,255"/>
+			<property name="HoldType" value="73"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Weight" value="0"/>
+			<property name="CarryWeight" value="3"/>
+			<property name="Stacknumber" value="10"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicValue" value="1500"/>
+			<property name="Candrop" value="true"/>
+		</item>
+
+		<item name="FuriousRamsayBoarBombMP">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIconTint" value="255, 21, 0"/>
+			<property name="Extends" value="FuriousRamsaySpawnMaster"/>
+			<property class="Action0">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayBoarBomb"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayBoarBomb"/>
+			</property>
+			<property name="EconomicValue" value="1250"/>
+			<effect_group name="FuriousRamsayBoarBombMP" tiered="false">
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to assemble your Exploding Mechanical Boar... Stay Clear"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBoarBombSP">
+			<property name="Tags" value="robot"/>
+			<property name="CustomIcon" value="cntHardenedChestSecure"/>
+			<property name="CustomIconTint" value="217, 0, 255"/>
+			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="DisplayType" value="meleeTurret"/>
+			<property name="HoldType" value="73"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Weight" value="0"/>
+			<property name="CarryWeight" value="3"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicValue" value="200"/>
+			<property name="Candrop" value="true"/>
+			<effect_group tiered="false">
+			</effect_group>
+			<property class="Action0">
+				<property name="Class" value="SpawnTurret"/>
+				<property name="Turret" value="FuriousRamsayAllyBoarBomb"/>
+				<property name="PreviewSize" value="1.4,1.4,1.4"/>
+				<property name="Sound_start" value="password_set"/>
+			</property>
+			<effect_group name="FuriousRamsayBoarBombSP" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="40"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="80"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="40"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="200"/>
+			</effect_group>
 		</item>
 
 	</append>

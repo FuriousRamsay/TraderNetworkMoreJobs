@@ -50,6 +50,39 @@
 		
 		<append xpath="/buffs" >		
 
+			<buff name="FuriousRamsayHealthRegen1" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" target="self" stat="Health" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayHealthRegen1">
+						<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value="1"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayHealthRegen2" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" target="self" stat="Health" operation="add" value="2"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayHealthRegen2">
+						<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value="1"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayHealthRegen3" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" target="self" stat="Health" operation="add" value="3"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayHealthRegen3">
+						<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value="1"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayKamikazeDecayTier1" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<update_rate value="1"/>

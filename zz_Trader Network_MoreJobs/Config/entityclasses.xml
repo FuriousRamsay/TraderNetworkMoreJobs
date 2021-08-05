@@ -5703,6 +5703,10 @@ FuriousRamsayVultureToxicRadiated
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
             </effect_group>
+			
+            <effect_group name="Health Effects">
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen1"/>
+            </effect_group>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMATemplateEnemyMale" extends="FuriousRamsayUMATemplateMale">
@@ -5718,6 +5722,10 @@ FuriousRamsayVultureToxicRadiated
                 <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+            <effect_group name="Health Effects">
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen1"/>
             </effect_group>
         </entity_class>
 
@@ -5850,6 +5858,10 @@ FuriousRamsayVultureToxicRadiated
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
             </effect_group>
+
+            <effect_group name="Health Effects">
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen1"/>
+            </effect_group>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMATemplateEnemyFemale" extends="FuriousRamsayUMATemplateFemale">
@@ -5867,6 +5879,10 @@ FuriousRamsayVultureToxicRadiated
                 <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+            <effect_group name="Health Effects">
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen1"/>
             </effect_group>
         </entity_class>
 
@@ -6240,6 +6256,10 @@ FuriousRamsayVultureToxicRadiated
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
             </effect_group>
+
+            <effect_group name="Health Effects">
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen2"/>
+            </effect_group>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMATemplateSoldierFemale" extends="FuriousRamsayUMATemplateSurvivorFemale">
@@ -6267,6 +6287,10 @@ FuriousRamsayVultureToxicRadiated
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
             </effect_group>
+
+            <effect_group name="Health Effects">
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen2"/>
+            </effect_group>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAJack" extends="FuriousRamsayUMATemplateSoldierMale">
@@ -6281,6 +6305,10 @@ FuriousRamsayVultureToxicRadiated
                 <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+            <effect_group name="Health Effects">
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen3"/>
             </effect_group>
         </entity_class>
 		
@@ -6297,6 +6325,10 @@ FuriousRamsayVultureToxicRadiated
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
             </effect_group>
+
+            <effect_group name="Health Effects">
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen3"/>
+            </effect_group>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMALee" extends="FuriousRamsayUMATemplateSoldierFemale">
@@ -6311,6 +6343,10 @@ FuriousRamsayVultureToxicRadiated
                 <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+            <effect_group name="Health Effects">
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen3"/>
             </effect_group>
         </entity_class>
 
@@ -17697,6 +17733,41 @@ FuriousRamsayBlackDecoyZombieYo
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayResistShock"/>
 			</effect_group>
         </entity_class>
+
+		<entity_class name="FuriousRamsayAllyBoarBomb" extends="FuriousRamsayAllyBoar">
+			<property name="SizeScale" value="1"/>
+			<property name="ReplaceMaterial0" value="#Other/Items?items/weapons/ranged/pistol/materials/44_bullet.mat"/>
+			<property name="HandItem" value="FuriousRamsayMeleeHandAllyWolfTier2"/>	
+
+			<property name="Class" value="EntitySurvivor"/>
+			<property name="LookAtAngle" value="0"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,30,EntityEnemyAnimal,30"/>
+			<property name="AITask-2" value="Leap"/>
+			<property name="AITask-3" value=""/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityZombie,200,200,EntityEnemyAnimal,100,100"/>
+			<property name="AITarget-2" value=""/>
+			<property name="JumpDelay" value=".1"/>
+			<property name="JumpMaxDistance" value="8, 10"/>
+			<property name="MoveSpeed" value="4"/>
+			<property name="MoveSpeedAggro" value="4, 4"/>
+			<property name="MoveSpeedPanic" value="4"/>
+			<property name="TimeStayAfterDeath" value="5"/>
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="250"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+			</effect_group>
+
+			<effect_group name="FuriousRamsayVisualEffects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/TimedCharge/timedChargePrefab.prefab" local_offset="-0.1,0,-0.11" local_rotation="312,90,340" parent_transform="LowerBack"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/TimedCharge/timedChargePrefab.prefab" local_offset="0.16,-0.07,-0.14" local_rotation="78,105,3" parent_transform="Spine"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/TimedCharge/timedChargePrefab.prefab" local_offset="0.001,.2,-.1" local_rotation="0,0,0" parent_transform="Spine1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Ranged/TimedCharge/timedChargePrefab.prefab" local_offset="0.001,0.07,-0.02" local_rotation="292,120,350" parent_transform="LeftArm"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" buff="FuriousRamsayExplode"/>
+			</effect_group>
+		</entity_class>
 
 	</append>
 
