@@ -3945,6 +3945,16 @@ FuriousRamsayVultureToxicRadiated
 			<property name="SoundSense" value="Enemies/Zombie_Dogs/zombiedogsense"/>
 			<property name="SoundGiveUp" value="Enemies/Zombie_Dogs/zombiedogroam"/>
 
+			<property name="SoundHurtSmall" value=""/>
+			<property name="SoundStamina" value=""/>
+			<property name="SoundDrownPain" value=""/>
+			<property name="SoundWaterSurface" value=""/>
+			<property name="SoundDrownDeath" value=""/>
+			<property name="SoundJump" value=""/>
+			<property name="SoundLandSoft" value=""/>
+			<property name="SoundLandHard" value=""/>
+			<property name="SoundPlayerLandThump" value=""/>
+
 			<property name="RotateToGround" value="true"/>
 			<property name="AIGroupCircle" value="1"/>
 			<property name="LookAtAngle" value="0"/>
@@ -3953,13 +3963,13 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="AIPathCostScale" value=".15, .4"/>
 			<property name="SightLightThreshold" value="-2,-2"/>
-			<property name="AITask-1" value="ApproachSpot" data="class=EntityPlayer,200,200"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="BreakBlock"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="ApproachSpot" data="class=EntityPlayer,200,200"/>
+			<property name="AITask-4" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
-			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-3" value=""/>
 
 			<property name="PainResistPerHit" value="-1"/>
 			<property name="MaxTurnSpeed" value="360"/>
@@ -3975,6 +3985,10 @@ FuriousRamsayVultureToxicRadiated
 			<property name="TimeStayAfterDeath" value="30"/>
 
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyDogTier1"/>	
+			
+			<effect_group name="Immunity">
+					<passive_effect name="BuffResistance" operation="base_set" value="10" tags="buffInfectionCatch,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
+			</effect_group>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayAllyDogTier1Twitch" extends="FuriousRamsayAllyDogTier1">
@@ -4039,8 +4053,8 @@ FuriousRamsayVultureToxicRadiated
 			<property name="JumpMaxDistance" value="0, 0"/>
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyWolfTier2"/>	
 
-			<property name="AITask-1" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
 			<property name="AITask-3" value="Look"/>
 			<property name="AITask-4" value="Territorial"/>
 			<property name="AITask-5" value=""/>
@@ -4096,6 +4110,16 @@ FuriousRamsayVultureToxicRadiated
 			<property name="SoundSense" value="wolfroam"/>
 			<property name="SoundGiveUp" value="wolfroam"/>
 
+			<property name="SoundHurtSmall" value=""/>
+			<property name="SoundStamina" value=""/>
+			<property name="SoundDrownPain" value=""/>
+			<property name="SoundWaterSurface" value=""/>
+			<property name="SoundDrownDeath" value=""/>
+			<property name="SoundJump" value=""/>
+			<property name="SoundLandSoft" value=""/>
+			<property name="SoundLandHard" value=""/>
+			<property name="SoundPlayerLandThump" value=""/>
+
 			<property name="RotateToGround" value="true"/>
 			<property name="AIGroupCircle" value="1"/>
 			<property name="LookAtAngle" value="0"/>
@@ -4104,13 +4128,13 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="AIPathCostScale" value=".15, .4"/>
 			<property name="SightLightThreshold" value="-2,-2"/>
-			<property name="AITask-1" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="BreakBlock"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="ApproachSpot" data="class=EntityPlayer,200,200"/>
+			<property name="AITask-4" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
-			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-3" value=""/>
 
 			<property name="PainResistPerHit" value="-1"/>
 			<property name="MaxTurnSpeed" value="360"/>
@@ -4189,8 +4213,8 @@ FuriousRamsayVultureToxicRadiated
 			<property name="JumpMaxDistance" value="0, 0"/>
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyWolfTier2"/>	
 
-			<property name="AITask-1" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
 			<property name="AITask-3" value="Look"/>
 			<property name="AITask-4" value="Territorial"/>
 			<property name="AITask-5" value=""/>
@@ -4246,6 +4270,16 @@ FuriousRamsayVultureToxicRadiated
 			<property name="SoundAttack" value="mlionattack"/>
 			<property name="SoundGiveUp" value="mlionroam"/>
 
+			<property name="SoundHurtSmall" value=""/>
+			<property name="SoundStamina" value=""/>
+			<property name="SoundDrownPain" value=""/>
+			<property name="SoundWaterSurface" value=""/>
+			<property name="SoundDrownDeath" value=""/>
+			<property name="SoundJump" value=""/>
+			<property name="SoundLandSoft" value=""/>
+			<property name="SoundLandHard" value=""/>
+			<property name="SoundPlayerLandThump" value=""/>
+
 			<property name="RotateToGround" value="true"/>
 			<property name="AIGroupCircle" value="1"/>
 			<property name="LookAtAngle" value="0"/>
@@ -4254,13 +4288,13 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="AIPathCostScale" value=".15, .4"/>
 			<property name="SightLightThreshold" value="-2,-2"/>
-			<property name="AITask-1" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="BreakBlock"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="ApproachSpot" data="class=EntityPlayer,200,200"/>
+			<property name="AITask-4" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
-			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-3" value=""/>
 
 			<property name="JumpDelay" value=".1"/>
 			<property name="JumpMaxDistance" value="6, 7"/>
@@ -4312,8 +4346,8 @@ FuriousRamsayVultureToxicRadiated
 			<property name="JumpMaxDistance" value="0, 0"/>
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyWolfTier2"/>	
 
-			<property name="AITask-1" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
 			<property name="AITask-3" value="Look"/>
 			<property name="AITask-4" value="Territorial"/>
 			<property name="AITask-5" value=""/>
@@ -4399,6 +4433,16 @@ FuriousRamsayVultureToxicRadiated
 			<property name="SoundFootstepModifier" value="Animals/Bear/bear_footstep"/>
 			<property name="SoundGiveUp" value="Animals/Bear/bearroam"/>
 
+			<property name="SoundHurtSmall" value=""/>
+			<property name="SoundStamina" value=""/>
+			<property name="SoundDrownPain" value=""/>
+			<property name="SoundWaterSurface" value=""/>
+			<property name="SoundDrownDeath" value=""/>
+			<property name="SoundJump" value=""/>
+			<property name="SoundLandSoft" value=""/>
+			<property name="SoundLandHard" value=""/>
+			<property name="SoundPlayerLandThump" value=""/>
+
 			<property name="RotateToGround" value="true"/>
 			<property name="AIGroupCircle" value="1"/>
 			<property name="LookAtAngle" value="0"/>
@@ -4407,13 +4451,13 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="AIPathCostScale" value=".15, .4"/>
 			<property name="SightLightThreshold" value="-2,-2"/>
-			<property name="AITask-1" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="BreakBlock"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="ApproachSpot" data="class=EntityPlayer,200,200"/>
+			<property name="AITask-4" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
-			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-3" value=""/>
 
 			<property name="PainResistPerHit" value="-1"/>
 			<property name="MaxTurnSpeed" value="360"/>
@@ -4463,8 +4507,8 @@ FuriousRamsayVultureToxicRadiated
 			<property name="JumpMaxDistance" value="0, 0"/>
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyWolfTier2"/>	
 
-			<property name="AITask-1" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
 			<property name="AITask-3" value="Look"/>
 			<property name="AITask-4" value="Territorial"/>
 			<property name="AITask-5" value=""/>
@@ -4552,6 +4596,16 @@ FuriousRamsayVultureToxicRadiated
 			<property name="SoundDeath" value="demolitionzroam"/>
 			<property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemaleroam"/>
 
+			<property name="SoundHurtSmall" value=""/>
+			<property name="SoundStamina" value=""/>
+			<property name="SoundDrownPain" value=""/>
+			<property name="SoundWaterSurface" value=""/>
+			<property name="SoundDrownDeath" value=""/>
+			<property name="SoundJump" value=""/>
+			<property name="SoundLandSoft" value=""/>
+			<property name="SoundLandHard" value=""/>
+			<property name="SoundPlayerLandThump" value=""/>
+
 			<property name="RotateToGround" value="true"/>
 			<property name="AIGroupCircle" value="1"/>
 			<property name="LookAtAngle" value="0"/>
@@ -4560,13 +4614,13 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="AIPathCostScale" value=".15, .4"/>
 			<property name="SightLightThreshold" value="-2,-2"/>
-			<property name="AITask-1" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="BreakBlock"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="ApproachSpot" data="class=EntityPlayer,200,200"/>
+			<property name="AITask-4" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
-			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-3" value=""/>
 					
 			<property name="PainResistPerHit" value="-1"/>
 			<property name="MaxTurnSpeed" value="360"/>
@@ -4658,7 +4712,6 @@ FuriousRamsayVultureToxicRadiated
 			</effect_group>
 		</entity_class>
 
-	
 		<entity_class name="FuriousRamsayAllyCoyote">
 			<property name="SizeScale" value="1.2"/>
 			<property name="Tags" value="entity,robot"/>
@@ -4701,13 +4754,13 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="AIPathCostScale" value=".15, .4"/>
 			<property name="SightLightThreshold" value="-2,-2"/>
-			<property name="AITask-1" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="BreakBlock"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="ApproachSpot" data="class=EntityPlayer,200,200"/>
+			<property name="AITask-4" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
-			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-3" value=""/>
 
 			<property name="JumpDelay" value=".1"/>
 			<property name="JumpMaxDistance" value="6, 7"/>
@@ -4732,8 +4785,8 @@ FuriousRamsayVultureToxicRadiated
 			<property name="JumpMaxDistance" value="0, 0"/>
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyWolfTier2"/>	
 
-			<property name="AITask-1" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
 			<property name="AITask-3" value="Look"/>
 			<property name="AITask-4" value="Territorial"/>
 			<property name="AITask-5" value=""/>
@@ -4794,13 +4847,13 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="AIPathCostScale" value=".15, .4"/>
 			<property name="SightLightThreshold" value="-2,-2"/>
-			<property name="AITask-1" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="BreakBlock"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="ApproachSpot" data="class=EntityPlayer,200,200"/>
+			<property name="AITask-4" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
-			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-3" value=""/>
 
 			<property name="JumpDelay" value=".1"/>
 			<property name="JumpMaxDistance" value="6, 7"/>
@@ -4825,8 +4878,8 @@ FuriousRamsayVultureToxicRadiated
 			<property name="JumpMaxDistance" value="0, 0"/>
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyWolfTier2"/>	
 
-			<property name="AITask-1" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
 			<property name="AITask-3" value="Look"/>
 			<property name="AITask-4" value="Territorial"/>
 			<property name="AITask-5" value=""/>
@@ -4875,16 +4928,13 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="AIPathCostScale" value=".15, .4"/>
 			<property name="SightLightThreshold" value="-2,-2"/>
-			<property name="AITask-1" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value="Territorial"/>
-			<property name="AITask-6" value=""/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="ApproachSpot" data="class=EntityPlayer,200,200"/>
+			<property name="AITask-4" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
-			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-3" value=""/>
 
 			<property name="JumpDelay" value=".1"/>
 			<property name="JumpMaxDistance" value="6, 7"/>
@@ -4909,16 +4959,15 @@ FuriousRamsayVultureToxicRadiated
 			<property name="JumpMaxDistance" value="0, 0"/>
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyDogTier1"/>	
 
-			<property name="AITask-1" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
 			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value="Territorial"/>
+			<property name="AITask-4" value="Territorial"/>
+			<property name="AITask-5" value=""/>
 			<property name="AITask-6" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
 			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
 			<property name="AITarget-3" value=""/>
-			<property name="AITarget-4" value=""/>
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="80"/>
@@ -4960,15 +5009,13 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="AIPathCostScale" value=".15, .4"/>
 			<property name="SightLightThreshold" value="-2,-2"/>
-			<property name="AITask-1" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
-			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value="Territorial"/>
-			<property name="AITask-6" value=""/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="ApproachSpot" data="class=EntityPlayer,200,200"/>
+			<property name="AITask-4" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
-			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-3" value=""/>
 
 			<property name="JumpDelay" value=".1"/>
 			<property name="JumpMaxDistance" value="6, 7"/>
@@ -4992,10 +5039,12 @@ FuriousRamsayVultureToxicRadiated
 			<property name="JumpMaxDistance" value="0, 0"/>
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyDogTier1"/>	
 
-			<property name="AITask-1" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="ApproachSpot" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
 			<property name="AITask-3" value="Look"/>
-			<property name="AITask-4" value=""/>
+			<property name="AITask-4" value="Territorial"/>
+			<property name="AITask-5" value=""/>
+			<property name="AITask-6" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
 			<property name="AITarget-2" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
 			<property name="AITarget-3" value=""/>
