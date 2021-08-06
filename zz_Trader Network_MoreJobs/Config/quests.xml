@@ -8,6 +8,74 @@
 
 	<insertAfter xpath="/quests/quest[@id='tier2_buried_supplies']">
 
+		<quest id="challenge_FuriousRamsayFactionWarWave1">
+			<property name="name_key" value="challenge_FuriousRamsayFactionWar_name"/>
+			<property name="subtitle_key" value="challenge_FuriousRamsayFactionWar_subtitle"/>
+			<property name="description_key" value="challenge_FuriousRamsayFactionWar_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="challenge_FuriousRamsayFactionWar_offer"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="20" phase="1"/>
+
+			<!-- Trader Network -->
+			<action type="SpawnEnemy" id="FuriousRamsayAllyDogTier1War" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayAllyDogTier1War" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayAllyWolfTier2War" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayAllyLionTier3War" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayAllyBearTier4War" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayAllyNPCTier5War" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAMikeSurvivor" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAMariaSurvivor" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMARayahSurvivor" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEarlSurvivor" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJack" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMADante" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMALee" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAMaleSoldier1" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAMaleSoldier2" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAMaleSoldier3" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAFemaleSoldier1" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAFemaleSoldier2" value="1" phase="1"/>
+
+			<!-- Black Shield -->
+			<action type="SpawnEnemy" id="FuriousRamsayCloakedVulture" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayCloakedSnake" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayCloakedBurnAndroid" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayCloakedShockAndroid" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayEnemyAndroid1" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayEnemyAndroid2" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayEnemyAndroid3" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayEnemyAndroid4" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayEnemyAndroid5" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayEnemyAndroid6" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayEnemyAndroid7" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAGabrielleEnemy" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemy" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemy" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAWillieEnemy" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAHodorEnemy" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAKimEnemy" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAClintEnemy" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMARoxyEnemy" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMARichieEnemy" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMABlackShieldBossTier1" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMABlackShieldBossTier2" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMABlackShieldBossTier3" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMABlackShieldBossTier4" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMABlackShieldBossTier5" value="1" phase="1"/>
+
+			<reward type="Quest" id="challenge_FuriousRamsayFactionWarWave2"/>
+		</quest>
+
 		<quest id="quest_FuriousRamsayTier1_Kamikaze">
 			<property name="name_key" value="quest_FuriousRamsayKamikaze_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayKamikaze_subtitle"/>
