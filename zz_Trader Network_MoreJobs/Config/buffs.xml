@@ -1,5 +1,52 @@
 <Config>
 
+		<append xpath="/buffs/buff[@name='god']" >		
+			<effect_group name="FuriousRamsayMainDebuffs">
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="
+							FuriousRamsayVisionGrayscale,
+							FuriousRamsayVisionVibrantDeSat,
+							FuriousRamsayVisionUnderwater,
+							FuriousRamsayVisionPosterize,
+							FuriousRamsayVisionDistortion,
+							FuriousRamsayVisionDrunk,
+							FuriousRamsayVisionBlur,
+							FuriousRamsaySmokeZombieAoEDamage,
+							FuriousRamsayFireZombieAoEDamage,
+							FuriousRamsayShockZombieAoEDamage,
+							FuriousRamsayAddBurningEnemyTier1,
+							FuriousRamsayAddBurningEnemyTier2,
+							FuriousRamsayAddBurningEnemyTier3,
+							FuriousRamsayAddBurningEnemyTier4,
+							FuriousRamsayAddBurningEnemyTier5,
+							FuriousRamsayAddShockEnemy,
+							FuriousRamsayAddShockParticles,
+							FuriousRamsayAddShockEnemyBoss,
+							FuriousRamsayAddBurningEnemyBoss,
+							FuriousRamsayAddExplosionEnemyBoss"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBurningFlamingArrow"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayVisionGrayscale"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayVisionVibrantDeSat"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayVisionUnderwater"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayVisionPosterize"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayVisionDistortion"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayVisionDrunk"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayVisionBlur"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsaySmokeZombieAoEDamage"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayFireZombieAoEDamage"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayShockZombieAoEDamage"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayAddBurningEnemyTier1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayAddBurningEnemyTier2"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayAddBurningEnemyTier3"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayAddBurningEnemyTier4"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayAddBurningEnemyTier5"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayAddShockEnemy"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayAddShockParticles"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayAddShockEnemyBoss"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayAddBurningEnemyBoss"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayAddExplosionEnemyBoss"/>
+			</effect_group>
+		</append>
+
 		<append xpath="/buffs/buff[@name='buffIsOnFire']/effect_group[@name='run particles, cleanup']" >		
 
 			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_burning_barrel" parent_transform="Spine1" local_offset="0,-1.1,0">
@@ -49,6 +96,30 @@
 		</append>
 		
 		<append xpath="/buffs" >		
+
+			<buff name="FuriousRamsayExplode" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="4"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FuriousRamsayExplosion"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="burntZombieSmoke" parent_transform="Spine1" local_offset="0,0,-.2"/>
+					<triggered_effect trigger="onSelfBuffStart" target="self" action="Ragdoll" duration="5" force="100"/>
+					<triggered_effect trigger="onSelfBuffStart" target="selfAOE" range="8" action="Ragdoll" duration="5" force="10000">
+						<requirement name="!EntityTagCompare" tags="UMA"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" target="selfAOE" range="8" action="Ragdoll" duration="5" force="100">
+						<requirement name="EntityTagCompare" tags="UMA"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="selfAOE" range="8" stat="Health" operation="add" value="-750"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="RemovePrefabFromEntity" target="self" prefab="timedChargePrefab" parent_transform="LeftArm"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemovePrefabFromEntity" target="self" prefab="timedChargePrefab" parent_transform="Spine1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemovePrefabFromEntity" target="self" prefab="timedChargePrefab" parent_transform="Spine"/>
+					<triggered_effect trigger="onSelfBuffStart" action="RemovePrefabFromEntity" target="self" prefab="timedChargePrefab" parent_transform="LowerBack"/>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="ModifyStats" target="self" stat="Health" operation="add" value="-9999"/>
+				</effect_group>
+			</buff>
 
 			<buff name="FuriousRamsayHealthRegen1" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
@@ -895,7 +966,7 @@
 				<stack_type value="ignore"/>
 				<update_rate value="0.1"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1.5" buff="FuriousRamsayFireZombieAoEDamage"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1.25" buff="FuriousRamsayFireZombieAoEDamage"/>
 				</effect_group>
 			</buff>
 			
@@ -1008,7 +1079,7 @@
 				<stack_type value="ignore"/>
 				<update_rate value="0.1"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1.5" buff="FuriousRamsayShockZombieAoEDamage"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1.25" buff="FuriousRamsayShockZombieAoEDamage"/>
 				</effect_group>
 			</buff>
 			
@@ -1030,7 +1101,7 @@
 			</buff>
 
 			<buff name="FuriousRamsayShockZombieAoEDamage" hidden="true">
-				<damage_type value="heat"/>
+				<damage_type value="electrical"/>
 				<stack_type value="replace"/>
 				<duration value="3"/>
 				<effect_group>
@@ -1969,7 +2040,9 @@
 				<stack_type value="ignore"/>
 				<duration value="0.1"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="2"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="2">
+						<requirement name="EntityTagCompare" tags="player,survivor"/>
+					</triggered_effect>
 				</effect_group>
 			</buff>
 
@@ -2067,8 +2140,8 @@
 				<stack_type value="replace"/>
 				<duration value="3"/>
 				<effect_group>
-					<passive_effect name="HealthChangeOT" operation="base_add" value="-1">
-						<requirement name="!EntityTagCompare" tags="metal,player,robot"/>
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-3">
+						<requirement name="!EntityTagCompare" tags="metal,player,robot,survivor"/>
 					</passive_effect>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
@@ -2186,6 +2259,7 @@
 					
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="burntZombieSmoke" parent_transform="Spine1" local_offset="0,0,0">
 						<requirement name="EntityTagCompare" tags="UMA"/>
+						<requirement name="!EntityTagCompare" tags="survivor"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="burntZombieSmoke">
@@ -2244,26 +2318,26 @@
 				<duration value="2"/>
 				<effect_group>
 					<passive_effect name="HealthChangeOT" operation="base_add" value="-6">
-						<requirement name="!EntityTagCompare" tags="player,robot,shockresist"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,shockresist,survivor"/>
 					</passive_effect>
 					<passive_effect name="RunSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,shockresist"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,shockresist,survivor"/>
 					</passive_effect>
 					
 					<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,shockresist"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,shockresist,survivor"/>
 					</passive_effect>
 					
 					<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,shockresist"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,shockresist,survivor"/>
 					</passive_effect>
 					
 					<passive_effect name="JumpStrength" operation="perc_subtract" value="0.9,0" duration="0,4.3">
-						<requirement name="!EntityTagCompare" tags="player,robot,shockresist"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,shockresist,survivor"/>
 					</passive_effect>
 					
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
-						<requirement name="!EntityTagCompare" tags="player,robot,shockresist"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,shockresist,survivor"/>
 					</triggered_effect>
 					
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="RABBIT_ Pelvis/RABBIT_ Spine/RABBIT_ Spine1" local_offset="0,0,0">
@@ -2277,7 +2351,7 @@
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0">
-						<requirement name="!EntityTagCompare" tags="player,robot,shockresist"/>
+						<requirement name="!EntityTagCompare" tags="player,robot,shockresist,survivor"/>
 					</triggered_effect>
 
 					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock">
@@ -2761,7 +2835,7 @@
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddBurningEnemyDisplay">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</triggered_effect>
-					<passive_effect name="HealthChangeOT" operation="base_add" value="-5">
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-1">
 						<requirement name="EntityTagCompare" tags="player"/>
 					</passive_effect>
 
@@ -2782,6 +2856,14 @@
 					</triggered_effect>
 					
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
+						<requirement name="EntityTagCompare" tags="player,UMA"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
+						<requirement name="EntityTagCompare" tags="player,UMA"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="player,UMA"/>
 					</triggered_effect>
 
@@ -2958,6 +3040,8 @@
 				<stack_type value="ignore"/>
 				<effect_group>
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
 					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
 				</effect_group>
 			</buff>
@@ -3797,6 +3881,33 @@
 				</effect_group>
 			</buff>
 
+			<buff name="VerifyFuriousRamsayUMAJackVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/ClubIron/ClubIronPrefab.prefab" local_offset="-.066,-.05,-.041" local_rotation="0,21.38574,23.00002" parent_transform="RightHand"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Traps/hubcapPrefab" local_offset="0,0.04,0.42" local_rotation="86.00008,359,0.4" parent_transform="LeftHand"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayUMADanteVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/ClubIron/ClubIronPrefab.prefab" local_offset="-.066,-.05,-.041" local_rotation="0,21.38574,23.00002" parent_transform="RightHand"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Traps/hubcapPrefab" local_offset="0,0.04,0.42" local_rotation="86.00008,359,0.4" parent_transform="LeftHand"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayUMALeeVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/ClubIron/ClubIronPrefab.prefab" local_offset="-.066,-.05,-.041" local_rotation="0,21.38574,23.00002" parent_transform="RightHand"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Traps/hubcapPrefab" local_offset="0,0.04,0.42" local_rotation="86.00008,359,0.4" parent_transform="LeftHand"/>
+				</effect_group>
+			</buff>
+
 			<buff name="VerifyFuriousRamsayUMAAidenEnemyVisuals" hidden="true">	
 				<stack_type value="replace"/>
 				<duration value="10"/>
@@ -3964,6 +4075,20 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayHandymanLukeVisuals">
 				<requirement name="EntityTagCompare" target="other" tags="HandymanLuke"/>
 				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayHandymanLukeVisuals"/>
+			</triggered_effect>
+
+			<!-- Commander Visuals -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayUMAJackVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayUMAJack"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayUMAJackVisuals"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayUMADanteVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayUMADante"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayUMADanteVisuals"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayUMALeeVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayUMALee"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayUMALeeVisuals"/>
 			</triggered_effect>
 
 			<!-- Bandit Visuals -->

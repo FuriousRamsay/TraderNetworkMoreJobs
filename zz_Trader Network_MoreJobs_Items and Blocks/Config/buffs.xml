@@ -1,25 +1,14 @@
 <Config>
 
+		<append xpath="/buffs/buff[@name='god']" >		
+			<effect_group name="FuriousRamsayItemsBlocksDebuffs">
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="
+							FuriousRamsayBurningTrapDamage"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="FuriousRamsayBurningTrapDamage"/>
+			</effect_group>
+		</append>
+
 		<append xpath="/buffs" >		
-
-			<buff name="FuriousRamsayExplode" hidden="true" remove_on_death="true">
-				<stack_type value="ignore"/>
-				<duration value="4"/>
-				<effect_group>
-					<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="FuriousRamsayExplosion"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="burntZombieSmoke" parent_transform="Spine1" local_offset="0,0,-.2"/>
-					<triggered_effect trigger="onSelfBuffStart" target="self" action="Ragdoll" duration="5" force="100"/>
-					<triggered_effect trigger="onSelfBuffStart" target="selfAOE" range="8" action="Ragdoll" duration="5" force="10000"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="selfAOE" range="8" stat="Health" operation="add" value="-1000"/>
-
-					<triggered_effect trigger="onSelfBuffStart" action="RemovePrefabFromEntity" target="self" prefab="timedChargePrefab" parent_transform="LeftArm"/>
-					<triggered_effect trigger="onSelfBuffStart" action="RemovePrefabFromEntity" target="self" prefab="timedChargePrefab" parent_transform="Spine1"/>
-					<triggered_effect trigger="onSelfBuffStart" action="RemovePrefabFromEntity" target="self" prefab="timedChargePrefab" parent_transform="Spine"/>
-					<triggered_effect trigger="onSelfBuffStart" action="RemovePrefabFromEntity" target="self" prefab="timedChargePrefab" parent_transform="LowerBack"/>
-
-					<triggered_effect trigger="onSelfBuffFinish" action="ModifyStats" target="self" stat="Health" operation="add" value="-9999"/>
-				</effect_group>
-			</buff>
 
 			<buff hidden="true" name="buffFlamethrowerFire">
 				<stack_type value="ignore"/>
@@ -46,7 +35,7 @@
 				<duration value="8"/>
 				<update_rate value="0.1"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="FuriousRamsayAddBurningDamage2"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1.25" buff="FuriousRamsayAddBurningDamage2"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_burning_barrel" parent_transform="Spine1" local_offset="0,-1.1,-0.08"/>
 					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_burning_barrel" parent_transform="Spine1" local_offset="0,-1.1,-0.08"/>
 					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel"/>
@@ -66,7 +55,7 @@
 				<duration value="8"/>
 				<update_rate value="0.1"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="FuriousRamsayAddShockDamage2"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1.25" buff="FuriousRamsayAddShockDamage2"/>
 
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0"/>
 					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0"/>
@@ -93,7 +82,7 @@
 						<requirement name="!EntityTagCompare" tags="metal,robot,trader,fireresist"/>
 					</passive_effect>
 
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="2" buff="FuriousRamsayFireZombieAoEDamage">
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="1.25" buff="FuriousRamsayFireZombieAoEDamage">
 						<requirement name="!EntityTagCompare" tags="metal,robot,trader,fireresist"/>
 					</triggered_effect>
 
@@ -301,13 +290,9 @@
 				<duration value="1"/>
 
 				<effect_group>
-					<passive_effect name="HealthChangeOT" operation="base_add" value="-10">
+					<passive_effect name="HealthChangeOT" operation="base_add" value="-50">
 						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
 					</passive_effect>
-
-					<triggered_effect trigger="onSelfBuffStart" action="Ragdoll" duration="5">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
-					</triggered_effect>
 				</effect_group>
 			</buff>
 
@@ -422,7 +407,7 @@
 
 			<buff name="FuriousRamsayAshBoomStickDamage" hidden="true" remove_on_death="true">
 				<damage_type value="heat"/>
-				<stack_type value="ignore"/>
+				<stack_type value="replace"/>
 				<duration value="3"/>
 
 				<effect_group>
@@ -457,11 +442,6 @@
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="-100">
 						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
 					</triggered_effect>
-
-					<triggered_effect trigger="onSelfBuffStart" action="Ragdoll" duration="3" force="100">
-						<requirement name="!EntityTagCompare" tags="player,robot,trader,mutantsmallanimal"/>
-					</triggered_effect>
-
 				</effect_group>
 			</buff>
 

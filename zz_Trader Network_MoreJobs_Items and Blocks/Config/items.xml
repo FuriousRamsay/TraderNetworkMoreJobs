@@ -125,6 +125,14 @@
 					<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="positionAOE" range="3.5" buff="FuriousRamsayStormBreakerShockDamageAoE"/>
 					<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="positionAOE" range="3.5" buff="FuriousRamsayStormBreakerKnockdownDamageAoE"/>
 
+					<triggered_effect trigger="onProjectileImpact" target="positionAOE" range="3.5" action="Ragdoll" duration="5" force="10000">
+						<requirement name="!EntityTagCompare" tags="UMA,player,robot,trader"/>
+					</triggered_effect>
+					<triggered_effect trigger="onProjectileImpact" target="positionAOE" range="3.5" action="Ragdoll" duration="5" force="100">
+						<requirement name="EntityTagCompare" tags="UMA"/>
+						<requirement name="!EntityTagCompare" tags="player"/>
+					</triggered_effect>
+
 					<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="self" buff="FuriousRamsayShockSelfAoE">
 						<requirement name="WornItems" tags="FuriousRamsayArmorShock" operation="Equals" value="5"/>
 					</triggered_effect>
@@ -315,7 +323,7 @@
 
 			<effect_group name="FuriousRamsayAshBoomStickDebuff" tiered="false">
 				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayAshBoomStickDamage">
-					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
 				</triggered_effect>
 			</effect_group>
 		</item>
