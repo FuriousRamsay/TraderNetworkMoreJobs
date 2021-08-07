@@ -3,6 +3,7 @@
 	<append xpath="/items">
 
 		<item name="qc_FuriousRamsayFarmerTrader">
+			<property name="CreativeMode" value="None"/>
 			<property name="DescriptionKey" value="qc_FuriousRamsayFarmerTraderDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="50"/>
@@ -15,6 +16,7 @@
 		</item>
 
 		<item name="qc_FuriousRamsayHandymanTrader">
+			<property name="CreativeMode" value="None"/>
 			<property name="DescriptionKey" value="qc_FuriousRamsayHandymanTraderDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="50"/>
@@ -27,6 +29,7 @@
 		</item>
 
 		<item name="qc_FuriousRamsayBlackShieldTrader">
+			<property name="CreativeMode" value="None"/>
 			<property name="DescriptionKey" value="qc_FuriousRamsayBlackShieldTraderDesc"/>
 			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="50"/>
@@ -36,6 +39,72 @@
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="quest_FuriousRamsayBlackShieldTrader"/>
 			</property>
+		</item>
+
+		<item name="FuriousRamsayFarmerTraderNote">
+			<property name="CustomIconTint" value="63, 150, 51"/>
+			<property name="Extends" value="FuriousRamsaySpawnMaster"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value=""/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayFarmerTrader"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayFarmerTrader"/>
+			</property>
+			<property name="EconomicValue" value="1250"/>
+			<effect_group name="FuriousRamsayFarmerTraderNote" tiered="false">
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to call on the Farmer Trader... Stay Clear"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHandymanTraderNote">
+			<property name="CustomIconTint" value="77, 111, 168"/>
+			<property name="Extends" value="FuriousRamsaySpawnMaster"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value=""/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayHandymanTrader"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayHandymanTrader"/>
+			</property>
+			<property name="EconomicValue" value="1250"/>
+			<effect_group name="FuriousRamsayHandymanTraderNote" tiered="false">
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to call on the Handyman Trader... Stay Clear"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBlackShieldTraderNote">
+			<property name="CustomIconTint" value="173, 57, 57"/>
+			<property name="Extends" value="FuriousRamsaySpawnMaster"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value=""/>
+			<property name="Stacknumber" value="1"/>
+			<property class="Action0">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayBlackShieldTrader"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="PlaceAsBlock"/>
+				<property name="Delay" value=".5"/>
+				<property name="Blockname" value="FuriousRamsayBlackShieldTrader"/>
+			</property>
+			<property name="EconomicValue" value="1250"/>
+			<effect_group name="FuriousRamsayBlackShieldTraderNote" tiered="false">
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to call on the Black Shield Trader... Stay Clear"/>
+			</effect_group>
 		</item>
 
 	</append>
