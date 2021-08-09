@@ -4,6 +4,7 @@
 	
 		<category name="BlackShield" display_name="TwitchActionCategory_FuriousRamsayBlackShield" icon="ui_game_symbol_twitch_spawn"/>
 		<category name="TraderNetwork" display_name="TwitchActionCategory_FuriousRamsayTraderNetwork" icon="ui_game_symbol_twitch_spawn"/>
+		<category name="ImmuneZombies" display_name="TwitchActionCategory_FuriousRamsayImmuneZombie" icon="ui_game_symbol_twitch_spawn"/>
 	
 		<action name="twitch_FuriousRamsaySpawnBlackShieldCloackedSnake" extends="twitch_normalZombie">
 			<property name="category" value="BlackShield"/>
@@ -315,7 +316,7 @@
 
 		<action name="TwitchAction_FuriousRamsayTDCommander" extends="twitch_normalZombie">
 			<property name="category" value="TraderNetwork"/>
-			<property name="command" value="#bs_tn_commander"/>
+			<property name="command" value="#tn_commander"/>
 			<property name="title_key" value="TwitchAction_FuriousRamsayTDCommander"/>
 			<property name="command_key" value="TwitchAction_FuriousRamsayTDCommanderCommand"/>
 			<property name="description_key" value="TwitchAction_FuriousRamsayTDCommanderDesc"/>
@@ -329,7 +330,7 @@
 
 		<action name="TwitchAction_FuriousRamsayTDSoldier" extends="twitch_normalZombie">
 			<property name="category" value="TraderNetwork"/>
-			<property name="command" value="#bs_tn_soldier"/>
+			<property name="command" value="#tn_soldier"/>
 			<property name="title_key" value="TwitchAction_FuriousRamsayTDSoldier"/>
 			<property name="command_key" value="TwitchAction_FuriousRamsayTDSoldierCommand"/>
 			<property name="description_key" value="TwitchAction_FuriousRamsayTDSoldierDesc"/>
@@ -341,6 +342,426 @@
 			<property name="special_only" value="false"/>
 		</action>
 
-	</append>
+		<action name="TwitchAction_FuriousRamsayTNKamikazeT1" extends="twitch_normalZombie">
+			<property name="category" value="TraderNetwork"/>
+			<property name="command" value="#tn_kamikaze_t1"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsayTNKamikazeT1"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsayTNKamikazeT1Command"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsayTNKamikazeT1Desc"/>
+			<property name="start_gamestage" value="25"/>
+			<property name="event_name" value="spawn_FuriousRamsay_TN_KamikazeT1"/>
+			<property name="default_cost" value="250"/>
+			<property name="cooldown" value="120"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
 
-</Config>
+		<action name="TwitchAction_FuriousRamsayTNKamikazeT2" extends="twitch_normalZombie">
+			<property name="category" value="TraderNetwork"/>
+			<property name="command" value="#tn_kamikaze_t2"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsayTNKamikazeT2"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsayTNKamikazeT2Command"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsayTNKamikazeT2Desc"/>
+			<property name="start_gamestage" value="35"/>
+			<property name="event_name" value="spawn_FuriousRamsay_TN_KamikazeT2"/>
+			<property name="default_cost" value="300"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="TwitchAction_FuriousRamsayTNKamikazeT3" extends="twitch_normalZombie">
+			<property name="category" value="TraderNetwork"/>
+			<property name="command" value="#tn_kamikaze_t3"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsayTNKamikazeT3"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsayTNKamikazeT3Command"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsayTNKamikazeT3Desc"/>
+			<property name="start_gamestage" value="45"/>
+			<property name="event_name" value="spawn_FuriousRamsay_TN_KamikazeT3"/>
+			<property name="default_cost" value="350"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="TwitchAction_FuriousRamsayTNKamikazeT4" extends="twitch_normalZombie">
+			<property name="category" value="TraderNetwork"/>
+			<property name="command" value="#tn_kamikaze_t4"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsayTNKamikazeT4"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsayTNKamikazeT4Command"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsayTNKamikazeT4Desc"/>
+			<property name="start_gamestage" value="55"/>
+			<property name="event_name" value="spawn_FuriousRamsay_TN_KamikazeT4"/>
+			<property name="default_cost" value="400"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="TwitchAction_FuriousRamsayTNKamikazeT5" extends="twitch_normalZombie">
+			<property name="category" value="TraderNetwork"/>
+			<property name="command" value="#tn_kamikaze_t5"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsayTNKamikazeT5"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsayTNKamikazeT5Command"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsayTNKamikazeT5Desc"/>
+			<property name="start_gamestage" value="65"/>
+			<property name="event_name" value="spawn_FuriousRamsay_TN_KamikazeT5"/>
+			<property name="default_cost" value="450"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+		
+		<action name="TwitchAction_FuriousRamsayBSHazmatT1" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_hazmat_t1"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsayBSHazmatT1"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsayBSHazmatT1Command"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsayBSHazmatT1Desc"/>
+			<property name="start_gamestage" value="10"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_HazmatT1"/>
+			<property name="default_cost" value="100"/>
+			<property name="cooldown" value="120"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="TwitchAction_FuriousRamsayBSHazmatT2" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_hazmat_t2"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsayBSHazmatT2"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsayBSHazmatT2Command"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsayBSHazmatT2Desc"/>
+			<property name="start_gamestage" value="25"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_HazmatT2"/>
+			<property name="default_cost" value="150"/>
+			<property name="cooldown" value="120"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="TwitchAction_FuriousRamsayBSHazmatT3" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_hazmat_t3"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsayBSHazmatT3"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsayBSHazmatT3Command"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsayBSHazmatT3Desc"/>
+			<property name="start_gamestage" value="40"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_HazmatT3"/>
+			<property name="default_cost" value="200"/>
+			<property name="cooldown" value="140"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="TwitchAction_FuriousRamsayBSHazmatT4" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_hazmat_t4"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsayBSHazmatT4"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsayBSHazmatT4Command"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsayBSHazmatT4Desc"/>
+			<property name="start_gamestage" value="60"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_HazmatT4"/>
+			<property name="default_cost" value="250"/>
+			<property name="cooldown" value="160"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="TwitchAction_FuriousRamsayBSHazmatT5" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_hazmat_t5"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsayBSHazmatT5"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsayBSHazmatT5Command"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsayBSHazmatT5Desc"/>
+			<property name="start_gamestage" value="80"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_HazmatT5"/>
+			<property name="default_cost" value="300"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="TwitchAction_FuriousRamsayBSToxicZombieCrawler" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_toxic_cwl"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsayBSToxicZombieCrawler"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsayBSToxicZombieCrawlerCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsayBSToxicZombieCrawlerDesc"/>
+			<property name="start_gamestage" value="20"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_ToxicZombieCrawler"/>
+			<property name="default_cost" value="175"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="TwitchAction_FuriousRamsayBSToxicZombie" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_toxic"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsayBSToxicZombie"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsayBSToxicZombieCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsayBSToxicZombieDesc"/>
+			<property name="start_gamestage" value="30"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_ToxicZombie"/>
+			<property name="default_cost" value="225"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="TwitchAction_FuriousRamsayBSToxicZombieCreeper" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_toxic_cre"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsayBSToxicZombieCreeper"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsayBSToxicZombieCreeperCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsayBSToxicZombieCreeperDesc"/>
+			<property name="start_gamestage" value="40"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_ToxicZombieCreeper"/>
+			<property name="default_cost" value="300"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="TwitchAction_FuriousRamsayBSToxicZombieFeral" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_toxic_fer"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsayBSToxicZombieFeral"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsayBSToxicZombieFeralCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsayBSToxicZombieFeralDesc"/>
+			<property name="start_gamestage" value="60"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_ToxicZombieFeral"/>
+			<property name="default_cost" value="350"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+
+		<action name="TwitchAction_FuriousRamsayBSToxicZombieRadiated" extends="twitch_normalZombie">
+			<property name="category" value="BlackShield"/>
+			<property name="command" value="#bs_toxic_rad"/>
+			<property name="title_key" value="TwitchAction_FuriousRamsayBSToxicZombieRadiated"/>
+			<property name="command_key" value="TwitchAction_FuriousRamsayBSToxicZombieRadiatedCommand"/>
+			<property name="description_key" value="TwitchAction_FuriousRamsayBSToxicZombieRadiatedDesc"/>
+			<property name="start_gamestage" value="80"/>
+			<property name="event_name" value="spawn_FuriousRamsay_BS_ToxicZombieRadiated"/>
+			<property name="default_cost" value="450"/>
+			<property name="cooldown" value="180"/>
+			<property name="enabled" value="true"/>
+			<property name="special_only" value="false"/>
+		</action>
+		
+		<action name="TwitchAction_FuriousRamsayTNShockZombie" extends="twitch_normalZombie">
+				<property name="category" value="ImmuneZombies"/>
+				<property name="command" value="#tn_shock"/>
+				<property name="title_key" value="TwitchAction_FuriousRamsayTNShockZombie"/>
+				<property name="command_key" value="TwitchAction_FuriousRamsayTNShockZombieCommand"/>
+				<property name="description_key" value="TwitchAction_FuriousRamsayTNShockZombieDesc"/>
+				<property name="start_gamestage" value="30"/>
+				<property name="event_name" value="spawn_FuriousRamsay_TN_ShockZombie"/>
+				<property name="default_cost" value="250"/>
+				<property name="cooldown" value="120"/>
+				<property name="enabled" value="true"/>
+				<property name="special_only" value="false"/>
+			</action>
+			
+			<action name="TwitchAction_FuriousRamsayTNShockZombieFeral" extends="twitch_normalZombie">
+				<property name="category" value="ImmuneZombies"/>
+				<property name="command" value="#tn_shock_fer"/>
+				<property name="title_key" value="TwitchAction_FuriousRamsayTNShockZombieFeral"/>
+				<property name="command_key" value="TwitchAction_FuriousRamsayTNShockZombieFeralCommand"/>
+				<property name="description_key" value="TwitchAction_FuriousRamsayTNShockZombieFeralDesc"/>
+				<property name="start_gamestage" value="50"/>
+				<property name="event_name" value="spawn_FuriousRamsay_TN_ShockZombieFeral"/>
+				<property name="default_cost" value="350"/>
+				<property name="cooldown" value="160"/>
+				<property name="enabled" value="true"/>
+				<property name="special_only" value="false"/>
+			</action>
+
+			<action name="TwitchAction_FuriousRamsayTNShockZombieRadiated" extends="twitch_normalZombie">
+				<property name="category" value="ImmuneZombies"/>
+				<property name="command" value="#tn_shock_rad"/>
+				<property name="title_key" value="TwitchAction_FuriousRamsayTNShockZombieRadiated"/>
+				<property name="command_key" value="TwitchAction_FuriousRamsayTNShockZombieRadiatedCommand"/>
+				<property name="description_key" value="TwitchAction_FuriousRamsayTNShockZombieRadiatedDesc"/>
+				<property name="start_gamestage" value="80"/>
+				<property name="event_name" value="spawn_FuriousRamsay_TN_ShockZombieRadiated"/>
+				<property name="default_cost" value="450"/>
+				<property name="cooldown" value="180"/>
+				<property name="enabled" value="true"/>
+				<property name="special_only" value="false"/>
+			</action>
+			
+			<action name="TwitchAction_FuriousRamsayTNFireZombie" extends="twitch_normalZombie">
+				<property name="category" value="ImmuneZombies"/>
+				<property name="command" value="#tn_fire"/>
+				<property name="title_key" value="TwitchAction_FuriousRamsayTNFireZombie"/>
+				<property name="command_key" value="TwitchAction_FuriousRamsayTNFireZombieCommand"/>
+				<property name="description_key" value="TwitchAction_FuriousRamsayTNFireZombieDesc"/>
+				<property name="start_gamestage" value="30"/>
+				<property name="event_name" value="spawn_FuriousRamsay_TN_FireZombie"/>
+				<property name="default_cost" value="250"/>
+				<property name="cooldown" value="120"/>
+				<property name="enabled" value="true"/>
+				<property name="special_only" value="false"/>
+			</action>
+			
+			<action name="TwitchAction_FuriousRamsayTNFireZombieFeral" extends="twitch_normalZombie">
+				<property name="category" value="ImmuneZombies"/>
+				<property name="command" value="#tn_fire_fer"/>
+				<property name="title_key" value="TwitchAction_FuriousRamsayTNFireZombieFeral"/>
+				<property name="command_key" value="TwitchAction_FuriousRamsayTNFireZombieFeralCommand"/>
+				<property name="description_key" value="TwitchAction_FuriousRamsayTNFireZombieFeralDesc"/>
+				<property name="start_gamestage" value="50"/>
+				<property name="event_name" value="spawn_FuriousRamsay_TN_FireZombieFeral"/>
+				<property name="default_cost" value="350"/>
+				<property name="cooldown" value="160"/>
+				<property name="enabled" value="true"/>
+				<property name="special_only" value="false"/>
+			</action>
+
+			<action name="TwitchAction_FuriousRamsayTNFireZombieRadiated" extends="twitch_normalZombie">
+				<property name="category" value="ImmuneZombies"/>
+				<property name="command" value="#tn_fire_rad"/>
+				<property name="title_key" value="TwitchAction_FuriousRamsayTNFireZombieRadiated"/>
+				<property name="command_key" value="TwitchAction_FuriousRamsayTNFireZombieRadiatedCommand"/>
+				<property name="description_key" value="TwitchAction_FuriousRamsayTNFireZombieRadiatedDesc"/>
+				<property name="start_gamestage" value="80"/>
+				<property name="event_name" value="spawn_FuriousRamsay_TN_FireZombieRadiated"/>
+				<property name="default_cost" value="450"/>
+				<property name="cooldown" value="180"/>
+				<property name="enabled" value="true"/>
+				<property name="special_only" value="false"/>
+			</action>
+
+			<action name="TwitchAction_FuriousRamsayTNSmokeZombie" extends="twitch_normalZombie">
+				<property name="category" value="ImmuneZombies"/>
+				<property name="command" value="#tn_smoke"/>
+				<property name="title_key" value="TwitchAction_FuriousRamsayTNSmokeZombie"/>
+				<property name="command_key" value="TwitchAction_FuriousRamsayTNSmokeZombieCommand"/>
+				<property name="description_key" value="TwitchAction_FuriousRamsayTNSmokeZombieDesc"/>
+				<property name="start_gamestage" value="30"/>
+				<property name="event_name" value="spawn_FuriousRamsay_TN_SmokeZombie"/>
+				<property name="default_cost" value="250"/>
+				<property name="cooldown" value="120"/>
+				<property name="enabled" value="true"/>
+				<property name="special_only" value="false"/>
+			</action>
+			
+			<action name="TwitchAction_FuriousRamsayTNSmokeZombieFeral" extends="twitch_normalZombie">
+				<property name="category" value="ImmuneZombies"/>
+				<property name="command" value="#tn_smoke_fer"/>
+				<property name="title_key" value="TwitchAction_FuriousRamsayTNSmokeZombieFeral"/>
+				<property name="command_key" value="TwitchAction_FuriousRamsayTNSmokeZombieFeralCommand"/>
+				<property name="description_key" value="TwitchAction_FuriousRamsayTNSmokeZombieFeralDesc"/>
+				<property name="start_gamestage" value="50"/>
+				<property name="event_name" value="spawn_FuriousRamsay_TN_SmokeZombieFeral"/>
+				<property name="default_cost" value="350"/>
+				<property name="cooldown" value="160"/>
+				<property name="enabled" value="true"/>
+				<property name="special_only" value="false"/>
+			</action>
+
+			<action name="TwitchAction_FuriousRamsayTNSmokeZombieRadiated" extends="twitch_normalZombie">
+				<property name="category" value="ImmuneZombies"/>
+				<property name="command" value="#tn_smoke_rad"/>
+				<property name="title_key" value="TwitchAction_FuriousRamsayTNSmokeZombieRadiated"/>
+				<property name="command_key" value="TwitchAction_FuriousRamsayTNSmokeZombieRadiatedCommand"/>
+				<property name="description_key" value="TwitchAction_FuriousRamsayTNSmokeZombieRadiatedDesc"/>
+				<property name="start_gamestage" value="80"/>
+				<property name="event_name" value="spawn_FuriousRamsay_TN_SmokeZombieRadiated"/>
+				<property name="default_cost" value="450"/>
+				<property name="cooldown" value="180"/>
+				<property name="enabled" value="true"/>
+				<property name="special_only" value="false"/>
+			</action>
+			
+			<action name="TwitchAction_FuriousRamsayTNFireShockZombie" extends="twitch_normalZombie">
+				<property name="category" value="ImmuneZombies"/>
+				<property name="command" value="#tn_fs"/>
+				<property name="title_key" value="TwitchAction_FuriousRamsayTNFireShockZombie"/>
+				<property name="command_key" value="TwitchAction_FuriousRamsayTNFireShockZombieCommand"/>
+				<property name="description_key" value="TwitchAction_FuriousRamsayTNFireShockZombieDesc"/>
+				<property name="start_gamestage" value="30"/>
+				<property name="event_name" value="spawn_FuriousRamsay_TN_FireShockZombie"/>
+				<property name="default_cost" value="250"/>
+				<property name="cooldown" value="120"/>
+				<property name="enabled" value="true"/>
+				<property name="special_only" value="false"/>
+			</action>
+			
+			<action name="TwitchAction_FuriousRamsayTNFireShockZombieFeral" extends="twitch_normalZombie">
+				<property name="category" value="ImmuneZombies"/>
+				<property name="command" value="#tn_fs_fer"/>
+				<property name="title_key" value="TwitchAction_FuriousRamsayTNFireShockZombieFeral"/>
+				<property name="command_key" value="TwitchAction_FuriousRamsayTNFireShockZombieFeralCommand"/>
+				<property name="description_key" value="TwitchAction_FuriousRamsayTNFireShockZombieFeralDesc"/>
+				<property name="start_gamestage" value="50"/>
+				<property name="event_name" value="spawn_FuriousRamsay_TN_FireShockZombieFeral"/>
+				<property name="default_cost" value="350"/>
+				<property name="cooldown" value="160"/>
+				<property name="enabled" value="true"/>
+				<property name="special_only" value="false"/>
+			</action>
+
+			<action name="TwitchAction_FuriousRamsayTNFireShockZombieRadiated" extends="twitch_normalZombie">
+				<property name="category" value="ImmuneZombies"/>
+				<property name="command" value="#tn_fs_rad"/>
+				<property name="title_key" value="TwitchAction_FuriousRamsayTNFireShockZombieRadiated"/>
+				<property name="command_key" value="TwitchAction_FuriousRamsayTNFireShockZombieRadiatedCommand"/>
+				<property name="description_key" value="TwitchAction_FuriousRamsayTNFireShockZombieRadiatedDesc"/>
+				<property name="start_gamestage" value="80"/>
+				<property name="event_name" value="spawn_FuriousRamsay_TN_FireShockZombieRadiated"/>
+				<property name="default_cost" value="450"/>
+				<property name="cooldown" value="180"/>
+				<property name="enabled" value="true"/>
+				<property name="special_only" value="false"/>
+			</action>
+
+			<action name="TwitchAction_FuriousRamsayTNFireShockSmokeZombie" extends="twitch_normalZombie">
+				<property name="category" value="ImmuneZombies"/>
+				<property name="command" value="#tn_fse"/>
+				<property name="title_key" value="TwitchAction_FuriousRamsayTNFireShockSmokeZombie"/>
+				<property name="command_key" value="TwitchAction_FuriousRamsayTNFireShockSmokeZombieCommand"/>
+				<property name="description_key" value="TwitchAction_FuriousRamsayTNFireShockSmokeZombieDesc"/>
+				<property name="start_gamestage" value="30"/>
+				<property name="event_name" value="spawn_FuriousRamsay_TN_FireShockSmokeZombie"/>
+				<property name="default_cost" value="250"/>
+				<property name="cooldown" value="120"/>
+				<property name="enabled" value="true"/>
+				<property name="special_only" value="false"/>
+			</action>
+			
+			<action name="TwitchAction_FuriousRamsayTNFireShockSmokeZombieFeral" extends="twitch_normalZombie">
+				<property name="category" value="ImmuneZombies"/>
+				<property name="command" value="#tn_fse_fer"/>
+				<property name="title_key" value="TwitchAction_FuriousRamsayTNFireShockSmokeZombieFeral"/>
+				<property name="command_key" value="TwitchAction_FuriousRamsayTNFireShockSmokeZombieFeralCommand"/>
+				<property name="description_key" value="TwitchAction_FuriousRamsayTNFireShockSmokeZombieFeralDesc"/>
+				<property name="start_gamestage" value="50"/>
+				<property name="event_name" value="spawn_FuriousRamsay_TN_FireShockSmokeZombieFeral"/>
+				<property name="default_cost" value="350"/>
+				<property name="cooldown" value="160"/>
+				<property name="enabled" value="true"/>
+				<property name="special_only" value="false"/>
+			</action>
+
+			<action name="TwitchAction_FuriousRamsayTNFireShockSmokeZombieRadiated" extends="twitch_normalZombie">
+				<property name="category" value="ImmuneZombies"/>
+				<property name="command" value="#tn_fse_rad"/>
+				<property name="title_key" value="TwitchAction_FuriousRamsayTNFireShockSmokeZombieRadiated"/>
+				<property name="command_key" value="TwitchAction_FuriousRamsayTNFireShockSmokeZombieRadiatedCommand"/>
+				<property name="description_key" value="TwitchAction_FuriousRamsayTNFireShockSmokeZombieRadiatedDesc"/>
+				<property name="start_gamestage" value="80"/>
+				<property name="event_name" value="spawn_FuriousRamsay_TN_FireShockSmokeZombieRadiated"/>
+				<property name="default_cost" value="450"/>
+				<property name="cooldown" value="180"/>
+				<property name="enabled" value="true"/>
+				<property name="special_only" value="false"/>
+			</action>
+
+		</append>
+
+	</Config>
