@@ -1,0 +1,94 @@
+<Config>
+
+	<append xpath="/dialogs" >
+
+		<dialog id="FuriousRamsayWanderingTrader" startstatementid="start">
+			<!-- Statements -->
+			<statement id="start" text="dialog_FuriousRamsayBlackShieldTrader_statement_start">
+				<response_entry id="shop" />
+				<response_entry id="jobsnone" />
+				<response_entry id="jobshave" />
+				<!--<response_entry id="specialjobshave" />-->
+				<response_entry id="background" />
+				<response_entry id="admin" />
+				<response_entry id="done" />
+			</statement>
+		
+			<statement id="background" text="dialog_FuriousRamsayBlackShieldTrader_statement_background">
+				<response_entry id="blackshield" />
+				<response_entry id="tradernetwork" />
+				<response_entry id="plan" />
+				<response_entry id="help" />
+			
+				<response_entry id="nevermind" />
+			</statement>
+		
+			<statement id="blackshield" text="dialog_FuriousRamsayBlackShieldTrader_statement_blackshield" nextstatementid="background" />
+			<statement id="tradernetwork" text="dialog_FuriousRamsayBlackShieldTrader_statement_tradernetwork" nextstatementid="background" />
+			<statement id="plan" text="dialog_FuriousRamsayBlackShieldTrader_statement_plan" nextstatementid="background" />
+			<statement id="help" text="dialog_FuriousRamsayBlackShieldTrader_statement_help" nextstatementid="background" />
+		
+			<statement id="currentjobs" text="dialog_trader_statement_currentjobs" nextstatementid="start" >
+				<quest_entry listindex="0" />
+				<quest_entry listindex="1" />
+				<quest_entry listindex="2" />
+				<quest_entry listindex="3" />
+				<quest_entry listindex="4" />
+				<response_entry id="nevermind" />
+			</statement>
+		
+			<statement id="nojobs" text="dialog_trader_statement_nojobs" nextstatementid="start" />
+		
+			<statement id="admin" text="dialog_trader_statement_admin">
+				<response_entry id="restock" />
+				<response_entry id="resetquests" />
+				<response_entry id="nevermind" />
+			</statement>
+		
+			<!-- Responses -->
+			<response id="shop" text="dialog_trader_response_shop">
+				<action type="Trader" id="trade" />
+			</response>
+		
+			<response id="jobsnone" text="dialog_trader_response_jobsnone" nextstatementid="nojobs" >
+				<requirement type="QuestStatus" value="InProgress" requirementtype="Hide" />
+			</response>
+			<response id="jobshave" text="dialog_trader_response_jobshave" nextstatementid="currentjobs" >
+				<requirement type="QuestStatus" value="NotStarted" requirementtype="Hide" />
+				<action type="AddJournalEntry" id="questTip" />
+			</response>
+		
+			<response id="specialjobshave" text="dialog_trader_response_specialjobshave" nextstatementid="currentjobsspecial" >
+				<requirement type="QuestStatus" value="NotStarted" requirementtype="Hide" tag="special" />
+				<requirement type="QuestsAvailable" value="special" requirementtype="Hide" />
+				<action type="AddJournalEntry" id="questTip" />
+			</response>
+		
+			<response id="background" text="dialog_trader_response_background" nextstatementid="background"/>
+		
+			<response id="blackshield" text="dialog_FuriousRamsayBlackShieldTrader_response_blackshield" nextstatementid="blackshield"/>
+			<response id="tradernetwork" text="dialog_FuriousRamsayBlackShieldTrader_response_tradernetwork" nextstatementid="tradernetwork"/>
+			<response id="plan" text="dialog_FuriousRamsayBlackShieldTrader_response_plan" nextstatementid="plan"/>
+			<response id="help" text="dialog_FuriousRamsayBlackShieldTrader_response_help" nextstatementid="help"/>
+
+			<response id="nevermind" text="dialog_trader_response_nevermind" nextstatementid="start" />
+		
+			<response id="admin" text="dialog_trader_response_admin" nextstatementid="admin" >
+				<requirement type="Admin" requirementtype="Hide" />
+			</response>
+		
+			<response id="restock" text="dialog_trader_response_restock">
+				<action type="Trader" id="restock" />
+			</response>
+		
+			<response id="resetquests" text="dialog_trader_response_resetquests">
+				<action type="Trader" id="reset_quests" />
+			</response>
+		
+			<response id="done" text="dialog_trader_response_nevermind" />
+		
+		</dialog>
+			
+	</append>
+	
+</Config>

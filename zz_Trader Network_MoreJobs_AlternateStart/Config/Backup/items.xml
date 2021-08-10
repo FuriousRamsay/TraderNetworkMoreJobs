@@ -1,0 +1,93 @@
+<Config>
+
+	<append xpath="/items">
+
+		<item name="challengeQuestNoteMaster">
+			<property name="Extends" value="questMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="qc_NoteGroupDesc"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="Stacknumber" value="1"/>
+		</item>
+
+		<item name="survivalNote">
+			<property name="Extends" value="blankNoteMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="survivalNoteDesc"/>
+			<property name="CustomIcon" value="challengeQuestMaster"/>
+		</item>
+
+		<item name="qc_leftalive">
+			<property name="Extends" value="challengeQuestNoteMaster"/>
+			<property name="DisplayType" value=""/>
+			<property name="Candrop" value="false"/>
+			<property name="Weight" value="0"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_BasicSurvivalLeftAlive"/>
+			</property>
+		</item>
+
+		<item name="qc_startertools">
+			<property name="Extends" value="challengeQuestNoteMaster"/>
+			<property name="Weight" value="50"/>
+			<property name="Weight" value="0"/>
+			<property name="Candrop" value="false"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_findstartertools"/>
+			</property>
+		</item>
+
+		<item name="qc_startersupplies">
+			<property name="Extends" value="challengeQuestNoteMaster"/>
+			<property name="Weight" value="50"/>
+			<property name="Weight" value="0"/>
+			<property name="Candrop" value="false"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_findstartersupplies"/>
+			</property>
+		</item>
+
+		<item name="qc_traderfetch01">
+			<property name="Extends" value="challengeQuestNoteMaster"/>
+			<property name="Weight" value="50"/>
+			<property name="Weight" value="0"/>
+			<property name="Candrop" value="false"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_traderfetchquest01"/>
+			</property>
+		</item>
+
+		<item name="qc_tradergohunting">
+			<property name="Extends" value="challengeQuestNoteMaster"/>
+			<property name="Weight" value="50"/>
+			<property name="Weight" value="0"/>
+			<property name="Candrop" value="false"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_tradergohunting"/>
+			</property>
+		</item>
+
+		<item name="qc_traderclearhold01">
+			<property name="Extends" value="challengeQuestNoteMaster"/>
+			<property name="Weight" value="50"/>
+			<property name="Weight" value="0"/>
+			<property name="Candrop" value="false"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_traderclearhold01"/>
+			</property>
+		</item>
+	</append>
+
+</Config>

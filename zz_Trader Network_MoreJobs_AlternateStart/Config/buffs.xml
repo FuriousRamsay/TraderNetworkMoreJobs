@@ -1,0 +1,44 @@
+<Config>
+
+		<append xpath="/buffs" >		
+
+			<buff name="VerifyFuriousRamsayWanderingTraderVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Axe/fireaxe_ironPrefab.prefab" local_offset="-0.084,0.18,0.005" local_rotation="353.36,244.38472,350.9999" parent_transform="RightHand"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Traps/hubcapPrefab" local_offset="0,0.04,0.42" local_rotation="86.00008,359,0.4" parent_transform="LeftHand"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayStarterAilments" hidden="true">
+				<duration value="1"/>
+				<effect_group>
+					<!--<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="infectionCounter" operation="set" value="0"/>-->		
+					<passive_effect name="BuffResistance" operation="base_add" value="-.26" tags="buffInfectionCatch"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInfectionCatch"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryConcussion"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffArmBroken"/>				
+					<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="$FuriousRamsayStarterAilments" operation="set" value="1"/>
+				</effect_group>
+			</buff>
+
+		</append>		
+
+		<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="FuriousRamsayStarterAilments">
+				<requirement name="!CVarCompare" cvar="$FuriousRamsayStarterAilments" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayStarterAilments"/>
+			</triggered_effect>
+
+			<!-- Wandering Trader Visuals -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayWanderingTraderVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="WanderingTrader"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayWanderingTraderVisuals"/>
+			</triggered_effect>
+
+		</append>
+		
+</Config>
+

@@ -1,0 +1,82 @@
+<Config>
+
+	<append xpath="/traders/trader_item_groups">
+
+	</append>
+
+	<append xpath="/traders">
+	
+		<!-- Wandering Trader 1, id=70 -->
+		<trader_info id="70" full_reset="true" override_buy_markup="1.6" min_inventory="20" max_inventory="40" min_items_swapped="10" max_items_swapped="30" reset_interval="1" open_time="0:00" close_time="0:00">
+			<trader_items count="all">
+				<item group="tools" count="1,2"/>
+				<item group="ammo" count="1,2"/>
+				<item group="ammoSupplies" count="1,2"/>
+				<item group="FuriousRamsayWeaponsMeleeT0-1" count="1"/>
+				<item group="FuriousRamsayWeaponsGunsT1" count="1"/>
+				<item group="FuriousRamsayWeaponsGunParts" count="1"/>
+				<item group="FuriousRamsayGroupArmorLightMixed" count="1,2"/>
+				<item group="FuriousRamsayGroupArmorHeavyMixed" count="1,2"/>
+				<item group="modAllT1SecretStash" count="1,2"/>
+				<item group="FuriousRamsayTraderArmorFire" count="1"/>
+				<item group="FuriousRamsayTraderArmorShock" count="1"/>
+				<item group="FuriousRamsayTraderEarlyVehicles" count="1" prob="0.5"/>
+			</trader_items>
+
+			<tier_items level="3000,3999" count="all"> <!-- requires Perk 3 -->
+				<!-- Bug: The count is overridden by "all" anyway so all probabilities are =1 -->
+				<item group="tools" count="1"/>
+				<item group="rareTools" count="1"/>
+				<item group="FuriousRamsayWeaponsMeleeMixed" count="1,2"/>
+				<item group="FuriousRamsayWeaponsGunsMixed" count="1,2"/>
+				<item group="ammo" count="2,4"/>
+				<item group="ammoSupplies" count="1,2"/>
+				<item group="FuriousRamsayGroupArmorHeavyMixed" count="1,2"/>
+				<item group="FuriousRamsayGroupArmorLightMixed" count="1,2"/>
+				<item group="modAllT3SecretStash" count="1,2"/>
+				<item group="FuriousRamsayTraderArmorFire" count="1"/>
+				<item group="FuriousRamsayTraderArmorShock" count="1"/>
+				<item group="FuriousRamsayTraderArmorFireShock" count="1"/>
+				<item group="FuriousRamsayTraderLaterVehicles" count="1" prob="0.5"/>
+			</tier_items>
+
+			<tier_items level="4000,4999" count="all"> <!-- requires Perk 4 -->
+				<item group="tools" count="1,2"/>
+				<item group="rareTools" count="1,2"/>
+				<item group="FuriousRamsayWeaponsMeleeMixed" count="2,3"/>
+				<item group="FuriousRamsayWeaponsGunsMixed" count="2,3"/>
+				<item group="ammo" count="2,4"/>
+				<item group="FuriousRamsayGroupArmorHeavyT2" count="1,2"/>
+				<item group="FuriousRamsayGroupArmorLightT2" count="1,2"/>
+				<item group="FuriousRamsayWeaponsGunsT3" count="1,2"/>
+				<item group="modAllT4SecretStash" count="1,2"/>
+				<item group="FuriousRamsayTraderArmorFire" count="1"/>
+				<item group="FuriousRamsayTraderArmorShock" count="1"/>
+				<item group="FuriousRamsayTraderArmorFireShock" count="1"/>
+				<item group="FuriousRamsayTraderArmorSmoke" count="1"/>
+				<item group="FuriousRamsayTraderLaterVehicles" count="1" prob="0.6"/>
+			</tier_items>
+
+			<tier_items level="5000,-1" count="all"> <!-- requires Perk 5 -->
+				<item group="tools" count="1,2"/>
+				<item group="rareTools" count="3,4"/>
+				<item group="FuriousRamsayWeaponsMeleeMixed" count="2,3"/>
+				<item group="FuriousRamsayWeaponsGunsMixed" count="2,3"/>
+				<item group="FuriousRamsayWeaponsGunsT2" count="1"/>
+				<item group="ammo" count="5,8"/>
+				<item group="FuriousRamsayGroupArmorHeavyT2" count="2,3"/>
+				<item group="FuriousRamsayGroupArmorLightT2" count="2,3"/>
+				<item group="FuriousRamsayWeaponsGunsT3QL5" count="1,2"/>
+				<item group="modAllT5SecretStash" count="1,4"/>
+				<item group="FuriousRamsayTraderArmorFire" count="1"/>
+				<item group="FuriousRamsayTraderArmorShock" count="1"/>
+				<item group="FuriousRamsayTraderArmorFireShock" count="1"/>
+				<item group="FuriousRamsayTraderArmorSmoke" count="1"/>
+				<item group="FuriousRamsayTraderArmorFireShockSmoke" count="1"/>
+				<item group="FuriousRamsayTraderLaterVehicles" count="1" prob="0.7"/>
+			</tier_items>
+		</trader_info>
+		
+	</append>
+
+</Config>

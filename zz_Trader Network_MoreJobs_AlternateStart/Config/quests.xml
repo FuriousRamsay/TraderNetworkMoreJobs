@@ -1,0 +1,49 @@
+<Config>
+
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival1']"/>
+
+	<append xpath="/quests">
+
+		<quest id="quest_BasicSurvival1">
+			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier1_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave1_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="easy"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayHordeTraining_offer"/>
+
+			<property name="login_rally_reset" value="true"/>
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="ZombieKill" value="6" phase="1"/>
+
+			<action type="SpawnEnemy" id="FuriousRamsayZombieArlene" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieBoe" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieJoe" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieDarlene" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieMarlene" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieYo" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieSteve" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieBusinessMan" value="1" phase="1"/>
+
+			<objective type="FetchKeep" id="apparelTShirtPlain" value="1" phase="2"/>
+			<objective type="FetchKeep" id="apparelDenimPants" value="1" phase="2"/>
+			<objective type="FetchKeep" id="apparelRunningShoesRegular" value="1" phase="2"/>
+			<objective type="Wear" id="apparelTShirtPlain" phase="2"/>
+			<objective type="Wear" id="apparelDenimPants" phase="2"/>
+			<objective type="Wear" id="apparelRunningShoesRegular" phase="2"/>
+
+			<reward type="ShowTip" value="FuriousRamsayXXX"/>
+		</quest>
+
+		<quest_list id="trader_quests_wanderingtrader">
+			<quest id="quest_FuriousRamsayTier1_Decoys" prob="1"/>
+		</quest_list>
+
+	</append>
+
+</Config>

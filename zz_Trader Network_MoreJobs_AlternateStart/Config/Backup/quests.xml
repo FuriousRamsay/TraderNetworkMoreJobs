@@ -1,0 +1,491 @@
+<Config>
+
+	<remove xpath="/quests/quest[@id='quest_BasicSurvival1']"/>
+
+<!--Icons: cntBookPile03
+			QuestMaster
+			schematicMaster
+			treasureQuestMaster
+			backpackMedium
+			cntBackpack01
+			cntBackpack03-->	
+	<append xpath="/quests/quest_items">
+		<quest_item id="3" name="questBackpack01" description_key="questSuppliesGroupDesc" icon="cntBackpack01" icon_color="255,255,255"/>
+	</append>
+
+
+<!--
+		<requirement type="Group" id="requirementGroupShotgun" value="OR" phase="1">
+			<requirement type="Holding" id="gunShotgunT1DoubleBarrel"/>
+			<requirement type="Holding" id="gunShotgunT2PumpShotgun"/>
+			<requirement type="Holding" id="gunShotgunT3AutoShotgun"/>
+		</requirement>
+
+			property name="icon"
+			ui_game_symbol_map_bed
+			ui_game_symbol_hammer
+			ui_game_symbol_tailoring
+			ui_game_symbol_shirt
+			ui_game_symbol_club
+			ui_game_symbol_archery
+			ui_game_symbol_map_house
+			ui_game_symbol_campfire
+			ui_game_symbol_map_trader
+			ui_game_symbol_knife
+			ui_game_symbol_map
+			ui_game_symbol_quest
+			ui_game_symbol_treasure
+			ui_game_symbol_loot_sack
+-->
+
+	<append xpath="/quests">
+	
+		<quest id="quest_BasicSurvival1">
+			<property name="name_key" value="quest_BasicSurvival"/>
+			<property name="subtitle_key" value="quest_checkstarterbag_subtitle"/>
+			<property name="description_key" value="quest_checkstarterbag_description"/>
+			<property name="icon" value="ui_game_symbol_loot_sack"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+			<property name="offer_key" value="quest_BasicSurvival_offer"/>
+			<property name="difficulty" value="easy"/>
+			<property name="shareable" value="false"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="BlockPlace" id="ulmContainerBagStarter" value="1" phase="1"/>
+
+			<reward type="Item" id="qc_leftalive" value="1"/>
+
+			<reward type="Item" id="meleeWpnClubT1BaseballBat" value="1"/>
+<!--			<reward type="Item" id="meleeToolAxeT1IronFireaxe" value="1"/>-->
+
+			<reward type="Item" id="qc_traderclearhold01" value="1"/>
+		</quest>
+
+		<quest id="quest_BasicSurvivalLeftAlive">
+			<property name="name_key" value="quest_checkstarterbag_subtitle"/>
+			<property name="subtitle_key" value="quest_basicsurvivalleftalive_subtitle"/>
+			<property name="description_key" value="quest_basicsurvivalleftalive_description"/>
+			<property name="icon" value="ui_game_symbol_knife"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+			<property name="offer_key" value="quest_basicsurvivalleftalive_offer"/>
+			<property name="difficulty" value="easy"/>
+			<property name="shareable" value="false"/>
+
+			<action type="TrackQuest"/>
+
+			<reward type="Quest" id="quest_BasicSurvivalWoodSpear"/>
+			<reward type="ShowTip" value="quest_basicsurvivalwoodspearnote"/>
+		</quest>
+
+		<quest id="quest_BasicSurvivalWoodSpear">
+			<property name="name_key" value="quest_craftwoodspear_subtitle"/>
+			<property name="subtitle_key" value="quest_craftwoodspear_subtitle"/>
+			<property name="description_key" value="quest_craftwoodspear_description"/>
+			<property name="icon" value="ui_game_symbol_knife"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+			<property name="offer_key" value="quest_BasicSurvival_offer"/>
+			<property name="difficulty" value="easy"/>
+			<property name="shareable" value="false"/>
+
+			<action type="TrackQuest"/>
+
+			<action type="ShowTip" value="quest_basicsurvivalwoodspearnote" phase="1">
+				<property name="delay" value="1"/>
+			</action>
+
+			<objective type="FetchKeep" id="ulmResourceBranch" value="10" phase="1"/>
+			<objective type="Craft">
+				<property name="phase" value="2"/>
+				<property name="item" value="ulmMeleeSpearWood"/>
+				<property name="count" value="1"/>
+			</objective>
+		
+			<reward type="Quest" id="quest_BasicSurvivalZombies" value="1"/>
+		</quest>
+
+		<quest id="quest_BasicSurvivalZombies">
+			<property name="name_key" value="quest_killzombies_subtitle"/>
+			<property name="subtitle_key" value="quest_killzombies_subtitle"/>
+			<property name="description_key" value="quest_killzombies_description"/>
+			<property name="icon" value="ui_game_symbol_zombie"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+			<property name="offer_key" value="quest_BasicSurvival_offer"/>
+			<property name="difficulty" value="easy"/>
+			<property name="shareable" value="false"/>
+
+			<action type="ShowTip" value="quest_basicsurvivalzombiesnote" phase="1">
+				<property name="delay" value="1"/>
+			</action>
+
+			<action type="TrackQuest"/>
+
+			<action type="SpawnEnemy" id="zombieArlene,zombieDarlene,zombieMarlene,zombieBoe,zombieJoe,zombieMoe,zombieYo" value="2" phase="2">
+				<property name="delay" value="8"/>
+			</action>
+			<objective type="ZombieKill" value="2" phase="2"/>
+		
+			<reward type="Item" id="qc_startertools" value="1"/>
+			<reward type="Item" id="apparelWornBoots" value="1" mods="dye" mod_chance="0.5" />
+			<reward type="Item" id="apparelTShirtPlain" value="1" mods="dye" mod_chance="0.5" />
+			<reward type="Item" id="apparelDenimPants" value="1" mods="dye" mod_chance="0.5" />
+			
+			<reward type="Quest" id="quest_BasicSurvivalZombiesNote" value="1"/>
+		</quest>
+
+		<quest id="quest_BasicSurvivalZombiesNote">
+			<property name="name_key" value="quest_killzombiesnote_subtitle"/>
+			<property name="subtitle_key" value="quest_killzombiesnote_subtitle"/>
+			<property name="description_key" value="quest_killzombiesnote"/>
+			<property name="icon" value="ui_game_symbol_shirt"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+			<property name="offer_key" value="quest_BasicSurvival_offer"/>
+			<property name="difficulty" value="easy"/>
+			<property name="shareable" value="false"/>
+
+			<objective type="Wear" id="apparelTShirtPlain" phase="1" />
+			<objective type="Wear" id="apparelDenimPants" phase="1" />
+			<objective type="Wear" id="apparelWornBoots" phase="1" />
+		
+			<action type="ShowTip" value="quest_killzombiesnote" phase="1">
+				<property name="delay" value="2"/>
+			</action>
+		</quest>
+
+		<quest id="quest_findstartertools">
+			<property name="name_key" value="quest_findstartertools_subtitle"/>
+			<property name="subtitle_key" value="quest_findstartertools_subtitle"/>
+			<property name="description_key" value="quest_findstartertools_description"/>
+			<property name="icon" value="ui_game_symbol_map"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+			<property name="offer_key" value="quest_findstartertools_offer"/>
+			<property name="difficulty" value="easy"/>
+			<property name="shareable" value="false"/>
+
+			<action type="ShowTip" value="quest_findstartertoolsnote" phase="1">
+				<property name="delay" value="1"/>
+			</action>
+
+			<action type="TrackQuest"/>
+
+			<objective type="Repair" id="meleeToolShovelT0StoneShovel" value="1" phase="2"/>
+
+			<objective type="TreasureChest" phase="2">
+				<property name="block" value="findScrapToolsChest"/>
+				<property name="distance" value="50-100"/>
+				<property name="default_radius" value="2"/>
+				<property name="nav_object" value="treasure" />
+				<property name="direct_nav_object" value="treasure_direct" />
+				<property name="blocks_per_reduction" value="0" />
+				<property name="radius_reduction_sound" value="ui_radius_shrink" />
+			</objective>
+		</quest>
+
+		<quest id="quest_findstartersupplies">
+			<property name="name_key" value="quest_findstartersupplies_subtitle"/>
+			<property name="subtitle_key" value="quest_findstartersupplies_subtitle"/>
+			<property name="description_key" value="quest_findstartersupplies_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="medium"/>
+			<property name="offer_key" value="quest_findstartersupplies_offer"/>
+			<property name="completiontype" value="AutoComplete"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="ClosestPOIGoto">
+				<property name="distance" value="30"/>
+				<property name="phase" value="1"/>
+			</objective>
+
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+
+			<objective type="FetchFromContainer">
+				<property name="phase" value="3"/>
+				<property name="quest_item_ID" value="3"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="nav_object" value="fetch_container" />
+			</objective>
+
+			<reward type="Exp" value="2500"/>
+			<reward type="Item" id="bedroll" value="1"/>
+			<reward type="Item" id="foodCanChili" value="1"/>
+			<reward type="Item" id="drinkJarPureMineralWater" value="1"/>
+			<reward type="Item" id="ulmMeleeClubRollingPin" value="1"/>
+			<reward type="Item" id="ulmGunKineticPistolMakarov" value="1" quality="1,10"/>
+			<reward type="Quest" id="quest_findally" value="1"/>
+		</quest>
+
+		<quest id="quest_findally">
+			<property name="name_key" value="quest_findally_subtitle"/>
+			<property name="subtitle_key" value="quest_findally_subtitle"/>
+			<property name="description_key" value="quest_findally_description"/>
+			<property name="icon" value="ui_game_symbol_map"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="easy"/>
+			<property name="shareable" value="false"/>
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_findally_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<action type="ShowTip" value="quest_findallynote" phase="1">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="Goto" id="trader" value="5" phase="1">
+				<property name="biome_filter_type" value="ExcludeBiome" />
+				<property name="biome_filter" value="wasteland" />
+				<property name="nav_object" value="go_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="return_to_trader" />
+				<property name="use_closest" value="true" />
+			</objective>
+			
+			<reward type="Exp" value="500"/>
+			<reward type="SkillPoints" value="1" chainreward="true" />
+			<reward type="Item" id="qc_traderfetch01" value="1" ischosen="true" isfixed="true"/>
+
+			<reward type="Quest" id="quest_findallyreward" value="1"/>
+		</quest>
+		
+		<quest id="quest_findallyreward">
+			<property name="name_key" value="quest_findallyrewardnote_subtitle"/>
+			<property name="subtitle_key" value="quest_findallyrewardnote_subtitle"/>
+			<property name="completiontype" value="AutoComplete"/>
+
+			<action type="ShowTip" value="quest_findallyrewardnote" phase="1">
+				<property name="delay" value="1"/>
+			</action>
+			
+			<objective type="SpendSkillPoints" value="1" phase="1" />
+		</quest>
+		
+		<quest id="quest_traderfetchquest01">
+			<property name="name_key" value="quest_traderfetchquest01_subtitle"/>
+			<property name="subtitle_key" value="quest_traderfetchquest01_subtitle"/>
+			<property name="description_key" value="quest_traderfetchquest01_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="medium"/>
+			<property name="offer_key" value="quest_traderfetchquest01_offer"/>
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_traderfetchquest01_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="ClosestPOIGoto">
+				<property name="distance" value="30"/>
+				<property name="phase" value="1"/>
+			</objective>
+
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+
+			<objective type="FetchFromContainer">
+				<property name="phase" value="3"/>
+				<property name="quest_item_ID" value="1"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="nav_object" value="fetch_container" />
+			</objective>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+			
+			<reward type="Exp" value="2500"/>
+			<reward type="Item" id="casinoCoin" value="500"/>
+			<reward type="LootItem" id="groupQuestMedical" value="1" ischosen="true" isfixed="true"/>
+			<reward type="Item" id="ammo9mmBulletBall" value="20" ischosen="true" isfixed="true"/>
+			<reward type="Quest" id="quest_traderfetchquest01reward" value="1"/>
+		</quest>
+		
+		<quest id="quest_traderfetchquest01reward">
+			<property name="completiontype" value="AutoComplete"/>
+
+			<reward type="Item" id="qc_tradergohunting" value="1"/>
+			<reward type="Item" id="survivalNote" value="1"/>
+		</quest>
+		
+		<quest id="quest_tradergohunting">
+			<property name="name_key" value="quest_tradergohunting_subtitle"/>
+			<property name="subtitle_key" value="quest_tradergohunting_subtitle"/>
+			<property name="description_key" value="quest_tradergohunting_description"/>
+			<property name="icon" value="ui_game_symbol_knife"/>
+			<property name="repeatable" value="false"/>
+			<property name="category_key" value="quest"/>
+			<property name="offer_key" value="quest_tradergohunting_offer"/>
+			<property name="difficulty" value="easy"/>
+			<property name="shareable" value="false"/>
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_tradergohunting_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="FetchKeep" id="resourceCropChrysanthemumPlant" value="10" phase="1"/>
+
+			<action type="SpawnEnemy" id="animalRabbit,animalDoe,animalChicken" value="6" phase="2">
+				<property name="delay" value="1"/>
+			</action>
+			<objective type="AnimalKill" value="3" phase="2"/>
+
+			<objective type="Craft" id="meleeWpnBladeT0BoneKnife" value="1" phase="3"/>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="1000"/>
+			<reward type="Item" id="casinoCoin" value="400"/>
+			<reward type="Item" id="drinkJarRedTeaSchematic" value="1" ischosen="true" isfixed="true"/>
+			<reward type="Item" id="ammo9mmBulletBall" value="15" ischosen="true" isfixed="true"/>
+			<reward type="Quest" id="quest_tradergohuntingreward" value="1"/>
+		</quest>
+		
+		<quest id="quest_tradergohuntingreward">
+			<property name="completiontype" value="AutoComplete"/>
+
+			<reward type="Item" id="qc_traderclearhold01" value="1"/>
+		</quest>
+
+		<quest id="quest_traderclearhold01">
+			<property name="name_key" value="quest_traderclearhold01_subtitle"/>
+			<property name="subtitle_key" value="quest_traderclearhold01_subtitle"/>
+			<property name="description_key" value="quest_traderclearhold01_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="category_key" value="quest"/>
+			<property name="offer_key" value="quest_traderclearhold01_offer"/>
+			<property name="difficulty" value="medium"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="login_rally_reset" value="true"/>
+
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_traderclearhold01_completion"/>
+
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="biome_filter_type" value="OnlyBiome" />
+				<property name="biome_filter" value="pine_forest" />
+				<property name="nav_object" value="quest" />
+			</objective>
+
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+
+			<objective type="ClearSleepers">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="sleeper_volume"/>
+			</objective>
+			<objective type="POIStayWithin">
+				<property name="phase" value="3"/>
+				<property name="radius" value="25"/>
+			</objective>
+
+			<action type="ShowTip" value="quest_traderclearhold01note" phase="4">
+				<property name="delay" value="1"/>
+			</action>
+
+			<objective type="ZombieKill" value="2" phase="4"/>
+			<objective type="POIStayWithin">
+				<property name="phase" value="4"/>
+				<property name="radius" value="25"/>
+			</objective>
+			<action type="SpawnEnemy" id="zombieBoe,zombieFemaleFat,zombieJoe,zombieJanitor,zombieMoe,zombieArlene,zombieLab,zombieDarlene,zombieMarlene,zombieYo,zombieSteve,zombieBusinessMan" value="4" phase="4">
+				<property name="delay" value="30"/>
+			</action>
+		
+			<objective type="ZombieKill" value="3" phase="5"/>
+			<objective type="POIStayWithin">
+				<property name="phase" value="5"/>
+				<property name="radius" value="25"/>
+			</objective>
+			<action type="SpawnEnemy" id="zombieBoe,zombieFemaleFat,zombieJoe,zombieJanitor,zombieMoe,zombieArlene,zombieLab,zombieUtilityWorker,zombieSkateboarder,zombieCheerleader,zombieOldTimer" value="5" phase="5"/>
+		
+			<objective type="ZombieKill" value="4" phase="6"/>
+			<objective type="POIStayWithin">
+				<property name="phase" value="6"/>
+				<property name="radius" value="25"/>
+			</objective>
+			<action type="SpawnEnemy" id="zombieBoe,zombieFemaleFat,zombieJoe,zombieJanitor,zombieMoe,zombieArlene,zombieLab,zombieUtilityWorker,zombieSkateboarder,zombieCheerleader,zombieOldTimer" value="6" phase="6"/>
+
+			<objective type="FetchFromContainer">
+				<property name="phase" value="7"/>
+				<property name="quest_item_ID" value="1"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="nav_object" value="fetch_container" />
+			</objective>
+			<objective type="POIStayWithin">
+				<property name="phase" value="7"/>
+				<property name="radius" value="25"/>
+			</objective>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="8"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="8"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="3000"/>
+			<reward type="Item" id="casinoCoin" value="800"/>
+			<reward type="SkillPoints" value="1" chainreward="true" />
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestSchematics,groupQuestMods" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestArmor,groupQuestTools,groupQuestMedical" ischosen="true" value="1"/>
+		</quest>
+	</append>
+
+	<append xpath="/quests/quest[@id='tier2_nexttrader']">
+		<reward type="SkillPoints" value="1" chainreward="true" />
+	</append>
+	<append xpath="/quests/quest[@id='tier3_nexttrader']">
+		<reward type="SkillPoints" value="1" chainreward="true" />
+	</append>
+	<append xpath="/quests/quest[@id='tier4_nexttrader']">
+		<reward type="SkillPoints" value="1" chainreward="true" />
+	</append>
+	<append xpath="/quests/quest[@id='tier5_nexttrader']">
+		<reward type="SkillPoints" value="1" chainreward="true" />
+	</append>
+	<append xpath="/quests/quest[@id='tier6_nexttrader']">
+		<reward type="SkillPoints" value="1" chainreward="true" />
+	</append>
+</Config>
