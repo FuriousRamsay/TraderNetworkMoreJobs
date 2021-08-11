@@ -9,7 +9,6 @@
 		<entity_class name="FuriousRamsayNPCWanderingTrader" extends="FuriousRamsayTraderUMATemplate">
 			<property name="Tags" value="entity,npc,human,WanderingTrader,trader"/>
 			<property name="Archetype" value="FuriousRamsayWanderingTrader"/>
-			<property name="NPCID" value="FuriousRamsayWanderingTrader"/>
 
 			<property name="SoundRandom" value=""/>
 
@@ -24,6 +23,11 @@
 			<property name="NavObject" value="FuriousRamsayWanderingTrader" />
 		
 			<property name="HandItem" value="FuriousRamsayMeleeHandWanderingTrader"/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayNPCWanderingTrader1" extends="FuriousRamsayNPCWanderingTrader">
+			<property name="NPCID" value="FuriousRamsayWanderingTrader1"/>
+
 		</entity_class>
 
 		<entity_class name="FuriousRamsayZombieArlene" extends="zombieArlene">

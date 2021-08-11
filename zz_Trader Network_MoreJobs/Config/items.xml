@@ -5254,9 +5254,7 @@
 				<property name="DamageBlock" value="20"/>
 			</property>
 			<effect_group name="FuriousRamsayHazmatMeleeHandTier1" tiered="false">
-				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-					buff="FuriousRamsayVisionGrayscale"
-					weights="1">
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="FuriousRamsayVisionGrayscale">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
 				</triggered_effect>
 			</effect_group>
