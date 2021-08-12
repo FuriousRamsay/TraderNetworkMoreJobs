@@ -23,6 +23,7 @@
 			<action type="TrackQuest"/>
 
 			<reward type="Skill" id="perkSexualTrex" value="1" stage="start"/>
+			<reward type="Skill" id="perkDaringAdventurer" value="3" stage="start"/>
 			<reward type="Item" id="ammo9mmBulletBall" value="30" stage="start"/>
 			<reward type="Item" id="meleeToolRepairT0StoneAxe" quality="1" value="1" stage="start"/>
 
@@ -88,10 +89,39 @@
 			<action type="SpawnEnemy" id="FuriousRamsayNPCSurvivalSpecialist1" value="1" phase="3"/>	
 			<action type="ShowTip" value="FuriousRamsayFoundSurvivalSpecialistNote" phase="3">
 				<property name="delay" value="1"/>
-			</action>-->
+			</action>
 
 			<objective type="InteractWithNPC">
 				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="LootItem" id="FuriousRamsayGroupQuestCookedFoodsTier1" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalLow" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestArmor" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="1"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayTraderOptionTest">
+			<property name="name_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_name"/>
+			<property name="subtitle_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_subtitle"/>
+			<property name="description_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="easy"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_offer"/>
+
+			<property name="completiontype" value="TurnIn"/>
+
+			<objective type="Time" value="1" phase="1"/>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="2"/>
 				<property name="nav_object" value="return_to_trader" />
 			</objective>
 

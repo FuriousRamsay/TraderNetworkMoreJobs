@@ -1,12 +1,12 @@
 <configs>
 
-	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">FuriousRamsayStarterPistol,FuriousRamsayStarterClub,drugPainkillers,drugHerbalAntibiotics,bedroll</set>
-	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">FuriousRamsayStarterPistol,FuriousRamsayStarterClub,drugPainkillers,drugHerbalAntibiotics,bedroll</set>
-	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">FuriousRamsayStarterPistol,FuriousRamsayStarterClub,drugPainkillers,drugHerbalAntibiotics,bedroll</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">FuriousRamsayStarterPistol,FuriousRamsayStarterClub,drugPainkillers,bedroll</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">FuriousRamsayStarterPistol,FuriousRamsayStarterClub,drugPainkillers,bedroll</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">FuriousRamsayStarterPistol,FuriousRamsayStarterClub,drugPainkillers,bedroll</set>
 
 	<append xpath="/entity_classes">		
 	
-		<entity_class name="FuriousRamsayNPCSurvivalSpecialist" extends="FuriousRamsayTraderUMATemplate">
+		<entity_class name="FuriousRamsayNPCSurvivalSpecialistMaster" extends="FuriousRamsayTraderUMATemplate">
 			<property name="Tags" value="entity,npc,human,SurvivalSpecialist,trader"/>
 			<property name="Archetype" value="FuriousRamsaySurvivalSpecialist"/>
 
@@ -16,13 +16,16 @@
 			<property name="AITarget-1" value=""/>
 
 			<property name="NavObject" value="FuriousRamsaySurvivalSpecialist" />
-			<property name="NPCID" value="FuriousRamsaySurvivalSpecialist"/>
 		
 			<property name="HandItem" value="FuriousRamsayMeleeHandSurvivalSpecialist"/>
 		</entity_class>
 
-		<entity_class name="FuriousRamsayNPCSurvivalSpecialist1" extends="FuriousRamsayNPCSurvivalSpecialist">
+		<entity_class name="FuriousRamsayNPCSurvivalSpecialist1" extends="FuriousRamsayNPCSurvivalSpecialistMaster">
 			<property name="NPCID" value="FuriousRamsaySurvivalSpecialist1"/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayNPCSurvivalSpecialist" extends="FuriousRamsayNPCSurvivalSpecialistMaster">
+			<property name="NPCID" value="FuriousRamsaySurvivalSpecialist"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayZombieArlene" extends="zombieArlene">
