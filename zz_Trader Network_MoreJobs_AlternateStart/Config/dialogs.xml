@@ -2,7 +2,7 @@
 
 	<append xpath="/dialogs" >
 
-		<dialog id="FuriousRamsayWanderingTrader" startstatementid="start">
+		<dialog id="FuriousRamsaySurvivalSpecialist" startstatementid="start">
 			<!-- Statements -->
 			<statement id="start" text="dialog_You'll need lots in intelligence_statement_start">
 				<response_entry id="shop" />
@@ -20,9 +20,9 @@
 		
 		</dialog>
 			
-		<dialog id="FuriousRamsayWanderingTrader1" startstatementid="start">
+		<dialog id="FuriousRamsaySurvivalSpecialist1" startstatementid="start">
 			<!-- Statements -->
-			<statement id="start" text="dialog_FuriousRamsayWanderingTrader_statement_start">
+			<statement id="start" text="dialog_FuriousRamsayFuriousRamsaySurvivalSpecialist_statement_start">
 				<response_entry id="shop" />
 				<response_entry id="jobsnone" />
 				<response_entry id="jobshave" />
@@ -30,15 +30,15 @@
 				<response_entry id="done" />
 			</statement>
 		
-			<statement id="background" text="dialog_FuriousRamsayWanderingTrader_statement_background">
+			<statement id="background" text="dialog_FuriousRamsayFuriousRamsaySurvivalSpecialist_statement_background">
 				<response_entry id="blackshield" />
 				<response_entry id="tradernetwork" />
 	
 				<response_entry id="nevermind" />
 			</statement>
 		
-			<statement id="blackshield" text="dialog_FuriousRamsayWanderingTrader_statement_blackshield" nextstatementid="background" />
-			<statement id="tradernetwork" text="dialog_FuriousRamsayWanderingTrader_statement_tradernetwork" nextstatementid="background" />
+			<statement id="blackshield" text="dialog_FuriousRamsayFuriousRamsaySurvivalSpecialist_statement_blackshield" nextstatementid="background" />
+			<statement id="tradernetwork" text="dialog_FuriousRamsayFuriousRamsaySurvivalSpecialist_statement_tradernetwork" nextstatementid="background" />
 		
 			<statement id="currentjobs" text="dialog_trader_statement_currentjobs" nextstatementid="start" >
 				<quest_entry listindex="0" />
@@ -65,8 +65,8 @@
 		
 			<response id="background" text="dialog_trader_response_background" nextstatementid="background"/>
 		
-			<response id="blackshield" text="dialog_FuriousRamsayWanderingTrader_response_blackshield" nextstatementid="blackshield"/>
-			<response id="tradernetwork" text="dialog_FuriousRamsayWanderingTrader_response_tradernetwork" nextstatementid="tradernetwork"/>
+			<response id="blackshield" text="dialog_FuriousRamsayFuriousRamsaySurvivalSpecialist_response_blackshield" nextstatementid="blackshield"/>
+			<response id="tradernetwork" text="dialog_FuriousRamsayFuriousRamsaySurvivalSpecialist_response_tradernetwork" nextstatementid="tradernetwork"/>
 
 			<response id="nevermind" text="dialog_trader_response_nevermind" nextstatementid="start" />
 				

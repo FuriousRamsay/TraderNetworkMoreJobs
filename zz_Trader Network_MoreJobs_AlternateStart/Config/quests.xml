@@ -49,6 +49,7 @@
 				<property name="delay" value="1"/>
 			</action>
 
+			<reward type="Item" id="FuriousRamsaySurvivalSpecialistMP"/>
 		</quest>
 		
 		<quest id="quest_BasicSurvival1">
@@ -85,13 +86,14 @@
 			
 			<objective type="Time" value="0" phase="3"/>
 			<action type="SpawnEnemy" id="FuriousRamsayNPCSurvivalSpecialist1" value="1" phase="3"/>	
+			<action type="ShowTip" value="FuriousRamsayFoundSurvivalSpecialistNote" phase="3">
+				<property name="delay" value="1"/>
+			</action>-->
 
 			<objective type="InteractWithNPC">
 				<property name="phase" value="4"/>
 				<property name="nav_object" value="return_to_trader" />
 			</objective>
-
-			<!--<reward type="ShowTip" value="FuriousRamsayFoundSurvivalSpecialistNote"/>-->
 
 			<reward type="LootItem" id="FuriousRamsayGroupQuestCookedFoodsTier1" ischosen="true" isfixed="true" value="1"/>
 			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalLow" ischosen="true" isfixed="true" value="1"/>
