@@ -10,95 +10,62 @@
 			<property name="description_key" value="quest_FuriousRamsayLocateShelter_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
 			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="medium"/>
 			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="quest_FuriousRamsayLocateShelter_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayLocateShelter_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayLocateShelter_response"/>
 			<property name="completiontype" value="AutoComplete"/>
+			<!--<property name="return_to_quest_giver" value="true" />-->
 
 			<action type="TrackQuest"/>
 
-			<reward type="SkillPoints" value="1" stage="start"/>
-			<reward type="Item" id="ammo9mmBulletBall" value="20" stage="start"/>
+			<reward type="Skill" id="perkSexualTrex" value="1" stage="start"/>
+			<reward type="Item" id="ammo9mmBulletBall" value="30" stage="start"/>
 			<reward type="Item" id="meleeToolRepairT0StoneAxe" quality="1" value="1" stage="start"/>
-			<objective type="SpendSkillPoints" value="1" phase="1" />
 
-			<action type="ShowTip" value="quest_FuriousRamsaySpendSkillPoint5" phase="1">
+			<action type="ShowTip" value="GotSexyTyrSkill" phase="1">
 				<property name="delay" value="0.25"/>
 			</action>
 
-			<objective type="ClosestPOIGoto">
-				<property name="distance" value="30"/>
-				<property name="phase" value="2"/>
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="nav_object" value="quest" />
 			</objective>
 
 			<objective type="RallyPoint">
-				<property name="phase" value="3"/>
+				<property name="phase" value="2"/>
 				<property name="nav_object" value="rally" />
 			</objective>
 
 			<objective type="ClearSleepers">
-				<property name="phase" value="4"/>
+				<property name="phase" value="3"/>
 				<property name="nav_object" value="sleeper_volume"/>
 			</objective>
 
-			<action type="ShowTip" value="quest_FuriousRamsaySpendSkillPoint6" phase="4">
+			<action type="ShowTip" value="quest_FuriousRamsaySpendSkillPoint6" phase="3">
 				<property name="delay" value="1"/>
 			</action>
 
 		</quest>
 		
-		<quest id="spawn_FuriousRamsaySpawnWanderingTrader1">
-			<property name="name_key" value="spawn_FuriousRamsaySpawnWanderingTrader1_name"/>
-			<property name="subtitle_key" value="spawn_FuriousRamsaySpawnWanderingTrader1_subtitle"/>
-			<property name="description_key" value="spawn_FuriousRamsaySpawnWanderingTrader1_description"/>
+		<quest id="quest_BasicSurvival1">
+			<property name="name_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_name"/>
+			<property name="subtitle_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_subtitle"/>
+			<property name="description_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
 			<property name="repeatable" value="false"/>
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="easy"/>
 			<property name="difficulty_tier" value="1"/>
-			<property name="offer_key" value="spawn_FuriousRamsaySpawnWanderingTrader1_offer"/>
-			<property name="login_rally_reset" value="true"/>
-			<property name="completion_key" value="spawn_FuriousRamsaySpawnWanderingTrader1_completion"/>
+			<property name="offer_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_offer"/>
 
 			<property name="completiontype" value="TurnIn"/>
 
-			<objective type="Time" value="10" phase="1"/>
-
-			<objective type="Time" value="0" phase="2"/>
-			<action type="SpawnEnemy" id="FuriousRamsayNPCWanderingTrader1" value="1" phase="2"/>	
-
-			<objective type="InteractWithNPC">
-				<property name="phase" value="3"/>
-				<property name="nav_object" value="return_to_trader" />
-			</objective>
-
-			<reward type="Quest" id="quest_FuriousRamsayLocateShelter" value="1"/>
-
-			<reward type="LootItem" id="FuriousRamsayGroupQuestCookedFoodsTier1" ischosen="true" isfixed="true" value="1"/>
-			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalLow" ischosen="true" isfixed="true" value="1"/>
-			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="1"/>
-			<reward type="LootItem" id="groupQuestArmor" ischosen="true" value="1"/>
-			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
-			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="1"/>
-		</quest>
-
-		<quest id="quest_BasicSurvival1">
-			<property name="name_key" value="quest_FuriousRamsayHordeTrainingTier1_name"/>
-			<property name="subtitle_key" value="quest_FuriousRamsayHordeTrainingWave1_subtitle"/>
-			<property name="description_key" value="quest_FuriousRamsayHordeTraining_description"/>
-			<property name="icon" value="ui_game_symbol_quest"/>
-			<property name="repeatable" value="false"/>
-			<property name="shareable" value="false"/>
-			<property name="category_key" value="challenge"/>
-			<property name="difficulty" value="easy"/>
-			<property name="difficulty_tier" value="1"/>
-			<property name="offer_key" value="quest_FuriousRamsayHordeTraining_offer"/>
-
-			<property name="completiontype" value="AutoComplete"/>
-
-			<objective type="ZombieKill" value="4" phase="1"/>
+			<objective type="ZombieKill" value="2" phase="1"/>
 
 			<action type="SpawnEnemy" id="FuriousRamsayZombieArlene" value="1" phase="1"/>
 			<action type="SpawnEnemy" id="FuriousRamsayZombieBoe" value="1" phase="1"/>
@@ -116,18 +83,30 @@
 			<objective type="Wear" id="apparelDenimPants" phase="2"/>
 			<objective type="Wear" id="apparelRunningShoesRegular" phase="2"/>
 			
-			<objective type="Time" value="1" phase="3"/>
+			<objective type="Time" value="0" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayNPCSurvivalSpecialist1" value="1" phase="3"/>	
 
-			<reward type="Item" id="FuriousRamsaySpawnWanderingTrader1" value="1"/>
-			<reward type="ShowTip" value="FuriousRamsayFoundWanderingTraderNote"/>
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<!--<reward type="ShowTip" value="FuriousRamsayFoundSurvivalSpecialistNote"/>-->
+
+			<reward type="LootItem" id="FuriousRamsayGroupQuestCookedFoodsTier1" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalLow" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestArmor" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="1"/>
 		</quest>
 
-		<quest_list id="trader_quests_wanderingtrader">
-			<quest id="quest_FuriousRamsayTier1_Decoys" prob="1"/>
+		<quest_list id="trader_quests_survivalspecialist">
+			<quest id="quest_FuriousRamsayLocateShelter" prob="1"/>
 		</quest_list>
 
-		<quest_list id="trader_quests_wanderingtrader1">
-			<quest id="quest_FuriousRamsayTier1_Decoys" prob="1"/>
+		<quest_list id="trader_quests_survivalspecialist1">
+			<quest id="quest_FuriousRamsayLocateShelter" prob="1"/>
 		</quest_list>
 
 	</append>

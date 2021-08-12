@@ -2,7 +2,7 @@
 
 		<append xpath="/buffs" >		
 
-			<buff name="VerifyFuriousRamsayWanderingTraderVisuals" hidden="true">	
+			<buff name="VerifyFuriousRamsaySurvivalSpecialistVisuals" hidden="true">	
 				<stack_type value="replace"/>
 				<duration value="10"/>
 				<effect_group>
@@ -33,9 +33,9 @@
 			</triggered_effect>
 
 			<!-- Wandering Trader Visuals -->
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayWanderingTraderVisuals">
-				<requirement name="EntityTagCompare" target="other" tags="WanderingTrader"/>
-				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayWanderingTraderVisuals"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsaySurvivalSpecialistVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="SurvivalSpecialist"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsaySurvivalSpecialistVisuals"/>
 			</triggered_effect>
 
 		</append>

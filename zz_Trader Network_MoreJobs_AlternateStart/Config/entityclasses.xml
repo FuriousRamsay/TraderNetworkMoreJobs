@@ -6,28 +6,23 @@
 
 	<append xpath="/entity_classes">		
 	
-		<entity_class name="FuriousRamsayNPCWanderingTrader" extends="FuriousRamsayTraderUMATemplate">
-			<property name="Tags" value="entity,npc,human,WanderingTrader,trader"/>
-			<property name="Archetype" value="FuriousRamsayWanderingTrader"/>
+		<entity_class name="FuriousRamsayNPCSurvivalSpecialist" extends="FuriousRamsayTraderUMATemplate">
+			<property name="Tags" value="entity,npc,human,SurvivalSpecialist,trader"/>
+			<property name="Archetype" value="FuriousRamsaySurvivalSpecialist"/>
 
 			<property name="SoundRandom" value=""/>
 
-			<property name="AITask-1" value="Territorial"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,30"/>
-			<property name="AITask-3" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAlive"/>
-			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,0,0,EntityZombie,0,0"/>
-			<property name="AITarget-4" value=""/>
+			<property name="AITask-1" value=""/>
+			<property name="AITarget-1" value=""/>
 
-			<property name="NavObject" value="FuriousRamsayWanderingTrader" />
+			<property name="NavObject" value="FuriousRamsaySurvivalSpecialist" />
+			<property name="NPCID" value="FuriousRamsaySurvivalSpecialist"/>
 		
-			<property name="HandItem" value="FuriousRamsayMeleeHandWanderingTrader"/>
+			<property name="HandItem" value="FuriousRamsayMeleeHandSurvivalSpecialist"/>
 		</entity_class>
 
-		<entity_class name="FuriousRamsayNPCWanderingTrader1" extends="FuriousRamsayNPCWanderingTrader">
-			<property name="NPCID" value="FuriousRamsayWanderingTrader1"/>
-
+		<entity_class name="FuriousRamsayNPCSurvivalSpecialist1" extends="FuriousRamsayNPCSurvivalSpecialist">
+			<property name="NPCID" value="FuriousRamsaySurvivalSpecialist1"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayZombieArlene" extends="zombieArlene">

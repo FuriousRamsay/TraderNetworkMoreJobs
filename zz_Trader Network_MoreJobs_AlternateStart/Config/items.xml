@@ -2,42 +2,39 @@
 
 	<append xpath="/items">
 
-		<item name="FuriousRamsayWanderingTraderNote">
-			<property name="CustomIconTint" value="63, 150, 51"/>
-			<property name="Extends" value="FuriousRamsaySpawnMaster"/>
+		<item name="FuriousRamsaySurvivalSpecialistSP">
+			<property name="Tags" value="trader"/>
 			<property name="CustomIcon" value="questMaster"/>
-			<property name="ItemTypeIcon" value=""/>
+			<property name="CustomIconTint" value="63, 150, 51"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="DisplayType" value="meleeTurret"/>
+			<property name="HoldType" value="73"/>
+			<property name="Meshfile" value="#Other/Items?Misc/snowballPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Weight" value="0"/>
+			<property name="CarryWeight" value="3"/>
 			<property name="Stacknumber" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="EconomicValue" value="100"/>
+			<property name="Candrop" value="true"/>
+			<effect_group tiered="false">
+			</effect_group>
 			<property class="Action0">
-				<property name="Class" value="PlaceAsBlock"/>
-				<property name="Delay" value=".5"/>
-				<property name="Blockname" value="FuriousRamsayWanderingTrader"/>
+				<property name="Class" value="SpawnTurret"/>
+				<property name="Turret" value="FuriousRamsayNPCSurvivalSpecialist"/>
+				<property name="PreviewSize" value="1.4,1.4,1.4"/>
+				<property name="Sound_start" value="password_set"/>
 			</property>
-			<property class="Action1">
-				<property name="Class" value="PlaceAsBlock"/>
-				<property name="Delay" value=".5"/>
-				<property name="Blockname" value="FuriousRamsayWanderingTrader"/>
-			</property>
-			<property name="EconomicValue" value="1250"/>
-			<effect_group name="FuriousRamsayFarmerTraderNote" tiered="false">
-				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to call on the Wandering Trader... Stay Clear"/>
+			<effect_group name="FuriousRamsaySurvivalSpecialistSP" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="40"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="80"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="40"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="200"/>
 			</effect_group>
 		</item>
 
-		<item name="FuriousRamsaySpawnWanderingTrader1">
-			<property name="DescriptionKey" value="FuriousRamsaySpawnWanderingTrader1Desc"/>
-			<property name="Extends" value="FuriousRamsayNoteMaster"/>
-			<property name="EconomicValue" value="50"/>
-			<property name="Candrop" value="true"/>
-			<property name="SellableToTrader" value="false"/>
-			<property name="TintColor" value="144, 31, 209"/>
-			<property name="CustomIconTint" value="144, 31, 209"/>
-			<property class="Action0">
-				<property name="QuestGiven" value="spawn_FuriousRamsaySpawnWanderingTrader1"/>
-			</property>
-		</item>
-
-		<item name="FuriousRamsayMeleeHandWanderingTrader">
+		<item name="FuriousRamsayMeleeHandSurvivalSpecialist">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="HoldType" value="12"/> 
