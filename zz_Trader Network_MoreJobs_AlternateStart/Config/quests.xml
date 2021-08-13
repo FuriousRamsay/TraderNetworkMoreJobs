@@ -22,7 +22,6 @@
 
 			<action type="TrackQuest"/>
 
-			<reward type="Skill" id="perkSexualTrex" value="1" stage="start"/>
 			<reward type="Skill" id="perkDaringAdventurer" value="3" stage="start"/>
 			<reward type="Item" id="ammo9mmBulletBall" value="30" stage="start"/>
 			<reward type="Item" id="meleeToolRepairT0StoneAxe" quality="1" value="1" stage="start"/>
@@ -50,7 +49,7 @@
 				<property name="delay" value="1"/>
 			</action>
 
-			<reward type="Item" id="FuriousRamsaySurvivalSpecialistMP"/>
+			<reward type="Item" id="FuriousRamsaySpawnSurvivalSpecialist"/>
 			<reward type="Quest" id="quest_FuriousRamsayPlaceSurvivalSpecialist"/>
 		</quest>
 		
@@ -67,11 +66,12 @@
 			<property name="offer_key" value="quest_FuriousRamsayPlaceSurvivalSpecialist_offer"/>
 			<property name="statement_key" value="quest_FuriousRamsayPlaceSurvivalSpecialist_statement"/>
 			<property name="response_key" value="quest_FuriousRamsayPlaceSurvivalSpecialist_response"/>
+			<property name="completion_key" value="quest_FuriousRamsayPlaceSurvivalSpecialist_completion"/>
 			<property name="completiontype" value="TurnIn"/>
 
 			<action type="TrackQuest"/>
 
-			<objective type="BlockPlace" id="FuriousRamsaySurvivalSpecialistMP" value="1" phase="1"/>
+			<objective type="BlockPlace" id="FuriousRamsaySpawnSurvivalSpecialist" value="1" phase="1"/>
 			<objective type="POIStayWithin">
 				<property name="phase" value="1"/>
 				<property name="radius" value="25"/>
@@ -101,6 +101,7 @@
 			<property name="difficulty" value="easy"/>
 			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_offer"/>
+			<property name="completion_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_completion"/>
 
 			<property name="completiontype" value="TurnIn"/>
 

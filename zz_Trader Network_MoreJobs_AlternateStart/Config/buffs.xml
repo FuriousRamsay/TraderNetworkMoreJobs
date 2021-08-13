@@ -12,6 +12,7 @@
 			</buff>
 
 			<buff name="FuriousRamsayStarterAilments" hidden="true">
+				<stack_type value="replace"/>
 				<duration value="1"/>
 				<effect_group>
 					<!--<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" target="self" cvar="infectionCounter" operation="set" value="0"/>-->		
@@ -20,6 +21,37 @@
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffInjuryConcussion"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffArmBroken"/>				
 					<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="$FuriousRamsayStarterAilments" operation="set" value="1"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayStarterVariables" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsaySexualTrexExp" operation="set" value="0"/>
+
+					<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="$FuriousRamsayStarterVariables" operation="set" value="1"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayLearnByDoing" hidden="true">	
+				<stack_type value="replace"/>
+				<effect_group>
+					<passive_effect name="PerkLevel" operation="base_add" value="1" tags="perkSexualTrex">
+						<requirement name="CVarCompare" cvar="$FuriousRamsaySexualTrexExp" operation="GTE" value="20"/>
+					</passive_effect>
+				
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="You leveled up Sexual T-Rex" >
+						<requirement name="CVarCompare" cvar="$FuriousRamsaySexualTrexExp" operation="GTE" value="20"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayLearnByDoing" hidden="true">	
+				<stack_type value="replace"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfKilledOther" cvar="$FuriousRamsaySexualTrexExp" action="ModifyCVar" operation="add" value="5"/>
+					<triggered_effect trigger="onSelfKilledOther" action="CVarLogValue" cvar="$FuriousRamsaySexualTrexExp"/>
 				</effect_group>
 			</buff>
 
@@ -32,12 +64,22 @@
 				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayStarterAilments"/>
 			</triggered_effect>
 
+			<!-- Set up Starter Variables -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="FuriousRamsayStarterVariables">
+				<requirement name="!CVarCompare" cvar="$FuriousRamsayStarterVariables" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayStarterVariables"/>
+			</triggered_effect>
+
 			<!-- Wandering Trader Visuals -->
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsaySurvivalSpecialistVisuals">
 				<requirement name="EntityTagCompare" target="other" tags="SurvivalSpecialist"/>
 				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsaySurvivalSpecialistVisuals"/>
 			</triggered_effect>
 
+			<!-- LEARN BY DOING -->
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayLearnByDoing"/>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayLearnByDoing"/>	
+			
 		</append>
 		
 </Config>

@@ -1,5 +1,11 @@
 Key,Source,Context,English
 
+FuriousRamsaySpawnSurvivalSpecialist,blocks,Block,Survival Specialist
+FuriousRamsaySpawnSurvivalSpecialistDesc,blocks,Block,"Summon the Survival Specialist.\n\nFind an area of your choice, make sure it is clear.\n\nOnce summoned, stay put until they show up or they may simply not."
+
+FuriousRamsayNPCSurvivalSpecialist1,entityclasses,Entity,Survival Specialist
+FuriousRamsayNPCSurvivalSpecialist,entityclasses,Entity,Survival Specialist
+
 attCharacterBuildName,progression,Attribute,Perception
 attCharacterBuildNameDesc,progression,Attribute,"Perception is the measure of your sensory awareness
 attCharacterBuildNameName,progression,Attribute,Attribute: Perception
@@ -19,12 +25,6 @@ FuriousRamsayFoundSurvivalSpecialistNote,Quest,Quest Info,"It looks like you're 
 FuriousRamsaySpawnSurvivalSpecialist1,items,Quest,Wandering Trader Location
 FuriousRamsaySpawnSurvivalSpecialist1Desc,items,Quest,"This note provides the location of the Wandering Trader"
 
-spawn_FuriousRamsaySpawnSurvivalSpecialist1_name,Quests,Quests,Survival Specialist
-spawn_FuriousRamsaySpawnSurvivalSpecialist1_description,Quests,Quests,"Find your way to the Survival Specialist's current location"
-spawn_FuriousRamsaySpawnSurvivalSpecialist1_subtitle,Quests,Quests,Call on the Survival Specialist
-spawn_FuriousRamsaySpawnSurvivalSpecialist1_offer,Quests,Quests,"These instructions list out how to call on the Survival Specialist.\n\nAll you have to do is wait for him to show up.\n\nDo you wish to proceed?"
-spawn_FuriousRamsaySpawnSurvivalSpecialist1_completion,Quests,Quests,"Looks like you're in need of some help.\n\nHere are a couple things for you to choose from.\n\nYou'll need some shelter, so go out and clear this spot."
-
 dialog_FuriousRamsaySurvivalSpecialist1_statement_start,Quest,Dialogs,"You look like a mess. Now what can I do for you?"
 
 dialog_FuriousRamsaySurvivalSpecialist1_statement_background,Quest,Dialogs,What would you like to know about?
@@ -41,4 +41,14 @@ quest_FuriousRamsayLocateShelter_title,Quests,Quests,Secure a New Home
 quest_FuriousRamsayLocateShelter_offer,Quests,Quests,"You need to find shelter. Why don't you clear [DECEA3]{poi.name}[-] from those zombies and I'll set up there.\n\nI'll make myself available to you whenever you feel like you need training of any sort."
 quest_FuriousRamsayLocateShelter_response,Quests,Quests,Secure a New Home ([DECEA3]{poi.distance} {poi.direction}[-])
 quest_FuriousRamsayLocateShelter_statement,Quests,Quests,Secure a New Home
-quest_FuriousRamsayLocateShelter_completion,Quests,Quests,"This area will do nicely.\n\nNow what path would you like to follow next?"
+
+quest_FuriousRamsayPlaceSurvivalSpecialist_subtitle,Quests,Quests,The Survival Specialist
+quest_FuriousRamsayPlaceSurvivalSpecialist_description,Quests,Quests,"The Survival Specialist wants me to set up in the secure home."
+quest_FuriousRamsayPlaceSurvivalSpecialist_title,Quests,Quests,The Survival Specialist
+quest_FuriousRamsayPlaceSurvivalSpecialist_completion,Quests,Quests,"This area will do nicely.\n\nNow what path would you like to follow next?"
+
+spawn_FuriousRamsaySpawnSurvivalSpecialist1_name,Quests,Quests,Survival Specialist
+spawn_FuriousRamsaySpawnSurvivalSpecialist1_description,Quests,Quests,"Find your way to the Survival Specialist's current location"
+spawn_FuriousRamsaySpawnSurvivalSpecialist1_subtitle,Quests,Quests,Call on the Survival Specialist
+spawn_FuriousRamsaySpawnSurvivalSpecialist1_offer,Quests,Quests,"These instructions list out how to call on the Survival Specialist.\n\nAll you have to do is wait for him to show up.\n\nDo you wish to proceed?"
+spawn_FuriousRamsaySpawnSurvivalSpecialist1_completion,Quests,Quests,"Looks like you're in need of some help.\n\nHere are a couple things for you to choose from.\n\nYou'll need some shelter. Select one of my jobs and secure yourself a new home."

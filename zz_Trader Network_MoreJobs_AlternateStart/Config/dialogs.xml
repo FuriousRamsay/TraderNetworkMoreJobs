@@ -23,7 +23,6 @@
 		<dialog id="FuriousRamsaySurvivalSpecialist1" startstatementid="start">
 			<!-- Statements -->
 			<statement id="start" text="dialog_FuriousRamsayFuriousRamsaySurvivalSpecialist_statement_start">
-				<response_entry id="shop" />
 				<response_entry id="jobsnone" />
 				<response_entry id="jobshave" />
 				<response_entry id="background" />
@@ -52,10 +51,6 @@
 			<statement id="nojobs" text="dialog_trader_statement_nojobs" nextstatementid="start" />
 		
 			<!-- Responses -->
-			<response id="shop" text="dialog_trader_response_shop">
-				<action type="Trader" id="trade" />
-			</response>
-		
 			<response id="jobsnone" text="dialog_trader_response_jobsnone" nextstatementid="nojobs" >
 				<requirement type="QuestStatus" value="InProgress" requirementtype="Hide" />
 			</response>
