@@ -2,70 +2,69 @@
 
 	<append xpath="/dialogs" >
 
-		<dialog id="FuriousRamsaySurvivalSpecialist" startstatementid="start">
+		<dialog id="FuriousRamsaySurvivalSpecialist" startstatementid="startStatement">
 			<!-- Statements -->
-			<statement id="start" text="dialog_You'll need lots in intelligence_statement_start">
-				<response_entry id="shop" />
-				<response_entry id="done" />
+			<statement id="startStatement" text="dialog_FuriousRamsaySurvivalSpecialist_statement_start">
+				<!--<response_entry id="shopResponse" />-->
+				<response_entry id="doneResponse" />
 			</statement>
 			
 			<!-- Responses -->
-			<response id="shop" text="dialog_trader_response_shop">
+			<response id="shopResponse" text="dialog_trader_response_shop">
 				<action type="Trader" id="trade" />
 			</response>
 		
-			<response id="nevermind" text="dialog_trader_response_nevermind" nextstatementid="start" />
+			<response id="nevermindResponse" text="dialog_trader_response_nevermind" nextstatementid="startStatement" />
 			
-			<response id="done" text="dialog_trader_response_nevermind" />
+			<response id="doneResponse" text="dialog_trader_response_nevermind" />
 		
 		</dialog>
 			
-		<dialog id="FuriousRamsaySurvivalSpecialist1" startstatementid="start">
+		<dialog id="FuriousRamsaySurvivalSpecialist1" startstatementid="startStatement">
 			<!-- Statements -->
-			<statement id="start" text="dialog_FuriousRamsayFuriousRamsaySurvivalSpecialist_statement_start">
-				<response_entry id="jobsnone" />
-				<response_entry id="jobshave" />
-				<response_entry id="background" />
-				<response_entry id="done" />
+			<statement id="startStatement" text="dialog_FuriousRamsaySurvivalSpecialist1_statement_start">
+				<response_entry id="jobsnoneResponse" />
+				<response_entry id="questionsResponse" />
+				<response_entry id="jobshaveResponse" />
+				<response_entry id="doneResponse" />
 			</statement>
 		
-			<statement id="background" text="dialog_FuriousRamsayFuriousRamsaySurvivalSpecialist_statement_background">
-				<response_entry id="blackshield" />
-				<response_entry id="tradernetwork" />
-	
-				<response_entry id="nevermind" />
+			<statement id="questionsStatement" text="dialog_FuriousRamsaySurvivalSpecialist1_statement_questions">
+				<response_entry id="whyhelpmeResponse" />
+				<!--<response_entry id="whatnowResponse" />-->
+				<response_entry id="nevermindResponse" />
 			</statement>
 		
-			<statement id="blackshield" text="dialog_FuriousRamsayFuriousRamsaySurvivalSpecialist_statement_blackshield" nextstatementid="background" />
-			<statement id="tradernetwork" text="dialog_FuriousRamsayFuriousRamsaySurvivalSpecialist_statement_tradernetwork" nextstatementid="background" />
+			<statement id="whyhelpmeStatement" text="dialog_FuriousRamsaySurvivalSpecialist1_statement_whyhelpme" nextstatementid="questionsStatement" />
+			<statement id="whatnowStatement" text="dialog_FuriousRamsaySurvivalSpecialist1_statement_whatnow" nextstatementid="questionsStatement" />
 		
-			<statement id="currentjobs" text="dialog_trader_statement_currentjobs" nextstatementid="start" >
+			<statement id="tasksStatement" text="dialog_FuriousRamsaySurvivalSpecialist1_statement_tasks" nextstatementid="startStatement" >
 				<quest_entry listindex="0" />
 				<quest_entry listindex="1" />
 				<quest_entry listindex="2" />
 				<quest_entry listindex="3" />
 				<quest_entry listindex="4" />
-				<response_entry id="nevermind" />
+				<response_entry id="nevermindResponse" />
 			</statement>
 		
-			<statement id="nojobs" text="dialog_trader_statement_nojobs" nextstatementid="start" />
+			<statement id="nojobsStatement" text="dialog_trader_statement_nojobs" nextstatementid="startStatement" />
 		
 			<!-- Responses -->
-			<response id="jobsnone" text="dialog_trader_response_jobsnone" nextstatementid="nojobs" >
+			<response id="jobsnoneResponse" text="dialog_trader_response_jobsnone" nextstatementid="nojobsStatement" >
 				<requirement type="QuestStatus" value="InProgress" requirementtype="Hide" />
 			</response>
-			<response id="jobshave" text="dialog_trader_response_jobshave" nextstatementid="currentjobs" >
+			<response id="jobshaveResponse" text="dialog_FuriousRamsaySurvivalSpecialist1_response_findshelter" nextstatementid="tasksStatement" >
 				<requirement type="QuestStatus" value="NotStarted" requirementtype="Hide" />
 			</response>
 		
-			<response id="background" text="dialog_trader_response_background" nextstatementid="background"/>
+			<response id="questionsResponse" text="dialog_FuriousRamsaySurvivalSpecialist1_response_questions" nextstatementid="questionsStatement"/>
 		
-			<response id="blackshield" text="dialog_FuriousRamsayFuriousRamsaySurvivalSpecialist_response_blackshield" nextstatementid="blackshield"/>
-			<response id="tradernetwork" text="dialog_FuriousRamsayFuriousRamsaySurvivalSpecialist_response_tradernetwork" nextstatementid="tradernetwork"/>
+			<response id="whyhelpmeResponse" text="dialog_FuriousRamsaySurvivalSpecialist1_response_whyhelpme" nextstatementid="whyhelpmeStatement"/>
+			<response id="whatnowResponse" text="dialog_FuriousRamsaySurvivalSpecialist1_response_whatnow" nextstatementid="whatnowStatement"/>
 
-			<response id="nevermind" text="dialog_trader_response_nevermind" nextstatementid="start" />
+			<response id="nevermindResponse" text="dialog_trader_response_nevermind" nextstatementid="startStatement" />
 				
-			<response id="done" text="dialog_trader_response_nevermind" />
+			<response id="doneResponse" text="dialog_trader_response_nevermind" />
 		
 		</dialog>
 
