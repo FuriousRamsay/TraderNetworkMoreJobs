@@ -2,7 +2,7 @@
 
 	<append xpath="/blocks">
 
-		<block name="uriousRamsayTraderSpawnerBlockBreak">
+		<block name="FuriousRamsayTraderSpawnerBlockBreak">
 			<property name="CreativeMode" value="None"/>
 			<property name="Extends" value="woodWeakNoUpgradeMaster"/>
 			<property name="Class" value="TrapDoor"/>
@@ -19,7 +19,7 @@
 			<property name="ShowModelOnFall" value="false"/>
 		</block>
 
-		<block name="uriousRamsayTraderSpawnerPlate">
+		<block name="FuriousRamsayTraderSpawnerPlate">
 			<property name="CreativeMode" value="None"/>
 			<property name="Extends" value="looseBoardsTrapPlate1x1"/>			
 			<property name="Material" value="Mmetal_weak"/>
@@ -32,7 +32,7 @@
 
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
-			<property name="PlantGrowing.Next" value="uriousRamsayTraderSpawnerBlockBreak"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayTraderSpawnerBlockBreak"/>
 			<property name="PlantGrowing.FertileLevel" value="0"/>
 			<property name="PlantGrowing.GrowthRate" value="0.1"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
@@ -41,6 +41,8 @@
 
 		<block name="FuriousRamsayFarmerTrader">
 			<property name="Extends" value="decoEntityClothMaster"/>
+			<property name="DisplayType" value=""/>
+			<property name="DescriptionKey" value="FuriousRamsayFarmerTraderDesc"/>
 			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
 			<property name="CustomIconTint" value="63, 150, 51"/>
 			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
@@ -49,12 +51,15 @@
 			<property name="StabilitySupport" value="false"/>
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
-			<property name="PlantGrowing.Next" value="uriousRamsayTraderSpawnerPlate"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayTraderSpawnerPlate"/>
 			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayFarmerTraderSpawner" />
 			<property name="PlantGrowing.FertileLevel" value="0"/>
 			<property name="PlantGrowing.GrowthRate" value="0.01"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<effect_group name="FuriousRamsayTrader">
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to call on the Trader... Stay Clear"/>
+			</effect_group>
 		</block>	
 		
 		<block name="FuriousRamsayFarmerTraderSpawner">
@@ -69,6 +74,8 @@
 		
 		<block name="FuriousRamsayHandymanTrader">
 			<property name="Extends" value="decoEntityClothMaster"/>
+			<property name="DisplayType" value=""/>
+			<property name="DescriptionKey" value="FuriousRamsayHandymanTraderDesc"/>
 			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
 			<property name="CustomIconTint" value="114, 145, 171"/>
 			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
@@ -77,12 +84,15 @@
 			<property name="StabilitySupport" value="false"/>
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
-			<property name="PlantGrowing.Next" value="uriousRamsayTraderSpawnerPlate"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayTraderSpawnerPlate"/>
 			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayHandymanTraderSpawner" />
 			<property name="PlantGrowing.FertileLevel" value="0"/>
 			<property name="PlantGrowing.GrowthRate" value="0.01"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<effect_group name="FuriousRamsayTrader">
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to call on the Trader... Stay Clear"/>
+			</effect_group>
 		</block>	
 		
 		<block name="FuriousRamsayHandymanTraderSpawner">
@@ -97,6 +107,8 @@
 
 		<block name="FuriousRamsayBlackShieldTrader">
 			<property name="Extends" value="decoEntityClothMaster"/>
+			<property name="DisplayType" value=""/>
+			<property name="DescriptionKey" value="FuriousRamsayBlackShieldTraderDesc"/>
 			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
 			<property name="CustomIconTint" value="200,0,0"/>
 			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
@@ -105,12 +117,15 @@
 			<property name="StabilitySupport" value="false"/>
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
-			<property name="PlantGrowing.Next" value="uriousRamsayTraderSpawnerPlate"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayTraderSpawnerPlate"/>
 			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayBlackShieldTraderSpawner" />
 			<property name="PlantGrowing.FertileLevel" value="0"/>
 			<property name="PlantGrowing.GrowthRate" value="0.01"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<effect_group name="FuriousRamsayTrader">
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="Attempting to call on the Trader... Stay Clear"/>
+			</effect_group>
 		</block>	
 		
 		<block name="FuriousRamsayBlackShieldTraderSpawner">
