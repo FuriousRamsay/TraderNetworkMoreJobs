@@ -2,11 +2,24 @@
     
 	<append xpath="/recipes">
     
+		<recipe name="FuriousRamsayDrugPrussianBluePowder" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 		<recipe name="FuriousRamsayFireZombieBonePowder" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 		<recipe name="FuriousRamsayShockZombieBonePowder" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 		<recipe name="FuriousRamsayFireShockZombieBonePowder" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 		<recipe name="FuriousRamsaySmokeZombieBonePowder" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
 		<recipe name="FuriousRamsayFireShockSmokeZombieBonePowder" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true" tags="salvageScrap"> <wildcard_forge_category /> </recipe>
+
+		<recipe name="FuriousRamsayDrugPrussianBluePowder" craft_area="chemistryStation" craft_time="3" always_unlocked="true">
+			<ingredient name="resourceScrapIron" count="25"/>
+			<ingredient name="resourceCoal" count="10"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="10"/>
+			<ingredient name="resourceCropCoffeeBeans" count="5"/>
+		</recipe>
+		
+		<recipe name="FuriousRamsayDrinkPerussianBlue" craft_area="campfire" craft_time="60" always_unlocked="true" craft_tool="toolBeaker">
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="FuriousRamsayDrugPrussianBluePowder" count="10"/>
+		</recipe>
 
 		<recipe name="FuriousRamsayZombieBodyBagPileTier1" time="1" always_unlocked="true">
 			<ingredient name="FuriousRamsayZombieBodyBag" count="5"/>

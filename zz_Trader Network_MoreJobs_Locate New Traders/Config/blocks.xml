@@ -2,19 +2,54 @@
 
 	<append xpath="/blocks">
 
-		<block name="FuriousRamsayFarmerTrader">
+		<block name="uriousRamsayTraderSpawnerBlockBreak">
 			<property name="CreativeMode" value="None"/>
-			<property name="Extends" value="decoMannequinFemale"/>
-		
+			<property name="Extends" value="woodWeakNoUpgradeMaster"/>
+			<property name="Class" value="TrapDoor"/>
+			<property name="Material" value="Mcloth"/>
 			<property name="Shape" value="New"/>
-			<property name="Model" value="plate"/>
+			<property name="Model" value="Plate"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="86"/>
+			<property name="Mesh" value="transparent"/>
+			<property name="Texture" value="285"/>
+			<property name="TriggerDelay" value="0.01"/>
+			<property name="TriggerSound" value=""/>
+			<property name="Path" value="solid"/>
+			<drop event="Fall" count="0" prob="0"/>
+			<property name="ShowModelOnFall" value="false"/>
+		</block>
+
+		<block name="uriousRamsayTraderSpawnerPlate">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="looseBoardsTrapPlate1x1"/>			
 			<property name="Material" value="Mmetal_weak"/>
 			<property name="Mesh" value="transparent"/>
 			<property name="Texture" value="285"/>
-			<property name="StabilitySupport" value="true"/>
+
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
+			<property name="Texture" value="282"/>
+
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
-			<property name="PlantGrowing.Next" value="FuriousRamsaySpawnerPlate"/>
+			<property name="PlantGrowing.Next" value="uriousRamsayTraderSpawnerBlockBreak"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="PlantGrowing.GrowthRate" value="0.1"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+		</block>
+
+		<block name="FuriousRamsayFarmerTrader">
+			<property name="Extends" value="decoEntityClothMaster"/>
+			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
+			<property name="CustomIconTint" value="63, 150, 51"/>
+			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
+			<property name="PlantGrowing.Next" value="uriousRamsayTraderSpawnerPlate"/>
 			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayFarmerTraderSpawner" />
 			<property name="PlantGrowing.FertileLevel" value="0"/>
 			<property name="PlantGrowing.GrowthRate" value="0.01"/>
@@ -24,27 +59,25 @@
 		
 		<block name="FuriousRamsayFarmerTraderSpawner">
 			<property name="CreativeMode" value="None"/>
-			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
 			<property name="Extends" value="spawnTrader"/>
+			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
 			<property name="Shape" value="ModelEntity"/>			
-			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>
 			<drop event="Fall" count="0" prob="0"/>		
 			<property name="SpawnClass" value="FuriousRamsayNPCFarmerKatieTraderReward"/>			
 		</block>
-
-		<block name="FuriousRamsayHandymanTrader">
-			<property name="CreativeMode" value="None"/>
-			<property name="Extends" value="decoMannequinFemale"/>
 		
-			<property name="Shape" value="New"/>
-			<property name="Model" value="plate"/>
-			<property name="Material" value="Mmetal_weak"/>
-			<property name="Mesh" value="transparent"/>
-			<property name="Texture" value="285"/>
-			<property name="StabilitySupport" value="true"/>
+		<block name="FuriousRamsayHandymanTrader">
+			<property name="Extends" value="decoEntityClothMaster"/>
+			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
+			<property name="CustomIconTint" value="114, 145, 171"/>
+			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="StabilitySupport" value="false"/>
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
-			<property name="PlantGrowing.Next" value="FuriousRamsaySpawnerPlate"/>
+			<property name="PlantGrowing.Next" value="uriousRamsayTraderSpawnerPlate"/>
 			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayHandymanTraderSpawner" />
 			<property name="PlantGrowing.FertileLevel" value="0"/>
 			<property name="PlantGrowing.GrowthRate" value="0.01"/>
@@ -54,27 +87,25 @@
 		
 		<block name="FuriousRamsayHandymanTraderSpawner">
 			<property name="CreativeMode" value="None"/>
-			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
 			<property name="Extends" value="spawnTrader"/>
+			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
 			<property name="Shape" value="ModelEntity"/>			
-			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>
 			<drop event="Fall" count="0" prob="0"/>		
 			<property name="SpawnClass" value="FuriousRamsayNPCHandymanLukeTraderReward"/>			
 		</block>
 
 		<block name="FuriousRamsayBlackShieldTrader">
-			<property name="CreativeMode" value="None"/>
-			<property name="Extends" value="decoMannequinFemale"/>
-		
-			<property name="Shape" value="New"/>
-			<property name="Model" value="plate"/>
-			<property name="Material" value="Mmetal_weak"/>
-			<property name="Mesh" value="transparent"/>
-			<property name="Texture" value="285"/>
-			<property name="StabilitySupport" value="true"/>
+			<property name="Extends" value="decoEntityClothMaster"/>
+			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
+			<property name="CustomIconTint" value="200,0,0"/>
+			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="StabilitySupport" value="false"/>
 			<property name="Class" value="PlantGrowing"/>
 			<property name="PlantGrowing.IsGrowOnTopEnabled" value="true"/>
-			<property name="PlantGrowing.Next" value="FuriousRamsaySpawnerPlate"/>
+			<property name="PlantGrowing.Next" value="uriousRamsayTraderSpawnerPlate"/>
 			<property name="PlantGrowing.GrowOnTop" value="FuriousRamsayBlackShieldTraderSpawner" />
 			<property name="PlantGrowing.FertileLevel" value="0"/>
 			<property name="PlantGrowing.GrowthRate" value="0.01"/>
@@ -84,10 +115,10 @@
 		
 		<block name="FuriousRamsayBlackShieldTraderSpawner">
 			<property name="CreativeMode" value="None"/>
-			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
 			<property name="Extends" value="spawnTrader"/>
+			<property name="Material" value="FuriousRamsaySpawnerMaterials"/>
 			<property name="Shape" value="ModelEntity"/>			
-			<property name="Model" value="Entities/Decor/cobwebPrefab"/>	
+			<property name="Model" value="Entities/Decor/cobwebPrefab"/>
 			<drop event="Fall" count="0" prob="0"/>		
 			<property name="SpawnClass" value="FuriousRamsayNPCBlackShieldTraderReward"/>			
 		</block>
