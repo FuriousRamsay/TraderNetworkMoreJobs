@@ -3379,19 +3379,19 @@
 						<requirement name="!EntityTagCompare" tags="player,metal,firesist"/>
 					</triggered_effect>
 
-					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-															
-					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_burning_barrel" parent_transform="Spine1" local_offset="0,-1.1,0">
 						<requirement name="EntityTagCompare" tags="player,UMA"/>
 					</triggered_effect>
 					
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
+						<requirement name="EntityTagCompare" tags="player,UMA"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
+						<requirement name="EntityTagCompare" tags="player,UMA"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="player,UMA"/>
 					</triggered_effect>
 
@@ -3476,20 +3476,20 @@
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayFireChainedAoEDamageTimer">
 						<requirement name="!EntityTagCompare" tags="player,metal,firesist"/>
 					</triggered_effect>
-
-					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-																
-					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-					
+				
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_burning_barrel" parent_transform="Spine1" local_offset="0,-1.1,0">
 						<requirement name="EntityTagCompare" tags="player,UMA"/>
 					</triggered_effect>
 					
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
+						<requirement name="EntityTagCompare" tags="player,UMA"/>
+					</triggered_effect>
+
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
+						<requirement name="EntityTagCompare" tags="player,UMA"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="player,UMA"/>
 					</triggered_effect>
 
@@ -3574,20 +3574,20 @@
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayFireChainedAoEDamageTimer">
 						<requirement name="!EntityTagCompare" tags="player,metal,firesist"/>
 					</triggered_effect>
-
-					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-																
-					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-					
+			
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_burning_barrel" parent_transform="Spine1" local_offset="0,-1.1,0">
 						<requirement name="EntityTagCompare" tags="player,UMA"/>
 					</triggered_effect>
 					
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
+						<requirement name="EntityTagCompare" tags="player,UMA"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
+						<requirement name="EntityTagCompare" tags="player,UMA"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="player,UMA"/>
 					</triggered_effect>
 
@@ -3672,20 +3672,20 @@
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayFireChainedAoEDamageTimer">
 						<requirement name="!EntityTagCompare" tags="player,metal,firesist"/>
 					</triggered_effect>
-
-					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-																	
-					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-					
+				
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_burning_barrel" parent_transform="Spine1" local_offset="0,-1.1,0">
 						<requirement name="EntityTagCompare" tags="player,UMA"/>
 					</triggered_effect>
 					
+					<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
+						<requirement name="EntityTagCompare" tags="player,UMA"/>
+					</triggered_effect>
+
 					<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
+						<requirement name="EntityTagCompare" tags="player,UMA"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel">
 						<requirement name="EntityTagCompare" tags="player,UMA"/>
 					</triggered_effect>
 
@@ -3770,15 +3770,7 @@
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayFireChainedAoEDamageTimer">
 						<requirement name="!EntityTagCompare" tags="player,metal,firesist"/>
 					</triggered_effect>
-
-					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-																	
-					<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_onFire" local_offset="0,-.2,0" parent_transform="LOD0" shape_mesh="true">
-						<requirement name="EntityTagCompare" tags="player"/>
-					</triggered_effect>
-					
+				
 					<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_burning_barrel" parent_transform="Spine1" local_offset="0,-1.1,0">
 						<requirement name="EntityTagCompare" tags="player,UMA"/>
 					</triggered_effect>
