@@ -535,19 +535,19 @@
 		</effect_group>
 	</perk>
 	
-		<perk name="perkEnforcerDamage" parent="FuriousRamsaySkillStrength" max_level="1" base_skill_point_cost="0" desc_key="perkEnforcerDamageDesc" long_desc_key="perkEnforcerDamageLongDesc">
+	<perk name="perkEnforcerDamage" parent="FuriousRamsaySkillStrength" max_level="1" base_skill_point_cost="0" desc_key="perkEnforcerDamageDesc" long_desc_key="perkEnforcerDamageLongDesc">
 		<effect_group>
 				<passive_effect name="EntityDamage" operation="perc_add" level="1" value="0.1" tags="revolver"/>
 		</effect_group>
 	</perk>
 
-<perk name="perkArtOfMiningLuckyStrike" parent="FuriousRamsaySkillStrength" max_level="1" base_skill_point_cost="0" desc_key="perkArtOfMiningLuckyStrikeDesc" long_desc_key="perkArtOfMiningLuckyStrikeLongDesc">
+	<perk name="perkArtOfMiningLuckyStrike" parent="FuriousRamsaySkillStrength" max_level="1" base_skill_point_cost="0" desc_key="perkArtOfMiningLuckyStrikeDesc" long_desc_key="perkArtOfMiningLuckyStrikeLongDesc">
 		<effect_group>
 			<passive_effect name="HarvestCount" operation="base_set" level="1" value="1" tags="artOfMiningLuckyStrikeHarvest"/>
 		</effect_group>
 	</perk>
 
-<perk name="perkArtOfMiningComplete" parent="FuriousRamsaySkillStrength" max_level="1" base_skill_point_cost="0" desc_key="perkArtOfMiningCompleteDesc" long_desc_key="perkArtOfMiningCompleteLongDesc">
+	<perk name="perkArtOfMiningComplete" parent="FuriousRamsaySkillStrength" max_level="1" base_skill_point_cost="0" desc_key="perkArtOfMiningCompleteDesc" long_desc_key="perkArtOfMiningCompleteLongDesc">
 		<effect_group>
 			<passive_effect name="BlockDamage" operation="base_add" level="1" value="10000" tags="ore">
 				<requirement name="ItemHasTags" tags="miningTool"/>
@@ -957,7 +957,7 @@
 		</effect_group>
 	</perk>
 
-<perk name="perkGreatHeistSafes" parent="FuriousRamsaySkillKnowledge" max_level="1" base_skill_point_cost="0" desc_key="perkGreatHeistSafesDesc" long_desc_key="perkGreatHeistSafesLongDesc">
+	<perk name="perkGreatHeistSafes" parent="FuriousRamsaySkillKnowledge" max_level="1" base_skill_point_cost="0" desc_key="perkGreatHeistSafesDesc" long_desc_key="perkGreatHeistSafesLongDesc">
 		<effect_group>
 			<passive_effect name="BlockDamage" operation="perc_add" level="1" value=".1" tags="safes"/>
 		</effect_group>
@@ -976,7 +976,7 @@
 		</effect_group>
 	</perk>
 
-<perk name="perkWasteTreasuresAcid" parent="FuriousRamsaySkillKnowledge" max_level="1" base_skill_point_cost="0" desc_key="perkWasteTreasuresAcidDesc" long_desc_key="perkWasteTreasuresAcidLongDesc">
+	<perk name="perkWasteTreasuresAcid" parent="FuriousRamsaySkillKnowledge" max_level="1" base_skill_point_cost="0" desc_key="perkWasteTreasuresAcidDesc" long_desc_key="perkWasteTreasuresAcidLongDesc">
 		<effect_group>
 			<passive_effect name="HarvestCount" operation="base_set" level="1" value="1" tags="WasteTreasuresAcidHarvest"/>
 		</effect_group>
@@ -988,7 +988,7 @@
 		</effect_group>
 	</perk>
 	
-		<perk name="perkArtOfMiningPallets" parent="skillArtOfMining" max_level="1" base_skill_point_cost="0" name_key="bookArtOfMiningPallets" desc_key="perkArtOfMiningPalletsDesc" long_desc_key="perkArtOfMiningPalletsLongDesc">
+		<perk name="perkArtOfMiningPallets" parent="FuriousRamsaySkillKnowledge" max_level="1" base_skill_point_cost="0" name_key="bookArtOfMiningPallets" desc_key="perkArtOfMiningPalletsDesc" long_desc_key="perkArtOfMiningPalletsLongDesc">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceRockSmallBundle,resourceWoodBundle,resourceScrapIronBundle,resourceOilShaleBundle,resourcePotassiumNitratePowderBundle,resourceLeadBundle,resourceCoalBundle"/>
 		</effect_group>
@@ -1273,13 +1273,13 @@
 		</effect_group>
 	</perk>
 
-<perk name="perkBatterUpBigHits" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkBatterUpBigHitsDesc" long_desc_key="perkBatterUpBigHitsLongDesc">
+	<perk name="perkBatterUpBigHits" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkBatterUpBigHitsDesc" long_desc_key="perkBatterUpBigHitsLongDesc">
 		<effect_group>
 				<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1" tags="perkPummelPete"/>
 		</effect_group>
 	</perk>
 
-<perk name="perkBatterUpSlowPitch" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkBatterUpSlowPitchDesc" long_desc_key="perkBatterUpSlowPitchLongDesc">
+	<perk name="perkBatterUpSlowPitch" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkBatterUpSlowPitchDesc" long_desc_key="perkBatterUpSlowPitchLongDesc">
 		<effect_group>
 			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffBatterUpSlowDown">
 				<requirement name="ItemHasTags" tags="perkPummelPete"/>
@@ -1372,13 +1372,11 @@
 	</perk>
 	
 	<perk name="perkBarBrawling1BasicMoves" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkBarBrawling1BasicMovesDesc" long_desc_key="perkBarBrawling1BasicMovesLongDesc">
-		<!-- Do 10% more damage with fists, leather, brass and spiked knuckle weapons. -->
 		<effect_group>
 			<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1" tags="perkBrawler"/>
 		</effect_group>
 	</perk>
 	<perk name="perkBarBrawling2DropABomb" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" name_key="bookBarBrawling2DropABomb" desc_key="perkBarBrawling2DropABombDesc" long_desc_key="perkBarBrawling2DropABombLongDesc">
-		<!-- Sprinting power attacks have a high chance of knocking down your opponent. -->
 		<effect_group>
 			<requirement name="ProgressionLevel" progression_name="perkBarBrawling2DropABomb" operation="Equals" value="1"/>
 			<requirement name="ItemHasTags" tags="perkBrawler"/>
@@ -1388,7 +1386,6 @@
 		</effect_group>
 	</perk>
 	<perk name="perkBarBrawling3KillerInstinct" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkBarBrawling3KillerInstinctDesc" long_desc_key="perkBarBrawling3KillerInstinctLongDesc">
-		<!-- Killer Instinct: Gain 10% damage with each kill, up to 30%. Lasts for 20 seconds. -->
 		<effect_group>
 			<requirement name="ItemHasTags" tags="perkBrawler"/>
 			<requirement name="ProgressionLevel" progression_name="perkBarBrawling3KillerInstinct" operation="Equals" value="1"/>
@@ -1396,14 +1393,12 @@
 		</effect_group>
 	</perk>
 	<perk name="perkBarBrawling4FinishingMoves" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkBarBrawling4FinishingMovesDesc" long_desc_key="perkBarBrawling4FinishingMovesLongDesc">
-		<!-- Do 20% extra damage to knocked down and stunned opponents. -->
 		<effect_group>
 			<requirement name="CVarCompare" cvar="_stunned" operation="Equals" value="1" target="other"/>
 				<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".2" tags="perkBrawler"/>
 		</effect_group>
 	</perk>
 	<perk name="perkBarBrawling5AdrenalineHealing" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkBarBrawling5AdrenalineHealingDesc" long_desc_key="perkBarBrawling5AdrenalineHealingLongDesc">
-		<!-- When in combat health recovers 1 hit point with each punch. -->
 		<effect_group>
 			<requirement name="ItemHasTags" tags="perkBrawler"/>
 			<requirement name="ProgressionLevel" progression_name="perkBarBrawling5AdrenalineHealing" operation="Equals" value="1"/>
@@ -1413,21 +1408,13 @@
 		</effect_group>
 	</perk>
 	<perk name="perkBarBrawling6RageMode" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkBarBrawling6RageModeDesc" long_desc_key="perkBarBrawling6RageModeLongDesc">
-		<!-- After getting hit attacks with fists are 25% faster & increase movement speed by 10%. -->
 		<effect_group>
 			<requirement name="ItemHasTags" tags="perkBrawler"/>
 			<requirement name="ProgressionLevel" progression_name="perkBarBrawling6RageMode" operation="Equals" value="1"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" buff="buffBarBrawling6RageMode"/>
 		</effect_group>
 	</perk>
-	<perk name="perkBarBrawling7BoozedUp" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkBarBrawling7BoozedUpDesc" long_desc_key="perkBarBrawling7BoozedUpLongDesc">
-		<effect_group>
-			<!-- Drinking beer no longer blurs your vision and your buzz lasts twice as long.
-			Effect is in buffBeer. -->
-		</effect_group>
-	</perk>
 	<perk name="perkBarBrawling8Complete" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkBarBrawling8CompleteDesc" long_desc_key="perkBarBrawling8CompleteLongDesc">
-	<!-- 7th Curse: Unleash your inner chi with this ancient martial arts technique. The 7th unarmed strike landed in a short time does 300% damage. -->
 		<effect_group>
 			<requirement name="ItemHasTags" tags="perkBrawler"/>
 			<requirement name="ProgressionLevel" progression_name="perkBarBrawling8Complete" operation="Equals" value="1"/>
@@ -1439,25 +1426,21 @@
 	</perk>
 	
 	<perk name="perkSpearHunter1Damage" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkSpearHunter1DamageDesc" long_desc_key="perkSpearHunter1DamageLongDesc">
-		<!-- Do 10% more damage with spears. -->
 		<effect_group>
 				<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1" tags="perkJavelinMaster"/>
 		</effect_group>
 	</perk>
 	<perk name="perkSpearHunter2Maintenance" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" name_key="bookSpearHunter2Maintenance" desc_key="perkSpearHunter2MaintenanceDesc" long_desc_key="perkSpearHunter2MaintenanceLongDesc">
-		<!-- Spears degrade 50% slower. -->
 		<effect_group>
 			<passive_effect name="DegradationPerUse" operation="perc_add" level="1" value="-.2" tags="perkJavelinMaster"/>
 		</effect_group>
 	</perk>
 	<perk name="perkSpearHunter3SteelSpears" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" name_key="bookSpearHunter3SteelSpears" desc_key="perkSpearHunter3SteelSpearsDesc" long_desc_key="perkSpearHunter3SteelSpearsLongDesc">
-		<!-- Craft steel spears that can penetrate armor, have high durability and do massive damage. -->
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="meleeWpnSpearT3SteelSpear"/>
 		</effect_group>
 	</perk>
 	<perk name="perkSpearHunter4StrongArm" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkSpearHunter4StrongArmDesc" long_desc_key="perkSpearHunter4StrongArmLongDesc">
-		<!-- Increase throwing range by 20%. -->
 		<effect_group>
 			<requirement name="ItemHasTags" tags="perkJavelinMaster"/>
 				<passive_effect name="ProjectileVelocity" operation="perc_add" level="1" value=".15"/>
@@ -1470,7 +1453,6 @@
 	</perk>
 	<perk name="perkSpearHunter6PuncturedLung" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkSpearHunter6PuncturedLungDesc" long_desc_key="perkSpearHunter6PuncturedLungLongDesc">
 		<effect_group>
-		<!-- perkSpearHunter6PuncturedLung, Thrown spears that hit the chest have a 50% chance to slow the target for 8 seconds. -->
 			<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffInjuryStunned03">
 				<requirement name="ItemHasTags" tags="perkJavelinMaster"/>
 				<requirement name="ProgressionLevel" progression_name="perkSpearHunter6PuncturedLung" operation="Equals" value="1"/>
@@ -1480,7 +1462,6 @@
 		</effect_group>
 	</perk>
 	<perk name="perkSpearHunter7QuickStrike" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkSpearHunter7QuickStrikeDesc" long_desc_key="perkSpearHunter7QuickStrikeLongDesc">
-		<!-- Hits scored in quick succession do 10% more damage per hit up to 30%. -->
 		<effect_group>
 			<requirement name="ItemHasTags" tags="perkJavelinMaster"/>
 			<requirement name="ProgressionLevel" progression_name="perkSpearHunter7QuickStrike" operation="Equals" value="1"/>
@@ -1489,7 +1470,6 @@
 		</effect_group>
 	</perk>
 	<perk name="perkSpearHunter8Complete" parent="FuriousRamsaySkillSavageAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkSpearHunter8CompleteDesc" long_desc_key="perkSpearHunter8CompleteLongDesc">
-		<!-- Power attacks do 50% more damage to downed targets. -->
 		<effect_group>
 			<requirement name="ItemHasTags" tags="perkJavelinMaster"/>
 			<requirement name="CVarCompare" cvar="ragdoll" operation="Equals" value="1" target="other"/>
@@ -1724,7 +1704,6 @@
 	
 	<perk name="perkSniperDamage" parent="FuriousRamsaySkillMarksmanAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkSniperDamageDesc" long_desc_key="perkSniperDamageLongDesc">
 		<effect_group>
-			<!-- effect is on the scopes -->
 		</effect_group>
 	</perk>
 	<perk name="perkSniperCripplingShot" parent="FuriousRamsaySkillMarksmanAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkSniperCripplingShotDesc" long_desc_key="perkSniperCripplingShotLongDesc">
@@ -1777,7 +1756,6 @@
 	</perk>
 	<perk name="perkSniperControlledBreathing" parent="FuriousRamsaySkillMarksmanAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkSniperControlledBreathingDesc" long_desc_key="perkSniperControlledBreathingLongDesc">
 		<effect_group>
-			<!-- effect is in buffHoldBreathAiming01 -->
 		</effect_group>
 	</perk>
 	<perk name="perkSniperAPAmmo" parent="FuriousRamsaySkillMarksmanAbilities" max_level="1" base_skill_point_cost="0" name_key="bookSniperAPAmmo" desc_key="perkSniperAPAmmoDesc" long_desc_key="perkSniperAPAmmoLongDesc">
@@ -1856,13 +1834,6 @@
 					<requirement name="RoundsInMagazine" operation="LT" value="1"/>
 				</triggered_effect>
 
-				<!-- to do
-				check balancing when mod installation works again			-->
-
-				<!-- ak47 <passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.9"/>
-				<passive_effect name="WeaponHandling" operation="base_set" value="0.7"/>-->
-				 <!-- M60 <passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.5"/>
-				<passive_effect name="WeaponHandling" operation="base_set" value="0.83"/>-->
 				<triggered_effect trigger="onSelfRangedBurstShot" action="ModifyCVar" cvar=".AutoWeaponsRecoilEffect" operation="set" value="-.015"/>
 				<triggered_effect trigger="onSelfRangedBurstShot" action="ModifyCVar" cvar=".AutoWeaponsRecoilEffect" operation="multiply" value="@.AutoWeaponsRecoilCount"/>
 
@@ -1882,10 +1853,6 @@
 			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker" buff="buffAutoWeaponsRagdoll">
 				<requirement name="ItemHasTags" tags="perkBookAutoWeapons"/>
 				<requirement name="ProgressionLevel" progression_name="perkAutoWeaponsRagdoll" operation="Equals" value="1"/>
-			<!-- to do
-			Fully automatic mode has an INCREASING CHANCE to ragdoll an enemy with each hit.
-			Ragdoll: Fully automatic mode has an increasing chance to ragdoll an enemy with each hit. -->
-
 			</triggered_effect>
 		</effect_group>
 	</perk>
@@ -2146,7 +2113,7 @@
 		</effect_group>
 	</perk>
 	
-		<perk name="perkNightStalkerStealthDamage" parent="FuriousRamsaySkillAssassinAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkNightStalkerStealthDamageDesc" long_desc_key="perkNightStalkerStealthDamageLongDesc">
+	<perk name="perkNightStalkerStealthDamage" parent="FuriousRamsaySkillAssassinAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkNightStalkerStealthDamageDesc" long_desc_key="perkNightStalkerStealthDamageLongDesc">
 		<effect_group>
 			<requirement name="IsNight"/>
 			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
@@ -2191,12 +2158,12 @@
 			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
 			<requirement name="IsSleeping" target="other"/>
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="Equals" value="1" target="other"/>
-				<passive_effect name="DamageBonus" operation="base_add" level="1" value=".5"/> <!--For UI-->
+				<passive_effect name="DamageBonus" operation="base_add" level="1" value=".5"/>
 				<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".5"/>
 		</effect_group>
 	</perk>
 
-<perk name="perkHuntingJournalWolves" parent="FuriousRamsaySkillAssassinAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkHuntingJournalWolvesDesc" long_desc_key="perkHuntingJournalWolvesLongDesc">
+	<perk name="perkHuntingJournalWolves" parent="FuriousRamsaySkillAssassinAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkHuntingJournalWolvesDesc" long_desc_key="perkHuntingJournalWolvesLongDesc">
 		<effect_group>
 			<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1">
 				<requirement name="EntityTagCompare" target="other" tags="wolf,dog"/>
@@ -2204,7 +2171,7 @@
 		</effect_group>
 	</perk>
 
-<perk name="perkRangersArrowRecovery" parent="FuriousRamsaySkillAssassinAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkRangersArrowRecoveryDesc" long_desc_key="perkRangersArrowRecoveryLongDesc">
+	<perk name="perkRangersArrowRecovery" parent="FuriousRamsaySkillAssassinAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkRangersArrowRecoveryDesc" long_desc_key="perkRangersArrowRecoveryLongDesc">
 		<effect_group>
 			<passive_effect name="ProjectileStickChance" operation="perc_add" level="1" value=".2"/>
 		</effect_group>
@@ -2216,7 +2183,6 @@
 	</perk>
 	<perk name="perkRangersCripplingShot" parent="FuriousRamsaySkillAssassinAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkRangersCripplingShotDesc" long_desc_key="perkRangersCripplingShotLongDesc">
 		<effect_group>
-			<!-- perkRangersCripplingShot, Shots to the leg with arrows slow your opponent -->
 			<requirement name="ItemHasTags" tags="perkArchery"/>
 			<requirement name="ProgressionLevel" progression_name="perkRangersCripplingShot" operation="Equals" value="1"/>
 			<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
@@ -2240,7 +2206,6 @@
 	</perk>
 	<perk name="perkRangersKnockdown" parent="FuriousRamsaySkillAssassinAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkRangersKnockdownDesc" long_desc_key="perkRangersKnockdownLongDesc">
 		<effect_group>
-		<!-- perkRangersKnockdown, Successful sneak attacks with arrows have a 20% greater chance of knocking down the target -->
 			<requirement name="ItemHasTags" tags="perkArchery"/>
 			<requirement name="ProgressionLevel" progression_name="perkRangersKnockdown" operation="Equals" value="1"/>
 			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
@@ -2348,7 +2313,6 @@
 	</perk>
 	<perk name="perkTechJunkie6BatonCharge" parent="FuriousRamsaySkillEngineerAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkTechJunkie6BatonChargeDesc" long_desc_key="perkTechJunkie6BatonChargeLongDesc">
 		<effect_group>
-			<!-- Power attacks charge stun batons faster. Effect is on meleeWpnBatonT2StunBaton -->
 		</effect_group>
 	</perk>
 	<perk name="perkTechJunkie7Hydraulics" parent="FuriousRamsaySkillEngineerAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkTechJunkie7HydraulicsDesc" long_desc_key="perkTechJunkie7HydraulicsLongDesc">
@@ -2359,15 +2323,8 @@
 			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1" value=".1" tags="turretRanged"/>
 			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1" value=".1" tags="turretRanged,deployed"/>
 		</effect_group>
-		<!--
-		also:
-				<effect_group name="deployed turret but not when held">
-					<passive_effect name="RoundsPerMinute" operation="perc_add" level="1" value="3.1" tags="perkTurrets"/>
-				</effect_group>
-		-->
 	</perk>
 	<perk name="perkTechJunkie8Complete" parent="FuriousRamsaySkillEngineerAbilities" max_level="1" base_skill_point_cost="0" name_key="bookTechJunkie8Complete" desc_key="perkTechJunkie8CompleteDesc" long_desc_key="perkTechJunkie8CompleteLongDesc">
-		<!-- Learn to bulk craft all junk turret ammo. -->
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoBundleJunkTurretRegular,ammoBundleJunkTurretShell,ammoBundleJunkTurretAP"/>
 		</effect_group>
@@ -2430,7 +2387,7 @@
 		</effect_group>
 	</perk>
 	
-		<perk name="perkGreatHeistTimedCharge" parent="FuriousRamsaySkillChemistAbilities" max_level="1" base_skill_point_cost="0" name_key="bookGreatHeistTimedCharge" desc_key="perkGreatHeistTimedChargeDesc" long_desc_key="perkGreatHeistTimedChargeLongDesc">
+	<perk name="perkGreatHeistTimedCharge" parent="FuriousRamsaySkillChemistAbilities" max_level="1" base_skill_point_cost="0" name_key="bookGreatHeistTimedCharge" desc_key="perkGreatHeistTimedChargeDesc" long_desc_key="perkGreatHeistTimedChargeLongDesc">
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="thrownTimedCharge"/>
 		</effect_group>

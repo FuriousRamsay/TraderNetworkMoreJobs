@@ -1,9 +1,11 @@
 <Config>
 
-	<!-- Extend Perks-->
-	<!--<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel/grid[@name='categories' and @cols='8']/@cols">12</set>-->
-
-	<!--<remove xpath="/windows/window[@name='windowSkillAttributeInfo']"/>-->
+	<set xpath="/windows/window[@name='windowSkillAttributeInfo']/rect[@name='content']/rect[@name='detailsBox']/sprite[@name='background']/@color">0,0,0,255</set>
+	<remove xpath="/windows/window[@name='windowSkillAttributeInfo']/rect[@name='content']/rect[@name='tableBox']/rect[@name='tableHeader']/rect[@pos='572,0']/label[@text_key='xuiSkillBuy']"/>
+	
+	<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect/rect[@name='tableHeader']/sprite[@name='background']/@color">0,0,0,255</set>
+	<remove xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect/rect[@name='tableHeader']/rect/label[@text='Cost']"/>
+	<remove xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect/rect[@name='tableHeader']/rect/label[@text='Red']"/>
 
 	<append xpath="/windows">
 	
