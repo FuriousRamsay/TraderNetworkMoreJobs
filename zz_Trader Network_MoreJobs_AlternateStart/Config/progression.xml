@@ -247,8 +247,8 @@
 	<append xpath="/progression/attributes" >
 	
 	<!-- Have to keep Fortitude as it is hard coded in the game -->
-	<!-- Is the Main Character Sheet -->
-		<attribute name="attFortitude" name_key="FuriousRamsayAttCharSheetName" desc_key="FuriousRamsayAttCharSheetDesc" icon="ui_game_symbol_character">
+	<!-- GENETICS -->
+		<attribute name="attfortitude" name_key="FuriousRamsayAttGeneticsName" desc_key="FuriousRamsayAttGeneticsDesc" icon="ui_game_symbol_intellect">
 			<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
@@ -274,7 +274,7 @@
 			</effect_group>
 		</attribute>
 
-		<attribute name="furiousramsayattsavage" name_key="FuriousRamsayAttSavageName" desc_key="FuriousRamsayAttSavageDesc" icon="ui_game_symbol_stunned">
+		<attribute name="furiousramsayattsavage" name_key="FuriousRamsayAttSavageName" desc_key="FuriousRamsayAttSavageDesc" icon="ui_game_symbol_club">
 			<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
@@ -287,20 +287,20 @@
 			<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
 
 			<effect_group>
-				<effect_description level="1" desc_key="attFortitudeRank01Desc" long_desc_key="attFortitudeRank01LongDesc"/>
-				<effect_description level="2" desc_key="attFortitudeRank02Desc" long_desc_key="attFortitudeRank02LongDesc"/>
-				<effect_description level="3" desc_key="attFortitudeRank03Desc" long_desc_key="attFortitudeRank03LongDesc"/>
-				<effect_description level="4" desc_key="attFortitudeRank04Desc" long_desc_key="attFortitudeRank04LongDesc"/>
-				<effect_description level="5" desc_key="attFortitudeRank05Desc" long_desc_key="attFortitudeRank05LongDesc"/>
-				<effect_description level="6" desc_key="attFortitudeRank06Desc" long_desc_key="attFortitudeRank06LongDesc"/>
-				<effect_description level="7" desc_key="attFortitudeRank07Desc" long_desc_key="attFortitudeRank07LongDesc"/>
-				<effect_description level="8" desc_key="attFortitudeRank08Desc" long_desc_key="attFortitudeRank08LongDesc"/>
-				<effect_description level="9" desc_key="attFortitudeRank09Desc" long_desc_key="attFortitudeRank09LongDesc"/>
-				<effect_description level="10" desc_key="attFortitudeRank10Desc" long_desc_key="attFortitudeRank10LongDesc"/>
+				<effect_description level="1" desc_key="FuriousRamsayAttSavageRank01Desc" long_desc_key="FuriousRamsayAttSavageRank01LongDesc"/>
+				<effect_description level="2" desc_key="FuriousRamsayAttSavageRank02Desc" long_desc_key="FuriousRamsayAttSavageRank02LongDesc"/>
+				<effect_description level="3" desc_key="FuriousRamsayAttSavageRank03Desc" long_desc_key="FuriousRamsayAttSavageRank03LongDesc"/>
+				<effect_description level="4" desc_key="FuriousRamsayAttSavageRank04Desc" long_desc_key="FuriousRamsayAttSavageRank04LongDesc"/>
+				<effect_description level="5" desc_key="FuriousRamsayAttSavageRank05Desc" long_desc_key="FuriousRamsayAttSavageRank05LongDesc"/>
+				<effect_description level="6" desc_key="FuriousRamsayAttSavageRank06Desc" long_desc_key="FuriousRamsayAttSavageRank06LongDesc"/>
+				<effect_description level="7" desc_key="FuriousRamsayAttSavageRank07Desc" long_desc_key="FuriousRamsayAttSavageRank07LongDesc"/>
+				<effect_description level="8" desc_key="FuriousRamsayAttSavageRank08Desc" long_desc_key="FuriousRamsayAttSavageRank08LongDesc"/>
+				<effect_description level="9" desc_key="FuriousRamsayAttSavageRank09Desc" long_desc_key="FuriousRamsayAttSavageRank09LongDesc"/>
+				<effect_description level="10" desc_key="FuriousRamsayAttSavageRank10Desc" long_desc_key="FuriousRamsayAttSavageRank10LongDesc"/>
 			</effect_group>
 		</attribute>
 
-		<attribute name="FuriousRamsayAttMarksman" name_key="FuriousRamsayAttMarksmanName" desc_key="FuriousRamsayAttMarksmanDesc" icon="ui_game_symbol_rifle">
+		<attribute name="furiousramsayattmarksman" name_key="FuriousRamsayAttMarksmanName" desc_key="FuriousRamsayAttMarksmanDesc" icon="ui_game_symbol_rifle">
 			<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
@@ -313,20 +313,20 @@
 			<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
 
 			<effect_group>
-				<effect_description level="1" desc_key="attFortitudeRank01Desc" long_desc_key="attFortitudeRank01LongDesc"/>
-				<effect_description level="2" desc_key="attFortitudeRank02Desc" long_desc_key="attFortitudeRank02LongDesc"/>
-				<effect_description level="3" desc_key="attFortitudeRank03Desc" long_desc_key="attFortitudeRank03LongDesc"/>
-				<effect_description level="4" desc_key="attFortitudeRank04Desc" long_desc_key="attFortitudeRank04LongDesc"/>
-				<effect_description level="5" desc_key="attFortitudeRank05Desc" long_desc_key="attFortitudeRank05LongDesc"/>
-				<effect_description level="6" desc_key="attFortitudeRank06Desc" long_desc_key="attFortitudeRank06LongDesc"/>
-				<effect_description level="7" desc_key="attFortitudeRank07Desc" long_desc_key="attFortitudeRank07LongDesc"/>
-				<effect_description level="8" desc_key="attFortitudeRank08Desc" long_desc_key="attFortitudeRank08LongDesc"/>
-				<effect_description level="9" desc_key="attFortitudeRank09Desc" long_desc_key="attFortitudeRank09LongDesc"/>
-				<effect_description level="10" desc_key="attFortitudeRank10Desc" long_desc_key="attFortitudeRank10LongDesc"/>
+				<effect_description level="1" desc_key="FuriousRamsayAttMarksmanRank01Desc" long_desc_key="FuriousRamsayAttMarksmanRank01LongDesc"/>
+				<effect_description level="2" desc_key="FuriousRamsayAttMarksmanRank02Desc" long_desc_key="FuriousRamsayAttMarksmanRank02LongDesc"/>
+				<effect_description level="3" desc_key="FuriousRamsayAttMarksmanRank03Desc" long_desc_key="FuriousRamsayAttMarksmanRank03LongDesc"/>
+				<effect_description level="4" desc_key="FuriousRamsayAttMarksmanRank04Desc" long_desc_key="FuriousRamsayAttMarksmanRank04LongDesc"/>
+				<effect_description level="5" desc_key="FuriousRamsayAttMarksmanRank05Desc" long_desc_key="FuriousRamsayAttMarksmanRank05LongDesc"/>
+				<effect_description level="6" desc_key="FuriousRamsayAttMarksmanRank06Desc" long_desc_key="FuriousRamsayAttMarksmanRank06LongDesc"/>
+				<effect_description level="7" desc_key="FuriousRamsayAttMarksmanRank07Desc" long_desc_key="FuriousRamsayAttMarksmanRank07LongDesc"/>
+				<effect_description level="8" desc_key="FuriousRamsayAttMarksmanRank08Desc" long_desc_key="FuriousRamsayAttMarksmanRank08LongDesc"/>
+				<effect_description level="9" desc_key="FuriousRamsayAttMarksmanRank09Desc" long_desc_key="FuriousRamsayAttMarksmanRank09LongDesc"/>
+				<effect_description level="10" desc_key="FuriousRamsayAttMarksmanRank10Desc" long_desc_key="FuriousRamsayAttMarksmanRank10LongDesc"/>
 			</effect_group>
 		</attribute>
 
-		<attribute name="FuriousRamsayAttAssassin" name_key="FuriousRamsayAttAssassinName" desc_key="FuriousRamsayAttAssassinDesc" icon="ui_game_symbol_sneak_attack">
+		<attribute name="furiousramsayattassassin" name_key="FuriousRamsayAttAssassinName" desc_key="FuriousRamsayAttAssassinDesc" icon="ui_game_symbol_sneak_attack">
 			<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
@@ -339,20 +339,20 @@
 			<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
 
 			<effect_group>
-				<effect_description level="1" desc_key="attFortitudeRank01Desc" long_desc_key="attFortitudeRank01LongDesc"/>
-				<effect_description level="2" desc_key="attFortitudeRank02Desc" long_desc_key="attFortitudeRank02LongDesc"/>
-				<effect_description level="3" desc_key="attFortitudeRank03Desc" long_desc_key="attFortitudeRank03LongDesc"/>
-				<effect_description level="4" desc_key="attFortitudeRank04Desc" long_desc_key="attFortitudeRank04LongDesc"/>
-				<effect_description level="5" desc_key="attFortitudeRank05Desc" long_desc_key="attFortitudeRank05LongDesc"/>
-				<effect_description level="6" desc_key="attFortitudeRank06Desc" long_desc_key="attFortitudeRank06LongDesc"/>
-				<effect_description level="7" desc_key="attFortitudeRank07Desc" long_desc_key="attFortitudeRank07LongDesc"/>
-				<effect_description level="8" desc_key="attFortitudeRank08Desc" long_desc_key="attFortitudeRank08LongDesc"/>
-				<effect_description level="9" desc_key="attFortitudeRank09Desc" long_desc_key="attFortitudeRank09LongDesc"/>
-				<effect_description level="10" desc_key="attFortitudeRank10Desc" long_desc_key="attFortitudeRank10LongDesc"/>
+				<effect_description level="1" desc_key="FuriousRamsayAttAssassinRank01Desc" long_desc_key="FuriousRamsayAttAssassinRank01LongDesc"/>
+				<effect_description level="2" desc_key="FuriousRamsayAttAssassinRank02Desc" long_desc_key="FuriousRamsayAttAssassinRank02LongDesc"/>
+				<effect_description level="3" desc_key="FuriousRamsayAttAssassinRank03Desc" long_desc_key="FuriousRamsayAttAssassinRank03LongDesc"/>
+				<effect_description level="4" desc_key="FuriousRamsayAttAssassinRank04Desc" long_desc_key="FuriousRamsayAttAssassinRank04LongDesc"/>
+				<effect_description level="5" desc_key="FuriousRamsayAttAssassinRank05Desc" long_desc_key="FuriousRamsayAttAssassinRank05LongDesc"/>
+				<effect_description level="6" desc_key="FuriousRamsayAttAssassinRank06Desc" long_desc_key="FuriousRamsayAttAssassinRank06LongDesc"/>
+				<effect_description level="7" desc_key="FuriousRamsayAttAssassinRank07Desc" long_desc_key="FuriousRamsayAttAssassinRank07LongDesc"/>
+				<effect_description level="8" desc_key="FuriousRamsayAttAssassinRank08Desc" long_desc_key="FuriousRamsayAttAssassinRank08LongDesc"/>
+				<effect_description level="9" desc_key="FuriousRamsayAttAssassinRank09Desc" long_desc_key="FuriousRamsayAttAssassinRank09LongDesc"/>
+				<effect_description level="10" desc_key="FuriousRamsayAttAssassinRank10Desc" long_desc_key="FuriousRamsayAttAssassinRank10LongDesc"/>
 			</effect_group>
 		</attribute>
 
-		<attribute name="FuriousRamsayAttEngineer" name_key="FuriousRamsayAttEngineerName" desc_key="FuriousRamsayAttEngineerDesc" icon="ui_game_symbol_science">
+		<attribute name="furiousramsayattengineer" name_key="FuriousRamsayAttEngineerName" desc_key="FuriousRamsayAttEngineerDesc" icon="ui_game_symbol_electric_turret">
 			<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
@@ -365,20 +365,20 @@
 			<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
 
 			<effect_group>
-				<effect_description level="1" desc_key="attFortitudeRank01Desc" long_desc_key="attFortitudeRank01LongDesc"/>
-				<effect_description level="2" desc_key="attFortitudeRank02Desc" long_desc_key="attFortitudeRank02LongDesc"/>
-				<effect_description level="3" desc_key="attFortitudeRank03Desc" long_desc_key="attFortitudeRank03LongDesc"/>
-				<effect_description level="4" desc_key="attFortitudeRank04Desc" long_desc_key="attFortitudeRank04LongDesc"/>
-				<effect_description level="5" desc_key="attFortitudeRank05Desc" long_desc_key="attFortitudeRank05LongDesc"/>
-				<effect_description level="6" desc_key="attFortitudeRank06Desc" long_desc_key="attFortitudeRank06LongDesc"/>
-				<effect_description level="7" desc_key="attFortitudeRank07Desc" long_desc_key="attFortitudeRank07LongDesc"/>
-				<effect_description level="8" desc_key="attFortitudeRank08Desc" long_desc_key="attFortitudeRank08LongDesc"/>
-				<effect_description level="9" desc_key="attFortitudeRank09Desc" long_desc_key="attFortitudeRank09LongDesc"/>
-				<effect_description level="10" desc_key="attFortitudeRank10Desc" long_desc_key="attFortitudeRank10LongDesc"/>
+				<effect_description level="1" desc_key="FuriousRamsayAttEngineerRank01Desc" long_desc_key="FuriousRamsayAttEngineerRank01LongDesc"/>
+				<effect_description level="2" desc_key="FuriousRamsayAttEngineerRank02Desc" long_desc_key="FuriousRamsayAttEngineerRank02LongDesc"/>
+				<effect_description level="3" desc_key="FuriousRamsayAttEngineerRank03Desc" long_desc_key="FuriousRamsayAttEngineerRank03LongDesc"/>
+				<effect_description level="4" desc_key="FuriousRamsayAttEngineerRank04Desc" long_desc_key="FuriousRamsayAttEngineerRank04LongDesc"/>
+				<effect_description level="5" desc_key="FuriousRamsayAttEngineerRank05Desc" long_desc_key="FuriousRamsayAttEngineerRank05LongDesc"/>
+				<effect_description level="6" desc_key="FuriousRamsayAttEngineerRank06Desc" long_desc_key="FuriousRamsayAttEngineerRank06LongDesc"/>
+				<effect_description level="7" desc_key="FuriousRamsayAttEngineerRank07Desc" long_desc_key="FuriousRamsayAttEngineerRank07LongDesc"/>
+				<effect_description level="8" desc_key="FuriousRamsayAttEngineerRank08Desc" long_desc_key="FuriousRamsayAttEngineerRank08LongDesc"/>
+				<effect_description level="9" desc_key="FuriousRamsayAttEngineerRank09Desc" long_desc_key="FuriousRamsayAttEngineerRank09LongDesc"/>
+				<effect_description level="10" desc_key="FuriousRamsayAttEngineerRank10Desc" long_desc_key="FuriousRamsayAttEngineerRank10LongDesc"/>
 			</effect_group>
 		</attribute>
 
-		<attribute name="FuriousRamsayAttChemist" name_key="FuriousRamsayAttChemistName" desc_key="FuriousRamsayAttChemistDesc" icon="ui_game_symbol_chemistry">
+		<attribute name="furiousramsayattchemist" name_key="FuriousRamsayAttChemistName" desc_key="FuriousRamsayAttChemistDesc" icon="ui_game_symbol_explosion">
 			<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
@@ -391,33 +391,507 @@
 			<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
 
 			<effect_group>
-				<effect_description level="1" desc_key="attFortitudeRank01Desc" long_desc_key="attFortitudeRank01LongDesc"/>
-				<effect_description level="2" desc_key="attFortitudeRank02Desc" long_desc_key="attFortitudeRank02LongDesc"/>
-				<effect_description level="3" desc_key="attFortitudeRank03Desc" long_desc_key="attFortitudeRank03LongDesc"/>
-				<effect_description level="4" desc_key="attFortitudeRank04Desc" long_desc_key="attFortitudeRank04LongDesc"/>
-				<effect_description level="5" desc_key="attFortitudeRank05Desc" long_desc_key="attFortitudeRank05LongDesc"/>
-				<effect_description level="6" desc_key="attFortitudeRank06Desc" long_desc_key="attFortitudeRank06LongDesc"/>
-				<effect_description level="7" desc_key="attFortitudeRank07Desc" long_desc_key="attFortitudeRank07LongDesc"/>
-				<effect_description level="8" desc_key="attFortitudeRank08Desc" long_desc_key="attFortitudeRank08LongDesc"/>
-				<effect_description level="9" desc_key="attFortitudeRank09Desc" long_desc_key="attFortitudeRank09LongDesc"/>
-				<effect_description level="10" desc_key="attFortitudeRank10Desc" long_desc_key="attFortitudeRank10LongDesc"/>
+				<effect_description level="1" desc_key="FuriousRamsayAttChemistRank01Desc" long_desc_key="FuriousRamsayAttChemistRank01LongDesc"/>
+				<effect_description level="2" desc_key="FuriousRamsayAttChemistRank02Desc" long_desc_key="FuriousRamsayAttChemistRank02LongDesc"/>
+				<effect_description level="3" desc_key="FuriousRamsayAttChemistRank03Desc" long_desc_key="FuriousRamsayAttChemistRank03LongDesc"/>
+				<effect_description level="4" desc_key="FuriousRamsayAttChemistRank04Desc" long_desc_key="FuriousRamsayAttChemistRank04LongDesc"/>
+				<effect_description level="5" desc_key="FuriousRamsayAttChemistRank05Desc" long_desc_key="FuriousRamsayAttChemistRank05LongDesc"/>
+				<effect_description level="6" desc_key="FuriousRamsayAttChemistRank06Desc" long_desc_key="FuriousRamsayAttChemistRank06LongDesc"/>
+				<effect_description level="7" desc_key="FuriousRamsayAttChemistRank07Desc" long_desc_key="FuriousRamsayAttChemistRank07LongDesc"/>
+				<effect_description level="8" desc_key="FuriousRamsayAttChemistRank08Desc" long_desc_key="FuriousRamsayAttChemistRank08LongDesc"/>
+				<effect_description level="9" desc_key="FuriousRamsayAttChemistRank09Desc" long_desc_key="FuriousRamsayAttChemistRank09LongDesc"/>
+				<effect_description level="10" desc_key="FuriousRamsayAttChemistRank10Desc" long_desc_key="FuriousRamsayAttChemistRank10LongDesc"/>
 			</effect_group>
 		</attribute>
 
 	</append>
 
 	<append xpath="/progression/skills" >
+		<skill name="FuriousRamsaySkillStrength" parent="attfortitude" name_key="FuriousRamsaySkillStrengthName" desc_key="sFuriousRamsaySkillStrengthDesc" icon=""><effect_group/></skill>
+		<skill name="FuriousRamsaySkillDexterity" parent="attfortitude" name_key="FuriousRamsaySkillDexterityName" desc_key="sFuriousRamsaySkillDexterityDesc" icon=""><effect_group/></skill>
+		<skill name="FuriousRamsaySkillConstitution" parent="attfortitude" name_key="FuriousRamsaySkillConstitutionName" desc_key="sFuriousRamsaySkillConstitutionDesc" icon=""><effect_group/></skill>
+		<skill name="FuriousRamsaySkillIntelligence" parent="attfortitude" name_key="FuriousRamsaySkillIntelligenceName" desc_key="sFuriousRamsaySkillIntelligenceDesc" icon=""><effect_group/></skill>
+		<skill name="FuriousRamsaySkillKnowledge" parent="attfortitude" name_key="FuriousRamsaySkillKnowledgeName" desc_key="sFuriousRamsaySkillKnowledgeDesc" icon=""><effect_group/></skill>
+		<skill name="FuriousRamsaySkillCharisma" parent="attfortitude" name_key="FuriousRamsaySkillCharismaName" desc_key="sFuriousRamsaySkillCharismaDesc" icon=""><effect_group/></skill>
 	
+		<skill name="FuriousRamsaySkillSavageAbilities" parent="furiousramsayattsavage" name_key="FuriousRamsaySkillSavageAbilitiesName" desc_key="sFuriousRamsaySkillSavageAbilitiesDesc" icon=""><effect_group/></skill>
+		<skill name="FuriousRamsaySkillMarksmanAbilities" parent="furiousramsayattmarksman" name_key="FuriousRamsaySkillMarksmanAbilitiesName" desc_key="sFuriousRamsaySkillMarksmanAbilitiesDesc" icon=""><effect_group/></skill>
+		<skill name="FuriousRamsaySkillAssassinAbilities" parent="furiousramsayattassassin" name_key="FuriousRamsaySkillAssassinAbilitiesName" desc_key="sFuriousRamsaySkillAssassinAbilitiesDesc" icon=""><effect_group/></skill>
+		<skill name="FuriousRamsaySkillEngineerAbilities" parent="furiousramsayattengineer" name_key="FuriousRamsaySkillEngineerAbilitiesName" desc_key="sFuriousRamsaySkillEngineerAbilitiesDesc" icon=""><effect_group/></skill>
+		<skill name="FuriousRamsaySkillChemistAbilities" parent="furiousramsayattchemist" name_key="FuriousRamsaySkillChemistAbilitiesName" desc_key="sFuriousRamsaySkillChemistAbilitiesDesc" icon=""><effect_group/></skill>
 	</append>
 
 	<append xpath="/progression/perks" >
 
+	<!-- STRENGTH -->
+	<perk name="perkPenetrator" max_level="4" parent="FuriousRamsaySkillStrength" name_key="perkPenetratorName" desc_key="perkPenetratorDesc" icon="ui_game_symbol_paint_copy_block">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="4" desc_key="FuriousRamsayReqGeneticsLevel04"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="6" desc_key="FuriousRamsayReqGeneticsLevel06"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="8" desc_key="FuriousRamsayReqGeneticsLevel08"/></level_requirements>
+		<effect_group>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4" value="-.15,-.25,-.35,-.35" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkPenetrator,perkArchery,perkJavelinMaster"/>
+
+			<passive_effect name="EntityPenetrationCount" operation="perc_add" level="2,4" value="1,3" tags="perkDeadEye"/>
+
+			<effect_description level="1" desc_key="perkPenetratorRank1Desc" long_desc_key="perkPenetratorRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkPenetratorRank2Desc" long_desc_key="perkPenetratorRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkPenetratorRank3Desc" long_desc_key="perkPenetratorRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkPenetratorRank4Desc" long_desc_key="perkPenetratorRank4LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkSalvageOperations" parent="FuriousRamsaySkillStrength" name_key="perkSalvageOperationsName" desc_key="perkSalvageOperationsDesc" icon="ui_game_symbol_scrap">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="2" desc_key="FuriousRamsayReqGeneticsLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkSalvageOperations"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolSalvageT1Wrench"/>
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-0.1,-.5" tags="salvageScrap"/><!-- does not work on scrapping -->
+
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkSalvageOperations"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkSalvageOperations"/>
+			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".2,1" tags="salvageHarvest"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value="-.1,-.4" tags="Harvesting">
+				<requirement name="HoldingItemHasTags" tags="perkSalvageOperations"/>
+			</passive_effect>
+		</effect_group>
+		<effect_group>
+
+			<effect_description level="1" desc_key="perkSalvageOperationsRank1Desc" long_desc_key="perkSalvageOperationsRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkSalvageOperationsRank2Desc" long_desc_key="perkSalvageOperationsRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkSalvageOperationsRank3Desc" long_desc_key="perkSalvageOperationsRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkSalvageOperationsRank4Desc" long_desc_key="perkSalvageOperationsRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkSalvageOperationsRank5Desc" long_desc_key="perkSalvageOperationsRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkHeavyArmor" max_level="4" parent="FuriousRamsaySkillStrength" name_key="perkHeavyArmorName" desc_key="perkHeavyArmorDesc" icon="ui_game_symbol_armor_iron">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,4" value="1,4" tags="perkHeavyArmor"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="armorIronHelmet,armorIronChest,armorIronGloves,armorIronLegs,armorIronBoots"/>
+
+			<passive_effect name="DegradationPerUse" operation="perc_add" level="0,4" value="0,-.66" tags="heavyArmorDeg"/>
+
+			<effect_description level="1" desc_key="perkHeavyArmorRank1Desc" long_desc_key="perkHeavyArmorRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkHeavyArmorRank2Desc" long_desc_key="perkHeavyArmorRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkHeavyArmorRank3Desc" long_desc_key="perkHeavyArmorRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkHeavyArmorRank4Desc" long_desc_key="perkHeavyArmorRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkHeavyArmorRank5Desc" long_desc_key="perkHeavyArmorRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkMiner69r" parent="FuriousRamsaySkillStrength" name_key="perkMiner69rName" desc_key="perkMiner69rDesc" icon="ui_game_symbol_mining">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="2" desc_key="FuriousRamsayReqGeneticsLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkMiner69r"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolRepairT1ClawHammer,meleeToolAxeT1IronFireaxe,meleeToolPickT1IronPickaxe,meleeToolShovelT1IronShovel"/>
+
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".3,1.5" tags="perkMiner69r"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkMiner69r"/>
+
+			<effect_description level="1" desc_key="perkMiner69rRank1Desc" long_desc_key="perkMiner69rRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkMiner69rRank2Desc" long_desc_key="perkMiner69rRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkMiner69rRank3Desc" long_desc_key="perkMiner69rRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkMiner69rRank4Desc" long_desc_key="perkMiner69rRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkMiner69rRank5Desc" long_desc_key="perkMiner69rRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkMotherLode" parent="FuriousRamsaySkillStrength" name_key="perkMotherLodeName" desc_key="perkMotherLodeDesc" icon="ui_game_symbol_mother_load">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="2" desc_key="FuriousRamsayReqGeneticsLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".2,1" tags="oreWoodHarvest"/>
+			<passive_effect name="PlayerExpGain" operation="perc_add" level="1,5" value="-.1,-.4" tags="Harvesting">
+				<requirement name="HoldingItemHasTags" tags="perkMiner69r"/>
+			</passive_effect>
+
+			<effect_description level="1" desc_key="perkMotherLodeRank1Desc" long_desc_key="perkMotherLodeRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkMotherLodeRank2Desc" long_desc_key="perkMotherLodeRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkMotherLodeRank3Desc" long_desc_key="perkMotherLodeRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkMotherLodeRank4Desc" long_desc_key="perkMotherLodeRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkMotherLodeRank5Desc" long_desc_key="perkMotherLodeRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<!-- DEXTERITY -->
+	<perk name="perkSexualTrex" max_level="4" parent="FuriousRamsaySkillDexterity" name_key="perkSexualTrexName" desc_key="perkSexualTrexDesc" icon="ui_game_symbol_trex">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="StaminaLoss" operation="perc_add" level="1,2,3,4" value="-.08,-.15,-.2,-.25"/>
+			<passive_effect name="StaminaLoss" operation="perc_add" level="1,2,3,4" value="-.07,-.15,-.2,-.25" tags="secondary"/>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="ItemHasTags" tags="melee"/>
+
+			<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="10">
+				<requirement name="ProgressionLevel" progression_name="perkSexualTrex" operation="Equals" value="2"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="20">
+				<requirement name="ProgressionLevel" progression_name="perkSexualTrex" operation="Equals" value="3"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="30">
+				<requirement name="ProgressionLevel" progression_name="perkSexualTrex" operation="Equals" value="4"/>
+			</triggered_effect>
+
+			<effect_description level="1" desc_key="perkSexualTrexRank1Desc" long_desc_key="perkSexualTrexRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkSexualTrexRank2Desc" long_desc_key="perkSexualTrexRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkSexualTrexRank3Desc" long_desc_key="perkSexualTrexRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkSexualTrexRank4Desc" long_desc_key="perkSexualTrexRank4LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkRuleOneCardio" max_level="3" parent="FuriousRamsaySkillDexterity" name_key="perkRuleOneCardioName" desc_key="perkRuleOneCardioDesc" icon="ui_game_symbol_cardio">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="4" desc_key="FuriousRamsayReqGeneticsLevel04"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="StaminaChangeOT" operation="perc_add" level="1,3" value="0.1,0.3" tags="running"/>
+
+			<effect_description level="1" desc_key="perkRuleOneCardioNameRank1Desc" long_desc_key="perkRuleOneCardioNameRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkRuleOneCardioNameRank2Desc" long_desc_key="perkRuleOneCardioNameRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkRuleOneCardioNameRank3Desc" long_desc_key="perkRuleOneCardioNameRank3LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkRunAndGun" max_level="3" parent="FuriousRamsaySkillDexterity" name_key="perkRunAndGunName" desc_key="perkRunandGunDesc" icon="ui_game_symbol_run_and_gun">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="4" desc_key="FuriousRamsayReqGeneticsLevel04"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="SpreadMultiplierHip" operation="perc_add" level="1,2,3" value="-.1,-.17,-.25" tags="perkGunslinger,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkTurrets,perkArchery,admin"/>
+
+			<effect_description level="1" desc_key="perkRunAndGunRank1Desc" long_desc_key="perkRunAndGunRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkRunAndGunRank2Desc" long_desc_key="perkRunAndGunRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkRunAndGunRank3Desc" long_desc_key="perkRunAndGunRank3LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkParkour" max_level="4" parent="FuriousRamsaySkillDexterity" name_key="perkParkourName" desc_key="perkParkourDesc" icon="ui_game_symbol_parkour">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="4" desc_key="FuriousRamsayReqGeneticsLevel04"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="6" desc_key="FuriousRamsayReqGeneticsLevel06"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="8" desc_key="FuriousRamsayReqGeneticsLevel08"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="JumpStrength" operation="perc_add" level="2,3,4" value=".39,.39,.75"/>
+
+			<passive_effect name="StaminaLoss" operation="perc_add" level="1,4" value="-.1,-.4" tags="jumping"/>
+
+			<effect_description level="1" desc_key="perkParkourRank1Desc" long_desc_key="perkParkourRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkParkourRank2Desc" long_desc_key="perkParkourRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkParkourRank3Desc" long_desc_key="perkParkourRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkParkourRank4Desc" long_desc_key="perkParkourRank4LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkFlurryOfBlows" max_level="3" parent="FuriousRamsaySkillDexterity" name_key="perkFlurryOfBlowsName" desc_key="perkFlurryOfBlowsDesc" icon="ui_game_symbol_knunchuck">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="4" desc_key="FuriousRamsayReqGeneticsLevel04"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+		<effect_group>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="1,2,3" value=".1,.17,.25" tags="perkFlurryOfBlows"/>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="HoldingItemHasTags" tags="perkFlurryOfBlows"/>
+			<requirement name="ProgressionLevel" progression_name="perkFlurryOfBlows" operation="Equals" value="3"/>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="30"/>
+
+			<effect_description level="1" desc_key="perkFlurryOfBlowsRank1Desc" long_desc_key="perkFlurryOfBlowsRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkFlurryOfBlowsRank2Desc" long_desc_key="perkFlurryOfBlowsRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkFlurryOfBlowsRank3Desc" long_desc_key="perkFlurryOfBlowsRank3LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkLightArmor" max_level="4" parent="FuriousRamsaySkillDexterity" name_key="perkLightArmorName" desc_key="perkLightArmorDesc" icon="ui_game_symbol_light_armor2">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,4" value="1,4" tags="perkLightArmor"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="armorLeatherHood,armorLeatherChest,armorLeatherGloves,armorLeatherPants,armorLeatherBoots"/>
+
+			<passive_effect name="DegradationPerUse" operation="perc_add" level="0,4" value="0,-.66" tags="lightArmorDeg"/>
+
+			<effect_description level="1" desc_key="perkLightArmorRank1Desc" long_desc_key="perkLightArmorRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkLightArmorRank2Desc" long_desc_key="perkLightArmorRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkLightArmorRank3Desc" long_desc_key="perkLightArmorRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkLightArmorRank4Desc" long_desc_key="perkLightArmorRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkLightArmorRank5Desc" long_desc_key="perkLightArmorRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<!-- CONSTITUTION -->
+	<perk name="perkHealingFactor" parent="FuriousRamsaySkillConstitution" name_key="perkHealingFactorName" desc_key="perkHealingFactorDesc" icon="ui_game_symbol_healing_factor">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqGeneticsLevel10"/></level_requirements>
+		<effect_group>
+			<requirement name="NotHasBuff" buff="buffStatusHungry03"/>
+			<requirement name="NotHasBuff" buff="buffStatusThirsty03"/>
+				<passive_effect name="HealthChangeOT" operation="base_add" level="1,2,3,4,5" value=".011,.022,.05,.1,.16"/>
+
+			<effect_description level="1" desc_key="perkHealingFactorRank1Desc" long_desc_key="perkHealingFactorRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkHealingFactorRank2Desc" long_desc_key="perkHealingFactorRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkHealingFactorRank3Desc" long_desc_key="perkHealingFactorRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkHealingFactorRank4Desc" long_desc_key="perkHealingFactorRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkHealingFactorRank5Desc" long_desc_key="perkHealingFactorRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkSlowMetabolism" parent="FuriousRamsaySkillConstitution" name_key="perkSlowMetabolismName" desc_key="perkSlowMetabolismDesc" icon="ui_game_symbol_stomach">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqGeneticsLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="WaterLossPerHealthPointGained" operation="perc_add" level="1,5" value="-.05,-.25"/>
+			<passive_effect name="WaterLossPerStaminaPointGained" operation="perc_add" level="1,5" value="-.05,-.25"/>
+			<passive_effect name="FoodLossPerStaminaPointGained" operation="perc_add" level="1,5" value="-.05,-.25"/>
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+
+			<effect_description level="1" desc_key="perkSlowMetabolismRank1Desc" long_desc_key="perkSlowMetabolismRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkSlowMetabolismRank2Desc" long_desc_key="perkSlowMetabolismRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkSlowMetabolismRank3Desc" long_desc_key="perkSlowMetabolismRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkSlowMetabolismRank4Desc" long_desc_key="perkSlowMetabolismRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkSlowMetabolismRank5Desc" long_desc_key="perkSlowMetabolismRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkPainTolerance" parent="FuriousRamsaySkillConstitution" name_key="perkPainToleranceName" desc_key="perkPainToleranceDesc" icon="ui_game_symbol_character">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqGeneticsLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="HealthLoss" operation="perc_subtract" level="1,5" value=".05,.25"/>
+			<passive_effect name="BuffResistance" operation="base_add" level="1,5" value="0.20,1" tags="buffInjuryStunned01,buffInjuryStunned02"/>
+
+			<effect_description level="1" desc_key="perkPainToleranceRank1Desc" long_desc_key="perkPainToleranceRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkPainToleranceRank2Desc" long_desc_key="perkPainToleranceRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkPainToleranceRank3Desc" long_desc_key="perkPainToleranceRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkPainToleranceRank4Desc" long_desc_key="perkPainToleranceRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkPainToleranceRank5Desc" long_desc_key="perkPainToleranceRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkPackMule" parent="FuriousRamsaySkillConstitution" name_key="perkPackMuleName" desc_key="perkPackMuleDesc" icon="ui_game_symbol_pack_mule">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="2" desc_key="FuriousRamsayReqGeneticsLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="4" desc_key="FuriousRamsayReqGeneticsLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CarryCapacity" operation="base_add" level="1,2,3,4,5" value="3,6,10,14,18"/>
+			<effect_description level="1" desc_key="perkPackMuleRank1Desc" long_desc_key="perkPackMuleRank1LongDesc" />
+			<effect_description level="2" desc_key="perkPackMuleRank2Desc" long_desc_key="perkPackMuleRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkPackMuleRank3Desc" long_desc_key="perkPackMuleRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkPackMuleRank4Desc" long_desc_key="perkPackMuleRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkPackMuleRank5Desc" long_desc_key="perkPackMuleRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkWellInsulated" max_level="3" parent="FuriousRamsaySkillConstitution" name_key="perkWellInsulatedName" desc_key="perkWellInsulatedDesc" icon="ui_game_symbol_temperature">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="4" desc_key="FuriousRamsayReqGeneticsLevel04"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="HypothermalResist" operation="base_add" level="1,2,3" value="10,20,20"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" level="1,2,3" value="10,20,20"/>
+
+			<effect_description level="1" desc_key="perkWellInsulatedRank1Desc" long_desc_key="perkWellInsulatedRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkWellInsulatedRank2Desc" long_desc_key="perkWellInsulatedRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkWellInsulatedRank3Desc" long_desc_key="perkWellInsulatedRank3LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<!-- INTELLIGENCE -->
+	<perk name="perkLuckyLooter" parent="FuriousRamsaySkillIntelligence" name_key="perkLuckyLooterName" desc_key="perkLuckyLooterDesc" icon="ui_game_symbol_shopping_cart">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="2" desc_key="FuriousRamsayReqGeneticsLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="LootGamestage" operation="perc_add" level="1,5" value=".05,.25"/>
+			<passive_effect name="ScavengingTime" operation="perc_subtract" level="1,2,3,4,5" value=".1,.2,.4,.6,.8"/>
+
+			<effect_description level="1" desc_key="perkLuckyLooterRank1Desc" long_desc_key="perkLuckyLooterRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkLuckyLooterRank2Desc" long_desc_key="perkLuckyLooterRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkLuckyLooterRank3Desc" long_desc_key="perkLuckyLooterRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkLuckyLooterRank4Desc" long_desc_key="perkLuckyLooterRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkLuckyLooterRank5Desc" long_desc_key="perkLuckyLooterRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkLockPicking" max_level="3" parent="FuriousRamsaySkillIntelligence" name_key="perkLockPickingName" desc_key="perkLockPickingDesc" icon="ui_game_symbol_unlock">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="4" desc_key="FuriousRamsayReqGeneticsLevel04"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+		<effect_group>
+			<passive_effect name="LockPickTime" operation="perc_subtract" level="1,3" value=".17,.375"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="resourceLockPick"/>
+			<passive_effect name="LockPickBreakChance" operation="perc_subtract" level="1,3" value=".1,.3"/>
+
+			<effect_description level="1" desc_key="perkLockPickingRank1Desc" long_desc_key="perkLockPickingRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkLockPickingRank2Desc" long_desc_key="perkLockPickingRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkLockPickingRank3Desc" long_desc_key="perkLockPickingRank3LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkTreasureHunter" max_level="3" parent="FuriousRamsaySkillIntelligence" name_key="perkTreasureHunterName" desc_key="perkTreasureHunterDesc" icon="ui_game_symbol_treasure">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="4" desc_key="FuriousRamsayReqGeneticsLevel04"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="TreasureBlocksPerReduction" operation="base_add" level="0,1,2,3" value="0,-3,-5,-7"/><!-- base value in quests is 10 -->
+			<passive_effect name="LootQuantity" operation="perc_add" level="1,2,3" value=".1,.3" tags="buriedTreasure"/>
+
+			<effect_description level="1" desc_key="perkTreasureHunterRank1Desc" long_desc_key="perkTreasureHunterRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkTreasureHunterRank2Desc" long_desc_key="perkTreasureHunterRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkTreasureHunterRank3Desc" long_desc_key="perkTreasureHunterRank3LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<!-- KNOWLEDGE -->
+	<perk name="perkTheHuntsman" parent="FuriousRamsaySkillKnowledge" name_key="perkTheHuntsmanName" desc_key="perkTheHuntsmanDesc" icon="ui_game_symbol_archery">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqGeneticsLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="HarvestCount" operation="perc_add" level="1,5" value=".2,1" tags="butcherHarvest"/>
+
+			<effect_description level="1" desc_key="perkTheHuntsmanRank1Desc" long_desc_key="perkTheHuntsmanRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkTheHuntsmanRank2Desc" long_desc_key="perkTheHuntsmanRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkTheHuntsmanRank3Desc" long_desc_key="perkTheHuntsmanRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkTheHuntsmanRank4Desc" long_desc_key="perkTheHuntsmanRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkTheHuntsmanRank5Desc" long_desc_key="perkTheHuntsmanRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkLivingOffTheLand" max_level="3" parent="FuriousRamsaySkillKnowledge" name_key="perkLivingOffTheLandName" desc_key="perkLivingOffTheLandDesc" icon="ui_game_symbol_tree">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqGeneticsLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkLivingOffTheLandCrafting"/><!-- fake crafting perk that is used to scale resources -->
+
+			<passive_effect name="HarvestCount" operation="perc_add" level="1,2,3" value="1,1,2" tags="cropHarvest,wildCropsHarvest"/>
+
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,3" value="1" tags="plantedAloe1,plantedChrysanthemum1,plantedGoldenrod1,plantedYucca1"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="plantedBlueberry1,plantedCoffee1,plantedCorn1,plantedCotton1,plantedMushroom1,plantedPotato1,plantedHop1,plantedPumpkin1,plantedGraceCorn1"/>
+
+			<effect_description level="1" desc_key="perkLivingOffTheLandRank1Desc" long_desc_key="perkLivingOffTheLandRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkLivingOffTheLandRank2Desc" long_desc_key="perkLivingOffTheLandRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkLivingOffTheLandRank3Desc" long_desc_key="perkLivingOffTheLandRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkLivingOffTheLandRank4Desc" long_desc_key="perkLivingOffTheLandRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkLivingOffTheLandRank5Desc" long_desc_key="perkLivingOffTheLandRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkMasterChef" parent="FuriousRamsaySkillKnowledge" name_key="perkMasterChefName" desc_key="perkMasterChefDesc" icon="ui_game_symbol_spatula">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqGeneticsLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkMasterChef"/><!-- fake crafting perk that is used to scale resources -->
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-.1,-.5" tags="perkMasterChef"/>
+
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1"
+				tags="foodBaconAndEggs,foodBoiledMeat,foodGrilledMeat,foodBakedPotato,foodCornBread,foodCornOnTheCob,drinkJarRedTea,drinkJarCoffee,drinkJarGoldenRodTea"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1"
+				tags="foodSteakAndPotato,foodBlueberryPie,foodMeatStew,foodVegetableStew,foodPumpkinPie,foodPumpkinCheesecake,foodPumpkinBread"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1"
+				tags="foodShamChowder,foodHoboStew,foodFishTacos,drinkYuccaJuiceSmoothie,foodChiliDog,drinkJarBeer"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1"
+				tags="foodGumboStew,foodShepardsPie,foodSpaghetti,foodTunaFishGravyToast"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1"
+				tags="drinkJarGrandpasMoonshine,drinkJarGrandpasAwesomeSauce,drinkJarGrandpasLearningElixir"/>
+
+			<effect_description level="1" desc_key="perkMasterChefRank1Desc" long_desc_key="perkMasterChefRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkMasterChefRank2Desc" long_desc_key="perkMasterChefRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkMasterChefRank3Desc" long_desc_key="perkMasterChefRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkMasterChefRank4Desc" long_desc_key="perkMasterChefRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkMasterChefRank5Desc" long_desc_key="perkMasterChefRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkGreaseMonkey" parent="FuriousRamsaySkillKnowledge" name_key="perkGreaseMonkeyName" desc_key="perkGreaseMonkeyDesc" icon="ui_game_symbol_service">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="2" desc_key="FuriousRamsayReqGeneticsLevel02"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="4" desc_key="FuriousRamsayReqGeneticsLevel04"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="6" desc_key="FuriousRamsayReqGeneticsLevel06"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="8" desc_key="FuriousRamsayReqGeneticsLevel08"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqGeneticsLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkGreaseMonkey"/><!-- fake crafting perk that is used to scale resources or quality like on carBattery -->
+
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="vehicleWheels,vehicleBicycleChassis,vehicleBicycleHandlebars"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="carBattery,ammoGasCan,vehicleMinibikeChassis,vehicleMinibikeHandlebars"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="resourceOil,vehicleMotorcycleChassis,vehicleMotorcycleHandlebars"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="ammoGasCanBundle,vehicle4x4TruckChassis,vehicle4x4TruckAccessories"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5" value="1" tags="vehicleGyroCopterChassis,vehicleGyroCopterAccessories"/>
+
+			<effect_description level="1" desc_key="perkGreaseMonkeyRank1Desc" long_desc_key="perkGreaseMonkeyRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkGreaseMonkeyRank2Desc" long_desc_key="perkGreaseMonkeyRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkGreaseMonkeyRank3Desc" long_desc_key="perkGreaseMonkeyRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkGreaseMonkeyRank4Desc" long_desc_key="perkGreaseMonkeyRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkGreaseMonkeyRank5Desc" long_desc_key="perkGreaseMonkeyRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<!-- CHARISMA -->
 	<!-- Have to set optioncount to 3 as default -->
-		<!--<perk name="perkDaringAdventurer" max_level="4" parent="skillIntellectInfluence" name_key="perkDaringAdventurerName" desc_key="perkDaringAdventurerDesc" icon="ui_game_symbol_adventure">
-		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="1" desc_key="reqIntellectLevel01"/></level_requirements>
-		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="1" desc_key="reqIntellectLevel01"/></level_requirements>
-		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="GTE" value="1" desc_key="reqIntellectLevel01"/></level_requirements>
-		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attIntellect" operation="Equals" value="10" desc_key="reqIntellectLevel10"/></level_requirements>
+	<perk name="perkDaringAdventurer" max_level="4" parent="FuriousRamsaySkillCharisma" name_key="perkDaringAdventurerName" desc_key="perkDaringAdventurerDesc" icon="ui_game_symbol_adventure">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="Equals" value="10" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
 			<effect_group>
 				<passive_effect name="QuestRewardOptionCount" operation="base_add" level="1,2,3,4" value="3,3,3,3"/>
 				<passive_effect name="QuestBonusItemReward" operation="perc_add" level="1,4" value=".05,.20"/>
@@ -428,7 +902,790 @@
 				<effect_description level="3" desc_key="perkDaringAdventurerRank3Desc" long_desc_key="perkDaringAdventurerRank3LongDesc"/>
 				<effect_description level="4" desc_key="perkDaringAdventurerRank4Desc" long_desc_key="perkDaringAdventurerRank4LongDesc"/>
 			</effect_group>
-		</perk>-->
+		</perk>
+
+	<perk name="perkBetterBarter" parent="FuriousRamsaySkillCharisma" name_key="perkBetterBarterName" desc_key="perkBetterBarterDesc" icon="ui_game_symbol_barter">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqGeneticsLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="BarteringBuying" operation="base_add" level="1,2,3,4,5" value=".05,.1,.15,.2,.25"/>
+			<passive_effect name="BarteringSelling" operation="base_add" level="1,2,3,4,5" value=".05,.1,.15,.2,.25"/>
+			<passive_effect name="SecretStash" operation="base_add" level="3,5" value="3000,5000"/>
+
+			<effect_description level="1" desc_key="perkBetterBarterRank1Desc" long_desc_key="perkBetterBarterRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkBetterBarterRank2Desc" long_desc_key="perkBetterBarterRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkBetterBarterRank3Desc" long_desc_key="perkBetterBarterRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkBetterBarterRank4Desc" long_desc_key="perkBetterBarterRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkBetterBarterRank5Desc" long_desc_key="perkBetterBarterRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkCharismaticNature" max_level="4" parent="FuriousRamsaySkillCharisma" name_key="perkCharismaticNatureName" desc_key="perkCharismaticNatureDesc" icon="ui_game_symbol_talk">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqGeneticsLevel10"/></level_requirements>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="1" target="selfAOE" target_tags="ally,party" range="15">
+				<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="1"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="2" target="selfAOE" target_tags="ally,party" range="15">
+				<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="2"/>
+				<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="2"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="3" target="selfAOE" target_tags="ally,party" range="15">
+				<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="Equals" value="3"/>
+				<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="3"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="CharismaticNatureLevel" operation="set" value="4" target="selfAOE" target_tags="ally,party" range="15">
+				<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="GTE" value="4"/>
+				<requirement name="CVarCompare" cvar="CharismaticNatureLevel" target="other" operation="LT" value="4"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfProgressionUpdate" action="AddBuff" buff="buffPerkCharismaticNature" target="selfAOE" target_tags="ally,party" range="15">
+				<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="GTE" value="1"/>
+			</triggered_effect>
+
+			<effect_description level="1" desc_key="perkCharismaticNatureRank1Desc" long_desc_key="perkCharismaticNatureRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkCharismaticNatureRank2Desc" long_desc_key="perkCharismaticNatureRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkCharismaticNatureRank3Desc" long_desc_key="perkCharismaticNatureRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkCharismaticNatureRank4Desc" long_desc_key="perkCharismaticNatureRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkCharismaticNatureRank5Desc" long_desc_key="perkCharismaticNatureRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<!-- SAVAGE -->
+	<perk name="perkBrawler" parent="FuriousRamsaySkillSavageAbilities" name_key="perkBrawlerName" desc_key="perkBrawlerDesc" icon="ui_game_symbol_boxer">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqSavageLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqSavageLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqSavageLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqSavageLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqSavageLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkBrawler"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkBrawler"/>
+
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkBrawler"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeWpnKnucklesT1IronKnuckles"/>
+
+			<effect_description level="1" desc_key="perkBrawlerRank1Desc" long_desc_key="perkBrawlerRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkBrawlerRank2Desc" long_desc_key="perkBrawlerRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkBrawlerRank3Desc" long_desc_key="perkBrawlerRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkBrawlerRank4Desc" long_desc_key="perkBrawlerRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkBrawlerRank5Desc" long_desc_key="perkBrawlerRank5LongDesc"/>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="ItemHasTags" tags="perkBrawler"/>
+
+				<passive_effect name="DismemberChance" operation="base_add" level="5" value=".2" tags="head"/>
+
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffInjuryStunned01">
+					<requirement name="ProgressionLevel" progression_name="perkBrawler" operation="GTE" value="2"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+				</triggered_effect>
+		</effect_group>
+		<effect_group>
+			<requirement name="ItemHasTags" tags="perkBrawler"/>
+			<requirement name="HitLocation" body_parts="Head"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffBrawlerNoTeeth">
+					<requirement name="ProgressionLevel" progression_name="perkBrawler" operation="GTE" value="1"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+					<requirement name="ProgressionLevel" progression_name="perkBrawler" operation="Equals" value="3"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+					<requirement name="ProgressionLevel" progression_name="perkBrawler" operation="GTE" value="4"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+				</triggered_effect>
+		</effect_group>
+	</perk>
+
+	<perk name="perkPummelPete" parent="FuriousRamsaySkillSavageAbilities" name_key="perkPummelPeteName" desc_key="perkPummelPeteDesc" icon="ui_game_symbol_stunned">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqSavageLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqSavageLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqSavageLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqSavageLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqSavageLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkPummelPete"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeWpnClubT1BaseballBat"/>
+
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkPummelPete"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkPummelPete"/>
+
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value="0.4,2" tags="perkPummelPete">
+				<requirement name="CVarCompare" cvar="_stunned" operation="Equals" value="1" target="other"/>
+			</passive_effect>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="ItemHasTags" tags="perkPummelPete"/>
+
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar=".PummelPeteCombo" operation="add" value="1">
+					<requirement name="ProgressionLevel" progression_name="perkPummelPete" operation="GTE" value="3"/>
+					<requirement name="NotHasBuff" buff="buffPerkPummelPeteBonus"/>
+					<requirement name="IsAlive" target="other"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="buffPerkPummelPete">
+					<requirement name="ProgressionLevel" progression_name="perkPummelPete" operation="GTE" value="3"/>
+					<requirement name="NotHasBuff" buff="buffPerkPummelPeteBonus"/>
+					<requirement name="IsAlive" target="other"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffStayDownKO">
+					<requirement name="ProgressionLevel" progression_name="perkPummelPete" operation="Equals" value="1"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
+					<requirement name="CVarCompare" cvar="_stunned" operation="Equals" value="1" target="other"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffStayDownKO">
+					<requirement name="ProgressionLevel" progression_name="perkPummelPete" operation="Equals" value="2"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="70"/>
+					<requirement name="CVarCompare" cvar="_stunned" operation="Equals" value="1" target="other"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffStayDownKO">
+					<requirement name="ProgressionLevel" progression_name="perkPummelPete" operation="Equals" value="3"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="80"/>
+					<requirement name="CVarCompare" cvar="_stunned" operation="Equals" value="1" target="other"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffStayDownKO">
+					<requirement name="ProgressionLevel" progression_name="perkPummelPete" operation="Equals" value="4"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="90"/>
+					<requirement name="CVarCompare" cvar="_stunned" operation="Equals" value="1" target="other"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" target_tags="zombie,animal" buff="buffStayDownKO">
+					<requirement name="ProgressionLevel" progression_name="perkPummelPete" operation="Equals" value="5"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="100"/>
+					<requirement name="CVarCompare" cvar="_stunned" operation="Equals" value="1" target="other"/>
+				</triggered_effect>
+
+			<effect_description level="1" desc_key="perkPummelPeteRank1Desc" long_desc_key="perkPummelPeteRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkPummelPeteRank2Desc" long_desc_key="perkPummelPeteRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkPummelPeteRank3Desc" long_desc_key="perkPummelPeteRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkPummelPeteRank4Desc" long_desc_key="perkPummelPeteRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkPummelPeteRank5Desc" long_desc_key="perkPummelPeteRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkSkullCrusher" parent="FuriousRamsaySkillSavageAbilities" name_key="perkSkullCrusherName" desc_key="perkSkullCrusherDesc" icon="ui_game_symbol_sledge">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqSavageLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqSavageLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqSavageLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqSavageLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqSavageLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkSkullCrusher"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeWpnSledgeT1IronSledgehammer"/>
+
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkSkullCrusher"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkSkullCrusher"/>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="ItemHasTags" tags="perkSkullCrusher"/>
+
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+				<requirement name="ProgressionLevel" progression_name="perkSkullCrusher" operation="Equals" value="1"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="15"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown01">
+				<requirement name="ProgressionLevel" progression_name="perkSkullCrusher" operation="Equals" value="2"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="30"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown02">
+				<requirement name="ProgressionLevel" progression_name="perkSkullCrusher" operation="Equals" value="3"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="45"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown02">
+				<requirement name="ProgressionLevel" progression_name="perkSkullCrusher" operation="Equals" value="4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="60"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryKnockdown02">
+				<requirement name="ProgressionLevel" progression_name="perkSkullCrusher" operation="Equals" value="5"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="75"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="1.3" target_tags="zombie,animal" buff="buffInjuryKnockdown01">
+				<requirement name="ProgressionLevel" progression_name="perkSkullCrusher" operation="Equals" value="3"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="1.3" target_tags="zombie,animal" buff="buffInjuryKnockdown01">
+				<requirement name="ProgressionLevel" progression_name="perkSkullCrusher" operation="Equals" value="4"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="35"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="1.4" target_tags="zombie,animal" buff="buffInjuryKnockdown01">
+				<requirement name="ProgressionLevel" progression_name="perkSkullCrusher" operation="Equals" value="5"/>
+				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+			</triggered_effect>
+
+			<effect_description level="1" desc_key="perkSkullCrusherRank1Desc" long_desc_key="perkSkullCrusherRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkSkullCrusherRank2Desc" long_desc_key="perkSkullCrusherRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkSkullCrusherRank3Desc" long_desc_key="perkSkullCrusherRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkSkullCrusherRank4Desc" long_desc_key="perkSkullCrusherRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkSkullCrusherRank5Desc" long_desc_key="perkSkullCrusherRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkJavelinMaster" parent="FuriousRamsaySkillSavageAbilities" name_key="perkJavelinMasterName" desc_key="perkJavelinMasterDesc" icon="ui_game_symbol_spear">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqSavageLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqSavageLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqSavageLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqSavageLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqSavageLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkJavelinMaster"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeWpnSpearT1IronSpear"/>
+
+				<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkJavelinMaster"/>
+				<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkJavelinMaster"/>
+				<passive_effect name="ProjectileVelocity" operation="perc_add" level="1,5" value="0.1,.5" tags="perkJavelinMaster"/>
+
+			<effect_description level="1" desc_key="perkJavelinMasterRank1Desc" long_desc_key="perkJavelinMasterRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkJavelinMasterRank2Desc" long_desc_key="perkJavelinMasterRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkJavelinMasterRank3Desc" long_desc_key="perkJavelinMasterRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkJavelinMasterRank4Desc" long_desc_key="perkJavelinMasterRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkJavelinMasterRank5Desc" long_desc_key="perkJavelinMasterRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<!-- MARKSMAN -->
+	<perk name="perkDeadEye" parent="FuriousRamsaySkillMarksmanAbilities" name_key="perkDeadEyeName" desc_key="perkDeadEyeDesc" icon="ui_game_symbol_map_cursor">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqMarksmanLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqMarksmanLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqMarksmanLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqMarksmanLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqMarksmanLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunRifleT1HuntingRifle"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkDeadEye"/>
+
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkDeadEye"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" level="1,2,3,4,5" value=".1,.2,.32,.45,.60" tags="perkDeadEye"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value="0.1,0.3" tags="perkDeadEye"/>
+
+		</effect_group>
+
+		<effect_group>
+			<requirement name="ItemHasTags" tags="perkDeadEye"/>
+			<requirement name="ProgressionLevel" progression_name="perkDeadEye" operation="GTE" value="3"/>
+				<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffDeadEye"/>
+
+			<effect_description level="1" desc_key="perkDeadEyeRank1Desc" long_desc_key="perkDeadEyeRank1LongDesc" desc_base="Non localized modder descriptions go here"/>
+			<effect_description level="2" desc_key="perkDeadEyeRank2Desc" long_desc_key="perkDeadEyeRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkDeadEyeRank3Desc" long_desc_key="perkDeadEyeRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkDeadEyeRank4Desc" long_desc_key="perkDeadEyeRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkDeadEyeRank5Desc" long_desc_key="perkDeadEyeRank5LongDesc"/>
+		</effect_group>
+
+	</perk>
+
+	<perk name="perkGunslinger" parent="FuriousRamsaySkillMarksmanAbilities" max_level="5" name_key="perkGunslingerName" desc_key="perkGunslingerDesc" icon="ui_game_symbol_gunslinger">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqMarksmanLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqMarksmanLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqMarksmanLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqMarksmanLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqMarksmanLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkGunslinger"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunHandgunT1Pistol"/>
+			<passive_effect name="BlockDamage" operation="perc_add" level="0,5" value="0,1" tags="perkGunslinger"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="0,5" value="0,.5" tags="perkGunslinger"/>
+
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="0,5" value="0,0.25" tags="perkGunslinger"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="0,5" value="0,0.30" tags="perkGunslinger"/>
+
+			<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" level="0,5" value="0,-.25" tags="perkGunslinger"/>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="ItemHasTags" tags="perkGunslinger"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar=".GunslingerCombo" operation="add" value="1">
+					<requirement name="ProgressionLevel" progression_name="perkGunslinger" operation="GTE" value="3"/>
+					<requirement name="NotHasBuff" buff="buffPerkGunslingerBonus"/>
+					<requirement name="IsAlive" target="other"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="buffPerkGunslinger">
+					<requirement name="ProgressionLevel" progression_name="perkGunslinger" operation="GTE" value="3"/>
+					<requirement name="NotHasBuff" buff="buffPerkGunslingerBonus"/>
+					<requirement name="IsAlive" target="other"/>
+				</triggered_effect>
+
+			<effect_description level="1" desc_key="perkGunslingerRank1Desc" long_desc_key="perkGunslingerRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkGunslingerRank2Desc" long_desc_key="perkGunslingerRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkGunslingerRank3Desc" long_desc_key="perkGunslingerRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkGunslingerRank4Desc" long_desc_key="perkGunslingerRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkGunslingerRank5Desc" long_desc_key="perkGunslingerRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkBoomstick" parent="FuriousRamsaySkillMarksmanAbilities" name_key="perkBoomstickName" desc_key="perkBoomstickDesc" icon="ui_game_symbol_shotgun">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqMarksmanLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqMarksmanLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqMarksmanLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqMarksmanLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqMarksmanLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkBoomstick"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunShotgunT1DoubleBarrel"/>
+
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkBoomstick"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkBoomstick"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value=".1,.30" tags="perkBoomstick"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,5" value=".1,.5" tags="perkBoomstick"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="ItemHasTags" tags="perkBoomstick"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned01Shotgun">
+					<requirement name="ProgressionLevel" progression_name="perkBoomstick" operation="Equals" value="0"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned02Shotgun">
+					<requirement name="ProgressionLevel" progression_name="perkBoomstick" operation="GTE" value="1"/>
+					<requirement name="ProgressionLevel" progression_name="perkBoomstick" operation="LTE" value="2"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned03Shotgun">
+					<requirement name="ProgressionLevel" progression_name="perkBoomstick" operation="GTE" value="3"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker" buff="buffInjuryCrippled01">
+					<requirement name="ProgressionLevel" progression_name="perkBoomstick" operation="Equals" value="5"/>
+					<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
+				</triggered_effect>
+
+			<effect_description level="1" desc_key="perkBoomstickRank1Desc" long_desc_key="perkBoomstickRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkBoomstickRank2Desc" long_desc_key="perkBoomstickRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkBoomstickRank3Desc" long_desc_key="perkBoomstickRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkBoomstickRank4Desc" long_desc_key="perkBoomstickRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkBoomstickRank5Desc" long_desc_key="perkBoomstickRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkMachineGunner" parent="FuriousRamsaySkillMarksmanAbilities" name_key="perkMachineGunnerName" desc_key="perkMachineGunnerDesc" icon="ui_game_symbol_rifle">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqMarksmanLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqMarksmanLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqMarksmanLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqMarksmanLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqMarksmanLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkMachineGunner"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunMGT1AK47"/>
+
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkMachineGunner"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkMachineGunner"/>
+
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,5" value="0.05,0.25" tags="perkMachineGunner"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value="0.1,0.3" tags="perkMachineGunner"/>
+
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" level="0,5" value="0,-.03" tags="perkMachineGunner"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" level="0,5" value="0,-.15" tags="perkMachineGunner"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" level="0,5" value="0,-.03" tags="perkMachineGunner"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" level="0,5" value="0,-.15" tags="perkMachineGunner"/>
+
+			<passive_effect name="IncrementalSpreadMultiplier" operation="perc_add" level="1,5" value="-.03,-.15" tags="perkMachineGunner"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="ItemHasTags" tags="perkMachineGunner"/>
+
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyStats" stat="Stamina" operation="add" value="2">
+					<requirement name="ProgressionLevel" progression_name="perkMachineGunner" operation="Equals" value="3"/>
+					<requirement name="IsAlive" target="other"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyStats" stat="Stamina" operation="add" value="4">
+					<requirement name="ProgressionLevel" progression_name="perkMachineGunner" operation="Equals" value="4"/>
+					<requirement name="IsAlive" target="other"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyStats" stat="Stamina" operation="add" value="6">
+					<requirement name="ProgressionLevel" progression_name="perkMachineGunner" operation="Equals" value="5"/>
+					<requirement name="IsAlive" target="other"/>
+				</triggered_effect>
+
+			<effect_description level="1" desc_key="perkMachineGunnerRank1Desc" long_desc_key="perkMachineGunnerRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkMachineGunnerRank2Desc" long_desc_key="perkMachineGunnerRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkMachineGunnerRank3Desc" long_desc_key="perkMachineGunnerRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkMachineGunnerRank4Desc" long_desc_key="perkMachineGunnerRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkMachineGunnerRank5Desc" long_desc_key="perkMachineGunnerRank5LongDesc" />
+		</effect_group>
+	</perk>
+
+	<!-- ASSASSIN -->
+	<perk name="perkInfiltrator" max_level="3" parent="FuriousRamsaySkillAssassinAbilities" name_key="perkInfiltratorName" desc_key="perkInfiltratorDesc" icon="ui_game_symbol_stealth">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqAssassinLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="4" desc_key="FuriousRamsayReqAssassinLevel04"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqAssassinLevel07"/></level_requirements>
+		<effect_group>
+			<passive_effect name="TrapDoorTriggerDelay" operation="base_add" level="1,2,3" value=".5,1,2"/>
+			<passive_effect name="LandMineTriggerDelay" operation="base_add" level="1,2,3" value=".5,1,2"/>
+			<passive_effect name="TrapIncomingDamage" operation="perc_add" level="1,2,3" value="-.2,-.35,-.5"/>
+			<passive_effect name="BlockPickup" operation="base_set" level="3" value="1" tags="Mine" />
+
+			<effect_description level="1" desc_key="perkInfiltratorRank1Desc" long_desc_key="perkInfiltratorRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkInfiltratorRank2Desc" long_desc_key="perkInfiltratorRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkInfiltratorRank3Desc" long_desc_key="perkInfiltratorRank3LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkArchery" parent="FuriousRamsaySkillAssassinAbilities" name_key="perkArcheryName" desc_key="perkArcheryDesc" icon="ui_game_symbol_archery">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqAssassinLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqAssassinLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqAssassinLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqAssassinLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqAssassinLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkArchery"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunBowT1WoodenBow,gunBowT1IronCrossbow"/>
+
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkArchery"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkArchery"/>
+
+			<passive_effect name="WeaponHandling" operation="perc_add" level="1,5" value=".1,.5" tags="perkArchery"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value=".1,.5" tags="perkArchery"/>
+
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5" value=".1,.15,.25,.35,.5" tags="bowDrawPenalty"/>
+
+			<effect_description level="1" desc_key="perkArcheryRank1Desc" long_desc_key="perkArcheryRank1LongDesc"/>/>
+			<effect_description level="2" desc_key="perkArcheryRank2Desc" long_desc_key="perkArcheryRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkArcheryRank3Desc" long_desc_key="perkArcheryRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkArcheryRank4Desc" long_desc_key="perkArcheryRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkArcheryRank5Desc" long_desc_key="perkArcheryRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkDeepCuts" parent="FuriousRamsaySkillAssassinAbilities" name_key="perkDeepCutsName" desc_key="perkDeepCutsDesc" icon="ui_game_symbol_deep_cuts">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqAssassinLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqAssassinLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqAssassinLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqAssassinLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqAssassinLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkDeepCuts"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeWpnBladeT1HuntingKnife"/>
+
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkDeepCuts"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkDeepCuts"/>
+
+			<effect_description level="1" desc_key="perkDeepCutsRank1Desc" long_desc_key="perkDeepCutsRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkDeepCutsRank2Desc" long_desc_key="perkDeepCutsRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkDeepCutsRank3Desc" long_desc_key="perkDeepCutsRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkDeepCutsRank4Desc" long_desc_key="perkDeepCutsRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkDeepCutsRank5Desc" long_desc_key="perkDeepCutsRank5LongDesc"/>
+		</effect_group>
+
+		<effect_group name="primary, always">
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="@$maxBleedCounter" target="other"/>
+			<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+				<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="GT" value="0" target="other"/>
+				<triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+		</effect_group>
+
+		<effect_group name="Secondary">
+			<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="set" value="2">
+					<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="2" target="other"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="set" value="3">
+					<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="bleedCounter" operation="Equals" value="2" target="other"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="2">
+					<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="2" target="other"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="set" value="4">
+					<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="2"/>
+					<requirement name="CVarCompare" cvar="bleedCounter" operation="GTE" value="1" target="other"/>
+					<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="4" target="other"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="3">
+					<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="2"/>
+					<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="2" target="other"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="set" value="5">
+					<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="3"/>
+					<requirement name="CVarCompare" cvar="bleedCounter" operation="GTE" value="1" target="other"/>
+					<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="5" target="other"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="4">
+					<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="3"/>
+					<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="2" target="other"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="set" value="6">
+					<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="4"/>
+					<requirement name="CVarCompare" cvar="bleedCounter" operation="GTE" value="2" target="other"/>
+					<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="6" target="other"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="4">
+					<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="4"/>
+					<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="2" target="other"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="set" value="7">
+					<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="5"/>
+					<requirement name="CVarCompare" cvar="bleedCounter" operation="GTE" value="2" target="other"/>
+					<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="7" target="other"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="5">
+					<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="5"/>
+					<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="2" target="other"/>
+				</triggered_effect>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+			<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="GTE" value="1"/>
+			<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="LT" value="3"/>
+			<requirement name="CVarCompare" cvar="$bleedSlowdown" operation="GT" value="-.1" target="other"/>
+				<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="$bleedSlowdown" operation="set" value="-.1"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="$bleedSlowdown" operation="set" value="-.1"/>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+			<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="GTE" value="3"/>
+			<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="LT" value="5"/>
+			<requirement name="CVarCompare" cvar="$bleedSlowdown" operation="GT" value="-.15" target="other"/>
+				<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="$bleedSlowdown" operation="set" value="-.15"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="$bleedSlowdown" operation="set" value="-.15"/>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+			<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="5"/>
+			<requirement name="CVarCompare" cvar="$bleedSlowdown" operation="GT" value="-.2" target="other"/>
+				<triggered_effect trigger="onSelfPrimaryActionRayHit" action="ModifyCVar" target="other" cvar="$bleedSlowdown" operation="set" value="-.2"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="ModifyCVar" target="other" cvar="$bleedSlowdown" operation="set" value="-.2"/>
+		</effect_group>
+
+		<effect_group name="grazing hits T3">
+			<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+			<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="3"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="5" target="other"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="40"/>
+				<triggered_effect trigger="onSelfPrimaryActionGrazeHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfSecondaryActionGrazeHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionGrazeHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+				<triggered_effect trigger="onSelfSecondaryActionGrazeHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+		</effect_group>
+		<effect_group name="grazing hits T4">
+			<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+			<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="4"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="6" target="other"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="70"/>
+				<triggered_effect trigger="onSelfPrimaryActionGrazeHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfSecondaryActionGrazeHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionGrazeHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+				<triggered_effect trigger="onSelfSecondaryActionGrazeHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+		</effect_group>
+		<effect_group name="grazing hits T5">
+			<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+			<requirement name="ProgressionLevel" progression_name="perkDeepCuts" operation="Equals" value="5"/>
+			<requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="7" target="other"/>
+				<triggered_effect trigger="onSelfPrimaryActionGrazeHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfSecondaryActionGrazeHit" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionGrazeHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+				<triggered_effect trigger="onSelfSecondaryActionGrazeHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="ItemHasTags" tags="perkDeepCuts"/>
+				<triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkHiddenStrike" parent="FuriousRamsaySkillAssassinAbilities" name_key="perkHiddenStrikeName" desc_key="perkHiddenStrikeDesc" icon="ui_game_symbol_sneak_attack">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqAssassinLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqAssassinLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqAssassinLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqAssassinLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqAssassinLevel10"/></level_requirements>
+
+		<effect_group name="regular weapons, sledgehammer">
+			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
+			<requirement name="!ItemHasTags" tags="perkSkullCrusher"/>
+				<passive_effect name="DamageBonus" operation="base_add" level="0,1,2,3,4,5" value="1.5,2,2.5,3,3.5,4"/> <!--For UI-->
+				<passive_effect name="EntityDamage" operation="perc_add" level="0,1,2,3,4,5" value=".5,1,1.5,2,2.5,3"/>
+
+			<effect_description level="1" desc_key="perkHiddenStrikeRank1Desc" long_desc_key="perkHiddenStrikeRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkHiddenStrikeRank2Desc" long_desc_key="perkHiddenStrikeRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkHiddenStrikeRank3Desc" long_desc_key="perkHiddenStrikeRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkHiddenStrikeRank4Desc" long_desc_key="perkHiddenStrikeRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkHiddenStrikeRank5Desc" long_desc_key="perkHiddenStrikeRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkFromTheShadows" parent="FuriousRamsaySkillAssassinAbilities" name_key="perkFromTheShadowsName" desc_key="perkFromTheShadowsDesc" icon="ui_game_symbol_bat">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqAssassinLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqAssassinLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqAssassinLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqAssassinLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqAssassinLevel10"/></level_requirements>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+				<passive_effect name="LightMultiplier" operation="perc_add" level="0,5" value="0,-.65">
+					<requirement name="CVarCompare" cvar="_lightlevel" operation="LTE" value="50"/>
+				</passive_effect>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" level="0,5" value="0,-.5"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" level="0,5" value="0,0.5"/>
+				<passive_effect name="EnemySearchDuration" operation="perc_add" level="0,1,2,3,4,5" value="0,-.17,-.33,-.5,-.58,-.67"/>
+
+			<effect_description level="1" desc_key="perkFromTheShadowsRank1Desc" long_desc_key="perkFromTheShadowsRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkFromTheShadowsRank2Desc" long_desc_key="perkFromTheShadowsRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkFromTheShadowsRank3Desc" long_desc_key="perkFromTheShadowsRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkFromTheShadowsRank4Desc" long_desc_key="perkFromTheShadowsRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkFromTheShadowsRank5Desc" long_desc_key="perkFromTheShadowsRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<!-- ENGINEER -->
+	<perk name="perkElectrocutioner" parent="FuriousRamsaySkillEngineerAbilities" name_key="perkElectrocutionerName" desc_key="perkElectrocutionerDesc" icon="ui_game_symbol_electric_power">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqEngineerLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqEngineerLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqEngineerLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqEngineerLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqEngineerLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkElectrocutioner"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeWpnBatonT2StunBaton"/>
+
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkElectrocutioner"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkElectrocutioner"/>
+
+			<effect_description level="1" desc_key="perkElectrocutionerRank1Desc" long_desc_key="perkElectrocutionerRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkElectrocutionerRank2Desc" long_desc_key="perkElectrocutionerRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkElectrocutionerRank3Desc" long_desc_key="perkElectrocutionerRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkElectrocutionerRank4Desc" long_desc_key="perkElectrocutionerRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkElectrocutionerRank5Desc" long_desc_key="perkElectrocutionerRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkTurrets" parent="FuriousRamsaySkillEngineerAbilities" name_key="perkTurretsName" desc_key="perkTurretsDesc" icon="ui_game_symbol_electric_turret">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqEngineerLevel03"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqEngineerLevel05"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="6" desc_key="FuriousRamsayReqEngineerLevel06"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="8" desc_key="FuriousRamsayReqEngineerLevel08"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqEngineerLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkTurrets"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunBotT1JunkSledge"/>
+
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5" value=".125,.25,.375,.5,.5" tags="turretMelee"/>
+
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="4,5" value="0.1,0.2" tags="perkTurrets"/>
+			<passive_effect name="MagazineSize" operation="base_add" level="1,5" value="10,50" tags="perkTurrets">
+				<requirement name="!ItemHasTags" tags="turretMelee"/>
+			</passive_effect>
+
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5" value=".3,.7,1.1,1.5,1.5" tags="turretRanged"/>
+
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5" value=".1,.2,.3,.4,.4" tags="perkTurrets"/>
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,2,3,4,5" value=".1,.2,.3,.4,.4" tags="turretMelee"/>
+
+			<passive_effect name="JunkTurretActiveCount" operation="base_set" value="0"/>
+			<passive_effect name="JunkTurretActiveCount" operation="base_add" level="5" value="1"/>
+			<passive_effect name="JunkTurretActiveRange" operation="base_set" level="0,1,2,3,4,5" value="10,14,15,16,17,18"/>
+
+			<effect_description level="1" desc_key="perkTurretsRank1Desc" long_desc_key="perkTurretsRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkTurretsRank2Desc" long_desc_key="perkTurretsRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkTurretsRank3Desc" long_desc_key="perkTurretsRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkTurretsRank4Desc" long_desc_key="perkTurretsRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkTurretsRank5Desc" long_desc_key="perkTurretsRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<!-- CHEMIST -->
+	<perk name="perkDemolitionsExpert" parent="FuriousRamsaySkillChemistAbilities" name_key="perkDemolitionsExpertName" desc_key="perkDemolitionsExpertDesc" icon="ui_game_symbol_explosion">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqChemistLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqChemistLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqChemistLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqChemistLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqChemistLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkDemolitionsExpert"/>
+
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="thrownAmmoPipeBomb,mineCookingPot,rScrapIronPlateMine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="thrownDynamite,mineHubcap"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,5" value="1" tags="thrownGrenade,resourceGunPowderBundle"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="ammoRocketHE,ammoRocketFrag,resourceRocketTip,resourceRocketCasing"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1" tags="thrownGrenadeContact,thrownTimedCharge,mineAirFilter"/>
+
+		</effect_group>
+
+		<effect_group>
+				<passive_effect name="DismemberChance" operation="base_add" level="1,2,3,4,5" value=".05,.1,.2,.3,.45" tags="perkDemolitionsExpert"/>
+				<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkDemolitionsExpert"/>
+				<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkDemolitionsExpert"/>
+				<passive_effect name="WeaponHandling" operation="perc_add" level="1,5" value="0.1,0.5" tags="perkDemolitionsExpert"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value="0.15,0.35" tags="perkDemolitionsExpert"/>
+
+			<effect_description level="1" desc_key="perkDemolitionsExpertRank1Desc" long_desc_key="perkDemolitionsExpertRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkDemolitionsExpertRank2Desc" long_desc_key="perkDemolitionsExpertRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkDemolitionsExpertRank3Desc" long_desc_key="perkDemolitionsExpertRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkDemolitionsExpertRank4Desc" long_desc_key="perkDemolitionsExpertRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkDemolitionsExpertRank5Desc" long_desc_key="perkDemolitionsExpertRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkPhysician" max_level="4" parent="FuriousRamsaySkillChemistAbilities" name_key="perkPhysicianName" desc_key="perkPhysicianDesc" icon="ui_game_symbol_medical">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqChemistLevel03"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="6" desc_key="FuriousRamsayReqChemistLevel06"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="8" desc_key="FuriousRamsayReqChemistLevel08"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="9" desc_key="FuriousRamsayReqChemistLevel09"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTime" operation="perc_add" level="2,3,4" value="-.2,-.2,-.4" tags="chemStationCrafting"/>
+
+			<triggered_effect trigger="onPerkLevelChanged" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,4" value="1" tags="chemistryStation,medicalFirstAidBandage,medicalPlasterCast"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,4" value="1" tags="drugPainkillers"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,4" value="1" tags="medicalFirstAidKit,drugSteroids"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4" value="1" tags="drugFortBites,drugRecog,drugAntibiotics"/>
+
+			<effect_description level="1" desc_key="perkPhysicianRank1Desc" long_desc_key="perkPhysicianRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkPhysicianRank2Desc" long_desc_key="perkPhysicianRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkPhysicianRank3Desc" long_desc_key="perkPhysicianRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkPhysicianRank4Desc" long_desc_key="perkPhysicianRank4LongDesc"/>
+		</effect_group>
+	</perk>
 
 	</append>
 
