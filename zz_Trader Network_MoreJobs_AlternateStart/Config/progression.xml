@@ -1,5 +1,7 @@
 <Config>
 
+	<set xpath="/progression/level/@skill_points_per_level">0</set>
+	
 	<remove xpath="/progression/attributes/attribute[@name='attFortitude']"/>
 	<remove xpath="/progression/attributes/attribute[@name='attIntellect']"/>
 	<remove xpath="/progression/attributes/attribute[@name='attPerception']"/>
@@ -248,7 +250,7 @@
 	
 	<!-- Have to keep Fortitude as it is hard coded in the game -->
 	<!-- GENETICS -->
-		<attribute name="attfortitude" name_key="FuriousRamsayAttGeneticsName" desc_key="FuriousRamsayAttGeneticsDesc" icon="ui_game_symbol_intellect">
+		<attribute name="attfortitude" name_key="FuriousRamsayAttGeneticsName" desc_key="FuriousRamsayAttGeneticsDesc" icon="ui_game_symbol_intellect" min_level="0" max_level="10" base_skill_point_cost="0" cost_multiplier_per_level="0">
 			<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
@@ -274,7 +276,7 @@
 			</effect_group>
 		</attribute>
 
-		<attribute name="furiousramsayattsavage" name_key="FuriousRamsayAttSavageName" desc_key="FuriousRamsayAttSavageDesc" icon="ui_game_symbol_club">
+		<attribute name="furiousramsayattsavage" name_key="FuriousRamsayAttSavageName" desc_key="FuriousRamsayAttSavageDesc" icon="ui_game_symbol_club" min_level="0" max_level="10" base_skill_point_cost="0" cost_multiplier_per_level="0">
 			<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
@@ -300,7 +302,7 @@
 			</effect_group>
 		</attribute>
 
-		<attribute name="furiousramsayattmarksman" name_key="FuriousRamsayAttMarksmanName" desc_key="FuriousRamsayAttMarksmanDesc" icon="ui_game_symbol_rifle">
+		<attribute name="furiousramsayattmarksman" name_key="FuriousRamsayAttMarksmanName" desc_key="FuriousRamsayAttMarksmanDesc" icon="ui_game_symbol_rifle" min_level="0" max_level="10" base_skill_point_cost="0" cost_multiplier_per_level="0">
 			<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
@@ -326,7 +328,7 @@
 			</effect_group>
 		</attribute>
 
-		<attribute name="furiousramsayattassassin" name_key="FuriousRamsayAttAssassinName" desc_key="FuriousRamsayAttAssassinDesc" icon="ui_game_symbol_sneak_attack">
+		<attribute name="furiousramsayattassassin" name_key="FuriousRamsayAttAssassinName" desc_key="FuriousRamsayAttAssassinDesc" icon="ui_game_symbol_sneak_attack" min_level="0" max_level="10" base_skill_point_cost="0" cost_multiplier_per_level="0">
 			<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
@@ -352,7 +354,7 @@
 			</effect_group>
 		</attribute>
 
-		<attribute name="furiousramsayattengineer" name_key="FuriousRamsayAttEngineerName" desc_key="FuriousRamsayAttEngineerDesc" icon="ui_game_symbol_electric_turret">
+		<attribute name="furiousramsayattengineer" name_key="FuriousRamsayAttEngineerName" desc_key="FuriousRamsayAttEngineerDesc" icon="ui_game_symbol_electric_turret" min_level="0" max_level="10" base_skill_point_cost="0" cost_multiplier_per_level="0">
 			<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
@@ -378,7 +380,7 @@
 			</effect_group>
 		</attribute>
 
-		<attribute name="furiousramsayattchemist" name_key="FuriousRamsayAttChemistName" desc_key="FuriousRamsayAttChemistDesc" icon="ui_game_symbol_explosion">
+		<attribute name="furiousramsayattchemist" name_key="FuriousRamsayAttChemistName" desc_key="FuriousRamsayAttChemistDesc" icon="ui_game_symbol_explosion" min_level="0" max_level="10" base_skill_point_cost="0" cost_multiplier_per_level="0">
 			<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
 			<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
