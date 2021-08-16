@@ -2,7 +2,12 @@
 
 	<set xpath="/windows/window[@name='windowSkillAttributeInfo']/rect[@name='content']/rect[@name='detailsBox']/sprite[@name='background']/@color">0,0,0,255</set>
 	<remove xpath="/windows/window[@name='windowSkillAttributeInfo']/rect[@name='content']/rect[@name='tableBox']/rect[@name='tableHeader']/rect[@pos='572,0']/label[@text_key='xuiSkillBuy']"/>
-	
+	<remove xpath="/windows/window[@name='windowSkillAttributeInfo']/panel[@name='header']/label[@pivot='topright']"/>
+
+	<set xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/rect[@name='detailsBox']/sprite[@name='background']/@color">0,0,0,255</set>
+	<remove xpath="/windows/window[@name='windowSkillPerkInfo']/panel[@name='header']/label[@pivot='topright']"/>
+	<set xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/sprite[@sprite='{groupicon}']/@pos">-1000,-1000</set>
+
 	<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect/rect[@name='tableHeader']/sprite[@name='background']/@color">0,0,0,255</set>
 	<remove xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect/rect[@name='tableHeader']/rect/label[@text='Cost']"/>
 	<remove xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect/rect[@name='tableHeader']/rect/label[@text='Red']"/>
