@@ -1,16 +1,25 @@
 <Config>
 
-	<set xpath="/windows/window[@name='windowSkillAttributeInfo']/rect[@name='content']/rect[@name='detailsBox']/sprite[@name='background']/@color">0,0,0,255</set>
+	<set xpath="/windows/window[@name='windowSkillAttributeInfo']/rect[@name='content']/rect[@name='detailsBox']/sprite[@name='background']/@color">0,0,0,320</set>
 	<remove xpath="/windows/window[@name='windowSkillAttributeInfo']/rect[@name='content']/rect[@name='tableBox']/rect[@name='tableHeader']/rect[@pos='572,0']/label[@text_key='xuiSkillBuy']"/>
 	<remove xpath="/windows/window[@name='windowSkillAttributeInfo']/panel[@name='header']/label[@pivot='topright']"/>
 
-	<set xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/rect[@name='detailsBox']/sprite[@name='background']/@color">0,0,0,255</set>
 	<remove xpath="/windows/window[@name='windowSkillPerkInfo']/panel[@name='header']/label[@pivot='topright']"/>
-	<set xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/sprite[@sprite='{groupicon}']/@pos">-1000,-1000</set>
+	<set xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/rect[@name='detailsBox']/sprite[@name='background']/@color">0,0,0,320</set>
+	<remove xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/sprite[@name='backgroundMain']"/>
+	<set xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/sprite[@sprite='{groupicon}']/@width">0</set>
+	<set xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/rect[@name='descriptionBox']/@pos">0</set>
+	<set xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/rect[@name='descriptionBox']/@width">647</set>
+	<set xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/rect[@name='descriptionBox']/sprite[@name='backgroundMain']/@width">647</set>
+	<set xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/rect[@name='tableBox']/grid/@rows">10</set>
+	<set xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/rect[@name='tableBox']/grid/@cell_height">40</set>
+	<set xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/rect[@name='tableBox']/grid/skill_perk_level/@height">40</set>
+	<set xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/rect[@name='tableBox']/sprite[@name='background']/@color">0,0,0,320</set>
+	<remove xpath="/windows/window[@name='windowSkillPerkInfo']/rect[@name='content']/rect[@name='tableBox']/rect[@name='tableHeader']/rect[@pos='572,0']/label[@text_key='xuiSkillBuy']"/>
 
-	<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect/rect[@name='tableHeader']/sprite[@name='background']/@color">0,0,0,255</set>
 	<remove xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect/rect[@name='tableHeader']/rect/label[@text='Cost']"/>
 	<remove xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect/rect[@name='tableHeader']/rect/label[@text='Red']"/>
+	<remove xpath="/windows/window[@name='windowSkillList']/panel[@name='header']/label[@text='{skillpointsavailable}']"/>
 
 	<append xpath="/windows">
 	

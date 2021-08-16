@@ -496,7 +496,7 @@
 	<append xpath="/progression/perks" >
 
 	<!-- STRENGTH -->
-	<perk name="perkPenetrator" max_level="4" parent="FuriousRamsaySkillStrength" name_key="perkPenetratorName" desc_key="perkPenetratorDesc" icon="ui_game_symbol_paint_copy_block">
+	<!--<perk name="perkPenetrator" max_level="4" parent="FuriousRamsaySkillStrength" name_key="perkPenetratorName" desc_key="perkPenetratorDesc" icon="ui_game_symbol_paint_copy_block">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="4" desc_key="FuriousRamsayReqGeneticsLevel04"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="6" desc_key="FuriousRamsayReqGeneticsLevel06"/></level_requirements>
@@ -523,7 +523,7 @@
 		<effect_group>
 			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkSalvageOperations"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeToolSalvageT1Wrench"/>
-			<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-0.1,-.5" tags="salvageScrap"/><!-- does not work on scrapping -->
+			<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-0.1,-.5" tags="salvageScrap"/>
 
 			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkSalvageOperations"/>
 			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkSalvageOperations"/>
@@ -624,10 +624,10 @@
 				<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
 			</passive_effect>
 		</effect_group>
-	</perk>
+	</perk>-->
 	
 	<!-- DEXTERITY -->
-	<perk name="perkSexualTrex" max_level="4" parent="FuriousRamsaySkillDexterity" name_key="perkSexualTrexName" desc_key="perkSexualTrexDesc" icon="ui_game_symbol_trex">
+	<!--<perk name="perkSexualTrex" max_level="4" parent="FuriousRamsaySkillDexterity" name_key="perkSexualTrexName" desc_key="perkSexualTrexDesc" icon="ui_game_symbol_trex">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
@@ -740,10 +740,10 @@
 			<effect_description level="4" desc_key="perkLightArmorRank4Desc" long_desc_key="perkLightArmorRank4LongDesc"/>
 			<effect_description level="5" desc_key="perkLightArmorRank5Desc" long_desc_key="perkLightArmorRank5LongDesc"/>
 		</effect_group>
-	</perk>
+	</perk>-->
 
 	<!-- CONSTITUTION -->
-	<perk name="perkHealingFactor" parent="FuriousRamsaySkillConstitution" name_key="perkHealingFactorName" desc_key="perkHealingFactorDesc" icon="ui_game_symbol_healing_factor">
+	<!--<perk name="perkHealingFactor" parent="FuriousRamsaySkillConstitution" name_key="perkHealingFactorName" desc_key="perkHealingFactorDesc" icon="ui_game_symbol_healing_factor">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
@@ -831,10 +831,10 @@
 			<effect_description level="2" desc_key="perkWellInsulatedRank2Desc" long_desc_key="perkWellInsulatedRank2LongDesc"/>
 			<effect_description level="3" desc_key="perkWellInsulatedRank3Desc" long_desc_key="perkWellInsulatedRank3LongDesc"/>
 		</effect_group>
-	</perk>
+	</perk>-->
 
 	<!-- INTELLIGENCE -->
-	<perk name="perkLuckyLooter" parent="FuriousRamsaySkillIntelligence" name_key="perkLuckyLooterName" desc_key="perkLuckyLooterDesc" icon="ui_game_symbol_shopping_cart">
+	<!--<perk name="perkLuckyLooter" parent="FuriousRamsaySkillIntelligence" name_key="perkLuckyLooterName" desc_key="perkLuckyLooterDesc" icon="ui_game_symbol_shopping_cart">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="2" desc_key="FuriousRamsayReqGeneticsLevel02"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
@@ -874,7 +874,7 @@
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
 
 		<effect_group>
-			<passive_effect name="TreasureBlocksPerReduction" operation="base_add" level="0,1,2,3" value="0,-3,-5,-7"/><!-- base value in quests is 10 -->
+			<passive_effect name="TreasureBlocksPerReduction" operation="base_add" level="0,1,2,3" value="0,-3,-5,-7"/>
 			<passive_effect name="LootQuantity" operation="perc_add" level="1,2,3" value=".1,.3" tags="buriedTreasure"/>
 
 			<effect_description level="1" desc_key="perkTreasureHunterRank1Desc" long_desc_key="perkTreasureHunterRank1LongDesc"/>
@@ -930,10 +930,10 @@
 				<passive_effect name="BarteringBuying" operation="base_add" level="1" value="0.05"/>
 				<passive_effect name="BarteringSelling" operation="base_add" level="1" value="0.05"/>
 		</effect_group>
-	</perk>
+	</perk>-->
 
 	<!-- KNOWLEDGE -->
-	<perk name="perkTheHuntsman" parent="FuriousRamsaySkillKnowledge" name_key="perkTheHuntsmanName" desc_key="perkTheHuntsmanDesc" icon="ui_game_symbol_archery">
+	<!--<perk name="perkTheHuntsman" parent="FuriousRamsaySkillKnowledge" name_key="perkTheHuntsmanName" desc_key="perkTheHuntsmanDesc" icon="ui_game_symbol_archery">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/></level_requirements>
@@ -958,7 +958,7 @@
 		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/></level_requirements>
 		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqGeneticsLevel10"/></level_requirements>
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkLivingOffTheLandCrafting"/><!-- fake crafting perk that is used to scale resources -->
+			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkLivingOffTheLandCrafting"/>
 
 			<passive_effect name="HarvestCount" operation="perc_add" level="1,2,3" value="1,1,2" tags="cropHarvest,wildCropsHarvest"/>
 
@@ -981,7 +981,7 @@
 		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqGeneticsLevel10"/></level_requirements>
 
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkMasterChef"/><!-- fake crafting perk that is used to scale resources -->
+			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkMasterChef"/>
 			<passive_effect name="CraftingTime" operation="perc_add" level="1,5" value="-.1,-.5" tags="perkMasterChef"/>
 
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1"
@@ -1011,7 +1011,7 @@
 		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqGeneticsLevel10"/></level_requirements>
 
 		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkGreaseMonkey"/><!-- fake crafting perk that is used to scale resources or quality like on carBattery -->
+			<passive_effect name="CraftingTier" operation="base_set" level="0,5" value="0,5" tags="perkGreaseMonkey"/>
 
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="vehicleWheels,vehicleBicycleChassis,vehicleBicycleHandlebars"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,5" value="1" tags="carBattery,ammoGasCan,vehicleMinibikeChassis,vehicleMinibikeHandlebars"/>
@@ -1062,11 +1062,11 @@
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="resourceRockSmallBundle,resourceWoodBundle,resourceScrapIronBundle,resourceOilShaleBundle,resourcePotassiumNitratePowderBundle,resourceLeadBundle,resourceCoalBundle"/>
 		</effect_group>
-	</perk>
+	</perk>-->
 	
 	<!-- CHARISMA -->
 	<!-- Have to set optioncount to 3 as default -->
-	<perk name="perkDaringAdventurer" max_level="4" parent="FuriousRamsaySkillCharisma" name_key="perkDaringAdventurerName" desc_key="perkDaringAdventurerDesc" icon="ui_game_symbol_adventure">
+	<!--<perk name="perkDaringAdventurer" max_level="4" parent="FuriousRamsaySkillCharisma" name_key="perkDaringAdventurerName" desc_key="perkDaringAdventurerDesc" icon="ui_game_symbol_adventure">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
@@ -1141,10 +1141,70 @@
 			<effect_description level="4" desc_key="perkCharismaticNatureRank4Desc" long_desc_key="perkCharismaticNatureRank4LongDesc"/>
 			<effect_description level="5" desc_key="perkCharismaticNatureRank5Desc" long_desc_key="perkCharismaticNatureRank5LongDesc"/>
 		</effect_group>
-	</perk>
+	</perk>-->
 	
-	<!-- SAVAGE -->
-	<perk name="perkThug" parent="FuriousRamsaySkillThugAbilities" name_key="perkThugName" desc_key="perkThugDesc" icon="ui_game_symbol_boxer">
+	<!-- THUG -->
+	<perk name="FuriousRamsayPerkShotgun" max_level="10" parent="FuriousRamsaySkillThugExpertise" name_key="FuriousRamsayPerkShotgunName" desc_key="FuriousRamsayPerkShotgunDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.15,-.2,-.25,-.3,-.4,-.5" tags="perkBoomstick"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="perkBoomstick"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="perkBoomstick"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.175,-.2,-.225,-.25" tags="perkBoomstick"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank10LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="FuriousRamsayPerkClub" max_level="10" parent="FuriousRamsaySkillThugExpertise" name_key="FuriousRamsayPerkClubName" desc_key="FuriousRamsayPerkClubDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.15,-.2,-.25,-.3,-.4,-.5" tags="perkBoomstick"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="perkBoomstick"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="perkBoomstick"/>
+			<passive_effect name="AttacksPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.175,-.2,-.225,-.25" tags="perkBoomstick"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkClubRank1Desc" long_desc_key="FuriousRamsayPerkClubRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkClubRank1Desc" long_desc_key="FuriousRamsayPerkClubRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkClubRank1Desc" long_desc_key="FuriousRamsayPerkClubRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkClubRank1Desc" long_desc_key="FuriousRamsayPerkClubRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkClubRank1Desc" long_desc_key="FuriousRamsayPerkClubRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkClubRank1Desc" long_desc_key="FuriousRamsayPerkClubRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkClubRank1Desc" long_desc_key="FuriousRamsayPerkClubRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkClubRank1Desc" long_desc_key="FuriousRamsayPerkClubRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkClubRank1Desc" long_desc_key="FuriousRamsayPerkClubRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkClubRank1Desc" long_desc_key="FuriousRamsayPerkClubRank10LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<!--<perk name="perkThug" parent="FuriousRamsaySkillThugAbilities" name_key="perkThugName" desc_key="perkThugDesc" icon="ui_game_symbol_boxer">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqThugLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqThugLevel03"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqThugLevel05"/></level_requirements>
@@ -1545,10 +1605,10 @@
 			<requirement name="CVarCompare" cvar="ragdoll" operation="Equals" value="1" target="other"/>
 				<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".5" tags="secondary"/>
 		</effect_group>
-	</perk>
+	</perk>-->
 	
-	<!-- Soldier -->
-	<perk name="perkDeadEye" parent="FuriousRamsaySkillSoldierAbilities" name_key="perkDeadEyeName" desc_key="perkDeadEyeDesc" icon="ui_game_symbol_map_cursor">
+	<!-- SOLDIER -->
+	<!--<perk name="perkDeadEye" parent="FuriousRamsaySkillSoldierAbilities" name_key="perkDeadEyeName" desc_key="perkDeadEyeDesc" icon="ui_game_symbol_map_cursor">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqSoldierLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqSoldierLevel03"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqSoldierLevel05"/></level_requirements>
@@ -1938,10 +1998,10 @@
 				<requirement name="ProgressionLevel" progression_name="perkAutoWeaponsComplete" operation="Equals" value="1"/>
 			</triggered_effect>
 		</effect_group>
-	</perk>
+	</perk>-->
 
-	<!-- Hunter -->
-	<perk name="perkInfiltrator" max_level="3" parent="FuriousRamsaySkillHunterAbilities" name_key="perkInfiltratorName" desc_key="perkInfiltratorDesc" icon="ui_game_symbol_stealth">
+	<!-- HUNTER -->
+	<!--<perk name="perkInfiltrator" max_level="3" parent="FuriousRamsaySkillHunterAbilities" name_key="perkInfiltratorName" desc_key="perkInfiltratorDesc" icon="ui_game_symbol_stealth">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqHunterLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="4" desc_key="FuriousRamsayReqHunterLevel04"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqHunterLevel07"/></level_requirements>
@@ -2149,7 +2209,7 @@
 			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
 			<requirement name="CVarCompare" cvar="_notAlerted" operation="GT" value="0" target="other"/>
 			<requirement name="!ItemHasTags" tags="perkSkullCrusher"/>
-				<passive_effect name="DamageBonus" operation="base_add" level="0,1,2,3,4,5" value="1.5,2,2.5,3,3.5,4"/> <!--For UI-->
+				<passive_effect name="DamageBonus" operation="base_add" level="0,1,2,3,4,5" value="1.5,2,2.5,3,3.5,4"/>
 				<passive_effect name="EntityDamage" operation="perc_add" level="0,1,2,3,4,5" value=".5,1,1.5,2,2.5,3"/>
 
 			<effect_description level="1" desc_key="perkHiddenStrikeRank1Desc" long_desc_key="perkHiddenStrikeRank1LongDesc"/>
@@ -2296,10 +2356,10 @@
 				<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1"/>
 				<passive_effect name="HealthLoss" operation="perc_subtract" level="1" value=".05"/>
 		</effect_group>
-	</perk>
+	</perk>-->
 
-	<!-- Technogeek -->
-	<perk name="perkElectrocutioner" parent="FuriousRamsaySkillTechnogeekAbilities" name_key="perkElectrocutionerName" desc_key="perkElectrocutionerDesc" icon="ui_game_symbol_electric_power">
+	<!-- TECHNOGEEK -->
+	<!--<perk name="perkElectrocutioner" parent="FuriousRamsaySkillTechnogeekAbilities" name_key="perkElectrocutionerName" desc_key="perkElectrocutionerDesc" icon="ui_game_symbol_electric_power">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqTechnogeekLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqTechnogeekLevel03"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqTechnogeekLevel05"/></level_requirements>
@@ -2398,10 +2458,10 @@
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="ammoBundleJunkTurretRegular,ammoBundleJunkTurretShell,ammoBundleJunkTurretAP"/>
 		</effect_group>
-	</perk>
+	</perk>-->
 
-	<!-- Madman -->
-	<perk name="perkDemolitionsExpert" parent="FuriousRamsaySkillMadmanAbilities" name_key="perkDemolitionsExpertName" desc_key="perkDemolitionsExpertDesc" icon="ui_game_symbol_explosion">
+	<!-- MADMAN -->
+	<!--<perk name="perkDemolitionsExpert" parent="FuriousRamsaySkillMadmanAbilities" name_key="perkDemolitionsExpertName" desc_key="perkDemolitionsExpertDesc" icon="ui_game_symbol_explosion">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqMadmanLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqMadmanLevel03"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqMadmanLevel05"/></level_requirements>
@@ -2467,7 +2527,7 @@
 		<effect_group>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drinkJarPureMineralWater"/>
 		</effect_group>
-	</perk>
+	</perk>-->
 	
 	</append>
 
