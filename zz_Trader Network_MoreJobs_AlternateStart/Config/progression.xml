@@ -1156,10 +1156,16 @@
 		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugLevel09"/></level_requirements>
 		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugLevel10"/></level_requirements>
 		<effect_group>
-			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="perkBoomstick"/>
-			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="perkBoomstick"/>
-			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="perkBoomstick"/>
-			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="perkBoomstick"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="shotgun"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="shotgun"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="shotgun"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="shotgun"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="shotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modShotgunSawedOffBarrel,modGunShotgunTubeExtenderMagazine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="gunShotgunT2PumpShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modGunChoke,modGunDuckbill"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="gunShotgunT3AutoShotgun"/>
 
 			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
 			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank2Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
@@ -1186,10 +1192,13 @@
 		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugLevel09"/></level_requirements>
 		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugLevel10"/></level_requirements>
 		<effect_group>
-			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.15,-.2,-.25,-.3,-.4,-.5" tags="perkBoomstick"/>
-			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="perkBoomstick"/>
-			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="perkBoomstick"/>
-			<passive_effect name="AttacksPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.175,-.2,-.225,-.25" tags="perkBoomstick"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.15,-.2,-.25,-.3,-.4,-.5" tags="club"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="club"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="club"/>
+			<passive_effect name="AttacksPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.175,-.2,-.225,-.25" tags="club"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="club"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="meleeWpnClubT1BaseballBat"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="meleeWpnClubT3SteelClub"/>
 
 			<effect_description level="1" desc_key="FuriousRamsayPerkClubRank1Desc" long_desc_key="FuriousRamsayPerkClubRank1LongDesc"/>
 			<effect_description level="2" desc_key="FuriousRamsayPerkClubRank1Desc" long_desc_key="FuriousRamsayPerkClubRank2LongDesc"/>
