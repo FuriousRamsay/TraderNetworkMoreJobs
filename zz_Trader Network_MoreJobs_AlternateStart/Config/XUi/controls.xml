@@ -1,19 +1,17 @@
 <Config>
-
+	
+	<!-- SKILLS CONTROLS -->
 	<set xpath="/controls/skill_perk_level/panel/@color_bg_bought">139,161,133,255</set>
-	<set xpath="/controls/skill_perk_level/panel/@color_bg_locked">0,0,0,260</set>
 	<set xpath="/controls/skill_perk_level/panel/label[@text='{level}']/@font_size">30</set>
 	<set xpath="/controls/skill_perk_level/panel/label[@text='{text}']/@font_size">24</set>
 
 	<set xpath="/controls/skill_attribute_level/panel/@color_bg_bought">139,161,133,255</set>
-	<set xpath="/controls/skill_attribute_level/panel/@color_bg_locked">0,0,0,320</set>
 
 	<remove xpath="/controls/skill_entry/panel/label[@text='{grouppointcost}']"/>
-	<set xpath="/controls/skill_entry/panel/@row_color">0,0,0,320</set>
 	<set xpath="/controls/skill_entry/panel/@hover_color">80,80,80,320</set>
 	<set xpath="/controls/skill_entry/panel/sprite[@name='groupIcon']/@pos">-1000, -1000</set>
 
-	<append xpath="/controls">
-	</append>
+	<!-- OTHER -->
+	<set xpath="/controls/item_stack/rect/sprite[@name='backgroundMain']/@color">80,80,80,320</set>
 
 </Config>
