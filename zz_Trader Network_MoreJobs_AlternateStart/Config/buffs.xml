@@ -2387,6 +2387,11 @@
 				<stack_type value="replace"/>
 				<duration value="1"/>
 				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorR" operation="set" value="41"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorG" operation="set" value="41"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="121"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="0.75"/>
+
 					<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="varFuriousRamsayStarterVariables" operation="set" value="1"/>
 				</effect_group>
 			</buff>
@@ -4701,16 +4706,15 @@
 		</append>		
 
 		<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
-
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="FuriousRamsayStarterAilments">
-				<requirement name="!CVarCompare" cvar="varFuriousRamsayStarterAilments" operation="Equals" value="1"/>
-				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayStarterAilments"/>
-			</triggered_effect>
-
 			<!-- Set up Starter Variables -->
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="FuriousRamsayStarterVariables">
 				<requirement name="!CVarCompare" cvar="varFuriousRamsayStarterVariables" operation="Equals" value="1"/>
 				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayStarterVariables"/>
+			</triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="FuriousRamsayStarterAilments">
+				<requirement name="!CVarCompare" cvar="varFuriousRamsayStarterAilments" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayStarterAilments"/>
 			</triggered_effect>
 
 			<!-- Wandering Trader Visuals -->
