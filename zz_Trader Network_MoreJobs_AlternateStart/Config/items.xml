@@ -46,12 +46,14 @@
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1"/>
 				<property name="Use_time" value="..."/>
-				<property name="Sound_start" value="read_skillbook"/>
 			</property>
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items,books"/>
 			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExp" operation="set" value="@varFuriousRamsayAttributeThugExpLvl2Min">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="Equals" value="0"/>
+				</triggered_effect>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugClass" operation="set" value="1"/>
 			</effect_group>
 		</item>

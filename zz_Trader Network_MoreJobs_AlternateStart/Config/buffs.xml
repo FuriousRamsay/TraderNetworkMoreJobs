@@ -640,7 +640,6 @@
 						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundAttributeLevel"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeThug" operation="set" value="1"/>
 						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="furiousramsayattthug" level="1"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExp" operation="set" value="@varFuriousRamsayAttributeThugExpLvl1Max"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpMax" operation="set" value="@varFuriousRamsayAttributeThugExpLvl2Max"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugNext" operation="set" value="2"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [d5f7b2]Level 1[-] [bd444a]Thug[-]"/>
@@ -941,7 +940,9 @@
 					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeThug"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeThugNext"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkShotgunExp"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar=".varFuriousRamsayAttributeThugTemp"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkShotgun"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkShotgunExpLvl1Max"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkThugStaminaAura"/>
 				</effect_group>
 
@@ -1048,6 +1049,36 @@
 							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpPercLvl10" operation="set" value="@varFuriousRamsayPerkShotgunExp"/>
 							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpPercLvl10" operation="divide" value="@varFuriousRamsayPerkShotgunExpLvl10Max"/>
 							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpPercLvl10" operation="multiply" value="100"/>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpPercLvl1" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExpPercLvl1" operation="GTE" value="100"/>
+							</triggered_effect>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpPercLvl2" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExpPercLvl2" operation="GTE" value="100"/>
+							</triggered_effect>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpPercLvl3" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExpPercLvl3" operation="GTE" value="100"/>
+							</triggered_effect>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpPercLvl4" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExpPercLvl4" operation="GTE" value="100"/>
+							</triggered_effect>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpPercLvl5" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExpPercLvl5" operation="GTE" value="100"/>
+							</triggered_effect>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpPercLvl6" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExpPercLvl6" operation="GTE" value="100"/>
+							</triggered_effect>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpPercLvl7" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExpPercLvl7" operation="GTE" value="100"/>
+							</triggered_effect>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpPercLvl8" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExpPercLvl8" operation="GTE" value="100"/>
+							</triggered_effect>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpPercLvl9" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExpPercLvl9" operation="GTE" value="100"/>
+							</triggered_effect>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpPercLvl10" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExpPercLvl10" operation="GTE" value="100"/>
+							</triggered_effect>
 							<!-- CLUBS -->
 							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpPerc" operation="set" value="@varFuriousRamsayPerkClubExp"/>
 							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpPerc" operation="divide" value="@varFuriousRamsayPerkClubExpMax"/>
@@ -1082,73 +1113,102 @@
 							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpPercLvl10" operation="set" value="@varFuriousRamsayPerkClubExp"/>
 							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpPercLvl10" operation="divide" value="@varFuriousRamsayPerkClubExpLvl10Max"/>
 							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpPercLvl10" operation="multiply" value="100"/>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpPercLvl1" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExpPercLvl1" operation="GTE" value="100"/>
+							</triggered_effect>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpPercLvl2" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExpPercLvl2" operation="GTE" value="100"/>
+							</triggered_effect>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpPercLvl3" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExpPercLvl3" operation="GTE" value="100"/>
+							</triggered_effect>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpPercLvl4" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExpPercLvl4" operation="GTE" value="100"/>
+							</triggered_effect>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpPercLvl5" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExpPercLvl5" operation="GTE" value="100"/>
+							</triggered_effect>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpPercLvl6" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExpPercLvl6" operation="GTE" value="100"/>
+							</triggered_effect>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpPercLvl7" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExpPercLvl7" operation="GTE" value="100"/>
+							</triggered_effect>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpPercLvl8" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExpPercLvl8" operation="GTE" value="100"/>
+							</triggered_effect>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpPercLvl9" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExpPercLvl9" operation="GTE" value="100"/>
+							</triggered_effect>
+							<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpPercLvl10" operation="set" value="100">
+								<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExpPercLvl10" operation="GTE" value="100"/>
+							</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugExpLvl1">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl1Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl1Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl2Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl2Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="0"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="FuriousRamsayAddAttributeThug"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugExpLvl2">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl2Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl2Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl3Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl3Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="1"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="FuriousRamsayAddAttributeThug"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugExpLvl3">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl3Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl3Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl4Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl4Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="2"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="FuriousRamsayAddAttributeThug"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugExpLvl4">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl4Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl4Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl5Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl5Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="3"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="FuriousRamsayAddAttributeThug"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugExpLvl5">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl5Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl5Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl6Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl6Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="4"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="FuriousRamsayAddAttributeThug"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugExpLvl6">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl6Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl6Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl7Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl7Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="5"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="FuriousRamsayAddAttributeThug"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugExpLvl7">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl7Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl7Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl8Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl8Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="6"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="FuriousRamsayAddAttributeThug"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugExpLvl8">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl8Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl8Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl9Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl9Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="7"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="FuriousRamsayAddAttributeThug"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugExpLvl9">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl9Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl9Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl10Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl10Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="8"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="FuriousRamsayAddAttributeThug"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugExpLvl10">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl10Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl10Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="GTE" value="@varFuriousRamsayAttributeThugExpLvl10Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="9"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="FuriousRamsayAddAttributeThug"/>
@@ -1157,8 +1217,8 @@
 		<!-- PERKS -->
 			<!-- SHOTGUNS -->
 				<effect_group name="FuriousRamsayPerkShotgunExpLvl1">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl1Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl1Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl2Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl2Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="0"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
@@ -1168,8 +1228,8 @@
 						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkShotgun" level="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayPerkShotgunExpLvl2">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl2Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl2Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl3Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl3Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="1"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
@@ -1179,8 +1239,8 @@
 						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkShotgun" level="2"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayPerkShotgunExpLvl3">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl3Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl3Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl4Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl4Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="2"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
@@ -1190,8 +1250,8 @@
 						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkShotgun" level="3"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayPerkShotgunExpLvl4">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl4Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl4Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl5Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl5Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="3"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
@@ -1201,8 +1261,8 @@
 						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkShotgun" level="4"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayPerkShotgunExpLvl5">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl5Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl5Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl6Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl6Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="4"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
@@ -1212,8 +1272,8 @@
 						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkShotgun" level="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayPerkShotgunExpLvl6">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl6Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl6Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl7Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl7Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="5"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
@@ -1223,8 +1283,8 @@
 						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkShotgun" level="6"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayPerkShotgunExpLvl7">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl7Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl7Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl8Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl8Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="6"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
@@ -1234,8 +1294,8 @@
 						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkShotgun" level="7"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayPerkShotgunExpLvl8">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl8Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl8Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl9Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl9Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="7"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
@@ -1245,8 +1305,8 @@
 						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkShotgun" level="8"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayPerkShotgunExpLvl9">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl9Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl9Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl10Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl10Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="8"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
@@ -1256,8 +1316,7 @@
 						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkShotgun" level="9"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayPerkShotgunExpLvl10">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl10Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl10Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="GTE" value="@varFuriousRamsayPerkShotgunExpLvl10Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="9"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
@@ -1397,7 +1456,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeThugExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunKillExpLvl1">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl1Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl1Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="0"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1406,7 +1465,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunKillExpLvl2">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl2Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl2Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="1"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1415,7 +1474,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunKillExpLvl3">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl3Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl3Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="2"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1424,7 +1483,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunKillExpLvl4">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl4Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl4Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="3"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1433,7 +1492,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunKillExpLvl5">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl5Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl5Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="4"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1442,7 +1501,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunKillExpLvl6">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl6Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl6Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="5"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1451,7 +1510,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunKillExpLvl7">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl7Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl7Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="6"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1460,7 +1519,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunKillExpLvl8">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl8Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl8Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="7"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1469,7 +1528,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunKillExpLvl9">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl9Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl9Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="8"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1478,7 +1537,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunKillExpLvl10">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl10Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl10Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="9"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1487,7 +1546,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadKillExpLvl1">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl1Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl1Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="0"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1496,7 +1555,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadKillExpLvl2">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl2Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl2Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="1"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1505,7 +1564,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadKillExpLvl3">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl3Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl3Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="2"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1514,7 +1573,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadKillExpLvl4">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl4Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl4Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="3"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1523,7 +1582,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadKillExpLvl5">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl5Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl5Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="4"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1532,7 +1591,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadKillExpLvl6">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl6Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl6Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="5"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1541,7 +1600,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadKillExpLvl7">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl7Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl7Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="6"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1550,7 +1609,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadKillExpLvl8">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl8Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl8Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="7"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1559,7 +1618,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadKillExpLvl9">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl9Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl9Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="8"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1568,7 +1627,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadKillExpLvl10">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl10Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl10Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="9"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1577,7 +1636,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadDamageExpLvl1">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl1Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl1Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="0"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1586,7 +1645,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadDamageExpLvl2">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl2Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl2Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="1"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1595,7 +1654,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadDamageExpLvl3">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl3Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl3Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="2"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1604,7 +1663,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadDamageExpLvl4">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl4Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl4Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="3"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1613,7 +1672,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadDamageExpLvl5">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl5Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl5Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="4"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1622,7 +1681,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadDamageExpLvl6">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl6Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl6Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="5"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1631,7 +1690,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadDamageExpLvl7">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl7Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl7Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="6"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1640,7 +1699,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadDamageExpLvl8">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl8Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl8Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="7"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1649,7 +1708,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadDamageExpLvl9">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl9Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl9Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="8"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1658,7 +1717,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkShotgunExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkShotgunHeadDamageExpLvl10">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl10Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgunExp" operation="LTE" value="@varFuriousRamsayPerkShotgunExpLvl10Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="Equals" value="9"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1668,15 +1727,15 @@
 				</effect_group>
 			<!-- CLUBS -->
 				<effect_group name="FuriousRamsayAddPerkClubKillExp">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl10Max"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl10Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl10Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl10Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="GTE" value="@varFuriousRamsayAttributeThug"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeThugExp" action="ModifyCVar" operation="add" value="5"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeThugExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubKillExpLvl1">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl1Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl1Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="0"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1685,7 +1744,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubKillExpLvl2">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl2Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl2Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="1"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1694,7 +1753,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubKillExpLvl3">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl3Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl3Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="2"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1703,7 +1762,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubKillExpLvl4">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl4Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl4Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="3"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1712,7 +1771,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubKillExpLvl5">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl5Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl5Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="4"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1721,7 +1780,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubKillExpLvl6">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl6Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl6Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="5"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1730,7 +1789,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubKillExpLvl7">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl7Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl7Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="6"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1739,7 +1798,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubKillExpLvl8">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl8Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl8Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="7"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1748,7 +1807,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubKillExpLvl9">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl9Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl9Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="8"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1757,7 +1816,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubKillExpLvl10">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl10Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl10Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="9"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1766,7 +1825,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="5"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadKillExpLvl1">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl1Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl1Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="0"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1775,7 +1834,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadKillExpLvl2">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl2Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl2Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="1"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1784,7 +1843,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadKillExpLvl3">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl3Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl3Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="2"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1793,7 +1852,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadKillExpLvl4">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl4Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl4Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="3"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1802,7 +1861,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadKillExpLvl5">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl5Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl5Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="4"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1811,7 +1870,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadKillExpLvl6">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl6Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl6Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="5"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1820,7 +1879,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadKillExpLvl7">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl7Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl7Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="6"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1829,7 +1888,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadKillExpLvl8">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl8Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl8Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="7"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1838,7 +1897,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadKillExpLvl9">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl9Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl9Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="8"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1847,7 +1906,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadKillExpLvl10">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl10Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl10Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="9"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1856,7 +1915,7 @@
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="10"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadDamageExpLvl1">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl1Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl1Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="0"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1865,7 +1924,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadDamageExpLvl2">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl2Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl2Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="1"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1874,7 +1933,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadDamageExpLvl3">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl3Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl3Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="2"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1883,7 +1942,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadDamageExpLvl4">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl4Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl4Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="3"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1892,7 +1951,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadDamageExpLvl5">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl5Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl5Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="4"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1901,7 +1960,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadDamageExpLvl6">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl6Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl6Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="5"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1910,7 +1969,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadDamageExpLvl7">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl7Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl7Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="6"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1919,7 +1978,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadDamageExpLvl8">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl8Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl8Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="7"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1928,7 +1987,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadDamageExpLvl9">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl9Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl9Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="8"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
@@ -1937,7 +1996,7 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="1"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAddPerkClubHeadDamageExpLvl10">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayAttributeThugExpLvl10Max"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClubExp" operation="LTE" value="@varFuriousRamsayPerkClubExpLvl10Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="Equals" value="9"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="LTE" value="@.varFuriousRamsayAttributeThugTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
