@@ -33,6 +33,64 @@
 			<property name="Group" value="Special Items,books"/>
 		</item>
 
+		<item name="FuriousRamsayAttributeHunterClass">
+			<property name="HoldType" value="21"/>
+			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="1600"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="read_skillbook"/>
+			</property>
+			<property name="FuelValue" value="2"/>
+			<property name="Weight" value="2"/>
+			<property name="Group" value="Special Items,books"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterClass" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
+			</effect_group>
+			<effect_group name="StarterVariablesSet" tiered="false">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterStarterVariablesSet" operation="Equals" value="0"/>
+				<!-- HUNTER -->
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterNext" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl1Min" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl2Min" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl3Min" operation="set" value="200"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl4Min" operation="set" value="300"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl5Min" operation="set" value="400"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl6Min" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl7Min" operation="set" value="600"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl8Min" operation="set" value="700"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl9Min" operation="set" value="800"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl10Min" operation="set" value="900"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl1Max" operation="set" value="99"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpMax" operation="set" value="@varFuriousRamsayAttributeHunterExpLvl1Max"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl2Max" operation="set" value="199"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl3Max" operation="set" value="299"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl4Max" operation="set" value="399"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl5Max" operation="set" value="499"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl6Max" operation="set" value="599"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl7Max" operation="set" value="699"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl8Max" operation="set" value="799"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl9Max" operation="set" value="899"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExpLvl10Max" operation="set" value="999"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterExp" operation="set" value="@varFuriousRamsayAttributeHunterExpLvl2Min"/>
+
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterStarterVariablesSet" operation="set" value="1"/>
+			</effect_group>
+		</item>
+
 		<item name="FuriousRamsayAttributeThugClass">
 			<property name="HoldType" value="21"/>
 			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
@@ -46,18 +104,388 @@
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1"/>
 				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="read_skillbook"/>
 			</property>
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items,books"/>
 			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExp" operation="set" value="@varFuriousRamsayAttributeThugExpLvl2Min">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugExp" operation="Equals" value="0"/>
-				</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugClass" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
+			</effect_group>
+			<effect_group name="StarterVariablesSet" tiered="false">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugStarterVariablesSet" operation="Equals" value="0"/>
+				<!-- THUG -->
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugNext" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl1Min" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl2Min" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl3Min" operation="set" value="200"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl4Min" operation="set" value="300"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl5Min" operation="set" value="400"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl6Min" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl7Min" operation="set" value="600"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl8Min" operation="set" value="700"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl9Min" operation="set" value="800"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl10Min" operation="set" value="900"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl1Max" operation="set" value="99"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpMax" operation="set" value="@varFuriousRamsayAttributeThugExpLvl1Max"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl2Max" operation="set" value="199"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl3Max" operation="set" value="299"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl4Max" operation="set" value="399"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl5Max" operation="set" value="499"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl6Max" operation="set" value="599"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl7Max" operation="set" value="699"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl8Max" operation="set" value="799"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl9Max" operation="set" value="899"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExpLvl10Max" operation="set" value="999"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugExp" operation="set" value="@varFuriousRamsayAttributeThugExpLvl2Min"/>
+
+					<!-- SHOTGUNS -->
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunNext" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl1Min" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl2Min" operation="set" value="200"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl3Min" operation="set" value="300"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl4Min" operation="set" value="400"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl5Min" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl6Min" operation="set" value="600"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl7Min" operation="set" value="700"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl8Min" operation="set" value="800"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl9Min" operation="set" value="900"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl10Min" operation="set" value="1000"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl1Max" operation="set" value="199"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpMax" operation="set" value="@varFuriousRamsayPerkShotgunExpLvl1Max"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl2Max" operation="set" value="299"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl3Max" operation="set" value="399"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl4Max" operation="set" value="499"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl5Max" operation="set" value="599"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl6Max" operation="set" value="699"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl7Max" operation="set" value="799"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl8Max" operation="set" value="899"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl9Max" operation="set" value="999"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkShotgunExpLvl10Max" operation="set" value="1099"/>
+					<!-- CLUBS -->
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubNext" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl1Min" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl2Min" operation="set" value="200"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl3Min" operation="set" value="300"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl4Min" operation="set" value="400"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl5Min" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl6Min" operation="set" value="600"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl7Min" operation="set" value="700"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl8Min" operation="set" value="800"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl9Min" operation="set" value="900"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl10Min" operation="set" value="1000"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl1Max" operation="set" value="199"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpMax" operation="set" value="@varFuriousRamsayPerkClubExpLvl1Max"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl2Max" operation="set" value="299"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl3Max" operation="set" value="399"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl4Max" operation="set" value="499"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl5Max" operation="set" value="599"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl6Max" operation="set" value="699"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl7Max" operation="set" value="799"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl8Max" operation="set" value="899"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl9Max" operation="set" value="999"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkClubExpLvl10Max" operation="set" value="1099"/>			
+
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugStarterVariablesSet" operation="set" value="1"/>
 			</effect_group>
 		</item>
 
+		<item name="FuriousRamsayAttributeButcherClass">
+			<property name="HoldType" value="21"/>
+			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="1600"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="read_skillbook"/>
+			</property>
+			<property name="FuelValue" value="2"/>
+			<property name="Weight" value="2"/>
+			<property name="Group" value="Special Items,books"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherClass" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
+			</effect_group>
+			<effect_group name="StarterVariablesSet" tiered="false">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherStarterVariablesSet" operation="Equals" value="0"/>
+				<!-- BUTCHER -->
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherNext" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl1Min" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl2Min" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl3Min" operation="set" value="200"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl4Min" operation="set" value="300"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl5Min" operation="set" value="400"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl6Min" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl7Min" operation="set" value="600"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl8Min" operation="set" value="700"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl9Min" operation="set" value="800"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl10Min" operation="set" value="900"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl1Max" operation="set" value="99"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpMax" operation="set" value="@varFuriousRamsayAttributeButcherExpLvl1Max"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl2Max" operation="set" value="199"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl3Max" operation="set" value="299"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl4Max" operation="set" value="399"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl5Max" operation="set" value="499"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl6Max" operation="set" value="599"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl7Max" operation="set" value="699"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl8Max" operation="set" value="799"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl9Max" operation="set" value="899"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExpLvl10Max" operation="set" value="999"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherExp" operation="set" value="@varFuriousRamsayAttributeButcherExpLvl2Min"/>
+
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherStarterVariablesSet" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		
+		<item name="FuriousRamsayAttributeSoldierClass">
+			<property name="HoldType" value="21"/>
+			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="1600"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="read_skillbook"/>
+			</property>
+			<property name="FuelValue" value="2"/>
+			<property name="Weight" value="2"/>
+			<property name="Group" value="Special Items,books"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierClass" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
+			</effect_group>
+			<effect_group name="StarterVariablesSet" tiered="false">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierStarterVariablesSet" operation="Equals" value="0"/>
+				<!-- SOLDIER -->
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierNext" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl1Min" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl2Min" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl3Min" operation="set" value="200"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl4Min" operation="set" value="300"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl5Min" operation="set" value="400"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl6Min" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl7Min" operation="set" value="600"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl8Min" operation="set" value="700"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl9Min" operation="set" value="800"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl10Min" operation="set" value="900"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl1Max" operation="set" value="99"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpMax" operation="set" value="@varFuriousRamsayAttributeSoldierExpLvl1Max"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl2Max" operation="set" value="199"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl3Max" operation="set" value="299"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl4Max" operation="set" value="399"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl5Max" operation="set" value="499"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl6Max" operation="set" value="599"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl7Max" operation="set" value="699"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl8Max" operation="set" value="799"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl9Max" operation="set" value="899"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl10Max" operation="set" value="999"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExp" operation="set" value="@varFuriousRamsayAttributeSoldierExpLvl2Min"/>
+
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierStarterVariablesSet" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		
+		<item name="FuriousRamsayAttributeTechnogeekClass">
+			<property name="HoldType" value="21"/>
+			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="1600"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="read_skillbook"/>
+			</property>
+			<property name="FuelValue" value="2"/>
+			<property name="Weight" value="2"/>
+			<property name="Group" value="Special Items,books"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
+			</effect_group>
+			<effect_group name="StarterVariablesSet" tiered="false">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekStarterVariablesSet" operation="Equals" value="0"/>
+				<!-- TECHNOGEEK -->
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekNext" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl1Min" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl2Min" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl3Min" operation="set" value="200"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl4Min" operation="set" value="300"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl5Min" operation="set" value="400"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl6Min" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl7Min" operation="set" value="600"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl8Min" operation="set" value="700"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl9Min" operation="set" value="800"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl10Min" operation="set" value="900"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl1Max" operation="set" value="99"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpMax" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpLvl1Max"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl2Max" operation="set" value="199"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl3Max" operation="set" value="299"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl4Max" operation="set" value="399"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl5Max" operation="set" value="499"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl6Max" operation="set" value="599"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl7Max" operation="set" value="699"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl8Max" operation="set" value="799"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl9Max" operation="set" value="899"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExpLvl10Max" operation="set" value="999"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekExp" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpLvl2Min"/>
+
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekStarterVariablesSet" operation="set" value="1"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayAttributeMadmanClass">
+			<property name="HoldType" value="21"/>
+			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="1600"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="read_skillbook"/>
+			</property>
+			<property name="FuelValue" value="2"/>
+			<property name="Weight" value="2"/>
+			<property name="Group" value="Special Items,books"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanClass" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
+			</effect_group>
+			<effect_group name="StarterVariablesSet" tiered="false">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanStarterVariablesSet" operation="Equals" value="0"/>
+				<!-- MADMAN -->
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanNext" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl1Min" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl2Min" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl3Min" operation="set" value="200"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl4Min" operation="set" value="300"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl5Min" operation="set" value="400"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl6Min" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl7Min" operation="set" value="600"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl8Min" operation="set" value="700"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl9Min" operation="set" value="800"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl10Min" operation="set" value="900"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl1Max" operation="set" value="99"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpMax" operation="set" value="@varFuriousRamsayAttributeMadmanExpLvl1Max"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl2Max" operation="set" value="199"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl3Max" operation="set" value="299"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl4Max" operation="set" value="399"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl5Max" operation="set" value="499"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl6Max" operation="set" value="599"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl7Max" operation="set" value="699"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl8Max" operation="set" value="799"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl9Max" operation="set" value="899"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl10Max" operation="set" value="999"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExp" operation="set" value="@varFuriousRamsayAttributeMadmanExpLvl2Min"/>
+
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanStarterVariablesSet" operation="set" value="1"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayAttributeBuilderClass">
+			<property name="HoldType" value="21"/>
+			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="1600"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="read_skillbook"/>
+			</property>
+			<property name="FuelValue" value="2"/>
+			<property name="Weight" value="2"/>
+			<property name="Group" value="Special Items,books"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanClass" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="1"/>
+			</effect_group>
+			<effect_group name="StarterVariablesSet" tiered="false">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderStarterVariablesSet" operation="Equals" value="0"/>
+				<!-- BUILDER -->
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderNext" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl1Min" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl2Min" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl3Min" operation="set" value="200"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl4Min" operation="set" value="300"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl5Min" operation="set" value="400"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl6Min" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl7Min" operation="set" value="600"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl8Min" operation="set" value="700"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl9Min" operation="set" value="800"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl10Min" operation="set" value="900"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl1Max" operation="set" value="99"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpMax" operation="set" value="@varFuriousRamsayAttributeBuilderExpLvl1Max"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl2Max" operation="set" value="199"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl3Max" operation="set" value="299"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl4Max" operation="set" value="399"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl5Max" operation="set" value="499"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl6Max" operation="set" value="599"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl7Max" operation="set" value="699"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl8Max" operation="set" value="799"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl9Max" operation="set" value="899"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExpLvl10Max" operation="set" value="999"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderExp" operation="set" value="@varFuriousRamsayAttributeBuilderExpLvl2Min"/>
+
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderStarterVariablesSet" operation="set" value="1"/>
+			</effect_group>
+		</item>
+		
 		<item name="FuriousRamsayAttributeSound">
 			<property name="HoldType" value="21"/>
 			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
