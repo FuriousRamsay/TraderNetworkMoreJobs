@@ -1688,6 +1688,13 @@
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkHunterMobilityAura"/>-->
 				</effect_group>
 				<effect_group name="FuriousRamsayChangeLabels">
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsHunter"/>
+				</effect_group>
+			</buff>	
+			<buff name="FuriousRamsayChangeClassLabelsHunter" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassNotSelectedWidth" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassHunterWidth" operation="set" value="215"/>
@@ -1706,11 +1713,11 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassMadmanHeight" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassBuilderHeight" operation="set" value="0"/>
 
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorR" operation="set" value="255"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorG" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorR" operation="set" value="53"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorG" operation="set" value="105"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="101"/>
 				</effect_group>
-			</buff>	
+			</buff>
 			
 		<!-- THUG -->
 			<buff name="FuriousRamsayAddAttributeThug" hidden="true">
@@ -1827,6 +1834,13 @@
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkThugStaminaAura"/>-->
 				</effect_group>
 				<effect_group name="FuriousRamsayChangeLabels">
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsThug"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangeClassLabelsThug" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="varFuriousRamsayClassNotSelectedWidth" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="varFuriousRamsayClassHunterWidth" operation="set" value="0"/>
@@ -1845,9 +1859,9 @@
 						<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="varFuriousRamsayClassMadmanHeight" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="varFuriousRamsayClassBuilderHeight" operation="set" value="0"/>
 
-						<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="varFuriousRamsayClassColorR" operation="set" value="80"/>
-						<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="varFuriousRamsayClassColorG" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="varFuriousRamsayClassColorR" operation="set" value="104"/>
+						<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="varFuriousRamsayClassColorG" operation="set" value="105"/>
+						<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="53"/>
 				</effect_group>
 			</buff>
 			
@@ -1966,6 +1980,13 @@
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkButcherHealthAura"/>-->
 				</effect_group>
 				<effect_group name="FuriousRamsayChangeLabels">
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsButcher"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangeClassLabelsButcher" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassNotSelectedWidth" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassHunterWidth" operation="set" value="0"/>
@@ -1984,9 +2005,9 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassMadmanHeight" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassBuilderHeight" operation="set" value="0"/>
 
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorR" operation="set" value="255"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorG" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorR" operation="set" value="105"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorG" operation="set" value="53"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="53"/>
 				</effect_group>
 			</buff>
 			
@@ -2105,6 +2126,13 @@
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkSoldierAttackSpeedAura"/>-->
 				</effect_group>
 				<effect_group name="FuriousRamsayChangeLabels">
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsSoldier"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangeClassLabelsSoldier" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassNotSelectedWidth" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassHunterWidth" operation="set" value="0"/>
@@ -2123,9 +2151,9 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassMadmanHeight" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassBuilderHeight" operation="set" value="0"/>
 
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorR" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorG" operation="set" value="255"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorR" operation="set" value="56"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorG" operation="set" value="105"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="53"/>
 				</effect_group>
 			</buff>
 			
@@ -2244,6 +2272,13 @@
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkTechnogeekTurretBuffAura"/>-->
 				</effect_group>
 				<effect_group name="FuriousRamsayChangeLabels">
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsTechnogeek"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangeClassLabelsTechnogeek" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassNotSelectedWidth" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassHunterWidth" operation="set" value="0"/>
@@ -2262,9 +2297,9 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassMadmanHeight" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassBuilderHeight" operation="set" value="0"/>
 
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorR" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorG" operation="set" value="255"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorR" operation="set" value="74"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorG" operation="set" value="53"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="105"/>
 				</effect_group>
 			</buff>
 			
@@ -2383,6 +2418,13 @@
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkMadmanFiringSpeedAura"/>-->
 				</effect_group>
 				<effect_group name="FuriousRamsayChangeLabels">
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsMadman"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangeClassLabelsMadman" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassNotSelectedWidth" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassHunterWidth" operation="set" value="0"/>
@@ -2401,9 +2443,9 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassMadmanHeight" operation="set" value="25"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassBuilderHeight" operation="set" value="0"/>
 
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorR" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorG" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorR" operation="set" value="105"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorG" operation="set" value="93"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="53"/>
 				</effect_group>
 			</buff>
 			
@@ -2522,6 +2564,13 @@
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkBuilderPenetratorAura"/>-->
 				</effect_group>
 				<effect_group name="FuriousRamsayChangeLabels">
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsBuilder"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangeClassLabelsBuilder" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassNotSelectedWidth" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassHunterWidth" operation="set" value="0"/>
@@ -2540,9 +2589,9 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassMadmanHeight" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassBuilderHeight" operation="set" value="25"/>
 
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorR" operation="set" value="255"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorG" operation="set" value="255"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorR" operation="set" value="105"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorG" operation="set" value="53"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="105"/>
 				</effect_group>
 			</buff>
 
@@ -3117,7 +3166,7 @@
 			<!-- HUNTER DISPLAY % -->
 				<effect_group name="FuriousRamsayAttributeHunterDisplayExpLvl1">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="0"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl1"/>
@@ -3125,7 +3174,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeHunterDisplayExpLvl2">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="2"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl2"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl2"/>
@@ -3133,7 +3182,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeHunterDisplayExpLvl3">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="3"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="2"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl3"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl3"/>
@@ -3141,7 +3190,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeHunterDisplayExpLvl4">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="4"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="3"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl4"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl4"/>
@@ -3149,7 +3198,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeHunterDisplayExpLvl5">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="5"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="4"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl5"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl5"/>
@@ -3157,7 +3206,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeHunterDisplayExpLvl6">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="6"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="5"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl6"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl6"/>
@@ -3165,7 +3214,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeHunterDisplayExpLvl7">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="7"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="6"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl7"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl7"/>
@@ -3173,7 +3222,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeHunterDisplayExpLvl8">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="8"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="7"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl8"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl8"/>
@@ -3181,7 +3230,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeHunterDisplayExpLvl9">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="9"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="8"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl9"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl9"/>
@@ -3189,7 +3238,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeHunterDisplayExpLvl10">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="10"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="9"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl10"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeHunterExpPercLvl10"/>
@@ -3947,7 +3996,7 @@
 			<!-- BUTCHER DISPLAY % -->
 				<effect_group name="FuriousRamsayAttributeButcherDisplayExpLvl1">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="0"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl1"/>
@@ -3955,7 +4004,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeButcherDisplayExpLvl2">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="2"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl2"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl2"/>
@@ -3963,7 +4012,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeButcherDisplayExpLvl3">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="3"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="2"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl3"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl3"/>
@@ -3971,7 +4020,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeButcherDisplayExpLvl4">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="4"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="3"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl4"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl4"/>
@@ -3979,7 +4028,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeButcherDisplayExpLvl5">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="5"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="4"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl5"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl5"/>
@@ -3987,7 +4036,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeButcherDisplayExpLvl6">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="6"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="5"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl6"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl6"/>
@@ -3995,7 +4044,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeButcherDisplayExpLvl7">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="7"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="6"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl7"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl7"/>
@@ -4003,7 +4052,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeButcherDisplayExpLvl8">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="8"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="7"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl8"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl8"/>
@@ -4011,7 +4060,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeButcherDisplayExpLvl9">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="9"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="8"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl9"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl9"/>
@@ -4019,7 +4068,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeButcherDisplayExpLvl10">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="10"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="9"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl10"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeButcherExpPercLvl10"/>
@@ -4229,7 +4278,7 @@
 			<!-- SOLDIER DISPLAY % -->
 				<effect_group name="FuriousRamsayAttributeSoldierDisplayExpLvl1">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="0"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl1"/>
@@ -4237,7 +4286,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeSoldierDisplayExpLvl2">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="2"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl2"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl2"/>
@@ -4245,7 +4294,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeSoldierDisplayExpLvl3">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="3"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="2"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl3"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl3"/>
@@ -4253,7 +4302,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeSoldierDisplayExpLvl4">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="4"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="3"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl4"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl4"/>
@@ -4261,7 +4310,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeSoldierDisplayExpLvl5">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="5"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="4"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl5"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl5"/>
@@ -4269,7 +4318,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeSoldierDisplayExpLvl6">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="6"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="5"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl6"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl6"/>
@@ -4277,7 +4326,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeSoldierDisplayExpLvl7">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="7"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="6"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl7"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl7"/>
@@ -4285,7 +4334,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeSoldierDisplayExpLvl8">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="8"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="7"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl8"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl8"/>
@@ -4293,7 +4342,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeSoldierDisplayExpLvl9">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="9"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="8"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl9"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl9"/>
@@ -4301,7 +4350,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeSoldierDisplayExpLvl10">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="10"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="9"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl10"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeSoldierExpPercLvl10"/>
@@ -4511,7 +4560,7 @@
 			<!-- TECHNOGEEK DISPLAY % -->
 				<effect_group name="FuriousRamsayAttributeTechnogeekDisplayExpLvl1">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="0"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl1"/>
@@ -4519,7 +4568,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeTechnogeekDisplayExpLvl2">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="2"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl2"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl2"/>
@@ -4527,7 +4576,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeTechnogeekDisplayExpLvl3">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="3"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="2"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl3"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl3"/>
@@ -4535,7 +4584,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeTechnogeekDisplayExpLvl4">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="4"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="3"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl4"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl4"/>
@@ -4543,7 +4592,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeTechnogeekDisplayExpLvl5">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="5"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="4"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl5"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl5"/>
@@ -4551,7 +4600,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeTechnogeekDisplayExpLvl6">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="6"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="5"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl6"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl6"/>
@@ -4559,7 +4608,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeTechnogeekDisplayExpLvl7">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="7"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="6"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl7"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl7"/>
@@ -4567,7 +4616,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeTechnogeekDisplayExpLvl8">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="8"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="7"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl8"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl8"/>
@@ -4575,7 +4624,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeTechnogeekDisplayExpLvl9">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="9"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="8"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl9"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl9"/>
@@ -4583,7 +4632,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeTechnogeekDisplayExpLvl10">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="10"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="9"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl10"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeTechnogeekExpPercLvl10"/>
@@ -4793,7 +4842,7 @@
 			<!-- MADMAN DISPLAY % -->
 				<effect_group name="FuriousRamsayAttributeMadmanDisplayExpLvl1">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="0"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl1"/>
@@ -4801,7 +4850,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeMadmanDisplayExpLvl2">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="2"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl2"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl2"/>
@@ -4809,7 +4858,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeMadmanDisplayExpLvl3">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="3"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="2"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl3"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl3"/>
@@ -4817,7 +4866,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeMadmanDisplayExpLvl4">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="4"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="3"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl4"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl4"/>
@@ -4825,7 +4874,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeMadmanDisplayExpLvl5">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="5"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="4"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl5"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl5"/>
@@ -4833,7 +4882,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeMadmanDisplayExpLvl6">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="6"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="5"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl6"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl6"/>
@@ -4841,7 +4890,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeMadmanDisplayExpLvl7">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="7"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="6"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl7"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl7"/>
@@ -4849,7 +4898,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeMadmanDisplayExpLvl8">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="8"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="7"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl8"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl8"/>
@@ -4857,7 +4906,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeMadmanDisplayExpLvl9">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="9"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="8"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl9"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl9"/>
@@ -4865,7 +4914,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeMadmanDisplayExpLvl10">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="10"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="9"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl10"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeMadmanExpPercLvl10"/>
@@ -5075,7 +5124,7 @@
 			<!-- BUILDER DISPLAY % -->
 				<effect_group name="FuriousRamsayAttributeBuilderDisplayExpLvl1">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="0"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl1"/>
@@ -5083,7 +5132,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeBuilderDisplayExpLvl2">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="2"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl2"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl2"/>
@@ -5091,7 +5140,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeBuilderDisplayExpLvl3">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="3"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="2"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl3"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl3"/>
@@ -5099,7 +5148,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeBuilderDisplayExpLvl4">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="4"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="3"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl4"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl4"/>
@@ -5107,7 +5156,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeBuilderDisplayExpLvl5">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="5"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="4"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl5"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl5"/>
@@ -5115,7 +5164,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeBuilderDisplayExpLvl6">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="6"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="5"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl6"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl6"/>
@@ -5123,7 +5172,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeBuilderDisplayExpLvl7">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="7"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="6"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl7"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl7"/>
@@ -5131,7 +5180,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeBuilderDisplayExpLvl8">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="8"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="7"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl8"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl8"/>
@@ -5139,7 +5188,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeBuilderDisplayExpLvl9">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="9"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="8"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl9"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl9"/>
@@ -5147,7 +5196,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeBuilderDisplayExpLvl10">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="10"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="9"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl10"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="divide" value="100"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="@varFuriousRamsayAttributeBuilderExpPercLvl10"/>

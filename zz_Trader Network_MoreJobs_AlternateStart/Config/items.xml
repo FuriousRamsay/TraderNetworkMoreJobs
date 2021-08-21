@@ -60,6 +60,10 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
 			</effect_group>
+			<effect_group name="RefreshVisuals" tiered="false">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterStarterVariablesSet" operation="Equals" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangeClassLabelsHunter"/>
+			</effect_group>
 			<effect_group name="StarterVariablesSet" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterStarterVariablesSet" operation="Equals" value="0"/>
 				<!-- HUNTER -->
@@ -117,6 +121,10 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
+			</effect_group>
+			<effect_group name="RefreshVisuals" tiered="false">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugStarterVariablesSet" operation="Equals" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangeClassLabelsThug"/>
 			</effect_group>
 			<effect_group name="StarterVariablesSet" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugStarterVariablesSet" operation="Equals" value="0"/>
@@ -223,6 +231,10 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
 			</effect_group>
+			<effect_group name="RefreshVisuals" tiered="false">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherStarterVariablesSet" operation="Equals" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangeClassLabelsButcher"/>
+			</effect_group>
 			<effect_group name="StarterVariablesSet" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherStarterVariablesSet" operation="Equals" value="0"/>
 				<!-- BUTCHER -->
@@ -280,6 +292,10 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
+			</effect_group>
+			<effect_group name="RefreshVisuals" tiered="false">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierStarterVariablesSet" operation="Equals" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangeClassLabelsSoldier"/>
 			</effect_group>
 			<effect_group name="StarterVariablesSet" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierStarterVariablesSet" operation="Equals" value="0"/>
@@ -339,6 +355,10 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
 			</effect_group>
+			<effect_group name="RefreshVisuals" tiered="false">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekStarterVariablesSet" operation="Equals" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangeClassLabelsTechnogeek"/>
+			</effect_group>
 			<effect_group name="StarterVariablesSet" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekStarterVariablesSet" operation="Equals" value="0"/>
 				<!-- TECHNOGEEK -->
@@ -397,6 +417,10 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanClass" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
 			</effect_group>
+			<effect_group name="RefreshVisuals" tiered="false">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanStarterVariablesSet" operation="Equals" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangeClassLabelsMadman"/>
+			</effect_group>
 			<effect_group name="StarterVariablesSet" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanStarterVariablesSet" operation="Equals" value="0"/>
 				<!-- MADMAN -->
@@ -454,6 +478,10 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="1"/>
+			</effect_group>
+			<effect_group name="RefreshVisuals" tiered="false">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderStarterVariablesSet" operation="Equals" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangeClassLabelsBuilder"/>
 			</effect_group>
 			<effect_group name="StarterVariablesSet" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderStarterVariablesSet" operation="Equals" value="0"/>
