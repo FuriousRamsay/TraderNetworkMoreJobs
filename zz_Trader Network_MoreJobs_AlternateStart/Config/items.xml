@@ -13,6 +13,8 @@
 	<append xpath="/items/item[@name='thrownGrenade']/property[@name='Tags']/@value">,FuriousRamsayExplosives</append>
 	<append xpath="/items/item[@name='thrownTimedCharge']/property[@name='Tags']/@value">,FuriousRamsayExplosives</append>
 	<append xpath="/items/item[@name='thrownDynamite']/property[@name='Tags']/@value">,FuriousRamsayExplosives</append>
+	<append xpath="/items/item[@name='ammoRocketFrag']/property[@name='Tags']/@value">,FuriousRamsayExplosives</append>
+	<append xpath="/items/item[@name='ammoRocketHE']/property[@name='Tags']/@value">,FuriousRamsayExplosives</append>
 
 	<!-- DEPLOYABLE TURRETS -->
 	<append xpath="/items/item[@name='gunBotT1JunkSledge']/property[@name='Tags']/@value">,FuriousRamsayDeployableTurrets</append>
@@ -102,6 +104,12 @@
 			<effect_group name="RefreshVisuals" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterStarterVariablesSet" operation="Equals" value="1"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangeClassLabelsHunter"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk2Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk3Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk4Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk5Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk6Labels"/>
 			</effect_group>
 			<effect_group name="StarterVariablesSet" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterStarterVariablesSet" operation="Equals" value="0"/>
@@ -166,6 +174,10 @@
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangeClassLabelsThug"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerkLabelsShotguns"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerkLabelsClubs"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk3Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk4Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk5Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk6Labels"/>
 			</effect_group>
 			<effect_group name="StarterVariablesSet" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugStarterVariablesSet" operation="Equals" value="0"/>
@@ -275,6 +287,12 @@
 			<effect_group name="RefreshVisuals" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherStarterVariablesSet" operation="Equals" value="1"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangeClassLabelsButcher"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk2Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk3Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk4Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk5Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk6Labels"/>
 			</effect_group>
 			<effect_group name="StarterVariablesSet" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherStarterVariablesSet" operation="Equals" value="0"/>
@@ -337,6 +355,12 @@
 			<effect_group name="RefreshVisuals" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierStarterVariablesSet" operation="Equals" value="1"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangeClassLabelsSoldier"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk2Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk3Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk4Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk5Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk6Labels"/>
 			</effect_group>
 			<effect_group name="StarterVariablesSet" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierStarterVariablesSet" operation="Equals" value="0"/>
@@ -399,6 +423,12 @@
 			<effect_group name="RefreshVisuals" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekStarterVariablesSet" operation="Equals" value="1"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangeClassLabelsTechnogeek"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk2Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk3Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk4Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk5Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk6Labels"/>
 			</effect_group>
 			<effect_group name="StarterVariablesSet" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekStarterVariablesSet" operation="Equals" value="0"/>
@@ -461,6 +491,12 @@
 			<effect_group name="RefreshVisuals" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanStarterVariablesSet" operation="Equals" value="1"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangeClassLabelsMadman"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk2Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk3Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk4Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk5Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk6Labels"/>
 			</effect_group>
 			<effect_group name="StarterVariablesSet" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanStarterVariablesSet" operation="Equals" value="0"/>
@@ -523,6 +559,12 @@
 			<effect_group name="RefreshVisuals" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderStarterVariablesSet" operation="Equals" value="1"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangeClassLabelsBuilder"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk2Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk3Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk4Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk5Labels"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk6Labels"/>
 			</effect_group>
 			<effect_group name="StarterVariablesSet" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderStarterVariablesSet" operation="Equals" value="0"/>
@@ -614,7 +656,7 @@
 		<item name="FuriousRamsaySurvivalSpecialistSP">
 			<property name="Tags" value="trader"/>
 			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
-			<property name="CustomIconTint" value="63, 150, 51"/>
+			<property name="CustomIconTint" value="157, 227, 148"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="DisplayType" value="meleeTurret"/>
 			<property name="HoldType" value="73"/>
