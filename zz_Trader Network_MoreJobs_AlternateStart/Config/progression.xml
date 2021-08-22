@@ -486,6 +486,14 @@
 		<skill name="FuriousRamsaySkillTechnogeekAbilities" parent="furiousramsayatttechnogeek" name_key="FuriousRamsaySkillTechnogeekAbilitiesName" desc_key="sFuriousRamsaySkillTechnogeekAbilitiesDesc" icon=""><effect_group/></skill>
 		<skill name="FuriousRamsaySkillMadmanAbilities" parent="furiousramsayattmadman" name_key="FuriousRamsaySkillMadmanAbilitiesName" desc_key="sFuriousRamsaySkillMadmanAbilitiesDesc" icon=""><effect_group/></skill>
 		<skill name="FuriousRamsaySkillBuilderAbilities" parent="furiousramsayattbuilder" name_key="FuriousRamsaySkillBuilderAbilitiesName" desc_key="sFuriousRamsaySkillBuilderAbilitiesDesc" icon=""><effect_group/></skill>
+
+		<skill name="FuriousRamsaySkillHunterAchievements" parent="furiousramsayatthunter" name_key="FuriousRamsaySkillHunterAchievementsName" desc_key="sFuriousRamsaySkillHunterAchievementsDesc" icon=""><effect_group/></skill>
+		<skill name="FuriousRamsaySkillThugAchievements" parent="furiousramsayattthug" name_key="FuriousRamsaySkillThugAchievementsName" desc_key="sFuriousRamsaySkillThugAchievementsDesc" icon=""><effect_group/></skill>
+		<skill name="FuriousRamsaySkillButcherAchievements" parent="furiousramsayattbutcher" name_key="FuriousRamsaySkillButcherAchievementsName" desc_key="sFuriousRamsaySkillButcherAchievementsDesc" icon=""><effect_group/></skill>
+		<skill name="FuriousRamsaySkillSoldierAchievements" parent="furiousramsayattsoldier" name_key="FuriousRamsaySkillSoldierAchievementsName" desc_key="sFuriousRamsaySkillSoldierAchievementsDesc" icon=""><effect_group/></skill>
+		<skill name="FuriousRamsaySkillTechnogeekAchievements" parent="furiousramsayatttechnogeek" name_key="FuriousRamsaySkillTechnogeekAchievementsName" desc_key="sFuriousRamsaySkillTechnogeekAchievementsDesc" icon=""><effect_group/></skill>
+		<skill name="FuriousRamsaySkillMadmanAchievements" parent="furiousramsayattmadman" name_key="FuriousRamsaySkillMadmanAchievementsName" desc_key="sFuriousRamsaySkillMadmanAchievementsDesc" icon=""><effect_group/></skill>
+		<skill name="FuriousRamsaySkillBuilderAchievements" parent="furiousramsayattbuilder" name_key="FuriousRamsaySkillBuilderAchievementsName" desc_key="sFuriousRamsaySkillBuilderAchievementsDesc" icon=""><effect_group/></skill>
 	</append>
 
 	<append xpath="/progression/perks" >
@@ -1086,6 +1094,150 @@
 	</perk>
 	
 	<!-- HUNTER -->
+	<perk name="FuriousRamsayPerkBows" max_level="10" parent="FuriousRamsaySkillHunterExpertise" name_key="FuriousRamsayPerkBowsName" desc_key="FuriousRamsayPerkBowsDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugShotgunLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugShotgunLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugShotgunLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugShotgunLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugShotgunLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugShotgunLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugShotgunLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugShotgunLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugShotgunLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugShotgunLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="shotgun"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="shotgun"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="shotgun"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="shotgun"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="shotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modShotgunSawedOffBarrel,modGunShotgunTubeExtenderMagazine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="gunShotgunT2PumpShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modGunChoke,modGunDuckbill"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="gunShotgunT3AutoShotgun"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank2Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkShotgunRank3Desc" long_desc_key="FuriousRamsayPerkShotgunRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkShotgunRank4Desc" long_desc_key="FuriousRamsayPerkShotgunRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkShotgunRank5Desc" long_desc_key="FuriousRamsayPerkShotgunRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkShotgunRank6Desc" long_desc_key="FuriousRamsayPerkShotgunRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkShotgunRank7Desc" long_desc_key="FuriousRamsayPerkShotgunRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkShotgunRank8Desc" long_desc_key="FuriousRamsayPerkShotgunRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkShotgunRank9Desc" long_desc_key="FuriousRamsayPerkShotgunRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkShotgunRank10Desc" long_desc_key="FuriousRamsayPerkShotgunRank10LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="FuriousRamsayPerkSpears" max_level="10" parent="FuriousRamsaySkillHunterExpertise" name_key="FuriousRamsayPerkSpearsName" desc_key="FuriousRamsayPerkSpearsDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugShotgunLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugShotgunLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugShotgunLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugShotgunLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugShotgunLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugShotgunLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugShotgunLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugShotgunLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugShotgunLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugShotgunLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="shotgun"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="shotgun"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="shotgun"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="shotgun"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="shotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modShotgunSawedOffBarrel,modGunShotgunTubeExtenderMagazine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="gunShotgunT2PumpShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modGunChoke,modGunDuckbill"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="gunShotgunT3AutoShotgun"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank2Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkShotgunRank3Desc" long_desc_key="FuriousRamsayPerkShotgunRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkShotgunRank4Desc" long_desc_key="FuriousRamsayPerkShotgunRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkShotgunRank5Desc" long_desc_key="FuriousRamsayPerkShotgunRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkShotgunRank6Desc" long_desc_key="FuriousRamsayPerkShotgunRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkShotgunRank7Desc" long_desc_key="FuriousRamsayPerkShotgunRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkShotgunRank8Desc" long_desc_key="FuriousRamsayPerkShotgunRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkShotgunRank9Desc" long_desc_key="FuriousRamsayPerkShotgunRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkShotgunRank10Desc" long_desc_key="FuriousRamsayPerkShotgunRank10LongDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="FuriousRamsayPerkKnives" max_level="10" parent="FuriousRamsaySkillHunterExpertise" name_key="FuriousRamsayPerkKnivesName" desc_key="FuriousRamsayPerkKnivesDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugShotgunLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugShotgunLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugShotgunLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugShotgunLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugShotgunLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugShotgunLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugShotgunLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugShotgunLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugShotgunLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugShotgunLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="shotgun"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="shotgun"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="shotgun"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="shotgun"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="shotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modShotgunSawedOffBarrel,modGunShotgunTubeExtenderMagazine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="gunShotgunT2PumpShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modGunChoke,modGunDuckbill"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="gunShotgunT3AutoShotgun"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank2Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkShotgunRank3Desc" long_desc_key="FuriousRamsayPerkShotgunRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkShotgunRank4Desc" long_desc_key="FuriousRamsayPerkShotgunRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkShotgunRank5Desc" long_desc_key="FuriousRamsayPerkShotgunRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkShotgunRank6Desc" long_desc_key="FuriousRamsayPerkShotgunRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkShotgunRank7Desc" long_desc_key="FuriousRamsayPerkShotgunRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkShotgunRank8Desc" long_desc_key="FuriousRamsayPerkShotgunRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkShotgunRank9Desc" long_desc_key="FuriousRamsayPerkShotgunRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkShotgunRank10Desc" long_desc_key="FuriousRamsayPerkShotgunRank10LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="FuriousRamsayPerkSniperRifles" max_level="10" parent="FuriousRamsaySkillHunterExpertise" name_key="FuriousRamsayPerkSniperRiflesName" desc_key="FuriousRamsayPerkSniperRiflesDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugShotgunLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugShotgunLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugShotgunLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugShotgunLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugShotgunLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugShotgunLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugShotgunLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugShotgunLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugShotgunLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugShotgunLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="shotgun"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="shotgun"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="shotgun"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="shotgun"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="shotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modShotgunSawedOffBarrel,modGunShotgunTubeExtenderMagazine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="gunShotgunT2PumpShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modGunChoke,modGunDuckbill"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="gunShotgunT3AutoShotgun"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank2Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkShotgunRank3Desc" long_desc_key="FuriousRamsayPerkShotgunRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkShotgunRank4Desc" long_desc_key="FuriousRamsayPerkShotgunRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkShotgunRank5Desc" long_desc_key="FuriousRamsayPerkShotgunRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkShotgunRank6Desc" long_desc_key="FuriousRamsayPerkShotgunRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkShotgunRank7Desc" long_desc_key="FuriousRamsayPerkShotgunRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkShotgunRank8Desc" long_desc_key="FuriousRamsayPerkShotgunRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkShotgunRank9Desc" long_desc_key="FuriousRamsayPerkShotgunRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkShotgunRank10Desc" long_desc_key="FuriousRamsayPerkShotgunRank10LongDesc"/>
+		</effect_group>
+	</perk>
+
 	<perk name="FuriousRamsayPerkHunterMobilityAura" max_level="10" parent="FuriousRamsaySkillHunterAbilities" name_key="FuriousRamsayPerkHunterMobilityAuraName" desc_key="FuriousRamsayPerkHunterMobilityAuraDesc" icon="">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugLevel02"/></level_requirements>
@@ -1135,6 +1287,28 @@
 			<effect_description level="3" desc_key="perkArcheryRank3Desc" long_desc_key="perkArcheryRank3LongDesc"/>
 			<effect_description level="4" desc_key="perkArcheryRank4Desc" long_desc_key="perkArcheryRank4LongDesc"/>
 			<effect_description level="5" desc_key="perkArcheryRank5Desc" long_desc_key="perkArcheryRank5LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="perkJavelinMaster" parent="FuriousRamsaySkillHunterAbilities" name_key="perkJavelinMasterName" desc_key="perkJavelinMasterDesc" icon="ui_game_symbol_spear">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqThugLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqThugLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqThugLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqThugLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqThugLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkJavelinMaster"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeWpnSpearT1IronSpear"/>
+
+				<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkJavelinMaster"/>
+				<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkJavelinMaster"/>
+				<passive_effect name="ProjectileVelocity" operation="perc_add" level="1,5" value="0.1,.5" tags="perkJavelinMaster"/>
+
+			<effect_description level="1" desc_key="perkJavelinMasterRank1Desc" long_desc_key="perkJavelinMasterRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkJavelinMasterRank2Desc" long_desc_key="perkJavelinMasterRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkJavelinMasterRank3Desc" long_desc_key="perkJavelinMasterRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkJavelinMasterRank4Desc" long_desc_key="perkJavelinMasterRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkJavelinMasterRank5Desc" long_desc_key="perkJavelinMasterRank5LongDesc"/>
 		</effect_group>
 	</perk>
 
@@ -1615,6 +1789,50 @@
 		</effect_group>
 	</perk>
 
+	<!--<perk name="FuriousRamsayThugAchievement1" parent="FuriousRamsaySkillThugAchievements" name_key="FuriousRamsayThugAchievement1Name" desc_key="FuriousRamsayThugAchievement1Desc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqSoldierLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqSoldierLevel03"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqSoldierLevel05"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqSoldierLevel07"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqSoldierLevel10"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkBoomstick"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="gunShotgunT1DoubleBarrel"/>
+
+			<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkBoomstick"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkBoomstick"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,5" value=".1,.30" tags="perkBoomstick"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,5" value=".1,.5" tags="perkBoomstick"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="ItemHasTags" tags="perkBoomstick"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned01Shotgun">
+					<requirement name="ProgressionLevel" progression_name="perkBoomstick" operation="Equals" value="0"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned02Shotgun">
+					<requirement name="ProgressionLevel" progression_name="perkBoomstick" operation="GTE" value="1"/>
+					<requirement name="ProgressionLevel" progression_name="perkBoomstick" operation="LTE" value="2"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryStunned03Shotgun">
+					<requirement name="ProgressionLevel" progression_name="perkBoomstick" operation="GTE" value="3"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker" buff="buffInjuryCrippled01">
+					<requirement name="ProgressionLevel" progression_name="perkBoomstick" operation="Equals" value="5"/>
+					<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
+				</triggered_effect>
+
+			<effect_description level="1" desc_key="perkBoomstickRank1Desc" long_desc_key="perkBoomstickRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkBoomstickRank2Desc" long_desc_key="perkBoomstickRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkBoomstickRank3Desc" long_desc_key="perkBoomstickRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkBoomstickRank4Desc" long_desc_key="perkBoomstickRank4LongDesc"/>
+			<effect_description level="5" desc_key="perkBoomstickRank5Desc" long_desc_key="perkBoomstickRank5LongDesc"/>
+		</effect_group>
+	</perk>-->
+	
 	<!--
 
 	<perk name="perkBatterUpBigHits" parent="FuriousRamsaySkillThugAbilities" max_level="1" base_skill_point_cost="0" desc_key="perkBatterUpBigHitsDesc" long_desc_key="perkBatterUpBigHitsLongDesc">
@@ -1822,6 +2040,78 @@
 	</perk>-->
 	
 	<!-- BUTCHER -->
+	<perk name="FuriousRamsayPerkMachetes" max_level="10" parent="FuriousRamsaySkillButcherExpertise" name_key="FuriousRamsayPerkMachetesName" desc_key="FuriousRamsayPerkMachetesDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugShotgunLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugShotgunLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugShotgunLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugShotgunLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugShotgunLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugShotgunLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugShotgunLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugShotgunLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugShotgunLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugShotgunLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="shotgun"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="shotgun"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="shotgun"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="shotgun"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="shotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modShotgunSawedOffBarrel,modGunShotgunTubeExtenderMagazine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="gunShotgunT2PumpShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modGunChoke,modGunDuckbill"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="gunShotgunT3AutoShotgun"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank2Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkShotgunRank3Desc" long_desc_key="FuriousRamsayPerkShotgunRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkShotgunRank4Desc" long_desc_key="FuriousRamsayPerkShotgunRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkShotgunRank5Desc" long_desc_key="FuriousRamsayPerkShotgunRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkShotgunRank6Desc" long_desc_key="FuriousRamsayPerkShotgunRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkShotgunRank7Desc" long_desc_key="FuriousRamsayPerkShotgunRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkShotgunRank8Desc" long_desc_key="FuriousRamsayPerkShotgunRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkShotgunRank9Desc" long_desc_key="FuriousRamsayPerkShotgunRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkShotgunRank10Desc" long_desc_key="FuriousRamsayPerkShotgunRank10LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="FuriousRamsayPerkAssaultRifles" max_level="10" parent="FuriousRamsaySkillButcherExpertise" name_key="FuriousRamsayPerkAssaultRiflesName" desc_key="FuriousRamsayPerkAssaultRiflesDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugShotgunLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugShotgunLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugShotgunLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugShotgunLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugShotgunLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugShotgunLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugShotgunLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugShotgunLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugShotgunLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugShotgunLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="shotgun"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="shotgun"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="shotgun"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="shotgun"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="shotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modShotgunSawedOffBarrel,modGunShotgunTubeExtenderMagazine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="gunShotgunT2PumpShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modGunChoke,modGunDuckbill"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="gunShotgunT3AutoShotgun"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank2Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkShotgunRank3Desc" long_desc_key="FuriousRamsayPerkShotgunRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkShotgunRank4Desc" long_desc_key="FuriousRamsayPerkShotgunRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkShotgunRank5Desc" long_desc_key="FuriousRamsayPerkShotgunRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkShotgunRank6Desc" long_desc_key="FuriousRamsayPerkShotgunRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkShotgunRank7Desc" long_desc_key="FuriousRamsayPerkShotgunRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkShotgunRank8Desc" long_desc_key="FuriousRamsayPerkShotgunRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkShotgunRank9Desc" long_desc_key="FuriousRamsayPerkShotgunRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkShotgunRank10Desc" long_desc_key="FuriousRamsayPerkShotgunRank10LongDesc"/>
+		</effect_group>
+	</perk>
+
 	<perk name="FuriousRamsayPerkButcherHealthAura" max_level="10" parent="FuriousRamsaySkillButcherAbilities" name_key="FuriousRamsayPerkButcherHealthAuraName" desc_key="FuriousRamsayPerkButcherHealthAuraDesc" icon="">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugLevel02"/></level_requirements>
@@ -2078,6 +2368,114 @@
 	</perk>
 
 	<!-- SOLDIER -->
+	<perk name="FuriousRamsayPerkKnuckles" max_level="10" parent="FuriousRamsaySkillSoldierExpertise" name_key="FuriousRamsayPerkKnucklesName" desc_key="FuriousRamsayPerkKnucklesDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugShotgunLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugShotgunLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugShotgunLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugShotgunLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugShotgunLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugShotgunLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugShotgunLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugShotgunLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugShotgunLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugShotgunLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="shotgun"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="shotgun"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="shotgun"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="shotgun"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="shotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modShotgunSawedOffBarrel,modGunShotgunTubeExtenderMagazine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="gunShotgunT2PumpShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modGunChoke,modGunDuckbill"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="gunShotgunT3AutoShotgun"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank2Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkShotgunRank3Desc" long_desc_key="FuriousRamsayPerkShotgunRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkShotgunRank4Desc" long_desc_key="FuriousRamsayPerkShotgunRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkShotgunRank5Desc" long_desc_key="FuriousRamsayPerkShotgunRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkShotgunRank6Desc" long_desc_key="FuriousRamsayPerkShotgunRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkShotgunRank7Desc" long_desc_key="FuriousRamsayPerkShotgunRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkShotgunRank8Desc" long_desc_key="FuriousRamsayPerkShotgunRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkShotgunRank9Desc" long_desc_key="FuriousRamsayPerkShotgunRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkShotgunRank10Desc" long_desc_key="FuriousRamsayPerkShotgunRank10LongDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="FuriousRamsayPerkMarksmanRifles" max_level="10" parent="FuriousRamsaySkillSoldierExpertise" name_key="FuriousRamsayPerkMarksmanRiflesName" desc_key="FuriousRamsayPerkMarksmanRiflesDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugShotgunLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugShotgunLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugShotgunLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugShotgunLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugShotgunLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugShotgunLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugShotgunLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugShotgunLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugShotgunLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugShotgunLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="shotgun"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="shotgun"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="shotgun"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="shotgun"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="shotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modShotgunSawedOffBarrel,modGunShotgunTubeExtenderMagazine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="gunShotgunT2PumpShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modGunChoke,modGunDuckbill"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="gunShotgunT3AutoShotgun"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank2Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkShotgunRank3Desc" long_desc_key="FuriousRamsayPerkShotgunRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkShotgunRank4Desc" long_desc_key="FuriousRamsayPerkShotgunRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkShotgunRank5Desc" long_desc_key="FuriousRamsayPerkShotgunRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkShotgunRank6Desc" long_desc_key="FuriousRamsayPerkShotgunRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkShotgunRank7Desc" long_desc_key="FuriousRamsayPerkShotgunRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkShotgunRank8Desc" long_desc_key="FuriousRamsayPerkShotgunRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkShotgunRank9Desc" long_desc_key="FuriousRamsayPerkShotgunRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkShotgunRank10Desc" long_desc_key="FuriousRamsayPerkShotgunRank10LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="FuriousRamsayPerkMachineGuns" max_level="10" parent="FuriousRamsaySkillSoldierExpertise" name_key="FuriousRamsayPerkMachineGunsName" desc_key="FuriousRamsayPerkMachineGunsDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugShotgunLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugShotgunLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugShotgunLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugShotgunLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugShotgunLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugShotgunLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugShotgunLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugShotgunLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugShotgunLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugShotgunLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="shotgun"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="shotgun"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="shotgun"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="shotgun"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="shotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modShotgunSawedOffBarrel,modGunShotgunTubeExtenderMagazine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="gunShotgunT2PumpShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modGunChoke,modGunDuckbill"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="gunShotgunT3AutoShotgun"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank2Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkShotgunRank3Desc" long_desc_key="FuriousRamsayPerkShotgunRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkShotgunRank4Desc" long_desc_key="FuriousRamsayPerkShotgunRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkShotgunRank5Desc" long_desc_key="FuriousRamsayPerkShotgunRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkShotgunRank6Desc" long_desc_key="FuriousRamsayPerkShotgunRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkShotgunRank7Desc" long_desc_key="FuriousRamsayPerkShotgunRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkShotgunRank8Desc" long_desc_key="FuriousRamsayPerkShotgunRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkShotgunRank9Desc" long_desc_key="FuriousRamsayPerkShotgunRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkShotgunRank10Desc" long_desc_key="FuriousRamsayPerkShotgunRank10LongDesc"/>
+		</effect_group>
+	</perk>
+
 	<perk name="FuriousRamsayPerkSoldierAttackSpeedAura" max_level="10" parent="FuriousRamsaySkillSoldierAbilities" name_key="FuriousRamsayPerkSoldierAttackSpeedAuraName" desc_key="FuriousRamsayPerkSoldierAttackSpeedAuraDesc" icon="">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugLevel02"/></level_requirements>
@@ -2429,6 +2827,114 @@
 	</perk>-->
 
 	<!-- TECHNOGEEK -->
+	<perk name="FuriousRamsayPerkStunBatons" max_level="10" parent="FuriousRamsaySkillTechnogeekExpertise" name_key="FuriousRamsayPerkStunBatonsName" desc_key="FuriousRamsayPerkStunBatonsDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugShotgunLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugShotgunLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugShotgunLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugShotgunLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugShotgunLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugShotgunLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugShotgunLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugShotgunLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugShotgunLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugShotgunLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="shotgun"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="shotgun"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="shotgun"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="shotgun"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="shotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modShotgunSawedOffBarrel,modGunShotgunTubeExtenderMagazine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="gunShotgunT2PumpShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modGunChoke,modGunDuckbill"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="gunShotgunT3AutoShotgun"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank2Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkShotgunRank3Desc" long_desc_key="FuriousRamsayPerkShotgunRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkShotgunRank4Desc" long_desc_key="FuriousRamsayPerkShotgunRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkShotgunRank5Desc" long_desc_key="FuriousRamsayPerkShotgunRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkShotgunRank6Desc" long_desc_key="FuriousRamsayPerkShotgunRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkShotgunRank7Desc" long_desc_key="FuriousRamsayPerkShotgunRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkShotgunRank8Desc" long_desc_key="FuriousRamsayPerkShotgunRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkShotgunRank9Desc" long_desc_key="FuriousRamsayPerkShotgunRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkShotgunRank10Desc" long_desc_key="FuriousRamsayPerkShotgunRank10LongDesc"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="FuriousRamsayPerkRevolvers" max_level="10" parent="FuriousRamsaySkillTechnogeekExpertise" name_key="FuriousRamsayPerkRevolversName" desc_key="FuriousRamsayPerkRevolversDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugShotgunLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugShotgunLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugShotgunLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugShotgunLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugShotgunLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugShotgunLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugShotgunLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugShotgunLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugShotgunLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugShotgunLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="shotgun"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="shotgun"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="shotgun"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="shotgun"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="shotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modShotgunSawedOffBarrel,modGunShotgunTubeExtenderMagazine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="gunShotgunT2PumpShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modGunChoke,modGunDuckbill"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="gunShotgunT3AutoShotgun"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank2Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkShotgunRank3Desc" long_desc_key="FuriousRamsayPerkShotgunRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkShotgunRank4Desc" long_desc_key="FuriousRamsayPerkShotgunRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkShotgunRank5Desc" long_desc_key="FuriousRamsayPerkShotgunRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkShotgunRank6Desc" long_desc_key="FuriousRamsayPerkShotgunRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkShotgunRank7Desc" long_desc_key="FuriousRamsayPerkShotgunRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkShotgunRank8Desc" long_desc_key="FuriousRamsayPerkShotgunRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkShotgunRank9Desc" long_desc_key="FuriousRamsayPerkShotgunRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkShotgunRank10Desc" long_desc_key="FuriousRamsayPerkShotgunRank10LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="FuriousRamsayPerkDeployableTurrets" max_level="10" parent="FuriousRamsaySkillTechnogeekExpertise" name_key="FuriousRamsayPerkDeployableTurretsName" desc_key="FuriousRamsayPerkDeployableTurretsDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugShotgunLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugShotgunLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugShotgunLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugShotgunLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugShotgunLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugShotgunLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugShotgunLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugShotgunLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugShotgunLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugShotgunLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="shotgun"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="shotgun"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="shotgun"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="shotgun"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="shotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modShotgunSawedOffBarrel,modGunShotgunTubeExtenderMagazine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="gunShotgunT2PumpShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modGunChoke,modGunDuckbill"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="gunShotgunT3AutoShotgun"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank2Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkShotgunRank3Desc" long_desc_key="FuriousRamsayPerkShotgunRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkShotgunRank4Desc" long_desc_key="FuriousRamsayPerkShotgunRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkShotgunRank5Desc" long_desc_key="FuriousRamsayPerkShotgunRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkShotgunRank6Desc" long_desc_key="FuriousRamsayPerkShotgunRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkShotgunRank7Desc" long_desc_key="FuriousRamsayPerkShotgunRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkShotgunRank8Desc" long_desc_key="FuriousRamsayPerkShotgunRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkShotgunRank9Desc" long_desc_key="FuriousRamsayPerkShotgunRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkShotgunRank10Desc" long_desc_key="FuriousRamsayPerkShotgunRank10LongDesc"/>
+		</effect_group>
+	</perk>
+
 	<perk name="FuriousRamsayPerkTechnogeekTurretBuffAura" max_level="10" parent="FuriousRamsaySkillTechnogeekAbilities" name_key="FuriousRamsayPerkTechnogeekTurretBuffAuraName" desc_key="FuriousRamsayPerkTechnogeekTurretBuffAuraDesc" icon="">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugLevel02"/></level_requirements>
@@ -2594,6 +3100,78 @@
 	</perk>-->
 
 	<!-- MADMAN -->
+	<perk name="FuriousRamsayPerkExplosives" max_level="10" parent="FuriousRamsaySkillMadmanExpertise" name_key="FuriousRamsayPerkExplosivesName" desc_key="FuriousRamsayPerkExplosivesDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugShotgunLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugShotgunLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugShotgunLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugShotgunLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugShotgunLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugShotgunLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugShotgunLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugShotgunLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugShotgunLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugShotgunLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="shotgun"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="shotgun"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="shotgun"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="shotgun"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="shotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modShotgunSawedOffBarrel,modGunShotgunTubeExtenderMagazine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="gunShotgunT2PumpShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modGunChoke,modGunDuckbill"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="gunShotgunT3AutoShotgun"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank2Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkShotgunRank3Desc" long_desc_key="FuriousRamsayPerkShotgunRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkShotgunRank4Desc" long_desc_key="FuriousRamsayPerkShotgunRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkShotgunRank5Desc" long_desc_key="FuriousRamsayPerkShotgunRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkShotgunRank6Desc" long_desc_key="FuriousRamsayPerkShotgunRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkShotgunRank7Desc" long_desc_key="FuriousRamsayPerkShotgunRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkShotgunRank8Desc" long_desc_key="FuriousRamsayPerkShotgunRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkShotgunRank9Desc" long_desc_key="FuriousRamsayPerkShotgunRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkShotgunRank10Desc" long_desc_key="FuriousRamsayPerkShotgunRank10LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="FuriousRamsayPerkSubMachineguns" max_level="10" parent="FuriousRamsaySkillMadmanExpertise" name_key="FuriousRamsayPerkSubMachinegunsName" desc_key="FuriousRamsayPerkSubMachinegunsDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugShotgunLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugShotgunLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugShotgunLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugShotgunLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugShotgunLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugShotgunLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugShotgunLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugShotgunLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugShotgunLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugShotgunLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="shotgun"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="shotgun"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="shotgun"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="shotgun"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="shotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modShotgunSawedOffBarrel,modGunShotgunTubeExtenderMagazine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="gunShotgunT2PumpShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modGunChoke,modGunDuckbill"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="gunShotgunT3AutoShotgun"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank2Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkShotgunRank3Desc" long_desc_key="FuriousRamsayPerkShotgunRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkShotgunRank4Desc" long_desc_key="FuriousRamsayPerkShotgunRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkShotgunRank5Desc" long_desc_key="FuriousRamsayPerkShotgunRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkShotgunRank6Desc" long_desc_key="FuriousRamsayPerkShotgunRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkShotgunRank7Desc" long_desc_key="FuriousRamsayPerkShotgunRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkShotgunRank8Desc" long_desc_key="FuriousRamsayPerkShotgunRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkShotgunRank9Desc" long_desc_key="FuriousRamsayPerkShotgunRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkShotgunRank10Desc" long_desc_key="FuriousRamsayPerkShotgunRank10LongDesc"/>
+		</effect_group>
+	</perk>
+
 	<perk name="FuriousRamsayPerkMadmanFiringSpeedAura" max_level="10" parent="FuriousRamsaySkillMadmanAbilities" name_key="FuriousRamsayPerkMadmanFiringSpeedAuraName" desc_key="FuriousRamsayPerkMadmanFiringSpeedAuraDesc" icon="">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugLevel02"/></level_requirements>
@@ -2616,28 +3194,6 @@
 			<effect_description level="8" desc_key="FuriousRamsayPerkMadmanFiringSpeedAuraRank8Desc" long_desc_key="FuriousRamsayPerkMadmanFiringSpeedAuraRank8LongDesc"/>
 			<effect_description level="9" desc_key="FuriousRamsayPerkMadmanFiringSpeedAuraRank9Desc" long_desc_key="FuriousRamsayPerkMadmanFiringSpeedAuraRank9LongDesc"/>
 			<effect_description level="10" desc_key="FuriousRamsayPerkMadmanFiringSpeedAuraRank10Desc" long_desc_key="FuriousRamsayPerkMadmanFiringSpeedAuraRank10LongDesc"/>
-		</effect_group>
-	</perk>
-
-	<perk name="perkJavelinMaster" parent="FuriousRamsaySkillMadmanAbilities" name_key="perkJavelinMasterName" desc_key="perkJavelinMasterDesc" icon="ui_game_symbol_spear">
-		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqThugLevel01"/></level_requirements>
-		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqThugLevel03"/></level_requirements>
-		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqThugLevel05"/></level_requirements>
-		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqThugLevel07"/></level_requirements>
-		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqThugLevel10"/></level_requirements>
-		<effect_group>
-			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,4" tags="perkJavelinMaster"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,5" value="1" tags="meleeWpnSpearT1IronSpear"/>
-
-				<passive_effect name="BlockDamage" operation="perc_add" level="1,5" value=".2,1" tags="perkJavelinMaster"/>
-				<passive_effect name="EntityDamage" operation="perc_add" level="1,5" value=".1,.5" tags="perkJavelinMaster"/>
-				<passive_effect name="ProjectileVelocity" operation="perc_add" level="1,5" value="0.1,.5" tags="perkJavelinMaster"/>
-
-			<effect_description level="1" desc_key="perkJavelinMasterRank1Desc" long_desc_key="perkJavelinMasterRank1LongDesc"/>
-			<effect_description level="2" desc_key="perkJavelinMasterRank2Desc" long_desc_key="perkJavelinMasterRank2LongDesc"/>
-			<effect_description level="3" desc_key="perkJavelinMasterRank3Desc" long_desc_key="perkJavelinMasterRank3LongDesc"/>
-			<effect_description level="4" desc_key="perkJavelinMasterRank4Desc" long_desc_key="perkJavelinMasterRank4LongDesc"/>
-			<effect_description level="5" desc_key="perkJavelinMasterRank5Desc" long_desc_key="perkJavelinMasterRank5LongDesc"/>
 		</effect_group>
 	</perk>
 
@@ -2749,6 +3305,114 @@
 	</perk>-->
 	
 	<!-- BUILDER -->
+	<perk name="FuriousRamsayPerkHammers" max_level="10" parent="FuriousRamsaySkillBuilderExpertise" name_key="FuriousRamsayPerkHammersName" desc_key="FuriousRamsayPerkHammersDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugShotgunLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugShotgunLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugShotgunLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugShotgunLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugShotgunLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugShotgunLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugShotgunLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugShotgunLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugShotgunLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugShotgunLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="shotgun"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="shotgun"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="shotgun"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="shotgun"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="shotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modShotgunSawedOffBarrel,modGunShotgunTubeExtenderMagazine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="gunShotgunT2PumpShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modGunChoke,modGunDuckbill"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="gunShotgunT3AutoShotgun"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank2Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkShotgunRank3Desc" long_desc_key="FuriousRamsayPerkShotgunRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkShotgunRank4Desc" long_desc_key="FuriousRamsayPerkShotgunRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkShotgunRank5Desc" long_desc_key="FuriousRamsayPerkShotgunRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkShotgunRank6Desc" long_desc_key="FuriousRamsayPerkShotgunRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkShotgunRank7Desc" long_desc_key="FuriousRamsayPerkShotgunRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkShotgunRank8Desc" long_desc_key="FuriousRamsayPerkShotgunRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkShotgunRank9Desc" long_desc_key="FuriousRamsayPerkShotgunRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkShotgunRank10Desc" long_desc_key="FuriousRamsayPerkShotgunRank10LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="FuriousRamsayPerkPistols" max_level="10" parent="FuriousRamsaySkillBuilderExpertise" name_key="FuriousRamsayPerkPistolsName" desc_key="FuriousRamsayPerkPistolsDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugShotgunLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugShotgunLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugShotgunLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugShotgunLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugShotgunLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugShotgunLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugShotgunLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugShotgunLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugShotgunLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugShotgunLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="shotgun"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="shotgun"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="shotgun"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="shotgun"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="shotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modShotgunSawedOffBarrel,modGunShotgunTubeExtenderMagazine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="gunShotgunT2PumpShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modGunChoke,modGunDuckbill"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="gunShotgunT3AutoShotgun"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank2Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkShotgunRank3Desc" long_desc_key="FuriousRamsayPerkShotgunRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkShotgunRank4Desc" long_desc_key="FuriousRamsayPerkShotgunRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkShotgunRank5Desc" long_desc_key="FuriousRamsayPerkShotgunRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkShotgunRank6Desc" long_desc_key="FuriousRamsayPerkShotgunRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkShotgunRank7Desc" long_desc_key="FuriousRamsayPerkShotgunRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkShotgunRank8Desc" long_desc_key="FuriousRamsayPerkShotgunRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkShotgunRank9Desc" long_desc_key="FuriousRamsayPerkShotgunRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkShotgunRank10Desc" long_desc_key="FuriousRamsayPerkShotgunRank10LongDesc"/>
+		</effect_group>
+	</perk>
+
+	<perk name="FuriousRamsayPerkElectricTurrets" max_level="10" parent="FuriousRamsaySkillBuilderExpertise" name_key="FuriousRamsayPerkElectricTurretsName" desc_key="FuriousRamsayPerkElectricTurretsDesc" icon="">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugShotgunLevel01"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugShotgunLevel02"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="3" desc_key="FuriousRamsayReqThugShotgunLevel03"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="4" desc_key="FuriousRamsayReqThugShotgunLevel04"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="5" desc_key="FuriousRamsayReqThugShotgunLevel05"/></level_requirements>
+		<level_requirements level="6"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="6" desc_key="FuriousRamsayReqThugShotgunLevel06"/></level_requirements>
+		<level_requirements level="7"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="7" desc_key="FuriousRamsayReqThugShotgunLevel07"/></level_requirements>
+		<level_requirements level="8"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="8" desc_key="FuriousRamsayReqThugShotgunLevel08"/></level_requirements>
+		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="9" desc_key="FuriousRamsayReqThugShotgunLevel09"/></level_requirements>
+		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="10" desc_key="FuriousRamsayReqThugShotgunLevel10"/></level_requirements>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.15,.2,.25,.3,.4,.5" tags="shotgun"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="shotgun"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.2,.25,.3,.35" tags="shotgun"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25" tags="shotgun"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,3,4,4,5,5,6" tags="shotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="gunShotgunT1DoubleBarrel"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modShotgunSawedOffBarrel,modGunShotgunTubeExtenderMagazine"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="gunShotgunT2PumpShotgun"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modGunChoke,modGunDuckbill"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="gunShotgunT3AutoShotgun"/>
+
+			<effect_description level="1" desc_key="FuriousRamsayPerkShotgunRank1Desc" long_desc_key="FuriousRamsayPerkShotgunRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkShotgunRank2Desc" long_desc_key="FuriousRamsayPerkShotgunRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkShotgunRank3Desc" long_desc_key="FuriousRamsayPerkShotgunRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkShotgunRank4Desc" long_desc_key="FuriousRamsayPerkShotgunRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkShotgunRank5Desc" long_desc_key="FuriousRamsayPerkShotgunRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkShotgunRank6Desc" long_desc_key="FuriousRamsayPerkShotgunRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkShotgunRank7Desc" long_desc_key="FuriousRamsayPerkShotgunRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkShotgunRank8Desc" long_desc_key="FuriousRamsayPerkShotgunRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkShotgunRank9Desc" long_desc_key="FuriousRamsayPerkShotgunRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkShotgunRank10Desc" long_desc_key="FuriousRamsayPerkShotgunRank10LongDesc"/>
+		</effect_group>
+	</perk>
+
 	<perk name="FuriousRamsayPerkBuildingPenetratorAura" max_level="10" parent="FuriousRamsaySkillBuilderAbilities" name_key="FuriousRamsayPerkBuildingPenetratorAuraName" desc_key="FuriousRamsayPerkBuildingPenetratorAuraDesc" icon="">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="1" desc_key="FuriousRamsayReqThugLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattthug" operation="GTE" value="2" desc_key="FuriousRamsayReqThugLevel02"/></level_requirements>
