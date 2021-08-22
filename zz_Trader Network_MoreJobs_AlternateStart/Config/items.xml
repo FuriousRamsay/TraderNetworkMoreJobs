@@ -125,6 +125,8 @@
 			<effect_group name="RefreshVisuals" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugStarterVariablesSet" operation="Equals" value="1"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangeClassLabelsThug"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerkLabelsShotguns"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerkLabelsClubs"/>
 			</effect_group>
 			<effect_group name="StarterVariablesSet" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugStarterVariablesSet" operation="Equals" value="0"/>
