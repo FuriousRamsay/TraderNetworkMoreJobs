@@ -1,0 +1,144 @@
+TEST: Faction wars, die, start another, errors
+TODO: Trader gives buffs
+TODO: Prevent ally bear explosion from affecting traders
+TODO: Buff displays for Ally buffs (Dog, Wolf)
+TODO: Achievements for each class (default 1 level)
+TODO: Adjust label colors on class progress bar
+TODO: Add special sound for when reading class book
+TODO: Stats for headshot kills for specialitzed weapons
+TODO: Have the Trainer heal you from your ailments
+TODO: Have the trainer offer quests that are really progression with ability to reset them (like admin menu without admin)
+TODO: Add auras as abilities
+TODO: Add tags like perkboomstick to custom items for xp generation and perk effects
+TODO: change display type to nothing for npc blocks
+CHECK: healing buff for wolf prototype
+
+TODO: Fix Screens to not show point requirements for perks
+TODO: Make a few books to test out skills increase
+TODO: Special Xbow with large magazine, super fast reload and rate of fire
+TODO: Possibly remove tiers from special armor, adjust prices
+TODO: Can we make it always be nighttime?
+TODO: Add ailments for heat, cold weather
+TODO: Description of each mod for Nexus
+
+CHECK: Creature Pack behaviour
+
+TODO: Alternate start
+Trader focused on skill books
+"schematicMaster" for icon for generic books
+
+Strength more damage, better harvest, armor penetration (5)
+	(Penetrator, Salvage Operations, heavy armor, Miner 69er, Mother Lode, more damage TO line)
+	start with more damage
+Dexterity faster, more stamina, increased jumping, reload speed (6)
+	(sexual trex, Cardio,run and gun,flurry of blows,light armor,parkour)
+	start with more stamina regen and faster speed
+Constitution more health, healing, better carrying capacity, pain tolerance (5)
+	(Pack Mule, Well Insulated,Pain tolerance, healing factor, Iron Gut)
+	start with more carrying and health regen
+Intelligence treasure hunt, looting, lock picking,xp  (5)
+	(Lock Picking, Lucky Looter, Treasure Hunter, treasures line)
+	start with 
+Knowledge reduced craft time, cooking, farming (3)
+	(Master Chef, Huntsman, Living off the land,charismatic nature, grease monkey)
+	start with bicycle
+Charisma bartering
+	(better barter, daring adventurer,charismatic nature)
+	start with ???
+
+Classes:
+- Savage (Javelin Master, Pummel Pete, Skull Crusher, Brawler) (4) (start with baseball bat, double barrel shotgun)
+- Marksman (Deadeye, Boomstick, Machine Gunner,gun slinger) (4) (start with pistol)
+- Assassin (infiltrator,archery,deep cuts,hidden strike,from the shadows) (5) (start with added sneak damage and iron crossbow)
+- Engineer (electrocutioner, robotics inventor,turrets,posts) (2) (start with a sledge and workbench)
+- Chemist (Demolitions Expert,physician,ammo,grenades) (2) (start with molotovs and chem station)
+
+release
+ 
+CHECK: NREs on Arcane chest (only when you first place it on a new game?)
+CHECK: fire damage from zombies when wearing armor
+CHECK: burning particle stays on player even after god mode (burning rabbit)
+TODO: Check Knife with grenade class
+
+CHECK: What if you start, log out and come back in. What happens to missions?
+
+release
+
+TODO: Faction war event Tiers2-5
+
+release
+
+TODO: check if there is something to do about ragdoll of UMA using blunt weapons
+TODO: Shotgun ammo for boom stick that always ragdolls)
+FIX: boom stick doesn't ragdoll bosses
+
+TODO: add throwable item to remove buffs like fire, shock, smoke and toxic (quest rewards)
+
+TODO: Add vehicle UI tweaks
+
+TODO: new block that does intermittent zaps
+
+TODO: Zombies that jump, aoe when lands
+				<triggered_effect trigger="onSelfLandJump" action="AddBuff" buff="FuriousRamsayXXX"/>
+
+FIX: NREs (buffs on traders? On update for EntityNPCs)
+	Check for Entities that might be missing some properties
+
+NullReferenceException: Object reference not set to an instance of an object
+  at EntityMoveHelper.UpdateMoveHelper () [0x00165] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at EntityAlive.updateTasks () [0x000ff] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at EntityAlive.OnUpdateLive () [0x00154] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at EntityEnemy.OnUpdateLive () [0x00000] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at EntityZombie.OnUpdateLive () [0x00000] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at EntityAlive.OnUpdateEntity () [0x0001e] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at World.TickEntity (Entity e, System.Single _partialTicks) [0x0015d] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at World.TickEntitiesSlice (System.Int32 count) [0x00037] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at World.TickEntitiesFlush () [0x0000c] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at World.TickEntities (System.Single _partialTicks) [0x000c9] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at GameManager.UpdateTick () [0x00093] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at GameManager.gmUpdate () [0x00291] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at GameManager.Update () [0x00000] in <4b1a8c809f0943a384283687c21422f8>:0 
+
+Release
+
+TODO: mod to replace POI groups (by tier?)
+
+Once all new entities are done:
+TODO: Modify screamer groups with entities (no UMA)
+
+TODO: Farming Trader quests
+TODO: Handyman Trader quests
+
+TRIED: Mechanical Vulture Ally? (Doesn't work right now)
+TRIED: if decoys keep spawning (they don't)
+TRIED: Look into knife options (throwable as stacks, throwable with ammo). Won't work as stacks, wepon no longer shows. Doesn't appear to work with ammo (to be tested further in A20).
+FIX: Multiplayer placeable mechanical ally (might not be possible given the SpawnTrader respawn issue)
+FIX: ally dog example in single player always spawns at same spot if using stacks
+TESTED: POI resets do not affect trader entities
+
+Main:
+//Added Spawnable Mechanical Allies in Multiplayer (based on Decoy mechanic), now purchasable from Player vending machines at trader POIs
+//Adjusted toolbelt notification when deploying mechanical allies in multiplayer to ensure players stay clear of the area they deploy them in to not affect the deployment process (could result in nothing happening)
+//Added ability to stack Mechanical Pets up to 25 in multiplayer.
+Adjusted AI
+Added Missing Localization for Toxic entities in Toxic questline
+Fixed burning effect not being removed when hit by burning rabbit
+Fixed Farmer Trader Screen Icon Color
+
+Items and Blocks:
+
+I See and Hear You:
+
+Locate New Traders:
+
+Biome:
+
+Friendly Biome:
+
+Wandering Horde:
+
+UI Tweaks:
+
+Twitch Integration:
+
+DF Compatibility:

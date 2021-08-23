@@ -18,17 +18,12 @@
 			<property name="statement_key" value="quest_FuriousRamsayLocateShelter_statement"/>
 			<property name="response_key" value="quest_FuriousRamsayLocateShelter_response"/>
 			<property name="completiontype" value="AutoComplete"/>
-			<!--<property name="return_to_quest_giver" value="true" />-->
 
 			<action type="TrackQuest"/>
 
-			<reward type="Skill" id="perkDaringAdventurer" value="3" stage="start"/>
 			<reward type="Item" id="ammo9mmBulletBall" value="30" stage="start"/>
 			<reward type="Item" id="meleeToolRepairT0StoneAxe" quality="1" value="1" stage="start"/>
-
-			<!--<action type="ShowTip" value="GotSexyTyrSkill" phase="1">
-				<property name="delay" value="0.25"/>
-			</action>-->
+			<!--<reward type="Quest" id="quest_FuriousRamsayPeskyZombies" stage="start"/>-->
 
 			<objective type="RandomPOIGoto">
 				<property name="phase" value="1"/>
@@ -45,7 +40,7 @@
 				<property name="nav_object" value="sleeper_volume"/>
 			</objective>
 
-			<!--<action type="ShowTip" value="quest_FuriousRamsaySpendSkillPoint6" phase="3">
+			<!--<action type="ShowTip" value="quest_FuriousRamsayLocateShelter" phase="3">
 				<property name="delay" value="1"/>
 			</action>-->
 
@@ -71,23 +66,28 @@
 
 			<action type="TrackQuest"/>
 
+			<reward type="Skill" id="FuriousRamsayPerkChoiceIsMine" value="1" stage="start"/>
+
 			<objective type="BlockPlace" id="FuriousRamsaySpawnSurvivalSpecialist" value="1" phase="1"/>
 			<objective type="POIStayWithin">
 				<property name="phase" value="1"/>
 				<property name="radius" value="25"/>
 			</objective>
 
+			<action type="ShowTip" value="GotSexyTyrSkill" phase="2">
+				<property name="delay" value="0.25"/>
+			</action>
+
 			<objective type="InteractWithNPC">
 				<property name="phase" value="2"/>
 				<property name="nav_object" value="return_to_trader" />
 			</objective>
 
-			<reward type="LootItem" id="FuriousRamsayGroupQuestCookedFoodsTier1" ischosen="true" isfixed="true" value="1"/>
-			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalLow" ischosen="true" isfixed="true" value="1"/>
-			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="1"/>
-			<reward type="LootItem" id="groupQuestArmor" ischosen="true" value="1"/>
-			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
-			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="1"/>
+			<reward type="LootItem" id="FuriousRamsayStarterBackpackStrength" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="FuriousRamsayStarterBackpackDexterity" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="FuriousRamsayStarterBackpackConstitution" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="FuriousRamsayStarterBackpackIntelligence" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="FuriousRamsayStarterBackpackCharisma" ischosen="true" isfixed="true" value="1"/>
 		</quest>
 		
 		<quest id="quest_BasicSurvival1">
@@ -141,8 +141,51 @@
 			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
 			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="1"/>
 		</quest>
+		
+		<quest id="quest_FuriousRamsayPeskyZombies">
+			<property name="name_key" value="quest_FuriousRamsayPeskyZombies_name"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayPeskyZombies_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayPeskyZombies_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="easy"/>
+			<property name="difficulty_tier" value="1"/>
 
-		<quest id="quest_FuriousRamsayTraderOptionTest">
+			<property name="completiontype" value="AutoComplete"/>
+
+			<objective type="Time" value="120" phase="1"/>
+
+			<objective type="Time" value="120" phase="2"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieArlene" value="1" phase="2"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieBoe" value="1" phase="2"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieJoe" value="1" phase="2"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieDarlene" value="1" phase="2"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieMarlene" value="1" phase="2"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieYo" value="1" phase="2"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieSteve" value="1" phase="2"/>
+
+			<objective type="Time" value="120" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieArlene" value="1" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieBoe" value="1" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieJoe" value="1" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieDarlene" value="1" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieMarlene" value="1" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieYo" value="1" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieSteve" value="1" phase="3"/>
+
+			<objective type="Time" value="120" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieArlene" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieBoe" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieJoe" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieDarlene" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieMarlene" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieYo" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieSteve" value="1" phase="4"/>
+		</quest>		
+
+		<!--<quest id="quest_FuriousRamsayTraderOptionTest">
 			<property name="name_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_name"/>
 			<property name="subtitle_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_subtitle"/>
 			<property name="description_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_description"/>
@@ -169,7 +212,7 @@
 			<reward type="LootItem" id="groupQuestArmor" ischosen="true" value="1"/>
 			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
 			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="1"/>
-		</quest>
+		</quest>-->
 
 		<quest_list id="trader_quests_survivalspecialist">
 			<quest id="quest_FuriousRamsayLocateShelter" prob="1"/>

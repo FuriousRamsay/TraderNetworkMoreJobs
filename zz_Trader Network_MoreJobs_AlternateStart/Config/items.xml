@@ -59,39 +59,36 @@
 	
 	<append xpath="/items">
 
-		<item name="FuriousRamsaySkillBookMaster">
-			<property name="CreativeMode" value="None"/>
+		<item name="FuriousRamsayClassBookMaster">
+			<property name="CustomIcon" value="schematicMaster"/>
 			<property name="HoldType" value="21"/>
 			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mpaper"/>
-			<property name="CustomIcon" value="questMaster"/>
-			<property name="Stacknumber" value="25"/>
+			<property name="Stacknumber" value="110"/>
 			<property name="EconomicValue" value="1600"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="FuelValue" value="2"/>
-			<property name="Weight" value="2"/>
+			<property name="Weight" value="0"/>
 			<property name="Group" value="Special Items,books"/>
 		</item>
 
+		<item name="FuriousRamsayClassBookGeneric">
+			<property name="Extends" value="FuriousRamsayClassBookMaster"/>
+			<property name="CustomIconTint" value="125, 125, 125"/>
+			<property name="TintColor" value="125, 125, 125"/>
+		</item>
+
 		<item name="FuriousRamsayAttributeHunterClass">
-			<property name="HoldType" value="21"/>
-			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
-			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="Mpaper"/>
-			<property name="CustomIcon" value="questMaster"/>
-			<property name="Stacknumber" value="25"/>
-			<property name="EconomicValue" value="1600"/>
-			<property name="SellableToTrader" value="false"/>
+			<property name="Extends" value="FuriousRamsayClassBookMaster"/>
+			<property name="CustomIconTint" value="87, 141, 250"/>
+			<property name="TintColor" value="87, 141, 250"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="read_skillbook"/>
 			</property>
-			<property name="FuelValue" value="2"/>
-			<property name="Weight" value="2"/>
-			<property name="Group" value="Special Items,books"/>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterClass" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugClass" operation="set" value="0"/>
@@ -143,23 +140,15 @@
 		</item>
 
 		<item name="FuriousRamsayAttributeThugClass">
-			<property name="HoldType" value="21"/>
-			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
-			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="Mpaper"/>
-			<property name="CustomIcon" value="questMaster"/>
-			<property name="Stacknumber" value="25"/>
-			<property name="EconomicValue" value="1600"/>
-			<property name="SellableToTrader" value="false"/>
+			<property name="Extends" value="FuriousRamsayClassBookMaster"/>
+			<property name="CustomIconTint" value="255, 255, 0"/>
+			<property name="TintColor" value="255, 255, 0"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="read_skillbook"/>
 			</property>
-			<property name="FuelValue" value="2"/>
-			<property name="Weight" value="2"/>
-			<property name="Group" value="Special Items,books"/>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugClass" operation="set" value="1"/>
@@ -258,23 +247,15 @@
 		</item>
 
 		<item name="FuriousRamsayAttributeButcherClass">
-			<property name="HoldType" value="21"/>
-			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
-			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="Mpaper"/>
-			<property name="CustomIcon" value="questMaster"/>
-			<property name="Stacknumber" value="25"/>
-			<property name="EconomicValue" value="1600"/>
-			<property name="SellableToTrader" value="false"/>
+			<property name="Extends" value="FuriousRamsayClassBookMaster"/>
+			<property name="CustomIconTint" value="255, 89, 101"/>
+			<property name="TintColor" value="255, 89, 101"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="read_skillbook"/>
 			</property>
-			<property name="FuelValue" value="2"/>
-			<property name="Weight" value="2"/>
-			<property name="Group" value="Special Items,books"/>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugClass" operation="set" value="0"/>
@@ -326,23 +307,15 @@
 		</item>
 		
 		<item name="FuriousRamsayAttributeSoldierClass">
-			<property name="HoldType" value="21"/>
-			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
-			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="Mpaper"/>
-			<property name="CustomIcon" value="questMaster"/>
-			<property name="Stacknumber" value="25"/>
-			<property name="EconomicValue" value="1600"/>
-			<property name="SellableToTrader" value="false"/>
+			<property name="Extends" value="FuriousRamsayClassBookMaster"/>
+			<property name="CustomIconTint" value="118, 227, 129"/>
+			<property name="TintColor" value="118, 227, 129"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="read_skillbook"/>
 			</property>
-			<property name="FuelValue" value="2"/>
-			<property name="Weight" value="2"/>
-			<property name="Group" value="Special Items,books"/>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugClass" operation="set" value="0"/>
@@ -394,23 +367,15 @@
 		</item>
 		
 		<item name="FuriousRamsayAttributeTechnogeekClass">
-			<property name="HoldType" value="21"/>
-			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
-			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="Mpaper"/>
-			<property name="CustomIcon" value="questMaster"/>
-			<property name="Stacknumber" value="25"/>
-			<property name="EconomicValue" value="1600"/>
-			<property name="SellableToTrader" value="false"/>
+			<property name="Extends" value="FuriousRamsayClassBookMaster"/>
+			<property name="CustomIconTint" value="115, 111, 227"/>
+			<property name="TintColor" value="115, 111, 227"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="read_skillbook"/>
 			</property>
-			<property name="FuelValue" value="2"/>
-			<property name="Weight" value="2"/>
-			<property name="Group" value="Special Items,books"/>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugClass" operation="set" value="0"/>
@@ -462,23 +427,15 @@
 		</item>
 
 		<item name="FuriousRamsayAttributeMadmanClass">
-			<property name="HoldType" value="21"/>
-			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
-			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="Mpaper"/>
-			<property name="CustomIcon" value="questMaster"/>
-			<property name="Stacknumber" value="25"/>
-			<property name="EconomicValue" value="1600"/>
-			<property name="SellableToTrader" value="false"/>
+			<property name="Extends" value="FuriousRamsayClassBookMaster"/>
+			<property name="CustomIconTint" value="232, 162, 118"/>
+			<property name="TintColor" value="232, 162, 118"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="read_skillbook"/>
 			</property>
-			<property name="FuelValue" value="2"/>
-			<property name="Weight" value="2"/>
-			<property name="Group" value="Special Items,books"/>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugClass" operation="set" value="0"/>
@@ -530,23 +487,15 @@
 		</item>
 
 		<item name="FuriousRamsayAttributeBuilderClass">
-			<property name="HoldType" value="21"/>
-			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
-			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-			<property name="Material" value="Mpaper"/>
-			<property name="CustomIcon" value="questMaster"/>
-			<property name="Stacknumber" value="25"/>
-			<property name="EconomicValue" value="1600"/>
-			<property name="SellableToTrader" value="false"/>
+			<property name="Extends" value="FuriousRamsayClassBookMaster"/>
+			<property name="CustomIconTint" value="194, 86, 252"/>
+			<property name="TintColor" value="194, 86, 252"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1"/>
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="read_skillbook"/>
 			</property>
-			<property name="FuelValue" value="2"/>
-			<property name="Weight" value="2"/>
-			<property name="Group" value="Special Items,books"/>
 			<effect_group tiered="false">
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugClass" operation="set" value="0"/>
@@ -859,6 +808,213 @@
 				<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
 				<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
 				<passive_effect name="StaminaLoss" operation="base_set" value="26.1" tags="secondary"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterBackpackMaster">
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="HoldType" value="45"/>
+			<property name="Weight" value="0"/>
+			<property name="Candrop" value="false"/>
+		</item>
+
+		<item name="FuriousRamsayStarterBackpackStrength">
+			<property name="Extends" value="FuriousRamsayStarterBackpackMaster"/>
+			<property name="CustomIconTint" value="194, 114, 114"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="open_backpack"/>
+				<property name="UseAnimation" value="false"/>
+				<property name="Create_item" value="FuriousRamsayClassBookGeneric,FuriousRamsayPillStrength"/>
+				<property name="Create_item_count" value="1,1"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayStarterBackpackDexterity">
+			<property name="Extends" value="FuriousRamsayStarterBackpackMaster"/>
+			<property name="CustomIconTint" value="189, 191, 113"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="open_backpack"/>
+				<property name="UseAnimation" value="false"/>
+				<property name="Create_item" value="FuriousRamsayClassBookGeneric,FuriousRamsayPillDexterity"/>
+				<property name="Create_item_count" value="1,1"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayStarterBackpackConstitution">
+			<property name="Extends" value="FuriousRamsayStarterBackpackMaster"/>
+			<property name="CustomIconTint" value="122, 189, 113"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="open_backpack"/>
+				<property name="UseAnimation" value="false"/>
+				<property name="Create_item" value="FuriousRamsayClassBookGeneric,FuriousRamsayPillConstitution"/>
+				<property name="Create_item_count" value="1,1"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayStarterBackpackIntelligence">
+			<property name="Extends" value="FuriousRamsayStarterBackpackMaster"/>
+			<property name="CustomIconTint" value="112, 164, 186"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="open_backpack"/>
+				<property name="UseAnimation" value="false"/>
+				<property name="Create_item" value="FuriousRamsayClassBookGeneric,FuriousRamsayPillIntelligence"/>
+				<property name="Create_item_count" value="1,1"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayStarterBackpackKnowledge">
+			<property name="Extends" value="FuriousRamsayStarterBackpackMaster"/>
+			<property name="CustomIconTint" value="65, 110, 184"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="open_backpack"/>
+				<property name="UseAnimation" value="false"/>
+				<property name="Create_item" value="FuriousRamsayClassBookGeneric,FuriousRamsayPillKnowledge"/>
+				<property name="Create_item_count" value="1,1"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayStarterBackpackCharisma">
+			<property name="Extends" value="FuriousRamsayStarterBackpackMaster"/>
+			<property name="CustomIconTint" value="179, 107, 167"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="open_backpack"/>
+				<property name="UseAnimation" value="false"/>
+				<property name="Create_item" value="FuriousRamsayClassBookGeneric,FuriousRamsayPillCharisma"/>
+				<property name="Create_item_count" value="1,1"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayPillMaster">
+			<property name="Tags" value="medical"/>
+			<property name="CustomIcon" value="drugPainkillers"/>
+			<property name="ItemTypeIcon" value="add"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#Other/Items?Health/painkillersPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Morganic"/>
+			<property name="EconomicValue" value="80"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Group" value="Science,CFChemicals,Medical"/>
+		</item>
+
+
+		<item name="FuriousRamsayPillStrength">
+			<property name="Extends" value="FuriousRamsayPillMaster"/>
+			<property name="CustomIconTint" value="194, 114, 114"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_painkillers"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugPainkillersDuration" operation="set" value="543">
+					<requirement name="CVarCompare" cvar="$buffDrugPainkillersDuration" operation="GT" value="543"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugPainkillers"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayPillDexterity">
+			<property name="Extends" value="FuriousRamsayPillMaster"/>
+			<property name="CustomIconTint" value="189, 191, 113"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_painkillers"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugPainkillersDuration" operation="set" value="543">
+					<requirement name="CVarCompare" cvar="$buffDrugPainkillersDuration" operation="GT" value="543"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugPainkillers"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayPillConstitution">
+			<property name="Extends" value="FuriousRamsayPillMaster"/>
+			<property name="CustomIconTint" value="122, 189, 113"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_painkillers"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugPainkillersDuration" operation="set" value="543">
+					<requirement name="CVarCompare" cvar="$buffDrugPainkillersDuration" operation="GT" value="543"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugPainkillers"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayPillIntelligence">
+			<property name="Extends" value="FuriousRamsayPillMaster"/>
+			<property name="CustomIconTint" value="112, 164, 186"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_painkillers"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugPainkillersDuration" operation="set" value="543">
+					<requirement name="CVarCompare" cvar="$buffDrugPainkillersDuration" operation="GT" value="543"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugPainkillers"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayPillKnowledge">
+			<property name="Extends" value="FuriousRamsayPillMaster"/>
+			<property name="CustomIconTint" value="165, 110, 184"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_painkillers"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugPainkillersDuration" operation="set" value="543">
+					<requirement name="CVarCompare" cvar="$buffDrugPainkillersDuration" operation="GT" value="543"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugPainkillers"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayPillCharisma">
+			<property name="Extends" value="FuriousRamsayPillMaster"/>
+			<property name="CustomIconTint" value="179, 107, 167"/>
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="player_painkillers"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugPainkillersDuration" operation="set" value="543">
+					<requirement name="CVarCompare" cvar="$buffDrugPainkillersDuration" operation="GT" value="543"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugPainkillers"/>
 			</effect_group>
 		</item>
 

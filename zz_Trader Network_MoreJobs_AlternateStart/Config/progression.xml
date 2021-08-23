@@ -1012,24 +1012,29 @@
 	</perk>-->
 	
 	<!-- CHARISMA -->
-	<!-- Have to set optioncount to 3 as default -->
+	<perk name="FuriousRamsayPerkChoiceIsMine" max_level="1" parent="FuriousRamsaySkillCharisma" name_key="FuriousRamsayPerkChoiceIsMineName" desc_key="FuriousRamsayPerkChoiceIsMineDesc" icon="ui_game_symbol_adventure">
+		<effect_group>
+			<passive_effect name="QuestRewardOptionCount" operation="base_add" level="1" value="3"/>
+			<effect_description level="1" desc_key="FuriousRamsayPerkChoiceIsMineRank1Desc" long_desc_key="FuriousRamsayPerkChoiceIsMineRank1LongDesc"/>
+		</effect_group>
+	</perk>
+
 	<perk name="perkDaringAdventurer" max_level="4" parent="FuriousRamsaySkillCharisma" name_key="perkDaringAdventurerName" desc_key="perkDaringAdventurerDesc" icon="ui_game_symbol_adventure">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
 		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="Equals" value="10" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
-			<effect_group>
-				<passive_effect name="QuestRewardOptionCount" operation="base_add" level="1,2,3,4" value="3,3,3,3"/>
-				<passive_effect name="QuestBonusItemReward" operation="perc_add" level="1,4" value=".05,.20"/>
-				<passive_effect name="QuestRewardChoiceCount" operation="base_add" level="4" value="1"/>
 
-				<effect_description level="1" desc_key="perkDaringAdventurerRank1Desc" long_desc_key="perkDaringAdventurerRank1LongDesc"/>
-				<effect_description level="2" desc_key="perkDaringAdventurerRank2Desc" long_desc_key="perkDaringAdventurerRank2LongDesc"/>
-				<effect_description level="3" desc_key="perkDaringAdventurerRank3Desc" long_desc_key="perkDaringAdventurerRank3LongDesc"/>
-				<effect_description level="4" desc_key="perkDaringAdventurerRank4Desc" long_desc_key="perkDaringAdventurerRank4LongDesc"/>
-			</effect_group>
-		</perk>
-
+		<effect_group>
+			<passive_effect name="QuestBonusItemReward" operation="perc_add" level="1,2,3,4" value=".05,.1,.2,.35"/>
+			<passive_effect name="QuestRewardChoiceCount" operation="base_add" level="1,2,3,4" value="1,1,2,3"/>
+			<effect_description level="1" desc_key="perkDaringAdventurerRank1Desc" long_desc_key="perkDaringAdventurerRank1LongDesc"/>
+			<effect_description level="2" desc_key="perkDaringAdventurerRank2Desc" long_desc_key="perkDaringAdventurerRank2LongDesc"/>
+			<effect_description level="3" desc_key="perkDaringAdventurerRank3Desc" long_desc_key="perkDaringAdventurerRank3LongDesc"/>
+			<effect_description level="4" desc_key="perkDaringAdventurerRank4Desc" long_desc_key="perkDaringAdventurerRank4LongDesc"/>
+		</effect_group>
+	</perk>
+	
 	<perk name="perkBetterBarter" parent="FuriousRamsaySkillCharisma" name_key="perkBetterBarterName" desc_key="perkBetterBarterDesc" icon="ui_game_symbol_barter">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="1" desc_key="FuriousRamsayReqGeneticsLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="3" desc_key="FuriousRamsayReqGeneticsLevel03"/></level_requirements>
