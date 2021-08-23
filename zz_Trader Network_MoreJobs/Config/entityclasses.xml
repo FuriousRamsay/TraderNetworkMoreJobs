@@ -16708,6 +16708,43 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 			</effect_group>
 		</entity_class>
 
+		<entity_class name="FuriousRamsayNPCBristonTheSurvivor" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,Briston"/>
+			<property name="Archetype" value="FuriousRamsayBristonTheSurvivor"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandBriston"/>
+
+			<property name="NavObject" value="" />
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.8, 2.2"/> 
+			<property name="MoveSpeedPanic" value="2.2"/>
+
+			<property name="AITask-1" value="Wander"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,60"/>
+			<property name="AITask-3" value="BreakBlock"/>
+			<property name="AITask-4" value=""/>	
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishSoldierTimerTier1"/>
+                <passive_effect name="HealthMax" operation="base_set" value="1000" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+            <effect_group name="Health Effects">
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen2"/>
+            </effect_group>
+		</entity_class>
+
 	</append>
 
 </configs>

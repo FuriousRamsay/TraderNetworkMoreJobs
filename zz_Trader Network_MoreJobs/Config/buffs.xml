@@ -4900,6 +4900,15 @@
 				</effect_group>
 			</buff>
 
+			<buff name="VerifyFuriousRamsayBristonVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Axe/fireaxe_ironPrefab.prefab" local_offset="-0.084,0.18,0.005" local_rotation="353.36,244.38472,350.9999" parent_transform="RightHand"/>
+					<!--<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="Entities/Traps/hubcapPrefab" local_offset="0,0.04,0.42" local_rotation="86.00008,359,0.4" parent_transform="LeftHand"/>-->
+				</effect_group>
+			</buff>
+
 		</append>		
 
 		<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
@@ -4983,6 +4992,13 @@
 				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBlackShieldFireMotorcycleEffects"/>
 			</triggered_effect>
 
+			<!-- Ally Visuals -->
+			<!-- Briston Visuals -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBristonVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="Briston"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayBristonVisuals"/>
+			</triggered_effect>
+			
 			<!-- Trader Visuals -->
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldTrader1Visuals">
 				<requirement name="EntityTagCompare" target="other" tags="BlackShieldTrader1"/>
