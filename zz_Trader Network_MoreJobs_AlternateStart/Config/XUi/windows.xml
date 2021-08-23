@@ -1,5 +1,11 @@
 <Config>
 
+	<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel/grid[@name='categories' and @cols='8']/@cols">12</set>
+	<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel[@width='200']/@pos">404,0</set>
+	<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel[@controller='Paging']/@pos">542,0</set>
+	<!--<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel[@controller='Paging']/button[@name='pageDown']/@pos">22,-22</set>
+	<set xpath="/windows/window[@name='windowSkillList']/panel[@name='content']/rect[@name='categoryHeader']/panel[@controller='Paging']/button[@name='pageUp']/@pos">82,-22</set>-->
+
 	<!-- SKILLS WINDOWS -->
 	<remove xpath="/windows/window[@name='windowSkillAttributeInfo']/rect[@name='content']/rect[@name='tableBox']/rect[@name='tableHeader']/rect[@pos='572,0']/label[@text_key='xuiSkillBuy']"/>
 	<remove xpath="/windows/window[@name='windowSkillAttributeInfo']/panel[@name='header']/label[@pivot='topright']"/>
@@ -75,6 +81,12 @@
 						<label depth="8" name="FuriousRamsayClassNameLabel" pos="5,-3" width="{cvar(varFuriousRamsayClassBuilderWidth)}" height="{cvar(varFuriousRamsayClassBuilderHeight)}" justify="left" color="{cvar(varFuriousRamsayClassBuilderColor)},{cvar(varFuriousRamsayClassBuilderColor)},{cvar(varFuriousRamsayClassBuilderColor)}" text="BUILDER" font_size="18"/>
 						<label depth="8" name="FuriousRamsayClassLevelCaptionLabel" pos="-23,-3" width="{cvar(varFuriousRamsayClassBuilderWidth)}" height="{cvar(varFuriousRamsayClassBuilderHeight)}" justify="right" color="{cvar(varFuriousRamsayClassBuilderColor)},{cvar(varFuriousRamsayClassBuilderColor)},{cvar(varFuriousRamsayClassBuilderColor)}" text="LVL" font_size="18"/>
 						<label depth="8" name="FuriousRamsayClassLevelNumberLabel" pos="195,-3" width="{cvar(varFuriousRamsayClassBuilderWidth)}" height="{cvar(varFuriousRamsayClassBuilderHeight)}" justify="left" color="{cvar(varFuriousRamsayClassBuilderColor)},{cvar(varFuriousRamsayClassBuilderColor)},{cvar(varFuriousRamsayClassBuilderColor)}" text="{cvar(varFuriousRamsayClassLevel)}" font_size="18"/>
+					</rect>
+					<rect name="FuriousRamsayClassChef" width="215" depth="2" pos="10,15" height="25" globalopacity="false">
+						<label depth="8" name="FuriousRamsayClassPercentageLabel" pos="5,-5" width="{cvar(varFuriousRamsayClassChefWidth)}" height="{cvar(varFuriousRamsayClassChefHeight)}" justify="center" color="220,220,220" text="{cvar(varFuriousRamsayClassPerc):0.00}%" font_size="14"/>
+						<label depth="8" name="FuriousRamsayClassNameLabel" pos="5,-3" width="{cvar(varFuriousRamsayClassChefWidth)}" height="{cvar(varFuriousRamsayClassChefHeight)}" justify="left" color="{cvar(varFuriousRamsayClassChefColor)},{cvar(varFuriousRamsayClassChefColor)},{cvar(varFuriousRamsayClassChefColor)}" text="Chef" font_size="18"/>
+						<label depth="8" name="FuriousRamsayClassLevelCaptionLabel" pos="-23,-3" width="{cvar(varFuriousRamsayClassChefWidth)}" height="{cvar(varFuriousRamsayClassChefHeight)}" justify="right" color="{cvar(varFuriousRamsayClassChefColor)},{cvar(varFuriousRamsayClassChefColor)},{cvar(varFuriousRamsayClassChefColor)}" text="LVL" font_size="18"/>
+						<label depth="8" name="FuriousRamsayClassLevelNumberLabel" pos="195,-3" width="{cvar(varFuriousRamsayClassChefWidth)}" height="{cvar(varFuriousRamsayClassChefHeight)}" justify="left" color="{cvar(varFuriousRamsayClassChefColor)},{cvar(varFuriousRamsayClassChefColor)},{cvar(varFuriousRamsayClassChefColor)}" text="{cvar(varFuriousRamsayClassLevel)}" font_size="18"/>
 					</rect>
 
 					<rect name="FuriousRamsayAttributeStrength" width="100" depth="2" pos="10,-15" height="15">
