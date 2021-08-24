@@ -1127,7 +1127,10 @@
 	</perk>
 
 	<perk name="FuriousRamsayPerkSniperRifle" max_level="10" parent="FuriousRamsaySkillHunterExpertise" name_key="FuriousRamsayPerkSniperRifleName" desc_key="FuriousRamsayPerkSniperRifleDesc" icon="">
-		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayatthunter" operation="GTE" value="1" desc_key="FuriousRamsayReqHunterLevel01"/></level_requirements>
+		<level_requirements level="1">
+			<requirement name="ProgressionLevel" progression_name="furiousramsayatthunter" operation="GTE" value="1" desc_key="FuriousRamsayReqHunterLevel01"/>
+			<requirement name="ProgressionLevel" progression_name="FuriousRamsayPerkBow" operation="GTE" value="4" desc_key="FuriousRamsayReqPerkBowLevel04"/>
+		</level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayatthunter" operation="GTE" value="2" desc_key="FuriousRamsayReqHunterLevel02"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayatthunter" operation="GTE" value="3" desc_key="FuriousRamsayReqHunterLevel03"/></level_requirements>
 		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="furiousramsayatthunter" operation="GTE" value="4" desc_key="FuriousRamsayReqHunterLevel04"/></level_requirements>

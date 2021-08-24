@@ -2,6 +2,390 @@
 
 	<append xpath="/blocks">
 
+		<!-- HUNTER -->
+		<block name="FuriousRamsayBackpackTrainerHunter">
+			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerHunterDesc"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="CustomIconTint" value="83, 173, 189"/>
+
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBackpackContentTrainerHunter"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="Shape" value="Ext3dModel"/> 
+			<property name="Texture" value="293"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Material" value="Mcloth"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<drop event="Destroy" count="0"/>
+			<property name="Stacknumber" value="1"/>
+		</block>
+		<block name="FuriousRamsayBackpackContentTrainerHunter">
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerHunterDesc"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="CustomIconTint" value="83, 173, 189"/>
+
+			<property name="Class" value="Loot"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="Shape" value="Ext3dModel"/> 
+			<property name="Texture" value="293"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Candrop" value="false"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="MaxDamage" value="1000"/>
+			<drop event="Destroy" count="0"/>
+			<property name="LootList" value="826"/>
+		</block>
+		
+		<!-- THUG -->
+		<block name="FuriousRamsayBackpackTrainerThug">
+			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerThugDesc"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="CustomIconTint" value="224, 224, 54"/>
+
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBackpackContentTrainerThug"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="Shape" value="Ext3dModel"/> 
+			<property name="Texture" value="293"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Material" value="Mcloth"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<drop event="Destroy" count="0"/>
+			<property name="Stacknumber" value="1"/>
+		</block>
+		<block name="FuriousRamsayBackpackContentTrainerThug">
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerThugDesc"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="CustomIconTint" value="224, 224, 54"/>
+
+			<property name="Class" value="Loot"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="Shape" value="Ext3dModel"/> 
+			<property name="Texture" value="293"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Candrop" value="false"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="MaxDamage" value="1000"/>
+			<drop event="Destroy" count="0"/>
+			<property name="LootList" value="827"/>
+		</block>
+
+		<!-- BUTCHER -->
+		<block name="FuriousRamsayBackpackTrainerButcher">
+			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerButcherDesc"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="CustomIconTint" value="268, 91, 105"/>
+
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBackpackContentTrainerButcher"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="Shape" value="Ext3dModel"/> 
+			<property name="Texture" value="293"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Material" value="Mcloth"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<drop event="Destroy" count="0"/>
+			<property name="Stacknumber" value="1"/>
+		</block>
+		<block name="FuriousRamsayBackpackContentTrainerButcher">
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerButcherDesc"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="CustomIconTint" value="268, 91, 105"/>
+
+			<property name="Class" value="Loot"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="Shape" value="Ext3dModel"/> 
+			<property name="Texture" value="293"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Candrop" value="false"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="MaxDamage" value="1000"/>
+			<drop event="Destroy" count="0"/>
+			<property name="LootList" value="828"/>
+		</block>
+
+		<!-- SOLDIER -->
+		<block name="FuriousRamsayBackpackTrainerSoldier">
+			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerSoldierDesc"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="CustomIconTint" value="118, 227, 129"/>
+
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBackpackContentTrainerSoldier"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="Shape" value="Ext3dModel"/> 
+			<property name="Texture" value="293"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Material" value="Mcloth"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<drop event="Destroy" count="0"/>
+			<property name="Stacknumber" value="1"/>
+		</block>
+		<block name="FuriousRamsayBackpackContentTrainerSoldier">
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerSoldierDesc"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="CustomIconTint" value="118, 227, 129"/>
+
+			<property name="Class" value="Loot"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="Shape" value="Ext3dModel"/> 
+			<property name="Texture" value="293"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Candrop" value="false"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="MaxDamage" value="1000"/>
+			<drop event="Destroy" count="0"/>
+			<property name="LootList" value="829"/>
+		</block>
+
+		<!-- TECHNOGEEK -->
+		<block name="FuriousRamsayBackpackTrainerTechnogeek">
+			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerTechnogeekDesc"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="CustomIconTint" value="115, 111, 227"/>
+
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBackpackContentTrainerTechnogeek"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="Shape" value="Ext3dModel"/> 
+			<property name="Texture" value="293"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Material" value="Mcloth"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<drop event="Destroy" count="0"/>
+			<property name="Stacknumber" value="1"/>
+		</block>
+		<block name="FuriousRamsayBackpackContentTrainerTechnogeek">
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerTechnogeekDesc"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="CustomIconTint" value="115, 111, 227"/>
+
+			<property name="Class" value="Loot"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="Shape" value="Ext3dModel"/> 
+			<property name="Texture" value="293"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Candrop" value="false"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="MaxDamage" value="1000"/>
+			<drop event="Destroy" count="0"/>
+			<property name="LootList" value="830"/>
+		</block>
+
+		<!-- MADMAN -->
+		<block name="FuriousRamsayBackpackTrainerMadman">
+			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerMadmanDesc"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="CustomIconTint" value="232, 162, 118"/>
+
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBackpackContentTrainerMadman"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="Shape" value="Ext3dModel"/> 
+			<property name="Texture" value="293"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Material" value="Mcloth"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<drop event="Destroy" count="0"/>
+			<property name="Stacknumber" value="1"/>
+		</block>
+		<block name="FuriousRamsayBackpackContentTrainerMadman">
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerMadmanDesc"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="CustomIconTint" value="232, 162, 118"/>
+
+			<property name="Class" value="Loot"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="Shape" value="Ext3dModel"/> 
+			<property name="Texture" value="293"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Candrop" value="false"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="MaxDamage" value="1000"/>
+			<drop event="Destroy" count="0"/>
+			<property name="LootList" value="831"/>
+		</block>
+
+		<!-- BUILDER -->
+		<block name="FuriousRamsayBackpackTrainerBuilder">
+			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerBuilderDesc"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="CustomIconTint" value="194, 86, 252"/>
+
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBackpackContentTrainerBuilder"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="Shape" value="Ext3dModel"/> 
+			<property name="Texture" value="293"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Material" value="Mcloth"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<drop event="Destroy" count="0"/>
+			<property name="Stacknumber" value="1"/>
+		</block>
+		<block name="FuriousRamsayBackpackContentTrainerBuilder">
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerBuilderDesc"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="CustomIconTint" value="194, 86, 252"/>
+
+			<property name="Class" value="Loot"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="Shape" value="Ext3dModel"/> 
+			<property name="Texture" value="293"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Candrop" value="false"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="MaxDamage" value="1000"/>
+			<drop event="Destroy" count="0"/>
+			<property name="LootList" value="832"/>
+		</block>
+
+		<!-- CHEF -->
+		<block name="FuriousRamsayBackpackTrainerChef">
+			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerChefDesc"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="CustomIconTint" value="80, 80, 80"/>
+
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBackpackContentTrainerChef"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+			<property name="Shape" value="Ext3dModel"/> 
+			<property name="Texture" value="293"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Material" value="Mcloth"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<drop event="Destroy" count="0"/>
+			<property name="Stacknumber" value="1"/>
+		</block>
+		<block name="FuriousRamsayBackpackContentTrainerChef">
+			<property name="CreativeMode" value="None"/>
+			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerChefDesc"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="CustomIconTint" value="80, 80, 80"/>
+
+			<property name="Class" value="Loot"/>
+			<property name="Material" value="Mcloth"/>
+			<property name="Shape" value="Ext3dModel"/> 
+			<property name="Texture" value="293"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Candrop" value="false"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="MaxDamage" value="1000"/>
+			<drop event="Destroy" count="0"/>
+			<property name="LootList" value="833"/>
+		</block>
+		
 		<!-- SURVIVALIST -->
 		<block name="FuriousRamsaySurvivalSpecialistSpawnerBlockBreak">
 			<property name="CreativeMode" value="None"/>
@@ -445,7 +829,7 @@
 		<block name="FuriousRamsaySpawnMadmanTrainer">
 			<property name="Extends" value="decoEntityClothMaster"/>
 			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
-			<property name="CustomIconTint" value="2232, 162, 118"/>
+			<property name="CustomIconTint" value="232, 162, 118"/>
 			<property name="ItemTypeIcon" value="skills"/>
 			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
 			<property name="Place" value="TowardsPlacerInverted"/>

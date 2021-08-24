@@ -4,6 +4,328 @@
 
 	<append xpath="/quests">
 
+		<quest id="quest_FuriousRamsayPlaceTrainerHunter">
+			<property name="name_key" value="quest_FuriousRamsayPlaceTrainerHunter_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayPlaceTrainerHunter_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayPlaceTrainerHunter_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayPlaceTrainerHunter_offer"/>
+			<property name="completion_key" value="quest_FuriousRamsayPlaceTrainerHunter_completion"/>
+			<property name="completiontype" value="TurnIn"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="BlockPlace" id="FuriousRamsayBackpackTrainerHunter" value="1" phase="1"/>
+
+			<objective type="FetchKeep" id="FuriousRamsaySpawnHunterTrainer" value="1" phase="2"/>
+			<objective type="FetchKeep" id="meleeWpnSpearT0StoneSpear" value="1" phase="2"/>
+			<objective type="FetchKeep" id="gunBowT0PrimitiveBow" value="1" phase="2"/>
+			<objective type="FetchKeep" id="ammoArrowStone" value="50" phase="2"/>
+
+			<objective type="BlockPlace" id="FuriousRamsaySpawnHunterTrainer" value="1" phase="3"/>
+
+			<action type="ShowTip" value="FuriousRamsayPlacedTrainerHunter" phase="4">
+				<property name="delay" value="0.25"/>
+			</action>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Item" id="FuriousRamsayAttributeHunterClass" value="1"/>
+			<reward type="LootItem" id="medicalFirstAidBandage" ischosen="true" isfixed="true" value="3"/>
+			<reward type="LootItem" id="drugHerbalAntibiotics" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="drugSteroids" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="drinkJarRedTea" ischosen="true" isfixed="true" value="4"/>
+			<reward type="LootItem" id="foodBaconAndEggs" ischosen="true" isfixed="true" value="2"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayPlaceTrainerThug">
+			<property name="name_key" value="quest_FuriousRamsayPlaceTrainerThug_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayPlaceTrainerThug_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayPlaceTrainerThug_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayPlaceTrainerThug_offer"/>
+			<property name="completion_key" value="quest_FuriousRamsayPlaceTrainerThug_completion"/>
+			<property name="completiontype" value="TurnIn"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="BlockPlace" id="FuriousRamsayBackpackTrainerThug" value="1" phase="1"/>
+
+			<objective type="FetchKeep" id="FuriousRamsaySpawnThugTrainer" value="1" phase="2"/>
+			<objective type="FetchKeep" id="meleeWpnClubT0WoodenClub" value="1" phase="2"/>
+
+			<objective type="BlockPlace" id="FuriousRamsaySpawnThugTrainer" value="1" phase="3"/>
+
+			<action type="ShowTip" value="FuriousRamsayPlacedTrainerThug" phase="4">
+				<property name="delay" value="0.25"/>
+			</action>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Item" id="FuriousRamsayAttributeThugClass" value="1"/>
+			<reward type="LootItem" id="medicalFirstAidBandage" ischosen="true" isfixed="true" value="3"/>
+			<reward type="LootItem" id="drugHerbalAntibiotics" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="drugSteroids" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="drinkJarRedTea" ischosen="true" isfixed="true" value="4"/>
+			<reward type="LootItem" id="foodBaconAndEggs" ischosen="true" isfixed="true" value="2"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayPlaceTrainerButcher">
+			<property name="name_key" value="quest_FuriousRamsayPlaceTrainerButcher_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayPlaceTrainerButcher_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayPlaceTrainerButcher_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayPlaceTrainerButcher_offer"/>
+			<property name="completion_key" value="quest_FuriousRamsayPlaceTrainerButcher_completion"/>
+			<property name="completiontype" value="TurnIn"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="BlockPlace" id="FuriousRamsayBackpackTrainerButcher" value="1" phase="1"/>
+
+			<objective type="FetchKeep" id="FuriousRamsaySpawnButcherTrainer" value="1" phase="2"/>
+			<objective type="FetchKeep" id="meleeWpnBladeT3Machete" value="1" phase="2"/>
+
+			<objective type="BlockPlace" id="FuriousRamsaySpawnButcherTrainer" value="1" phase="3"/>
+
+			<action type="ShowTip" value="FuriousRamsayPlacedTrainerButcher" phase="4">
+				<property name="delay" value="0.25"/>
+			</action>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Item" id="FuriousRamsayAttributeButcherClass" value="1"/>
+			<reward type="LootItem" id="medicalFirstAidBandage" ischosen="true" isfixed="true" value="3"/>
+			<reward type="LootItem" id="drugHerbalAntibiotics" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="drugSteroids" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="drinkJarRedTea" ischosen="true" isfixed="true" value="4"/>
+			<reward type="LootItem" id="foodBaconAndEggs" ischosen="true" isfixed="true" value="2"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayPlaceTrainerSoldier">
+			<property name="name_key" value="quest_FuriousRamsayPlaceTrainerSoldier_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayPlaceTrainerSoldier_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayPlaceTrainerSoldier_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayPlaceTrainerSoldier_offer"/>
+			<property name="completion_key" value="quest_FuriousRamsayPlaceTrainerSoldier_completion"/>
+			<property name="completiontype" value="TurnIn"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="BlockPlace" id="FuriousRamsayBackpackTrainerSoldier" value="1" phase="1"/>
+
+			<objective type="FetchKeep" id="FuriousRamsaySpawnSoldierTrainer" value="1" phase="2"/>
+			<objective type="FetchKeep" id="meleeWpnKnucklesT0LeatherKnuckles" value="1" phase="2"/>
+
+			<objective type="BlockPlace" id="FuriousRamsaySpawnSoldierTrainer" value="1" phase="3"/>
+
+			<action type="ShowTip" value="FuriousRamsayPlacedTrainerSoldier" phase="4">
+				<property name="delay" value="0.25"/>
+			</action>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Item" id="FuriousRamsayAttributeSoldierClass" value="1"/>
+			<reward type="LootItem" id="medicalFirstAidBandage" ischosen="true" isfixed="true" value="3"/>
+			<reward type="LootItem" id="drugHerbalAntibiotics" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="drugSteroids" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="drinkJarRedTea" ischosen="true" isfixed="true" value="4"/>
+			<reward type="LootItem" id="foodBaconAndEggs" ischosen="true" isfixed="true" value="2"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayPlaceTrainerTechnogeek">
+			<property name="name_key" value="quest_FuriousRamsayPlaceTrainerTechnogeek_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayPlaceTrainerTechnogeek_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayPlaceTrainerTechnogeek_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayPlaceTrainerTechnogeek_offer"/>
+			<property name="completion_key" value="quest_FuriousRamsayPlaceTrainerTechnogeek_completion"/>
+			<property name="completiontype" value="TurnIn"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="BlockPlace" id="FuriousRamsayBackpackTrainerTechnogeek" value="1" phase="1"/>
+
+			<objective type="FetchKeep" id="FuriousRamsaySpawnTechnogeekTrainer" value="1" phase="2"/>
+			<objective type="FetchKeep" id="meleeWpnBatonT1JunkBaton" value="1" phase="2"/>
+
+			<objective type="BlockPlace" id="FuriousRamsaySpawnTechnogeekTrainer" value="1" phase="3"/>
+
+			<action type="ShowTip" value="FuriousRamsayPlacedTrainerTechnogeek" phase="4">
+				<property name="delay" value="0.25"/>
+			</action>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Item" id="FuriousRamsayAttributeTechnogeekClass" value="1"/>
+			<reward type="LootItem" id="medicalFirstAidBandage" ischosen="true" isfixed="true" value="3"/>
+			<reward type="LootItem" id="drugHerbalAntibiotics" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="drugSteroids" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="drinkJarRedTea" ischosen="true" isfixed="true" value="4"/>
+			<reward type="LootItem" id="foodBaconAndEggs" ischosen="true" isfixed="true" value="2"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayPlaceTrainerMadman">
+			<property name="name_key" value="quest_FuriousRamsayPlaceTrainerMadman_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayPlaceTrainerMadman_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayPlaceTrainerMadman_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayPlaceTrainerMadman_offer"/>
+			<property name="completion_key" value="quest_FuriousRamsayPlaceTrainerMadman_completion"/>
+			<property name="completiontype" value="TurnIn"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="BlockPlace" id="FuriousRamsayBackpackTrainerMadman" value="1" phase="1"/>
+
+			<objective type="FetchKeep" id="FuriousRamsaySpawnMadmanTrainer" value="1" phase="2"/>
+			<objective type="FetchKeep" id="meleeToolRepairT0StoneAxe" value="1" phase="2"/>
+
+			<objective type="BlockPlace" id="FuriousRamsaySpawnMadmanTrainer" value="1" phase="3"/>
+
+			<action type="ShowTip" value="FuriousRamsayPlacedTrainerMadman" phase="4">
+				<property name="delay" value="0.25"/>
+			</action>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Item" id="FuriousRamsayAttributeMadmanClass" value="1"/>
+			<reward type="LootItem" id="medicalFirstAidBandage" ischosen="true" isfixed="true" value="3"/>
+			<reward type="LootItem" id="drugHerbalAntibiotics" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="drugSteroids" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="drinkJarRedTea" ischosen="true" isfixed="true" value="4"/>
+			<reward type="LootItem" id="foodBaconAndEggs" ischosen="true" isfixed="true" value="2"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayPlaceTrainerBuilder">
+			<property name="name_key" value="quest_FuriousRamsayPlaceTrainerBuilder_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayPlaceTrainerBuilder_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayPlaceTrainerBuilder_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayPlaceTrainerBuilder_offer"/>
+			<property name="completion_key" value="quest_FuriousRamsayPlaceTrainerBuilder_completion"/>
+			<property name="completiontype" value="TurnIn"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="BlockPlace" id="FuriousRamsayBackpackTrainerBuilder" value="1" phase="1"/>
+
+			<objective type="FetchKeep" id="FuriousRamsaySpawnBuilderTrainer" value="1" phase="2"/>
+			<objective type="FetchKeep" id="meleeWpnSledgeT0StoneSledgehammer" value="1" phase="2"/>
+
+			<objective type="BlockPlace" id="FuriousRamsaySpawnBuilderTrainer" value="1" phase="3"/>
+
+			<action type="ShowTip" value="FuriousRamsayPlacedTrainerBuilder" phase="4">
+				<property name="delay" value="0.25"/>
+			</action>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Item" id="FuriousRamsayAttributeBuilderClass" value="1"/>
+			<reward type="LootItem" id="medicalFirstAidBandage" ischosen="true" isfixed="true" value="3"/>
+			<reward type="LootItem" id="drugHerbalAntibiotics" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="drugSteroids" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="drinkJarRedTea" ischosen="true" isfixed="true" value="4"/>
+			<reward type="LootItem" id="foodBaconAndEggs" ischosen="true" isfixed="true" value="2"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayPlaceTrainerChef">
+			<property name="name_key" value="quest_FuriousRamsayPlaceTrainerChef_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayPlaceTrainerChef_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayPlaceTrainerChef_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayPlaceTrainerChef_offer"/>
+			<property name="completion_key" value="quest_FuriousRamsayPlaceTrainerChef_completion"/>
+			<property name="completiontype" value="TurnIn"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="BlockPlace" id="FuriousRamsayBackpackTrainerChef" value="1" phase="1"/>
+
+			<objective type="FetchKeep" id="FuriousRamsaySpawnChefTrainer" value="1" phase="2"/>
+			<objective type="FetchKeep" id="meleeWpnBladeT0BoneKnife" value="1" phase="2"/>
+
+			<objective type="BlockPlace" id="FuriousRamsaySpawnChefTrainer" value="1" phase="3"/>
+
+			<action type="ShowTip" value="FuriousRamsayPlacedTrainerChef" phase="4">
+				<property name="delay" value="0.25"/>
+			</action>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Item" id="FuriousRamsayAttributeChefClass" value="1"/>
+			<reward type="LootItem" id="medicalFirstAidBandage" ischosen="true" isfixed="true" value="3"/>
+			<reward type="LootItem" id="drugHerbalAntibiotics" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="drugSteroids" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="drinkJarRedTea" ischosen="true" isfixed="true" value="4"/>
+			<reward type="LootItem" id="foodBaconAndEggs" ischosen="true" isfixed="true" value="2"/>
+		</quest>
+	
 		<quest id="quest_FuriousRamsayLocateShelter">
 			<property name="name_key" value="quest_FuriousRamsayLocateShelter_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayLocateShelter_subtitle"/>
@@ -69,12 +391,8 @@
 			<reward type="Skill" id="FuriousRamsayPerkChoiceIsMine" value="1" stage="start"/>
 
 			<objective type="BlockPlace" id="FuriousRamsaySpawnSurvivalSpecialist" value="1" phase="1"/>
-			<objective type="POIStayWithin">
-				<property name="phase" value="1"/>
-				<property name="radius" value="25"/>
-			</objective>
 
-			<action type="ShowTip" value="GotSexyTyrSkill" phase="2">
+			<action type="ShowTip" value="PlacedSurvivalSpecialist" phase="2">
 				<property name="delay" value="0.25"/>
 			</action>
 
