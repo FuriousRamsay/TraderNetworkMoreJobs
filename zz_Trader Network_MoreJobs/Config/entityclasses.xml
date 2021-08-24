@@ -16712,9 +16712,9 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 			<property name="Tags" value="entity,npc,human,Briston"/>
 			<property name="Archetype" value="FuriousRamsayBristonTheSurvivor"/>
 
-			<property name="SoundRandom" value=""/>
-
 			<property name="HandItem" value="FuriousRamsayMeleeHandBriston"/>
+
+			<property name="SoundRandom" value=""/>
 
 			<property name="NavObject" value="" />
 
@@ -16747,6 +16747,326 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
             </effect_group>
 		</entity_class>
 
+		<!-- Hunter Trainer -->
+		<entity_class name="FuriousRamsayNPCAllyOliviaTheHunter" extends="FuriousRamsayUMATemplateSoldierFemale">
+			<property name="Tags" value="entity,npc,human,TrainerHunter"/>
+			<property name="Archetype" value="FuriousRamsayOliviaTheHunter"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="" />
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.6, 2"/> 
+			<property name="MoveSpeedPanic" value="2"/>
+
+			<property name="AITask-1" value="Wander"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,60"/>
+			<property name="AITask-3" value="BreakBlock"/>
+			<property name="AITask-4" value=""/>	
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0"/>
+			<property name="AITarget-4" value=""/>
+
+			<property name="TimeStayAfterDeath" value="0"/>
+
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishSoldierTimerTier1"/>
+                <passive_effect name="HealthMax" operation="base_set" value="1000" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+            <effect_group name="Health Effects">
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen2"/>
+            </effect_group>
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandHunter"/>
+		</entity_class>
+
+		<!-- Thug Trainer -->
+		<entity_class name="FuriousRamsayNPCAllyIsaacTheThug" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,TrainerThug"/>
+			<property name="Archetype" value="FuriousRamsayIsaacTheThug"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="" />
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.6, 2"/> 
+			<property name="MoveSpeedPanic" value="2"/>
+
+			<property name="AITask-1" value="Wander"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,60"/>
+			<property name="AITask-3" value="BreakBlock"/>
+			<property name="AITask-4" value=""/>	
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0"/>
+			<property name="AITarget-4" value=""/>
+
+			<property name="TimeStayAfterDeath" value="0"/>
+
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishSoldierTimerTier1"/>
+                <passive_effect name="HealthMax" operation="base_set" value="1000" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+            <effect_group name="Health Effects">
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen2"/>
+            </effect_group>
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandThug"/>
+		</entity_class>
+
+		<!-- Butcher Trainer -->
+		<entity_class name="FuriousRamsayNPCAllyHankTheButcher" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,TrainerButcher"/>
+			<property name="Archetype" value="FuriousRamsayHankTheButcher"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="" />
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.6, 2"/> 
+			<property name="MoveSpeedPanic" value="2"/>
+
+			<property name="AITask-1" value="Wander"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,60"/>
+			<property name="AITask-3" value="BreakBlock"/>
+			<property name="AITask-4" value=""/>	
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0"/>
+			<property name="AITarget-4" value=""/>
+
+			<property name="TimeStayAfterDeath" value="0"/>
+
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishSoldierTimerTier1"/>
+                <passive_effect name="HealthMax" operation="base_set" value="1000" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+            <effect_group name="Health Effects">
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen2"/>
+            </effect_group>
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandButcher"/>
+		</entity_class>
+
+		<!-- Soldier Trainer -->
+		<entity_class name="FuriousRamsayNPCAllyEliasTheSoldier" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,TrainerSoldier"/>
+			<property name="Archetype" value="FuriousRamsayEliasTheSoldier"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="" />
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.6, 2"/> 
+			<property name="MoveSpeedPanic" value="2"/>
+
+			<property name="AITask-1" value="Wander"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,60"/>
+			<property name="AITask-3" value="BreakBlock"/>
+			<property name="AITask-4" value=""/>	
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0"/>
+			<property name="AITarget-4" value=""/>
+
+			<property name="TimeStayAfterDeath" value="0"/>
+
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishSoldierTimerTier1"/>
+                <passive_effect name="HealthMax" operation="base_set" value="1000" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+            <effect_group name="Health Effects">
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen2"/>
+            </effect_group>
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSoldier"/>
+		</entity_class>
+
+		<!-- Technogeek Trainer -->
+		<entity_class name="FuriousRamsayNPCAllyScarlettTheTechnogeek" extends="FuriousRamsayUMATemplateSoldierFemale">
+			<property name="Tags" value="entity,npc,human,TrainerTechnogeek"/>
+			<property name="Archetype" value="FuriousRamsayScarlettTheTechnogeek"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="" />
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.6, 2"/> 
+			<property name="MoveSpeedPanic" value="2"/>
+
+			<property name="AITask-1" value="Wander"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,60"/>
+			<property name="AITask-3" value="BreakBlock"/>
+			<property name="AITask-4" value=""/>	
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0"/>
+			<property name="AITarget-4" value=""/>
+
+			<property name="TimeStayAfterDeath" value="0"/>
+
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishSoldierTimerTier1"/>
+                <passive_effect name="HealthMax" operation="base_set" value="1000" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+            <effect_group name="Health Effects">
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen2"/>
+            </effect_group>
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandTechnogeek"/>
+		</entity_class>
+
+		<!-- Madman Trainer -->
+		<entity_class name="FuriousRamsayNPCAllyLiamTheMadman" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,TrainerMadman"/>
+			<property name="Archetype" value="FuriousRamsayLiamTheMadman"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="" />
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.6, 2"/> 
+			<property name="MoveSpeedPanic" value="2"/>
+
+			<property name="AITask-1" value="Wander"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,60"/>
+			<property name="AITask-3" value="BreakBlock"/>
+			<property name="AITask-4" value=""/>	
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0"/>
+			<property name="AITarget-4" value=""/>
+
+			<property name="TimeStayAfterDeath" value="0"/>
+
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishSoldierTimerTier1"/>
+                <passive_effect name="HealthMax" operation="base_set" value="1000" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+            <effect_group name="Health Effects">
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen2"/>
+            </effect_group>
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandMadman"/>
+		</entity_class>
+
+		<!-- Builder Trainer -->
+		<entity_class name="FuriousRamsayNPCAllyVinceTheBuilder" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,TrainerBuilder"/>
+			<property name="Archetype" value="FuriousRamsayVinceTheBuilder"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="" />
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.6, 2"/> 
+			<property name="MoveSpeedPanic" value="2"/>
+
+			<property name="AITask-1" value="Wander"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,60"/>
+			<property name="AITask-3" value="BreakBlock"/>
+			<property name="AITask-4" value=""/>	
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0"/>
+			<property name="AITarget-4" value=""/>
+
+			<property name="TimeStayAfterDeath" value="0"/>
+
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishSoldierTimerTier1"/>
+                <passive_effect name="HealthMax" operation="base_set" value="1000" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+            <effect_group name="Health Effects">
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen2"/>
+            </effect_group>
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandBuilder"/>
+		</entity_class>
+
+		<!-- Chef Trainer -->
+		<entity_class name="FuriousRamsayNPCAllyHelenTheChef" extends="FuriousRamsayUMATemplateSoldierFemale">
+			<property name="Tags" value="entity,npc,human,TrainerChef"/>
+			<property name="Archetype" value="FuriousRamsayHelenTheChef"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="" />
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.6, 2"/> 
+			<property name="MoveSpeedPanic" value="2"/>
+
+			<property name="AITask-1" value="Wander"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,60"/>
+			<property name="AITask-3" value="BreakBlock"/>
+			<property name="AITask-4" value=""/>	
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0"/>
+			<property name="AITarget-4" value=""/>
+
+			<property name="TimeStayAfterDeath" value="0"/>
+
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishSoldierTimerTier1"/>
+                <passive_effect name="HealthMax" operation="base_set" value="1000" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+
+            <effect_group name="Health Effects">
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen2"/>
+            </effect_group>
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandChef"/>
+		</entity_class>
+		
 	</append>
 
 </configs>
