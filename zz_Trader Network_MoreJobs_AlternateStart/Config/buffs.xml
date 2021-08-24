@@ -1900,6 +1900,54 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="101"/>
 				</effect_group>
 			</buff>
+			<buff name="FuriousRamsayChangePerkLabelsSpears" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1HeightSpears" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1NameWidthSpears" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelCaptionWidthSpears" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelNumberWidthSpears" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorSpears" operation="set" value="255"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangePerkLabelsBows" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2HeightBows" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2NameWidthBows" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelCaptionWidthBows" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelNumberWidthBows" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2ColorBows" operation="set" value="255"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangePerkLabelsSniperRifles" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3HeightSniperRifles" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3NameWidthSniperRifles" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelCaptionWidthSniperRifles" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelNumberWidthSniperRifles" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3ColorSniperRifles" operation="set" value="255"/>
+				</effect_group>
+			</buff>
 			
 		<!-- THUG -->
 			<buff name="FuriousRamsayAddAttributeThug" hidden="true">
@@ -2065,7 +2113,7 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="53"/>
 				</effect_group>
 			</buff>
-			<buff name="FuriousRamsayChangePerkLabelsShotguns" hidden="true">
+			<buff name="FuriousRamsayChangePerkLabelsClubs" hidden="true">
 				<stack_type value="replace"/>
 				<duration value="1"/>
 				<effect_group name="FuriousRamsayChangeLabels">
@@ -2073,15 +2121,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Color" operation="set" value="255"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Height" operation="set" value="15"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Width" operation="set" value="100"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1HeightShotguns" operation="set" value="15"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1NameWidthShotguns" operation="set" value="50"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelCaptionWidthShotguns" operation="set" value="45"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelNumberWidthShotguns" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1HeightClubs" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1NameWidthClubs" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelCaptionWidthClubs" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelNumberWidthClubs" operation="set" value="5"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1UnitPerc" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorShotguns" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorClubs" operation="set" value="255"/>
 				</effect_group>
 			</buff>
-			<buff name="FuriousRamsayChangePerkLabelsClubs" hidden="true">
+			<buff name="FuriousRamsayChangePerkLabelsShotguns" hidden="true">
 				<stack_type value="replace"/>
 				<duration value="1"/>
 				<effect_group name="FuriousRamsayChangeLabels">
@@ -2089,12 +2137,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Color" operation="set" value="255"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Height" operation="set" value="15"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Width" operation="set" value="100"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2HeightClubs" operation="set" value="15"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2NameWidthClubs" operation="set" value="50"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelCaptionWidthClubs" operation="set" value="45"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelNumberWidthClubs" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2HeightShotguns" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2NameWidthShotguns" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelCaptionWidthShotguns" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelNumberWidthShotguns" operation="set" value="5"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2UnitPerc" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2ColorClubs" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2ColorShotguns" operation="set" value="255"/>
 				</effect_group>
 			</buff>
 			
@@ -2262,6 +2310,38 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="53"/>
 				</effect_group>
 			</buff>
+			<buff name="FuriousRamsayChangePerkLabelsMachete" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1HeightMachete" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1NameWidthMachete" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelCaptionWidthMachete" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelNumberWidthMachete" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorMachete" operation="set" value="255"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangePerkLabelsAssaultRifles" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2HeightAssaultRifles" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2NameWidthAssaultRifles" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelCaptionWidthAssaultRifles" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelNumberWidthAssaultRifles" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2ColorAssaultRifles" operation="set" value="255"/>
+				</effect_group>
+			</buff>
 			
 		<!-- SOLDIER -->
 			<buff name="FuriousRamsayAddAttributeSoldier" hidden="true">
@@ -2425,6 +2505,54 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorR" operation="set" value="56"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorG" operation="set" value="105"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="53"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangePerkLabelsKnuckles" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1HeightKnuckles" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1NameWidthKnuckles" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelCaptionWidthKnuckles" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelNumberWidthKnuckles" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorKnuckles" operation="set" value="255"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangePerkLabelsMarksmanRifle" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2HeightMarksmanRifle" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2NameWidthMarksmanRifle" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelCaptionWidthMarksmanRifle" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelNumberWidthMarksmanRifle" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2ColorMarksmanRifle" operation="set" value="255"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangePerkLabelsMachineGuns" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3HeightMachineGuns" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3NameWidthMachineGuns" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelCaptionWidthMachineGuns" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelNumberWidthMachineGuns" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3ColorMachineGuns" operation="set" value="255"/>
 				</effect_group>
 			</buff>
 			
@@ -2592,6 +2720,54 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="105"/>
 				</effect_group>
 			</buff>
+			<buff name="FuriousRamsayChangePerkLabelsStunBatons" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1HeightStunBatons" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1NameWidthStunBatons" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelCaptionWidthStunBatons" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelNumberWidthStunBatons" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorStunBatons" operation="set" value="255"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangePerkLabelsMagnum" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2HeightMagnum" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2NameWidthMagnum" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelCaptionWidthMagnum" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelNumberWidthMagnum" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2ColorMagnum" operation="set" value="255"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangePerkLabelsDeployableTurrets" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3HeightDeployableTurrets" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3NameWidthDeployableTurrets" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelCaptionWidthDeployableTurrets" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelNumberWidthDeployableTurrets" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3ColorDeployableTurrets" operation="set" value="255"/>
+				</effect_group>
+			</buff>
 			
 		<!-- MADMAN -->
 			<buff name="FuriousRamsayAddAttributeMadman" hidden="true">
@@ -2755,6 +2931,54 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorR" operation="set" value="105"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorG" operation="set" value="93"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="53"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangePerkLabelsAxes" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1HeightAxes" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1NameWidthAxes" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelCaptionWidthAxes" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelNumberWidthAxes" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorAxes" operation="set" value="255"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangePerkLabelsExplosives" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2HeightExplosives" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2NameWidthExplosives" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelCaptionWidthExplosives" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelNumberWidthExplosives" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2ColorExplosives" operation="set" value="255"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangePerkLabelsSubmachineGuns" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3HeightSubmachineGuns" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3NameWidthSubmachineGuns" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelCaptionWidthSubmachineGuns" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelNumberWidthSubmachineGuns" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3ColorSubmachineGuns" operation="set" value="255"/>
 				</effect_group>
 			</buff>
 			
@@ -2922,7 +3146,55 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="105"/>
 				</effect_group>
 			</buff>
-
+			<buff name="FuriousRamsayChangePerkLabelsHammers" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1HeightHammers" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1NameWidthHammers" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelCaptionWidthHammers" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelNumberWidthHammers" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorHammers" operation="set" value="255"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangePerkLabelsPistols" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2HeightPistols" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2NameWidthPistols" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelCaptionWidthPistols" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelNumberWidthPistols" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2ColorPistols" operation="set" value="255"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangePerkLabelsPoweredTurrets" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3HeightPoweredTurrets" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3NameWidthPoweredTurrets" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelCaptionWidthPoweredTurrets" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelNumberWidthPoweredTurrets" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3ColorPoweredTurrets" operation="set" value="255"/>
+				</effect_group>
+			</buff>
+			
 		<!-- CHEF -->
 			<buff name="FuriousRamsayAddAttributeChef" hidden="true">
 				<duration value="0.1"/>
@@ -3087,7 +3359,56 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassColorB" operation="set" value="70"/>
 				</effect_group>
 			</buff>
-			
+			<buff name="FuriousRamsayChangePerkLabelsKnives" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1HeightKnives" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1NameWidthKnives" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelCaptionWidthKnives" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelNumberWidthKnives" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorKnives" operation="set" value="255"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangePerkLabelsDesertVulture" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2HeightDesertVulture" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2NameWidthDesertVulture" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelCaptionWidthDesertVulture" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelNumberWidthDesertVulture" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2ColorDesertVulture" operation="set" value="255"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayChangePerkLabelsRobotics" hidden="true">
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="FuriousRamsayChangeLabels">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Color" operation="set" value="255"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Height" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Width" operation="set" value="100"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3HeightRobotics" operation="set" value="15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3NameWidthRobotics" operation="set" value="50"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelCaptionWidthRobotics" operation="set" value="45"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelNumberWidthRobotics" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3UnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3ColorRobotics" operation="set" value="255"/>
+				</effect_group>
+			</buff>
+
+			<!-- SET PERK LABELS -->
 			<buff name="FuriousRamsayChangePerk1Labels" hidden="true">
 				<stack_type value="replace"/>
 				<duration value="1"/>
@@ -3096,11 +3417,54 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Height" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1Width" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1UnitPerc" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1HeightShotguns" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1NameWidthShotguns" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelCaptionWidthShotguns" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelNumberWidthShotguns" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorShotguns" operation="set" value="0"/>
+						<!-- SPEARS -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1HeightClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1NameWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelCaptionWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelNumberWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorClubs" operation="set" value="0"/>
+						<!-- CLUBS -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1HeightClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1NameWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelCaptionWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelNumberWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorClubs" operation="set" value="0"/>
+						<!-- MACHETE -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1HeightClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1NameWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelCaptionWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelNumberWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorClubs" operation="set" value="0"/>
+						<!-- KNUCKLES -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1HeightClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1NameWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelCaptionWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelNumberWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorClubs" operation="set" value="0"/>
+						<!-- STUN BATONS -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1HeightClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1NameWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelCaptionWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelNumberWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorClubs" operation="set" value="0"/>
+						<!-- AXES -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1HeightClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1NameWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelCaptionWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelNumberWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorClubs" operation="set" value="0"/>
+						<!-- HAMMERS -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1HeightClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1NameWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelCaptionWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelNumberWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorClubs" operation="set" value="0"/>
+						<!-- KNIVES -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1HeightClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1NameWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelCaptionWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1LevelNumberWidthClubs" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorClubs" operation="set" value="0"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChangePerk2Labels" hidden="true">
@@ -3111,11 +3475,54 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Height" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2Width" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2UnitPerc" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2HeightClubs" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2NameWidthClubs" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelCaptionWidthClubs" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelNumberWidthClubs" operation="set" value="0"/>
-						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2ColorClubs" operation="set" value="0"/>
+						<!-- BOWS -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2HeightBows" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2NameWidthBows" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelCaptionWidthBows" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelNumberWidthBows" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2ColorBows" operation="set" value="0"/>
+						<!-- SHOTGUNS -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2HeightShotguns" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2NameWidthShotguns" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelCaptionWidthShotguns" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelNumberWidthShotguns" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2ColorShotguns" operation="set" value="0"/>
+						<!-- ASSAULT RIFLES -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2HeightAssaultRifles" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2NameWidthAssaultRifles" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelCaptionWidthAssaultRifles" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelNumberWidthAssaultRifles" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2ColorAssaultRifles" operation="set" value="0"/>
+						<!-- MARKSMAN RIFLE -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2HeightMarksmanRifle" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2NameWidthMarksmanRifle" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelCaptionWidthMarksmanRifle" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelNumberWidthMarksmanRifle" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2ColorMarksmanRifle" operation="set" value="0"/>
+						<!-- MAGNUM -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2HeightMagnum" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2NameWidthMagnum" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelCaptionWidthMagnum" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelNumberWidthMagnum" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2ColorMagnum" operation="set" value="0"/>
+						<!-- EXPLOSIVES -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2HeightExplosives" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2NameWidthExplosives" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelCaptionWidthExplosives" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelNumberWidthExplosives" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2ColorExplosives" operation="set" value="0"/>
+						<!-- PISTOLS -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2HeightPistols" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2NameWidthPistols" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelCaptionWidthPistols" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelNumberWidthPistols" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2ColorPistols" operation="set" value="0"/>
+						<!-- DESERT VULTURE -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2HeightDesertVulture" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2NameWidthDesertVulture" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelCaptionWidthDesertVulture" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2LevelNumberWidthDesertVulture" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk2ColorDesertVulture" operation="set" value="0"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChangePerk3Labels" hidden="true">
@@ -3126,6 +3533,42 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Height" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3Width" operation="set" value="0"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3UnitPerc" operation="set" value="0"/>
+						<!-- SNIPER RIFLES -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3HeightSniperRifles" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3NameWidthSniperRifles" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelCaptionWidthSniperRifles" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelNumberWidthSniperRifles" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3ColorSniperRifles" operation="set" value="0"/>
+						<!-- MACHINE GUNS -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3HeightMachineGuns" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3NameWidthMachineGuns" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelCaptionWidthMachineGuns" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelNumberWidthMachineGuns" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3ColorMachineGuns" operation="set" value="0"/>
+						<!-- DEPLOYABLE TURRETS -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3HeightDeployableTurrets" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3NameWidthDeployableTurrets" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelCaptionWidthDeployableTurrets" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelNumberWidthDeployableTurrets" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3ColorDeployableTurrets" operation="set" value="0"/>
+						<!-- SUBMACHINE GUNS -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3HeightSubmachineGuns" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3NameWidthSubmachineGuns" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelCaptionWidthSubmachineGuns" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelNumberWidthSubmachineGuns" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3ColorSubmachineGuns" operation="set" value="0"/>
+						<!-- POWERED TURRETS -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3HeightPoweredTurrets" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3NameWidthPoweredTurrets" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelCaptionWidthPoweredTurrets" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelNumberWidthPoweredTurrets" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3ColorPoweredTurrets" operation="set" value="0"/>
+						<!-- ROBOTICS -->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3HeightRobotics" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3NameWidthRobotics" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelCaptionWidthRobotics" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3LevelNumberWidthRobotics" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk3ColorRobotics" operation="set" value="0"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChangePerk4Labels" hidden="true">
