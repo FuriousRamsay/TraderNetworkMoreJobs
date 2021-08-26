@@ -1,5 +1,10 @@
 <Config>
 
+	<!-- HAMMERS -->
+	<append xpath="/items/item[@name='meleeWpnSledgeT0StoneSledgehammer']/property[@name='Tags']/@value">,FuriousRamsayHammers</append>
+	<append xpath="/items/item[@name='meleeWpnSledgeT1IronSledgehammer']/property[@name='Tags']/@value">,FuriousRamsayHammers</append>
+	<append xpath="/items/item[@name='meleeWpnSledgeT3SteelSledgehammer']/property[@name='Tags']/@value">,FuriousRamsayHammers</append>
+
 	<!-- SPEARS -->
 	<append xpath="/items/item[@name='meleeWpnSpearT0StoneSpear']/property[@name='Tags']/@value">,FuriousRamsaySpears</append>
 	<append xpath="/items/item[@name='meleeWpnSpearT1IronSpear']/property[@name='Tags']/@value">,FuriousRamsaySpears</append>
@@ -37,7 +42,7 @@
 	<append xpath="/items/item[@name='gunBotT2JunkTurret']/property[@name='Tags']/@value">,FuriousRamsayDeployableTurrets</append>
 
 	<!-- STUN BATONS -->
-	<append xpath="/items/item[@name='meleeWpnBatonT1JunkBaton']/property[@name='Tags']/@value">,FuriousRamsayStunBatons</append>
+	<append xpath="/items/item[@name='meleeWpnBatonT2StunBaton']/property[@name='Tags']/@value">,FuriousRamsayStunBatons</append>
 
 	<!-- MACHINE GUNS -->
 	<append xpath="/items/item[@name='gunMGT3M60']/property[@name='Tags']/@value">,FuriousRamsayMachineGuns</append>
@@ -50,17 +55,13 @@
 	<append xpath="/items/item[@name='meleeWpnKnucklesT1IronKnuckles']/property[@name='Tags']/@value">,FuriousRamsayKnuckles</append>
 	<append xpath="/items/item[@name='meleeWpnKnucklesT3SteelKnuckles']/property[@name='Tags']/@value">,FuriousRamsayKnuckles</append>
 
-	<!-- ASSAULT RIFLE -->
+	<!-- ASSAULT RIFLES -->
 	<append xpath="/items/item[@name='gunMGT1AK47']/property[@name='Tags']/@value">,FuriousRamsayAssaultRifles</append>
+	<append xpath="/items/item[@name='gunMGT2TacticalAR']/property[@name='Tags']/@value">,FuriousRamsayAssaultRifles</append>
 
 	<!-- SNIPER RIFLE -->
 	<append xpath="/items/item[@name='gunRifleT1HuntingRifle']/property[@name='Tags']/@value">,FuriousRamsayRifle</append>
 	<append xpath="/items/item[@name='gunRifleT3SniperRifle']/property[@name='Tags']/@value">,FuriousRamsaySniper</append>
-
-	<!-- FLURRY OF BLOWS -->
-	<append xpath="/items/item[@name='meleeWpnKnucklesT0LeatherKnuckles']/property[@name='Tags']/@value">,FuriousRamsayKnuckles</append>
-	<append xpath="/items/item[@name='meleeWpnKnucklesT1IronKnuckles']/property[@name='Tags']/@value">,FuriousRamsayKnuckles</append>
-	<append xpath="/items/item[@name='meleeWpnKnucklesT3SteelKnuckles']/property[@name='Tags']/@value">,FuriousRamsayKnuckles</append>
 
 	<!-- PENETRATOR -->
 	<append xpath="/items/item[@name='gunRifleT2MarksmanRifle']/property[@name='Tags']/@value">,FuriousRamsayPenetrator</append>
@@ -419,28 +420,28 @@
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkMacheteExpLvl10Max" operation="set" value="1099"/>			
 
 					<!-- ASSAULT RIFLES -->
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleNext" operation="set" value="1"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl1Min" operation="set" value="100"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl2Min" operation="set" value="200"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl3Min" operation="set" value="300"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl4Min" operation="set" value="400"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl5Min" operation="set" value="500"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl6Min" operation="set" value="600"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl7Min" operation="set" value="700"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl8Min" operation="set" value="800"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl9Min" operation="set" value="900"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl10Min" operation="set" value="1000"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl1Max" operation="set" value="199"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpMax" operation="set" value="@varFuriousRamsayPerkAssaultRiffleExpLvl1Max"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl2Max" operation="set" value="299"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl3Max" operation="set" value="399"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl4Max" operation="set" value="499"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl5Max" operation="set" value="599"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl6Max" operation="set" value="699"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl7Max" operation="set" value="799"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl8Max" operation="set" value="899"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl9Max" operation="set" value="999"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRiffleExpLvl10Max" operation="set" value="1099"/>			
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleNext" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl1Min" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl2Min" operation="set" value="200"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl3Min" operation="set" value="300"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl4Min" operation="set" value="400"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl5Min" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl6Min" operation="set" value="600"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl7Min" operation="set" value="700"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl8Min" operation="set" value="800"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl9Min" operation="set" value="900"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl10Min" operation="set" value="1000"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl1Max" operation="set" value="199"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpMax" operation="set" value="@varFuriousRamsayPerkAssaultRifleExpLvl1Max"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl2Max" operation="set" value="299"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl3Max" operation="set" value="399"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl4Max" operation="set" value="499"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl5Max" operation="set" value="599"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl6Max" operation="set" value="699"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl7Max" operation="set" value="799"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl8Max" operation="set" value="899"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl9Max" operation="set" value="999"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAssaultRifleExpLvl10Max" operation="set" value="1099"/>			
 
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherStarterVariablesSet" operation="set" value="1"/>
 			</effect_group>
@@ -469,7 +470,7 @@
 			<effect_group name="RefreshVisuals" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierStarterVariablesSet" operation="Equals" value="1"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangeClassLabelsSoldier"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerkLabelsKnucles"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerkLabelsKnuckles"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerkLabelsMarksmanRifle"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerkLabelsMachineGuns"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk4Labels"/>
