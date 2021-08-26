@@ -484,7 +484,7 @@
 				<stack_type value="replace"/>
 				<duration value="1"/>
 				<effect_group>
-					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
+					<requirement name="!CVarCompare" cvar="Class" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Mobility" operation="add" value="6"/>
 				</effect_group>
 			</buff>
@@ -1749,6 +1749,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterNext" operation="set" value="10"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [9eff3d]Level 10[-] [bd444a]Hunter[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkHunterMobilityAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSpear" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSpear"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperBow" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkBow"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSniperRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeHunterLvl9">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="8"/>
@@ -1760,6 +1769,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterNext" operation="set" value="10"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [a3fc49]Level 9[-] [bd444a]Hunter[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkHunterMobilityAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSpear" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSpear"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperBow" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkBow"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSniperRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeHunterLvl8">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="7"/>
@@ -1771,6 +1789,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterNext" operation="set" value="9"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [a9fa57]Level 8[-] [bd444a]Hunter[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkHunterMobilityAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSpear" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSpear"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperBow" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkBow"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSniperRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeHunterLvl7">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="6"/>
@@ -1782,6 +1809,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterNext" operation="set" value="8"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [b1fc65]Level 7[-] [bd444a]Hunter[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkHunterMobilityAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSpear" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSpear"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperBow" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkBow"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSniperRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeHunterLvl6">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="5"/>
@@ -1793,6 +1829,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterNext" operation="set" value="7"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [b7fa73]Level 6[-] [bd444a]Hunter[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkHunterMobilityAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSpear" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSpear"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperBow" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkBow"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSniperRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeHunterLvl5">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="4"/>
@@ -1804,6 +1849,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterNext" operation="set" value="6"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [bdfa7f]Level 5[-] [bd444a]Hunter[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkHunterMobilityAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSpear" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSpear"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperBow" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkBow"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSniperRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeHunterLvl4">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="3"/>
@@ -1815,6 +1869,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterNext" operation="set" value="5"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [c3fa8c]Level 4[-] [bd444a]Hunter[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkHunterMobilityAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSpear" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSpear"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperBow" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkBow"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSniperRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeHunterLvl3">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="2"/>
@@ -1827,6 +1890,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [c9fa98]Level 3[-] [bd444a]Hunter[-]"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You can now craft a[/I] [caf0ad]Workbench[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkHunterMobilityAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSpear" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSpear"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperBow" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkBow"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSniperRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeHunterLvl2">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="1"/>
@@ -1838,6 +1910,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterNext" operation="set" value="3"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [d2fca7]Level 2[-] [bd444a]Hunter[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkHunterMobilityAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSpear" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSpear"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperBow" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkBow"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSniperRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeHunterLvl1">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="Equals" value="0"/>
@@ -1849,15 +1930,33 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeHunterNext" operation="set" value="2"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [d5f7b2]Level 1[-] [bd444a]Hunter[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkHunterMobilityAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSpear" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSpear"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperBow" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkBow"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSniperRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayChangeLabels">
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsHunter"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsSpears"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsBows"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsSniperRifles"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk2Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk3Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk4Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk5Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk6Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsHunter"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsSpears">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSpear"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsBows">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkBow"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsSniperRifles">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunter" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSniperRifle"/>
+					</triggered_effect>
 				</effect_group>
 			</buff>	
 			<buff name="FuriousRamsayChangeClassLabelsHunter" hidden="true">
@@ -1959,6 +2058,7 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1ColorKnives" operation="set" value="0"/>
 				</effect_group>
 			</buff>
+			
 			<buff name="FuriousRamsayChangePerkLabelsBows" hidden="true">
 				<stack_type value="replace"/>
 				<duration value="1"/>
@@ -2079,6 +2179,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugNext" operation="set" value="10"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [9eff3d]Level 10[-] [bd444a]Thug[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkThugStaminaAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkClub" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkClub"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkShotgun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkShotgun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugLvl9">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="8"/>
@@ -2090,6 +2196,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugNext" operation="set" value="10"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [a3fc49]Level 9[-] [bd444a]Thug[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkThugStaminaAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkClub" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkClub"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkShotgun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkShotgun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugLvl8">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="7"/>
@@ -2101,6 +2213,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugNext" operation="set" value="9"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [a9fa57]Level 8[-] [bd444a]Thug[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkThugStaminaAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkClub" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkClub"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkShotgun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkShotgun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugLvl7">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="6"/>
@@ -2112,6 +2230,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugNext" operation="set" value="8"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [b1fc65]Level 7[-] [bd444a]Thug[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkThugStaminaAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkClub" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkClub"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkShotgun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkShotgun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugLvl6">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="5"/>
@@ -2123,6 +2247,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugNext" operation="set" value="7"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [b7fa73]Level 6[-] [bd444a]Thug[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkThugStaminaAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkClub" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkClub"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkShotgun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkShotgun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugLvl5">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="4"/>
@@ -2134,6 +2264,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugNext" operation="set" value="6"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [bdfa7f]Level 5[-] [bd444a]Thug[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkThugStaminaAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkClub" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkClub"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkShotgun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkShotgun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugLvl4">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="3"/>
@@ -2145,6 +2281,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugNext" operation="set" value="5"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [c3fa8c]Level 4[-] [bd444a]Thug[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkThugStaminaAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkClub" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkClub"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkShotgun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkShotgun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugLvl3">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="2"/>
@@ -2157,6 +2299,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [c9fa98]Level 3[-] [bd444a]Thug[-]"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You can now craft a[/I] [caf0ad]Workbench[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkThugStaminaAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkClub" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkClub"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkShotgun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkShotgun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugLvl2">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="1"/>
@@ -2168,6 +2316,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugNext" operation="set" value="3"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [d2fca7]Level 2[-] [bd444a]Thug[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkThugStaminaAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkClub" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkClub"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkShotgun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkShotgun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeThugLvl1">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="0"/>
@@ -2179,15 +2333,27 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeThugNext" operation="set" value="2"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [d5f7b2]Level 1[-] [bd444a]Thug[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkThugStaminaAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkClub" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkClub"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkShotgun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkShotgun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayChangeLabels">
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsThug"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsClubs"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsShotguns"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk2Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk3Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk4Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk5Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk6Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsThug"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsClubs">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkClub"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsShotguns">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="@varFuriousRamsayActiveLevelPerkShotgun"/>
+					</triggered_effect>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChangeClassLabelsThug" hidden="true">
@@ -2362,6 +2528,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherNext" operation="set" value="10"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [9eff3d]Level 10[-] [bd444a]Butcher[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkButcherHealthAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachete" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachete"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAssaultRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAssaultRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeButcherLvl9">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="8"/>
@@ -2373,6 +2545,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherNext" operation="set" value="10"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [a3fc49]Level 9[-] [bd444a]Butcher[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkButcherHealthAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachete" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachete"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAssaultRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAssaultRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeButcherLvl8">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="7"/>
@@ -2384,6 +2562,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherNext" operation="set" value="9"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [a9fa57]Level 8[-] [bd444a]Butcher[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkButcherHealthAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachete" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachete"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAssaultRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAssaultRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeButcherLvl7">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="6"/>
@@ -2395,6 +2579,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherNext" operation="set" value="8"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [b1fc65]Level 7[-] [bd444a]Butcher[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkButcherHealthAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachete" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachete"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAssaultRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAssaultRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeButcherLvl6">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="5"/>
@@ -2406,6 +2596,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherNext" operation="set" value="7"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [b7fa73]Level 6[-] [bd444a]Butcher[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkButcherHealthAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachete" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachete"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAssaultRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAssaultRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeButcherLvl5">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="4"/>
@@ -2417,6 +2613,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherNext" operation="set" value="6"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [bdfa7f]Level 5[-] [bd444a]Butcher[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkButcherHealthAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachete" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachete"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAssaultRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAssaultRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeButcherLvl4">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="3"/>
@@ -2428,6 +2630,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherNext" operation="set" value="5"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [c3fa8c]Level 4[-] [bd444a]Butcher[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkButcherHealthAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachete" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachete"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAssaultRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAssaultRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeButcherLvl3">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="2"/>
@@ -2440,6 +2648,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [c9fa98]Level 3[-] [bd444a]Butcher[-]"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You can now craft a[/I] [caf0ad]Workbench[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkButcherHealthAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachete" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachete"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAssaultRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAssaultRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeButcherLvl2">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="1"/>
@@ -2451,6 +2665,12 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherNext" operation="set" value="3"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [d2fca7]Level 2[-] [bd444a]Butcher[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkButcherHealthAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachete" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachete"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAssaultRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAssaultRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeButcherLvl1">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="Equals" value="0"/>
@@ -2462,15 +2682,27 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeButcherNext" operation="set" value="2"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [d5f7b2]Level 1[-] [bd444a]Butcher[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkButcherHealthAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachete" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachete"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAssaultRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAssaultRifle"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayChangeLabels">
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsButcher"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsMachete"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsAssaultRifles"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk2Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk3Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk4Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk5Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk6Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsButcher"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsMachete">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachete"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsAssaultRifles">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcher" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAssaultRifle"/>
+					</triggered_effect>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChangeClassLabelsButcher" hidden="true">
@@ -2645,6 +2877,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierNext" operation="set" value="10"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [9eff3d]Level 10[-] [bd444a]Soldier[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkSoldierAttackSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnuckles" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnuckles"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMarksmanRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMarksmanRifle"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeSoldierLvl9">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="8"/>
@@ -2656,6 +2897,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierNext" operation="set" value="10"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [a3fc49]Level 9[-] [bd444a]Soldier[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkSoldierAttackSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnuckles" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnuckles"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMarksmanRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMarksmanRifle"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeSoldierLvl8">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="7"/>
@@ -2667,6 +2917,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierNext" operation="set" value="9"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [a9fa57]Level 8[-] [bd444a]Soldier[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkSoldierAttackSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnuckles" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnuckles"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMarksmanRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMarksmanRifle"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeSoldierLvl7">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="6"/>
@@ -2678,6 +2937,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierNext" operation="set" value="8"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [b1fc65]Level 7[-] [bd444a]Soldier[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkSoldierAttackSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnuckles" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnuckles"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMarksmanRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMarksmanRifle"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeSoldierLvl6">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="5"/>
@@ -2689,6 +2957,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierNext" operation="set" value="7"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [b7fa73]Level 6[-] [bd444a]Soldier[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkSoldierAttackSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnuckles" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnuckles"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMarksmanRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMarksmanRifle"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeSoldierLvl5">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="4"/>
@@ -2700,6 +2977,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierNext" operation="set" value="6"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [bdfa7f]Level 5[-] [bd444a]Soldier[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkSoldierAttackSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnuckles" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnuckles"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMarksmanRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMarksmanRifle"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeSoldierLvl4">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="3"/>
@@ -2711,6 +2997,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierNext" operation="set" value="5"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [c3fa8c]Level 4[-] [bd444a]Soldier[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkSoldierAttackSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnuckles" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnuckles"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMarksmanRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMarksmanRifle"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeSoldierLvl3">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="2"/>
@@ -2723,6 +3018,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [c9fa98]Level 3[-] [bd444a]Soldier[-]"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You can now craft a[/I] [caf0ad]Workbench[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkSoldierAttackSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnuckles" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnuckles"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMarksmanRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMarksmanRifle"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeSoldierLvl2">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="1"/>
@@ -2734,6 +3038,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierNext" operation="set" value="3"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [d2fca7]Level 2[-] [bd444a]Soldier[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkSoldierAttackSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnuckles" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnuckles"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMarksmanRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMarksmanRifle"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeSoldierLvl1">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="Equals" value="0"/>
@@ -2745,15 +3058,33 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierNext" operation="set" value="2"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [d5f7b2]Level 1[-] [bd444a]Soldier[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkSoldierAttackSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnuckles" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnuckles"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMarksmanRifle" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMarksmanRifle"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayChangeLabels">
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsSoldier"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsKnuckles"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsMarksmanRifle"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsMachineGuns"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk2Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk3Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk4Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk5Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk6Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsSoldier"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsKnuckles">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnuckles"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsMarksmanRifle">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMarksmanRifle"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsMachineGuns">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldier" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMachineGun"/>
+					</triggered_effect>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChangeClassLabelsSoldier" hidden="true">
@@ -2975,6 +3306,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekNext" operation="set" value="10"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [9eff3d]Level 10[-] [bd444a]Technogeek[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkTechnogeekTurretBuffAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkStunBaton" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkStunBaton"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMagnum" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMagnum"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDeployableTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDeployableTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeTechnogeekLvl9">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="8"/>
@@ -2986,6 +3326,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekNext" operation="set" value="10"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [a3fc49]Level 9[-] [bd444a]Technogeek[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkTechnogeekTurretBuffAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkStunBaton" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkStunBaton"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMagnum" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMagnum"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDeployableTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDeployableTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeTechnogeekLvl8">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="7"/>
@@ -2997,6 +3346,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekNext" operation="set" value="9"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [a9fa57]Level 8[-] [bd444a]Technogeek[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkTechnogeekTurretBuffAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkStunBaton" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkStunBaton"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMagnum" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMagnum"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDeployableTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDeployableTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeTechnogeekLvl7">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="6"/>
@@ -3008,6 +3366,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekNext" operation="set" value="8"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [b1fc65]Level 7[-] [bd444a]Technogeek[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkTechnogeekTurretBuffAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkStunBaton" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkStunBaton"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMagnum" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMagnum"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDeployableTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDeployableTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeTechnogeekLvl6">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="5"/>
@@ -3019,6 +3386,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekNext" operation="set" value="7"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [b7fa73]Level 6[-] [bd444a]Technogeek[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkTechnogeekTurretBuffAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkStunBaton" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkStunBaton"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMagnum" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMagnum"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDeployableTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDeployableTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeTechnogeekLvl5">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="4"/>
@@ -3030,6 +3406,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekNext" operation="set" value="6"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [bdfa7f]Level 5[-] [bd444a]Technogeek[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkTechnogeekTurretBuffAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkStunBaton" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkStunBaton"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMagnum" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMagnum"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDeployableTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDeployableTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeTechnogeekLvl4">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="3"/>
@@ -3041,6 +3426,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekNext" operation="set" value="5"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [c3fa8c]Level 4[-] [bd444a]Technogeek[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkTechnogeekTurretBuffAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkStunBaton" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkStunBaton"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMagnum" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMagnum"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDeployableTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDeployableTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeTechnogeekLvl3">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="2"/>
@@ -3053,6 +3447,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [c9fa98]Level 3[-] [bd444a]Technogeek[-]"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You can now craft a[/I] [caf0ad]Workbench[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkTechnogeekTurretBuffAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkStunBaton" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkStunBaton"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMagnum" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMagnum"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDeployableTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDeployableTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeTechnogeekLvl2">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="1"/>
@@ -3064,6 +3467,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekNext" operation="set" value="3"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [d2fca7]Level 2[-] [bd444a]Technogeek[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkTechnogeekTurretBuffAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkStunBaton" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkStunBaton"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMagnum" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMagnum"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDeployableTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDeployableTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeTechnogeekLvl1">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="Equals" value="0"/>
@@ -3075,15 +3487,33 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeTechnogeekNext" operation="set" value="2"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [d5f7b2]Level 1[-] [bd444a]Technogeek[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkTechnogeekTurretBuffAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkStunBaton" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkStunBaton"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMagnum" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMagnum"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDeployableTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDeployableTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayChangeLabels">
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsTechnogeek"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsStunBatons"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsMagnum"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsDeployableTurrets"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk2Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk3Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk4Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk5Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk6Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsTechnogeek"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsStunBatons">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkStunBaton"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsMagnum">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkMagnum"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsDeployableTurrets">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeek" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDeployableTurret"/>
+					</triggered_effect>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChangeClassLabelsTechnogeek" hidden="true">
@@ -3305,6 +3735,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanNext" operation="set" value="10"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [9eff3d]Level 10[-] [bd444a]Madman[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkMadmanFiringSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAxe" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAxe"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkExplosive" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkExplosive"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSubmachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSubmachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeMadmanLvl9">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="8"/>
@@ -3316,6 +3755,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanNext" operation="set" value="10"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [a3fc49]Level 9[-] [bd444a]Madman[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkMadmanFiringSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAxe" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAxe"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkExplosive" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkExplosive"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSubmachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSubmachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeMadmanLvl8">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="7"/>
@@ -3327,6 +3775,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanNext" operation="set" value="9"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [a9fa57]Level 8[-] [bd444a]Madman[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkMadmanFiringSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAxe" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAxe"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkExplosive" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkExplosive"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSubmachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSubmachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeMadmanLvl7">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="6"/>
@@ -3338,6 +3795,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanNext" operation="set" value="8"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [b1fc65]Level 7[-] [bd444a]Madman[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkMadmanFiringSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAxe" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAxe"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkExplosive" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkExplosive"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSubmachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSubmachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeMadmanLvl6">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="5"/>
@@ -3349,6 +3815,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanNext" operation="set" value="7"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [b7fa73]Level 6[-] [bd444a]Madman[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkMadmanFiringSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAxe" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAxe"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkExplosive" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkExplosive"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSubmachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSubmachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeMadmanLvl5">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="4"/>
@@ -3360,6 +3835,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanNext" operation="set" value="6"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [bdfa7f]Level 5[-] [bd444a]Madman[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkMadmanFiringSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAxe" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAxe"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkExplosive" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkExplosive"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSubmachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSubmachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeMadmanLvl4">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="3"/>
@@ -3371,6 +3855,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanNext" operation="set" value="5"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [c3fa8c]Level 4[-] [bd444a]Madman[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkMadmanFiringSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAxe" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAxe"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkExplosive" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkExplosive"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSubmachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSubmachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeMadmanLvl3">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="2"/>
@@ -3383,6 +3876,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [c9fa98]Level 3[-] [bd444a]Madman[-]"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You can now craft a[/I] [caf0ad]Workbench[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkMadmanFiringSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAxe" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAxe"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkExplosive" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkExplosive"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSubmachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSubmachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeMadmanLvl2">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="1"/>
@@ -3394,6 +3896,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanNext" operation="set" value="3"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [d2fca7]Level 2[-] [bd444a]Madman[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkMadmanFiringSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAxe" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAxe"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkExplosive" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkExplosive"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSubmachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSubmachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeMadmanLvl1">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="Equals" value="0"/>
@@ -3405,15 +3916,33 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanNext" operation="set" value="2"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [d5f7b2]Level 1[-] [bd444a]Madman[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkMadmanFiringSpeedAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAxe" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAxe"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkExplosive" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkExplosive"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSubmachineGun" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSubmachineGun"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayChangeLabels">
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsMadman"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsAxes"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsExplosives"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsSubmachineGuns"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk2Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk3Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk4Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk5Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk6Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsMadman"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsAxes">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkAxe"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsExplosives">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkExplosive"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsSubmachineGuns">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadman" operation="GTE" value="@varFuriousRamsayActiveLevelPerkSubmachineGun"/>
+					</triggered_effect>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChangeClassLabelsMadman" hidden="true">
@@ -3635,6 +4164,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderNext" operation="set" value="10"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [9eff3d]Level 10[-] [bd444a]Builder[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkBuilderPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkHammer" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkHammer"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPistol" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPistol"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPoweredTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPoweredTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeBuilderLvl9">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="8"/>
@@ -3646,6 +4184,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderNext" operation="set" value="10"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [a3fc49]Level 9[-] [bd444a]Builder[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkBuilderPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkHammer" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkHammer"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPistol" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPistol"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPoweredTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPoweredTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeBuilderLvl8">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="7"/>
@@ -3657,6 +4204,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderNext" operation="set" value="9"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [a9fa57]Level 8[-] [bd444a]Builder[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkBuilderPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkHammer" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkHammer"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPistol" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPistol"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPoweredTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPoweredTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeBuilderLvl7">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="6"/>
@@ -3668,6 +4224,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderNext" operation="set" value="8"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [b1fc65]Level 7[-] [bd444a]Builder[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkBuilderPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkHammer" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkHammer"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPistol" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPistol"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPoweredTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPoweredTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeBuilderLvl6">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="5"/>
@@ -3679,6 +4244,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderNext" operation="set" value="7"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [b7fa73]Level 6[-] [bd444a]Builder[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkBuilderPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkHammer" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkHammer"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPistol" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPistol"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPoweredTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPoweredTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeBuilderLvl5">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="4"/>
@@ -3690,6 +4264,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderNext" operation="set" value="6"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [bdfa7f]Level 5[-] [bd444a]Builder[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkBuilderPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkHammer" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkHammer"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPistol" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPistol"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPoweredTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPoweredTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeBuilderLvl4">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="3"/>
@@ -3701,6 +4284,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderNext" operation="set" value="5"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [c3fa8c]Level 4[-] [bd444a]Builder[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkBuilderPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkHammer" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkHammer"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPistol" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPistol"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPoweredTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPoweredTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeBuilderLvl3">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="2"/>
@@ -3713,6 +4305,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [c9fa98]Level 3[-] [bd444a]Builder[-]"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You can now craft a[/I] [caf0ad]Workbench[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkBuilderPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkHammer" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkHammer"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPistol" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPistol"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPoweredTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPoweredTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeBuilderLvl2">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="1"/>
@@ -3724,6 +4325,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderNext" operation="set" value="3"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [d2fca7]Level 2[-] [bd444a]Builder[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkBuilderPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkHammer" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkHammer"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPistol" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPistol"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPoweredTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPoweredTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeBuilderLvl1">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="Equals" value="0"/>
@@ -3735,15 +4345,33 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderNext" operation="set" value="2"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [d5f7b2]Level 1[-] [bd444a]Builder[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkBuilderPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkHammer" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkHammer"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPistol" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPistol"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPoweredTurret" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPoweredTurret"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayChangeLabels">
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsBuilder"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsHammers"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsPistols"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsPoweredTurrets"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk2Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk3Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk4Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk5Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk6Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsBuilder"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsHammers">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkHammer"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsPistols">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPistol"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsPoweredTurrets">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilder" operation="GTE" value="@varFuriousRamsayActiveLevelPerkPoweredTurret"/>
+					</triggered_effect>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChangeClassLabelsBuilder" hidden="true">
@@ -3965,6 +4593,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeChefNext" operation="set" value="10"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [9eff3d]Level 10[-] [bd444a]Chef[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkChefPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnife" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnife"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDesertVulture" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDesertVulture"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkRobotics" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkRobotics"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeChefLvl9">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="Equals" value="8"/>
@@ -3976,6 +4613,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeChefNext" operation="set" value="10"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [a3fc49]Level 9[-] [bd444a]Chef[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkChefPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnife" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnife"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDesertVulture" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDesertVulture"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkRobotics" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkRobotics"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeChefLvl8">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="Equals" value="7"/>
@@ -3987,6 +4633,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeChefNext" operation="set" value="9"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [a9fa57]Level 8[-] [bd444a]Chef[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkChefPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnife" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnife"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDesertVulture" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDesertVulture"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkRobotics" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkRobotics"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeChefLvl7">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="Equals" value="6"/>
@@ -3998,6 +4653,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeChefNext" operation="set" value="8"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [b1fc65]Level 7[-] [bd444a]Chef[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkChefPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnife" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnife"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDesertVulture" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDesertVulture"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkRobotics" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkRobotics"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeChefLvl6">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="Equals" value="5"/>
@@ -4009,6 +4673,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeChefNext" operation="set" value="7"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [b7fa73]Level 6[-] [bd444a]Chef[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkChefPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnife" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnife"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDesertVulture" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDesertVulture"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkRobotics" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkRobotics"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeChefLvl5">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="Equals" value="4"/>
@@ -4020,6 +4693,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeChefNext" operation="set" value="6"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [bdfa7f]Level 5[-] [bd444a]Chef[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkChefPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnife" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnife"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDesertVulture" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDesertVulture"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkRobotics" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkRobotics"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeChefLvl4">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="Equals" value="3"/>
@@ -4031,6 +4713,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeChefNext" operation="set" value="5"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [c3fa8c]Level 4[-] [bd444a]Chef[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkChefPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnife" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnife"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDesertVulture" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDesertVulture"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkRobotics" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkRobotics"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeChefLvl3">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="Equals" value="2"/>
@@ -4043,6 +4734,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [c9fa98]Level 3[-] [bd444a]Chef[-]"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You can now craft a[/I] [caf0ad]Workbench[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkChefPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnife" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnife"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDesertVulture" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDesertVulture"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkRobotics" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkRobotics"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeChefLvl2">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="Equals" value="1"/>
@@ -4054,6 +4754,15 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeChefNext" operation="set" value="3"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [d2fca7]Level 2[-] [bd444a]Chef[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkChefPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnife" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnife"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDesertVulture" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDesertVulture"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkRobotics" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkRobotics"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayAttributeChefLvl1">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="Equals" value="0"/>
@@ -4065,15 +4774,33 @@
 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeChefNext" operation="set" value="2"/>
 						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[I]You are now a[/I] [d5f7b2]Level 1[-] [bd444a]Chef[-]"/>
 						<!--<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayAddPerkChefPenetratorAura"/>-->
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnife" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnife"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDesertVulture" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDesertVulture"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkRobotics" operation="set" value="1">
+							<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkRobotics"/>
+						</triggered_effect>
 				</effect_group>
 				<effect_group name="FuriousRamsayChangeLabels">
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsChef"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsKnives"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsDesertVulture"/>
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsRobotics"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk2Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk3Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk4Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk5Labels"/>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerk6Labels"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangeClassLabelsChef"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsKnives">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkKnife"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsDesertVulture">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkDesertVulture"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayChangePerkLabelsRobotics">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChef" operation="GTE" value="@varFuriousRamsayActiveLevelPerkRobotics"/>
+					</triggered_effect>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChangeClassLabelsChef" hidden="true">
@@ -4621,6 +5348,53 @@
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayExperienceKillHeadLvl9" operation="multiply" value="@varFuriousRamsayExperienceKillHeadMultiplier"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayExperienceKillHeadLvl10" operation="set" value="@varFuriousRamsayExperienceKillLvl10"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayExperienceKillHeadLvl10" operation="multiply" value="@varFuriousRamsayExperienceKillHeadMultiplier"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSpear" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkBow" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSniperRifle" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkClub" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkShotgun" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachete" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAssaultRifle" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnuckles" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMarksmanRifle" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMachineGun" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkStunBaton" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkMagnum" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDeployableTurret" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkAxe" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkExplosive" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkSubmachineGun" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkHammer" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPistol" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkPoweredTurret" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkKnife" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDesertVulture" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkRobotics" operation="set" value="0"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkSpear" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkBow" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkClub" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkMachete" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkKnuckles" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkStunBaton" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkAxe" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkHammer" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkKnife" operation="set" value="0"/>
+
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkSniperRifle" operation="set" value="2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkShotgun" operation="set" value="3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkAssaultRifle" operation="set" value="3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkMarksmanRifle" operation="set" value="3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkMachineGun" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkMagnum" operation="set" value="3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkDeployableTurret" operation="set" value="3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkExplosive" operation="set" value="3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkSubmachineGun" operation="set" value="3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkPistol" operation="set" value="3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkPoweredTurret" operation="set" value="3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkDesertVulture" operation="set" value="3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkRobotics" operation="set" value="3"/>
 
 					<triggered_effect trigger="onSelfBuffFinish" action="ModifyCVar" cvar="varFuriousRamsayStarterVariables" operation="set" value="1"/>
 				</effect_group>
@@ -13383,14 +14157,12 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayLearnByDoingHunter" hidden="true">
+			<buff name="FuriousRamsayLearnByDoingHunterSpear" hidden="true">
 				<stack_type value="replace"/>
-		<!-- HUNTER -->
 				<effect_group name="FuriousRamsayAddAtributeHunterExpVars">
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeHunterTemp" operation="set" value="@varFuriousRamsayAttributeHunter"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeHunterTemp" operation="add" value="-1"/>
 				</effect_group>
-		<!-- HUNTER -->
 			<!-- SPEARS -->
 				<!-- ATTRIBUTE LEVELING -->
 					<!-- TARGET: HEAD -->
@@ -13616,6 +14388,14 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkSpearExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl10"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkSpearExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl10"/>
 				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayLearnByDoingHunterBow" hidden="true">
+				<stack_type value="replace"/>
+				<effect_group name="FuriousRamsayAddAtributeHunterExpVars">
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeHunterTemp" operation="set" value="@varFuriousRamsayAttributeHunter"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeHunterTemp" operation="add" value="-1"/>
+				</effect_group>
 			<!-- BOW -->
 				<!-- ATTRIBUTE LEVELING -->
 					<!-- TARGET: HEAD -->
@@ -13840,6 +14620,14 @@
 					<requirement name="HoldingItemHasTags" tags="FuriousRamsayBows"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkBowExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl10"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkBowExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl10"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayLearnByDoingHunterSniperRifle" hidden="true">
+				<stack_type value="replace"/>
+				<effect_group name="FuriousRamsayAddAtributeHunterExpVars">
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeHunterTemp" operation="set" value="@varFuriousRamsayAttributeHunter"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeHunterTemp" operation="add" value="-1"/>
 				</effect_group>
 			<!-- SNIPER RIFLE -->
 				<!-- ATTRIBUTE LEVELING -->
@@ -14068,14 +14856,12 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayLearnByDoingThug" hidden="true">	
+			<buff name="FuriousRamsayLearnByDoingThugClub" hidden="true">
 				<stack_type value="replace"/>
-		<!-- THUG -->
 				<effect_group name="FuriousRamsayAddAtributeThugExpVars">
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeThugTemp" operation="set" value="@varFuriousRamsayAttributeThug"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeThugTemp" operation="add" value="-1"/>
 				</effect_group>
-		<!-- THUG -->
 			<!-- CLUBS -->
 				<!-- ATTRIBUTE LEVELING -->
 					<!-- TARGET: HEAD -->
@@ -14300,6 +15086,73 @@
 					<requirement name="HoldingItemHasTags" tags="FuriousRamsayClubs"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl10"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkClubExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl10"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayLearnByDoingThugShotgun" hidden="true">
+				<stack_type value="replace"/>
+				<effect_group name="Debug">
+					<!--<triggered_effect trigger="onSelfBuffStart" action="CVarLogValue" cvar="varFuriousRamsayPerkSniperRifle"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSniperRifleExp"/>-->
+					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSniperRifleExpLvl1Min"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSniperRifleExpLvl1Max"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSniperRifleExpLvl2Min"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSniperRifleExpLvl2Max"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSniperRifleExpLvl3Min"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSniperRifleExpLvl3Max"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSniperRifleExpLvl4Min"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSniperRifleExpLvl4Max"/>-->
+					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSniperRifleExpPercLvl1"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSniperRifleExpPercLvl2"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSniperRifleExpPercLvl3"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSniperRifleExpPercLvl4"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerk1UnitPerc"/>				
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar=".varFuriousRamsayExpLvl"/>				
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar=".varFuriousRamsayExpProgress"/>				
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar=".varFuriousRamsayAttributeHunterTemp"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayExperienceDamageHeadLvl1"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayExperienceKillHeadLvl1"/>-->
+										
+					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayActivePerkShotgun"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeThug"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayActiveLevelPerkShotgun"/>-->
+
+					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeThugExp"/>				
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeThugExpLvl10Max"/>				
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeThugExpLvl10Min"/>				
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar=".varFuriousRamsayExpProgressThug"/>				
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeThugExpPercLvl10"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayClassUnitPerc"/>-->
+																		
+					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeHunterClass"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeThugClass"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeHunterExp"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeHunterExpMax"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeHunterExpPerc"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeHunter"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeThugNext"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSpearExp"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar=".varFuriousRamsayAttributeHunterTemp"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSpear"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSpearExpLvl1Max"/>-->
+					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkThugStaminaAura"/>-->
+					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayClassThugPercWidth"/>-->
+						
+					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSpearExpPercLvl1"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSpearExpLvl10Max"/>-->
+					
+					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkShotgunExpPercLvl1"/>			
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkShotgunExpPercLvl3"/>			
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkShotgunExpPercLvl4"/>			
+					-->
+					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerk1UnitPerc"/>			
+					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerk1Level"/>			-->
+					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkShotgun"/>-->
+				</effect_group>
+
+				<effect_group name="FuriousRamsayAddAtributeThugExpVars">
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeThugTemp" operation="set" value="@varFuriousRamsayAttributeThug"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeThugTemp" operation="add" value="-1"/>
 				</effect_group>
 			<!-- SHOTGUNS -->
 				<!-- ATTRIBUTE LEVELING -->
@@ -14528,86 +15381,11 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayLearnByDoingButcher" hidden="true">
-				<stack_type value="replace"/>
-				<effect_group name="Debug">
-					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMachete"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExp"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl1Min"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl1Max"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl2Min"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl2Max"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl3Min"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl3Max"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl4Min"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl4Max"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl5Min"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl5Max"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl6Min"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl6Max"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl7Min"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl7Max"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl8Min"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl8Max"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl9Min"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl9Max"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl10Min"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpLvl10Max"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpPercLvl1"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpPercLvl2"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpPercLvl3"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpPercLvl4"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpPercLvl5"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpPercLvl6"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpPercLvl7"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpPercLvl8"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpPercLvl9"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkMacheteExpPercLvl10"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerk1UnitPerc"/>				
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar=".varFuriousRamsayExpLvl"/>				
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar=".varFuriousRamsayExpProgress"/>				
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar=".varFuriousRamsayExpProgressMacheteLvl1"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar=".varFuriousRamsayExpProgressMacheteLvl2"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeButcher"/>-->
-
-					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeThugExp"/>				
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeThugExpLvl10Max"/>				
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeThugExpLvl10Min"/>				
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar=".varFuriousRamsayExpProgressThug"/>				
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeThugExpPercLvl10"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayClassUnitPerc"/>-->
-																		
-					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeHunterClass"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeThugClass"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeHunterExp"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeHunterExpMax"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeHunterExpPerc"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeHunter"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeThugNext"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSpearExp"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar=".varFuriousRamsayAttributeHunterTemp"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSpear"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSpearExpLvl1Max"/>-->
-					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkThugStaminaAura"/>-->
-					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayClassThugPercWidth"/>-->
-						
-					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSpearExpPercLvl1"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkSpearExpLvl10Max"/>-->
-					
-					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkShotgunExpPercLvl1"/>			
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkShotgunExpPercLvl3"/>			
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkShotgunExpPercLvl4"/>			
-					-->
-					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerk1UnitPerc"/>			
-					<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerk1Level"/>			-->
-					<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkShotgun"/>-->
-				</effect_group>
-				<!-- BUTCHER -->
+			<buff name="FuriousRamsayLearnByDoingButcherMachete" hidden="true">
 				<effect_group name="FuriousRamsayAddAtributeButcherExpVars">
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeButcherTemp" operation="set" value="@varFuriousRamsayAttributeButcher"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeButcherTemp" operation="add" value="-1"/>
 				</effect_group>
-		<!-- BUTCHER -->
 			<!-- MACHETE -->
 				<!-- ATTRIBUTE LEVELING -->
 					<!-- TARGET: HEAD -->
@@ -14832,6 +15610,14 @@
 					<requirement name="HoldingItemHasTags" tags="FuriousRamsayMachetes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkMacheteExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl10"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkMacheteExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl10"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayLearnByDoingButcherAssaultRifle" hidden="true">
+				<stack_type value="replace"/>
+				<effect_group name="FuriousRamsayAddAtributeButcherExpVars">
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeButcherTemp" operation="set" value="@varFuriousRamsayAttributeButcher"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeButcherTemp" operation="add" value="-1"/>
 				</effect_group>
 			<!-- ASSAULT RIFLE -->
 				<!-- ATTRIBUTE LEVELING -->
@@ -15060,14 +15846,11 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayLearnByDoingSoldier" hidden="true">
-				<stack_type value="replace"/>
-		<!-- SOLDIER -->
+			<buff name="FuriousRamsayLearnByDoingSoldierKnuckles" hidden="true">
 				<effect_group name="FuriousRamsayAddAtributeSoldierExpVars">
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeSoldierTemp" operation="set" value="@varFuriousRamsayAttributeSoldier"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeSoldierTemp" operation="add" value="-1"/>
 				</effect_group>
-		<!-- SOLDIER -->
 			<!-- KNUCKLES -->
 				<!-- ATTRIBUTE LEVELING -->
 					<!-- TARGET: HEAD -->
@@ -15293,6 +16076,14 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkKnucklesExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl10"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkKnucklesExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl10"/>
 				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayLearnByDoingSoldierMarksmanRifle" hidden="true">
+				<stack_type value="replace"/>
+				<effect_group name="FuriousRamsayAddAtributeSoldierExpVars">
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeSoldierTemp" operation="set" value="@varFuriousRamsayAttributeSoldier"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeSoldierTemp" operation="add" value="-1"/>
+				</effect_group>
 			<!-- MARKSMAN RIFLE -->
 				<!-- ATTRIBUTE LEVELING -->
 					<!-- TARGET: HEAD -->
@@ -15517,6 +16308,14 @@
 					<requirement name="HoldingItemHasTags" tags="FuriousRamsayMarksmanRifles"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkMarksmanRifleExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl10"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkMarksmanRifleExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl10"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayLearnByDoingSoldierMachineGun" hidden="true">
+				<stack_type value="replace"/>
+				<effect_group name="FuriousRamsayAddAtributeSoldierExpVars">
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeSoldierTemp" operation="set" value="@varFuriousRamsayAttributeSoldier"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeSoldierTemp" operation="add" value="-1"/>
 				</effect_group>
 			<!-- MACHINE GUN -->
 				<!-- ATTRIBUTE LEVELING -->
@@ -15745,14 +16544,12 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayLearnByDoingTechnogeek" hidden="true">
-				<stack_type value="replace"/>
 		<!-- TECHNOGEEK -->
+			<buff name="FuriousRamsayLearnByDoingTechnogeekStunBaton" hidden="true">
 				<effect_group name="FuriousRamsayAddAtributeTechnogeekExpVars">
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeTechnogeekTemp" operation="set" value="@varFuriousRamsayAttributeTechnogeek"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeTechnogeekTemp" operation="add" value="-1"/>
 				</effect_group>
-		<!-- TECHNOGEEK -->
 			<!-- STUN BATON -->
 				<!-- ATTRIBUTE LEVELING -->
 					<!-- TARGET: HEAD -->
@@ -15978,6 +16775,13 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkStunBatonExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl10"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkStunBatonExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl10"/>
 				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayLearnByDoingTechnogeekMagnum" hidden="true">
+				<effect_group name="FuriousRamsayAddAtributeTechnogeekExpVars">
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeTechnogeekTemp" operation="set" value="@varFuriousRamsayAttributeTechnogeek"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeTechnogeekTemp" operation="add" value="-1"/>
+				</effect_group>
 				<!-- MAGNUM -->
 				<!-- ATTRIBUTE LEVELING -->
 					<!-- TARGET: HEAD -->
@@ -16202,6 +17006,13 @@
 					<requirement name="HoldingItemHasTags" tags="FuriousRamsayMagnums"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkMagnumExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl10"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkMagnumExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl10"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayLearnByDoingTechnogeekDeployableTurret" hidden="true">
+				<effect_group name="FuriousRamsayAddAtributeTechnogeekExpVars">
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeTechnogeekTemp" operation="set" value="@varFuriousRamsayAttributeTechnogeek"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeTechnogeekTemp" operation="add" value="-1"/>
 				</effect_group>
 			<!-- DEPLOYABLE TURRET -->
 				<!-- ATTRIBUTE LEVELING -->
@@ -16430,14 +17241,12 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayLearnByDoingMadman" hidden="true">
-				<stack_type value="replace"/>
 		<!-- MADMAN -->
+			<buff name="FuriousRamsayLearnByDoingMadmanAxe" hidden="true">
 				<effect_group name="FuriousRamsayAddAtributeMadmanExpVars">
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeMadmanTemp" operation="set" value="@varFuriousRamsayAttributeMadman"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeMadmanTemp" operation="add" value="-1"/>
 				</effect_group>
-		<!-- MADMAN -->
 			<!-- AXE -->
 				<!-- ATTRIBUTE LEVELING -->
 					<!-- TARGET: HEAD -->
@@ -16663,6 +17472,13 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl10"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl10"/>
 				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayLearnByDoingMadmanExplosive" hidden="true">
+				<effect_group name="FuriousRamsayAddAtributeMadmanExpVars">
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeMadmanTemp" operation="set" value="@varFuriousRamsayAttributeMadman"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeMadmanTemp" operation="add" value="-1"/>
+				</effect_group>
 			<!-- EXPLOSIVE -->
 				<!-- ATTRIBUTE LEVELING -->
 					<!-- TARGET: HEAD -->
@@ -16887,6 +17703,13 @@
 					<requirement name="HoldingItemHasTags" tags="FuriousRamsayExplosives"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkExplosiveExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl10"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkExplosiveExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl10"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayLearnByDoingMadmanSubmachineGun" hidden="true">
+				<effect_group name="FuriousRamsayAddAtributeMadmanExpVars">
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeMadmanTemp" operation="set" value="@varFuriousRamsayAttributeMadman"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeMadmanTemp" operation="add" value="-1"/>
 				</effect_group>
 			<!-- SUBMACHINE GUN -->
 				<!-- ATTRIBUTE LEVELING -->
@@ -17115,14 +17938,12 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayLearnByDoingBuilder" hidden="true">
-				<stack_type value="replace"/>
 		<!-- BUILDER -->
+			<buff name="FuriousRamsayLearnByDoingBuilderHammer" hidden="true">
 				<effect_group name="FuriousRamsayAddAtributeBuilderExpVars">
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeBuilderTemp" operation="set" value="@varFuriousRamsayAttributeBuilder"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeBuilderTemp" operation="add" value="-1"/>
 				</effect_group>
-		<!-- BUILDER -->
 			<!-- HAMMER -->
 				<!-- ATTRIBUTE LEVELING -->
 					<!-- TARGET: HEAD -->
@@ -17348,6 +18169,13 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkHammerExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl10"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkHammerExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl10"/>
 				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayLearnByDoingBuilderPistol" hidden="true">
+				<effect_group name="FuriousRamsayAddAtributeBuilderExpVars">
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeBuilderTemp" operation="set" value="@varFuriousRamsayAttributeBuilder"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeBuilderTemp" operation="add" value="-1"/>
+				</effect_group>
 			<!-- PISTOL -->
 				<!-- ATTRIBUTE LEVELING -->
 					<!-- TARGET: HEAD -->
@@ -17572,6 +18400,13 @@
 					<requirement name="HoldingItemHasTags" tags="FuriousRamsayPistols"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkPistolExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl10"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkPistolExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl10"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayLearnByDoingBuilderPoweredTurret" hidden="true">
+				<effect_group name="FuriousRamsayAddAtributeBuilderExpVars">
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeBuilderTemp" operation="set" value="@varFuriousRamsayAttributeBuilder"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeBuilderTemp" operation="add" value="-1"/>
 				</effect_group>
 			<!-- POWERERED TURRET -->
 				<!-- ATTRIBUTE LEVELING -->
@@ -17800,14 +18635,11 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayLearnByDoingChef" hidden="true">
-				<stack_type value="replace"/>
-		<!-- CHEF -->
+			<buff name="FuriousRamsayLearnByDoingChefKnife" hidden="true">
 				<effect_group name="FuriousRamsayAddAtributeChefExpVars">
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeChefTemp" operation="set" value="@varFuriousRamsayAttributeChef"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeChefTemp" operation="add" value="-1"/>
 				</effect_group>
-		<!-- CHEF -->
 			<!-- KNIFE -->
 				<!-- ATTRIBUTE LEVELING -->
 					<!-- TARGET: HEAD -->
@@ -18033,6 +18865,13 @@
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkKnifeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl10"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkKnifeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl10"/>
 				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayLearnByDoingChefDesertVulture" hidden="true">
+				<effect_group name="FuriousRamsayAddAtributeChefExpVars">
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeChefTemp" operation="set" value="@varFuriousRamsayAttributeChef"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeChefTemp" operation="add" value="-1"/>
+				</effect_group>
 			<!-- DESERT VULTURE -->
 				<!-- ATTRIBUTE LEVELING -->
 					<!-- TARGET: HEAD -->
@@ -18257,6 +19096,13 @@
 					<requirement name="HoldingItemHasTags" tags="FuriousRamsayDesertVultures"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkDesertVultureExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl10"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkDesertVultureExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl10"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayLearnByDoingChefRobotics" hidden="true">
+				<effect_group name="FuriousRamsayAddAtributeChefExpVars">
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeChefTemp" operation="set" value="@varFuriousRamsayAttributeChef"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".varFuriousRamsayAttributeChefTemp" operation="add" value="-1"/>
 				</effect_group>
 			<!-- ROBOTICS -->
 				<!-- ATTRIBUTE LEVELING -->
@@ -18509,10 +19355,133 @@
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
 				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingHunter"/>
 			</triggered_effect>	
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingThug">
-				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
-				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingThug"/>
+
+			<!-- HUNTER -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingHunterSpear">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkSpear" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingHunterSpear"/>
 			</triggered_effect>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingHunterBow">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkBow" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingHunterBow"/>
+			</triggered_effect>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingHunterSniperRifle">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkSniperRifle" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingHunterSniperRifle"/>
+			</triggered_effect>	
+
+			<!-- THUG -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingThugClub">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkClub" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingThugClub"/>
+			</triggered_effect>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingThugShotgun">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkShotgun" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingThugShotgun"/>
+			</triggered_effect>	
+
+			<!-- BUTCHER -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingButcherMachete">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkMachete" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingButcherMachete"/>
+			</triggered_effect>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingButcherAssaultRifle">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkAssaultRifle" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingButcherAssaultRifle"/>
+			</triggered_effect>	
+
+			<!-- SOLDIER -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingSoldierKnuckles">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkKnuckles" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingSoldierKnuckles"/>
+			</triggered_effect>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingSoldierMarksmanRifle">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkMarksmanRifle" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingSoldierMarksmanRifle"/>
+			</triggered_effect>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingSoldierMachineGun">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkMachineGun" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingSoldierMachineGun"/>
+			</triggered_effect>	
+
+			<!-- TECHNOGEEK -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingTechnogeekStunBaton">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkStunBaton" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingTechnogeekStunBaton"/>
+			</triggered_effect>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingTechnogeekMagnum">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkMagnum" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingTechnogeekMagnum"/>
+			</triggered_effect>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingTechnogeekDeployableTurret">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkDeployableTurret" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingTechnogeekDeployableTurret"/>
+			</triggered_effect>	
+
+			<!-- MADMAN -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingMadmanAxe">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkAxe" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingMadmanAxe"/>
+			</triggered_effect>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingMadmanExplosive">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkExplosive" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingMadmanExplosive"/>
+			</triggered_effect>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingMadmanSubmachineGun">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkSubmachineGun" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingMadmanSubmachineGun"/>
+			</triggered_effect>	
+			
+			<!-- BUILDER -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingBuilderHammer">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkHammer" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingBuilderHammer"/>
+			</triggered_effect>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingBuilderPistol">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkPistol" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingBuilderPistol"/>
+			</triggered_effect>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingBuilderPoweredTurret">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkPoweredTurret" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingBuilderPoweredTurret"/>
+			</triggered_effect>	
+
+			<!-- CHEF -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingChefKnife">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkKnife" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingChefKnife"/>
+			</triggered_effect>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingChefDesertVulture">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkDesertVulture" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingChefDesertVulture"/>
+			</triggered_effect>	
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingChefRobotics">
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayActivePerkRobotics" operation="Equals" value="1"/>
+				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingChefRobotics"/>
+			</triggered_effect>	
+
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="FuriousRamsayLearnByDoingButcher">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
 				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayLearnByDoingButcher"/>
