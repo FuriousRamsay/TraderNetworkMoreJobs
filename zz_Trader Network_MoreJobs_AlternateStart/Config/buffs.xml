@@ -437,97 +437,107 @@
 			<buff name="FuriousRamsayHunterMobilityAuraLvl1" remove_on_death="true" icon="ui_game_symbol_run" icon_color="#77e6de" name_key="FuriousRamsayHunterMobilityAuraName" description_key="FuriousRamsayHunterMobilityAuraDesc">
 				<display_value value="1"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Mobility" operation="add" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="WalkSpeed" operation="perc_add" value=".025"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="RunSpeed" operation="perc_add" value=".05"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayHunterMobilityAuraLvl2" remove_on_death="true" icon="ui_game_symbol_run" icon_color="#77e6de" name_key="FuriousRamsayHunterMobilityAuraName" description_key="FuriousRamsayHunterMobilityAuraDesc">
 				<display_value value="2"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Mobility" operation="add" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="WalkSpeed" operation="perc_add" value=".05"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="RunSpeed" operation="perc_add" value=".1"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayHunterMobilityAuraLvl3" remove_on_death="true" icon="ui_game_symbol_run" icon_color="#77e6de" name_key="FuriousRamsayHunterMobilityAuraName" description_key="FuriousRamsayHunterMobilityAuraDesc">
 				<display_value value="3"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Mobility" operation="add" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="WalkSpeed" operation="perc_add" value=".075"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="RunSpeed" operation="perc_add" value=".15"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayHunterMobilityAuraLvl4" remove_on_death="true" icon="ui_game_symbol_run" icon_color="#77e6de" name_key="FuriousRamsayHunterMobilityAuraName" description_key="FuriousRamsayHunterMobilityAuraDesc">
 				<display_value value="4"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Mobility" operation="add" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="WalkSpeed" operation="perc_add" value=".1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="RunSpeed" operation="perc_add" value=".2"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayHunterMobilityAuraLvl5" remove_on_death="true" icon="ui_game_symbol_run" icon_color="#77e6de" name_key="FuriousRamsayHunterMobilityAuraName" description_key="FuriousRamsayHunterMobilityAuraDesc">
 				<display_value value="5"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Mobility" operation="add" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="WalkSpeed" operation="perc_add" value=".125"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="RunSpeed" operation="perc_add" value=".25"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayHunterMobilityAuraLvl6" remove_on_death="true" icon="ui_game_symbol_run" icon_color="#77e6de" name_key="FuriousRamsayHunterMobilityAuraName" description_key="FuriousRamsayHunterMobilityAuraDesc">
 				<display_value value="6"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="Class" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Mobility" operation="add" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="WalkSpeed" operation="perc_add" value=".15"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="RunSpeed" operation="perc_add" value=".3"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayHunterMobilityAuraLvl7" remove_on_death="true" icon="ui_game_symbol_run" icon_color="#77e6de" name_key="FuriousRamsayHunterMobilityAuraName" description_key="FuriousRamsayHunterMobilityAuraDesc">
 				<display_value value="7"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Mobility" operation="add" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="WalkSpeed" operation="perc_add" value=".175"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="RunSpeed" operation="perc_add" value=".35"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayHunterMobilityAuraLvl8" remove_on_death="true" icon="ui_game_symbol_run" icon_color="#77e6de" name_key="FuriousRamsayHunterMobilityAuraName" description_key="FuriousRamsayHunterMobilityAuraDesc">
 				<display_value value="8"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Mobility" operation="add" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="WalkSpeed" operation="perc_add" value=".2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="RunSpeed" operation="perc_add" value=".4"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayHunterMobilityAuraLvl9" remove_on_death="true" icon="ui_game_symbol_run" icon_color="#77e6de" name_key="FuriousRamsayHunterMobilityAuraName" description_key="FuriousRamsayHunterMobilityAuraDesc">
 				<display_value value="9"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Mobility" operation="add" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="WalkSpeed" operation="perc_add" value=".225"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="RunSpeed" operation="perc_add" value=".45"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayHunterMobilityAuraLvl10" remove_on_death="true" icon="ui_game_symbol_run" icon_color="#77e6de" name_key="FuriousRamsayHunterMobilityAuraName" description_key="FuriousRamsayHunterMobilityAuraDesc">
 				<display_value value="10"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Mobility" operation="add" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="WalkSpeed" operation="perc_add" value=".25"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="RunSpeed" operation="perc_add" value=".5"/>
 				</effect_group>
 			</buff>
 			
 		<!-- THUG -->
 			<buff name="FuriousRamsayThugStaminaAuraTimerLvl1" icon="ui_game_symbol_run" icon_color="255,255,255" name_key="FuriousRamsayThugStaminaAuraTimerName" description_key="FuriousRamsayThugStaminaAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkThugStaminaAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkThugStaminaAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -535,7 +545,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayThugStaminaAuraTimerLvl2" icon="ui_game_symbol_run" icon_color="255,255,255" name_key="FuriousRamsayThugStaminaAuraTimerName" description_key="FuriousRamsayThugStaminaAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkThugStaminaAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkThugStaminaAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -543,7 +553,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayThugStaminaAuraTimerLvl3" icon="ui_game_symbol_run" icon_color="255,255,255" name_key="FuriousRamsayThugStaminaAuraTimerName" description_key="FuriousRamsayThugStaminaAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkThugStaminaAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkThugStaminaAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -551,7 +561,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayThugStaminaAuraTimerLvl4" icon="ui_game_symbol_run" icon_color="255,255,255" name_key="FuriousRamsayThugStaminaAuraTimerName" description_key="FuriousRamsayThugStaminaAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkThugStaminaAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkThugStaminaAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -559,7 +569,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayThugStaminaAuraTimerLvl5" icon="ui_game_symbol_run" icon_color="255,255,255" name_key="FuriousRamsayThugStaminaAuraTimerName" description_key="FuriousRamsayThugStaminaAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkThugStaminaAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkThugStaminaAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -567,7 +577,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayThugStaminaAuraTimerLvl6" icon="ui_game_symbol_run" icon_color="255,255,255" name_key="FuriousRamsayThugStaminaAuraTimerName" description_key="FuriousRamsayThugStaminaAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkThugStaminaAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkThugStaminaAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -575,7 +585,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayThugStaminaAuraTimerLvl7" icon="ui_game_symbol_run" icon_color="255,255,255" name_key="FuriousRamsayThugStaminaAuraTimerName" description_key="FuriousRamsayThugStaminaAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkThugStaminaAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkThugStaminaAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -583,7 +593,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayThugStaminaAuraTimerLvl8" icon="ui_game_symbol_run" icon_color="255,255,255" name_key="FuriousRamsayThugStaminaAuraTimerName" description_key="FuriousRamsayThugStaminaAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkThugStaminaAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkThugStaminaAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -591,7 +601,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayThugStaminaAuraTimerLvl9" icon="ui_game_symbol_run" icon_color="255,255,255" name_key="FuriousRamsayThugStaminaAuraTimerName" description_key="FuriousRamsayThugStaminaAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkThugStaminaAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkThugStaminaAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -599,7 +609,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayThugStaminaAuraTimerLvl10" icon="ui_game_symbol_run" icon_color="255,255,255" name_key="FuriousRamsayThugStaminaAuraTimerName" description_key="FuriousRamsayThugStaminaAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkThugStaminaAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkThugStaminaAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -613,7 +623,7 @@
 				<duration value="1"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Stamina" operation="add" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Stamina" operation="add" value="1"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayThugStaminaAuraLvl2" remove_on_death="true" icon="ui_game_symbol_run" icon_color="196, 194, 118" name_key="FuriousRamsayThugStaminaAuraName" description_key="FuriousRamsayThugStaminaAuraDesc">
@@ -622,85 +632,85 @@
 				<duration value="1"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Stamina" operation="add" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Stamina" operation="add" value="2"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayThugStaminaAuraLvl3" remove_on_death="true" icon="ui_game_symbol_run" icon_color="196, 194, 118" name_key="FuriousRamsayThugStaminaAuraName" description_key="FuriousRamsayThugStaminaAuraDesc">
 				<display_value value="3"/><display_value_key value="{0}/s"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Stamina" operation="add" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Stamina" operation="add" value="3"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayThugStaminaAuraLvl4" remove_on_death="true" icon="ui_game_symbol_run" icon_color="196, 194, 118" name_key="FuriousRamsayThugStaminaAuraName" description_key="FuriousRamsayThugStaminaAuraDesc">
 				<display_value value="4"/><display_value_key value="{0}/s"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Stamina" operation="add" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Stamina" operation="add" value="4"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayThugStaminaAuraLvl5" remove_on_death="true" icon="ui_game_symbol_run" icon_color="196, 194, 118" name_key="FuriousRamsayThugStaminaAuraName" description_key="FuriousRamsayThugStaminaAuraDesc">
 				<display_value value="5"/><display_value_key value="{0}/s"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Stamina" operation="add" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Stamina" operation="add" value="5"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayThugStaminaAuraLvl6" remove_on_death="true" icon="ui_game_symbol_run" icon_color="196, 194, 118" name_key="FuriousRamsayThugStaminaAuraName" description_key="FuriousRamsayThugStaminaAuraDesc">
 				<display_value value="6"/><display_value_key value="{0}/s"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Stamina" operation="add" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Stamina" operation="add" value="6"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayThugStaminaAuraLvl7" remove_on_death="true" icon="ui_game_symbol_run" icon_color="196, 194, 118" name_key="FuriousRamsayThugStaminaAuraName" description_key="FuriousRamsayThugStaminaAuraDesc">
 				<display_value value="7"/><display_value_key value="{0}/s"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Stamina" operation="add" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Stamina" operation="add" value="7"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayThugStaminaAuraLvl8" remove_on_death="true" icon="ui_game_symbol_run" icon_color="196, 194, 118" name_key="FuriousRamsayThugStaminaAuraName" description_key="FuriousRamsayThugStaminaAuraDesc">
 				<display_value value="8"/><display_value_key value="{0}/s"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Stamina" operation="add" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Stamina" operation="add" value="8"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayThugStaminaAuraLvl9" remove_on_death="true" icon="ui_game_symbol_run" icon_color="196, 194, 118" name_key="FuriousRamsayThugStaminaAuraName" description_key="FuriousRamsayThugStaminaAuraDesc">
 				<display_value value="9"/><display_value_key value="{0}/s"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Stamina" operation="add" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Stamina" operation="add" value="9"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayThugStaminaAuraLvl10" remove_on_death="true" icon="ui_game_symbol_run" icon_color="196, 194, 118" name_key="FuriousRamsayThugStaminaAuraName" description_key="FuriousRamsayThugStaminaAuraDesc">
 				<display_value value="10"/><display_value_key value="{0}/s"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Stamina" operation="add" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Stamina" operation="add" value="10"/>
 				</effect_group>
 			</buff>
 			
 		<!-- BUTCHER -->
 			<buff name="FuriousRamsayButcherHealthAuraTimerLvl1" icon="ui_game_symbol_healing_factor" icon_color="255,255,255" name_key="FuriousRamsayButcherHealthAuraTimerName" description_key="FuriousRamsayButcherHealthAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkButcherHealthAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkButcherHealthAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -708,7 +718,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayButcherHealthAuraTimerLvl2" icon="ui_game_symbol_healing_factor" icon_color="255,255,255" name_key="FuriousRamsayButcherHealthAuraTimerName" description_key="FuriousRamsayButcherHealthAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkButcherHealthAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkButcherHealthAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -716,7 +726,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayButcherHealthAuraTimerLvl3" icon="ui_game_symbol_healing_factor" icon_color="255,255,255" name_key="FuriousRamsayButcherHealthAuraTimerName" description_key="FuriousRamsayButcherHealthAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkButcherHealthAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkButcherHealthAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -724,7 +734,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayButcherHealthAuraTimerLvl4" icon="ui_game_symbol_healing_factor" icon_color="255,255,255" name_key="FuriousRamsayButcherHealthAuraTimerName" description_key="FuriousRamsayButcherHealthAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkButcherHealthAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkButcherHealthAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -732,7 +742,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayButcherHealthAuraTimerLvl5" icon="ui_game_symbol_healing_factor" icon_color="255,255,255" name_key="FuriousRamsayButcherHealthAuraTimerName" description_key="FuriousRamsayButcherHealthAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkButcherHealthAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkButcherHealthAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -740,7 +750,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayButcherHealthAuraTimerLvl6" icon="ui_game_symbol_healing_factor" icon_color="255,255,255" name_key="FuriousRamsayButcherHealthAuraTimerName" description_key="FuriousRamsayButcherHealthAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkButcherHealthAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkButcherHealthAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -748,7 +758,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayButcherHealthAuraTimerLvl7" icon="ui_game_symbol_healing_factor" icon_color="255,255,255" name_key="FuriousRamsayButcherHealthAuraTimerName" description_key="FuriousRamsayButcherHealthAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkButcherHealthAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkButcherHealthAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -756,7 +766,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayButcherHealthAuraTimerLvl8" icon="ui_game_symbol_healing_factor" icon_color="255,255,255" name_key="FuriousRamsayButcherHealthAuraTimerName" description_key="FuriousRamsayButcherHealthAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkButcherHealthAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkButcherHealthAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -764,7 +774,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayButcherHealthAuraTimerLvl9" icon="ui_game_symbol_healing_factor" icon_color="255,255,255" name_key="FuriousRamsayButcherHealthAuraTimerName" description_key="FuriousRamsayButcherHealthAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkButcherHealthAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkButcherHealthAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -772,7 +782,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayButcherHealthAuraTimerLvl10" icon="ui_game_symbol_healing_factor" icon_color="255,255,255" name_key="FuriousRamsayButcherHealthAuraTimerName" description_key="FuriousRamsayButcherHealthAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkButcherHealthAura"/><display_value_key value="{0}/s"/>
+				<display_value value="varFuriousRamsayPerkButcherHealthAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -783,91 +793,91 @@
 			<buff name="FuriousRamsayButcherHealthAuraLvl1" remove_on_death="true" icon="ui_game_symbol_healing_factor" icon_color="#e6777f" name_key="FuriousRamsayButcherHealthAuraName" description_key="FuriousRamsayButcherHealthAuraDesc">
 				<display_value value="1"/><display_value_key value="{0}/s"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Health" operation="add" value="0.25"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayButcherHealthAuraLvl2" remove_on_death="true" icon="ui_game_symbol_healing_factor" icon_color="#e6777f" name_key="FuriousRamsayButcherHealthAuraName" description_key="FuriousRamsayButcherHealthAuraDesc">
 				<display_value value="2"/><display_value_key value="{0}/s"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Health" operation="add" value="0.5"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayButcherHealthAuraLvl3" remove_on_death="true" icon="ui_game_symbol_healing_factor" icon_color="#e6777f" name_key="FuriousRamsayButcherHealthAuraName" description_key="FuriousRamsayButcherHealthAuraDesc">
 				<display_value value="3"/><display_value_key value="{0}/s"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Health" operation="add" value="0.75"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayButcherHealthAuraLvl4" remove_on_death="true" icon="ui_game_symbol_healing_factor" icon_color="#e6777f" name_key="FuriousRamsayButcherHealthAuraName" description_key="FuriousRamsayButcherHealthAuraDesc">
 				<display_value value="4"/><display_value_key value="{0}/s"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Health" operation="add" value="1"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayButcherHealthAuraLvl5" remove_on_death="true" icon="ui_game_symbol_healing_factor" icon_color="#e6777f" name_key="FuriousRamsayButcherHealthAuraName" description_key="FuriousRamsayButcherHealthAuraDesc">
 				<display_value value="5"/><display_value_key value="{0}/s"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Health" operation="add" value="1.25"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayButcherHealthAuraLvl6" remove_on_death="true" icon="ui_game_symbol_healing_factor" icon_color="#e6777f" name_key="FuriousRamsayButcherHealthAuraName" description_key="FuriousRamsayButcherHealthAuraDesc">
 				<display_value value="6"/><display_value_key value="{0}/s"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Health" operation="add" value="1.5"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayButcherHealthAuraLvl7" remove_on_death="true" icon="ui_game_symbol_healing_factor" icon_color="#e6777f" name_key="FuriousRamsayButcherHealthAuraName" description_key="FuriousRamsayButcherHealthAuraDesc">
 				<display_value value="7"/><display_value_key value="{0}/s"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Health" operation="add" value="1.75"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayButcherHealthAuraLvl8" remove_on_death="true" icon="ui_game_symbol_healing_factor" icon_color="#e6777f" name_key="FuriousRamsayButcherHealthAuraName" description_key="FuriousRamsayButcherHealthAuraDesc">
 				<display_value value="8"/><display_value_key value="{0}/s"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Health" operation="add" value="2"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayButcherHealthAuraLvl9" remove_on_death="true" icon="ui_game_symbol_healing_factor" icon_color="#e6777f" name_key="FuriousRamsayButcherHealthAuraName" description_key="FuriousRamsayButcherHealthAuraDesc">
 				<display_value value="9"/><display_value_key value="{0}/s"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Health" operation="add" value="2.25"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayButcherHealthAuraLvl10" remove_on_death="true" icon="ui_game_symbol_healing_factor" icon_color="#e6777f" name_key="FuriousRamsayButcherHealthAuraName" description_key="FuriousRamsayButcherHealthAuraDesc">
 				<display_value value="10"/><display_value_key value="{0}/s"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Health" operation="add" value="2.5"/>
 				</effect_group>
 			</buff>
 			
@@ -956,91 +966,91 @@
 			<buff name="FuriousRamsaySoldierAttackSpeedAuraLvl1" remove_on_death="true" icon="ui_game_symbol_knunchuck" icon_color="#76e381" name_key="FuriousRamsaySoldierAttackSpeedAuraName" description_key="FuriousRamsaySoldierAttackSpeedAuraDesc">
 				<display_value value="1"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="AttackSpeed" operation="add" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="AttacksPerMinute" operation="perc_add" value=".02"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsaySoldierAttackSpeedAuraLvl2" remove_on_death="true" icon="ui_game_symbol_knunchuck" icon_color="#76e381" name_key="FuriousRamsaySoldierAttackSpeedAuraName" description_key="FuriousRamsaySoldierAttackSpeedAuraDesc">
 				<display_value value="2"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="AttackSpeed" operation="add" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="AttacksPerMinute" operation="perc_add" value=".04"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsaySoldierAttackSpeedAuraLvl3" remove_on_death="true" icon="ui_game_symbol_knunchuck" icon_color="#76e381" name_key="FuriousRamsaySoldierAttackSpeedAuraName" description_key="FuriousRamsaySoldierAttackSpeedAuraDesc">
 				<display_value value="3"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="AttackSpeed" operation="add" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="AttacksPerMinute" operation="perc_add" value=".06"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsaySoldierAttackSpeedAuraLvl4" remove_on_death="true" icon="ui_game_symbol_knunchuck" icon_color="#76e381" name_key="FuriousRamsaySoldierAttackSpeedAuraName" description_key="FuriousRamsaySoldierAttackSpeedAuraDesc">
 				<display_value value="4"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="AttackSpeed" operation="add" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="AttacksPerMinute" operation="perc_add" value=".08"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsaySoldierAttackSpeedAuraLvl5" remove_on_death="true" icon="ui_game_symbol_knunchuck" icon_color="#76e381" name_key="FuriousRamsaySoldierAttackSpeedAuraName" description_key="FuriousRamsaySoldierAttackSpeedAuraDesc">
 				<display_value value="5"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="AttackSpeed" operation="add" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="AttacksPerMinute" operation="perc_add" value=".1"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsaySoldierAttackSpeedAuraLvl6" remove_on_death="true" icon="ui_game_symbol_knunchuck" icon_color="#76e381" name_key="FuriousRamsaySoldierAttackSpeedAuraName" description_key="FuriousRamsaySoldierAttackSpeedAuraDesc">
 				<display_value value="6"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="AttackSpeed" operation="add" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="AttacksPerMinute" operation="perc_add" value=".12"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsaySoldierAttackSpeedAuraLvl7" remove_on_death="true" icon="ui_game_symbol_knunchuck" icon_color="#76e381" name_key="FuriousRamsaySoldierAttackSpeedAuraName" description_key="FuriousRamsaySoldierAttackSpeedAuraDesc">
 				<display_value value="7"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="AttackSpeed" operation="add" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="AttacksPerMinute" operation="perc_add" value=".14"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsaySoldierAttackSpeedAuraLvl8" remove_on_death="true" icon="ui_game_symbol_knunchuck" icon_color="#76e381" name_key="FuriousRamsaySoldierAttackSpeedAuraName" description_key="FuriousRamsaySoldierAttackSpeedAuraDesc">
 				<display_value value="8"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="AttackSpeed" operation="add" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="AttacksPerMinute" operation="perc_add" value=".16"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsaySoldierAttackSpeedAuraLvl9" remove_on_death="true" icon="ui_game_symbol_knunchuck" icon_color="#76e381" name_key="FuriousRamsaySoldierAttackSpeedAuraName" description_key="FuriousRamsaySoldierAttackSpeedAuraDesc">
 				<display_value value="9"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="AttackSpeed" operation="add" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="AttacksPerMinute" operation="perc_add" value=".18"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsaySoldierAttackSpeedAuraLvl10" remove_on_death="true" icon="ui_game_symbol_knunchuck" icon_color="#76e381" name_key="FuriousRamsaySoldierAttackSpeedAuraName" description_key="FuriousRamsaySoldierAttackSpeedAuraDesc">
 				<display_value value="10"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="AttackSpeed" operation="add" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="AttacksPerMinute" operation="perc_add" value=".2"/>
 				</effect_group>
 			</buff>
 			
@@ -1127,99 +1137,99 @@
 			</buff>
 			
 			<buff name="FuriousRamsayTechnogeekTurretBuffAuraLvl1" remove_on_death="true" icon="ui_game_symbol_electric_turret" icon_color="#736fe3" name_key="FuriousRamsayTechnogeekTurretBuffAuraName" description_key="FuriousRamsayTechnogeekTurretBuffAuraDesc">
-				<display_value value="1"/><display_value_key value="{0}/s"/>
+				<display_value value="1"/><display_value_key value="{0}m"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="TurretBuff" operation="add" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="JunkTurretActiveRange" operation="base_set" value="8"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayTechnogeekTurretBuffAuraLvl2" remove_on_death="true" icon="ui_game_symbol_electric_turret" icon_color="#736fe3" name_key="FuriousRamsayTechnogeekTurretBuffAuraName" description_key="FuriousRamsayTechnogeekTurretBuffAuraDesc">
-				<display_value value="2"/><display_value_key value="{0}/s"/>
+				<display_value value="2"/><display_value_key value="{0}m"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="TurretBuff" operation="add" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="JunkTurretActiveRange" operation="base_set" value="9"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayTechnogeekTurretBuffAuraLvl3" remove_on_death="true" icon="ui_game_symbol_electric_turret" icon_color="#736fe3" name_key="FuriousRamsayTechnogeekTurretBuffAuraName" description_key="FuriousRamsayTechnogeekTurretBuffAuraDesc">
-				<display_value value="3"/><display_value_key value="{0}/s"/>
+				<display_value value="3"/><display_value_key value="{0}m"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="TurretBuff" operation="add" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="JunkTurretActiveRange" operation="base_set" value="10"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayTechnogeekTurretBuffAuraLvl4" remove_on_death="true" icon="ui_game_symbol_electric_turret" icon_color="#736fe3" name_key="FuriousRamsayTechnogeekTurretBuffAuraName" description_key="FuriousRamsayTechnogeekTurretBuffAuraDesc">
-				<display_value value="4"/><display_value_key value="{0}/s"/>
+				<display_value value="4"/><display_value_key value="{0}m"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="TurretBuff" operation="add" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="JunkTurretActiveRange" operation="base_set" value="11"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayTechnogeekTurretBuffAuraLvl5" remove_on_death="true" icon="ui_game_symbol_electric_turret" icon_color="#736fe3" name_key="FuriousRamsayTechnogeekTurretBuffAuraName" description_key="FuriousRamsayTechnogeekTurretBuffAuraDesc">
-				<display_value value="5"/><display_value_key value="{0}/s"/>
+				<display_value value="5"/><display_value_key value="{0}m"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="TurretBuff" operation="add" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="JunkTurretActiveRange" operation="base_set" value="12"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayTechnogeekTurretBuffAuraLvl6" remove_on_death="true" icon="ui_game_symbol_electric_turret" icon_color="#736fe3" name_key="FuriousRamsayTechnogeekTurretBuffAuraName" description_key="FuriousRamsayTechnogeekTurretBuffAuraDesc">
-				<display_value value="6"/><display_value_key value="{0}/s"/>
+				<display_value value="6"/><display_value_key value="{0}m"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="TurretBuff" operation="add" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="JunkTurretActiveRange" operation="base_set" value="13"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayTechnogeekTurretBuffAuraLvl7" remove_on_death="true" icon="ui_game_symbol_electric_turret" icon_color="#736fe3" name_key="FuriousRamsayTechnogeekTurretBuffAuraName" description_key="FuriousRamsayTechnogeekTurretBuffAuraDesc">
-				<display_value value="7"/><display_value_key value="{0}/s"/>
+				<display_value value="7"/><display_value_key value="{0}m"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="TurretBuff" operation="add" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="JunkTurretActiveRange" operation="base_set" value="14"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayTechnogeekTurretBuffAuraLvl8" remove_on_death="true" icon="ui_game_symbol_electric_turret" icon_color="#736fe3" name_key="FuriousRamsayTechnogeekTurretBuffAuraName" description_key="FuriousRamsayTechnogeekTurretBuffAuraDesc">
-				<display_value value="8"/><display_value_key value="{0}/s"/>
+				<display_value value="8"/><display_value_key value="{0}m"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="TurretBuff" operation="add" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="JunkTurretActiveRange" operation="base_set" value="15"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayTechnogeekTurretBuffAuraLvl9" remove_on_death="true" icon="ui_game_symbol_electric_turret" icon_color="#736fe3" name_key="FuriousRamsayTechnogeekTurretBuffAuraName" description_key="FuriousRamsayTechnogeekTurretBuffAuraDesc">
-				<display_value value="9"/><display_value_key value="{0}/s"/>
+				<display_value value="9"/><display_value_key value="{0}m"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="TurretBuff" operation="add" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="JunkTurretActiveRange" operation="base_set" value="16"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayTechnogeekTurretBuffAuraLvl10" remove_on_death="true" icon="ui_game_symbol_electric_turret" icon_color="#736fe3" name_key="FuriousRamsayTechnogeekTurretBuffAuraName" description_key="FuriousRamsayTechnogeekTurretBuffAuraDesc">
-				<display_value value="10"/><display_value_key value="{0}/s"/>
+				<display_value value="10"/><display_value_key value="{0}m"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="TurretBuff" operation="add" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="JunkTurretActiveRange" operation="base_set" value="17"/>
 				</effect_group>
 			</buff>
 			
 		<!-- MADMAN -->
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraTimerLvl1" icon="ui_game_symbol_rifle" icon_color="255,255,255" name_key="FuriousRamsayMadmanFiringSpeedAuraTimerName" description_key="FuriousRamsayMadmanFiringSpeedAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1227,7 +1237,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraTimerLvl2" icon="ui_game_symbol_rifle" icon_color="255,255,255" name_key="FuriousRamsayMadmanFiringSpeedAuraTimerName" description_key="FuriousRamsayMadmanFiringSpeedAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1235,7 +1245,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraTimerLvl3" icon="ui_game_symbol_rifle" icon_color="255,255,255" name_key="FuriousRamsayMadmanFiringSpeedAuraTimerName" description_key="FuriousRamsayMadmanFiringSpeedAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1243,7 +1253,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraTimerLvl4" icon="ui_game_symbol_rifle" icon_color="255,255,255" name_key="FuriousRamsayMadmanFiringSpeedAuraTimerName" description_key="FuriousRamsayMadmanFiringSpeedAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1251,7 +1261,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraTimerLvl5" icon="ui_game_symbol_rifle" icon_color="255,255,255" name_key="FuriousRamsayMadmanFiringSpeedAuraTimerName" description_key="FuriousRamsayMadmanFiringSpeedAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1259,7 +1269,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraTimerLvl6" icon="ui_game_symbol_rifle" icon_color="255,255,255" name_key="FuriousRamsayMadmanFiringSpeedAuraTimerName" description_key="FuriousRamsayMadmanFiringSpeedAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1267,7 +1277,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraTimerLvl7" icon="ui_game_symbol_rifle" icon_color="255,255,255" name_key="FuriousRamsayMadmanFiringSpeedAuraTimerName" description_key="FuriousRamsayMadmanFiringSpeedAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1275,7 +1285,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraTimerLvl8" icon="ui_game_symbol_rifle" icon_color="255,255,255" name_key="FuriousRamsayMadmanFiringSpeedAuraTimerName" description_key="FuriousRamsayMadmanFiringSpeedAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1283,7 +1293,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraTimerLvl9" icon="ui_game_symbol_rifle" icon_color="255,255,255" name_key="FuriousRamsayMadmanFiringSpeedAuraTimerName" description_key="FuriousRamsayMadmanFiringSpeedAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1291,7 +1301,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraTimerLvl10" icon="ui_game_symbol_rifle" icon_color="255,255,255" name_key="FuriousRamsayMadmanFiringSpeedAuraTimerName" description_key="FuriousRamsayMadmanFiringSpeedAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkMadmanFiringSpeedAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1302,97 +1312,97 @@
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraLvl1" remove_on_death="true" icon="ui_game_symbol_rifle" icon_color="#e8a276" name_key="FuriousRamsayMadmanFiringSpeedAuraName" description_key="FuriousRamsayMadmanFiringSpeedAuraDesc">
 				<display_value value="1"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="1"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraLvl2" remove_on_death="true" icon="ui_game_symbol_rifle" icon_color="#e8a276" name_key="FuriousRamsayMadmanFiringSpeedAuraName" description_key="FuriousRamsayMadmanFiringSpeedAuraDesc">
 				<display_value value="2"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="2"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraLvl3" remove_on_death="true" icon="ui_game_symbol_rifle" icon_color="#e8a276" name_key="FuriousRamsayMadmanFiringSpeedAuraName" description_key="FuriousRamsayMadmanFiringSpeedAuraDesc">
 				<display_value value="3"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="3"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraLvl4" remove_on_death="true" icon="ui_game_symbol_rifle" icon_color="#e8a276" name_key="FuriousRamsayMadmanFiringSpeedAuraName" description_key="FuriousRamsayMadmanFiringSpeedAuraDesc">
 				<display_value value="4"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="4"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraLvl5" remove_on_death="true" icon="ui_game_symbol_rifle" icon_color="#e8a276" name_key="FuriousRamsayMadmanFiringSpeedAuraName" description_key="FuriousRamsayMadmanFiringSpeedAuraDesc">
 				<display_value value="5"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="5"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraLvl6" remove_on_death="true" icon="ui_game_symbol_rifle" icon_color="#e8a276" name_key="FuriousRamsayMadmanFiringSpeedAuraName" description_key="FuriousRamsayMadmanFiringSpeedAuraDesc">
 				<display_value value="6"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="6"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraLvl7" remove_on_death="true" icon="ui_game_symbol_rifle" icon_color="#e8a276" name_key="FuriousRamsayMadmanFiringSpeedAuraName" description_key="FuriousRamsayMadmanFiringSpeedAuraDesc">
 				<display_value value="7"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="7"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraLvl8" remove_on_death="true" icon="ui_game_symbol_rifle" icon_color="#e8a276" name_key="FuriousRamsayMadmanFiringSpeedAuraName" description_key="FuriousRamsayMadmanFiringSpeedAuraDesc">
 				<display_value value="8"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="8"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraLvl9" remove_on_death="true" icon="ui_game_symbol_rifle" icon_color="#e8a276" name_key="FuriousRamsayMadmanFiringSpeedAuraName" description_key="FuriousRamsayMadmanFiringSpeedAuraDesc">
 				<display_value value="9"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="9"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayMadmanFiringSpeedAuraLvl10" remove_on_death="true" icon="ui_game_symbol_rifle" icon_color="#e8a276" name_key="FuriousRamsayMadmanFiringSpeedAuraName" description_key="FuriousRamsayMadmanFiringSpeedAuraDesc">
 				<display_value value="10"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="FiringSpeed" operation="add" value="10"/>
 				</effect_group>
 			</buff>
 			
 		<!-- BUILDER -->
 			<buff name="FuriousRamsayBuilderPenetratorAuraTimerLvl1" icon="ui_game_symbol_paint_copy_block" icon_color="255,255,255" name_key="FuriousRamsayBuilderPenetratorAuraTimerName" description_key="FuriousRamsayBuilderPenetratorAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1400,7 +1410,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayBuilderPenetratorAuraTimerLvl2" icon="ui_game_symbol_paint_copy_block" icon_color="255,255,255" name_key="FuriousRamsayBuilderPenetratorAuraTimerName" description_key="FuriousRamsayBuilderPenetratorAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1408,7 +1418,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayBuilderPenetratorAuraTimerLvl3" icon="ui_game_symbol_paint_copy_block" icon_color="255,255,255" name_key="FuriousRamsayBuilderPenetratorAuraTimerName" description_key="FuriousRamsayBuilderPenetratorAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1416,7 +1426,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayBuilderPenetratorAuraTimerLvl4" icon="ui_game_symbol_paint_copy_block" icon_color="255,255,255" name_key="FuriousRamsayBuilderPenetratorAuraTimerName" description_key="FuriousRamsayBuilderPenetratorAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1424,7 +1434,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayBuilderPenetratorAuraTimerLvl5" icon="ui_game_symbol_paint_copy_block" icon_color="255,255,255" name_key="FuriousRamsayBuilderPenetratorAuraTimerName" description_key="FuriousRamsayBuilderPenetratorAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1432,7 +1442,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayBuilderPenetratorAuraTimerLvl6" icon="ui_game_symbol_paint_copy_block" icon_color="255,255,255" name_key="FuriousRamsayBuilderPenetratorAuraTimerName" description_key="FuriousRamsayBuilderPenetratorAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1440,7 +1450,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayBuilderPenetratorAuraTimerLvl7" icon="ui_game_symbol_paint_copy_block" icon_color="255,255,255" name_key="FuriousRamsayBuilderPenetratorAuraTimerName" description_key="FuriousRamsayBuilderPenetratorAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1448,7 +1458,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayBuilderPenetratorAuraTimerLvl8" icon="ui_game_symbol_paint_copy_block" icon_color="255,255,255" name_key="FuriousRamsayBuilderPenetratorAuraTimerName" description_key="FuriousRamsayBuilderPenetratorAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1456,7 +1466,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayBuilderPenetratorAuraTimerLvl9" icon="ui_game_symbol_paint_copy_block" icon_color="255,255,255" name_key="FuriousRamsayBuilderPenetratorAuraTimerName" description_key="FuriousRamsayBuilderPenetratorAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1464,7 +1474,7 @@
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayBuilderPenetratorAuraTimerLvl10" icon="ui_game_symbol_paint_copy_block" icon_color="255,255,255" name_key="FuriousRamsayBuilderPenetratorAuraTimerName" description_key="FuriousRamsayBuilderPenetratorAuraTimerDesc">
-				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/><display_value_key value="{0}%"/>
+				<display_value value="varFuriousRamsayPerkBuilderPenetratorAura"/>
 				<stack_type value="replace"/>
 				<update_rate value="0.1"/>
 				<effect_group>
@@ -1475,91 +1485,91 @@
 			<buff name="FuriousRamsayBuilderPenetratorAuraLvl1" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayBuilderPenetratorAuraName" description_key="FuriousRamsayBuilderPenetratorAuraDesc">
 				<display_value value="1"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Penetrator" operation="add" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="TargetArmor" operation="add" value="-.025"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayBuilderPenetratorAuraLvl2" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayBuilderPenetratorAuraName" description_key="FuriousRamsayBuilderPenetratorAuraDesc">
 				<display_value value="2"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Penetrator" operation="add" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="TargetArmor" operation="add" value="-.05"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayBuilderPenetratorAuraLvl3" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayBuilderPenetratorAuraName" description_key="FuriousRamsayBuilderPenetratorAuraDesc">
 				<display_value value="3"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Penetrator" operation="add" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="TargetArmor" operation="add" value="-.075"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayBuilderPenetratorAuraLvl4" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayBuilderPenetratorAuraName" description_key="FuriousRamsayBuilderPenetratorAuraDesc">
 				<display_value value="4"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Penetrator" operation="add" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="TargetArmor" operation="add" value="-.1"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayBuilderPenetratorAuraLvl5" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayBuilderPenetratorAuraName" description_key="FuriousRamsayBuilderPenetratorAuraDesc">
 				<display_value value="5"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Penetrator" operation="add" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="TargetArmor" operation="add" value="-.125"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayBuilderPenetratorAuraLvl6" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayBuilderPenetratorAuraName" description_key="FuriousRamsayBuilderPenetratorAuraDesc">
 				<display_value value="6"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Penetrator" operation="add" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="TargetArmor" operation="add" value="-.15"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayBuilderPenetratorAuraLvl7" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayBuilderPenetratorAuraName" description_key="FuriousRamsayBuilderPenetratorAuraDesc">
 				<display_value value="7"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Penetrator" operation="add" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="TargetArmor" operation="add" value="-.175"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayBuilderPenetratorAuraLvl8" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayBuilderPenetratorAuraName" description_key="FuriousRamsayBuilderPenetratorAuraDesc">
 				<display_value value="8"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Penetrator" operation="add" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="TargetArmor" operation="add" value="-.2"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayBuilderPenetratorAuraLvl9" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayBuilderPenetratorAuraName" description_key="FuriousRamsayBuilderPenetratorAuraDesc">
 				<display_value value="9"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Penetrator" operation="add" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="TargetArmor" operation="add" value="-.225"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayBuilderPenetratorAuraLvl10" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayBuilderPenetratorAuraName" description_key="FuriousRamsayBuilderPenetratorAuraDesc">
 				<display_value value="10"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Penetrator" operation="add" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="TargetArmor" operation="add" value="-.25"/>
 				</effect_group>
 			</buff>
 		<!-- CHEF -->
@@ -1647,91 +1657,91 @@
 			<buff name="FuriousRamsayChefSatietyAuraLvl1" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayChefSatietyAuraName" description_key="FuriousRamsayChefSatietyAuraDesc">
 				<display_value value="1"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Satiety" operation="add" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Satiety" operation="add" value="1"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChefSatietyAuraLvl2" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayChefSatietyAuraName" description_key="FuriousRamsayChefSatietyAuraDesc">
 				<display_value value="2"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Satiety" operation="add" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Satiety" operation="add" value="2"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChefSatietyAuraLvl3" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayChefSatietyAuraName" description_key="FuriousRamsayChefSatietyAuraDesc">
 				<display_value value="3"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Satiety" operation="add" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Satiety" operation="add" value="3"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChefSatietyAuraLvl4" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayChefSatietyAuraName" description_key="FuriousRamsayChefSatietyAuraDesc">
 				<display_value value="4"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Satiety" operation="add" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Satiety" operation="add" value="4"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChefSatietyAuraLvl5" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayChefSatietyAuraName" description_key="FuriousRamsayChefSatietyAuraDesc">
 				<display_value value="5"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Satiety" operation="add" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Satiety" operation="add" value="5"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChefSatietyAuraLvl6" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayChefSatietyAuraName" description_key="FuriousRamsayChefSatietyAuraDesc">
 				<display_value value="6"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Satiety" operation="add" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Satiety" operation="add" value="6"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChefSatietyAuraLvl7" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayChefSatietyAuraName" description_key="FuriousRamsayChefSatietyAuraDesc">
 				<display_value value="7"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Satiety" operation="add" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Satiety" operation="add" value="7"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChefSatietyAuraLvl8" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayChefSatietyAuraName" description_key="FuriousRamsayChefSatietyAuraDesc">
 				<display_value value="8"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Satiety" operation="add" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Satiety" operation="add" value="8"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChefSatietyAuraLvl9" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayChefSatietyAuraName" description_key="FuriousRamsayChefSatietyAuraDesc">
 				<display_value value="9"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Satiety" operation="add" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Satiety" operation="add" value="9"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayChefSatietyAuraLvl10" remove_on_death="true" icon="ui_game_symbol_paint_copy_block" icon_color="#e673d5" name_key="FuriousRamsayChefSatietyAuraName" description_key="FuriousRamsayChefSatietyAuraDesc">
 				<display_value value="10"/><display_value_key value="{0}%"/>
 				<stack_type value="replace"/>
-				<duration value="1"/>
+				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
-						<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Satiety" operation="add" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" target="self" stat="Satiety" operation="add" value="10"/>
 				</effect_group>
 			</buff>
 
@@ -5372,27 +5382,41 @@
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkDesertVulture" operation="set" value="0"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActivePerkRobotics" operation="set" value="0"/>
 
+					<!-- HUNTER -->
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkSpear" operation="set" value="0"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkBow" operation="set" value="0"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkClub" operation="set" value="0"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkMachete" operation="set" value="0"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkKnuckles" operation="set" value="0"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkStunBaton" operation="set" value="0"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkAxe" operation="set" value="0"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkHammer" operation="set" value="0"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkKnife" operation="set" value="0"/>
-
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkSniperRifle" operation="set" value="5"/>
+
+					<!-- THUG -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkClub" operation="set" value="0"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkShotgun" operation="set" value="4"/>
+
+					<!-- BUTCHER -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkMachete" operation="set" value="0"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkAssaultRifle" operation="set" value="4"/>
+
+					<!-- SOLDIER -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkKnuckles" operation="set" value="0"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkMarksmanRifle" operation="set" value="4"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkMachineGun" operation="set" value="6"/>
+
+					<!-- TECHNOGEEK -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkStunBaton" operation="set" value="0"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkMagnum" operation="set" value="4"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkDeployableTurret" operation="set" value="3"/>
+
+					<!-- MADMAN -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkAxe" operation="set" value="0"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkExplosive" operation="set" value="3"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkSubmachineGun" operation="set" value="4"/>
+
+					<!-- BUILDER -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkHammer" operation="set" value="0"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkPistol" operation="set" value="3"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkPoweredTurret" operation="set" value="4"/>
+
+					<!-- CHEF -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkKnife" operation="set" value="0"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkDesertVulture" operation="set" value="4"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayActiveLevelPerkRobotics" operation="set" value="3"/>
 

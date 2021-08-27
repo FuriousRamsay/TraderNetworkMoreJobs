@@ -289,6 +289,10 @@
 			<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunterXP"/></level_requirements>
 
 			<effect_group>
+				<passive_effect name="WalkSpeed" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25"/>
+				<passive_effect name="RunSpeed" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".05,.1,.15,.2,.25,.3,.35,.4,.45,.5"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25"/>
+
 				<effect_description level="1" desc_key="FuriousRamsayAttHunterRank01Desc" long_desc_key="FuriousRamsayAttHunterRank01LongDesc"/>
 				<effect_description level="2" desc_key="FuriousRamsayAttHunterRank02Desc" long_desc_key="FuriousRamsayAttHunterRank02LongDesc"/>
 				<effect_description level="3" desc_key="FuriousRamsayAttHunterRank03Desc" long_desc_key="FuriousRamsayAttHunterRank03LongDesc"/>
@@ -344,6 +348,7 @@
 			<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqButcherXP"/></level_requirements>
 
 			<effect_group>
+				<passive_effect name="HealthMax" operation="base_add" level="1,2,3,4,5,6,7,8,9,10" value="5,10,15,20,25,35,45,55,70,85"/>
 				<effect_description level="1" desc_key="FuriousRamsayAttButcherRank01Desc" long_desc_key="FuriousRamsayAttButcherRank01LongDesc"/>
 				<effect_description level="2" desc_key="FuriousRamsayAttButcherRank02Desc" long_desc_key="FuriousRamsayAttButcherRank02LongDesc"/>
 				<effect_description level="3" desc_key="FuriousRamsayAttButcherRank03Desc" long_desc_key="FuriousRamsayAttButcherRank03LongDesc"/>
@@ -370,6 +375,7 @@
 			<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="10" desc_key="FuriousRamsayReqSoldierXP"/></level_requirements>
 
 			<effect_group>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.20,.25,.30" tags="FuriousRamsayKnuckles"/>
 				<effect_description level="1" desc_key="FuriousRamsayAttSoldierRank01Desc" long_desc_key="FuriousRamsayAttSoldierRank01LongDesc"/>
 				<effect_description level="2" desc_key="FuriousRamsayAttSoldierRank02Desc" long_desc_key="FuriousRamsayAttSoldierRank02LongDesc"/>
 				<effect_description level="3" desc_key="FuriousRamsayAttSoldierRank03Desc" long_desc_key="FuriousRamsayAttSoldierRank03LongDesc"/>
@@ -396,6 +402,8 @@
 			<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqTechnogeekXP"/></level_requirements>
 
 			<effect_group>
+				<passive_effect name="JunkTurretActiveCount" operation="base_set" level="0,1,2,3,4,5,6,7,8,9,10" value="1,1,1,1,1,2,2,2,3,3,4"/>
+				<passive_effect name="JunkTurretActiveRange" operation="base_set" level="0,1,2,3,4,5,6,7,8,9,10" value="7,8,9,10,12,14,16,18,20,22,24,26"/>
 				<effect_description level="1" desc_key="FuriousRamsayAttTechnogeekRank01Desc" long_desc_key="FuriousRamsayAttTechnogeekRank01LongDesc"/>
 				<effect_description level="2" desc_key="FuriousRamsayAttTechnogeekRank02Desc" long_desc_key="FuriousRamsayAttTechnogeekRank02LongDesc"/>
 				<effect_description level="3" desc_key="FuriousRamsayAttTechnogeekRank03Desc" long_desc_key="FuriousRamsayAttTechnogeekRank03LongDesc"/>
@@ -422,6 +430,7 @@
 			<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqMadmanXP"/></level_requirements>
 
 			<effect_group>
+				<passive_effect name="RoundsPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.20,.25,.30" tags="FuriousRamsaySubmachineGuns"/>
 				<effect_description level="1" desc_key="FuriousRamsayAttMadmanRank01Desc" long_desc_key="FuriousRamsayAttMadmanRank01LongDesc"/>
 				<effect_description level="2" desc_key="FuriousRamsayAttMadmanRank02Desc" long_desc_key="FuriousRamsayAttMadmanRank02LongDesc"/>
 				<effect_description level="3" desc_key="FuriousRamsayAttMadmanRank03Desc" long_desc_key="FuriousRamsayAttMadmanRank03LongDesc"/>
@@ -448,6 +457,7 @@
 			<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqBuilderXP"/></level_requirements>
 
 			<effect_group>
+				<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.05,-.1,-.15,-.2,-.25,-.3,-.35,-.4,-.45,-.50" tags="FuriousRamsayHammers,FuriousRamsayPistols"/>
 				<effect_description level="1" desc_key="FuriousRamsayAttBuilderRank01Desc" long_desc_key="FuriousRamsayAttBuilderRank01LongDesc"/>
 				<effect_description level="2" desc_key="FuriousRamsayAttBuilderRank02Desc" long_desc_key="FuriousRamsayAttBuilderRank02LongDesc"/>
 				<effect_description level="3" desc_key="FuriousRamsayAttBuilderRank03Desc" long_desc_key="FuriousRamsayAttBuilderRank03LongDesc"/>
@@ -474,6 +484,12 @@
 			<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqChefXP"/></level_requirements>
 
 			<effect_group>
+				<passive_effect name="WaterLossPerHealthPointGained" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.05,-.1,-.15,-.2,-.25,-.3,-.35,-.4,-.45,-.5"/>
+				<passive_effect name="FoodLossPerHEalthPointGained" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.05,-.1,-.15,-.2,-.25,-.3,-.35,-.4,-.45,-.5"/>
+				<passive_effect name="WaterLossPerStaminaPointGained" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.05,-.1,-.15,-.2,-.25,-.3,-.35,-.4,-.45,-.5"/>
+				<passive_effect name="FoodLossPerStaminaPointGained" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.05,-.1,-.15,-.2,-.25,-.3,-.35,-.4,-.45,-.5"/>
+				<passive_effect name="WaterChangeOT" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.05,-.1,-.15,-.2,-.25,-.3,-.35,-.4,-.45,-.5"/>
+				<passive_effect name="FoodChangeOT" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.05,-.1,-.15,-.2,-.25,-.3,-.35,-.4,-.45,-.5"/>
 				<effect_description level="1" desc_key="FuriousRamsayAttChefRank01Desc" long_desc_key="FuriousRamsayAttChefRank01LongDesc"/>
 				<effect_description level="2" desc_key="FuriousRamsayAttChefRank02Desc" long_desc_key="FuriousRamsayAttChefRank02LongDesc"/>
 				<effect_description level="3" desc_key="FuriousRamsayAttChefRank03Desc" long_desc_key="FuriousRamsayAttChefRank03LongDesc"/>
