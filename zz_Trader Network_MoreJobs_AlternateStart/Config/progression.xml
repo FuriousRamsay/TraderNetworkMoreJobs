@@ -277,16 +277,16 @@
 		</attribute>
 
 		<attribute name="furiousramsayatthunter" name_key="FuriousRamsayAttHunterName" desc_key="FuriousRamsayAttHunterDesc" icon="ui_game_symbol_stealth2" min_level="0" max_level="10" base_skill_point_cost="0" cost_multiplier_per_level="0">
-			<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunterXP"/></level_requirements>
-			<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunterXP"/></level_requirements>
-			<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunterXP"/></level_requirements>
-			<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunterXP"/></level_requirements>
-			<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunterXP"/></level_requirements>
-			<level_requirements level="6"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunterXP"/></level_requirements>
-			<level_requirements level="7"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunterXP"/></level_requirements>
-			<level_requirements level="8"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunterXP"/></level_requirements>
-			<level_requirements level="9"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunterXP"/></level_requirements>
-			<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunterXP"/></level_requirements>
+			<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunter01"/></level_requirements>
+			<level_requirements level="2"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunter02"/></level_requirements>
+			<level_requirements level="3"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunter03"/></level_requirements>
+			<level_requirements level="4"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunter04"/></level_requirements>
+			<level_requirements level="5"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunter05"/></level_requirements>
+			<level_requirements level="6"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunter06"/></level_requirements>
+			<level_requirements level="7"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunter07"/></level_requirements>
+			<level_requirements level="8"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunter08"/></level_requirements>
+			<level_requirements level="9"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunter09"/></level_requirements>
+			<level_requirements level="10"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunter10"/></level_requirements>
 
 			<effect_group>
 				<passive_effect name="WalkSpeed" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value=".025,.05,.075,.1,.125,.15,.175,.2,.225,.25"/>
@@ -987,9 +987,11 @@
 	</perk>-->
 	
 	<!-- CHARISMA -->
-	<perk name="FuriousRamsayPerkChoiceIsMine" max_level="1" parent="FuriousRamsaySkillCharisma" name_key="FuriousRamsayPerkChoiceIsMineName" desc_key="FuriousRamsayPerkChoiceIsMineDesc" icon="ui_game_symbol_adventure">
+	<perk name="FuriousRamsayPerkChoiceIsMine" min_level="0" max_level="1" parent="FuriousRamsaySkillCharisma" name_key="FuriousRamsayPerkChoiceIsMineName" desc_key="FuriousRamsayPerkChoiceIsMineDesc" icon="ui_game_symbol_adventure">
+		<level_requirements level="1"><requirement name="PlayerLevel" operation="GTE" value="1" desc_key="FuriousRamsayReqHunter01"/></level_requirements>
 		<effect_group>
 			<passive_effect name="QuestRewardOptionCount" operation="base_add" level="1" value="3"/>
+			<triggered_effect trigger="onSelfProgressionUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkChoiceIsMine" operation="set" value="1"/>
 			<effect_description level="1" desc_key="FuriousRamsayPerkChoiceIsMineRank1Desc" long_desc_key="FuriousRamsayPerkChoiceIsMineRank1LongDesc"/>
 		</effect_group>
 	</perk>
