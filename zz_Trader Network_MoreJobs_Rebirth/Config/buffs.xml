@@ -19440,6 +19440,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="5"/>
 					<requirement name="ProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" operation="Equals" value="4"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAchievementChargedAssaultExp" operation="GTE" value="1000"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" level="5"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="Achievement: [9eff3d]Level 5[-] in [3cf7fa]Charged Assault[-]"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayAchievementChargedAssaultLevel" operation="set" value="5"/>
@@ -19449,6 +19450,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="4"/>
 					<requirement name="ProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" operation="Equals" value="3"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAchievementChargedAssaultExp" operation="GTE" value="700"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" level="4"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="Achievement: [9eff3d]Level 4[-] in [3cf7fa]Charged Assault[-]"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayAchievementChargedAssaultLevel" operation="set" value="4"/>
@@ -19458,6 +19460,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="3"/>
 					<requirement name="ProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" operation="Equals" value="2"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAchievementChargedAssaultExp" operation="GTE" value="400"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" level="3"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="Achievement: [9eff3d]Level 3[-] in [3cf7fa]Charged Assault[-]"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayAchievementChargedAssaultLevel" operation="set" value="3"/>
@@ -19467,6 +19470,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="2"/>
 					<requirement name="ProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" operation="Equals" value="1"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAchievementChargedAssaultExp" operation="GTE" value="200"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" level="2"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="Achievement: [9eff3d]Level 1[-] in [3cf7fa]Charged Assault[-]"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayAchievementChargedAssaultLevel" operation="set" value="2"/>
@@ -19477,6 +19481,7 @@
 					<requirement name="ProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" operation="Equals" value="0"/>
 					<requirement name="ProgressionLevel" progression_name="FuriousRamsayPerkClub" operation="GTE" value="2"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAchievementChargedAssaultExp" operation="GTE" value="3"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" level="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="Achievement: [9eff3d]Level 2[-] in [3cf7fa]Charged Assault[-]"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayAchievementChargedAssaultLevel" operation="set" value="1"/>
