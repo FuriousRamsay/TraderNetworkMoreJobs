@@ -1,61 +1,53 @@
-TEST: Faction wars, die, start another, errors
-TODO: Trader gives buffs
-TODO: Prevent ally bear explosion from affecting traders
-TODO: Buff displays for Ally buffs (Dog, Wolf)
+TODO: Add Auras to progression
+
+ex: 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerkHunterMobilityAura" operation="set" value="1"/>	
+
+TODO: Add localisation for each level of Aura, with details of effects
+
+TODO: Remove books from lootgroups
+TODO: Remove References to unused buffs/perks
+
 TODO: Achievements for each class (default 1 level)
-TODO: Adjust label colors on class progress bar
+
+TODO: Deployable turrets provide XP when held only
+
+TODO: Add ability to craft ammo and arrows to certain classes
+
+TODO: Verify that all classes have functional auras. Chef (Hunger - finish)
+
+TEST: If buffs can be given as a reward. IF so then set variables to prevent Faction War from being started if one is already underway.
+TEST: Faction wars, die, start another, errors
+CHECK: healing buff for wolf prototype
+TODO: Prevent ally bear explosion from affecting traders
+
+TODO: Adjust base damage for specialized weapons compared to when you aren't, much higher for some
+TODO: cannot loot more than quality 3
+TODO: cannot loot certain items, like steel clubs, steel spears
+TODO: cannot buy steel clubs, steel spears, etc
+
+TODO: Change items that affect attributes such as glasses
+TODO: replace locked doors with unlocked? (Look at DF xml commercialDoor1_v1)
+
+TODO: Add shock and burn attack effect for Technogeek and chef trainers, bleed for chef, hunter, soldier and butcher trainers, 50% chance ragdoll for thug, 70% for builder
+
+TODO: Trader gives buffs
+TODO: Buff displays for Ally buffs (Dog, Wolf)
 TODO: Add special sound for when reading class book
 TODO: Stats for headshot kills for specialitzed weapons
-TODO: Have the Trainer heal you from your ailments
 TODO: Have the trainer offer quests that are really progression with ability to reset them (like admin menu without admin)
-TODO: Add auras as abilities
-TODO: Add tags like perkboomstick to custom items for xp generation and perk effects
 TODO: change display type to nothing for npc blocks
-CHECK: healing buff for wolf prototype
-
 TODO: Fix Screens to not show point requirements for perks
-TODO: Make a few books to test out skills increase
 TODO: Special Xbow with large magazine, super fast reload and rate of fire
 TODO: Possibly remove tiers from special armor, adjust prices
 TODO: Can we make it always be nighttime?
 TODO: Add ailments for heat, cold weather
 TODO: Description of each mod for Nexus
 
-CHECK: Creature Pack behaviour
-
-TODO: Alternate start
-Trader focused on skill books
-"schematicMaster" for icon for generic books
-
-Strength more damage, better harvest, armor penetration (5)
-	(Penetrator, Salvage Operations, heavy armor, Miner 69er, Mother Lode, more damage TO line)
-	start with more damage
-Dexterity faster, more stamina, increased jumping, reload speed (6)
-	(sexual trex, Cardio,run and gun,flurry of blows,light armor,parkour)
-	start with more stamina regen and faster speed
-Constitution more health, healing, better carrying capacity, pain tolerance (5)
-	(Pack Mule, Well Insulated,Pain tolerance, healing factor, Iron Gut)
-	start with more carrying and health regen
-Intelligence treasure hunt, looting, lock picking,xp  (5)
-	(Lock Picking, Lucky Looter, Treasure Hunter, treasures line)
-	start with 
-Knowledge reduced craft time, cooking, farming (3)
-	(Master Chef, Huntsman, Living off the land,charismatic nature, grease monkey)
-	start with bicycle
-Charisma bartering
-	(better barter, daring adventurer,charismatic nature)
-	start with ???
-
-Classes:
-- Savage (Javelin Master, Pummel Pete, Skull Crusher, Brawler) (4) (start with baseball bat, double barrel shotgun)
-- Marksman (Deadeye, Boomstick, Machine Gunner,gun slinger) (4) (start with pistol)
-- Assassin (infiltrator,archery,deep cuts,hidden strike,from the shadows) (5) (start with added sneak damage and iron crossbow)
-- Engineer (electrocutioner, robotics inventor,turrets,posts) (2) (start with a sledge and workbench)
-- Chemist (Demolitions Expert,physician,ammo,grenades) (2) (start with molotovs and chem station)
+TODO: Add class leveling bonus toolbar messages?
 
 release
  
-CHECK: NREs on Arcane chest (only when you first place it on a new game?)
+CHECK: NREs on Arcane chest (only when you first place it on a new game?) Not always
 CHECK: fire damage from zombies when wearing armor
 CHECK: burning particle stays on player even after god mode (burning rabbit)
 TODO: Check Knife with grenade class
@@ -124,20 +116,25 @@ Adjusted AI
 Added Missing Localization for Toxic entities in Toxic questline
 Fixed burning effect not being removed when hit by burning rabbit
 Fixed Farmer Trader Screen Icon Color
+Added Briston 'The Survivor'
 
 Items and Blocks:
 
 I See and Hear You:
 
 Locate New Traders:
+Reduced Biome Trader spawns	
 
 Biome:
 
 Friendly Biome:
+Added Briston 'The Survivor' to biome spawns
 
 Wandering Horde:
 
 UI Tweaks:
+Adjusted Sneak HUD colors
+Moved HUD to the left
 
 Twitch Integration:
 
