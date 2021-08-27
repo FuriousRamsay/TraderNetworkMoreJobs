@@ -44,6 +44,7 @@
 				<quest_entry listindex="2" />
 				<quest_entry listindex="3" />
 				<quest_entry listindex="4" />
+				<response_entry id="resetquests" />
 				<response_entry id="nevermindResponse" />
 			</statement>
 		
@@ -65,6 +66,10 @@
 			<response id="nevermindResponse" text="dialog_trader_response_nevermind" nextstatementid="startStatement" />
 				
 			<response id="doneResponse" text="dialog_trader_response_nevermind" />
+		
+			<response id="resetquests" text="dialog_FuriousRamsaySurvivalSpecialist1_response_MoreLocations">
+				<action type="Trader" id="reset_quests" />
+			</response>
 		
 		</dialog>
 
