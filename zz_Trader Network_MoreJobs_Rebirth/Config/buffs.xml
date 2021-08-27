@@ -19427,8 +19427,7 @@
 					<requirement name="HoldingItemHasTags" tags="FuriousRamsayClubs"/>
 					<requirement name="EntityHasMovementTag" tags="running"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAchievementChargedAssaultExp" action="ModifyCVar" operation="add" value="1"/>
-<!-- TODO -->
-						<triggered_effect trigger="onSelfKilledOther" action="ShowToolbeltMessage" message="[3cf7fa]Charged Assault[-] Kill"/>
+<!-- TODO Show progress with varFuriousRamsayThugAchievementChargedAssaultExpPercLvl1 from localization -->
 				</effect_group>
 			</buff>
 
@@ -19478,7 +19477,7 @@
 				<effect_group name="FuriousRamsayAchievementChargedAssaultLvl1">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="2"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
-					<requirement name="ProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" operation="Equals" value="0"/>
+					<requirement name="ProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" operation="Equals" value="50"/>
 					<requirement name="ProgressionLevel" progression_name="FuriousRamsayPerkClub" operation="GTE" value="2"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAchievementChargedAssaultExp" operation="GTE" value="3"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
