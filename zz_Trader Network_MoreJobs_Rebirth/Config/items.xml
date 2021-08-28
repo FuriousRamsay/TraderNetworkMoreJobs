@@ -54,7 +54,7 @@
 			<property name="RepairTools" value="resourceCloth"/>
 			<property name="CustomIcon" value="apparelArmyShirt"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadHunterDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorChestHunterDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="0, 0, 0"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
@@ -77,7 +77,7 @@
 			<property name="RepairTools" value="resourceLeather"/>
 			<property name="CustomIcon" value="apparelCoatLeatherPoncho"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadHunterDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorPonchoHunterDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="0, 0, 0"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
@@ -100,7 +100,7 @@
 			<property name="RepairTools" value="resourceYuccaFibers"/>
 			<property name="CustomIcon" value="apparelPlantFiberGloves"/>
 			<property name="CustomIconTint" value="83, 173, 189"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadHunterDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorGlovesHunterDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="83, 173, 189"/>
 			<property name="CustomIconTint" value="83, 173, 189"/>
@@ -123,7 +123,7 @@
 			<property name="RepairTools" value="resourceYuccaFibers"/>
 			<property name="CustomIcon" value="apparelArmyPants"/>
 			<property name="CustomIconTint" value="0,0,0"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadHunterDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorLegsHunterDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="0,0,0"/>
 			<property name="CustomIconTint" value="0,0,0"/>
@@ -145,7 +145,7 @@
 			<property name="RepairTools" value="resourceCloth"/>
 			<property name="CustomIcon" value="armorClothBoots"/>
 			<property name="CustomIconTint" value="83, 173, 189"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadHunterDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorBootsHunterDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="83, 173, 189"/>
 			<property name="CustomIconTint" value="83, 173, 189"/>
@@ -164,9 +164,10 @@
 
 		<!-- THUG -->
 		<item name="FuriousRamsayStarterArmorHeadThug">
-			<property name="Extends" value="armorClothHat"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothHat"/>
+			<property name="Extends" value="apparelPlantFiberHood"/>
+			<property name="Tags" value="head,clothing"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberHood"/>
 			<property name="CustomIconTint" value="255, 255, 0"/>
 			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadThugDesc"/>
 			<property name="SellableToTrader" value="false"/>
@@ -186,15 +187,16 @@
 		</item>
 
 		<item name="FuriousRamsayStarterArmorChestThug">
-			<property name="Extends" value="armorClothJacket"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothJacket"/>
+			<property name="Extends" value="apparelArmyShirt"/>
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceCloth"/>
+			<property name="CustomIcon" value="apparelArmyShirt"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadThugDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorChestThugDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="0, 0, 0"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
-			<property name="UMA.Overlay0Tint" value="255, 255, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
 			<effect_group name="FuriousRamsayStarterArmor">
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
@@ -206,13 +208,37 @@
 				<display_value name="dStaminaChangeOT" value="0"/>
 			</effect_group>
 		</item>
+		
+		<item name="FuriousRamsayStarterArmorPonchoThug">
+			<property name="Extends" value="apparelCoatLeatherPoncho"/>
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="apparelCoatLeatherPoncho"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorPonchoThugDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>	
 
 		<item name="FuriousRamsayStarterArmorGlovesThug">
-			<property name="Extends" value="armorClothGloves"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothGloves"/>
+			<property name="Extends" value="apparelPlantFiberGloves"/>
+			<property name="Tags" value="hands,clothing"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberGloves"/>
 			<property name="CustomIconTint" value="255, 255, 0"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadThugDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorGlovesThugDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="255, 255, 0"/>
 			<property name="CustomIconTint" value="255, 255, 0"/>
@@ -230,15 +256,16 @@
 		</item>
 
 		<item name="FuriousRamsayStarterArmorLegsThug">
-			<property name="Extends" value="armorClothPants"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothPants"/>
-			<property name="CustomIconTint" value="255, 255, 0"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadThugDesc"/>
+			<property name="Extends" value="apparelArmyPants"/>
+			<property name="Tags" value="legs,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelArmyPants"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorLegsThugDesc"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="TintColor" value="255, 255, 0"/>
-			<property name="CustomIconTint" value="255, 255, 0"/>
-			<property name="UMA.Overlay0Tint" value="255, 255, 0"/>
+			<property name="TintColor" value="0,0,0"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="UMA.Overlay0Tint" value="0,0,0"/>
 			<effect_group name="FuriousRamsayStarterArmor">
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
@@ -253,10 +280,10 @@
 
 		<item name="FuriousRamsayStarterArmorBootsThug">
 			<property name="Extends" value="armorClothBoots"/>
-			<property name="RepairTools" value="resourceLeather"/>
+			<property name="RepairTools" value="resourceCloth"/>
 			<property name="CustomIcon" value="armorClothBoots"/>
 			<property name="CustomIconTint" value="255, 255, 0"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadThugDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorBootsThugDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="255, 255, 0"/>
 			<property name="CustomIconTint" value="255, 255, 0"/>
@@ -274,16 +301,17 @@
 		</item>
 
 		<!-- BUTCHER -->
-		<item name="FuriousRamsayStarterArmorHeadButcher">
-			<property name="Extends" value="armorClothHat"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothHat"/>
-			<property name="CustomIconTint" value="168, 91, 105"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadButcherDesc"/>
+		<item name="FuriousRamsayStarterArmorHeadSoldier">
+			<property name="Extends" value="apparelPlantFiberHood"/>
+			<property name="Tags" value="head,clothing"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberHood"/>
+			<property name="CustomIconTint" value="168, 91, 10"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadSoldierDesc"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="TintColor" value="168, 91, 105"/>
-			<property name="CustomIconTint" value="168, 91, 105"/>
-			<property name="UMA.Overlay0Tint" value="168, 91, 105"/>
+			<property name="TintColor" value="168, 91, 10"/>
+			<property name="CustomIconTint" value="168, 91, 10"/>
+			<property name="UMA.Overlay0Tint" value="168, 91, 10"/>
 			<effect_group name="FuriousRamsayStarterArmor">
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
@@ -296,12 +324,13 @@
 			</effect_group>
 		</item>
 
-		<item name="FuriousRamsayStarterArmorChestButcher">
-			<property name="Extends" value="armorClothJacket"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothJacket"/>
+		<item name="FuriousRamsayStarterArmorChestSoldier">
+			<property name="Extends" value="apparelArmyShirt"/>
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceCloth"/>
+			<property name="CustomIcon" value="apparelArmyShirt"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadButcherDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorChestSoldierDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="0, 0, 0"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
@@ -317,17 +346,41 @@
 				<display_value name="dStaminaChangeOT" value="0"/>
 			</effect_group>
 		</item>
-
-		<item name="FuriousRamsayStarterArmorGlovesButcher">
-			<property name="Extends" value="armorClothGloves"/>
+		
+		<item name="FuriousRamsayStarterArmorPonchoSoldier">
+			<property name="Extends" value="apparelCoatLeatherPoncho"/>
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
 			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothGloves"/>
-			<property name="CustomIconTint" value="168, 91, 105"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadButcherDesc"/>
+			<property name="CustomIcon" value="apparelCoatLeatherPoncho"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorPonchoSoldierDesc"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="TintColor" value="168, 91, 105"/>
-			<property name="CustomIconTint" value="168, 91, 105"/>
-			<property name="UMA.Overlay0Tint" value="168, 91, 105"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>	
+
+		<item name="FuriousRamsayStarterArmorGlovesSoldier">
+			<property name="Extends" value="apparelPlantFiberGloves"/>
+			<property name="Tags" value="hands,clothing"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberGloves"/>
+			<property name="CustomIconTint" value="168, 91, 10"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorGlovesSoldierDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="168, 91, 10"/>
+			<property name="CustomIconTint" value="168, 91, 10"/>
+			<property name="UMA.Overlay0Tint" value="168, 91, 10"/>
 			<effect_group name="FuriousRamsayStarterArmor">
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
@@ -340,16 +393,17 @@
 			</effect_group>
 		</item>
 
-		<item name="FuriousRamsayStarterArmorLegsButcher">
-			<property name="Extends" value="armorClothPants"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothPants"/>
-			<property name="CustomIconTint" value="168, 91, 105"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadButcherDesc"/>
+		<item name="FuriousRamsayStarterArmorLegsSoldier">
+			<property name="Extends" value="apparelArmyPants"/>
+			<property name="Tags" value="legs,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelArmyPants"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorLegsSoldierDesc"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="TintColor" value="168, 91, 105"/>
-			<property name="CustomIconTint" value="168, 91, 105"/>
-			<property name="UMA.Overlay0Tint" value="168, 91, 105"/>
+			<property name="TintColor" value="0,0,0"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="UMA.Overlay0Tint" value="0,0,0"/>
 			<effect_group name="FuriousRamsayStarterArmor">
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
@@ -362,16 +416,16 @@
 			</effect_group>
 		</item>
 
-		<item name="FuriousRamsayStarterArmorBootsButcher">
+		<item name="FuriousRamsayStarterArmorBootsSoldier">
 			<property name="Extends" value="armorClothBoots"/>
-			<property name="RepairTools" value="resourceLeather"/>
+			<property name="RepairTools" value="resourceCloth"/>
 			<property name="CustomIcon" value="armorClothBoots"/>
-			<property name="CustomIconTint" value="168, 91, 105"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadButcherDesc"/>
+			<property name="CustomIconTint" value="168, 91, 10"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorBootsSoldierDesc"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="TintColor" value="168, 91, 105"/>
-			<property name="CustomIconTint" value="168, 91, 105"/>
-			<property name="UMA.Overlay0Tint" value="168, 91, 105"/>
+			<property name="TintColor" value="168, 91, 10"/>
+			<property name="CustomIconTint" value="168, 91, 10"/>
+			<property name="UMA.Overlay0Tint" value="168, 91, 10"/>
 			<effect_group name="FuriousRamsayStarterArmor">
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
@@ -386,9 +440,10 @@
 
 		<!-- SOLDIER -->
 		<item name="FuriousRamsayStarterArmorHeadSoldier">
-			<property name="Extends" value="armorClothHat"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothHat"/>
+			<property name="Extends" value="apparelPlantFiberHood"/>
+			<property name="Tags" value="head,clothing"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberHood"/>
 			<property name="CustomIconTint" value="118, 227, 129"/>
 			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadSoldierDesc"/>
 			<property name="SellableToTrader" value="false"/>
@@ -408,11 +463,12 @@
 		</item>
 
 		<item name="FuriousRamsayStarterArmorChestSoldier">
-			<property name="Extends" value="armorClothJacket"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothJacket"/>
+			<property name="Extends" value="apparelArmyShirt"/>
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceCloth"/>
+			<property name="CustomIcon" value="apparelArmyShirt"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadSoldierDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorChestSoldierDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="0, 0, 0"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
@@ -428,13 +484,37 @@
 				<display_value name="dStaminaChangeOT" value="0"/>
 			</effect_group>
 		</item>
+		
+		<item name="FuriousRamsayStarterArmorPonchoSoldier">
+			<property name="Extends" value="apparelCoatLeatherPoncho"/>
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="apparelCoatLeatherPoncho"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorPonchoSoldierDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>	
 
 		<item name="FuriousRamsayStarterArmorGlovesSoldier">
-			<property name="Extends" value="armorClothGloves"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothGloves"/>
+			<property name="Extends" value="apparelPlantFiberGloves"/>
+			<property name="Tags" value="hands,clothing"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberGloves"/>
 			<property name="CustomIconTint" value="118, 227, 129"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadSoldierDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorGlovesSoldierDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="118, 227, 129"/>
 			<property name="CustomIconTint" value="118, 227, 129"/>
@@ -452,15 +532,16 @@
 		</item>
 
 		<item name="FuriousRamsayStarterArmorLegsSoldier">
-			<property name="Extends" value="armorClothPants"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothPants"/>
-			<property name="CustomIconTint" value="118, 227, 129"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadSoldierDesc"/>
+			<property name="Extends" value="apparelArmyPants"/>
+			<property name="Tags" value="legs,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelArmyPants"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorLegsSoldierDesc"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="TintColor" value="118, 227, 129"/>
-			<property name="CustomIconTint" value="118, 227, 129"/>
-			<property name="UMA.Overlay0Tint" value="118, 227, 129"/>
+			<property name="TintColor" value="0,0,0"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="UMA.Overlay0Tint" value="0,0,0"/>
 			<effect_group name="FuriousRamsayStarterArmor">
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
@@ -475,10 +556,10 @@
 
 		<item name="FuriousRamsayStarterArmorBootsSoldier">
 			<property name="Extends" value="armorClothBoots"/>
-			<property name="RepairTools" value="resourceLeather"/>
+			<property name="RepairTools" value="resourceCloth"/>
 			<property name="CustomIcon" value="armorClothBoots"/>
 			<property name="CustomIconTint" value="118, 227, 129"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadSoldierDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorBootsSoldierDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="118, 227, 129"/>
 			<property name="CustomIconTint" value="118, 227, 129"/>
@@ -497,9 +578,10 @@
 
 		<!-- TECHNOGEEK -->
 		<item name="FuriousRamsayStarterArmorHeadTechnogeek">
-			<property name="Extends" value="armorClothHat"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothHat"/>
+			<property name="Extends" value="apparelPlantFiberHood"/>
+			<property name="Tags" value="head,clothing"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberHood"/>
 			<property name="CustomIconTint" value="15, 111, 227"/>
 			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadTechnogeekDesc"/>
 			<property name="SellableToTrader" value="false"/>
@@ -519,11 +601,12 @@
 		</item>
 
 		<item name="FuriousRamsayStarterArmorChestTechnogeek">
-			<property name="Extends" value="armorClothJacket"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothJacket"/>
+			<property name="Extends" value="apparelArmyShirt"/>
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceCloth"/>
+			<property name="CustomIcon" value="apparelArmyShirt"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadTechnogeekDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorChestTechnogeekDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="0, 0, 0"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
@@ -539,13 +622,37 @@
 				<display_value name="dStaminaChangeOT" value="0"/>
 			</effect_group>
 		</item>
+		
+		<item name="FuriousRamsayStarterArmorPonchoTechnogeek">
+			<property name="Extends" value="apparelCoatLeatherPoncho"/>
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="apparelCoatLeatherPoncho"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorPonchoTechnogeekDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>	
 
 		<item name="FuriousRamsayStarterArmorGlovesTechnogeek">
-			<property name="Extends" value="armorClothGloves"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothGloves"/>
+			<property name="Extends" value="apparelPlantFiberGloves"/>
+			<property name="Tags" value="hands,clothing"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberGloves"/>
 			<property name="CustomIconTint" value="15, 111, 227"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadTechnogeekDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorGlovesTechnogeekDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="15, 111, 227"/>
 			<property name="CustomIconTint" value="15, 111, 227"/>
@@ -563,15 +670,16 @@
 		</item>
 
 		<item name="FuriousRamsayStarterArmorLegsTechnogeek">
-			<property name="Extends" value="armorClothPants"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothPants"/>
-			<property name="CustomIconTint" value="15, 111, 227"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadTechnogeekDesc"/>
+			<property name="Extends" value="apparelArmyPants"/>
+			<property name="Tags" value="legs,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelArmyPants"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorLegsTechnogeekDesc"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="TintColor" value="15, 111, 227"/>
-			<property name="CustomIconTint" value="15, 111, 227"/>
-			<property name="UMA.Overlay0Tint" value="15, 111, 227"/>
+			<property name="TintColor" value="0,0,0"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="UMA.Overlay0Tint" value="0,0,0"/>
 			<effect_group name="FuriousRamsayStarterArmor">
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
@@ -586,10 +694,10 @@
 
 		<item name="FuriousRamsayStarterArmorBootsTechnogeek">
 			<property name="Extends" value="armorClothBoots"/>
-			<property name="RepairTools" value="resourceLeather"/>
+			<property name="RepairTools" value="resourceCloth"/>
 			<property name="CustomIcon" value="armorClothBoots"/>
 			<property name="CustomIconTint" value="15, 111, 227"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadTechnogeekDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorBootsTechnogeekDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="15, 111, 227"/>
 			<property name="CustomIconTint" value="15, 111, 227"/>
@@ -608,9 +716,10 @@
 
 		<!-- MADMAN -->
 		<item name="FuriousRamsayStarterArmorHeadMadman">
-			<property name="Extends" value="armorClothHat"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothHat"/>
+			<property name="Extends" value="apparelPlantFiberHood"/>
+			<property name="Tags" value="head,clothing"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberHood"/>
 			<property name="CustomIconTint" value="232, 162, 118"/>
 			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadMadmanDesc"/>
 			<property name="SellableToTrader" value="false"/>
@@ -630,11 +739,12 @@
 		</item>
 
 		<item name="FuriousRamsayStarterArmorChestMadman">
-			<property name="Extends" value="armorClothJacket"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothJacket"/>
+			<property name="Extends" value="apparelArmyShirt"/>
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceCloth"/>
+			<property name="CustomIcon" value="apparelArmyShirt"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadMadmanDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorChestMadmanDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="0, 0, 0"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
@@ -650,13 +760,37 @@
 				<display_value name="dStaminaChangeOT" value="0"/>
 			</effect_group>
 		</item>
+		
+		<item name="FuriousRamsayStarterArmorPonchoMadman">
+			<property name="Extends" value="apparelCoatLeatherPoncho"/>
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="apparelCoatLeatherPoncho"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorPonchoMadmanDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>	
 
 		<item name="FuriousRamsayStarterArmorGlovesMadman">
-			<property name="Extends" value="armorClothGloves"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothGloves"/>
+			<property name="Extends" value="apparelPlantFiberGloves"/>
+			<property name="Tags" value="hands,clothing"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberGloves"/>
 			<property name="CustomIconTint" value="232, 162, 118"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadMadmanDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorGlovesMadmanDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="232, 162, 118"/>
 			<property name="CustomIconTint" value="232, 162, 118"/>
@@ -674,15 +808,16 @@
 		</item>
 
 		<item name="FuriousRamsayStarterArmorLegsMadman">
-			<property name="Extends" value="armorClothPants"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothPants"/>
-			<property name="CustomIconTint" value="232, 162, 118"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadMadmanDesc"/>
+			<property name="Extends" value="apparelArmyPants"/>
+			<property name="Tags" value="legs,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelArmyPants"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorLegsMadmanDesc"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="TintColor" value="232, 162, 118"/>
-			<property name="CustomIconTint" value="232, 162, 118"/>
-			<property name="UMA.Overlay0Tint" value="232, 162, 118"/>
+			<property name="TintColor" value="0,0,0"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="UMA.Overlay0Tint" value="0,0,0"/>
 			<effect_group name="FuriousRamsayStarterArmor">
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
@@ -697,10 +832,10 @@
 
 		<item name="FuriousRamsayStarterArmorBootsMadman">
 			<property name="Extends" value="armorClothBoots"/>
-			<property name="RepairTools" value="resourceLeather"/>
+			<property name="RepairTools" value="resourceCloth"/>
 			<property name="CustomIcon" value="armorClothBoots"/>
 			<property name="CustomIconTint" value="232, 162, 118"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadMadmanDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorBootsMadmanDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="232, 162, 118"/>
 			<property name="CustomIconTint" value="232, 162, 118"/>
@@ -719,10 +854,11 @@
 
 		<!-- BUILDER -->
 		<item name="FuriousRamsayStarterArmorHeadBuilder">
-			<property name="Extends" value="armorClothHat"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothHat"/>
-			<property name="CustomIconTint" value="83, 173, 189"/>
+			<property name="Extends" value="apparelPlantFiberHood"/>
+			<property name="Tags" value="head,clothing"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberHood"/>
+			<property name="CustomIconTint" value="194, 86, 252"/>
 			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadBuilderDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="194, 86, 252"/>
@@ -741,11 +877,12 @@
 		</item>
 
 		<item name="FuriousRamsayStarterArmorChestBuilder">
-			<property name="Extends" value="armorClothJacket"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothJacket"/>
+			<property name="Extends" value="apparelArmyShirt"/>
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceCloth"/>
+			<property name="CustomIcon" value="apparelArmyShirt"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadBuilderDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorChestBuilderDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="0, 0, 0"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
@@ -761,13 +898,37 @@
 				<display_value name="dStaminaChangeOT" value="0"/>
 			</effect_group>
 		</item>
+		
+		<item name="FuriousRamsayStarterArmorPonchoBuilder">
+			<property name="Extends" value="apparelCoatLeatherPoncho"/>
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="apparelCoatLeatherPoncho"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorPonchoBuilderDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>	
 
 		<item name="FuriousRamsayStarterArmorGlovesBuilder">
-			<property name="Extends" value="armorClothGloves"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothGloves"/>
+			<property name="Extends" value="apparelPlantFiberGloves"/>
+			<property name="Tags" value="hands,clothing"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberGloves"/>
 			<property name="CustomIconTint" value="194, 86, 252"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadBuilderDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorGlovesBuilderDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="194, 86, 252"/>
 			<property name="CustomIconTint" value="194, 86, 252"/>
@@ -785,15 +946,16 @@
 		</item>
 
 		<item name="FuriousRamsayStarterArmorLegsBuilder">
-			<property name="Extends" value="armorClothPants"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothPants"/>
-			<property name="CustomIconTint" value="194, 86, 252"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadBuilderDesc"/>
+			<property name="Extends" value="apparelArmyPants"/>
+			<property name="Tags" value="legs,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelArmyPants"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorLegsBuilderDesc"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="TintColor" value="194, 86, 252"/>
-			<property name="CustomIconTint" value="194, 86, 252"/>
-			<property name="UMA.Overlay0Tint" value="194, 86, 252"/>
+			<property name="TintColor" value="0,0,0"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="UMA.Overlay0Tint" value="0,0,0"/>
 			<effect_group name="FuriousRamsayStarterArmor">
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
@@ -808,10 +970,10 @@
 
 		<item name="FuriousRamsayStarterArmorBootsBuilder">
 			<property name="Extends" value="armorClothBoots"/>
-			<property name="RepairTools" value="resourceLeather"/>
+			<property name="RepairTools" value="resourceCloth"/>
 			<property name="CustomIcon" value="armorClothBoots"/>
 			<property name="CustomIconTint" value="194, 86, 252"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadBuilderDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorBootsBuilderDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="194, 86, 252"/>
 			<property name="CustomIconTint" value="194, 86, 252"/>
@@ -830,9 +992,10 @@
 
 		<!-- CHEF -->
 		<item name="FuriousRamsayStarterArmorHeadChef">
-			<property name="Extends" value="armorClothHat"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothHat"/>
+			<property name="Extends" value="apparelPlantFiberHood"/>
+			<property name="Tags" value="head,clothing"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberHood"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
 			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadChefDesc"/>
 			<property name="SellableToTrader" value="false"/>
@@ -852,11 +1015,12 @@
 		</item>
 
 		<item name="FuriousRamsayStarterArmorChestChef">
-			<property name="Extends" value="armorClothJacket"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothJacket"/>
+			<property name="Extends" value="apparelArmyShirt"/>
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceCloth"/>
+			<property name="CustomIcon" value="apparelArmyShirt"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadChefDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorChestChefDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="0, 0, 0"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
@@ -872,13 +1036,37 @@
 				<display_value name="dStaminaChangeOT" value="0"/>
 			</effect_group>
 		</item>
+		
+		<item name="FuriousRamsayStarterArmorPonchoChef">
+			<property name="Extends" value="apparelCoatLeatherPoncho"/>
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="apparelCoatLeatherPoncho"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorPonchoChefDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>	
 
 		<item name="FuriousRamsayStarterArmorGlovesChef">
-			<property name="Extends" value="armorClothGloves"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothGloves"/>
+			<property name="Extends" value="apparelPlantFiberGloves"/>
+			<property name="Tags" value="hands,clothing"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberGloves"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadChefDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorGlovesChefDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="0, 0, 0"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
@@ -896,15 +1084,16 @@
 		</item>
 
 		<item name="FuriousRamsayStarterArmorLegsChef">
-			<property name="Extends" value="armorClothPants"/>
-			<property name="RepairTools" value="resourceLeather"/>
-			<property name="CustomIcon" value="armorClothPants"/>
-			<property name="CustomIconTint" value="0, 0, 0"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadChefDesc"/>
+			<property name="Extends" value="apparelArmyPants"/>
+			<property name="Tags" value="legs,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelArmyPants"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorLegsChefDesc"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="TintColor" value="0, 0, 0"/>
-			<property name="CustomIconTint" value="0, 0, 0"/>
-			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<property name="TintColor" value="0,0,0"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="UMA.Overlay0Tint" value="0,0,0"/>
 			<effect_group name="FuriousRamsayStarterArmor">
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
@@ -919,10 +1108,10 @@
 
 		<item name="FuriousRamsayStarterArmorBootsChef">
 			<property name="Extends" value="armorClothBoots"/>
-			<property name="RepairTools" value="resourceLeather"/>
+			<property name="RepairTools" value="resourceCloth"/>
 			<property name="CustomIcon" value="armorClothBoots"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
-			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadChefDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorBootsChefDesc"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="TintColor" value="0, 0, 0"/>
 			<property name="CustomIconTint" value="0, 0, 0"/>
