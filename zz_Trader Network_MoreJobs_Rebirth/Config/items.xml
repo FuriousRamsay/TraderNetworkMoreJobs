@@ -10,7 +10,7 @@
 			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mpaper"/>
-			<property name="Stacknumber" value="110"/>
+			<property name="Stacknumber" value="25"/>
 			<property name="EconomicValue" value="1600"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="FuelValue" value="2"/>
@@ -2705,7 +2705,7 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="EconomicValue" value="80"/>
-			<property name="Stacknumber" value="1"/>
+			<property name="Stacknumber" value="25"/>
 			<property name="Group" value="Science,CFChemicals,Medical"/>
 		</item>
 
@@ -2720,9 +2720,8 @@
 				<property name="Sound_start" value="player_painkillers"/>
 			</property>
 			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugPainkillersDuration" operation="set" value="543">
-					<requirement name="CVarCompare" cvar="$buffDrugPainkillersDuration" operation="GT" value="543"/></triggered_effect>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugPainkillers"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayStrengthUnitPercIncrease"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>
 			</effect_group>
 		</item>
 
@@ -2736,9 +2735,8 @@
 				<property name="Sound_start" value="player_painkillers"/>
 			</property>
 			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugPainkillersDuration" operation="set" value="543">
-					<requirement name="CVarCompare" cvar="$buffDrugPainkillersDuration" operation="GT" value="543"/></triggered_effect>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugPainkillers"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayDexterityUnitPercIncrease"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
 			</effect_group>
 		</item>
 
@@ -2752,9 +2750,8 @@
 				<property name="Sound_start" value="player_painkillers"/>
 			</property>
 			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugPainkillersDuration" operation="set" value="543">
-					<requirement name="CVarCompare" cvar="$buffDrugPainkillersDuration" operation="GT" value="543"/></triggered_effect>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugPainkillers"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayConstitutionUnitPercIncrease"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessConstitutionAttribute"/>
 			</effect_group>
 		</item>
 
@@ -2768,9 +2765,8 @@
 				<property name="Sound_start" value="player_painkillers"/>
 			</property>
 			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugPainkillersDuration" operation="set" value="543">
-					<requirement name="CVarCompare" cvar="$buffDrugPainkillersDuration" operation="GT" value="543"/></triggered_effect>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugPainkillers"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@varFuriousRamsayIntelligenceUnitPercIncrease"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessIntelligenceAttribute"/>
 			</effect_group>
 		</item>
 
@@ -2784,9 +2780,8 @@
 				<property name="Sound_start" value="player_painkillers"/>
 			</property>
 			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugPainkillersDuration" operation="set" value="543">
-					<requirement name="CVarCompare" cvar="$buffDrugPainkillersDuration" operation="GT" value="543"/></triggered_effect>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugPainkillers"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@varFuriousRamsayKnowledgeUnitPercIncrease"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessKnowledgeAttribute"/>
 			</effect_group>
 		</item>
 
@@ -2800,10 +2795,33 @@
 				<property name="Sound_start" value="player_painkillers"/>
 			</property>
 			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDrugPainkillersDuration" operation="set" value="543">
-					<requirement name="CVarCompare" cvar="$buffDrugPainkillersDuration" operation="GT" value="543"/></triggered_effect>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDrugPainkillers"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@varFuriousRamsayCharismaUnitPercIncrease"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessCharismaAttribute"/>
 			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayGetTrainers">
+			<property name="Tags" value="ammo,weapon"/>
+			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="DropScale" value="1.8"/>
+			<property name="Material" value="Morganic"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="41"/>
+			<property name="Weight" value="0"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="SoundUnholster" value="charge_unholster"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="..."/>
+				<property name="Sound_start" value="UseActions/open_backpack"/>
+				<property name="UseAnimation" value="true"/>
+				<property name="Create_item" value="FuriousRamsaySpawnSurvivalSpecialist,FuriousRamsaySpawnHunterTrainer,FuriousRamsaySpawnThugTrainer,FuriousRamsaySpawnButcherTrainer,FuriousRamsaySpawnSoldierTrainer,FuriousRamsaySpawnTechnogeekTrainer,FuriousRamsaySpawnMadmanTrainer,FuriousRamsaySpawnBuilderTrainer,FuriousRamsaySpawnChefTrainer"/>
+				<property name="Create_item_count" value="1,1,1,1,1,1,1,1,1,1"/>
+			</property>
 		</item>
 
 	</append>

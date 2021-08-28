@@ -415,6 +415,28 @@
 			<property name="ItemTypeIcon" value="skills"/>
 			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
 			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<drop event="Destroy" count="0"/>
+			<property name="Stacknumber" value="1"/>
+
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsaySurvivalSpecialistSpawner"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+		</block>
+
+		<block name="FuriousRamsaySpawnSurvivalSpecialistBackup">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoEntityClothMaster"/>
+			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
+			<property name="CustomIconTint" value="233, 202, 252"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="StabilitySupport" value="false"/>
 			<property name="Class" value="PlantGrowing"/>
@@ -425,6 +447,11 @@
 			<property name="PlantGrowing.GrowthRate" value="0.01"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<effect_group name="FuriousRamsayVerifyBlockPlaced">
+				<!--<requirement name="CVarCompare" cvar="varFuriousRamsaySurvivalSpecialistPlaced" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfPlaceBlock" action="ModifyCVar" cvar="varFuriousRamsaySurvivalSpecialistPlaced" operation="set" value="1"/>-->
+				<triggered_effect trigger="onSelfPlaceBlock" action="ShowToolbeltMessage" message="[I]You are now a[/I] [9eff3d]Level 10[-] [bd444a]Hunter[-]"/>
+			</effect_group>
 		</block>	
 		
 		<block name="FuriousRamsaySurvivalSpecialistSpawner">
@@ -476,6 +503,28 @@
 		</block>
 
 		<block name="FuriousRamsaySpawnHunterTrainer">
+			<property name="Extends" value="decoEntityClothMaster"/>
+			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
+			<property name="CustomIconTint" value="83, 173, 189"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<drop event="Destroy" count="0"/>
+			<property name="Stacknumber" value="1"/>
+
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayHunterSpawner"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+		</block>
+
+		<block name="FuriousRamsaySpawnHunterTrainerBackup">
+			<property name="CreativeMode" value="None"/>
 			<property name="Extends" value="decoEntityClothMaster"/>
 			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
 			<property name="CustomIconTint" value="83, 173, 189"/>
@@ -549,6 +598,28 @@
 			<property name="ItemTypeIcon" value="skills"/>
 			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
 			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<drop event="Destroy" count="0"/>
+			<property name="Stacknumber" value="1"/>
+
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayThugSpawner"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+		</block>
+
+		<block name="FuriousRamsaySpawnThugTrainerBackup">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoEntityClothMaster"/>
+			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
+			<property name="CustomIconTint" value="224, 224, 54"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="StabilitySupport" value="false"/>
 			<property name="Class" value="PlantGrowing"/>
@@ -610,6 +681,28 @@
 		</block>
 
 		<block name="FuriousRamsaySpawnButcherTrainer">
+			<property name="Extends" value="decoEntityClothMaster"/>
+			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
+			<property name="CustomIconTint" value="268, 91, 105"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<drop event="Destroy" count="0"/>
+			<property name="Stacknumber" value="1"/>
+
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayButcherSpawner"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+		</block>
+
+		<block name="FuriousRamsaySpawnButcherTrainerBackup">
+			<property name="CreativeMode" value="None"/>
 			<property name="Extends" value="decoEntityClothMaster"/>
 			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
 			<property name="CustomIconTint" value="268, 91, 105"/>
@@ -683,6 +776,28 @@
 			<property name="ItemTypeIcon" value="skills"/>
 			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
 			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<drop event="Destroy" count="0"/>
+			<property name="Stacknumber" value="1"/>
+
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsaySoldierSpawner"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+		</block>
+
+		<block name="FuriousRamsaySpawnSoldierTrainerBackup">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoEntityClothMaster"/>
+			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
+			<property name="CustomIconTint" value="118, 227, 129"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="StabilitySupport" value="false"/>
 			<property name="Class" value="PlantGrowing"/>
@@ -744,6 +859,28 @@
 		</block>
 
 		<block name="FuriousRamsaySpawnTechnogeekTrainer">
+			<property name="Extends" value="decoEntityClothMaster"/>
+			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
+			<property name="CustomIconTint" value="115, 111, 227"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<drop event="Destroy" count="0"/>
+			<property name="Stacknumber" value="1"/>
+
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayTechnogeekSpawner"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+		</block>
+
+		<block name="FuriousRamsaySpawnTechnogeekTrainerBackup">
+			<property name="CreativeMode" value="None"/>
 			<property name="Extends" value="decoEntityClothMaster"/>
 			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
 			<property name="CustomIconTint" value="115, 111, 227"/>
@@ -817,6 +954,28 @@
 			<property name="ItemTypeIcon" value="skills"/>
 			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
 			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<drop event="Destroy" count="0"/>
+			<property name="Stacknumber" value="1"/>
+
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayMadmanSpawner"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+		</block>
+
+		<block name="FuriousRamsaySpawnMadmanTrainerBackup">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoEntityClothMaster"/>
+			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
+			<property name="CustomIconTint" value="232, 162, 118"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="StabilitySupport" value="false"/>
 			<property name="Class" value="PlantGrowing"/>
@@ -884,6 +1043,28 @@
 			<property name="ItemTypeIcon" value="skills"/>
 			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
 			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<drop event="Destroy" count="0"/>
+			<property name="Stacknumber" value="1"/>
+
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayBuilderSpawner"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+		</block>
+
+		<block name="FuriousRamsaySpawnBuilderTrainerBackup">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="decoEntityClothMaster"/>
+			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
+			<property name="CustomIconTint" value="194, 86, 252"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Stacknumber" value="1"/>
 			<property name="StabilitySupport" value="false"/>
 			<property name="Class" value="PlantGrowing"/>
@@ -945,6 +1126,28 @@
 		</block>
 
 		<block name="FuriousRamsaySpawnChefTrainer">
+			<property name="Extends" value="decoEntityClothMaster"/>
+			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
+			<property name="CustomIconTint" value="80, 80, 80"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Model" value="Entities/Commercial/shoeBootPairLeatherPrefab"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="OnlySimpleRotations" value="true"/>			
+			<drop event="Destroy" count="0"/>
+			<property name="Stacknumber" value="1"/>
+
+			<property name="Class" value="PlantGrowing"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayChefSpawner"/>
+			<property name="PlantGrowing.GrowthRate" value="0"/>
+			<property name="PlantGrowing.IsRandom" value="false"/>
+			<property name="PlantGrowing.LightLevelGrow" value="0"/>
+			<property name="PlantGrowing.LightLevelStay" value="0"/>
+			<property name="PlantGrowing.FertileLevel" value="0"/>
+		</block>
+
+		<block name="FuriousRamsaySpawnChefTrainerBackup">
+			<property name="CreativeMode" value="None"/>
 			<property name="Extends" value="decoEntityClothMaster"/>
 			<property name="CustomIcon" value="cntShoesPileLeatherBoots"/>
 			<property name="CustomIconTint" value="80, 80, 80"/>

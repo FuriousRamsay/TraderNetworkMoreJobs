@@ -5266,6 +5266,14 @@
 				<stack_type value="replace"/>
 				<duration value="1"/>
 				<effect_group>
+				<!-- GENETICS -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPercIncrease" operation="set" value="0.2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPercIncrease" operation="set" value="0.2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPercIncrease" operation="set" value="0.2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPercIncrease" operation="set" value="0.2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPercIncrease" operation="set" value="0.2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPercIncrease" operation="set" value="0.2"/>
+
 				<!-- ATTRIBUTES -->
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassNotSelectedColor" operation="set" value="255"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassHunterColor" operation="set" value="0"/>
@@ -5304,6 +5312,14 @@
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassUnitPerc" operation="set" value="0"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassPerc" operation="set" value="0"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassLevel" operation="set" value="0"/>
+
+				<!-- GENETICS -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="set" value="0.2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="set" value="0.2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="set" value="0.4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="set" value="0.1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="set" value="0"/>
 
 				<!-- PERKS -->
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerk1UnitPerc" operation="set" value="0"/>
@@ -19438,7 +19454,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 					<requirement name="HoldingItemHasTags" tags="FuriousRamsayClubs"/>
 					<requirement name="EntityHasMovementTag" tags="running"/>
-						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAchievementChargedAssaultExp" action="ModifyCVar" operation="add" value="1"/>
+						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAchievementChargedAssaultExp" action="ModifyCVar" operation="add" value="20"/>
 				</effect_group>
 			</buff>
 
@@ -19517,7 +19533,7 @@
 
 				<effect_group name="FuriousRamsayAchievementChargedAssaultLvl5">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="10"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="5"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 					<requirement name="ProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" operation="Equals" value="4"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAchievementChargedAssaultExp" operation="GTE" value="@varFuriousRamsayAchievementChargedAssaultExpLvl5"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
@@ -19527,7 +19543,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAchievementChargedAssaultLvl4">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="8"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="4"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 					<requirement name="ProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" operation="Equals" value="3"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAchievementChargedAssaultExp" operation="GTE" value="@varFuriousRamsayAchievementChargedAssaultExpLvl4"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
@@ -19537,7 +19553,7 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAchievementChargedAssaultLvl3">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="6"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="3"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 					<requirement name="ProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" operation="Equals" value="2"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAchievementChargedAssaultExp" operation="GTE" value="@varFuriousRamsayAchievementChargedAssaultExpLvl3"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
@@ -19547,24 +19563,768 @@
 				</effect_group>
 				<effect_group name="FuriousRamsayAchievementChargedAssaultLvl2">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="Equals" value="4"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="2"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 					<requirement name="ProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" operation="Equals" value="1"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAchievementChargedAssaultExp" operation="GTE" value="@varFuriousRamsayAchievementChargedAssaultExpLvl2"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" level="2"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="Achievement: [9eff3d]Level 1[-] in [3cf7fa]Charged Assault[-]"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="Achievement: [9eff3d]Level 2[-] in [3cf7fa]Charged Assault[-]"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayAchievementChargedAssaultLevel" operation="set" value="2"/>
 				</effect_group>
 				<effect_group name="FuriousRamsayAchievementChargedAssaultLvl1">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThug" operation="GTE" value="2"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
-					<requirement name="ProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" operation="Equals" value="50"/>
+					<requirement name="ProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" operation="Equals" value="0"/>
 					<requirement name="ProgressionLevel" progression_name="FuriousRamsayPerkClub" operation="GTE" value="2"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAchievementChargedAssaultExp" operation="GTE" value="@varFuriousRamsayAchievementChargedAssaultExpLvl1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayThugAchievementChargedAssault" level="1"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="Achievement: [9eff3d]Level 2[-] in [3cf7fa]Charged Assault[-]"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="Achievement: [9eff3d]Level 1[-] in [3cf7fa]Charged Assault[-]"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayAchievementChargedAssaultLevel" operation="set" value="1"/>
+				</effect_group>
+			</buff>
+
+			<!-- STRENGTH -->
+			<buff name="FuriousRamsayProcessStrengthAttribute" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayProcessStrengthLvl10">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeStrength" operation="Equals" value="9"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayStrengthUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeStrength" operation="set" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthLvl" operation="set" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="10">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="10"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Strength[-] is now [9eff3d]Level 10[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessStrengthLvl9">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeStrength" operation="Equals" value="8"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayStrengthUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeStrength" operation="set" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthLvl" operation="set" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="9">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="9"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Strength[-] is now [9eff3d]Level 9[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessStrengthLvl8">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeStrength" operation="Equals" value="7"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayStrengthUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeStrength" operation="set" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthLvl" operation="set" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="8">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="8"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Strength[-] is now [9eff3d]Level 8[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessStrengthLvl7">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeStrength" operation="Equals" value="6"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayStrengthUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeStrength" operation="set" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthLvl" operation="set" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="7">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="7"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Strength[-] is now [9eff3d]Level 7[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessStrengthLvl6">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeStrength" operation="Equals" value="5"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayStrengthUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeStrength" operation="set" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthLvl" operation="set" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="6">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="6"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Strength[-] is now [9eff3d]Level 6[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessStrengthLvl5">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeStrength" operation="Equals" value="4"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayStrengthUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeStrength" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthLvl" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="5">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="5"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Strength[-] is now [9eff3d]Level 5[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessStrengthLvl4">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeStrength" operation="Equals" value="3"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayStrengthUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeStrength" operation="set" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthLvl" operation="set" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="4">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="4"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Strength[-] is now [9eff3d]Level 4[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessStrengthLvl3">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeStrength" operation="Equals" value="2"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayStrengthUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeStrength" operation="set" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthLvl" operation="set" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="3">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="3"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Strength[-] is now [9eff3d]Level 3[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessStrengthLvl2">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeStrength" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayStrengthUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeStrength" operation="set" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthLvl" operation="set" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="2">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="2"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Strength[-] is now [9eff3d]Level 2[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessStrengthLvl1">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeStrength" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayStrengthUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeStrength" operation="set" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthLvl" operation="set" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="1">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Strength[-] is now [9eff3d]Level 1[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+			</buff>
+
+			<!-- DEXTERITY -->
+			<buff name="FuriousRamsayProcessDexterityAttribute" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayProcessDexterityLvl10">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeDexterity" operation="Equals" value="9"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayDexterityUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeDexterity" operation="set" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityLvl" operation="set" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="10">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="10"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Dexterity[-] is now [9eff3d]Level 10[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessDexterityLvl9">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeDexterity" operation="Equals" value="8"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayDexterityUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeDexterity" operation="set" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityLvl" operation="set" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="9">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="9"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Dexterity[-] is now [9eff3d]Level 9[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessDexterityLvl8">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeDexterity" operation="Equals" value="7"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayDexterityUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeDexterity" operation="set" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityLvl" operation="set" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="8">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="8"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Dexterity[-] is now [9eff3d]Level 8[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessDexterityLvl7">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeDexterity" operation="Equals" value="6"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayDexterityUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeDexterity" operation="set" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityLvl" operation="set" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="7">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="7"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Dexterity[-] is now [9eff3d]Level 7[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessDexterityLvl6">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeDexterity" operation="Equals" value="5"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayDexterityUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeDexterity" operation="set" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityLvl" operation="set" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="6">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="6"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Dexterity[-] is now [9eff3d]Level 6[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessDexterityLvl5">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeDexterity" operation="Equals" value="4"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayDexterityUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeDexterity" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityLvl" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="5">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="5"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Dexterity[-] is now [9eff3d]Level 5[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessDexterityLvl4">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeDexterity" operation="Equals" value="3"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayDexterityUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeDexterity" operation="set" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityLvl" operation="set" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="4">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="4"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Dexterity[-] is now [9eff3d]Level 4[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessDexterityLvl3">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeDexterity" operation="Equals" value="2"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayDexterityUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeDexterity" operation="set" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityLvl" operation="set" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="3">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="3"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Dexterity[-] is now [9eff3d]Level 3[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessDexterityLvl2">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeDexterity" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayDexterityUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeDexterity" operation="set" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityLvl" operation="set" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="2">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="2"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Dexterity[-] is now [9eff3d]Level 2[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessDexterityLvl1">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeDexterity" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayDexterityUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeDexterity" operation="set" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityLvl" operation="set" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="1">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Dexterity[-] is now [9eff3d]Level 1[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+			</buff>
+
+			<!-- CONSTITUTION -->
+			<buff name="FuriousRamsayProcessConstitutionAttribute" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayProcessConstitutionLvl10">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeConstitution" operation="Equals" value="9"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayConstitutionUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeConstitution" operation="set" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionLvl" operation="set" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="10">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="10"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Constitution[-] is now [9eff3d]Level 10[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessConstitutionLvl9">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeConstitution" operation="Equals" value="8"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayConstitutionUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeConstitution" operation="set" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionLvl" operation="set" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="9">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="9"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Constitution[-] is now [9eff3d]Level 9[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessConstitutionLvl8">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeConstitution" operation="Equals" value="7"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayConstitutionUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeConstitution" operation="set" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionLvl" operation="set" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="8">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="8"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Constitution[-] is now [9eff3d]Level 8[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessConstitutionLvl7">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeConstitution" operation="Equals" value="6"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayConstitutionUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeConstitution" operation="set" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionLvl" operation="set" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="7">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="7"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Constitution[-] is now [9eff3d]Level 7[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessConstitutionLvl6">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeConstitution" operation="Equals" value="5"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayConstitutionUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeConstitution" operation="set" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionLvl" operation="set" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="6">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="6"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Constitution[-] is now [9eff3d]Level 6[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessConstitutionLvl5">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeConstitution" operation="Equals" value="4"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayConstitutionUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeConstitution" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionLvl" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="5">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="5"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Constitution[-] is now [9eff3d]Level 5[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessConstitutionLvl4">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeConstitution" operation="Equals" value="3"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayConstitutionUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeConstitution" operation="set" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionLvl" operation="set" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="4">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="4"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Constitution[-] is now [9eff3d]Level 4[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessConstitutionLvl3">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeConstitution" operation="Equals" value="2"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayConstitutionUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeConstitution" operation="set" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionLvl" operation="set" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="3">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="3"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Constitution[-] is now [9eff3d]Level 3[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessConstitutionLvl2">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeConstitution" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayConstitutionUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeConstitution" operation="set" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionLvl" operation="set" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="2">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="2"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Constitution[-] is now [9eff3d]Level 2[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessConstitutionLvl1">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeConstitution" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayConstitutionUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeConstitution" operation="set" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionLvl" operation="set" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="1">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Constitution[-] is now [9eff3d]Level 1[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+			</buff>
+
+			<!-- INTELLIGENCE -->
+			<buff name="FuriousRamsayProcessIntelligenceAttribute" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayProcessIntelligenceLvl10">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeIntelligence" operation="Equals" value="9"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeIntelligence" operation="set" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceLvl" operation="set" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="10">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="10"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Intelligence[-] is now [9eff3d]Level 10[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessIntelligenceLvl9">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeIntelligence" operation="Equals" value="8"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeIntelligence" operation="set" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceLvl" operation="set" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="9">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="9"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Intelligence[-] is now [9eff3d]Level 9[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessIntelligenceLvl8">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeIntelligence" operation="Equals" value="7"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeIntelligence" operation="set" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceLvl" operation="set" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="8">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="8"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Intelligence[-] is now [9eff3d]Level 8[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessIntelligenceLvl7">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeIntelligence" operation="Equals" value="6"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeIntelligence" operation="set" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceLvl" operation="set" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="7">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="7"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Intelligence[-] is now [9eff3d]Level 7[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessIntelligenceLvl6">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeIntelligence" operation="Equals" value="5"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeIntelligence" operation="set" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceLvl" operation="set" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="6">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="6"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Intelligence[-] is now [9eff3d]Level 6[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessIntelligenceLvl5">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeIntelligence" operation="Equals" value="4"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeIntelligence" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceLvl" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="5">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="5"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Intelligence[-] is now [9eff3d]Level 5[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessIntelligenceLvl4">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeIntelligence" operation="Equals" value="3"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeIntelligence" operation="set" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceLvl" operation="set" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="4">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="4"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Intelligence[-] is now [9eff3d]Level 4[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessIntelligenceLvl3">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeIntelligence" operation="Equals" value="2"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeIntelligence" operation="set" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceLvl" operation="set" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="3">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="3"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Intelligence[-] is now [9eff3d]Level 3[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessIntelligenceLvl2">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeIntelligence" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeIntelligence" operation="set" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceLvl" operation="set" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="2">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="2"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Intelligence[-] is now [9eff3d]Level 2[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessIntelligenceLvl1">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeIntelligence" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeIntelligence" operation="set" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceLvl" operation="set" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="1">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Intelligence[-] is now [9eff3d]Level 1[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+			</buff>
+
+			<!-- KNOWLEDGE -->
+			<buff name="FuriousRamsayProcessKnowledgeAttribute" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayProcessKnowledgeLvl10">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeKnowledge" operation="Equals" value="9"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeKnowledge" operation="set" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeLvl" operation="set" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="10">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="10"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Knowledge[-] is now [9eff3d]Level 10[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessKnowledgeLvl9">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeKnowledge" operation="Equals" value="8"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeKnowledge" operation="set" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeLvl" operation="set" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="9">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="9"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Knowledge[-] is now [9eff3d]Level 9[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessKnowledgeLvl8">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeKnowledge" operation="Equals" value="7"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeKnowledge" operation="set" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeLvl" operation="set" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="8">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="8"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Knowledge[-] is now [9eff3d]Level 8[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessKnowledgeLvl7">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeKnowledge" operation="Equals" value="6"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeKnowledge" operation="set" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeLvl" operation="set" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="7">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="7"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Knowledge[-] is now [9eff3d]Level 7[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessKnowledgeLvl6">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeKnowledge" operation="Equals" value="5"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeKnowledge" operation="set" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeLvl" operation="set" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="6">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="6"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Knowledge[-] is now [9eff3d]Level 6[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessKnowledgeLvl5">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeKnowledge" operation="Equals" value="4"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeKnowledge" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeLvl" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="5">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="5"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Knowledge[-] is now [9eff3d]Level 5[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessKnowledgeLvl4">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeKnowledge" operation="Equals" value="3"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeKnowledge" operation="set" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeLvl" operation="set" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="4">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="4"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Knowledge[-] is now [9eff3d]Level 4[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessKnowledgeLvl3">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeKnowledge" operation="Equals" value="2"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeKnowledge" operation="set" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeLvl" operation="set" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="3">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="3"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Knowledge[-] is now [9eff3d]Level 3[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessKnowledgeLvl2">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeKnowledge" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeKnowledge" operation="set" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeLvl" operation="set" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="2">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="2"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Knowledge[-] is now [9eff3d]Level 2[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessKnowledgeLvl1">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeKnowledge" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeKnowledge" operation="set" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeLvl" operation="set" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="1">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Knowledge[-] is now [9eff3d]Level 1[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+			</buff>
+
+			<!-- CHARISMA -->
+			<buff name="FuriousRamsayProcessCharismaAttribute" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayProcessCharismaLvl10">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeCharisma" operation="Equals" value="9"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayCharismaUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeCharisma" operation="set" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaLvl" operation="set" value="10"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="10">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="10"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Charisma[-] is now [9eff3d]Level 10[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessCharismaLvl9">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeCharisma" operation="Equals" value="8"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayCharismaUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeCharisma" operation="set" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaLvl" operation="set" value="9"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="9">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="9"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Charisma[-] is now [9eff3d]Level 9[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessCharismaLvl8">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeCharisma" operation="Equals" value="7"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayCharismaUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeCharisma" operation="set" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaLvl" operation="set" value="8"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="8">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="8"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Charisma[-] is now [9eff3d]Level 8[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessCharismaLvl7">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeCharisma" operation="Equals" value="6"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayCharismaUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeCharisma" operation="set" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaLvl" operation="set" value="7"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="7">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="7"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Charisma[-] is now [9eff3d]Level 7[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessCharismaLvl6">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeCharisma" operation="Equals" value="5"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayCharismaUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeCharisma" operation="set" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaLvl" operation="set" value="6"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="6">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="6"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Charisma[-] is now [9eff3d]Level 6[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessCharismaLvl5">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeCharisma" operation="Equals" value="4"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayCharismaUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeCharisma" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaLvl" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="5">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="5"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Charisma[-] is now [9eff3d]Level 5[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessCharismaLvl4">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeCharisma" operation="Equals" value="3"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayCharismaUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeCharisma" operation="set" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaLvl" operation="set" value="4"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="4">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="4"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Charisma[-] is now [9eff3d]Level 4[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessCharismaLvl3">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeCharisma" operation="Equals" value="2"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayCharismaUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeCharisma" operation="set" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaLvl" operation="set" value="3"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="3">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="3"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Charisma[-] is now [9eff3d]Level 3[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessCharismaLvl2">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeCharisma" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayCharismaUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeCharisma" operation="set" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaLvl" operation="set" value="2"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="2">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="2"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Charisma[-] is now [9eff3d]Level 2[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
+				</effect_group>
+				<effect_group name="FuriousRamsayProcessCharismaLvl1">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeCharisma" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayCharismaUnitPerc" operation="GTE" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeCharisma" operation="set" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaLvl" operation="set" value="1"/>
+						<triggered_effect trigger="onSelfBuffStart" action="SetProgressionLevel" progression_name="attfortitude" level="1">
+							<requirement name="ProgressionLevel" progression_name="attfortitude" operation="LT" value="1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Your [3cf7fa]Charisma[-] is now [9eff3d]Level 1[-]"/>
+						<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
 				</effect_group>
 			</buff>
 
@@ -19802,7 +20562,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 					<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayAchievementsThug"/>
 				</triggered_effect>
-			</effect_group>
+			</effect_group>		
 		</append>
 </Config>
 
