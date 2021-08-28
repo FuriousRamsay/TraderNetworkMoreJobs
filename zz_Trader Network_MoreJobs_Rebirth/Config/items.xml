@@ -2,13 +2,6 @@
 
 	<remove xpath="/items/item/property[@name='UnlockedBy']"/>
 
-	<!--<set xpath="/items/item[@name='gunShotgunT1DoubleBarrel']/property[@name='UnlockedBy']/@value">gunShotgunT1DoubleBarrelSchematic</set>
-	<remove xpath="/items/item[@name='gunShotgunT2PumpShotgun']/property[@name='UnlockedBy']"/>
-	<remove xpath="/items/item[@name='gunShotgunT3AutoShotgun']/property[@name='UnlockedBy']"/>
-
-	<set xpath="/items/item[@name='meleeWpnClubT1BaseballBat']/property[@name='UnlockedBy']/@value">meleeWpnClubT1BaseballBatSchematic</set>
-	<remove xpath="/items/item[@name='meleeWpnClubT3SteelClub']/property[@name='UnlockedBy']"/>-->
-	
 	<append xpath="/items">
 
 		<item name="FuriousRamsayClassBookMaster">
@@ -29,6 +22,1041 @@
 			<property name="Extends" value="FuriousRamsayClassBookMaster"/>
 			<property name="CustomIconTint" value="125, 125, 125"/>
 			<property name="TintColor" value="125, 125, 125"/>
+		</item>
+
+		<!-- HUNTER -->
+		<item name="FuriousRamsayStarterArmorHeadHunter">
+			<property name="Extends" value="apparelPlantFiberHood"/>
+			<property name="Tags" value="head,clothing"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberHood"/>
+			<property name="CustomIconTint" value="83, 173, 189"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadHunterDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="83, 173, 189"/>
+			<property name="CustomIconTint" value="83, 173, 189"/>
+			<property name="UMA.Overlay0Tint" value="83, 173, 189"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorChestHunter">
+			<property name="Extends" value="apparelArmyShirt"/>
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceCloth"/>
+			<property name="CustomIcon" value="apparelArmyShirt"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadHunterDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+		
+		<item name="FuriousRamsayStarterArmorPonchoHunter">
+			<property name="Extends" value="apparelCoatLeatherPoncho"/>
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="apparelCoatLeatherPoncho"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadHunterDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>	
+
+		<item name="FuriousRamsayStarterArmorGlovesHunter">
+			<property name="Extends" value="apparelPlantFiberGloves"/>
+			<property name="Tags" value="hands,clothing"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberGloves"/>
+			<property name="CustomIconTint" value="83, 173, 189"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadHunterDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="83, 173, 189"/>
+			<property name="CustomIconTint" value="83, 173, 189"/>
+			<property name="UMA.Overlay0Tint" value="83, 173, 189"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorLegsHunter">
+			<property name="Extends" value="apparelArmyPants"/>
+			<property name="Tags" value="legs,clothing,pocketMod"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelArmyPants"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadHunterDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0,0,0"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="UMA.Overlay0Tint" value="0,0,0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorBootsHunter">
+			<property name="Extends" value="armorClothBoots"/>
+			<property name="RepairTools" value="resourceCloth"/>
+			<property name="CustomIcon" value="armorClothBoots"/>
+			<property name="CustomIconTint" value="83, 173, 189"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadHunterDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="83, 173, 189"/>
+			<property name="CustomIconTint" value="83, 173, 189"/>
+			<property name="UMA.Overlay0Tint" value="83, 173, 189"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<!-- THUG -->
+		<item name="FuriousRamsayStarterArmorHeadThug">
+			<property name="Extends" value="armorClothHat"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothHat"/>
+			<property name="CustomIconTint" value="255, 255, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadThugDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="255, 255, 0"/>
+			<property name="CustomIconTint" value="255, 255, 0"/>
+			<property name="UMA.Overlay0Tint" value="255, 255, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorChestThug">
+			<property name="Extends" value="armorClothJacket"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothJacket"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadThugDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="255, 255, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorGlovesThug">
+			<property name="Extends" value="armorClothGloves"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothGloves"/>
+			<property name="CustomIconTint" value="255, 255, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadThugDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="255, 255, 0"/>
+			<property name="CustomIconTint" value="255, 255, 0"/>
+			<property name="UMA.Overlay0Tint" value="255, 255, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorLegsThug">
+			<property name="Extends" value="armorClothPants"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothPants"/>
+			<property name="CustomIconTint" value="255, 255, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadThugDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="255, 255, 0"/>
+			<property name="CustomIconTint" value="255, 255, 0"/>
+			<property name="UMA.Overlay0Tint" value="255, 255, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorBootsThug">
+			<property name="Extends" value="armorClothBoots"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothBoots"/>
+			<property name="CustomIconTint" value="255, 255, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadThugDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="255, 255, 0"/>
+			<property name="CustomIconTint" value="255, 255, 0"/>
+			<property name="UMA.Overlay0Tint" value="255, 255, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<!-- BUTCHER -->
+		<item name="FuriousRamsayStarterArmorHeadButcher">
+			<property name="Extends" value="armorClothHat"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothHat"/>
+			<property name="CustomIconTint" value="168, 91, 105"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadButcherDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="168, 91, 105"/>
+			<property name="CustomIconTint" value="168, 91, 105"/>
+			<property name="UMA.Overlay0Tint" value="168, 91, 105"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorChestButcher">
+			<property name="Extends" value="armorClothJacket"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothJacket"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadButcherDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorGlovesButcher">
+			<property name="Extends" value="armorClothGloves"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothGloves"/>
+			<property name="CustomIconTint" value="168, 91, 105"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadButcherDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="168, 91, 105"/>
+			<property name="CustomIconTint" value="168, 91, 105"/>
+			<property name="UMA.Overlay0Tint" value="168, 91, 105"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorLegsButcher">
+			<property name="Extends" value="armorClothPants"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothPants"/>
+			<property name="CustomIconTint" value="168, 91, 105"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadButcherDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="168, 91, 105"/>
+			<property name="CustomIconTint" value="168, 91, 105"/>
+			<property name="UMA.Overlay0Tint" value="168, 91, 105"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorBootsButcher">
+			<property name="Extends" value="armorClothBoots"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothBoots"/>
+			<property name="CustomIconTint" value="168, 91, 105"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadButcherDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="168, 91, 105"/>
+			<property name="CustomIconTint" value="168, 91, 105"/>
+			<property name="UMA.Overlay0Tint" value="168, 91, 105"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<!-- SOLDIER -->
+		<item name="FuriousRamsayStarterArmorHeadSoldier">
+			<property name="Extends" value="armorClothHat"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothHat"/>
+			<property name="CustomIconTint" value="118, 227, 129"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadSoldierDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="118, 227, 129"/>
+			<property name="CustomIconTint" value="118, 227, 129"/>
+			<property name="UMA.Overlay0Tint" value="118, 227, 129"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorChestSoldier">
+			<property name="Extends" value="armorClothJacket"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothJacket"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadSoldierDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorGlovesSoldier">
+			<property name="Extends" value="armorClothGloves"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothGloves"/>
+			<property name="CustomIconTint" value="118, 227, 129"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadSoldierDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="118, 227, 129"/>
+			<property name="CustomIconTint" value="118, 227, 129"/>
+			<property name="UMA.Overlay0Tint" value="118, 227, 129"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorLegsSoldier">
+			<property name="Extends" value="armorClothPants"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothPants"/>
+			<property name="CustomIconTint" value="118, 227, 129"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadSoldierDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="118, 227, 129"/>
+			<property name="CustomIconTint" value="118, 227, 129"/>
+			<property name="UMA.Overlay0Tint" value="118, 227, 129"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorBootsSoldier">
+			<property name="Extends" value="armorClothBoots"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothBoots"/>
+			<property name="CustomIconTint" value="118, 227, 129"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadSoldierDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="118, 227, 129"/>
+			<property name="CustomIconTint" value="118, 227, 129"/>
+			<property name="UMA.Overlay0Tint" value="118, 227, 129"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<!-- TECHNOGEEK -->
+		<item name="FuriousRamsayStarterArmorHeadTechnogeek">
+			<property name="Extends" value="armorClothHat"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothHat"/>
+			<property name="CustomIconTint" value="15, 111, 227"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadTechnogeekDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="15, 111, 227"/>
+			<property name="CustomIconTint" value="15, 111, 227"/>
+			<property name="UMA.Overlay0Tint" value="15, 111, 227"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorChestTechnogeek">
+			<property name="Extends" value="armorClothJacket"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothJacket"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadTechnogeekDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorGlovesTechnogeek">
+			<property name="Extends" value="armorClothGloves"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothGloves"/>
+			<property name="CustomIconTint" value="15, 111, 227"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadTechnogeekDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="15, 111, 227"/>
+			<property name="CustomIconTint" value="15, 111, 227"/>
+			<property name="UMA.Overlay0Tint" value="15, 111, 227"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorLegsTechnogeek">
+			<property name="Extends" value="armorClothPants"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothPants"/>
+			<property name="CustomIconTint" value="15, 111, 227"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadTechnogeekDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="15, 111, 227"/>
+			<property name="CustomIconTint" value="15, 111, 227"/>
+			<property name="UMA.Overlay0Tint" value="15, 111, 227"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorBootsTechnogeek">
+			<property name="Extends" value="armorClothBoots"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothBoots"/>
+			<property name="CustomIconTint" value="15, 111, 227"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadTechnogeekDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="15, 111, 227"/>
+			<property name="CustomIconTint" value="15, 111, 227"/>
+			<property name="UMA.Overlay0Tint" value="15, 111, 227"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<!-- MADMAN -->
+		<item name="FuriousRamsayStarterArmorHeadMadman">
+			<property name="Extends" value="armorClothHat"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothHat"/>
+			<property name="CustomIconTint" value="232, 162, 118"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadMadmanDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="232, 162, 118"/>
+			<property name="CustomIconTint" value="232, 162, 118"/>
+			<property name="UMA.Overlay0Tint" value="232, 162, 118"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorChestMadman">
+			<property name="Extends" value="armorClothJacket"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothJacket"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadMadmanDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorGlovesMadman">
+			<property name="Extends" value="armorClothGloves"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothGloves"/>
+			<property name="CustomIconTint" value="232, 162, 118"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadMadmanDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="232, 162, 118"/>
+			<property name="CustomIconTint" value="232, 162, 118"/>
+			<property name="UMA.Overlay0Tint" value="232, 162, 118"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorLegsMadman">
+			<property name="Extends" value="armorClothPants"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothPants"/>
+			<property name="CustomIconTint" value="232, 162, 118"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadMadmanDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="232, 162, 118"/>
+			<property name="CustomIconTint" value="232, 162, 118"/>
+			<property name="UMA.Overlay0Tint" value="232, 162, 118"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorBootsMadman">
+			<property name="Extends" value="armorClothBoots"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothBoots"/>
+			<property name="CustomIconTint" value="232, 162, 118"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadMadmanDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="232, 162, 118"/>
+			<property name="CustomIconTint" value="232, 162, 118"/>
+			<property name="UMA.Overlay0Tint" value="232, 162, 118"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<!-- BUILDER -->
+		<item name="FuriousRamsayStarterArmorHeadBuilder">
+			<property name="Extends" value="armorClothHat"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothHat"/>
+			<property name="CustomIconTint" value="83, 173, 189"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadBuilderDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="194, 86, 252"/>
+			<property name="CustomIconTint" value="194, 86, 252"/>
+			<property name="UMA.Overlay0Tint" value="194, 86, 252"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorChestBuilder">
+			<property name="Extends" value="armorClothJacket"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothJacket"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadBuilderDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorGlovesBuilder">
+			<property name="Extends" value="armorClothGloves"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothGloves"/>
+			<property name="CustomIconTint" value="194, 86, 252"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadBuilderDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="194, 86, 252"/>
+			<property name="CustomIconTint" value="194, 86, 252"/>
+			<property name="UMA.Overlay0Tint" value="194, 86, 252"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorLegsBuilder">
+			<property name="Extends" value="armorClothPants"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothPants"/>
+			<property name="CustomIconTint" value="194, 86, 252"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadBuilderDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="194, 86, 252"/>
+			<property name="CustomIconTint" value="194, 86, 252"/>
+			<property name="UMA.Overlay0Tint" value="194, 86, 252"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorBootsBuilder">
+			<property name="Extends" value="armorClothBoots"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothBoots"/>
+			<property name="CustomIconTint" value="194, 86, 252"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadBuilderDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="194, 86, 252"/>
+			<property name="CustomIconTint" value="194, 86, 252"/>
+			<property name="UMA.Overlay0Tint" value="194, 86, 252"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<!-- CHEF -->
+		<item name="FuriousRamsayStarterArmorHeadChef">
+			<property name="Extends" value="armorClothHat"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothHat"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadChefDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorChestChef">
+			<property name="Extends" value="armorClothJacket"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothJacket"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadChefDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorGlovesChef">
+			<property name="Extends" value="armorClothGloves"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothGloves"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadChefDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorLegsChef">
+			<property name="Extends" value="armorClothPants"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothPants"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadChefDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStarterArmorBootsChef">
+			<property name="Extends" value="armorClothBoots"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorClothBoots"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="DescriptionKey" value="FuriousRamsayStarterArmorHeadChefDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="UMA.Overlay0Tint" value="0, 0, 0"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="qc_FuriousRamsayHunterTraining">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="83, 173, 189"/>
+			<property name="DescriptionKey" value="qc_FuriousRamsayHunterTrainingDesc"/>
+			<property name="Extends" value="FuriousRamsayNoteMaster"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayHunterTraining"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayThugTraining">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="224, 224, 54"/>
+			<property name="DescriptionKey" value="qc_FuriousRamsayThugTrainingDesc"/>
+			<property name="Extends" value="FuriousRamsayNoteMaster"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayThugTraining"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayButcherTraining">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="268, 91, 105"/>
+			<property name="DescriptionKey" value="qc_FuriousRamsayButcherTrainingDesc"/>
+			<property name="Extends" value="FuriousRamsayNoteMaster"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayButcherTraining"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsaySoldierTraining">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="118, 227, 129"/>
+			<property name="DescriptionKey" value="qc_FuriousRamsaySoldierTrainingDesc"/>
+			<property name="Extends" value="FuriousRamsayNoteMaster"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsaySoldierTraining"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayTechnogeekTraining">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="115, 111, 227"/>
+			<property name="DescriptionKey" value="qc_FuriousRamsayTechnogeekTrainingDesc"/>
+			<property name="Extends" value="FuriousRamsayNoteMaster"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayTechnogeekTraining"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayMadmanTraining">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="232, 162, 118"/>
+			<property name="DescriptionKey" value="qc_FuriousRamsayMadmanTrainingDesc"/>
+			<property name="Extends" value="FuriousRamsayNoteMaster"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayMadmanTraining"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayBuilderTraining">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="194, 86, 252"/>
+			<property name="DescriptionKey" value="qc_FuriousRamsayBuilderTrainingDesc"/>
+			<property name="Extends" value="FuriousRamsayNoteMaster"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayBuilderTraining"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayChefTraining">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="80, 80, 80"/>
+			<property name="DescriptionKey" value="qc_FuriousRamsayChefTrainingDesc"/>
+			<property name="Extends" value="FuriousRamsayNoteMaster"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayChefTraining"/>
+			</property>
 		</item>
 
 		<item name="FuriousRamsayAttributeHunterClass">

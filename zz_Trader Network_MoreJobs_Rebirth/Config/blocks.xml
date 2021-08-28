@@ -3,43 +3,41 @@
 	<append xpath="/blocks">
 
 		<!-- HUNTER -->
-		<block name="FuriousRamsayBackpackTrainerHunter">
-			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerHunterDesc"/>
-			<property name="CustomIcon" value="backpackMedium"/>
+		<block name="FuriousRamsayContainerTrainerHunter">
+			<property name="DescriptionKey" value="FuriousRamsayContainerTrainerHunterDesc"/>
+			<property name="CustomIcon" value="cntGarageStorage"/>
 			<property name="CustomIconTint" value="83, 173, 189"/>
 
 			<property name="Class" value="PlantGrowing"/>
-			<property name="PlantGrowing.Next" value="FuriousRamsayBackpackContentTrainerHunter"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayContainerContentTrainerHunter"/>
 			<property name="PlantGrowing.GrowthRate" value="0"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelGrow" value="0"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
 			<property name="PlantGrowing.FertileLevel" value="0"/>
-			<property name="Shape" value="Ext3dModel"/> 
-			<property name="Texture" value="293"/>
-			<property name="Shape" value="ModelEntity"/>
+			<property name="Shape" value="New"/>
+			<property name="Material" value="MCardboardLoot"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
-			<property name="Material" value="Mcloth"/>
+			<property name="Texture" value="276,276,270,270,270,270"/>
+			<property name="Model" value="cube_no_cull"/>
 			<property name="MaxDamage" value="10000"/>
 			<property name="Place" value="TowardsPlacer"/>
 			<property name="OnlySimpleRotations" value="true"/>			
 			<drop event="Destroy" count="0"/>
 			<property name="Stacknumber" value="1"/>
 		</block>
-		<block name="FuriousRamsayBackpackContentTrainerHunter">
+		<block name="FuriousRamsayContainerContentTrainerHunter">
 			<property name="CreativeMode" value="None"/>
-			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerHunterDesc"/>
-			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="DescriptionKey" value="FuriousRamsayContainerTrainerHunterDesc"/>
+			<property name="CustomIcon" value="cntGarageStorage"/>
 			<property name="CustomIconTint" value="83, 173, 189"/>
 
 			<property name="Class" value="Loot"/>
-			<property name="Material" value="Mcloth"/>
-			<property name="Shape" value="Ext3dModel"/> 
-			<property name="Texture" value="293"/>
-			<property name="Shape" value="ModelEntity"/>
+			<property name="Shape" value="New"/>
+			<property name="Material" value="MCardboardLoot"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Texture" value="276,276,270,270,270,270"/>
+			<property name="Model" value="cube_no_cull"/>
 			<property name="Place" value="TowardsPlacer"/>
 			<property name="OnlySimpleRotations" value="true"/>
 			<property name="Candrop" value="false"/>
@@ -51,43 +49,41 @@
 		</block>
 		
 		<!-- THUG -->
-		<block name="FuriousRamsayBackpackTrainerThug">
-			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerThugDesc"/>
-			<property name="CustomIcon" value="backpackMedium"/>
+		<block name="FuriousRamsayContainerTrainerThug">
+			<property name="DescriptionKey" value="FuriousRamsayContainerTrainerThugDesc"/>
+			<property name="CustomIcon" value="cntGarageStorage"/>
 			<property name="CustomIconTint" value="224, 224, 54"/>
 
 			<property name="Class" value="PlantGrowing"/>
-			<property name="PlantGrowing.Next" value="FuriousRamsayBackpackContentTrainerThug"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayContainerContentTrainerThug"/>
 			<property name="PlantGrowing.GrowthRate" value="0"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelGrow" value="0"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
 			<property name="PlantGrowing.FertileLevel" value="0"/>
-			<property name="Shape" value="Ext3dModel"/> 
-			<property name="Texture" value="293"/>
-			<property name="Shape" value="ModelEntity"/>
+			<property name="Shape" value="New"/>
+			<property name="Material" value="MCardboardLoot"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
-			<property name="Material" value="Mcloth"/>
+			<property name="Texture" value="276,276,270,270,270,270"/>
+			<property name="Model" value="cube_no_cull"/>
 			<property name="MaxDamage" value="10000"/>
 			<property name="Place" value="TowardsPlacer"/>
 			<property name="OnlySimpleRotations" value="true"/>			
 			<drop event="Destroy" count="0"/>
 			<property name="Stacknumber" value="1"/>
 		</block>
-		<block name="FuriousRamsayBackpackContentTrainerThug">
+		<block name="FuriousRamsayContainerContentTrainerThug">
 			<property name="CreativeMode" value="None"/>
-			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerThugDesc"/>
-			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="DescriptionKey" value="FuriousRamsayContainerTrainerThugDesc"/>
+			<property name="CustomIcon" value="cntGarageStorage"/>
 			<property name="CustomIconTint" value="224, 224, 54"/>
 
 			<property name="Class" value="Loot"/>
-			<property name="Material" value="Mcloth"/>
-			<property name="Shape" value="Ext3dModel"/> 
-			<property name="Texture" value="293"/>
-			<property name="Shape" value="ModelEntity"/>
+			<property name="Shape" value="New"/>
+			<property name="Material" value="MCardboardLoot"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Texture" value="276,276,270,270,270,270"/>
+			<property name="Model" value="cube_no_cull"/>
 			<property name="Place" value="TowardsPlacer"/>
 			<property name="OnlySimpleRotations" value="true"/>
 			<property name="Candrop" value="false"/>
@@ -99,43 +95,41 @@
 		</block>
 
 		<!-- BUTCHER -->
-		<block name="FuriousRamsayBackpackTrainerButcher">
-			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerButcherDesc"/>
-			<property name="CustomIcon" value="backpackMedium"/>
+		<block name="FuriousRamsayContainerTrainerButcher">
+			<property name="DescriptionKey" value="FuriousRamsayContainerTrainerButcherDesc"/>
+			<property name="CustomIcon" value="cntGarageStorage"/>
 			<property name="CustomIconTint" value="268, 91, 105"/>
 
 			<property name="Class" value="PlantGrowing"/>
-			<property name="PlantGrowing.Next" value="FuriousRamsayBackpackContentTrainerButcher"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayContainerContentTrainerButcher"/>
 			<property name="PlantGrowing.GrowthRate" value="0"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelGrow" value="0"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
 			<property name="PlantGrowing.FertileLevel" value="0"/>
-			<property name="Shape" value="Ext3dModel"/> 
-			<property name="Texture" value="293"/>
-			<property name="Shape" value="ModelEntity"/>
+			<property name="Shape" value="New"/>
+			<property name="Material" value="MCardboardLoot"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
-			<property name="Material" value="Mcloth"/>
+			<property name="Texture" value="276,276,270,270,270,270"/>
+			<property name="Model" value="cube_no_cull"/>
 			<property name="MaxDamage" value="10000"/>
 			<property name="Place" value="TowardsPlacer"/>
 			<property name="OnlySimpleRotations" value="true"/>			
 			<drop event="Destroy" count="0"/>
 			<property name="Stacknumber" value="1"/>
 		</block>
-		<block name="FuriousRamsayBackpackContentTrainerButcher">
+		<block name="FuriousRamsayContainerContentTrainerButcher">
 			<property name="CreativeMode" value="None"/>
-			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerButcherDesc"/>
-			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="DescriptionKey" value="FuriousRamsayContainerTrainerButcherDesc"/>
+			<property name="CustomIcon" value="cntGarageStorage"/>
 			<property name="CustomIconTint" value="268, 91, 105"/>
 
 			<property name="Class" value="Loot"/>
-			<property name="Material" value="Mcloth"/>
-			<property name="Shape" value="Ext3dModel"/> 
-			<property name="Texture" value="293"/>
-			<property name="Shape" value="ModelEntity"/>
+			<property name="Shape" value="New"/>
+			<property name="Material" value="MCardboardLoot"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Texture" value="276,276,270,270,270,270"/>
+			<property name="Model" value="cube_no_cull"/>
 			<property name="Place" value="TowardsPlacer"/>
 			<property name="OnlySimpleRotations" value="true"/>
 			<property name="Candrop" value="false"/>
@@ -147,43 +141,41 @@
 		</block>
 
 		<!-- SOLDIER -->
-		<block name="FuriousRamsayBackpackTrainerSoldier">
-			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerSoldierDesc"/>
-			<property name="CustomIcon" value="backpackMedium"/>
+		<block name="FuriousRamsayContainerTrainerSoldier">
+			<property name="DescriptionKey" value="FuriousRamsayContainerTrainerSoldierDesc"/>
+			<property name="CustomIcon" value="cntGarageStorage"/>
 			<property name="CustomIconTint" value="118, 227, 129"/>
 
 			<property name="Class" value="PlantGrowing"/>
-			<property name="PlantGrowing.Next" value="FuriousRamsayBackpackContentTrainerSoldier"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayContainerContentTrainerSoldier"/>
 			<property name="PlantGrowing.GrowthRate" value="0"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelGrow" value="0"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
 			<property name="PlantGrowing.FertileLevel" value="0"/>
-			<property name="Shape" value="Ext3dModel"/> 
-			<property name="Texture" value="293"/>
-			<property name="Shape" value="ModelEntity"/>
+			<property name="Shape" value="New"/>
+			<property name="Material" value="MCardboardLoot"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
-			<property name="Material" value="Mcloth"/>
+			<property name="Texture" value="276,276,270,270,270,270"/>
+			<property name="Model" value="cube_no_cull"/>
 			<property name="MaxDamage" value="10000"/>
 			<property name="Place" value="TowardsPlacer"/>
 			<property name="OnlySimpleRotations" value="true"/>			
 			<drop event="Destroy" count="0"/>
 			<property name="Stacknumber" value="1"/>
 		</block>
-		<block name="FuriousRamsayBackpackContentTrainerSoldier">
+		<block name="FuriousRamsayContainerContentTrainerSoldier">
 			<property name="CreativeMode" value="None"/>
-			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerSoldierDesc"/>
-			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="DescriptionKey" value="FuriousRamsayContainerTrainerSoldierDesc"/>
+			<property name="CustomIcon" value="cntGarageStorage"/>
 			<property name="CustomIconTint" value="118, 227, 129"/>
 
 			<property name="Class" value="Loot"/>
-			<property name="Material" value="Mcloth"/>
-			<property name="Shape" value="Ext3dModel"/> 
-			<property name="Texture" value="293"/>
-			<property name="Shape" value="ModelEntity"/>
+			<property name="Shape" value="New"/>
+			<property name="Material" value="MCardboardLoot"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Texture" value="276,276,270,270,270,270"/>
+			<property name="Model" value="cube_no_cull"/>
 			<property name="Place" value="TowardsPlacer"/>
 			<property name="OnlySimpleRotations" value="true"/>
 			<property name="Candrop" value="false"/>
@@ -195,43 +187,41 @@
 		</block>
 
 		<!-- TECHNOGEEK -->
-		<block name="FuriousRamsayBackpackTrainerTechnogeek">
-			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerTechnogeekDesc"/>
-			<property name="CustomIcon" value="backpackMedium"/>
+		<block name="FuriousRamsayContainerTrainerTechnogeek">
+			<property name="DescriptionKey" value="FuriousRamsayContainerTrainerTechnogeekDesc"/>
+			<property name="CustomIcon" value="cntGarageStorage"/>
 			<property name="CustomIconTint" value="115, 111, 227"/>
 
 			<property name="Class" value="PlantGrowing"/>
-			<property name="PlantGrowing.Next" value="FuriousRamsayBackpackContentTrainerTechnogeek"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayContainerContentTrainerTechnogeek"/>
 			<property name="PlantGrowing.GrowthRate" value="0"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelGrow" value="0"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
 			<property name="PlantGrowing.FertileLevel" value="0"/>
-			<property name="Shape" value="Ext3dModel"/> 
-			<property name="Texture" value="293"/>
-			<property name="Shape" value="ModelEntity"/>
+			<property name="Shape" value="New"/>
+			<property name="Material" value="MCardboardLoot"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
-			<property name="Material" value="Mcloth"/>
+			<property name="Texture" value="276,276,270,270,270,270"/>
+			<property name="Model" value="cube_no_cull"/>
 			<property name="MaxDamage" value="10000"/>
 			<property name="Place" value="TowardsPlacer"/>
 			<property name="OnlySimpleRotations" value="true"/>			
 			<drop event="Destroy" count="0"/>
 			<property name="Stacknumber" value="1"/>
 		</block>
-		<block name="FuriousRamsayBackpackContentTrainerTechnogeek">
+		<block name="FuriousRamsayContainerContentTrainerTechnogeek">
 			<property name="CreativeMode" value="None"/>
-			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerTechnogeekDesc"/>
-			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="DescriptionKey" value="FuriousRamsayContainerTrainerTechnogeekDesc"/>
+			<property name="CustomIcon" value="cntGarageStorage"/>
 			<property name="CustomIconTint" value="115, 111, 227"/>
 
 			<property name="Class" value="Loot"/>
-			<property name="Material" value="Mcloth"/>
-			<property name="Shape" value="Ext3dModel"/> 
-			<property name="Texture" value="293"/>
-			<property name="Shape" value="ModelEntity"/>
+			<property name="Shape" value="New"/>
+			<property name="Material" value="MCardboardLoot"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Texture" value="276,276,270,270,270,270"/>
+			<property name="Model" value="cube_no_cull"/>
 			<property name="Place" value="TowardsPlacer"/>
 			<property name="OnlySimpleRotations" value="true"/>
 			<property name="Candrop" value="false"/>
@@ -243,43 +233,41 @@
 		</block>
 
 		<!-- MADMAN -->
-		<block name="FuriousRamsayBackpackTrainerMadman">
-			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerMadmanDesc"/>
-			<property name="CustomIcon" value="backpackMedium"/>
+		<block name="FuriousRamsayContainerTrainerMadman">
+			<property name="DescriptionKey" value="FuriousRamsayContainerTrainerMadmanDesc"/>
+			<property name="CustomIcon" value="cntGarageStorage"/>
 			<property name="CustomIconTint" value="232, 162, 118"/>
 
 			<property name="Class" value="PlantGrowing"/>
-			<property name="PlantGrowing.Next" value="FuriousRamsayBackpackContentTrainerMadman"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayContainerContentTrainerMadman"/>
 			<property name="PlantGrowing.GrowthRate" value="0"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelGrow" value="0"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
 			<property name="PlantGrowing.FertileLevel" value="0"/>
-			<property name="Shape" value="Ext3dModel"/> 
-			<property name="Texture" value="293"/>
-			<property name="Shape" value="ModelEntity"/>
+			<property name="Shape" value="New"/>
+			<property name="Material" value="MCardboardLoot"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
-			<property name="Material" value="Mcloth"/>
+			<property name="Texture" value="276,276,270,270,270,270"/>
+			<property name="Model" value="cube_no_cull"/>
 			<property name="MaxDamage" value="10000"/>
 			<property name="Place" value="TowardsPlacer"/>
 			<property name="OnlySimpleRotations" value="true"/>			
 			<drop event="Destroy" count="0"/>
 			<property name="Stacknumber" value="1"/>
 		</block>
-		<block name="FuriousRamsayBackpackContentTrainerMadman">
+		<block name="FuriousRamsayContainerContentTrainerMadman">
 			<property name="CreativeMode" value="None"/>
-			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerMadmanDesc"/>
-			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="DescriptionKey" value="FuriousRamsayContainerTrainerMadmanDesc"/>
+			<property name="CustomIcon" value="cntGarageStorage"/>
 			<property name="CustomIconTint" value="232, 162, 118"/>
 
 			<property name="Class" value="Loot"/>
-			<property name="Material" value="Mcloth"/>
-			<property name="Shape" value="Ext3dModel"/> 
-			<property name="Texture" value="293"/>
-			<property name="Shape" value="ModelEntity"/>
+			<property name="Shape" value="New"/>
+			<property name="Material" value="MCardboardLoot"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Texture" value="276,276,270,270,270,270"/>
+			<property name="Model" value="cube_no_cull"/>
 			<property name="Place" value="TowardsPlacer"/>
 			<property name="OnlySimpleRotations" value="true"/>
 			<property name="Candrop" value="false"/>
@@ -291,43 +279,41 @@
 		</block>
 
 		<!-- BUILDER -->
-		<block name="FuriousRamsayBackpackTrainerBuilder">
-			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerBuilderDesc"/>
-			<property name="CustomIcon" value="backpackMedium"/>
+		<block name="FuriousRamsayContainerTrainerBuilder">
+			<property name="DescriptionKey" value="FuriousRamsayContainerTrainerBuilderDesc"/>
+			<property name="CustomIcon" value="cntGarageStorage"/>
 			<property name="CustomIconTint" value="194, 86, 252"/>
 
 			<property name="Class" value="PlantGrowing"/>
-			<property name="PlantGrowing.Next" value="FuriousRamsayBackpackContentTrainerBuilder"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayContainerContentTrainerBuilder"/>
 			<property name="PlantGrowing.GrowthRate" value="0"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelGrow" value="0"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
 			<property name="PlantGrowing.FertileLevel" value="0"/>
-			<property name="Shape" value="Ext3dModel"/> 
-			<property name="Texture" value="293"/>
-			<property name="Shape" value="ModelEntity"/>
+			<property name="Shape" value="New"/>
+			<property name="Material" value="MCardboardLoot"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
-			<property name="Material" value="Mcloth"/>
+			<property name="Texture" value="276,276,270,270,270,270"/>
+			<property name="Model" value="cube_no_cull"/>
 			<property name="MaxDamage" value="10000"/>
 			<property name="Place" value="TowardsPlacer"/>
 			<property name="OnlySimpleRotations" value="true"/>			
 			<drop event="Destroy" count="0"/>
 			<property name="Stacknumber" value="1"/>
 		</block>
-		<block name="FuriousRamsayBackpackContentTrainerBuilder">
+		<block name="FuriousRamsayContainerContentTrainerBuilder">
 			<property name="CreativeMode" value="None"/>
-			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerBuilderDesc"/>
-			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="DescriptionKey" value="FuriousRamsayContainerTrainerBuilderDesc"/>
+			<property name="CustomIcon" value="cntGarageStorage"/>
 			<property name="CustomIconTint" value="194, 86, 252"/>
 
 			<property name="Class" value="Loot"/>
-			<property name="Material" value="Mcloth"/>
-			<property name="Shape" value="Ext3dModel"/> 
-			<property name="Texture" value="293"/>
-			<property name="Shape" value="ModelEntity"/>
+			<property name="Shape" value="New"/>
+			<property name="Material" value="MCardboardLoot"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Texture" value="276,276,270,270,270,270"/>
+			<property name="Model" value="cube_no_cull"/>
 			<property name="Place" value="TowardsPlacer"/>
 			<property name="OnlySimpleRotations" value="true"/>
 			<property name="Candrop" value="false"/>
@@ -339,43 +325,41 @@
 		</block>
 
 		<!-- CHEF -->
-		<block name="FuriousRamsayBackpackTrainerChef">
-			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerChefDesc"/>
-			<property name="CustomIcon" value="backpackMedium"/>
+		<block name="FuriousRamsayContainerTrainerChef">
+			<property name="DescriptionKey" value="FuriousRamsayContainerTrainerChefDesc"/>
+			<property name="CustomIcon" value="cntGarageStorage"/>
 			<property name="CustomIconTint" value="80, 80, 80"/>
 
 			<property name="Class" value="PlantGrowing"/>
-			<property name="PlantGrowing.Next" value="FuriousRamsayBackpackContentTrainerChef"/>
+			<property name="PlantGrowing.Next" value="FuriousRamsayContainerContentTrainerChef"/>
 			<property name="PlantGrowing.GrowthRate" value="0"/>
 			<property name="PlantGrowing.IsRandom" value="false"/>
 			<property name="PlantGrowing.LightLevelGrow" value="0"/>
 			<property name="PlantGrowing.LightLevelStay" value="0"/>
 			<property name="PlantGrowing.FertileLevel" value="0"/>
-			<property name="Shape" value="Ext3dModel"/> 
-			<property name="Texture" value="293"/>
-			<property name="Shape" value="ModelEntity"/>
+			<property name="Shape" value="New"/>
+			<property name="Material" value="MCardboardLoot"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
-			<property name="Material" value="Mcloth"/>
+			<property name="Texture" value="276,276,270,270,270,270"/>
+			<property name="Model" value="cube_no_cull"/>
 			<property name="MaxDamage" value="10000"/>
 			<property name="Place" value="TowardsPlacer"/>
 			<property name="OnlySimpleRotations" value="true"/>			
 			<drop event="Destroy" count="0"/>
 			<property name="Stacknumber" value="1"/>
 		</block>
-		<block name="FuriousRamsayBackpackContentTrainerChef">
+		<block name="FuriousRamsayContainerContentTrainerChef">
 			<property name="CreativeMode" value="None"/>
-			<property name="DescriptionKey" value="FuriousRamsayBackpackTrainerChefDesc"/>
-			<property name="CustomIcon" value="backpackMedium"/>
+			<property name="DescriptionKey" value="FuriousRamsayContainerTrainerChefDesc"/>
+			<property name="CustomIcon" value="cntGarageStorage"/>
 			<property name="CustomIconTint" value="80, 80, 80"/>
 
 			<property name="Class" value="Loot"/>
-			<property name="Material" value="Mcloth"/>
-			<property name="Shape" value="Ext3dModel"/> 
-			<property name="Texture" value="293"/>
-			<property name="Shape" value="ModelEntity"/>
+			<property name="Shape" value="New"/>
+			<property name="Material" value="MCardboardLoot"/>
 			<property name="Path" value="solid"/>
-			<property name="Model" value="#Entities/LootContainers?backpack01Prefab.prefab" />
+			<property name="Texture" value="276,276,270,270,270,270"/>
+			<property name="Model" value="cube_no_cull"/>
 			<property name="Place" value="TowardsPlacer"/>
 			<property name="OnlySimpleRotations" value="true"/>
 			<property name="Candrop" value="false"/>
