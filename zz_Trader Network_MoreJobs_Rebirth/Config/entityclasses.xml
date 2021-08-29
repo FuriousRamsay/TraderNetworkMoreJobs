@@ -101,8 +101,8 @@
 		</entity_class>
 
 		<entity_class name="FuriousRamsayThugTrainerTier1" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerThug,FuriousRamsayThugTraining"/>
-			<property name="Archetype" value="FuriousRamsayIsaac"/>		
+			<property name="Tags" value="entity,npc,human,TrainerThug,UMA,FuriousRamsayThugTraining"/>
+			<property name="Archetype" value="FuriousRamsayThugTraining"/>		
 
 			<property name="SoundRandom" value=""/>
 
@@ -111,27 +111,205 @@
 			<property name="HandItem" value="FuriousRamsayMeleeHandThugTrainingTier1"/>
 
 			<property name="MoveSpeed" value="0.5"/> 
-			<property name="MoveSpeedAggro" value="1.6, 2"/> 
-			<property name="MoveSpeedPanic" value="2"/>
+			<property name="MoveSpeedAggro" value="0.9, 0.9"/> 
+			<property name="MoveSpeedPanic" value="0.9"/>
+
+			<property name="SwimSpeed" value="1.1"/>
+			<property name="CanClimbLadders" value="true"/>
 
 			<property name="MaxViewAngle" value="360"/>
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="SightRange" value="200"/> 
 
 			<property name="AITask-1" value="BreakBlock"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,200"/>
-			<property name="AITask-3" value="ApproachSpot" data="class=EntityPlayer,200,200"/>
+			<property name="AITask-2" value="DestroyArea"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityPlayer,200,EntityZombie,10,EntityZombie,10"/>
 			<property name="AITask-4" value="Wander"/>
 			<property name="AITask-5" value=""/>
-			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
-			<property name="AITarget-2" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+			<property name="TimeStayAfterDeath" value="0"/>
+
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsaySpeedBurstTimerTier1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTrainerTimer"/>
+                <passive_effect name="HealthMax" operation="base_set" value="10000" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="0" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayThugTrainerTier2" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,TrainerThug,UMA,FuriousRamsayThugTraining"/>
+			<property name="Archetype" value="FuriousRamsayThugTraining"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotRed" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandThugTrainingTier2"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 0.95"/>
+			<property name="MoveSpeedPanic" value="0.95"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="DestroyArea"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityPlayer,200,EntityZombie,10,EntityZombie,10"/>
+			<property name="AITask-4" value="Wander"/>
+			<property name="AITask-5" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
 
 			<property name="TimeStayAfterDeath" value="0"/>
 
             <effect_group name="Base Effects">
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTrainerTimer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsaySpeedBurstTimerTier2"/>
                 <passive_effect name="HealthMax" operation="base_set" value="10000" />
-                <passive_effect name="PhysicalDamageResist" operation="base_set" value="100" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="0" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayThugTrainerTier3" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,TrainerThug,UMA,FuriousRamsayThugTraining"/>
+			<property name="Archetype" value="FuriousRamsayThugTraining"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotRed" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandThugTrainingTier3"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1"/>
+			<property name="MoveSpeedPanic" value="1"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="DestroyArea"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityPlayer,200,EntityZombie,10,EntityZombie,10"/>
+			<property name="AITask-4" value="Wander"/>
+			<property name="AITask-5" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+			<property name="TimeStayAfterDeath" value="0"/>
+
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTrainerTimer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsaySpeedBurstTimerTier3"/>
+                <passive_effect name="HealthMax" operation="base_set" value="10000" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="0" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayThugTrainerTier4" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,TrainerThug,UMA,FuriousRamsayThugTraining"/>
+			<property name="Archetype" value="FuriousRamsayThugTraining"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotRed" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandThugTrainingTier4"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1.05"/>
+			<property name="MoveSpeedPanic" value="1.05"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="DestroyArea"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityPlayer,200,EntityZombie,10,EntityZombie,10"/>
+			<property name="AITask-4" value="Wander"/>
+			<property name="AITask-5" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+			<property name="TimeStayAfterDeath" value="0"/>
+
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTrainerTimer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsaySpeedBurstTimerTier4"/>
+                <passive_effect name="HealthMax" operation="base_set" value="10000" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="0" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayThugTrainerTier5" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,TrainerThug,UMA,FuriousRamsayThugTraining"/>
+			<property name="Archetype" value="FuriousRamsayThugTraining"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotRed" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandThugTrainingTier5"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1.1"/>
+			<property name="MoveSpeedPanic" value="1.1"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="DestroyArea"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityPlayer,200,EntityZombie,10,EntityZombie,10"/>
+			<property name="AITask-4" value="Wander"/>
+			<property name="AITask-5" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+			<property name="TimeStayAfterDeath" value="0"/>
+
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTrainerTimer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsaySpeedBurstTimerTier5"/>
+                <passive_effect name="HealthMax" operation="base_set" value="10000" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="0" />
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
             </effect_group>
@@ -233,6 +411,1614 @@
 			<property name="HandItem" value="FuriousRamsayMeleeHandChef"/>
 		</entity_class>
 
+		<!-- HUNTER TRAINING HELPERS -->
+		<entity_class name="FuriousRamsayHunterGenericTrainingTier1" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerHunter"/>
+			<property name="Archetype" value="FuriousRamsayGenericHunterTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandHunterGenericTrainingTier1"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 0.9"/>
+			<property name="MoveSpeedPanic" value="0.9"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="220" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayHunterGenericTrainingTier2" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerHunter"/>
+			<property name="Archetype" value="FuriousRamsayGenericHunterTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandHunterGenericTrainingTier2"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 0.95"/>
+			<property name="MoveSpeedPanic" value="0.95"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="300" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayHunterGenericTrainingTier3" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerHunter"/>
+			<property name="Archetype" value="FuriousRamsayGenericHunterTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandHunterGenericTrainingTier3"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1"/>
+			<property name="MoveSpeedPanic" value="1"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="400" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayHunterGenericTrainingTier4" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerHunter"/>
+			<property name="Archetype" value="FuriousRamsayGenericHunterTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandHunterGenericTrainingTier4"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1.05"/>
+			<property name="MoveSpeedPanic" value="1.05"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="550" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayHunterGenericTrainingTier5" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerHunter"/>
+			<property name="Archetype" value="FuriousRamsayGenericHunterTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandHunterGenericTrainingTier5"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1.1"/>
+			<property name="MoveSpeedPanic" value="1.1"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="750" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<!-- THUG TRAINING HELPERS -->
+		<entity_class name="FuriousRamsayThugGenericTrainingTier1" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerThug"/>
+			<property name="Archetype" value="FuriousRamsayGenericThugTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandThugGenericTrainingTier1"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 0.9"/>
+			<property name="MoveSpeedPanic" value="0.9"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="220" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayThugGenericTrainingTier2" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerThug"/>
+			<property name="Archetype" value="FuriousRamsayGenericThugTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandThugGenericTrainingTier2"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 0.95"/>
+			<property name="MoveSpeedPanic" value="0.95"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="300" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayThugGenericTrainingTier3" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerThug"/>
+			<property name="Archetype" value="FuriousRamsayGenericThugTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandThugGenericTrainingTier3"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1"/>
+			<property name="MoveSpeedPanic" value="1"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="400" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayThugGenericTrainingTier4" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerThug"/>
+			<property name="Archetype" value="FuriousRamsayGenericThugTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandThugGenericTrainingTier4"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1.05"/>
+			<property name="MoveSpeedPanic" value="1.05"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="550" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayThugGenericTrainingTier5" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerThug"/>
+			<property name="Archetype" value="FuriousRamsayGenericThugTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandThugGenericTrainingTier5"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1.1"/>
+			<property name="MoveSpeedPanic" value="1.1"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="750" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+		
+		<!-- BUTCHER TRAINING HELPERS -->
+		<entity_class name="FuriousRamsayButcherGenericTrainingTier1" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerButcher"/>
+			<property name="Archetype" value="FuriousRamsayGenericButcherTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandButcherGenericTrainingTier1"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 0.9"/>
+			<property name="MoveSpeedPanic" value="0.9"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="220" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayButcherGenericTrainingTier2" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerButcher"/>
+			<property name="Archetype" value="FuriousRamsayGenericButcherTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandButcherGenericTrainingTier2"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 0.95"/>
+			<property name="MoveSpeedPanic" value="0.95"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="300" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayButcherGenericTrainingTier3" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerButcher"/>
+			<property name="Archetype" value="FuriousRamsayGenericButcherTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandButcherGenericTrainingTier3"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1"/>
+			<property name="MoveSpeedPanic" value="1"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="400" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayButcherGenericTrainingTier4" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerButcher"/>
+			<property name="Archetype" value="FuriousRamsayGenericButcherTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandButcherGenericTrainingTier4"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1.05"/>
+			<property name="MoveSpeedPanic" value="1.05"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="550" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayButcherGenericTrainingTier5" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerButcher"/>
+			<property name="Archetype" value="FuriousRamsayGenericButcherTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandButcherGenericTrainingTier5"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1.1"/>
+			<property name="MoveSpeedPanic" value="1.1"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="750" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<!-- SOLDIER TRAINING HELPERS -->
+		<entity_class name="FuriousRamsaySoldierGenericTrainingTier1" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerSoldier"/>
+			<property name="Archetype" value="FuriousRamsayGenericSoldierTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSoldierGenericTrainingTier1"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 0.9"/>
+			<property name="MoveSpeedPanic" value="0.9"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="220" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsaySoldierGenericTrainingTier2" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerSoldier"/>
+			<property name="Archetype" value="FuriousRamsayGenericSoldierTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSoldierGenericTrainingTier2"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 0.95"/>
+			<property name="MoveSpeedPanic" value="0.95"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="300" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsaySoldierGenericTrainingTier3" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerSoldier"/>
+			<property name="Archetype" value="FuriousRamsayGenericSoldierTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSoldierGenericTrainingTier3"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1"/>
+			<property name="MoveSpeedPanic" value="1"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="400" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsaySoldierGenericTrainingTier4" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerSoldier"/>
+			<property name="Archetype" value="FuriousRamsayGenericSoldierTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSoldierGenericTrainingTier4"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1.05"/>
+			<property name="MoveSpeedPanic" value="1.05"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="550" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsaySoldierGenericTrainingTier5" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerSoldier"/>
+			<property name="Archetype" value="FuriousRamsayGenericSoldierTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSoldierGenericTrainingTier5"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1.1"/>
+			<property name="MoveSpeedPanic" value="1.1"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="750" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<!-- TECHNOGEEK TRAINING HELPERS -->
+		<entity_class name="FuriousRamsayTechnogeekGenericTrainingTier1" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerTechnogeek"/>
+			<property name="Archetype" value="FuriousRamsayGenericTechnogeekTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandTechnogeekGenericTrainingTier1"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 0.9"/>
+			<property name="MoveSpeedPanic" value="0.9"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="220" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayTechnogeekGenericTrainingTier2" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerTechnogeek"/>
+			<property name="Archetype" value="FuriousRamsayGenericTechnogeekTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandTechnogeekGenericTrainingTier2"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 0.95"/>
+			<property name="MoveSpeedPanic" value="0.95"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="300" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayTechnogeekGenericTrainingTier3" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerTechnogeek"/>
+			<property name="Archetype" value="FuriousRamsayGenericTechnogeekTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandTechnogeekGenericTrainingTier3"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1"/>
+			<property name="MoveSpeedPanic" value="1"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="400" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayTechnogeekGenericTrainingTier4" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerTechnogeek"/>
+			<property name="Archetype" value="FuriousRamsayGenericTechnogeekTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandTechnogeekGenericTrainingTier4"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1.05"/>
+			<property name="MoveSpeedPanic" value="1.05"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="550" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayTechnogeekGenericTrainingTier5" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerTechnogeek"/>
+			<property name="Archetype" value="FuriousRamsayGenericTechnogeekTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandTechnogeekGenericTrainingTier5"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1.1"/>
+			<property name="MoveSpeedPanic" value="1.1"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="750" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<!-- MADMAN TRAINING HELPERS -->
+		<entity_class name="FuriousRamsayMadmanGenericTrainingTier1" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerMadman"/>
+			<property name="Archetype" value="FuriousRamsayGenericMadmanTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandMadmanGenericTrainingTier1"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 0.9"/>
+			<property name="MoveSpeedPanic" value="0.9"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="220" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayMadmanGenericTrainingTier2" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerMadman"/>
+			<property name="Archetype" value="FuriousRamsayGenericMadmanTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandMadmanGenericTrainingTier2"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 0.95"/>
+			<property name="MoveSpeedPanic" value="0.95"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="300" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayMadmanGenericTrainingTier3" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerMadman"/>
+			<property name="Archetype" value="FuriousRamsayGenericMadmanTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandMadmanGenericTrainingTier3"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1"/>
+			<property name="MoveSpeedPanic" value="1"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="400" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayMadmanGenericTrainingTier4" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerMadman"/>
+			<property name="Archetype" value="FuriousRamsayGenericMadmanTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandMadmanGenericTrainingTier4"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1.05"/>
+			<property name="MoveSpeedPanic" value="1.05"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="550" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayMadmanGenericTrainingTier5" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerMadman"/>
+			<property name="Archetype" value="FuriousRamsayGenericMadmanTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandMadmanGenericTrainingTier5"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1.1"/>
+			<property name="MoveSpeedPanic" value="1.1"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="750" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<!-- BUILDER TRAINING HELPERS -->
+		<entity_class name="FuriousRamsayBuilderGenericTrainingTier1" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerBuilder"/>
+			<property name="Archetype" value="FuriousRamsayGenericBuilderTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandBuilderGenericTrainingTier1"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 0.9"/>
+			<property name="MoveSpeedPanic" value="0.9"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="220" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBuilderGenericTrainingTier2" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerBuilder"/>
+			<property name="Archetype" value="FuriousRamsayGenericBuilderTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandBuilderGenericTrainingTier2"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 0.95"/>
+			<property name="MoveSpeedPanic" value="0.95"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="300" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBuilderGenericTrainingTier3" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerBuilder"/>
+			<property name="Archetype" value="FuriousRamsayGenericBuilderTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandBuilderGenericTrainingTier3"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1"/>
+			<property name="MoveSpeedPanic" value="1"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="400" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBuilderGenericTrainingTier4" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerBuilder"/>
+			<property name="Archetype" value="FuriousRamsayGenericBuilderTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandBuilderGenericTrainingTier4"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1.05"/>
+			<property name="MoveSpeedPanic" value="1.05"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="550" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBuilderGenericTrainingTier5" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerBuilder"/>
+			<property name="Archetype" value="FuriousRamsayGenericBuilderTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandBuilderGenericTrainingTier5"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1.1"/>
+			<property name="MoveSpeedPanic" value="1.1"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="750" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<!-- CHEF TRAINING HELPERS -->
+		<entity_class name="FuriousRamsayChefGenericTrainingTier1" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerChef"/>
+			<property name="Archetype" value="FuriousRamsayGenericChefTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandChefGenericTrainingTier1"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 0.9"/>
+			<property name="MoveSpeedPanic" value="0.9"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="220" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayChefGenericTrainingTier2" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerChef"/>
+			<property name="Archetype" value="FuriousRamsayGenericChefTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandChefGenericTrainingTier2"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 0.95"/>
+			<property name="MoveSpeedPanic" value="0.95"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="300" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayChefGenericTrainingTier3" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerChef"/>
+			<property name="Archetype" value="FuriousRamsayGenericChefTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandChefGenericTrainingTier3"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1"/>
+			<property name="MoveSpeedPanic" value="1"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="400" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayChefGenericTrainingTier4" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerChef"/>
+			<property name="Archetype" value="FuriousRamsayGenericChefTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandChefGenericTrainingTier4"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1.05"/>
+			<property name="MoveSpeedPanic" value="1.05"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="550" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayChefGenericTrainingTier5" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,UMA,TrainerChef"/>
+			<property name="Archetype" value="FuriousRamsayGenericChefTraining"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandChefGenericTrainingTier5"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 1.1"/>
+			<property name="MoveSpeedPanic" value="1.1"/>
+
+			<property name="SwimSpeed" value="1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityZombie,20"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-4" value=""/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="750" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+            <effect_group name="Health Effects">
+            </effect_group>
+		</entity_class>
+		
 	</append>
 
 </configs>

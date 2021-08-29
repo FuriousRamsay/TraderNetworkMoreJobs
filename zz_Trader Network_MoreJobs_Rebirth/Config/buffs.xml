@@ -339,6 +339,86 @@
 
 		<append xpath="/buffs" >
 
+			<buff name="FuriousRamsaySpeedBurstTimerTier1" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self"	buff="FuriousRamsaySpeedBurstTier1"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsaySpeedBurstTier1" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="2"/>
+				<effect_group>
+					<passive_effect name="WalkSpeed" operation="perc_add" value=".5"/>
+					<passive_effect name="RunSpeed" operation="perc_add" value=".5"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsaySpeedBurstTimerTier2" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self"	buff="FuriousRamsaySpeedBurstTier2"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsaySpeedBurstTier2" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="2.5"/>
+				<effect_group>
+					<passive_effect name="WalkSpeed" operation="perc_add" value=".6"/>
+					<passive_effect name="RunSpeed" operation="perc_add" value=".6"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsaySpeedBurstTimerTier3" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self"	buff="FuriousRamsaySpeedBurstTier3"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsaySpeedBurstTier3" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="3"/>
+				<effect_group>
+					<passive_effect name="WalkSpeed" operation="perc_add" value=".7"/>
+					<passive_effect name="RunSpeed" operation="perc_add" value=".7"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsaySpeedBurstTimerTier4" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self"	buff="FuriousRamsaySpeedBurstTier4"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsaySpeedBurstTier4" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="3.5"/>
+				<effect_group>
+					<passive_effect name="WalkSpeed" operation="perc_add" value=".8"/>
+					<passive_effect name="RunSpeed" operation="perc_add" value=".8"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsaySpeedBurstTimerTier5" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<update_rate value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self"	buff="FuriousRamsaySpeedBurstTier5"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsaySpeedBurstTier5" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="4"/>
+				<effect_group>
+					<passive_effect name="WalkSpeed" operation="perc_add" value=".9"/>
+					<passive_effect name="RunSpeed" operation="perc_add" value=".9"/>
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayVanishTrainerTimer" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
 				<duration value="300"/>
@@ -349,6 +429,7 @@
 
 			<buff name="FuriousRamsayRemoveTrainingNPC" hidden="true" remove_on_death="true">
 				<duration value="0.1"/>
+				<effect_group>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="-99999">
 						<requirement name="EntityTagCompare" tags="FuriousRamsayThugTraining"/>
 					</triggered_effect>

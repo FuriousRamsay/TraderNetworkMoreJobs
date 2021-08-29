@@ -5552,7 +5552,7 @@ FuriousRamsayVultureToxicRadiated
 
         <entity_class name="FuriousRamsayUMATemplateMale" extends="zombieTemplateMale">
 			<property name="HideInSpawnMenu" value="true"/>
-            <property name="Tags" value="entity,enemy,UMA" />
+            <property name="Tags" value="entity,enemy,UMA,FuriousRamsayHealthRegen" />
 			<property name="EntityType" value="Zombie"/>
             <property name="Mesh" value="#Entities/Zombies?Zombies/zombie01Ragdoll.prefab" />
             <property name="Prefab" value="NPC" />
@@ -5666,9 +5666,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="PushFactor" value="10"/>
 			<property name="TimeStayAfterDeath" value="30"/>
 
-			<property name="AINoiseSeekDist" value="8"/>
-			<property name="SightRange" value="100"/> 
-
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
 			<property name="AITask-3" value="Territorial"/>
@@ -5727,7 +5724,7 @@ FuriousRamsayVultureToxicRadiated
 
         <entity_class name="FuriousRamsayUMATemplateSurvivorMale" extends="FuriousRamsayUMATemplateMale">
 		<!--Survivors: Earl, Jim, Mike -->
-            <property name="Tags" value="player,UMA,survivor" />
+            <property name="Tags" value="player,UMA,survivor,FuriousRamsayHealthRegen" />
 			<property name="HideInSpawnMenu" value="true"/>
             <property name="Class" value="EntitySurvivor" />
             <property name="HandItem" value="FuriousRamsayMeleeHandZombieSurvivor" />
@@ -5876,7 +5873,7 @@ FuriousRamsayVultureToxicRadiated
 
         <entity_class name="FuriousRamsayUMATemplateSurvivorFemale" extends="FuriousRamsayUMATemplateFemale">
 		<!-- Survivors: Emma, Maria, Rayah -->
-            <property name="Tags" value="player,UMA,survivor" />
+            <property name="Tags" value="player,UMA,survivor,FuriousRamsayHealthRegen" />
 			<property name="HideInSpawnMenu" value="true"/>
             <property name="Class" value="EntitySurvivor" />
             <property name="HandItem" value="FuriousRamsayMeleeHandZombieSurvivor" />
@@ -6799,7 +6796,7 @@ FuriousRamsayVultureToxicRadiated
 
         <entity_class name="FuriousRamsayUMABlackShieldBoss" extends="FuriousRamsayUMATemplateMale">
 			<property name="NavObject" value="FuriousRamsayDotRed"/>
-            <property name="Tags" value="UMA,boss" />
+            <property name="Tags" value="UMA,boss,FuriousRamsayHealthRegen" />
 
 			<property name="SoundRandom" value=""/>
 			<property name="SoundAlert" value=""/>
