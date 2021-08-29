@@ -886,7 +886,7 @@
 			<property name="Group" value="Clothing"/>
 			<property name="RepairExpMultiplier" value="10.8"/>
 			<property name="RepairTools" value="FuriousRamsayFireArmorRepairKit"/>
-			<property name="SellableToTrader" value="false"/>
+			<!--<property name="SellableToTrader" value="false"/>-->
 			<property name="ShowQuality" value="true"/>
 			<property name="EconomicValue" value="200"/>
 		</item>
@@ -986,17 +986,16 @@
 				<property name="Mask0" value="Head" param1="inner"/>
 				<property name="Mask1" value="Head" param1="outer"/>
 			</property>			
-			<effect_group name="Armor Buffs">
+			<effect_group name="Armor Buffs" tiered="false">
 				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFire"/>			
 				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFire"/>
 			</effect_group>
-			<effect_group name="cloth armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+			<effect_group name="cloth armor" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.3"/>
 				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="150"/>
 				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
 				<display_value name="dStaminaChangeOT" value="0"/>
 			</effect_group>

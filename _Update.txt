@@ -1,11 +1,33 @@
-TODO: Add Auras to progression
+TODO: balance special armor stats
+TODO: Possibly remove tiers from special armor, adjust prices
+TODO: change the decoy and trader spawners to the new way
 
-ex: 						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPerkHunterMobilityAura" operation="set" value="1"/>	
+TODO: Buff displays for Ally buffs (Dog, Wolf)
+CHECK: healing buff for wolf prototype
 
-TODO: Add localisation for each level of Aura, with details of effects
+TODO: change display type to nothing for npc blocks
+
+==============
+
+TODO: Add fnding a trader to the main storyline
+
+TODO: Finish Thug Abilities. One per weapon?
+TODO: Figuer out how Trainer helps with the player progression
+TODO: Add 2 new Thug Achievements. One achievement unlocks the Jackal knife.
+
+TODO: WAKE UP WITH A RANDOM DEBUFF
+
+TODO: Remove References to unused buffs/perks
+
+TODO: Lock weapon crafting under a non-lootable schematic
+
+FIX: Buy 1PT label when perk is unlocked
+TODO: Fix requirement description for ThechoiceIsMine (1 PT)
+TODO: Auras will incur a cost
+TODO: Ability to turn your aura off in the
+TODO: what to do when multiple people have the same aura
 
 TODO: Remove books from lootgroups
-TODO: Remove References to unused buffs/perks
 
 TODO: Achievements for each class (default 1 level)
 
@@ -15,9 +37,8 @@ TODO: Add ability to craft ammo and arrows to certain classes
 
 TODO: Verify that all classes have functional auras. Chef (Hunger - finish)
 
-TEST: If buffs can be given as a reward. IF so then set variables to prevent Faction War from being started if one is already underway.
+TODO: Add trainers to faction wars
 TEST: Faction wars, die, start another, errors
-CHECK: healing buff for wolf prototype
 TODO: Prevent ally bear explosion from affecting traders
 
 TODO: Adjust base damage for specialized weapons compared to when you aren't, much higher for some
@@ -30,26 +51,23 @@ TODO: replace locked doors with unlocked? (Look at DF xml commercialDoor1_v1)
 
 TODO: Add shock and burn attack effect for Technogeek and chef trainers, bleed for chef, hunter, soldier and butcher trainers, 50% chance ragdoll for thug, 70% for builder
 
+TODO: see if entities can show up brighter when using night vision
+
 TODO: Trader gives buffs
-TODO: Buff displays for Ally buffs (Dog, Wolf)
+
 TODO: Add special sound for when reading class book
 TODO: Stats for headshot kills for specialitzed weapons
 TODO: Have the trainer offer quests that are really progression with ability to reset them (like admin menu without admin)
-TODO: change display type to nothing for npc blocks
 TODO: Fix Screens to not show point requirements for perks
 TODO: Special Xbow with large magazine, super fast reload and rate of fire
-TODO: Possibly remove tiers from special armor, adjust prices
 TODO: Can we make it always be nighttime?
 TODO: Add ailments for heat, cold weather
 TODO: Description of each mod for Nexus
-
-TODO: Add class leveling bonus toolbar messages?
 
 release
  
 CHECK: NREs on Arcane chest (only when you first place it on a new game?) Not always
 CHECK: fire damage from zombies when wearing armor
-CHECK: burning particle stays on player even after god mode (burning rabbit)
 TODO: Check Knife with grenade class
 
 CHECK: What if you start, log out and come back in. What happens to missions?
@@ -72,6 +90,8 @@ TODO: new block that does intermittent zaps
 
 TODO: Zombies that jump, aoe when lands
 				<triggered_effect trigger="onSelfLandJump" action="AddBuff" buff="FuriousRamsayXXX"/>
+
+TODO: check for zombie eating corpses on custom entities like battle androids
 
 FIX: NREs (buffs on traders? On update for EntityNPCs)
 	Check for Entities that might be missing some properties
@@ -101,6 +121,7 @@ TODO: Modify screamer groups with entities (no UMA)
 TODO: Farming Trader quests
 TODO: Handyman Trader quests
 
+TRIED: buffs cannot be given as a reward. IF so then set variables to prevent Faction War from being started if one is already underway.
 TRIED: Mechanical Vulture Ally? (Doesn't work right now)
 TRIED: if decoys keep spawning (they don't)
 TRIED: Look into knife options (throwable as stacks, throwable with ammo). Won't work as stacks, wepon no longer shows. Doesn't appear to work with ammo (to be tested further in A20).
@@ -116,7 +137,11 @@ Adjusted AI
 Added Missing Localization for Toxic entities in Toxic questline
 Fixed burning effect not being removed when hit by burning rabbit
 Fixed Farmer Trader Screen Icon Color
-Added Briston 'The Survivor'
+Added Briston 'The Bioengineer'
+Added trainers
+Traders will offer ability to refresh jobs list
+Adjusted Bandit sight range (base was too high)
+Added ability to reset quest list for all traders
 
 Items and Blocks:
 
@@ -129,13 +154,15 @@ Biome:
 
 Friendly Biome:
 Added Briston 'The Survivor' to biome spawns
+Added Trainers to biome spawns
 
 Wandering Horde:
 
 UI Tweaks:
 Adjusted Sneak HUD colors
-Moved HUD to the left
+Moved HUD to the left a bit
 
 Twitch Integration:
 
 DF Compatibility:
+Traders will offer ability to refresh jobs list
