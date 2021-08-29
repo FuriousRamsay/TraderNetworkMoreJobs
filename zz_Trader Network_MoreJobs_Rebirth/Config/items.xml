@@ -4,6 +4,295 @@
 
 	<append xpath="/items">
 
+		<item name="FuriousRamsayMeleeHandThugTrainingTier1">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="2"/>
+			<property class="Action0">
+				<property name="Delay" value="3"/>
+				<property name="Range" value="1.6"/>
+				<property name="DamageEntity" value="10"/>
+				<property name="DamageBlock" value="99999"/>
+				<property name="Sound_start" value="batwood_swingheavy"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandThugTrainingTier2">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="2"/>
+			<property class="Action0">
+				<property name="Delay" value="3"/>
+				<property name="Range" value="1.6"/>
+				<property name="DamageEntity" value="15"/>
+				<property name="DamageBlock" value="99999"/>
+				<property name="Sound_start" value="batwood_swingheavy"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandThugTrainingTier3">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="2"/>
+			<property class="Action0">
+				<property name="Delay" value="3"/>
+				<property name="Range" value="1.6"/>
+				<property name="DamageEntity" value="25"/>
+				<property name="DamageBlock" value="99999"/>
+				<property name="Sound_start" value="batwood_swingheavy"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandThugTrainingTier4">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="2"/>
+			<property class="Action0">
+				<property name="Delay" value="3"/>
+				<property name="Range" value="1.6"/>
+				<property name="DamageEntity" value="40"/>
+				<property name="DamageBlock" value="99999"/>
+				<property name="Sound_start" value="batwood_swingheavy"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayMeleeHandThugTrainingTier5">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="HoldType" value="2"/>
+			<property class="Action0">
+				<property name="Delay" value="3"/>
+				<property name="Range" value="1.6"/>
+				<property name="DamageEntity" value="65"/>
+				<property name="DamageBlock" value="99999"/>
+				<property name="Sound_start" value="batwood_swingheavy"/>
+			</property>
+		</item>
+
+		<item name="FuriousRamsayTrainerSpear">
+			<property name="Extends" value="meleeWpnSpearT0StoneSpear"/>
+			<property name="CustomIcon" value="meleeWpnSpearT0StoneSpear"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="Tags" value="FuriousRamsayTrainerSpear"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="SellableToTrader" value="false"/>
+
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC">
+					<requirement name="EntityTagCompare" tags="FuriousRamsayHunterTraining"/>
+				</triggered_effect>
+			</effect_group>
+
+			<effect_group name="meleeWpnSpearT0StoneSpear" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="0"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="55"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="0" tags="primary"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="3.2"/>
+				<passive_effect name="BlockRange" operation="base_set" value="3.5"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="HarvestCount" operation="base_set" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayTrainerClub">
+			<property name="Extends" value="meleeWpnClubT0WoodenClub"/>
+			<property name="CustomIcon" value="meleeWpnClubT0WoodenClub"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="Tags" value="FuriousRamsayTrainerClub"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="SellableToTrader" value="false"/>
+
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC">
+					<requirement name="EntityTagCompare" tags="FuriousRamsayThugTraining"/>
+				</triggered_effect>
+			</effect_group>
+
+			<effect_group name="meleeWpnClubT0WoodenClub" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="0"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="120"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="0" tags="primary"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="2.0"/>
+				<passive_effect name="BlockRange" operation="base_set" value="2.5"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="HarvestCount" operation="base_set" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayTrainerMachete">
+			<property name="Extends" value="meleeWpnBladeT3Machete"/>
+			<property name="CustomIcon" value="meleeWpnBladeT3Machete"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="Tags" value="FuriousRamsayTrainerMachete"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="SellableToTrader" value="false"/>
+
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC">
+					<requirement name="EntityTagCompare" tags="FuriousRamsayButcherTraining"/>
+				</triggered_effect>
+			</effect_group>
+
+			<effect_group name="meleeWpnBladeT3Machete" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="0"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="120"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="0" tags="primary"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="2.0"/>
+				<passive_effect name="BlockRange" operation="base_set" value="2.5"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="HarvestCount" operation="base_set" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayTrainerKnuckles">
+			<property name="Extends" value="meleeWpnKnucklesT0LeatherKnuckles"/>
+			<property name="CustomIcon" value="meleeWpnKnucklesT0LeatherKnuckles"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="Tags" value="FuriousRamsayTrainerKnuckles"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="SellableToTrader" value="false"/>
+
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC">
+					<requirement name="EntityTagCompare" tags="FuriousRamsaySoldierTraining"/>
+				</triggered_effect>
+			</effect_group>
+
+			<effect_group name="meleeWpnKnucklesT0LeatherKnuckles" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="0"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="100"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="0" tags="primary"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="2.0"/>
+				<passive_effect name="BlockRange" operation="base_set" value="2.5"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="HarvestCount" operation="base_set" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayTrainerStunBaton">
+			<property name="Extends" value="meleeWpnBatonT2StunBaton"/>
+			<property name="CustomIcon" value="meleeWpnBatonT2StunBaton"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="Tags" value="FuriousRamsayTrainerStunBaton"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="SellableToTrader" value="false"/>
+
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC">
+					<requirement name="EntityTagCompare" tags="FuriousRamsayTechnogeekTraining"/>
+				</triggered_effect>
+			</effect_group>
+
+			<effect_group name="meleeWpnBatonT2StunBaton" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="0"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="70"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="0" tags="primary"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+				<passive_effect name="BlockRange" operation="base_set" value="3"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="HarvestCount" operation="base_set" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayTrainerAxe">
+			<property name="Extends" value="meleeToolRepairT0StoneAxe"/>
+			<property name="CustomIcon" value="meleeToolRepairT0StoneAxe"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="Tags" value="FuriousRamsayTrainerAxe"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="SellableToTrader" value="false"/>
+
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC">
+					<requirement name="EntityTagCompare" tags="FuriousRamsayMadmanTraining"/>
+				</triggered_effect>
+			</effect_group>
+
+			<effect_group name="meleeToolRepairT0StoneAxe" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="0"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="105"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="0" tags="primary"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+				<passive_effect name="BlockRange" operation="base_set" value="3.0"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="HarvestCount" operation="base_set" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayTrainerHammer">
+			<property name="Extends" value="meleeWpnSledgeT0StoneSledgehammer"/>
+			<property name="CustomIcon" value="meleeWpnSledgeT0StoneSledgehammer"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="Tags" value="FuriousRamsayTrainerHammer"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="SellableToTrader" value="false"/>
+
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC">
+					<requirement name="EntityTagCompare" tags="FuriousRamsayBuilderTraining"/>
+				</triggered_effect>
+			</effect_group>
+
+			<effect_group name="meleeWpnSledgeT0StoneSledgehammer" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="0"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="50"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="0" tags="primary"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="2.6"/>
+				<passive_effect name="BlockRange" operation="base_set" value="3.5"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="HarvestCount" operation="base_set" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayTrainerKnife">
+			<property name="Extends" value="meleeWpnBladeT0BoneKnife"/>
+			<property name="CustomIcon" value="meleeWpnBladeT0BoneKnife"/>
+			<property name="CustomIconTint" value="0, 0, 0"/>
+			<property name="TintColor" value="0, 0, 0"/>
+			<property name="Tags" value="FuriousRamsayTrainerKnife"/>
+			<property name="EconomicValue" value="20"/>
+			<property name="SellableToTrader" value="false"/>
+
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC">
+					<requirement name="EntityTagCompare" tags="FuriousRamsayChefTraining"/>
+				</triggered_effect>
+			</effect_group>
+
+			<effect_group name="meleeWpnBladeT0BoneKnife" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="0"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="120"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="0" tags="primary"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0"/>
+				<passive_effect name="MaxRange" operation="base_set" value="2.0"/>
+				<passive_effect name="BlockRange" operation="base_set" value="2.5"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="HarvestCount" operation="base_set" value="0"/>
+			</effect_group>
+		</item>
+
 		<item name="FuriousRamsayClassBookMaster">
 			<property name="CustomIcon" value="schematicMaster"/>
 			<property name="HoldType" value="21"/>

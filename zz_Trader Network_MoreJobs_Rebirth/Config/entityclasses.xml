@@ -72,7 +72,7 @@
 		<entity_class name="FuriousRamsayNPCAllyOlivia" extends="FuriousRamsayTraderUMATemplate">
 			<property name="Tags" value="entity,npc,human,TrainerHunter"/>
 			<property name="Archetype" value="FuriousRamsayOlivia"/>		
-			<property name="NPCID" value="FuriousRamsaySurvivalSpecialist1"/>
+			<property name="NPCID" value="FuriousRamsayHunterTrainer"/>
 
 			<property name="SoundRandom" value=""/>
 
@@ -88,7 +88,7 @@
 		<entity_class name="FuriousRamsayNPCAllyIsaac" extends="FuriousRamsayTraderUMATemplate">
 			<property name="Tags" value="entity,npc,human,TrainerThug"/>
 			<property name="Archetype" value="FuriousRamsayIsaac"/>		
-			<property name="NPCID" value="FuriousRamsaySurvivalSpecialist1"/>
+			<property name="NPCID" value="FuriousRamsayThugTrainer"/>
 
 			<property name="SoundRandom" value=""/>
 
@@ -100,11 +100,48 @@
 			<property name="HandItem" value="FuriousRamsayMeleeHandThug"/>
 		</entity_class>
 
+		<entity_class name="FuriousRamsayThugTrainerTier1" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,npc,human,TrainerThug,FuriousRamsayThugTraining"/>
+			<property name="Archetype" value="FuriousRamsayIsaac"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotRed" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandThugTrainingTier1"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.6, 2"/> 
+			<property name="MoveSpeedPanic" value="2"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,200"/>
+			<property name="AITask-3" value="ApproachSpot" data="class=EntityPlayer,200,200"/>
+			<property name="AITask-4" value="Wander"/>
+			<property name="AITask-5" value=""/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200"/>
+			<property name="AITarget-2" value=""/>
+
+			<property name="TimeStayAfterDeath" value="0"/>
+
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTrainerTimer"/>
+                <passive_effect name="HealthMax" operation="base_set" value="10000" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="100" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
 		<!-- Butcher Trainer -->
 		<entity_class name="FuriousRamsayNPCAllyHank" extends="FuriousRamsayTraderUMATemplate">
 			<property name="Tags" value="entity,npc,human,TrainerButcher"/>
 			<property name="Archetype" value="FuriousRamsayHank"/>		
-			<property name="NPCID" value="FuriousRamsaySurvivalSpecialist1"/>
+			<property name="NPCID" value="FuriousRamsayButcherTrainer"/>
 
 			<property name="SoundRandom" value=""/>
 
@@ -120,7 +157,7 @@
 		<entity_class name="FuriousRamsayNPCAllyElias" extends="FuriousRamsayTraderUMATemplate">
 			<property name="Tags" value="entity,npc,human,TrainerSoldier"/>
 			<property name="Archetype" value="FuriousRamsayElias"/>		
-			<property name="NPCID" value="FuriousRamsaySurvivalSpecialist1"/>
+			<property name="NPCID" value="FuriousRamsaySoldierTrainer"/>
 
 			<property name="SoundRandom" value=""/>
 
@@ -136,7 +173,7 @@
 		<entity_class name="FuriousRamsayNPCAllyScarlett" extends="FuriousRamsayTraderUMATemplate">
 			<property name="Tags" value="entity,npc,human,TrainerTechnogeek"/>
 			<property name="Archetype" value="FuriousRamsayScarlett"/>		
-			<property name="NPCID" value="FuriousRamsaySurvivalSpecialist1"/>
+			<property name="NPCID" value="FuriousRamsayTechnogeekTrainer"/>
 
 			<property name="SoundRandom" value=""/>
 
@@ -152,7 +189,7 @@
 		<entity_class name="FuriousRamsayNPCAllyLiam" extends="FuriousRamsayTraderUMATemplate">
 			<property name="Tags" value="entity,npc,human,TrainerMadman"/>
 			<property name="Archetype" value="FuriousRamsayLiam"/>		
-			<property name="NPCID" value="FuriousRamsaySurvivalSpecialist1"/>
+			<property name="NPCID" value="FuriousRamsayMadmanTrainer"/>
 
 			<property name="SoundRandom" value=""/>
 
@@ -168,7 +205,7 @@
 		<entity_class name="FuriousRamsayNPCAllyVince" extends="FuriousRamsayTraderUMATemplate">
 			<property name="Tags" value="entity,npc,human,TrainerBuilder"/>
 			<property name="Archetype" value="FuriousRamsayVince"/>		
-			<property name="NPCID" value="FuriousRamsaySurvivalSpecialist1"/>
+			<property name="NPCID" value="FuriousRamsayBuilderTrainer"/>
 
 			<property name="SoundRandom" value=""/>
 
@@ -184,7 +221,7 @@
 		<entity_class name="FuriousRamsayNPCAllyHelen" extends="FuriousRamsayTraderUMATemplate">
 			<property name="Tags" value="entity,npc,human,TrainerChef"/>
 			<property name="Archetype" value="FuriousRamsayHelen"/>		
-			<property name="NPCID" value="FuriousRamsaySurvivalSpecialist1"/>
+			<property name="NPCID" value="FuriousRamsayChefTrainer"/>
 
 			<property name="SoundRandom" value=""/>
 

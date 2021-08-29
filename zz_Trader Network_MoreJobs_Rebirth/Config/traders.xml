@@ -2,11 +2,43 @@
 
 	<append xpath="/traders/trader_item_groups">
 
+		<trader_item_group name="FuriousRamsayHunterTrainerItems">
+			<item name="FuriousRamsayTrainerSpear" count="1" prob="1"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayThugTrainerItems">
+			<item name="FuriousRamsayTrainerClub" count="1" prob="1"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayButcherTrainerItems">
+			<item name="FuriousRamsayTrainerMachete" count="1" prob="1"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsaySoldierTrainerItems">
+			<item name="FuriousRamsayTrainerKnuckles" count="1" prob="1"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayTechnogeekTrainerItems">
+			<item name="FuriousRamsayTrainerStunBaton" count="1" prob="1"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayMadmanTrainerItems">
+			<item name="FuriousRamsayTrainerAxe" count="1" prob="1"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayBuilderTrainerItems">
+			<item name="FuriousRamsayTrainerHammer" count="1" prob="1"/>
+		</trader_item_group>
+
+		<trader_item_group name="FuriousRamsayChefTrainerItems">
+			<item name="FuriousRamsayTrainerKnife" count="1" prob="1"/>
+		</trader_item_group>
+
 	</append>
 
 	<append xpath="/traders">
 	
-		<!-- Wandering Trader 1, id=70 -->
+		<!-- Survival Specialist -->
 		<trader_info id="70" full_reset="true" override_buy_markup="1.6" min_inventory="20" max_inventory="40" min_items_swapped="10" max_items_swapped="30" reset_interval="1" open_time="0:00" close_time="0:00">
 			<trader_items count="all">
 				<item group="tools" count="1,2"/>
@@ -77,6 +109,62 @@
 			</tier_items>
 		</trader_info>
 		
+		<!-- Hunter Trainer -->
+		<trader_info id="71" full_reset="true" min_inventory="10" max_inventory="10" min_items_swapped="10" max_items_swapped="10" reset_interval="1" open_time="0:00" close_time="0:00">
+			<trader_items count="all">
+				<item group="FuriousRamsayHunterTrainerItems" count="1,2"/>
+			</trader_items>
+		</trader_info>
+
+		<!-- Thug Trainer -->
+		<trader_info id="72" full_reset="true" min_inventory="10" max_inventory="10" min_items_swapped="10" max_items_swapped="10" reset_interval="1" open_time="0:00" close_time="0:00">
+			<trader_items count="all">
+				<item group="FuriousRamsayThugTrainerItems" count="1,2"/>
+			</trader_items>
+		</trader_info>
+
+		<!-- Butcher Trainer -->
+		<trader_info id="73" full_reset="true" min_inventory="10" max_inventory="10" min_items_swapped="10" max_items_swapped="10" reset_interval="1" open_time="0:00" close_time="0:00">
+			<trader_items count="all">
+				<item group="FuriousRamsayButcherTrainerItems" count="1,2"/>
+			</trader_items>
+		</trader_info>
+
+		<!-- Soldier Trainer -->
+		<trader_info id="74" full_reset="true" min_inventory="10" max_inventory="10" min_items_swapped="10" max_items_swapped="10" reset_interval="1" open_time="0:00" close_time="0:00">
+			<trader_items count="all">
+				<item group="FuriousRamsaySoldierTrainerItems" count="1,2"/>
+			</trader_items>
+		</trader_info>
+
+		<!-- Technogeek Trainer -->
+		<trader_info id="75" full_reset="true" min_inventory="10" max_inventory="10" min_items_swapped="10" max_items_swapped="10" reset_interval="1" open_time="0:00" close_time="0:00">
+			<trader_items count="all">
+				<item group="FuriousRamsayTechnogeekTrainerItems" count="1,2"/>
+			</trader_items>
+		</trader_info>
+
+		<!-- Madman Trainer -->
+		<trader_info id="76" full_reset="true" min_inventory="10" max_inventory="10" min_items_swapped="10" max_items_swapped="10" reset_interval="1" open_time="0:00" close_time="0:00">
+			<trader_items count="all">
+				<item group="FuriousRamsayMadmanTrainerItems" count="1,2"/>
+			</trader_items>
+		</trader_info>
+
+		<!-- Builder Trainer -->
+		<trader_info id="77" full_reset="true" min_inventory="10" max_inventory="10" min_items_swapped="10" max_items_swapped="10" reset_interval="1" open_time="0:00" close_time="0:00">
+			<trader_items count="all">
+				<item group="FuriousRamsayBuilderTrainerItems" count="1,2"/>
+			</trader_items>
+		</trader_info>
+
+		<!-- Chef Trainer -->
+		<trader_info id="78" full_reset="true" min_inventory="10" max_inventory="10" min_items_swapped="10" max_items_swapped="10" reset_interval="1" open_time="0:00" close_time="0:00">
+			<trader_items count="all">
+				<item group="FuriousRamsayChefTrainerItems" count="1,2"/>
+			</trader_items>
+		</trader_info>
+
 	</append>
 
 </Config>

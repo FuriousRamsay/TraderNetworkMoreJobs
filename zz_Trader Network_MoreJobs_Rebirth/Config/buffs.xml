@@ -339,6 +339,22 @@
 
 		<append xpath="/buffs" >
 
+			<buff name="FuriousRamsayVanishTrainerTimer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="300"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayRemoveTrainingNPC" hidden="true" remove_on_death="true">
+				<duration value="0.1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="add" value="-99999">
+						<requirement name="EntityTagCompare" tags="FuriousRamsayThugTraining"/>
+					</triggered_effect>
+				</effect_group>
+			</buff>
+			
 			<buff name="FuriousRamsayStarterAilments" hidden="true">
 				<duration value="1"/>
 				<effect_group>
