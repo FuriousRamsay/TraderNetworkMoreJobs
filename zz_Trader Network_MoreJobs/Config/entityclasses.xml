@@ -5181,9 +5181,11 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayCloakedAndroidMaster" extends="zombieBoe">
+			<property name="Class" value="EntityBandit"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayCloakedBurnAndroid" extends="zombieArlene">
+			<property name="Class" value="EntityBandit"/>
 			<property name="SizeScale" value="1.2"/>
 			<property name="Tags" value="entity,enemy,zombie,walker,feral,blackshield,metal"/>
 			<property name="NavObject" value="FuriousRamsayDotOrange" />
@@ -5230,6 +5232,7 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayCloakedBurnAndroidWar" extends="FuriousRamsayCloakedBurnAndroid">
+			<property name="Class" value="EntityBandit"/>
 			<property name="SightRange" value="200"/> 
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="MaxViewAngle" value="360"/>
@@ -5237,6 +5240,7 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayCloakedShockAndroid" extends="FuriousRamsayCloakedAndroidMaster">
+			<property name="Class" value="EntityBandit"/>
 			<property name="SizeScale" value="1.2"/>
 			<property name="Tags" value="entity,enemy,zombie,walker,feral,blackshield,metal"/>
 			<property name="NavObject" value="FuriousRamsayDotOrange" />
@@ -5284,6 +5288,7 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayCloakedShockAndroidWar" extends="FuriousRamsayCloakedShockAndroid">
+			<property name="Class" value="EntityBandit"/>
 			<property name="SightRange" value="200"/> 
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="MaxViewAngle" value="360"/>
@@ -5291,6 +5296,7 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayEnemyAndroid" extends="FuriousRamsayCloakedAndroidMaster">
+			<property name="Class" value="EntityBandit"/>
 			<property name="SizeScale" value="1.2"/>
 			<property name="Tags" value="entity,enemy,zombie,walker,feral,blackshield,metal"/>
 			<property name="NavObject" value="FuriousRamsayDotOrange" />
@@ -5454,7 +5460,7 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBurningRabbit" extends="FuriousRamsayCloakedAnimal">
-			<property name="Class" value="EntityZombie"/>
+			<property name="Class" value="EntityBandit"/>
 			<property name="SizeScale" value="1.5"/>
 			<property name="Tags" value="entity,enemy,animal,mutantsmallanimal,blackshield,metal,rabbit"/>
 			<property name="NavObject" value="FuriousRamsayDotOrange" />
@@ -7479,7 +7485,7 @@ FuriousRamsayVultureToxicRadiated
         </entity_class>
 
 		<entity_class name="FuriousRamsayTraderUMATemplate" extends="npcTraderTemplate">
-			<property name="Tags" value="entity,npc,human,trader"/>
+			<property name="Tags" value="player,entity,npc,human,trader"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="EntityType" value="Player"/>
 			<property name="Faction" value="trader"/>
@@ -7534,7 +7540,7 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayNPCBlackShieldTrader1" extends="FuriousRamsayTraderUMATemplate">
-			<property name="Tags" value="entity,npc,human,BlackShieldTrader1,trader"/>
+			<property name="Tags" value="player,entity,npc,human,BlackShieldTrader1,trader"/>
 			<property name="Archetype" value="FuriousRamsayBlackShieldTrader1"/>
 			<property name="NPCID" value="FuriousRamsayBlackShieldTrader1"/>
 
@@ -7552,7 +7558,7 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 		
 		<entity_class name="FuriousRamsayNPCFarmerKatieTrader" extends="FuriousRamsayTraderUMATemplate">
-			<property name="Tags" value="entity,npc,human,FarmerKatie,trader"/>
+			<property name="Tags" value="player,entity,npc,human,FarmerKatie,trader"/>
 			<property name="Archetype" value="FuriousRamsayFarmerKatie"/>
 			<property name="NPCID" value="FuriousRamsayFarmerKatie"/>
 
@@ -7572,7 +7578,7 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayNPCHandymanLukeTrader" extends="FuriousRamsayTraderUMATemplate">
-			<property name="Tags" value="entity,npc,human,HandymanLuke,trader"/>
+			<property name="Tags" value="player,entity,npc,human,HandymanLuke,trader"/>
 			<property name="Archetype" value="FuriousRamsayHandymanLuke"/>
 			<property name="NPCID" value="FuriousRamsayHandymanLuke"/>
 
