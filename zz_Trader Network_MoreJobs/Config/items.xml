@@ -886,9 +886,23 @@
 			<property name="Group" value="Clothing"/>
 			<property name="RepairExpMultiplier" value="10.8"/>
 			<property name="RepairTools" value="FuriousRamsayFireArmorRepairKit"/>
-			<!--<property name="SellableToTrader" value="false"/>-->
+			<property name="SellableToTrader" value="false"/>
 			<property name="ShowQuality" value="true"/>
-			<property name="EconomicValue" value="200"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="2000"/>
+			<effect_group name="Armor Buffs" tiered="false">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFire"/>			
+				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFire"/>
+			</effect_group>
+			<effect_group name="cloth armor" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="3.27,5.47" tags="heat,electrical"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="3.27,5.47"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="150"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorMasterShock">
@@ -908,7 +922,25 @@
 			<property name="RepairTools" value="FuriousRamsayShockArmorRepairKit"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="ShowQuality" value="true"/>
-			<property name="EconomicValue" value="300"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="3000"/>
+			<effect_group name="Armor Buffs" tiered="false">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorShock"/>			
+				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorShock"/>
+			</effect_group>
+			<effect_group name="leather armor" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.27,7.47"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.27,7.47" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.043,0.053" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="225"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
+				<display_value name="dStaminaChangeOT" value="-.562"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
+			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorMasterFireShock">
@@ -928,7 +960,26 @@
 			<property name="RepairTools" value="FuriousRamsayFireShockArmorRepairKit"/>
 			<property name="SellableToTrader" value="false"/>
 			<property name="ShowQuality" value="true"/>
-			<property name="EconomicValue" value="400"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="4000"/>
+			<effect_group name="Armor Buffs" tiered="false">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShock"/>			
+				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShock"/>
+			</effect_group>
+			<effect_group name="scrap armor" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.49,10.7"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="7.49,10.7" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.054" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="350"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
+				<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+				<display_value name="dStaminaChangeOT" value="-.9"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
+			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorMasterSmoke">
@@ -948,7 +999,25 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Group" value="Clothing"/>
 			<property name="RepairExpMultiplier" value="10.8"/>
-			<property name="EconomicValue" value="700"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="5000"/>
+			<effect_group name="Armor Buffs" tiered="false">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorSmoke"/>			
+				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorSmoke"/>
+			</effect_group>
+			<effect_group name="iron armor" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.25,10.25"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="7.25,10.25" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.055,0.068" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="400"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
+				<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+				<display_value name="dStaminaChangeOT" value="-.9"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
+			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorMasterFireShockSmoke">
@@ -967,8 +1036,26 @@
 			<property name="Group" value="Clothing"/>
 			<property name="RepairExpMultiplier" value="10.8"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="ShowQuality" value="true"/>
-			<property name="EconomicValue" value="1250"/>
+			<property name="ShowQuality" value="false"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="7500"/>
+			<effect_group name="Armor Buffs" tiered="false">
+				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShockSmoke"/>			
+				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShockSmoke"/>
+			</effect_group>
+			<effect_group name="steel armor" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="2"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="8.21,11.71"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="8.21,11.71" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.061,0.076" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="500"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
+				<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+				<display_value name="dStaminaChangeOT" value="-.9"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
+			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorHelmetFire">
@@ -986,19 +1073,6 @@
 				<property name="Mask0" value="Head" param1="inner"/>
 				<property name="Mask1" value="Head" param1="outer"/>
 			</property>			
-			<effect_group name="Armor Buffs" tiered="false">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFire"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFire"/>
-			</effect_group>
-			<effect_group name="cloth armor" tiered="false">
-				<passive_effect name="ModSlots" operation="base_set" value="1"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.3"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="150"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
-				<display_value name="dStaminaChangeOT" value="0"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorChestFire">
@@ -1014,20 +1088,6 @@
 				<property name="Layer" value="2"/>
 				<property name="UISlot" value="ChestArmor"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFire"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFire"/>
-			</effect_group>
-			<effect_group name="cloth armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
-				<display_value name="dStaminaChangeOT" value="0"/>
-			</effect_group>
 		</item>
 		
 		<item name="FuriousRamsayArmorGloveFire">
@@ -1043,20 +1103,6 @@
 				<property name="Layer" value="3"/>
 				<property name="UISlot" value="Gloves"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFire"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFire"/>
-			</effect_group>
-			<effect_group name="cloth armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
-				<display_value name="dStaminaChangeOT" value="0"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorLegFire">
@@ -1072,20 +1118,6 @@
 				<property name="Layer" value="3"/>
 				<property name="UISlot" value="LegArmor"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFire"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFire"/>
-			</effect_group>
-			<effect_group name="cloth armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
-				<display_value name="dStaminaChangeOT" value="0"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorBootFire">
@@ -1101,20 +1133,6 @@
 				<property name="Layer" value="0"/>
 				<property name="UISlot" value="Footwear"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFire"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFire"/>
-			</effect_group>
-			<effect_group name="cloth armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
-				<display_value name="dStaminaChangeOT" value="0"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorHelmetShock">
@@ -1132,26 +1150,6 @@
 				<property name="Mask0" value="Head" param1="inner"/>
 				<property name="Mask1" value="Head" param1="outer"/>
 			</property>			
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorShock"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorShock"/>
-			</effect_group>
-			<effect_group name="leather armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.27,7.47"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="0,2.73" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.27,7.47" tags="heat,electrical"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="0,2.73" tier="1,6"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.043,0.053" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="110,225" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.562"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorChestShock">
@@ -1167,26 +1165,6 @@
 				<property name="Layer" value="2"/>
 				<property name="UISlot" value="ChestArmor"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorShock"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorShock"/>
-			</effect_group>
-			<effect_group name="leather armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.27,7.47"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="0,2.73" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.27,7.47" tags="heat,electrical"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="0,2.73" tier="1,6"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.043,0.053" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="110,225" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.562"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
-			</effect_group>
 		</item>
 		
 		<item name="FuriousRamsayArmorGloveShock">
@@ -1202,26 +1180,6 @@
 				<property name="Layer" value="3"/>
 				<property name="UISlot" value="Gloves"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorShock"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorShock"/>
-			</effect_group>
-			<effect_group name="leather armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.27,7.47"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="0,2.73" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.27,7.47" tags="heat,electrical"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="0,2.73" tier="1,6"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.043,0.053" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="110,225" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.562"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorLegShock">
@@ -1237,26 +1195,6 @@
 				<property name="Layer" value="3"/>
 				<property name="UISlot" value="LegArmor"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorShock"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorShock"/>
-			</effect_group>
-			<effect_group name="leather armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.27,7.47"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="0,2.73" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.27,7.47" tags="heat,electrical"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="0,2.73" tier="1,6"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.043,0.053" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="110,225" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.562"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorBootShock">
@@ -1272,26 +1210,6 @@
 				<property name="Layer" value="0"/>
 				<property name="UISlot" value="Footwear"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorShock"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorShock"/>
-			</effect_group>
-			<effect_group name="leather armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.27,7.47"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="0,2.73" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="5.27,7.47" tags="heat,electrical"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="0,2.73" tier="1,6"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.043,0.053" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="110,225" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.04"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0281" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.0562" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.562"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".1"/><display_value name="dNoiseMultiplier" value=".1"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorHelmetFireShock">
@@ -1314,24 +1232,6 @@
 				<property name="Mask8" value="Eyes" param1="middle"/>
 				<property name="Mask9" value="Eyes" param1="outer"/>
 			</property>			
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShock"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShock"/>
-			</effect_group>
-			<effect_group name="scrap armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.49,10.7" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="7.49,10.7" tier="1,6" tags="heat,electrical"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.054" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="175,350" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.9"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorChestFireShock">
@@ -1347,24 +1247,6 @@
 				<property name="Layer" value="2"/>
 				<property name="UISlot" value="ChestArmor"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShock"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShock"/>
-			</effect_group>
-			<effect_group name="scrap armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.49,10.7" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="7.49,10.7" tier="1,6" tags="heat,electrical"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.054" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="175,350" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.9"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
-			</effect_group>
 		</item>
 		
 		<item name="FuriousRamsayArmorGloveFireShock">
@@ -1380,24 +1262,6 @@
 				<property name="Layer" value="3"/>
 				<property name="UISlot" value="Gloves"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShock"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShock"/>
-			</effect_group>
-			<effect_group name="scrap armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.49,10.7" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="7.49,10.7" tier="1,6" tags="heat,electrical"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.054" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="175,350" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.9"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorLegFireShock">
@@ -1413,24 +1277,6 @@
 				<property name="Layer" value="3"/>
 				<property name="UISlot" value="LegArmor"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShock"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShock"/>
-			</effect_group>
-			<effect_group name="scrap armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.49,10.7" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="7.49,10.7" tier="1,6" tags="heat,electrical"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.054" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="175,350" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.9"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorBootFireShock">
@@ -1446,24 +1292,6 @@
 				<property name="Layer" value="0"/>
 				<property name="UISlot" value="Footwear"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShock"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShock"/>
-			</effect_group>
-			<effect_group name="scrap armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.49,10.7" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="7.49,10.7" tier="1,6" tags="heat,electrical"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.054" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="175,350" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.9"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorHelmetSmoke">
@@ -1486,26 +1314,6 @@
 				<property name="Mask8" value="Eyes" param1="middle"/>
 				<property name="Mask9" value="Eyes" param1="outer"/>
 			</property>			
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorSmoke"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorSmoke"/>
-			</effect_group>
-			<effect_group name="iron armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.25,10.25"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="0,3.75" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="7.25,10.25" tags="heat,electrical"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="0,3.75" tier="1,6"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.055,0.068" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="200,400" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.9"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorChestSmoke">
@@ -1521,26 +1329,6 @@
 				<property name="Layer" value="2"/>
 				<property name="UISlot" value="ChestArmor"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorSmoke"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorSmoke"/>
-			</effect_group>
-			<effect_group name="iron armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.25,10.25"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="0,3.75" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="7.25,10.25" tags="heat,electrical"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="0,3.75" tier="1,6"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.055,0.068" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="200,400" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.9"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
-			</effect_group>
 		</item>
 		
 		<item name="FuriousRamsayArmorGloveSmoke">
@@ -1556,26 +1344,6 @@
 				<property name="Layer" value="0"/>
 				<property name="UISlot" value="Gloves"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorSmoke"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorSmoke"/>
-			</effect_group>
-			<effect_group name="iron armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.25,10.25"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="0,3.75" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="7.25,10.25" tags="heat,electrical"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="0,3.75" tier="1,6"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.055,0.068" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="200,400" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.9"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorLegSmoke">
@@ -1591,26 +1359,6 @@
 				<property name="Layer" value="3"/>
 				<property name="UISlot" value="LegArmor"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorSmoke"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorSmoke"/>
-			</effect_group>
-			<effect_group name="iron armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.25,10.25"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="0,3.75" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="7.25,10.25" tags="heat,electrical"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="0,3.75" tier="1,6"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.055,0.068" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="200,400" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.9"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorBootSmoke">
@@ -1626,26 +1374,6 @@
 				<property name="Layer" value="0"/>
 				<property name="UISlot" value="Footwear"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorSmoke"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorSmoke"/>
-			</effect_group>
-			<effect_group name="iron armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.25,10.25"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="0,3.75" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="7.25,10.25" tags="heat,electrical"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="0,3.75" tier="1,6"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.055,0.068" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="200,400" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.9"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorHelmetFireShockSmoke">
@@ -1668,26 +1396,6 @@
 				<property name="Mask8" value="Eyes" param1="middle"/>
 				<property name="Mask9" value="Eyes" param1="outer"/>
 			</property>			
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShockSmoke"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShockSmoke"/>
-			</effect_group>
-			<effect_group name="steel armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="8.21,11.71"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="0,4.29" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="8.21,11.71" tags="heat,electrical"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="0,4.29" tier="1,6"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.061,0.076" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.9"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorChestFireShockSmoke">
@@ -1703,26 +1411,6 @@
 				<property name="Layer" value="2"/>
 				<property name="UISlot" value="ChestArmor"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShockSmoke"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShockSmoke"/>
-			</effect_group>
-			<effect_group name="steel armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="8.21,11.71"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="0,4.29" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="8.21,11.71" tags="heat,electrical"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="0,4.29" tier="1,6"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.061,0.076" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.9"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
-			</effect_group>
 		</item>
 		
 		<item name="FuriousRamsayArmorGloveFireShockSmoke">
@@ -1738,26 +1426,6 @@
 				<property name="Layer" value="0"/>
 				<property name="UISlot" value="Gloves"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShockSmoke"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShockSmoke"/>
-			</effect_group>
-			<effect_group name="steel armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="8.21,11.71"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="0,4.29" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="8.21,11.71" tags="heat,electrical"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="0,4.29" tier="1,6"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.061,0.076" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.9"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorLegFireShockSmoke">
@@ -1773,26 +1441,6 @@
 				<property name="Layer" value="3"/>
 				<property name="UISlot" value="LegArmor"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShockSmoke"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShockSmoke"/>
-			</effect_group>
-			<effect_group name="steel armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="8.21,11.71"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="0,4.29" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="8.21,11.71" tags="heat,electrical"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="0,4.29" tier="1,6"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.061,0.076" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.9"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayArmorBootFireShockSmoke">
@@ -1808,26 +1456,6 @@
 				<property name="Layer" value="3"/>
 				<property name="UISlot" value="Footwear"/>
 			</property>
-			<effect_group name="Armor Buffs">
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShockSmoke"/>			
-				<triggered_effect trigger="onSelfEquipStop" action="AddBuff" buff="FuriousRamsayVerifyArmorFireShockSmoke"/>
-			</effect_group>
-			<effect_group name="steel armor">
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="8.21,11.71"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="0,4.29" tier="1,6"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="8.21,11.71" tags="heat,electrical"/>
-				<passive_effect name="ElementalDamageResist" operation="base_add" value="0,4.29" tier="1,6"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="0.061,0.076" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-				<passive_effect name="Mobility" operation="perc_add" value="-.06"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
-				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
-				<display_value name="dStaminaChangeOT" value="-.9"/>
-				<passive_effect name="NoiseMultiplier" operation="perc_add" value=".2"/><display_value name="dNoiseMultiplier" value=".2"/>
-			</effect_group>
 		</item>
 
 		<item name="FuriousRamsayElectronicPartMaster">
