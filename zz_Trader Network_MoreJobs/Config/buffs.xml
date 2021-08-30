@@ -2948,33 +2948,45 @@
 
 			<buff name="FuriousRamsayAddStaminaAllyTimer" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
-				<update_rate value="0.1"/>
+				<update_rate value="1"/>
 				<effect_group>
 					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="6" buff="FuriousRamsayAddStaminaAlly" target_tags="player"/>
 				</effect_group>
 			</buff>
 			
-			<buff name="FuriousRamsayAddStaminaAlly" hidden="true" remove_on_death="true">
+			<buff name="FuriousRamsayAddStaminaAlly" name_key="FuriousRamsayBuffAddStaminaAllyName" description_key="FuriousRamsayBuffAddStaminaAllyDesc" showonhud="true" icon="ui_game_symbol_cardio" icon_color="222, 227, 89">
 				<stack_type value="ignore"/>
-				<duration value="0.1"/>
+				<update_rate value="1"/>
+				<duration value="5"/>
+				<display_value value=".FuriousRamsayStaminaAllyTime"/><display_value_key value="{0}s"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Stamina" operation="add" value="5"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayStaminaAllyTime" operation="set" value="4"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayStaminaAllyTime" operation="add" value="-1"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" target="self" stat="Stamina" operation="add" value="4">
+						<requirement name="EntityTagCompare" tags="player,survivor"/>
+					</triggered_effect>
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayAddHealthAllyWolfTier2Timer" hidden="true" remove_on_death="true">
+			<buff name="FuriousRamsayAddHealthAllyTimer" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
-				<update_rate value="0.1"/>
+				<update_rate value="1"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="6" buff="FuriousRamsayAddHealthAllyWolfTier2" target_tags="player"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="6" buff="FuriousRamsayAddHealthAlly" target_tags="player"/>
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayAddHealthAllyWolfTier2" hidden="true" remove_on_death="true">
+			<buff name="FuriousRamsayAddHealthAlly" name_key="FuriousRamsayBuffAddHealthAllyName" description_key="FuriousRamsayBuffAddHealthAllyDesc" showonhud="true" icon="ui_game_symbol_healing_factor" icon_color="255,0,0">
 				<stack_type value="ignore"/>
-				<duration value="0.1"/>
+				<update_rate value="1"/>
+				<duration value="5"/>
+				<display_value value=".FuriousRamsayHealthAllyTime"/><display_value_key value="{0}s"/>
 				<effect_group>
-					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="2">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FuriousRamsayHealthAllyTime" operation="set" value="5"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FuriousRamsayHealthAllyTime" operation="add" value="-1">
+						<requirement name="CVarCompare" cvar=".FuriousRamsayHealthAllyTime" operation="GTE" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" target="self" stat="Health" operation="add" value="5">
 						<requirement name="EntityTagCompare" tags="player,survivor"/>
 					</triggered_effect>
 				</effect_group>

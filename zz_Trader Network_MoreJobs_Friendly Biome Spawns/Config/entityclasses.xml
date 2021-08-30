@@ -6,11 +6,10 @@
 			<property name="NavObject" value="" />
 			<property name="HandItem" value="FuriousRamsayMeleeHandSoldierJackBiome"/>
 
-			<property name="AITask-1" value="RunawayFromEntity" data="class=EntityEnemyAnimal"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
-			<property name="AITask-3" value="BreakBlock"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
 			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
 			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie,EntityPlayer"/>
 			<property name="AITarget-3" value=""/>
@@ -20,11 +19,10 @@
 			<property name="NavObject" value="" />
 			<property name="HandItem" value="FuriousRamsayMeleeHandSoldierDanteBiome"/>
 
-			<property name="AITask-1" value="RunawayFromEntity" data="class=EntityEnemyAnimal"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20,EntityPlayer,20"/>
-			<property name="AITask-3" value="BreakBlock"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20,EntityPlayer,20"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
 			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
 			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie,EntityPlayer"/>
 			<property name="AITarget-3" value=""/>
@@ -34,11 +32,10 @@
 			<property name="NavObject" value="" />
 			<property name="HandItem" value="FuriousRamsayMeleeHandSoldierLeeBiome"/>
 
-			<property name="AITask-1" value="RunawayFromEntity" data="class=EntityEnemyAnimal"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
-			<property name="AITask-3" value="BreakBlock"/>
-			<property name="AITask-4" value="Wander"/>
-			<property name="AITask-5" value=""/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
 			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
 			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie,EntityPlayer"/>
 			<property name="AITarget-3" value=""/>
@@ -79,7 +76,7 @@
 			<property name="AITarget-3" value=""/>
 
 			<effect_group name="Base Effects">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddHealthAllyWolfTier2Timer"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddHealthAllyTimer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayResistFire"/>
 				<passive_effect name="HealthMax" operation="base_set" value="600"/>
 				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
@@ -158,14 +155,14 @@
 			<property name="NavObject" value="" />
             <property name="HandItem" value="FuriousRamsayMeleeHandSurvivorBiome" />
 
-			<property name="AITask-1" value="RunawayFromEntity" data="class=EntityEnemyAnimal"/>
-			<property name="AITask-2" value="RunawayWhenHurt" data="runChance=.75;healthPer=.5;healthPerMax=0.75"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20,EntityPlayer,20"/>
+			<property name="AITask-1" value="RunawayWhenHurt" data="runChance=.75;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-2" value="RunawayFromEntity" data="class=EntityEnemyAnimal,EntityZombie;safeDistance=15"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20,EntityBandit,20,EntityPlayer,20"/>
 			<property name="AITask-4" value="BreakBlock"/>
 			<property name="AITask-5" value="Wander"/>
 			<property name="AITask-6" value=""/>
-			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie,EntityPlayer"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityBandit,80,80"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-3" value=""/>
         </entity_class>
 
@@ -173,14 +170,14 @@
 			<property name="NavObject" value="" />
             <property name="HandItem" value="FuriousRamsayMeleeHandSurvivorBiome" />
 
-			<property name="AITask-1" value="RunawayFromEntity" data="class=EntityEnemyAnimal"/>
-			<property name="AITask-2" value="RunawayWhenHurt" data="runChance=.75;healthPer=.5;healthPerMax=0.75"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20,EntityPlayer,20"/>
+			<property name="AITask-1" value="RunawayWhenHurt" data="runChance=.75;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-2" value="RunawayFromEntity" data="class=EntityEnemyAnimal,EntityZombie;safeDistance=15"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20,EntityBandit,20,EntityPlayer,20"/>
 			<property name="AITask-4" value="BreakBlock"/>
 			<property name="AITask-5" value="Wander"/>
 			<property name="AITask-6" value=""/>
-			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie,EntityPlayer"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityBandit,80,80"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-3" value=""/>
         </entity_class>
 
@@ -188,14 +185,14 @@
 			<property name="NavObject" value="" />
             <property name="HandItem" value="FuriousRamsayMeleeHandSurvivorBiome" />
 
-			<property name="AITask-1" value="RunawayFromEntity" data="class=EntityEnemyAnimal"/>
-			<property name="AITask-2" value="RunawayWhenHurt" data="runChance=.75;healthPer=.5;healthPerMax=0.75"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20,EntityPlayer,20"/>
+			<property name="AITask-1" value="RunawayWhenHurt" data="runChance=.75;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-2" value="RunawayFromEntity" data="class=EntityEnemyAnimal,EntityZombie;safeDistance=15"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20,EntityBandit,20,EntityPlayer,20"/>
 			<property name="AITask-4" value="BreakBlock"/>
 			<property name="AITask-5" value="Wander"/>
 			<property name="AITask-6" value=""/>
-			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie,EntityPlayer"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityBandit,80,80"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-3" value=""/>
         </entity_class>
 
@@ -203,14 +200,14 @@
 			<property name="NavObject" value="" />
             <property name="HandItem" value="FuriousRamsayMeleeHandSurvivorBiome" />
 
-			<property name="AITask-1" value="RunawayFromEntity" data="class=EntityEnemyAnimal"/>
-			<property name="AITask-2" value="RunawayWhenHurt" data="runChance=.75;healthPer=.5;healthPerMax=0.75"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20,EntityPlayer,20"/>
+			<property name="AITask-1" value="RunawayWhenHurt" data="runChance=.75;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-2" value="RunawayFromEntity" data="class=EntityEnemyAnimal,EntityZombie;safeDistance=15"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20,EntityBandit,20,EntityPlayer,20"/>
 			<property name="AITask-4" value="BreakBlock"/>
 			<property name="AITask-5" value="Wander"/>
 			<property name="AITask-6" value=""/>
-			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie,EntityPlayer"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityBandit,80,80"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-3" value=""/>
         </entity_class>
 
@@ -218,14 +215,14 @@
 			<property name="NavObject" value="" />
             <property name="HandItem" value="FuriousRamsayMeleeHandSurvivorBiome" />
 
-			<property name="AITask-1" value="RunawayFromEntity" data="class=EntityEnemyAnimal"/>
-			<property name="AITask-2" value="RunawayWhenHurt" data="runChance=.75;healthPer=.5;healthPerMax=0.75"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20,EntityPlayer,20"/>
+			<property name="AITask-1" value="RunawayWhenHurt" data="runChance=.75;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-2" value="RunawayFromEntity" data="class=EntityEnemyAnimal,EntityZombie;safeDistance=15"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20,EntityBandit,20,EntityPlayer,20"/>
 			<property name="AITask-4" value="BreakBlock"/>
 			<property name="AITask-5" value="Wander"/>
 			<property name="AITask-6" value=""/>
-			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie,EntityPlayer"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityBandit,80,80"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-3" value=""/>
         </entity_class>
 
@@ -233,14 +230,14 @@
 			<property name="NavObject" value="" />
             <property name="HandItem" value="FuriousRamsayMeleeHandSurvivorBiome" />
 
-			<property name="AITask-1" value="RunawayFromEntity" data="class=EntityEnemyAnimal"/>
-			<property name="AITask-2" value="RunawayWhenHurt" data="runChance=.75;healthPer=.5;healthPerMax=0.75"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20,EntityPlayer,20"/>
+			<property name="AITask-1" value="RunawayWhenHurt" data="runChance=.75;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-2" value="RunawayFromEntity" data="class=EntityEnemyAnimal,EntityZombie;safeDistance=15"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20,EntityBandit,20,EntityPlayer,20"/>
 			<property name="AITask-4" value="BreakBlock"/>
 			<property name="AITask-5" value="Wander"/>
 			<property name="AITask-6" value=""/>
-			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie,EntityPlayer"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityBandit,80,80"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-3" value=""/>
         </entity_class>
 
