@@ -3849,6 +3849,9 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyDogTier1"/>	
 			
+			<effect_group name="Resistances">
+				<passive_effect name="BuffResistance" operation="base_add" value="10" tags="buffLaceration,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffInjuryBleeding,buffInjuryBleedingParticle"/>
+			</effect_group>
 			<effect_group name="Immunity">
 					<passive_effect name="BuffResistance" operation="base_set" value="10" tags="buffInfectionCatch,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire"/>
 			</effect_group>
@@ -4038,6 +4041,9 @@ FuriousRamsayVultureToxicRadiated
 			<property name="TimeStayAfterDeath" value="30"/>
 
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyWolfTier2"/>	
+			<effect_group name="Resistances">
+				<passive_effect name="BuffResistance" operation="base_add" value="10" tags="buffLaceration,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffInjuryBleeding,buffInjuryBleedingParticle"/>
+			</effect_group>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayAllyWolfTier2War" extends="FuriousRamsayAllyWolfTier2">
@@ -4225,6 +4231,9 @@ FuriousRamsayVultureToxicRadiated
 			<property name="TimeStayAfterDeath" value="30"/>
 
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyLionTier3"/>	
+			<effect_group name="Resistances">
+				<passive_effect name="BuffResistance" operation="base_add" value="10" tags="buffLaceration,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffInjuryBleeding,buffInjuryBleedingParticle"/>
+			</effect_group>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayAllyLionTier3War" extends="FuriousRamsayAllyLionTier3">
@@ -4411,6 +4420,9 @@ FuriousRamsayVultureToxicRadiated
 			<property name="TimeStayAfterDeath" value="30"/>
 
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyBearTier4"/>	
+			<effect_group name="Resistances">
+				<passive_effect name="BuffResistance" operation="base_add" value="10" tags="buffLaceration,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffInjuryBleeding,buffInjuryBleedingParticle"/>
+			</effect_group>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayAllyBearTier4War" extends="FuriousRamsayAllyBearTier4">
@@ -4605,6 +4617,9 @@ FuriousRamsayVultureToxicRadiated
             <effect_group name="Movement Effects">
 				<passive_effect name="JumpStrength" operation="perc_set" value="0"/>
             </effect_group>
+			<effect_group name="Resistances">
+				<passive_effect name="BuffResistance" operation="base_add" value="10" tags="buffLaceration,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffInjuryBleeding,buffInjuryBleedingParticle"/>
+			</effect_group>
 		</entity_class>
 		
 		<entity_class name="FuriousRamsayAllyNPCTier5War" extends="FuriousRamsayAllyNPCTier5">
@@ -5108,6 +5123,9 @@ FuriousRamsayVultureToxicRadiated
 				<passive_effect name="HealthMax" operation="base_set" value="50"/>
 				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
 			</effect_group>
+			<effect_group name="Resistances">
+				<passive_effect name="BuffResistance" operation="base_add" value="10" tags="buffLaceration,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffInjuryBleeding,buffInjuryBleedingParticle"/>
+			</effect_group>
 		</entity_class>
 	
 		<entity_class name="FuriousRamsayCloakedSnake" extends="animalSnake">
@@ -5136,6 +5154,9 @@ FuriousRamsayVultureToxicRadiated
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayResistFire"/>
 				<passive_effect name="HealthMax" operation="base_set" value="75"/>
 				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
+			</effect_group>
+			<effect_group name="Resistances">
+				<passive_effect name="BuffResistance" operation="base_add" value="10" tags="buffLaceration,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffInjuryBleeding,buffInjuryBleedingParticle"/>
 			</effect_group>
 		</entity_class>
 
@@ -5171,6 +5192,9 @@ FuriousRamsayVultureToxicRadiated
 				<passive_effect name="HealthMax" operation="base_set" value="100"/>
 				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
 			</effect_group>
+			<effect_group name="Resistances">
+				<passive_effect name="BuffResistance" operation="base_add" value="10" tags="buffLaceration,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffInjuryBleeding,buffInjuryBleedingParticle"/>
+			</effect_group>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayCloakedVultureWar" extends="FuriousRamsayCloakedVulture">
@@ -5182,9 +5206,32 @@ FuriousRamsayVultureToxicRadiated
 
 		<entity_class name="FuriousRamsayCloakedAndroidMaster" extends="zombieBoe">
 			<property name="Class" value="EntityBandit"/>
+
+			<!-- TO BYPASS THE JUMP/LAND ANIMATION BUG -->
+			<property class="FallLandBehavior">
+				<property name="1None" data="anim=None;height=0,1;weight=0.4"/>
+				<property name="1Land" data="anim=None;height=0,1;weight=0.4"/>
+				<property name="1LandLow" data="anim=Stumble;height=0,1;weight=0.15"/>
+				<property name="1Stumble" data="anim=Stumble;height=0,1;weight=0.05"/>
+				<property name="LowLand" data="anim=None;height=1,3;weight=0.7"/>
+				<property name="LowStumble" data="anim=Stumble;height=1,3;weight=0.3"/>
+				<property name="MidStumble" data="anim=Stumble;height=3,5;weight=0.3"/>
+				<property name="MidStumbleAndRage" data="anim=Stumble;height=3,5;weight=0.3;ragePer=0.5,1.5;rageTime=1.0,2.0"/>
+				<property name="MidLandHard" data="anim=None;height=3,5;weight=0.3"/>
+				<property name="MidLandHardAndRage" data="anim=None;height=3,5;weight=0.3;ragePer=0.5,1.5;rageTime=1.0,2.0"/>
+				<property name="Ragdoll" data="anim=Ragdoll;height=3;weight=0.4"/>
+			</property>
+			<property name="JumpMaxDistance" value="0, 0"/>
+			<property name="JumpDelay" value="9999"/>
+            <effect_group name="Movement Effects">
+				<passive_effect name="JumpStrength" operation="perc_set" value="0"/>
+            </effect_group>
+			<effect_group name="Resistances">
+				<passive_effect name="BuffResistance" operation="base_add" value="10" tags="buffLaceration,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffInjuryBleeding,buffInjuryBleedingParticle"/>
+			</effect_group>
 		</entity_class>
 
-		<entity_class name="FuriousRamsayCloakedBurnAndroid" extends="zombieArlene">
+		<entity_class name="FuriousRamsayCloakedBurnAndroid" extends="FuriousRamsayCloakedAndroidMaster">
 			<property name="Class" value="EntityBandit"/>
 			<property name="SizeScale" value="1.2"/>
 			<property name="Tags" value="entity,enemy,zombie,walker,feral,blackshield,metal"/>
@@ -5197,6 +5244,7 @@ FuriousRamsayVultureToxicRadiated
 			<property name="WalkType" value="2"/>
 
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			<property name="LookAtAngle" value="0"/>
 
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="ParticleOnDeath" value="blockdestroy_metal"/>
@@ -5222,13 +5270,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AITarget-4" value=""/>
 			
 			<property name="StompsSpikes" value="true"/>
-
-			<effect_group name="Base Effects">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishCloakedTier5Timer"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayResistFire"/>
-				<passive_effect name="HealthMax" operation="base_set" value="750"/>
-				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
-			</effect_group>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayCloakedBurnAndroidWar" extends="FuriousRamsayCloakedBurnAndroid">
@@ -5253,6 +5294,7 @@ FuriousRamsayVultureToxicRadiated
 			<property name="WalkType" value="8"/>
 
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
+			<property name="LookAtAngle" value="0"/>
 
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="ParticleOnDeath" value="blockdestroy_metal"/>
@@ -5308,6 +5350,7 @@ FuriousRamsayVultureToxicRadiated
 			<property name="WalkType" value="2"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
 			<property name="HandItem" value="FuriousRamsayMeleeHandEnemyNPCTier5"/>
+			<property name="LookAtAngle" value="0"/>
 
 			<property name="SurfaceCategory" value="metal"/>
 			<property name="ParticleOnDeath" value="blockdestroy_metal"/>
@@ -5494,6 +5537,9 @@ FuriousRamsayVultureToxicRadiated
 			<property name="ExperienceGain" value="130"/>
 			<property name="DeadBodyHitPoints" value="175"/>
 			<property name="TimeStayAfterDeath" value="10"/>
+			<effect_group name="Resistances">
+				<passive_effect name="BuffResistance" operation="base_add" value="10" tags="buffLaceration,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffInjuryBleeding,buffInjuryBleedingParticle"/>
+			</effect_group>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBurningRabbitTier1" extends="FuriousRamsayBurningRabbit">
@@ -5681,7 +5727,7 @@ FuriousRamsayVultureToxicRadiated
 			<property name="Immunity" value="sickness;disease;wellness"/>
 			<property name="RotateToGround" value="false"/>	
 			<property name="PushFactor" value="10"/>
-			<property name="TimeStayAfterDeath" value="30"/>
+			<property name="TimeStayAfterDeath" value="120"/>
 
 			<property name="AITask-1" value="BreakBlock"/>
 			<property name="AITask-2" value="DestroyArea"/>
@@ -5715,6 +5761,9 @@ FuriousRamsayVultureToxicRadiated
             <effect_group name="Movement Effects">
 				<passive_effect name="JumpStrength" operation="perc_set" value="0"/>
             </effect_group>
+            <effect_group name="Resistances">
+				<passive_effect name="BuffResistance" operation="base_add" value="10" tags="buffLaceration,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffInjuryBleeding,buffInjuryBleedingParticle"/>
+            </effect_group>
         </entity_class>
 		
         <!--<entity_class name="FuriousRamsayUMATemplateZombieMale" extends="FuriousRamsayUMATemplateMale">
@@ -5741,7 +5790,7 @@ FuriousRamsayVultureToxicRadiated
 
         <entity_class name="FuriousRamsayUMATemplateSurvivorMale" extends="FuriousRamsayUMATemplateMale">
 		<!--Survivors: Earl, Jim, Mike -->
-            <property name="Tags" value="player,UMA,survivor,FuriousRamsayHealthRegen" />
+            <property name="Tags" value="entity,UMA,survivor,FuriousRamsayHealthRegen" />
 			<property name="HideInSpawnMenu" value="true"/>
             <property name="Class" value="EntitySurvivor" />
             <property name="HandItem" value="FuriousRamsayMeleeHandZombieSurvivor" />
@@ -5768,7 +5817,8 @@ FuriousRamsayVultureToxicRadiated
             </effect_group>
 			
             <effect_group name="Health Effects">
-					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen1"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="10" tags="buffLaceration,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffInjuryBleeding,buffInjuryBleedingParticle"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen1"/>
             </effect_group>
         </entity_class>
 
@@ -5776,7 +5826,7 @@ FuriousRamsayVultureToxicRadiated
 		<!--Enemies: Aiden, Hodor, Clint, Richie, Willie, Kim -->
             <property name="HandItem" value="FuriousRamsayMeleeHandZombieEnemy" />
 			<property name="LootListAlive" value="812"/>
-	
+
 			<property name="ExperienceGain" value="350"/>
 
             <effect_group name="Base Effects">
@@ -5913,7 +5963,7 @@ FuriousRamsayVultureToxicRadiated
 
         <entity_class name="FuriousRamsayUMATemplateSurvivorFemale" extends="FuriousRamsayUMATemplateFemale">
 		<!-- Survivors: Emma, Maria, Rayah -->
-            <property name="Tags" value="player,UMA,survivor,FuriousRamsayHealthRegen" />
+            <property name="Tags" value="entity,UMA,survivor,FuriousRamsayHealthRegen" />
 			<property name="HideInSpawnMenu" value="true"/>
             <property name="Class" value="EntitySurvivor" />
             <property name="HandItem" value="FuriousRamsayMeleeHandZombieSurvivor" />
@@ -5939,7 +5989,8 @@ FuriousRamsayVultureToxicRadiated
             </effect_group>
 
             <effect_group name="Health Effects">
-					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen1"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="10" tags="buffLaceration,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffInjuryBleeding,buffInjuryBleedingParticle"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen1"/>
             </effect_group>
         </entity_class>
 
@@ -5961,7 +6012,7 @@ FuriousRamsayVultureToxicRadiated
             </effect_group>
 
             <effect_group name="Health Effects">
-					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen1"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen1"/>
             </effect_group>
         </entity_class>
 
@@ -7485,7 +7536,7 @@ FuriousRamsayVultureToxicRadiated
         </entity_class>
 
 		<entity_class name="FuriousRamsayTraderUMATemplate" extends="npcTraderTemplate">
-			<property name="Tags" value="player,entity,npc,human,trader"/>
+			<property name="Tags" value="entity,entity,npc,human,trader"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="EntityType" value="Player"/>
 			<property name="Faction" value="trader"/>
@@ -7540,7 +7591,7 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayNPCBlackShieldTrader1" extends="FuriousRamsayTraderUMATemplate">
-			<property name="Tags" value="player,entity,npc,human,BlackShieldTrader1,trader"/>
+			<property name="Tags" value="entity,npc,human,BlackShieldTrader1,trader"/>
 			<property name="Archetype" value="FuriousRamsayBlackShieldTrader1"/>
 			<property name="NPCID" value="FuriousRamsayBlackShieldTrader1"/>
 
@@ -7558,7 +7609,7 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 		
 		<entity_class name="FuriousRamsayNPCFarmerKatieTrader" extends="FuriousRamsayTraderUMATemplate">
-			<property name="Tags" value="player,entity,npc,human,FarmerKatie,trader"/>
+			<property name="Tags" value="entity,npc,human,FarmerKatie,trader"/>
 			<property name="Archetype" value="FuriousRamsayFarmerKatie"/>
 			<property name="NPCID" value="FuriousRamsayFarmerKatie"/>
 
@@ -7578,7 +7629,7 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayNPCHandymanLukeTrader" extends="FuriousRamsayTraderUMATemplate">
-			<property name="Tags" value="player,entity,npc,human,HandymanLuke,trader"/>
+			<property name="Tags" value="entity,npc,human,HandymanLuke,trader"/>
 			<property name="Archetype" value="FuriousRamsayHandymanLuke"/>
 			<property name="NPCID" value="FuriousRamsayHandymanLuke"/>
 
@@ -20265,7 +20316,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<!-- CHEF TRAINING HELPERS -->
-		<entity_class name="FuriousRamsayChefGenericTrainingTier1" extends="FuriousRamsayUMATemplateSoldierMale">
+		<entity_class name="FuriousRamsayChefGenericTrainingTier1" extends="FuriousRamsayUMATemplateSurvivorMale">
 			<property name="Tags" value="entity,npc,human,UMA,TrainerChef"/>
 			<property name="Archetype" value="FuriousRamsayGenericChefTraining"/>
 
@@ -20728,6 +20779,123 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
             </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldAidenLoot"> <!-- Baseball -->
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="840"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldHodorLoot"> <!-- Steel Pickaxe -->
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="841"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldClintLoot"> <!-- Fireaxe -->
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="842"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldRichieLoot"> <!-- Wrench -->
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="843"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldWillieLoot"> <!-- Stone Axe -->
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="844"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldKimLoot"> <!-- Irno Pickaxe -->
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="845"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldCharlotteLoot"> <!-- Machete -->
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="846"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldRoxyLoot"> <!-- Hammer -->
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="847"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldGabrielleLoot"> <!-- Steel Club -->
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="848"/>
+			<property name="Faction" value="none"/>	
 		</entity_class>
 
 	</append>
