@@ -2476,6 +2476,9 @@ FuriousRamsayVultureToxicRadiated
 			<property name="LootListAlive" value="804"/>
 			<property name="NavObject" value="FuriousRamsayDotRed"/>
 
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayHordeTrainerTier1Loot"/>
+
 			<effect_group name="Base Effects">
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayStartTrainingEnd"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishHuntDecayTier1"/>
@@ -2490,6 +2493,9 @@ FuriousRamsayVultureToxicRadiated
 			<property name="TimeStayAfterDeath" value="15"/>
 			<property name="LootListAlive" value="805"/>
 			<property name="NavObject" value="FuriousRamsayDotRed"/>
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayHordeTrainerTier2Loot"/>
 
 			<effect_group name="Base Effects">
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayStartTrainingEnd"/>
@@ -2506,6 +2512,9 @@ FuriousRamsayVultureToxicRadiated
 			<property name="LootListAlive" value="806"/>
 			<property name="NavObject" value="FuriousRamsayDotRed"/>
 
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayHordeTrainerTier3Loot"/>
+
 			<effect_group name="Base Effects">
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayStartTrainingEnd"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishHuntDecayTier3"/>
@@ -2521,6 +2530,9 @@ FuriousRamsayVultureToxicRadiated
 			<property name="LootListAlive" value="807"/>
 			<property name="NavObject" value="FuriousRamsayDotRed"/>
 
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayHordeTrainerTier4Loot"/>
+
 			<effect_group name="Base Effects">
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayStartTrainingEnd"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishHuntDecayTier4"/>
@@ -2535,6 +2547,9 @@ FuriousRamsayVultureToxicRadiated
 			<property name="TimeStayAfterDeath" value="15"/>
 			<property name="LootListAlive" value="808"/>
 			<property name="NavObject" value="FuriousRamsayDotRed"/>
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayHordeTrainerTier5Loot"/>
 
 			<effect_group name="Base Effects">
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayStartTrainingEnd"/>
@@ -5640,7 +5655,7 @@ FuriousRamsayVultureToxicRadiated
 			<property name="NavObject" value="FuriousRamsayDotOrange"/>
 
 			<property name="AIGroupCircle" value="1"/>
-			<property name="MaxViewAngle" value="110"/>
+			<property name="MaxViewAngle" value="160"/>
 			<property name="LookAtAngle" value="60"/>
 			<property name="AIPathCostScale" value=".15, .4"/>
 			<property name="SightLightThreshold" value="-2,-2"/>
@@ -5825,7 +5840,6 @@ FuriousRamsayVultureToxicRadiated
         <entity_class name="FuriousRamsayUMATemplateEnemyMale" extends="FuriousRamsayUMATemplateMale">
 		<!--Enemies: Aiden, Hodor, Clint, Richie, Willie, Kim -->
             <property name="HandItem" value="FuriousRamsayMeleeHandZombieEnemy" />
-			<property name="LootListAlive" value="812"/>
 
 			<property name="ExperienceGain" value="350"/>
 
@@ -5999,7 +6013,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="HideInSpawnMenu" value="true"/>
 
             <property name="HandItem" value="FuriousRamsayMeleeHandZombieEnemy" />
-			<property name="LootListAlive" value="812"/>
 
             <property name="ExperienceGain" value="350" />
 
@@ -6273,9 +6286,9 @@ FuriousRamsayVultureToxicRadiated
 			<property name="NavObject" value="FuriousRamsayDotRed"/>
 
 			<property name="MoveSpeedAggro" value="1.1, 1.2"/> 
-			<property name="LootListAlive" value="810"/>
-			<property name="LootDropProb" value="0.5"/>
-			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldCaptainLoot"/>
+        
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldGabrielleLoot"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAGabrielleEnemyWar" extends="FuriousRamsayUMAGabrielleEnemy">
@@ -6337,6 +6350,9 @@ FuriousRamsayVultureToxicRadiated
         <entity_class name="FuriousRamsayUMAAidenEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
             <property name="Tags" value="entity,enemy,FuriousRamsayUMAAidenEnemy,UMA" />
             <property name="Archetype" value="FuriousRamsayAiden" />
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldAidenLoot"/>
         </entity_class>
 		
         <entity_class name="FuriousRamsayUMAAidenEnemyWar" extends="FuriousRamsayUMAAidenEnemy">
@@ -6371,6 +6387,9 @@ FuriousRamsayVultureToxicRadiated
         <entity_class name="FuriousRamsayUMACharlotteEnemy" extends="FuriousRamsayUMATemplateEnemyFemale">
             <property name="Tags" value="entity,enemy,FuriousRamsayUMACharlotteEnemy,UMA" />
             <property name="Archetype" value="FuriousRamsayCharlotte" />
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldCharlotteLoot"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMACharlotteEnemyWar" extends="FuriousRamsayUMACharlotteEnemy">
@@ -6404,6 +6423,9 @@ FuriousRamsayVultureToxicRadiated
         <entity_class name="FuriousRamsayUMAWillieEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
             <property name="Tags" value="entity,enemy,FuriousRamsayUMAWillieEnemy,UMA" />
             <property name="Archetype" value="FuriousRamsayWillie" />
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldWillieLoot"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAWillieEnemyWar" extends="FuriousRamsayUMAWillieEnemy">
@@ -6437,6 +6459,9 @@ FuriousRamsayVultureToxicRadiated
         <entity_class name="FuriousRamsayUMAHodorEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
             <property name="Tags" value="entity,enemy,FuriousRamsayUMAHodorEnemy,UMA" />
             <property name="Archetype" value="FuriousRamsayHodor" />
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldHodorLoot"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAHodorEnemyWar" extends="FuriousRamsayUMAHodorEnemy">
@@ -6498,6 +6523,9 @@ FuriousRamsayVultureToxicRadiated
         <entity_class name="FuriousRamsayUMAKimEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
             <property name="Tags" value="entity,enemy,FuriousRamsayUMAKimEnemy,UMA" />
             <property name="Archetype" value="FuriousRamsayKim" />
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldKimLoot"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAKimEnemyWar" extends="FuriousRamsayUMAKimEnemy">
@@ -6742,10 +6770,10 @@ FuriousRamsayVultureToxicRadiated
 			<property name="SoundAttack" value="malehateattack"/>
 
 			<property name="MoveSpeedAggro" value="1.1, 1.2"/> 
-			<property name="LootListAlive" value="810"/>
-			<property name="LootDropProb" value="0.5"/>
-			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldCaptainLoot"/>
-        </entity_class>
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldClintLoot"/>
+		</entity_class>
 
         <entity_class name="FuriousRamsayUMAClintEnemyWar" extends="FuriousRamsayUMAClintEnemy">
 			<property name="SoundSense" value=""/>
@@ -6813,7 +6841,10 @@ FuriousRamsayVultureToxicRadiated
         <entity_class name="FuriousRamsayUMARoxyEnemy" extends="FuriousRamsayUMATemplateEnemyFemale">
             <property name="Tags" value="entity,enemy,FuriousRamsayUMARoxyEnemy,UMA" />
             <property name="Archetype" value="FuriousRamsayRoxy" />
-        </entity_class>
+        
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldRoxyLoot"/>
+		</entity_class>
 
         <entity_class name="FuriousRamsayUMARoxyEnemyWar" extends="FuriousRamsayUMARoxyEnemy">
 			<property name="SightRange" value="200"/> 
@@ -6872,6 +6903,9 @@ FuriousRamsayVultureToxicRadiated
         <entity_class name="FuriousRamsayUMARichieEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
             <property name="Tags" value="entity,enemy,FuriousRamsayUMARichieEnemy,UMA" />
             <property name="Archetype" value="FuriousRamsayRichie" />
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldRichieLoot"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMARichieEnemyWar" extends="FuriousRamsayUMARichieEnemy">
@@ -6910,7 +6944,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="Parent" value="Backpack"/>
 			<property name="IsEnemyEntity" value="false"/>
 			<property name="TimeStayAfterDeath" value="120"/>
-			<property name="LootListOnDeath" value="811"/>
 			<property name="Faction" value="none"/>	
 		</entity_class>
 
@@ -6951,7 +6984,6 @@ FuriousRamsayVultureToxicRadiated
             <property name="HandItem" value="FuriousRamsayMeleeHandBlackShieldBossTier1" />
 
             <property name="ExperienceGain" value="1500" />
-			<property name="LootListOnDeath" value="813"/>
 
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15,EntityZombie,20"/>
 			<property name="AITask-2" value="BreakBlock"/>
@@ -6961,6 +6993,9 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntitySurvivor,0,0,EntityZombie,0,0"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-4" value=""/>
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBossTier1Loot"/>
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="1000" />
@@ -6984,7 +7019,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="Weight" value="350"/>
 
             <property name="ExperienceGain" value="3000" />
-			<property name="LootListOnDeath" value="814"/>
 
 			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=5"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15,EntityZombie,20"/>
@@ -6995,6 +7029,9 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntitySurvivor,0,0,EntityZombie,0,0"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-4" value=""/>
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBossTier2Loot"/>
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="2000" />
@@ -7019,7 +7056,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="Weight" value="600"/>
 
             <property name="ExperienceGain" value="6000" />
-			<property name="LootListOnDeath" value="815"/>
 
 			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=5"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15,EntityZombie,15"/>
@@ -7030,6 +7066,9 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntitySurvivor,0,0,EntityZombie,0,0"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-4" value=""/>
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBossTier3Loot"/>
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="3000" />
@@ -7055,7 +7094,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="Weight" value="900"/>
 
             <property name="ExperienceGain" value="9000" />
-			<property name="LootListOnDeath" value="816"/>
 
 			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=5"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15,EntityZombie,20"/>
@@ -7067,6 +7105,9 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-4" value=""/>
           
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBossTier4Loot"/>
+
 			<effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="4000" />
                 <passive_effect name="HealthMax" operation="perc_set" value="1" />
@@ -7093,7 +7134,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="Weight" value="1400"/>
 
             <property name="ExperienceGain" value="12000" />
-			<property name="LootListOnDeath" value="817"/>
 
 			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=5"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15,EntityZombie,15"/>
@@ -7104,6 +7144,9 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntitySurvivor,0,0,EntityZombie,0,0"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-4" value=""/>
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBossTier5Loot"/>
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="5000" />
@@ -7160,7 +7203,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="HideInSpawnMenu" value="true"/>
 
 			<property name="MoveSpeedAggro" value="1.2, 1.35"/> 
-			<property name="LootListAlive" value="812"/>
 
             <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTreasureTier1" />
 
@@ -7180,7 +7222,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="HideInSpawnMenu" value="true"/>
 
 			<property name="MoveSpeedAggro" value="1.2, 1.35"/> 
-			<property name="LootListAlive" value="812"/>
 
             <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTreasureTier2" />
 
@@ -7200,7 +7241,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="HideInSpawnMenu" value="true"/>
 
 			<property name="MoveSpeedAggro" value="1.3, 1.45"/> 
-			<property name="LootListAlive" value="812"/>
 
             <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTreasureTier3" />
 
@@ -7220,7 +7260,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="HideInSpawnMenu" value="true"/>
 
 			<property name="MoveSpeedAggro" value="1.3, 1.45"/> 
-			<property name="LootListAlive" value="812"/>
 
             <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTreasureTier4" />
 
@@ -7240,7 +7279,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="HideInSpawnMenu" value="true"/>
 
 			<property name="MoveSpeedAggro" value="1.4, 1.65"/> 
-			<property name="LootListAlive" value="812"/>
 
             <property name="HandItem" value="FuriousRamsayMeleeHandEnemyTreasureTier5" />
 
@@ -7260,7 +7298,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="HideInSpawnMenu" value="true"/>
 
 			<property name="MoveSpeedAggro" value="1.4, 1.65"/> 
-			<property name="LootListAlive" value="812"/>
 
             <property name="HandItem" value="FuriousRamsayMeleeHandZombieEnemy" />
 
@@ -7280,7 +7317,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="HideInSpawnMenu" value="true"/>
 
 			<property name="MoveSpeedAggro" value="1.5, 1.75"/> 
-			<property name="LootListAlive" value="812"/>
 
             <property name="HandItem" value="FuriousRamsayMeleeHandZombieEnemy" />
 
@@ -7300,7 +7336,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="HideInSpawnMenu" value="true"/>
 
 			<property name="MoveSpeedAggro" value="1.5, 1.75"/> 
-			<property name="LootListAlive" value="812"/>
 
             <property name="HandItem" value="FuriousRamsayMeleeHandZombieEnemy" />
 
@@ -7320,7 +7355,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="HideInSpawnMenu" value="true"/>
 
 			<property name="MoveSpeedAggro" value="1.6, 1.85"/> 
-			<property name="LootListAlive" value="812"/>
 
             <property name="HandItem" value="FuriousRamsayMeleeHandZombieEnemy" />
 
@@ -7340,7 +7374,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="HideInSpawnMenu" value="true"/>
 
 			<property name="MoveSpeedAggro" value="1.6, 1.85"/> 
-			<property name="LootListAlive" value="812"/>
 
             <property name="HandItem" value="FuriousRamsayMeleeHandZombieEnemy" />
 
@@ -7572,7 +7605,7 @@ FuriousRamsayVultureToxicRadiated
 
 			<property name="MaxViewAngle" value="360"/>
 
-			<property name="LootListAlive" value="62"/>
+			<!--<property name="LootListAlive" value="62"/>-->
 
 			<property name="MoveSpeed" value="0.7"/>
 			<property name="MoveSpeedAggro" value="2, 2"/>
@@ -20781,6 +20814,136 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
             </effect_group>
 		</entity_class>
 
+		<entity_class name="FuriousRamsayHordeTrainerTier1Loot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="804"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayHordeTrainerTier2Loot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="805"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayHordeTrainerTier3Loot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="806"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayHordeTrainerTier4Loot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="807"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayHordeTrainerTier5Loot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="808"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldBossTier1Loot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="813"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldBossTier2Loot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="814"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldBossTier3Loot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="815"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldBossTier4Loot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="816"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldBossTier5Loot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="817"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
 		<entity_class name="FuriousRamsayBlackShieldAidenLoot"> <!-- Baseball -->
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
@@ -20846,7 +21009,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 			<property name="Faction" value="none"/>	
 		</entity_class>
 
-		<entity_class name="FuriousRamsayBlackShieldKimLoot"> <!-- Irno Pickaxe -->
+		<entity_class name="FuriousRamsayBlackShieldKimLoot"> <!-- Iron Pickaxe -->
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
 			<property name="ModelType" value="Custom"/>

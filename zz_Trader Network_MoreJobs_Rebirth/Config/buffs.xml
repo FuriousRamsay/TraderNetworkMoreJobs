@@ -1756,6 +1756,7 @@
 				<duration value="5"/>
 				<effect_group>
 					<requirement name="!CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
+					<requirement name="EntityTagCompare" tags="player"/>
 						<passive_effect name="WaterLossPerHealthPointGained" operation="perc_add" value="-.05"/>
 						<passive_effect name="FoodLossPerHEalthPointGained" operation="perc_add" value="-.05"/>
 						<passive_effect name="WaterLossPerStaminaPointGained" operation="perc_add" value="-.05"/>

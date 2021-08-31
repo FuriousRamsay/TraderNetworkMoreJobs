@@ -4,6 +4,76 @@
 
 	<append xpath="/quests">
 
+		<!-- DISCIPLES TRAINING -->
+		<quest id="quest_FuriousRamsayHunterDisciplesTraining_Tier1">
+			<property name="name_key" value="qquest_FuriousRamsayHunterDisciplesTraining_Tier1_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier1_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier1_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="insane"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier1_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier1_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier1_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="AutoComplete"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomGoto" value="90-100" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+				
+			<objective type="Time" value="0" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayHunterGenericTrainingTier1" value="5" phase="3"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayChefDisciplesTraining_Tier1">
+			<property name="name_key" value="qquest_FuriousRamsayChefDisciplesTraining_Tier1_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier1_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier1_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="insane"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier1_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier1_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier1_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="AutoComplete"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomGoto" value="90-100" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+				
+			<objective type="Time" value="0" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayChefGenericTrainingTier1" value="5" phase="3"/>
+		</quest>
+
+		<!-- TRAINER TRAINING -->
 		<quest id="quest_FuriousRamsayHunterTraining_Tier1">
 			<property name="name_key" value="quest_FuriousRamsayHunterTraining_Tier1_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayHunterTraining_Tier1_subtitle"/>
@@ -798,6 +868,7 @@
 
 		<quest_list id="trader_quests_huntertrainer">
 			<quest id="quest_FuriousRamsayHunterTraining_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayHunterDisciplesTraining_Tier1" prob="1"/>
 		</quest_list>
 
 		<quest_list id="trader_quests_thugtrainer">
@@ -826,6 +897,7 @@
 
 		<quest_list id="trader_quests_cheftrainer">
 			<quest id="quest_FuriousRamsayChefTraining_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayChefDisciplesTraining_Tier1" prob="1"/>
 		</quest_list>
 
 	</append>

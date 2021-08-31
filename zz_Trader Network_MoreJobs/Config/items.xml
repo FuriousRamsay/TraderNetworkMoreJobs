@@ -6682,6 +6682,342 @@
 				<property name="Sound_start" value="batwood_swingheavy"/>
 			</property>
 		</item>
+
+		<!-- BANDIT CLOTHING -->
+		<item name="FuriousRamsayBanditHeadHoodRed">
+			<property name="Tags" value="head,clothing"/>
+			<property name="Extends" value="apparelPlantFiberHood"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberHood"/>
+			<property name="CustomIconTint" value="255,0,0"/>
+			<property name="DescriptionKey" value="apparelPlantFiberHoodDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="255,0,0"/>
+			<property name="UMA.Overlay0Tint" value="255,0,0"/>
+			<effect_group name="FuriousRamsayStarterArmor" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.3"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="7.3" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="150"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBanditHeadHoodGray">
+			<property name="Tags" value="head,clothing"/>
+			<property name="Extends" value="armorClothHat"/>
+			<property name="RepairTools" value="resourceCloth"/>
+			<property name="CustomIcon" value="armorClothHat"/>
+			<property name="CustomIconTint" value="255,255,255"/>
+			<property name="DescriptionKey" value="armorClothHatDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="255,255,255"/>
+			<property name="UMA.Overlay0Tint" value="255,255,255"/>
+			<effect_group name="FuriousRamsayStarterArmor" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.3"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="7.3" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="150"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBanditHeadCowboyHat">
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="Extends" value="apparelCowboyHat"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="apparelCowboyHat"/>
+			<property name="CustomIconTint" value="255,255,255"/>
+			<property name="DescriptionKey" value="apparelCowboyHatDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="255,255,255"/>
+			<property name="UMA.Overlay0Tint" value="255,255,255"/>
+		</item>
+
+		<item name="FuriousRamsayBanditHeadAviatorGoggles">
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="Extends" value="apparelAviatorGoggles"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="apparelAviatorGoggles"/>
+			<property name="CustomIconTint" value="255,0,0"/>
+			<property name="DescriptionKey" value="apparelAviatorGogglesDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="255,0,0"/>
+			<property name="UMA.Overlay0Tint" value="255,0,0"/>
+		</item>
+
+		<item name="FuriousRamsayBanditHeadSkiGoggles">
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="Extends" value="apparelSkiGoggles"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="apparelSkiGoggles"/>
+			<property name="CustomIconTint" value="152,0,0"/>
+			<property name="DescriptionKey" value="apparelSkiGogglesDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="255,0,0"/>
+			<property name="UMA.Overlay0Tint" value="255,0,0"/>
+		</item>
+
+		<item name="FuriousRamsayBanditChestDuster">
+			<property name="Tags" value="upperbody,lowerbody,chest,clothing,pocketMod"/>
+			<property name="Extends" value="apparelCoatLeatherDuster"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="apparelCoatLeatherDuster"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="DescriptionKey" value="apparelCoatLeatherDusterDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0,0,0"/>
+			<property name="UMA.Overlay0Tint" value="0,0,0"/>
+		</item>
+
+		<item name="FuriousRamsayBanditChestShirtBlack">
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="Extends" value="apparelArmyShirt"/>
+			<property name="RepairTools" value="resourceCloth"/>
+			<property name="CustomIcon" value="apparelArmyShirt"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="DescriptionKey" value="apparelArmyShirtDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0,0,0"/>
+			<property name="UMA.Overlay0Tint" value="0,0,0"/>
+		</item>
+
+		<item name="FuriousRamsayBanditChestShirtRed">
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="Extends" value="apparelArmyShirt"/>
+			<property name="RepairTools" value="resourceCloth"/>
+			<property name="CustomIcon" value="apparelArmyShirt"/>
+			<property name="CustomIconTint" value="152,0,0"/>
+			<property name="DescriptionKey" value="apparelArmyShirtDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="152,0,0"/>
+			<property name="UMA.Overlay0Tint" value="152,0,0"/>
+		</item>
+			
+		<item name="FuriousRamsayBanditChestTanktopRed">
+			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
+			<property name="Extends" value="apparelTankTop"/>
+			<property name="RepairTools" value="resourceCloth"/>
+			<property name="CustomIcon" value="apparelTankTop"/>
+			<property name="CustomIconTint" value="152,0,0"/>
+			<property name="DescriptionKey" value="apparelTankTopDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="152,0,0"/>
+			<property name="UMA.Overlay1Tint" value="152,0,0"/>
+		</item>
+
+		<item name="FuriousRamsayBanditChestScrap">
+			<property name="Tags" value="upperbody,chest,armor,armorChest,heavyArmor,heavyArmorPenalty,heavyArmorDeg"/>
+			<property name="Extends" value="armorScrapChest"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="CustomIcon" value="armorScrapChest"/>
+			<property name="DescriptionKey" value="armorScrapChestDesc"/>
+			<property name="SellableToTrader" value="false"/>
+		</item>
+
+		<item name="FuriousRamsayBanditLegsFiberPantsBlack">
+			<property name="Tags" value="legs,clothing,pocketMod"/>
+			<property name="Extends" value="apparelPlantFiberPants"/>
+			<property name="RepairTools" value="resourceCloth"/>
+			<property name="CustomIcon" value="apparelPlantFiberPants"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="DescriptionKey" value="apparelPlantFiberPantsDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0,0,0"/>
+			<property name="UMA.Overlay0Tint" value="0,0,0"/>
+		</item>
+
+		<item name="FuriousRamsayBanditLegsFiberPantsRed">
+			<property name="Tags" value="legs,clothing,pocketMod"/>
+			<property name="Extends" value="apparelPlantFiberPants"/>
+			<property name="RepairTools" value="resourceCloth"/>
+			<property name="CustomIcon" value="apparelPlantFiberPants"/>
+			<property name="CustomIconTint" value="152,0,0"/>
+			<property name="DescriptionKey" value="apparelPlantFiberPantsDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="200,0,0"/>
+			<property name="UMA.Overlay0Tint" value="200,0,0"/>
+		</item>
+
+		<item name="FuriousRamsayBanditLegsPantsBlack">
+			<property name="Tags" value="legs,clothing,pocketMod"/>
+			<property name="Extends" value="apparelArmyPants"/>
+			<property name="RepairTools" value="resourceCloth"/>
+			<property name="CustomIcon" value="apparelArmyPants"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="DescriptionKey" value="apparelArmyPantsDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0,0,0"/>
+			<property name="UMA.Overlay0Tint" value="0,0,0"/>
+		</item>
+
+		<item name="FuriousRamsayBanditLegsPantsRed">
+			<property name="Tags" value="legs,clothing,pocketMod"/>
+			<property name="Extends" value="apparelArmyPants"/>
+			<property name="RepairTools" value="resourceCloth"/>
+			<property name="CustomIcon" value="apparelArmyPants"/>
+			<property name="CustomIconTint" value="152,0,0"/>
+			<property name="DescriptionKey" value="apparelArmyPantsDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="200,0,0"/>
+			<property name="UMA.Overlay0Tint" value="200,0,0"/>
+		</item>
 		
+		<item name="FuriousRamsayBanditLegsLeatherPantsBlack">
+			<property name="Tags" value="legs,clothing,pocketMod"/>
+			<property name="Extends" value="armorLeatherPants"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorLeatherPants"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="DescriptionKey" value="armorLeatherPantsDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0,0,0"/>
+			<property name="UMA.Overlay0Tint" value="0,0,0"/>
+		</item>
+
+		<item name="FuriousRamsayBanditLegsGothPantsBlack">
+			<property name="Tags" value="legs,clothing,pocketMod"/>
+			<property name="Extends" value="apparelGothPants"/>
+			<property name="RepairTools" value="resourceCloth"/>
+			<property name="CustomIcon" value="apparelGothPants"/>
+			<property name="CustomIconTint" value="0,0,0"/>
+			<property name="DescriptionKey" value="apparelGothPantsDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="0,0,0"/>
+			<property name="UMA.Overlay0Tint" value="0,0,0"/>
+		</item>
+		
+		<item name="FuriousRamsayBanditLegsScrap">
+			<property name="Tags" value="lowerbody,legs,armor,armorLegs,heavyArmor,heavyArmorPenalty,heavyArmorDeg"/>
+			<property name="Extends" value="armorScrapLegs"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="CustomIcon" value="armorScrapLegs"/>
+			<property name="CustomIconTint" value="152,0,0"/>
+			<property name="DescriptionKey" value="armorMilitaryLegsDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="255,0,0"/>
+			<property name="UMA.Overlay0Tint" value="255,0,0"/>
+		</item>
+
+		<item name="FuriousRamsayBanditGlovesFiber">
+			<property name="Tags" value="hands,clothing,noMods"/>
+			<property name="Extends" value="apparelPlantFiberGloves"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberGloves"/>
+			<property name="CustomIconTint" value="255,255,255"/>
+			<property name="DescriptionKey" value="apparelPlantFiberGlovesDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="255,255,255"/>
+			<property name="UMA.Overlay0Tint" value="255,255,255"/>
+		</item>
+
+		<item name="FuriousRamsayBanditGlovesFiberRed">
+			<property name="Tags" value="hands,clothing,noMods"/>
+			<property name="Extends" value="apparelPlantFiberGloves"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberGloves"/>
+			<property name="CustomIconTint" value="152,0,0"/>
+			<property name="DescriptionKey" value="apparelPlantFiberGlovesDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="200,0,0"/>
+			<property name="UMA.Overlay0Tint" value="200,0,0"/>
+		</item>
+
+		<item name="FuriousRamsayBanditLegsFiberPantsGray">
+			<property name="Tags" value="legs,clothing,pocketMod"/>
+			<property name="Extends" value="apparelPlantFiberPants"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberPants"/>
+			<property name="CustomIconTint" value="100,100,100"/>
+			<property name="DescriptionKey" value="apparelPlantFiberPantsDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="100,100,100"/>
+			<property name="UMA.Overlay0Tint" value="100,100,100"/>
+		</item>
+
+		<item name="FuriousRamsayBanditLegsFiberPantsRed">
+			<property name="Tags" value="legs,clothing,pocketMod"/>
+			<property name="Extends" value="apparelPlantFiberPants"/>
+			<property name="RepairTools" value="resourceYuccaFibers"/>
+			<property name="CustomIcon" value="apparelPlantFiberPants"/>
+			<property name="CustomIconTint" value="152,0,0"/>
+			<property name="DescriptionKey" value="apparelPlantFiberPantsDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="200,0,0"/>
+			<property name="UMA.Overlay0Tint" value="200,0,0"/>
+		</item>
+
+		<item name="FuriousRamsayBanditBootsMilitary">
+			<property name="Tags" value="lowerbody,feet,armor,armorFeet,lightArmor,lightArmorPenalty,lightArmorDeg"/>
+			<property name="Extends" value="armorMilitaryBoots"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorMilitaryBoots"/>
+			<property name="CustomIconTint" value="190,147,98"/>
+			<property name="DescriptionKey" value="armorMilitaryBootsDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="190,147,98"/>
+			<property name="UMA.Overlay0Tint" value="190,147,98"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.3"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="7.3" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="150"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBanditBootsLeather">
+			<property name="Tags" value="lowerbody,feet,armor,armorFeet,lightArmor,lightArmorPenalty,lightArmorDeg"/>
+			<property name="Extends" value="armorLeatherBoots"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="armorLeatherBoots"/>
+			<property name="CustomIconTint" value="190,147,98"/>
+			<property name="DescriptionKey" value="armorLeatherBootsDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="190,147,98"/>
+			<property name="UMA.Overlay0Tint" value="190,147,98"/>
+			<effect_group name="FuriousRamsayStarterArmor">
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="7.3"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="7.3" tags="heat,electrical"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="150"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+				<display_value name="dStaminaChangeOT" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBanditBootsGoth">
+			<property name="Tags" value="lowerbody,feet,clothing,noMods"/>
+			<property name="Extends" value="apparelGothBoots"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="apparelGothBoots"/>
+			<property name="CustomIconTint" value="190,147,98"/>
+			<property name="DescriptionKey" value="apparelGothBootsDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="190,147,98"/>
+			<property name="UMA.Overlay0Tint" value="190,147,98"/>
+		</item>
+
+		<item name="FuriousRamsayBanditBootsRunning">
+			<property name="Tags" value="lowerbody,feet,clothing,noMods"/>
+			<property name="Extends" value="apparelRunningShoesRegular"/>
+			<property name="RepairTools" value="resourceLeather"/>
+			<property name="CustomIcon" value="apparelRunningShoesRegular"/>
+			<property name="CustomIconTint" value="190,147,98"/>
+			<property name="DescriptionKey" value="apparelRunningShoesRegularDesc"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="TintColor" value="190,147,98"/>
+			<property name="UMA.Overlay0Tint" value="190,147,98"/>
+		</item>
+
 	</append>
 </Config>
