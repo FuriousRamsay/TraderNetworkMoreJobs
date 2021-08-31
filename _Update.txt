@@ -1,13 +1,31 @@
-TODO: balance special armor stats
-TODO: Possibly remove tiers from special armor, adjust prices
-TODO: change the decoy and trader spawners to the new way
+FIX: biome spawns for bandits should drop loot instead of looting corpses
+	Set Lootgruops in Loot.xml. Weapons are in Entities
 
-TODO: Buff displays for Ally buffs (Dog, Wolf)
-CHECK: healing buff for wolf prototype
+FIX: Issue with healing. Pills work, not bandages (not main mod)
 
-TODO: change display type to nothing for npc blocks
+I leveled up chef with a spear?
 
-==============
+InvalidCastException: Specified cast is not valid.
+  at EntityBuffs.RemoveBuff (System.String _name, System.Boolean _netSync) [0x00074] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at MinEventActionRemoveBuff.Execute (MinEventParams _params) [0x0003b] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at MinEffectGroup.FireEvent (MinEventTypes _eventType, MinEventParams _eventParms) [0x0002e] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at MinEffectController.FireEvent (MinEventTypes _eventType, MinEventParams _eventParms) [0x00019] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at BuffClass.FireEvent (MinEventTypes _eventType, MinEventParams _params) [0x00013] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at EntityBuffs.FireEvent (MinEventTypes _eventType, BuffClass _buffClass, MinEventParams _params) [0x00003] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at EntityBuffs.Update (System.Single _deltaTime) [0x00180] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at EntityAlive.OnUpdateEntity () [0x00019] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at World.TickEntity (Entity e, System.Single _partialTicks) [0x0015d] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at World.TickEntitiesSlice (System.Int32 count) [0x00037] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at World.TickEntitiesFlush () [0x0000c] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at World.TickEntities (System.Single _partialTicks) [0x000c9] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at GameManager.UpdateTick () [0x00093] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at GameManager.gmUpdate () [0x00291] in <4b1a8c809f0943a384283687c21422f8>:0 
+  at GameManager.Update () [0x00000] in <4b1a8c809f0943a384283687c21422f8>:0 
+
+FIX: Citizens don't wander
+TODO: Traders will offer ability to refresh jobs list in DF mod
+
+===========================
 
 TODO: Add fnding a trader to the main storyline
 
@@ -133,28 +151,21 @@ Main:
 //Added Spawnable Mechanical Allies in Multiplayer (based on Decoy mechanic), now purchasable from Player vending machines at trader POIs
 //Adjusted toolbelt notification when deploying mechanical allies in multiplayer to ensure players stay clear of the area they deploy them in to not affect the deployment process (could result in nothing happening)
 //Added ability to stack Mechanical Pets up to 25 in multiplayer.
-Adjusted AI
-Added Missing Localization for Toxic entities in Toxic questline
-Fixed burning effect not being removed when hit by burning rabbit
-Fixed Farmer Trader Screen Icon Color
-Added Briston 'The Bioengineer'
-Added trainers
-Traders will offer ability to refresh jobs list
-Adjusted Bandit sight range (base was too high)
-Added ability to reset quest list for all traders
+Fixed Enemy Androids head tilting
+FIX: Below caused when using knives, machetes (main mod)
+Fixed: no more bleeding on metal entities
+FIX: Enemy Androids Jumping
+FIX: biome spawns for mutated anuimals should last longer
 
 Items and Blocks:
 
 I See and Hear You:
 
 Locate New Traders:
-Reduced Biome Trader spawns	
 
 Biome:
 
 Friendly Biome:
-Added Briston 'The Survivor' to biome spawns
-Added Trainers to biome spawns
 
 Wandering Horde:
 
@@ -165,4 +176,5 @@ Moved HUD to the left a bit
 Twitch Integration:
 
 DF Compatibility:
-Traders will offer ability to refresh jobs list
+
+Zombies - Normal Speed:
