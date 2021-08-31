@@ -1673,9 +1673,25 @@
 					</effect_group>
 			</buff>			
 			
+			<buff name="FuriousRamsayVanishDiscipleTimer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="600"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayVanishTrainerTimer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="900"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
+				</effect_group>
+			</buff>
+
 			<buff name="FuriousRamsayVanishTimer" hidden="true" remove_on_death="true">
 				<stack_type value="ignore"/>
-				<duration value="1800"/>
+				<duration value="900"/>
 				<effect_group>
 					<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" target="self" stat="Health" operation="add" value="-99999"/>
 				</effect_group>

@@ -3,20 +3,20 @@
 	<append xpath="/entity_classes">		
 
         <entity_class name="FuriousRamsayUMAJackBiome" extends="FuriousRamsayUMAJack">
-			<property name="NavObject" value="" />
+			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
 			<property name="HandItem" value="FuriousRamsayMeleeHandSoldierJackBiome"/>
 
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
 			<property name="AITask-2" value="BreakBlock"/>
 			<property name="AITask-3" value="Wander"/>
 			<property name="AITask-4" value=""/>
-			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie,EntityPlayer"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-3" value=""/>
         </entity_class>
 		
         <entity_class name="FuriousRamsayUMADanteBiome" extends="FuriousRamsayUMADante">
-			<property name="NavObject" value="" />
+			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
 			<property name="HandItem" value="FuriousRamsayMeleeHandSoldierDanteBiome"/>
 
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20,EntityPlayer,20"/>
@@ -24,36 +24,37 @@
 			<property name="AITask-3" value="Wander"/>
 			<property name="AITask-4" value=""/>
 			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie,EntityPlayer"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-3" value=""/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMALeeBiome" extends="FuriousRamsayUMALee">
-			<property name="NavObject" value="" />
+			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
 			<property name="HandItem" value="FuriousRamsayMeleeHandSoldierLeeBiome"/>
 
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
 			<property name="AITask-2" value="BreakBlock"/>
 			<property name="AITask-3" value="Wander"/>
 			<property name="AITask-4" value=""/>
-			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
-			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie,EntityPlayer"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-3" value=""/>
         </entity_class>
 
         <entity_class name="FuriousRamsayAllyDogTier1Biome" extends="FuriousRamsayAllyDogTier1">
-			<property name="NavObject" value="" />
+			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyDogTier1Biome"/>
 
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
 			<property name="AITask-2" value="BreakBlock"/>
 			<property name="AITask-3" value="Wander"/>
 			<property name="AITask-4" value=""/>
-			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
 			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
 			<property name="AITarget-3" value=""/>
 
 			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddStaminaAllyTimer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayResistFire"/>
 				<passive_effect name="HealthMax" operation="base_set" value="400"/>
@@ -64,18 +65,19 @@
         </entity_class>
 
         <entity_class name="FuriousRamsayAllyWolfTier2Biome" extends="FuriousRamsayAllyWolfTier2">
-			<property name="NavObject" value="" />
+			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyWolfTier2Biome"/>
 
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
 			<property name="AITask-2" value="BreakBlock"/>
 			<property name="AITask-3" value="Wander"/>
 			<property name="AITask-4" value=""/>
-			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
 			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
 			<property name="AITarget-3" value=""/>
 
 			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddHealthAllyTimer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayResistFire"/>
 				<passive_effect name="HealthMax" operation="base_set" value="600"/>
@@ -86,18 +88,19 @@
         </entity_class>
 
         <entity_class name="FuriousRamsayAllyLionTier3Biome" extends="FuriousRamsayAllyLionTier3">
-			<property name="NavObject" value="" />
+			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyLionTier3Biome"/>
 
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
 			<property name="AITask-2" value="BreakBlock"/>
 			<property name="AITask-3" value="Wander"/>
 			<property name="AITask-4" value=""/>
-			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
 			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
 			<property name="AITarget-3" value=""/>
 
 			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddBurningAllyLionTier3Timer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayResistFire"/>
 				<passive_effect name="HealthMax" operation="base_set" value="800"/>
@@ -108,18 +111,19 @@
         </entity_class>
 
         <entity_class name="FuriousRamsayAllyBearTier4Biome" extends="FuriousRamsayAllyBearTier4">
-			<property name="NavObject" value="" />
+			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyBearTier4Biome"/>
 
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
 			<property name="AITask-2" value="BreakBlock"/>
 			<property name="AITask-3" value="Wander"/>
 			<property name="AITask-4" value=""/>
-			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
 			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
 			<property name="AITarget-3" value=""/>
 
 			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayKnockdownAllyBearTier4Timer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayResistFire"/>
 				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
@@ -130,18 +134,19 @@
         </entity_class>
 
         <entity_class name="FuriousRamsayAllyNPCTier5Biome" extends="FuriousRamsayAllyNPCTier5">
-			<property name="NavObject" value="" />
+			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
 			<property name="HandItem" value="FuriousRamsayMeleeHandAllyNPCTier5Biome"/>
 
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,20,EntityZombie,20"/>
 			<property name="AITask-2" value="BreakBlock"/>
 			<property name="AITask-3" value="Wander"/>
 			<property name="AITask-4" value=""/>
-			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,200,200,EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityEnemyAnimal,100,100,EntityZombie,80,80"/>
 			<property name="AITarget-2" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityZombie"/>
 			<property name="AITarget-3" value=""/>
 
 			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddShockAllyNPCTier5Timer"/>				
 				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayResistFire"/>
 				<passive_effect name="HealthMax" operation="base_set" value="1500"/>
@@ -152,7 +157,7 @@
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAJimSurvivorBiome" extends="FuriousRamsayUMAJimSurvivor">
-			<property name="NavObject" value="" />
+			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
             <property name="HandItem" value="FuriousRamsayMeleeHandSurvivorBiome" />
 
 			<property name="AITask-1" value="RunawayWhenHurt" data="runChance=.75;healthPer=.5;healthPerMax=0.75"/>
@@ -167,7 +172,7 @@
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAEmmaSurvivorBiome" extends="FuriousRamsayUMAEmmaSurvivor">
-			<property name="NavObject" value="" />
+			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
             <property name="HandItem" value="FuriousRamsayMeleeHandSurvivorBiome" />
 
 			<property name="AITask-1" value="RunawayWhenHurt" data="runChance=.75;healthPer=.5;healthPerMax=0.75"/>
@@ -182,7 +187,7 @@
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAMikeSurvivorBiome" extends="FuriousRamsayUMAMikeSurvivor">
-			<property name="NavObject" value="" />
+			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
             <property name="HandItem" value="FuriousRamsayMeleeHandSurvivorBiome" />
 
 			<property name="AITask-1" value="RunawayWhenHurt" data="runChance=.75;healthPer=.5;healthPerMax=0.75"/>
@@ -197,7 +202,7 @@
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAMariaSurvivorBiome" extends="FuriousRamsayUMAMariaSurvivor">
-			<property name="NavObject" value="" />
+			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
             <property name="HandItem" value="FuriousRamsayMeleeHandSurvivorBiome" />
 
 			<property name="AITask-1" value="RunawayWhenHurt" data="runChance=.75;healthPer=.5;healthPerMax=0.75"/>
@@ -212,7 +217,7 @@
         </entity_class>
 
         <entity_class name="FuriousRamsayUMARayahSurvivorBiome" extends="FuriousRamsayUMARayahSurvivor">
-			<property name="NavObject" value="" />
+			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
             <property name="HandItem" value="FuriousRamsayMeleeHandSurvivorBiome" />
 
 			<property name="AITask-1" value="RunawayWhenHurt" data="runChance=.75;healthPer=.5;healthPerMax=0.75"/>
@@ -227,7 +232,7 @@
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAEarlSurvivorBiome" extends="FuriousRamsayUMAEarlSurvivor">
-			<property name="NavObject" value="" />
+			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
             <property name="HandItem" value="FuriousRamsayMeleeHandSurvivorBiome" />
 
 			<property name="AITask-1" value="RunawayWhenHurt" data="runChance=.75;healthPer=.5;healthPerMax=0.75"/>
