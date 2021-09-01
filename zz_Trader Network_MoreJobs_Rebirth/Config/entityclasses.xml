@@ -1,8 +1,8 @@
 <configs>
 
-	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">FuriousRamsayStarterPistol,FuriousRamsayStarterClub,drugPainkillers,bedroll</set>
-	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">FuriousRamsayStarterPistol,FuriousRamsayStarterClub,drugPainkillers,bedroll</set>
-	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">FuriousRamsayStarterPistol,FuriousRamsayStarterClub,drugPainkillers,bedroll</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvival']/@value">FuriousRamsayStarterClub</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalSP']/@value">FuriousRamsayStarterClub</set>
+	<set xpath="/entity_classes/entity_class[@name='playerMale']/property[@name='ItemsOnEnterGame.GameModeSurvivalMP']/@value">FuriousRamsayStarterClub</set>
 
 	<append xpath="/entity_classes">		
 	
@@ -29,41 +29,65 @@
 		</entity_class>
 
 		<entity_class name="FuriousRamsayZombieArlene" extends="zombieArlene">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/>
 			<property name="LootListOnDeath" value="818"/>
 			<property name="TimeStayAfterDeath" value="600"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayZombieBoe" extends="zombieBoe">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/>
 			<property name="LootListOnDeath" value="819"/>
 			<property name="TimeStayAfterDeath" value="600"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayZombieJoe" extends="zombieJoe">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/>
 			<property name="LootListOnDeath" value="820"/>
 			<property name="TimeStayAfterDeath" value="600"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayZombieDarlene" extends="zombieDarlene">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/>
 			<property name="LootListOnDeath" value="821"/>
 			<property name="TimeStayAfterDeath" value="600"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayZombieMarlene" extends="zombieMarlene">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/>
 			<property name="LootListOnDeath" value="822"/>
 			<property name="TimeStayAfterDeath" value="600"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayZombieYo" extends="zombieYo">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/>
 			<property name="LootListOnDeath" value="823"/>
 			<property name="TimeStayAfterDeath" value="600"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayZombieSteve" extends="zombieSteve">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/>
 			<property name="LootListOnDeath" value="824"/>
 			<property name="TimeStayAfterDeath" value="600"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayZombieBusinessMan" extends="zombieBusinessMan">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/>
 			<property name="LootListOnDeath" value="825"/>
 			<property name="TimeStayAfterDeath" value="600"/>
 		</entity_class>

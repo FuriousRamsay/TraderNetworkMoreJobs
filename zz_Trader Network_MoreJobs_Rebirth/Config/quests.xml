@@ -34,12 +34,16 @@
 				<property name="nav_object" value="quest" />
 			</objective>
 
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier1Quest,FuriousRamsaySkullsHammerTier1Quest,FuriousRamsaySkullsAxeTier1Quest" value="1" phase="2">
+				<property name="delay" value="3"/>
+			</action>
+
 			<objective type="RallyPoint">
 				<property name="phase" value="2"/>
 				<property name="nav_object" value="rally" />
 			</objective>
 
-			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier1,FuriousRamsaySkullsHammerTier1,FuriousRamsaySkullsAxeTier1" value="3" phase="2">
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier1Quest,FuriousRamsaySkullsHammerTier1Quest,FuriousRamsaySkullsAxeTier1Quest" value="1" phase="3">
 				<property name="delay" value="3"/>
 			</action>
 
@@ -48,7 +52,7 @@
 				<property name="nav_object" value="sleeper_volume"/>
 			</objective>
 
-			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier1,FuriousRamsaySkullsHammerTier1,FuriousRamsaySkullsAxeTier1" value="3" phase="3">
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier1Quest,FuriousRamsaySkullsHammerTier1Quest,FuriousRamsaySkullsAxeTier1Quest" value="2" phase="4">
 				<property name="delay" value="3"/>
 			</action>
 
@@ -61,7 +65,7 @@
 				<property name="nav_object" value="fetch_container" />
 			</objective>
 
-			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier1,FuriousRamsaySkullsHammerTier1,FuriousRamsaySkullsAxeTier1" value="3" phase="4">
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier1Quest,FuriousRamsaySkullsHammerTier1Quest,FuriousRamsaySkullsAxeTier1Quest" value="4" phase="5">
 				<property name="delay" value="3"/>
 			</action>
 
@@ -3148,10 +3152,6 @@
 
 			<action type="TrackQuest"/>
 
-			<reward type="Item" id="ammo9mmBulletBall" value="30" stage="start"/>
-			<reward type="Item" id="meleeToolRepairT0StoneAxe" quality="1" value="1" stage="start"/>
-			<!--<reward type="Quest" id="quest_FuriousRamsayPeskyZombies" stage="start"/>-->
-
 			<objective type="RandomPOIGoto">
 				<property name="phase" value="1"/>
 				<property name="nav_object" value="quest" />
@@ -3238,13 +3238,9 @@
 			<action type="SpawnEnemy" id="FuriousRamsayZombieYo" value="1" phase="1"/>
 			<action type="SpawnEnemy" id="FuriousRamsayZombieSteve" value="1" phase="1"/>
 			<action type="SpawnEnemy" id="FuriousRamsayZombieBusinessMan" value="1" phase="1"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMALindaStarter" value="1" phase="1"/>
 
-			<objective type="FetchKeep" id="apparelTShirtPlain" value="1" phase="2"/>
-			<objective type="FetchKeep" id="apparelDenimPants" value="1" phase="2"/>
-			<objective type="FetchKeep" id="apparelRunningShoesRegular" value="1" phase="2"/>
-			<objective type="Wear" id="apparelTShirtPlain" phase="2"/>
-			<objective type="Wear" id="apparelDenimPants" phase="2"/>
-			<objective type="Wear" id="apparelRunningShoesRegular" phase="2"/>
+			<objective type="FetchKeep" id="meleeToolRepairT0StoneAxe" value="1" phase="2"/>
 			
 			<objective type="Time" value="0" phase="3"/>
 			<action type="SpawnEnemy" id="FuriousRamsayNPCSurvivalSpecialist1" value="1" phase="3"/>	
@@ -3348,35 +3344,81 @@
 		<quest_list id="trader_quests_huntertrainer">
 			<quest id="quest_FuriousRamsayHunterTraining_Tier1" prob="1"/>
 			<quest id="quest_FuriousRamsayHunterDisciplesTraining_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayHunterDisciplesTraining_Tier2" prob="1"/>
+			<quest id="quest_FuriousRamsayHunterDisciplesTraining_Tier3" prob="1"/>
+			<quest id="quest_FuriousRamsayHunterDisciplesTraining_Tier4" prob="1"/>
+			<quest id="quest_FuriousRamsayHunterDisciplesTraining_Tier5" prob="1"/>
+			<quest id="quest_FuriousRamsaySkullsClearFetch_Tier1" prob="1"/>
 		</quest_list>
 
 		<quest_list id="trader_quests_thugtrainer">
 			<quest id="quest_FuriousRamsayThugTraining_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayThugDisciplesTraining_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayThugDisciplesTraining_Tier2" prob="1"/>
+			<quest id="quest_FuriousRamsayThugDisciplesTraining_Tier3" prob="1"/>
+			<quest id="quest_FuriousRamsayThugDisciplesTraining_Tier4" prob="1"/>
+			<quest id="quest_FuriousRamsayThugDisciplesTraining_Tier5" prob="1"/>
+			<quest id="quest_FuriousRamsaySkullsClearFetch_Tier1" prob="1"/>
 		</quest_list>
 
 		<quest_list id="trader_quests_butchertrainer">
 			<quest id="quest_FuriousRamsayButcherTraining_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayButcherDisciplesTraining_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayButcherDisciplesTraining_Tier2" prob="1"/>
+			<quest id="quest_FuriousRamsayButcherDisciplesTraining_Tier3" prob="1"/>
+			<quest id="quest_FuriousRamsayButcherDisciplesTraining_Tier4" prob="1"/>
+			<quest id="quest_FuriousRamsayButcherDisciplesTraining_Tier5" prob="1"/>
+			<quest id="quest_FuriousRamsaySkullsClearFetch_Tier1" prob="1"/>
 		</quest_list>
 
 		<quest_list id="trader_quests_soldiertrainer">
 			<quest id="quest_FuriousRamsaySoldierTraining_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsaySoldierDisciplesTraining_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsaySoldierDisciplesTraining_Tier2" prob="1"/>
+			<quest id="quest_FuriousRamsaySoldierDisciplesTraining_Tier3" prob="1"/>
+			<quest id="quest_FuriousRamsaySoldierDisciplesTraining_Tier4" prob="1"/>
+			<quest id="quest_FuriousRamsaySoldierDisciplesTraining_Tier5" prob="1"/>
+			<quest id="quest_FuriousRamsaySkullsClearFetch_Tier1" prob="1"/>
 		</quest_list>
 
 		<quest_list id="trader_quests_technogeektrainer">
 			<quest id="quest_FuriousRamsayTechnogeekTraining_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier2" prob="1"/>
+			<quest id="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier3" prob="1"/>
+			<quest id="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier4" prob="1"/>
+			<quest id="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier5" prob="1"/>
+			<quest id="quest_FuriousRamsaySkullsClearFetch_Tier1" prob="1"/>
 		</quest_list>
 
 		<quest_list id="trader_quests_madmantrainer">
 			<quest id="quest_FuriousRamsayMadmanTraining_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayMadmanDisciplesTraining_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayMadmanDisciplesTraining_Tier2" prob="1"/>
+			<quest id="quest_FuriousRamsayMadmanDisciplesTraining_Tier3" prob="1"/>
+			<quest id="quest_FuriousRamsayMadmanDisciplesTraining_Tier4" prob="1"/>
+			<quest id="quest_FuriousRamsayMadmanDisciplesTraining_Tier5" prob="1"/>
+			<quest id="quest_FuriousRamsaySkullsClearFetch_Tier1" prob="1"/>
 		</quest_list>
 
 		<quest_list id="trader_quests_buildertrainer">
 			<quest id="quest_FuriousRamsayBuilderTraining_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayBuilderDisciplesTraining_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayBuilderDisciplesTraining_Tier2" prob="1"/>
+			<quest id="quest_FuriousRamsayBuilderDisciplesTraining_Tier3" prob="1"/>
+			<quest id="quest_FuriousRamsayBuilderDisciplesTraining_Tier4" prob="1"/>
+			<quest id="quest_FuriousRamsayBuilderDisciplesTraining_Tier5" prob="1"/>
+			<quest id="quest_FuriousRamsaySkullsClearFetch_Tier1" prob="1"/>
 		</quest_list>
 
 		<quest_list id="trader_quests_cheftrainer">
 			<quest id="quest_FuriousRamsayChefTraining_Tier1" prob="1"/>
 			<quest id="quest_FuriousRamsayChefDisciplesTraining_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayChefDisciplesTraining_Tier2" prob="1"/>
+			<quest id="quest_FuriousRamsayChefDisciplesTraining_Tier3" prob="1"/>
+			<quest id="quest_FuriousRamsayChefDisciplesTraining_Tier4" prob="1"/>
+			<quest id="quest_FuriousRamsayChefDisciplesTraining_Tier5" prob="1"/>
+			<quest id="quest_FuriousRamsaySkullsClearFetch_Tier1" prob="1"/>
 		</quest_list>
 
 	</append>

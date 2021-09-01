@@ -9,7 +9,7 @@
 	<append xpath="/entity_classes">		
 
         <entity_class name="FuriousRamsayKamikazeTier1Biome" extends="FuriousRamsayKamikazeTier1">
-			<property name="HideInSpawnMenu" value="true"/>
+			<!--<property name="HideInSpawnMenu" value="true"/>-->
 			<property name="Explosion.BlockDamage" value="150"/>
 			<property name="Explosion.EntityDamage" value="200"/>
 
@@ -18,10 +18,13 @@
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="200" />
                 <passive_effect name="HealthMax" operation="perc_set" value="1" />
-                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
             </effect_group>
+
+			<effect_group name="FuriousRamsayKamikaze">
+			</effect_group>
         </entity_class>
 
         <entity_class name="FuriousRamsayKamikazeTier2Biome" extends="FuriousRamsayKamikazeTier2">
@@ -34,10 +37,13 @@
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="250" />
                 <passive_effect name="HealthMax" operation="perc_set" value="1" />
-                <passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="15" />
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
             </effect_group>
+
+			<effect_group name="FuriousRamsayKamikaze">
+			</effect_group>
         </entity_class>
 
         <entity_class name="FuriousRamsayKamikazeTier3Biome" extends="FuriousRamsayKamikazeTier3">
@@ -54,6 +60,9 @@
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
             </effect_group>
+
+			<effect_group name="FuriousRamsayKamikaze">
+			</effect_group>
         </entity_class>
 
         <entity_class name="FuriousRamsayKamikazeTier4Biome" extends="FuriousRamsayKamikazeTier4">
@@ -70,6 +79,9 @@
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
             </effect_group>
+
+			<effect_group name="FuriousRamsayKamikaze">
+			</effect_group>
         </entity_class>
 
         <entity_class name="FuriousRamsayKamikazeTier5Biome" extends="FuriousRamsayKamikazeTier5">
@@ -86,6 +98,9 @@
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
             </effect_group>
+
+			<effect_group name="FuriousRamsayKamikaze">
+			</effect_group>
         </entity_class>
 
         <entity_class name="FuriousRamsayZombieBoeToxicBiome" extends="FuriousRamsayZombieBoeToxic">
@@ -606,38 +621,65 @@
 
 		<entity_class name="FuriousRamsayUMAAidenEnemyBiome" extends="FuriousRamsayUMAAidenEnemy">
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+            <property name="Archetype" value="FuriousRamsayAidenBiome" />
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldAidenLoot"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayUMAHodorEnemyBiome" extends="FuriousRamsayUMAHodorEnemy">
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+            <property name="Archetype" value="FuriousRamsayHodorBiome" />
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldHodorLoot"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayUMARichieEnemyBiome" extends="FuriousRamsayUMARichieEnemy">
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+            <property name="Archetype" value="FuriousRamsayRichieBiome" />
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldRichieLoot"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayUMAWillieEnemyBiome" extends="FuriousRamsayUMAWillieEnemy">
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+            <property name="Archetype" value="FuriousRamsayWillieBiome" />
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldWillieLoot"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayUMAKimEnemyBiome" extends="FuriousRamsayUMAKimEnemy">
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+            <property name="Archetype" value="FuriousRamsayKimBiome" />
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldKimLoot"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayUMACharlotteEnemyBiome" extends="FuriousRamsayUMACharlotteEnemy">
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+            <property name="Archetype" value="FuriousRamsayCharlotteBiome" />
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldCharlotteLoot"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayUMARoxyEnemyBiome" extends="FuriousRamsayUMARoxyEnemy">
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+            <property name="Archetype" value="FuriousRamsayRoxyBiome" />
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldRoxyLoot"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayUMAGabrielleEnemyBiome" extends="FuriousRamsayUMAGabrielleEnemy">
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+            <property name="Archetype" value="FuriousRamsayGabrielleBiome" />
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldGabrielleLoot"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayUMAClintEnemyBiome" extends="FuriousRamsayUMAClintEnemy">
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+            <property name="Archetype" value="FuriousRamsayClintBiome" />
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldClintLoot"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayUMAAidenZombieBiome" extends="FuriousRamsayUMAAidenZombie">
@@ -2010,51 +2052,96 @@
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySkullsClubTier1Biome" extends="FuriousRamsaySkullsClubTier1">
-			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+			<property name="Archetype" value="FuriousRamsaySkullsBiome"/>
+			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="false"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsaySkullsClubLoot"/>
 		</entity_class>
 		<entity_class name="FuriousRamsaySkullsClubTier2Biome" extends="FuriousRamsaySkullsClubTier2">
+			<property name="Archetype" value="FuriousRamsaySkullsBiome"/>
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsaySkullsClubLoot"/>
 		</entity_class>
 		<entity_class name="FuriousRamsaySkullsClubTier3Biome" extends="FuriousRamsaySkullsClubTier3">
+			<property name="Archetype" value="FuriousRamsaySkullsBiome"/>
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsaySkullsClubLoot"/>
 		</entity_class>
 		<entity_class name="FuriousRamsaySkullsClubTier4Biome" extends="FuriousRamsaySkullsClubTier4">
+			<property name="Archetype" value="FuriousRamsaySkullsBiome"/>
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsaySkullsClubLoot"/>
 		</entity_class>
 		<entity_class name="FuriousRamsaySkullsClubTier5Biome" extends="FuriousRamsaySkullsClubTier5">
+			<property name="Archetype" value="FuriousRamsaySkullsBiome"/>
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsaySkullsClubLoot"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySkullsHammerTier1Biome" extends="FuriousRamsaySkullsHammerTier1">
+			<property name="Archetype" value="FuriousRamsaySkullsBiome"/>
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsaySkullsHammerLoot"/>
 		</entity_class>
 		<entity_class name="FuriousRamsaySkullsHammerTier2Biome" extends="FuriousRamsaySkullsHammerTier2">
+			<property name="Archetype" value="FuriousRamsaySkullsBiome"/>
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsaySkullsHammerLoot"/>
 		</entity_class>
 		<entity_class name="FuriousRamsaySkullsHammerTier3Biome" extends="FuriousRamsaySkullsHammerTier3">
+			<property name="Archetype" value="FuriousRamsaySkullsBiome"/>
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsaySkullsHammerLoot"/>
 		</entity_class>
 		<entity_class name="FuriousRamsaySkullsHammerTier4Biome" extends="FuriousRamsaySkullsHammerTier4">
+			<property name="Archetype" value="FuriousRamsaySkullsBiome"/>
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsaySkullsHammerLoot"/>
 		</entity_class>
 		<entity_class name="FuriousRamsaySkullsHammerTier5Biome" extends="FuriousRamsaySkullsHammerTier5">
+			<property name="Archetype" value="FuriousRamsaySkullsBiome"/>
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsaySkullsHammerLoot"/>
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySkullsAxeTier1Biome" extends="FuriousRamsaySkullsAxeTier1">
+			<property name="Archetype" value="FuriousRamsaySkullsBiome"/>
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsaySkullsAxeLoot"/>
 		</entity_class>
 		<entity_class name="FuriousRamsaySkullsAxeTier2Biome" extends="FuriousRamsaySkullsAxeTier2">
+			<property name="Archetype" value="FuriousRamsaySkullsBiome"/>
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsaySkullsAxeLoot"/>
 		</entity_class>
 		<entity_class name="FuriousRamsaySkullsAxeTier3Biome" extends="FuriousRamsaySkullsAxeTier3">
+			<property name="Archetype" value="FuriousRamsaySkullsBiome"/>
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsaySkullsAxeLoot"/>
 		</entity_class>
 		<entity_class name="FuriousRamsaySkullsAxeTier4Biome" extends="FuriousRamsaySkullsAxeTier4">
+			<property name="Archetype" value="FuriousRamsaySkullsBiome"/>
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsaySkullsAxeLoot"/>
 		</entity_class>
 		<entity_class name="FuriousRamsaySkullsAxeTier5Biome" extends="FuriousRamsaySkullsAxeTier5">
+			<property name="Archetype" value="FuriousRamsaySkullsBiome"/>
 			<property name="NavObject" value="" /><property name="HideInSpawnMenu" value="true"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsaySkullsAxeLoot"/>
 		</entity_class>
 
 	</append>

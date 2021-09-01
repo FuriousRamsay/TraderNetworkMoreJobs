@@ -4861,6 +4861,14 @@
 				</effect_group>
 			</buff>
 
+			<buff name="VerifyFuriousRamsayUMALindaStarterVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="10"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Axe/stone_axePrefab.prefab" local_offset="-0.084,0.04,-0.025" local_rotation="353.36,244.38472,350.9999" parent_transform="RightHand"/>
+				</effect_group>
+			</buff>
+
 			<buff name="VerifyFuriousRamsayUMAAidenEnemyVisuals" hidden="true">	
 				<stack_type value="replace"/>
 				<duration value="10"/>
@@ -5231,6 +5239,13 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayUMALeeVisuals">
 				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayUMALee"/>
 				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayUMALeeVisuals"/>
+			</triggered_effect>
+
+
+			<!-- Starter Quest Olivia Visuals -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayUMALindaStarterVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsayUMALindaStarter"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayUMALindaStarterVisuals"/>
 			</triggered_effect>
 
 			<!-- Bandit Visuals -->
