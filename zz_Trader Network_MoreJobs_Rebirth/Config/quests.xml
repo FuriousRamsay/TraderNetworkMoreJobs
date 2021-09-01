@@ -4,10 +4,92 @@
 
 	<append xpath="/quests">
 
+		<!-- SKULLS JOB -->
+		<quest id="quest_FuriousRamsaySkullsClearFetch_Tier1">
+			<property name="name_key" value="quest_FuriousRamsaySkullsClearFetch_Tier1_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsaySkullsClearFetch_Tier1_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsaySkullsClearFetch_Tier1_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="easy"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsaySkullsClearFetch_Tier1_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsaySkullsClearFetch_Tier1_statement"/>
+			<property name="response_key" value="quest_FuriousRamsaySkullsClearFetch_Tier1_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="login_rally_reset" value="true"/>
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayStealTechTier1_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="biome_filter_type" value="ExcludeBiome" />
+				<property name="biome_filter" value="wasteland" />
+				<property name="nav_object" value="quest" />
+			</objective>
+
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier1,FuriousRamsaySkullsHammerTier1,FuriousRamsaySkullsAxeTier1" value="3" phase="2">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="ClearSleepers">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="sleeper_volume"/>
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier1,FuriousRamsaySkullsHammerTier1,FuriousRamsaySkullsAxeTier1" value="3" phase="3">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="FetchFromContainer">
+				<property name="phase" value="4"/>
+				<property name="quest_item_ID" value="93"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="fetch_mode" value="Standard"/>
+				<property name="nav_object" value="fetch_container" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier1,FuriousRamsaySkullsHammerTier1,FuriousRamsaySkullsAxeTier1" value="3" phase="4">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="2500"/>
+			<reward type="Item" id="casinoCoin" value="400"/>
+
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="1"/>
+		</quest>
+
 		<!-- DISCIPLES TRAINING -->
 		<!-- HUNTER DISCIPLES -->
 		<quest id="quest_FuriousRamsayHunterDisciplesTraining_Tier1">
-			<property name="name_key" value="qquest_FuriousRamsayHunterDisciplesTraining_Tier1_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier1_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier1_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier1_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -41,7 +123,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayHunterDisciplesTraining_Tier2">
-			<property name="name_key" value="qquest_FuriousRamsayHunterDisciplesTraining_Tier2_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier2_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier2_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier2_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -75,7 +157,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayHunterDisciplesTraining_Tier3">
-			<property name="name_key" value="qquest_FuriousRamsayHunterDisciplesTraining_Tier3_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier3_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier3_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier3_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -109,7 +191,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayHunterDisciplesTraining_Tier4">
-			<property name="name_key" value="qquest_FuriousRamsayHunterDisciplesTraining_Tier4_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier4_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier4_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier4_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -143,7 +225,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayHunterDisciplesTraining_Tier5">
-			<property name="name_key" value="qquest_FuriousRamsayHunterDisciplesTraining_Tier5_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier5_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier5_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayHunterDisciplesTraining_Tier5_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -178,7 +260,7 @@
 
 		<!-- THUG DISCIPLES -->
 		<quest id="quest_FuriousRamsayThugDisciplesTraining_Tier1">
-			<property name="name_key" value="qquest_FuriousRamsayThugDisciplesTraining_Tier1_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayThugDisciplesTraining_Tier1_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayThugDisciplesTraining_Tier1_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayThugDisciplesTraining_Tier1_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -212,7 +294,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayThugDisciplesTraining_Tier2">
-			<property name="name_key" value="qquest_FuriousRamsayThugDisciplesTraining_Tier2_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayThugDisciplesTraining_Tier2_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayThugDisciplesTraining_Tier2_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayThugDisciplesTraining_Tier2_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -246,7 +328,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayThugDisciplesTraining_Tier3">
-			<property name="name_key" value="qquest_FuriousRamsayThugDisciplesTraining_Tier3_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayThugDisciplesTraining_Tier3_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayThugDisciplesTraining_Tier3_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayThugDisciplesTraining_Tier3_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -280,7 +362,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayThugDisciplesTraining_Tier4">
-			<property name="name_key" value="qquest_FuriousRamsayThugDisciplesTraining_Tier4_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayThugDisciplesTraining_Tier4_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayThugDisciplesTraining_Tier4_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayThugDisciplesTraining_Tier4_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -314,7 +396,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayThugDisciplesTraining_Tier5">
-			<property name="name_key" value="qquest_FuriousRamsayThugDisciplesTraining_Tier5_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayThugDisciplesTraining_Tier5_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayThugDisciplesTraining_Tier5_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayThugDisciplesTraining_Tier5_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -349,7 +431,7 @@
 
 		<!-- BUTCHER DISCIPLES -->
 		<quest id="quest_FuriousRamsayButcherDisciplesTraining_Tier1">
-			<property name="name_key" value="qquest_FuriousRamsayButcherDisciplesTraining_Tier1_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayButcherDisciplesTraining_Tier1_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayButcherDisciplesTraining_Tier1_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayButcherDisciplesTraining_Tier1_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -383,7 +465,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayButcherDisciplesTraining_Tier2">
-			<property name="name_key" value="qquest_FuriousRamsayButcherDisciplesTraining_Tier2_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayButcherDisciplesTraining_Tier2_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayButcherDisciplesTraining_Tier2_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayButcherDisciplesTraining_Tier2_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -417,7 +499,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayButcherDisciplesTraining_Tier3">
-			<property name="name_key" value="qquest_FuriousRamsayButcherDisciplesTraining_Tier3_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayButcherDisciplesTraining_Tier3_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayButcherDisciplesTraining_Tier3_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayButcherDisciplesTraining_Tier3_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -451,7 +533,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayButcherDisciplesTraining_Tier4">
-			<property name="name_key" value="qquest_FuriousRamsayButcherDisciplesTraining_Tier4_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayButcherDisciplesTraining_Tier4_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayButcherDisciplesTraining_Tier4_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayButcherDisciplesTraining_Tier4_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -485,7 +567,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayButcherDisciplesTraining_Tier5">
-			<property name="name_key" value="qquest_FuriousRamsayButcherDisciplesTraining_Tier5_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayButcherDisciplesTraining_Tier5_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayButcherDisciplesTraining_Tier5_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayButcherDisciplesTraining_Tier5_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -520,7 +602,7 @@
 
 		<!-- SOLDIER DISCIPLES -->
 		<quest id="quest_FuriousRamsaySoldierDisciplesTraining_Tier1">
-			<property name="name_key" value="qquest_FuriousRamsaySoldierDisciplesTraining_Tier1_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsaySoldierDisciplesTraining_Tier1_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsaySoldierDisciplesTraining_Tier1_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsaySoldierDisciplesTraining_Tier1_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -554,7 +636,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsaySoldierDisciplesTraining_Tier2">
-			<property name="name_key" value="qquest_FuriousRamsaySoldierDisciplesTraining_Tier2_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsaySoldierDisciplesTraining_Tier2_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsaySoldierDisciplesTraining_Tier2_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsaySoldierDisciplesTraining_Tier2_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -588,7 +670,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsaySoldierDisciplesTraining_Tier3">
-			<property name="name_key" value="qquest_FuriousRamsaySoldierDisciplesTraining_Tier3_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsaySoldierDisciplesTraining_Tier3_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsaySoldierDisciplesTraining_Tier3_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsaySoldierDisciplesTraining_Tier3_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -622,7 +704,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsaySoldierDisciplesTraining_Tier4">
-			<property name="name_key" value="qquest_FuriousRamsaySoldierDisciplesTraining_Tier4_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsaySoldierDisciplesTraining_Tier4_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsaySoldierDisciplesTraining_Tier4_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsaySoldierDisciplesTraining_Tier4_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -656,7 +738,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsaySoldierDisciplesTraining_Tier5">
-			<property name="name_key" value="qquest_FuriousRamsaySoldierDisciplesTraining_Tier5_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsaySoldierDisciplesTraining_Tier5_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsaySoldierDisciplesTraining_Tier5_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsaySoldierDisciplesTraining_Tier5_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -691,7 +773,7 @@
 
 		<!-- TECHNOGEEK DISCIPLES -->
 		<quest id="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier1">
-			<property name="name_key" value="qquest_FuriousRamsayTechnogeekDisciplesTraining_Tier1_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier1_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier1_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier1_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -725,7 +807,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier2">
-			<property name="name_key" value="qquest_FuriousRamsayTechnogeekDisciplesTraining_Tier2_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier2_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier2_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier2_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -759,7 +841,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier3">
-			<property name="name_key" value="qquest_FuriousRamsayTechnogeekDisciplesTraining_Tier3_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier3_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier3_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier3_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -793,7 +875,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier4">
-			<property name="name_key" value="qquest_FuriousRamsayTechnogeekDisciplesTraining_Tier4_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier4_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier4_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier4_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -827,7 +909,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier5">
-			<property name="name_key" value="qquest_FuriousRamsayTechnogeekDisciplesTraining_Tier5_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier5_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier5_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier5_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -862,7 +944,7 @@
 
 		<!-- MADMAN DISCIPLES -->
 		<quest id="quest_FuriousRamsayMadmanDisciplesTraining_Tier1">
-			<property name="name_key" value="qquest_FuriousRamsayMadmanDisciplesTraining_Tier1_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayMadmanDisciplesTraining_Tier1_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayMadmanDisciplesTraining_Tier1_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayMadmanDisciplesTraining_Tier1_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -896,7 +978,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayMadmanDisciplesTraining_Tier2">
-			<property name="name_key" value="qquest_FuriousRamsayMadmanDisciplesTraining_Tier2_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayMadmanDisciplesTraining_Tier2_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayMadmanDisciplesTraining_Tier2_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayMadmanDisciplesTraining_Tier2_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -930,7 +1012,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayMadmanDisciplesTraining_Tier3">
-			<property name="name_key" value="qquest_FuriousRamsayMadmanDisciplesTraining_Tier3_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayMadmanDisciplesTraining_Tier3_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayMadmanDisciplesTraining_Tier3_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayMadmanDisciplesTraining_Tier3_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -964,7 +1046,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayMadmanDisciplesTraining_Tier4">
-			<property name="name_key" value="qquest_FuriousRamsayMadmanDisciplesTraining_Tier4_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayMadmanDisciplesTraining_Tier4_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayMadmanDisciplesTraining_Tier4_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayMadmanDisciplesTraining_Tier4_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -998,7 +1080,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayMadmanDisciplesTraining_Tier5">
-			<property name="name_key" value="qquest_FuriousRamsayMadmanDisciplesTraining_Tier5_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayMadmanDisciplesTraining_Tier5_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayMadmanDisciplesTraining_Tier5_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayMadmanDisciplesTraining_Tier5_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -1033,7 +1115,7 @@
 
 		<!-- BUILDER DISCIPLES -->
 		<quest id="quest_FuriousRamsayBuilderDisciplesTraining_Tier1">
-			<property name="name_key" value="qquest_FuriousRamsayBuilderDisciplesTraining_Tier1_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayBuilderDisciplesTraining_Tier1_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayBuilderDisciplesTraining_Tier1_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayBuilderDisciplesTraining_Tier1_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -1067,7 +1149,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayBuilderDisciplesTraining_Tier2">
-			<property name="name_key" value="qquest_FuriousRamsayBuilderDisciplesTraining_Tier2_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayBuilderDisciplesTraining_Tier2_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayBuilderDisciplesTraining_Tier2_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayBuilderDisciplesTraining_Tier2_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -1101,7 +1183,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayBuilderDisciplesTraining_Tier3">
-			<property name="name_key" value="qquest_FuriousRamsayBuilderDisciplesTraining_Tier3_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayBuilderDisciplesTraining_Tier3_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayBuilderDisciplesTraining_Tier3_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayBuilderDisciplesTraining_Tier3_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -1135,7 +1217,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayBuilderDisciplesTraining_Tier4">
-			<property name="name_key" value="qquest_FuriousRamsayBuilderDisciplesTraining_Tier4_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayBuilderDisciplesTraining_Tier4_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayBuilderDisciplesTraining_Tier4_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayBuilderDisciplesTraining_Tier4_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -1169,7 +1251,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayBuilderDisciplesTraining_Tier5">
-			<property name="name_key" value="qquest_FuriousRamsayBuilderDisciplesTraining_Tier5_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayBuilderDisciplesTraining_Tier5_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayBuilderDisciplesTraining_Tier5_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayBuilderDisciplesTraining_Tier5_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -1204,7 +1286,7 @@
 
 		<!-- CHEF DISCIPLES -->
 		<quest id="quest_FuriousRamsayChefDisciplesTraining_Tier1">
-			<property name="name_key" value="qquest_FuriousRamsayChefDisciplesTraining_Tier1_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier1_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier1_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier1_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -1238,7 +1320,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayChefDisciplesTraining_Tier2">
-			<property name="name_key" value="qquest_FuriousRamsayChefDisciplesTraining_Tier2_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier2_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier2_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier2_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -1272,7 +1354,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayChefDisciplesTraining_Tier3">
-			<property name="name_key" value="qquest_FuriousRamsayChefDisciplesTraining_Tier3_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier3_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier3_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier3_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -1306,7 +1388,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayChefDisciplesTraining_Tier4">
-			<property name="name_key" value="qquest_FuriousRamsayChefDisciplesTraining_Tier4_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier4_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier4_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier4_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
@@ -1340,7 +1422,7 @@
 		</quest>
 
 		<quest id="quest_FuriousRamsayChefDisciplesTraining_Tier5">
-			<property name="name_key" value="qquest_FuriousRamsayChefDisciplesTraining_Tier5_subtitle"/>
+			<property name="name_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier5_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier5_subtitle"/>
 			<property name="description_key" value="quest_FuriousRamsayChefDisciplesTraining_Tier5_description"/>
 			<property name="icon" value="ui_game_symbol_quest"/>
