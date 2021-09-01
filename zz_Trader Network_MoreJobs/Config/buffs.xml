@@ -5023,6 +5023,30 @@
 				</effect_group>
 			</buff>
 			
+			<buff name="VerifyFuriousRamsaySkullsClubVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="VerifyFuriousRamsaySkullsClubVisuals">
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/ClubIron/ClubIronPrefab.prefab" local_offset="-.066,-.05,-.041" local_rotation="0,21.38574,23.00002" parent_transform="RightHand"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsaySkullsHammerVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="VerifyFuriousRamsaySkullsHammerVisuals">
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/SledgeHammer/steelSledgeHammerPrefab.prefab" local_offset="-0.084,0.08,-0.025" local_rotation="3.36,244.38470,358.9999" parent_transform="RightHand"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsaySkullsAxeVisuals" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="VerifyFuriousRamsaySkullsAxeVisuals">
+					<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#Other/Items?Weapons/Melee/Axe/steelAxePrefab.prefab" local_offset="-0.084,0.06,-0.025" local_rotation="358.36,244.38470,358.9999" parent_transform="RightHand"/>
+				</effect_group>
+			</buff>
+
 		</append>		
 
 		<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
@@ -5167,6 +5191,20 @@
 				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsayChefVisuals"/>
 			</triggered_effect>
 			
+			<!-- Skulls Visuals -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsaySkullsClubVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsaySkullsClub"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsaySkullsClubVisuals"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsaySkullsHammerVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsaySkullsHammer"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsaySkullsHammerVisuals"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsaySkullsAxeVisuals">
+				<requirement name="EntityTagCompare" target="other" tags="FuriousRamsaySkullsAxe"/>
+				<requirement name="NotHasBuff" target="other" buff="VerifyFuriousRamsaySkullsAxeVisuals"/>
+			</triggered_effect>
+
 			<!-- Trader Visuals -->
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="100" buff="VerifyFuriousRamsayBlackShieldTrader1Visuals">
 				<requirement name="EntityTagCompare" target="other" tags="BlackShieldTrader1"/>

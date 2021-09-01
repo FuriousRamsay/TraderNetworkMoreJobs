@@ -5392,21 +5392,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="Class" value="EntityBandit"/>
 
 			<!-- TO BYPASS THE JUMP/LAND ANIMATION BUG -->
-			<property class="FallLandBehavior">
-				<property name="1None" data="anim=None;height=0,1;weight=0.4"/>
-				<property name="1Land" data="anim=None;height=0,1;weight=0.4"/>
-				<property name="1LandLow" data="anim=Stumble;height=0,1;weight=0.15"/>
-				<property name="1Stumble" data="anim=Stumble;height=0,1;weight=0.05"/>
-				<property name="LowLand" data="anim=None;height=1,3;weight=0.7"/>
-				<property name="LowStumble" data="anim=Stumble;height=1,3;weight=0.3"/>
-				<property name="MidStumble" data="anim=Stumble;height=3,5;weight=0.3"/>
-				<property name="MidStumbleAndRage" data="anim=Stumble;height=3,5;weight=0.3;ragePer=0.5,1.5;rageTime=1.0,2.0"/>
-				<property name="MidLandHard" data="anim=None;height=3,5;weight=0.3"/>
-				<property name="MidLandHardAndRage" data="anim=None;height=3,5;weight=0.3;ragePer=0.5,1.5;rageTime=1.0,2.0"/>
-				<property name="Ragdoll" data="anim=Ragdoll;height=3;weight=0.4"/>
-			</property>
-			<property name="JumpMaxDistance" value="0, 0"/>
-			<property name="JumpDelay" value="9999"/>
             <effect_group name="Movement Effects">
 				<passive_effect name="JumpStrength" operation="perc_set" value="0"/>
             </effect_group>
@@ -5850,19 +5835,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AIPathCostScale" value=".15, .4"/>
 			<property name="SightLightThreshold" value="-2,-2"/>
 
-			<property class="FallLandBehavior">
-				<property name="1None" data="anim=None;height=0,1;weight=0.4"/>
-				<property name="1Land" data="anim=Land;height=0,1;weight=0.4"/>
-				<property name="1LandLow" data="anim=LandLow;height=0,1;weight=0.15"/>
-				<property name="1Stumble" data="anim=Stumble;height=0,1;weight=0.05"/>
-				<property name="LowLand" data="anim=LandLow;height=1,3;weight=0.7"/>
-				<property name="LowStumble" data="anim=Stumble;height=1,3;weight=0.3"/>
-				<property name="MidStumble" data="anim=Stumble;height=3,5;weight=0.3"/>
-				<property name="MidStumbleAndRage" data="anim=Stumble;height=3,5;weight=0.3;ragePer=0.5,1.5;rageTime=1.0,2.0"/>
-				<property name="MidLandHard" data="anim=LandHard;height=3,5;weight=0.3"/>
-				<property name="MidLandHardAndRage" data="anim=LandHard;height=3,5;weight=0.3;ragePer=0.5,1.5;rageTime=1.0,2.0"/>
-				<property name="Ragdoll" data="anim=Ragdoll;height=3;weight=0.4"/>
-			</property>
 			<property class="DestroyBlockBehavior">
 				<property name="None" data="weight=0.0"/>
 				<property name="Stumble" data="weight=0.2"/>
@@ -5948,21 +5920,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AITarget-4" value=""/>
 
 			<!-- TO BYPASS THE JUMP/LAND ANIMATION BUG -->
-			<property class="FallLandBehavior">
-				<property name="1None" data="anim=None;height=0,1;weight=0.4"/>
-				<property name="1Land" data="anim=None;height=0,1;weight=0.4"/>
-				<property name="1LandLow" data="anim=Stumble;height=0,1;weight=0.15"/>
-				<property name="1Stumble" data="anim=Stumble;height=0,1;weight=0.05"/>
-				<property name="LowLand" data="anim=None;height=1,3;weight=0.7"/>
-				<property name="LowStumble" data="anim=Stumble;height=1,3;weight=0.3"/>
-				<property name="MidStumble" data="anim=Stumble;height=3,5;weight=0.3"/>
-				<property name="MidStumbleAndRage" data="anim=Stumble;height=3,5;weight=0.3;ragePer=0.5,1.5;rageTime=1.0,2.0"/>
-				<property name="MidLandHard" data="anim=None;height=3,5;weight=0.3"/>
-				<property name="MidLandHardAndRage" data="anim=None;height=3,5;weight=0.3;ragePer=0.5,1.5;rageTime=1.0,2.0"/>
-				<property name="Ragdoll" data="anim=Ragdoll;height=3;weight=0.4"/>
-			</property>
-			<property name="JumpMaxDistance" value="0, 0"/>
-			<property name="JumpDelay" value="9999"/>
             <effect_group name="Movement Effects">
 				<passive_effect name="JumpStrength" operation="perc_set" value="0"/>
             </effect_group>
@@ -18980,9 +18937,58 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 		
 		<!-- CHEF TRAINING LEADS -->
+		<entity_class name="FuriousRamsayChefTrainer" extends="FuriousRamsayUMATemplateSoldierMale">
+			<property name="Tags" value="entity,female,bandit,melee,npc,human,FuriousRamsayChefTraining"/>
+
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/>
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="HideInSpawnMenu" value="true"/><property name="NavObject" value="FuriousRamsayDotRed" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandChefTrainingTier1"/>
+
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="0.9, 0.9"/> 
+			<property name="MoveSpeedPanic" value="0.9"/>
+
+			<property name="SwimSpeed" value="1.1"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="MaxViewAngle" value="360"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/> 
+
+			<property name="AITask-1" value="BreakBlock"/> 
+			<property name="AITask-2" value="ApproachDistraction"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityPlayer,0,EntitySurvivor,0,EntityEnemyAnimal,0"/> 
+			<property name="AITask-4" value="ApproachSpot"/> 
+			<property name="AITask-5" value="Territorial"/>
+			<property name="AITask-6" value="Look"/> 
+			<property name="AITask-7" value="Wander"/>	
+			<property name="AITask-8" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityPlayer,EntitySurvivor,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntitySurvivor,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 	
+
+			<property name="TimeStayAfterDeath" value="0"/>
+
+            <effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsaySpeedBurstTimerTier1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTrainerTimer"/>
+                <passive_effect name="HealthMax" operation="base_set" value="10000" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="0" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
 		<entity_class name="FuriousRamsayChefTrainerTier1" extends="FuriousRamsayUMATemplateSoldierMale">
 			<property name="Tags" value="entity,npc,human,TrainerChef,UMA,FuriousRamsayChefTraining"/>
-			<property name="Archetype" value="FuriousRamsayChefTraining"/>		
+			<property name="Archetype" value="FuriousRamsayChefTraining"/>
 
 			<property name="SoundRandom" value=""/>
 
@@ -21313,6 +21319,292 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 			<property name="TimeStayAfterDeath" value="300"/>
 			<property name="LootListOnDeath" value="848"/>
 			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<!-- SKULLS -->
+		<entity_class name="FuriousRamsaySkullsClubTier1" extends="FuriousRamsayUMATemplateEnemyMale">
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsClub"/>
+			<property name="Archetype" value="FuriousRamsaySkulls"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSkullsClubTier1"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="200" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsaySkullsClubTier2" extends="FuriousRamsayUMATemplateEnemyMale">
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsClub"/>
+			<property name="Archetype" value="FuriousRamsaySkulls"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSkullsClubTier2"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="250" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsaySkullsClubTier3" extends="FuriousRamsayUMATemplateEnemyMale">
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsClub"/>
+			<property name="Archetype" value="FuriousRamsaySkulls"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSkullsClubTier3"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="350" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsaySkullsClubTier4" extends="FuriousRamsayUMATemplateEnemyMale">
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsClub"/>
+			<property name="Archetype" value="FuriousRamsaySkulls"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSkullsClubTier4"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="550" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsaySkullsClubTier5" extends="FuriousRamsayUMATemplateEnemyMale">
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsClub"/>
+			<property name="Archetype" value="FuriousRamsaySkulls"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSkullsClubTier5"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="800" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsaySkullsHammerTier1" extends="FuriousRamsayUMATemplateEnemyMale">
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsHammer"/>
+			<property name="Archetype" value="FuriousRamsaySkulls"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSkullsHammerTier1"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="200" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsaySkullsHammerTier2" extends="FuriousRamsayUMATemplateEnemyMale">
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsHammer"/>
+			<property name="Archetype" value="FuriousRamsaySkulls"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSkullsHammerTier2"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="250" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsaySkullsHammerTier3" extends="FuriousRamsayUMATemplateEnemyMale">
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsHammer"/>
+			<property name="Archetype" value="FuriousRamsaySkulls"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSkullsHammerTier3"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="350" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsaySkullsHammerTier4" extends="FuriousRamsayUMATemplateEnemyMale">
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsHammer"/>
+			<property name="Archetype" value="FuriousRamsaySkulls"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSkullsHammerTier4"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="550" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsaySkullsHammerTier5" extends="FuriousRamsayUMATemplateEnemyMale">
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsHammer"/>
+			<property name="Archetype" value="FuriousRamsaySkulls"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSkullsHammerTier5"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="800" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsaySkullsAxeTier1" extends="FuriousRamsayUMATemplateEnemyMale">
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsAxe"/>
+			<property name="Archetype" value="FuriousRamsaySkulls"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSkullsAxeTier1"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="200" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsaySkullsAxeTier2" extends="FuriousRamsayUMATemplateEnemyMale">
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsAxe"/>
+			<property name="Archetype" value="FuriousRamsaySkulls"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSkullsAxeTier2"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="250" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsaySkullsAxeTier3" extends="FuriousRamsayUMATemplateEnemyMale">
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsAxe"/>
+			<property name="Archetype" value="FuriousRamsaySkulls"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSkullsAxeTier3"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="350" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsaySkullsAxeTier4" extends="FuriousRamsayUMATemplateEnemyMale">
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsAxe"/>
+			<property name="Archetype" value="FuriousRamsaySkulls"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSkullsAxeTier4"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="550" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsaySkullsAxeTier5" extends="FuriousRamsayUMATemplateEnemyMale">
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsAxe"/>
+			<property name="Archetype" value="FuriousRamsaySkulls"/>		
+
+			<property name="SoundRandom" value=""/>
+
+			<property name="NavObject" value="FuriousRamsayDotOrange" />
+		
+			<property name="HandItem" value="FuriousRamsayMeleeHandSkullsAxeTier5"/>
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="800" />
+                <passive_effect name="HealthMax" operation="perc_set" value="1" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="5" />
+				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
+				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
+            </effect_group>
 		</entity_class>
 
 	</append>
