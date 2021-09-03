@@ -1,0 +1,654 @@
+<Config>
+
+<!-- Walktypes: 1. Unarmed/Melee BruteWalk, 2. PistolWalk, 3. BowWalk, 6. RifleWalk, 7. Normal/Melee Walk -->
+
+<!-- RightHandJointNames:  Melee uses RightWeapon, Rifles and xbow uses Gunjoint (dues to the offset), Bow uses LeftWeapon, Pistols use RightHand, on Unity Attached ranged weapons use Muzzle or whatever name of the child object added to the business end of the gun where you want the particle to emerge from. -->
+
+	<!-- Adds a buff to the traders in POIs so they kill bandits and survivors before the NRE when entering the trader protected zone  -->
+
+	<append xpath="/entity_classes">
+	
+<!-- Templates  -->	
+
+		<entity_class name="zombieRegularTemplate">
+			<property name="EntityType" value="Zombie"/> <!-- This one decides for scoring -->
+			<property name="Tags" value="entity,cp,male,zombie,walker,melee,template"/>  <!-- entity/sex/type/role/attacktype: Entity is required for code filtering, sex for sound filtering, type/role and Atype for buff filtering.  These DO NOT Extend! -->
+			<property name="HideInSpawnMenu" value="true"/><!-- A19  -->
+			<property name="LookAtAngle" value="60"/> <!-- A19  -->
+			<property name="IsChunkObserver" value="true"/> <!-- When the player leaves the chunk that this zombie is in, can we flag it to despawn? True, we dont need them when a player is not around-->
+			<!-- Mesh and class properties -->
+			<property name="Mesh" value="Zombies/zombieStandardBoeRagdoll"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="Prefab" value="NPC"/>
+			<property name="Class" value="EntityZombie"/>
+			<property name="Parent" value="Enemies"/>
+			<property name="Mass" value="120"/>
+			<property name="Weight" value="70"/>
+			<property name="PhysicsBody" value="zombieStandard"/>
+			<property name="Faction" value="undead"/>
+			<property name="Tags" value="entity,cp,male,zombie,walker"/>
+			<property name="IsEnemyEntity" value="true"/>
+			<!-- <property name="MapIcon" value="ui_game_symbol_enemy_dot" /> -->
+			<property name="CompassIcon" value="ui_game_symbol_enemy_dot" />
+			<property name="CompassUpIcon" value="ui_game_symbol_enemy_dot_up" />
+			<property name="CompassDownIcon" value="ui_game_symbol_enemy_dot_down" />
+			<property name="TrackerIcon" value="ui_game_symbol_run"/>
+			<property name="AINoiseSeekDist" value="8"/>
+			<property name="AIPathCostScale" value=".15, .4"/>
+			<property name="AITask-1" value="BreakBlock"/>
+			<property name="AITask-2" value="DestroyArea"/>
+			<property name="AITask-3" value="Territorial"/>
+			<property name="AITask-4" value="ApproachDistraction"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,20,EntityEnemyAnimal,0,EntitySurvivor,0,EntityPlayer,0,EntityBandit,0"/>
+			<property name="AITask-6" value="ApproachSpot"/>
+			<property name="AITask-7" value="Look"/>
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
+			<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityAlive,0,0"/> 
+			<property class="FallLandBehavior">
+				<property name="1None" data="anim=None;height=0,1;weight=0.4"/>
+				<property name="1Land" data="anim=Land;height=0,1;weight=0.4"/>
+				<property name="1LandLow" data="anim=LandLow;height=0,1;weight=0.15"/>
+				<property name="1Stumble" data="anim=Stumble;height=0,1;weight=0.05"/>
+				<property name="LowLand" data="anim=LandLow;height=1,3;weight=0.7"/>
+				<property name="LowStumble" data="anim=Stumble;height=1,3;weight=0.3"/>
+				<property name="MidStumble" data="anim=Stumble;height=3,5;weight=0.3"/>
+				<property name="MidStumbleAndRage" data="anim=Stumble;height=3,5;weight=0.3;ragePer=0.5,1.5;rageTime=1.0,2.0"/>
+				<property name="MidLandHard" data="anim=LandHard;height=3,5;weight=0.3"/>
+				<property name="MidLandHardAndRage" data="anim=LandHard;height=3,5;weight=0.3;ragePer=0.5,1.5;rageTime=1.0,2.0"/>
+				<property name="Ragdoll" data="anim=Ragdoll;height=3;weight=0.4"/>
+			</property>
+			<property class="DestroyBlockBehavior">
+				<property name="None" data="weight=0.0"/>
+				<property name="Stumble" data="weight=0.2"/>
+				<property name="Ragdoll" data="weight=0.2"/>
+			</property>
+			<property name="WalkType" value="7"/>
+			<property name="SoundRandomTime" value="60.0"/> <!-- It will play the roam every 60/30 seconds -->
+			<property name="SoundRandom" value="Enemies/Base_Zombie_Male/zombiemaleroam"/>
+			<property name="SoundAlertTime" value="25.0"/> <!-- It will play the roam every 25/12.5 seconds-->
+			<property name="SoundAlert" value="Enemies/Base_Zombie_Male/zombiemalealert"/>
+			<property name="SoundSense" value="Enemies/Base_Zombie_Male/zombiemalesense"/>
+			<property name="SoundHurt" value="Enemies/Base_Zombie_Male/zombiemalepain"/>
+			<property name="SoundDeath" value="Enemies/Base_Zombie_Male/zombiemaledeath"/>
+			<property name="SoundAttack" value="Enemies/Base_Zombie_Male/zombiemaleattack"/>
+			<property name="SoundSleeperSense" value="sleepersense"/>
+			<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="ParticleOnDeath" value="blood_death"/>
+			<property name="SurfaceCategory" value="organic"/> <!-- determines the particle effect played on hit -->
+			<property name="DismemberMultiplierHead" value="1"/>
+			<property name="DismemberMultiplierArms" value="1"/>
+			<property name="DismemberMultiplierLegs" value="1"/>
+			<property name="LegCrippleScale" value="2"/> <!-- Scales chance to cripple (percent of health that a hit does is the chance) -->
+			<property name="LegCrawlerThreshold" value="0"/> <!-- at like .175 nearly every zombie knocked down from a leg hit turns into a crawler -->
+			<property name="KnockdownProneDamageThreshold" value="0.5"/>
+			<property name="KnockdownProneStunDuration" value="0.5,1.8"/>
+			<property name="KnockdownProneRefillRate" value="0.045,0.045"/>
+			<property name="KnockdownKneelDamageThreshold" value="0.4"/>
+			<property name="KnockdownKneelStunDuration" value="0.5,1.8"/>
+			<property name="KnockdownKneelRefillRate" value="0.045,0.045"/>
+			<property name="LegsExplosionDamageMultiplier" value="1"/>
+			<property name="ArmsExplosionDamageMultiplier" value="1"/>
+			<property name="HeadExplosionDamageMultiplier" value="1"/>
+			<property name="ChestExplosionDamageMultiplier" value="1"/>
+			<property name="PainResistPerHit" value=".45"/>
+			<property name="MaxViewAngle" value="180"/>
+			<property name="SightRange" value="40"/> <!-- distance in m -->
+			<property name="SightLightThreshold" value="-2,150"/> <!-- how well lit you have to be for the zombie to see you at min,max range -->
+			<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> <!-- Indiv.Random. sight capability - "I see you" light value at point blank -->
+			<property name="SleeperWakeupSightDetectionMax" value="340,480"/> <!-- Indiv.Random. "I see you" light value at "SightRange" -->
+			<property name="SleeperSenseSightDetectionMin" value="-10,0"/> <!-- same for groaning, not waking -->
+			<property name="SleeperSenseSightDetectionMax" value="200,300"/>
+			<property name="SleeperNoiseSenseThreshold" value="3,8"/> <!-- Indiv.Random. hearing capability - "I hear something" noise value -->
+			<property name="SleeperNoiseWakeThreshold" value="9,12"/>
+			<property name="SleeperSmellSenseThreshold" value="20,50"/> <!-- Indiv.Random. smell capability - "I smell something" player smell value -->
+			<property name="SoundSleeperSenseChance" value=".5"/> <!-- the chance to play "SoundSleeperSense" when "SleeperSmellSenseThreshold" is triggered -->
+			<property name="SleeperSmellWakeThreshold" value="40,100"/>
+			<property name="NoiseAlertThreshold" value="40"/> <!-- DEPRECATED; an awake zombie triggers instantly if touched by the sound range/volume -->
+			<property name="SmellAlertThreshold" value="40"/> <!-- for awake zombies -->
+			<property name="MaxTurnSpeed" value="250"/>
+			<property name="MoveSpeed" value="0.08"/> <!-- Just shambling around -->
+			<property name="MoveSpeedAggro" value="0.2, 1.25"/> <!-- Chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedRand" value="-.2, .25"/> <!-- Rand added to min aggro speed -->
+			<property name="MoveSpeedPanic" value="0.55"/>
+			<property name="SwimSpeed" value="1"/><!-- A19  -->
+			<property name="SwimStrokeRate" value="1,1.5"/><!-- A19  -->
+			<property name="CanClimbLadders" value="true"/>
+			<property name="JumpMaxDistance" value="2.8, 3.9"/>
+			<property name="HandItem" value="meleeHandZombie001"/>
+			<property name="HandItemCrawler" value="meleeHandZombie002"/> <!-- meleeHandZombie02 is referenced in code but can be overridden -->
+			<property name="AttackTimeoutDay" value="1.5"/> <!-- 1.5 in s -->
+			<property name="AttackTimeoutNight" value="1.1"/>
+			<!-- <property name="Buffs" value="zombieRadiatedBuff80"/> -->
+			<property name="Immunity" value="sickness;disease;wellness"/> <!-- bleeding; -->
+			<property name="ExperienceGain" value="413"/> <!-- XP grunt -->
+			<property name="LootDropProb" value="0.02"/> <!-- Whether it drops a loot bag on death or not. -->
+			<!-- <property name="LootListOnDeath" value="45"/> -->
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+			<!-- <property name="CorpseBlock" value="air"/><property name="CorpseBlockChance" value="0"/> -->
+			<property name="TimeStayAfterDeath" value="10"/>
+			<property name="DeadBodyHitPoints" value="1000"/> <!-- For harvesting or resisting corpse destruction --> <!-- to adjust corpse destruction speed for the non-harvest zombie corpses. This property does not extend. -->
+			<property name="NavObject" value="clear_sleeper" /><!-- A19  -->
+			<effect_group name="Base Effects"> <!-- zombieTemplateMale -->
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="noTeethNoInfection" operation="set" value="0">
+					<requirement name="NotHasBuff" buff="buffBrawlerNoTeeth"/></triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="noTeethNoInfection" operation="set" value="1">
+					<requirement name="HasBuff" buff="buffBrawlerNoTeeth"/></triggered_effect>
+			</effect_group>
+			<effect_group name="IsZombie"> <!-- <triggered_effect trigger="onSelfEnteredGame" action="AddBuff" target="self" buff="IsZombie"/>	Broken in B173  -->	
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="IsZombie"/>		
+			</effect_group>	
+
+			<!--  testing  -->
+<!--			<property name="CorpseBlock"                        value="zombieTrellis"/>
+			<property name="CorpseBlockChance"                  value="1"/> -->
+			
+		</entity_class>
+
+		<entity_class name="humanMeleeMaleTemplate"> <!-- If you want to make a bandit without spawning in weapons, use this Template  -->
+			<property name="EntityType" value="Player"/>
+			<property name="Tags" value="entity,male,human,melee"/> <!-- entity/sex/type/role/attacktype/name: Entity is required for code filtering, sex for sound filtering, type/role and Atype for buff filtering.  These DO NOT Extend! -->
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?FarmerRagdoll2_X"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="HideInSpawnMenu" value="true"/> <!-- A19  -->
+			<property name="ModelType" value="Standard"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="Prefab" value="NPC"/>
+			<!--<property name="Class" value="EntityEnemyAnimal"/> -->
+			<property name="Class" value="EntityBandit"/>  <!-- This class NREs when inside a trader protection area, so POI traders have a buff that will kill them if they get close  -->
+			<property name="Parent" value="Enemies"/>
+			<property name="Mass" value="150"/>
+			<property name="Weight" value="70"/>			
+			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
+			<property name="Faction" value="bandits"/>
+			<property name="IsEnemyEntity" value="false"/>			
+			<!--<property name="MapIcon" value="ui_game_symbol_enemy_dot" />  --> 
+			<property name="CompassIcon" value="ui_game_symbol_enemy_dot" />  <!-- comment out these lines if you dont want to see the NPC name and location on map -->
+			<property name="CompassUpIcon" value="ui_game_symbol_enemy_dot_up" />
+			<property name="CompassDownIcon" value="ui_game_symbol_enemy_dot_down" />
+			<property name="TrackerIcon" value="ui_game_symbol_run"/>		
+			<property name="AINoiseSeekDist" value="30"/>	
+			<property name="AIPathCostScale" value=".8, 1"/>
+			<property name="LookAtAngle" value="0"/> <!-- A19  Fixs broken necks for now -->
+			<property name="AttackTimeoutDay" value="1.2"/> 
+			<property name="AttackTimeoutNight" value="1.2"/>
+			<property name="RightHandJointName" value="RightWeapon" />  <!-- melee weapons goes on this child object -->
+			<property class="FallLandBehavior">
+				<property name="1None" data="anim=None;height=0,1;weight=0.4"/>
+				<property name="1Land" data="anim=Land;height=0,1;weight=0.4"/>
+				<property name="1LandLow" data="anim=LandLow;height=0,1;weight=0.15"/>
+				<property name="1Stumble" data="anim=Stumble;height=0,1;weight=0.05"/>
+
+				<property name="LowLand" data="anim=LandLow;height=1,3;weight=0.7"/>
+				<property name="LowStumble" data="anim=Stumble;height=1,3;weight=0.3"/>
+
+				<property name="MidStumble" data="anim=Stumble;height=3,5;weight=0.3"/>
+				<property name="MidStumbleAndRage" data="anim=Stumble;height=3,5;weight=0.3;ragePer=0.5,1.5;rageTime=1.0,2.0"/>
+				<property name="MidLandHard" data="anim=LandHard;height=3,5;weight=0.3"/>
+				<property name="MidLandHardAndRage" data="anim=LandHard;height=3,5;weight=0.3;ragePer=0.5,1.5;rageTime=1.0,2.0"/>
+
+				<property name="Ragdoll" data="anim=Ragdoll;height=3;weight=0.4"/>
+			</property>
+			<property class="DestroyBlockBehavior">
+				<property name="None" data="weight=0.0"/>
+				<property name="Stumble" data="weight=0.2"/>
+				<property name="Ragdoll" data="weight=0.2"/>
+			</property>
+			<property name="SwimSpeed" value="1.3"/><!-- A19  -->
+			<property name="SwimStrokeRate" value="1.1,1.5"/><!-- A19  -->
+			<property name="NavObject" value="clear_sleeper" /><!-- A19  -->
+			<property name="AITask-1" value="BreakBlock"/> 
+			<property name="AITask-2" value="ApproachDistraction"/>
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityPlayer,0,EntitySurvivor,0,EntityEnemyAnimal,0"/> 
+			<property name="AITask-4" value="ApproachSpot"/> 
+			<property name="AITask-5" value="Territorial"/>
+			<property name="AITask-6" value="Look"/> 
+			<property name="AITask-7" value="Wander"/>	
+			<property name="AITask-8" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityPlayer,EntitySurvivor,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntitySurvivor,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 	
+
+			<property name="WalkType" value="7"/>
+			<property name="SoundHurtSmall" value="Player_Male/player1painsm"/>
+			<property name="SoundStamina" value="Player_Male/player1stamina"/>
+			<property name="SoundDrownPain" value="Player_Male/player1drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Male/player1drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Male/player1drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player1Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player1LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player1LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundSleeperSense" value="sleepersense"/>
+			<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
+			<property name="SoundAlertTime" value="25.0"/>
+			<property name="SoundRandomTime" value="200.0"/>
+			<property name="SoundRandom" value="malehateroam"/>
+			<property name="SoundAlert" value="malehatealert"/>
+			<property name="SoundSense" value="malehatesense"/>
+			<property name="SoundHurt" value="malehatepain"/>
+			<property name="SoundDeath" value="malehatedeath"/>
+			<property name="SoundAttack" value="malehateattack"/>			
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="ParticleOnDeath" value="blood_death"/>
+			<property name="SurfaceCategory" value="organic"/> 
+			<property name="DismemberMultiplierHead" value="1"/>
+			<property name="DismemberMultiplierArms" value="1"/>
+			<property name="DismemberMultiplierLegs" value="1"/>
+			<property name="LegCrippleScale" value="1"/> 
+			<property name="LegCrawlerThreshold" value="0"/> 
+			<property name="KnockdownProneDamageThreshold" value="0.5"/>
+			<property name="KnockdownProneStunDuration" value="0.5,1.8"/>
+			<property name="KnockdownProneRefillRate" value="0.045,0.045"/>
+			<property name="KnockdownKneelDamageThreshold" value="0.4"/>
+			<property name="KnockdownKneelStunDuration" value="0.5,1.8"/>
+			<property name="KnockdownKneelRefillRate" value="0.045,0.045"/>
+			<property name="LegsExplosionDamageMultiplier" value="1"/>
+			<property name="ArmsExplosionDamageMultiplier" value="1"/>
+			<property name="HeadExplosionDamageMultiplier" value="1"/>
+			<property name="ChestExplosionDamageMultiplier" value="1"/>
+			<property name="PainResistPerHit" value=".5"/>		
+			<property name="MaxViewAngle" value="230"/>
+			<property name="SightRange" value="70"/>
+			<property name="LegCrippleScale" value="0"/><!--  Needed to prevent crippling which changes walktype to zombie (may change that eventually  -->
+			<property name="SightLightThreshold" value="-2,150"/> 
+			<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> 
+			<property name="SleeperWakeupSightDetectionMax" value="340,480"/> 
+			<property name="SleeperSenseSightDetectionMin" value="-10,0"/> 
+			<property name="SleeperSenseSightDetectionMax" value="200,300"/>
+			<property name="SleeperNoiseSenseThreshold" value="3,8"/> 
+			<property name="SleeperNoiseWakeThreshold" value="9,12"/>
+			<property name="SleeperSmellSenseThreshold" value="20,50"/> 
+			<property name="SoundSleeperSenseChance" value=".5"/> 
+			<property name="SleeperSmellWakeThreshold" value="40,100"/>
+			<property name="NoiseAlertThreshold" value="50"/> 
+			<property name="SmellAlertThreshold" value="40"/> 
+			<property name="MaxTurnSpeed" value="250"/>
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="MoveSpeedRand" value="-.2, .25"/> 
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="false"/>
+			<property name="JumpMaxDistance" value="2.8, 3.9"/>
+			<property name="Immunity" value="sickness;disease;wellness"/> 
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.1"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+			<property name="TimeStayAfterDeath" value="10"/>
+			<property name="DeadBodyHitPoints" value="400"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			<effect_group name="SelfMedicate Effects">
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value=".1"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+			</effect_group>				
+			<effect_group name="IsHuman"> <!-- This activates the IsHuman Buff which sets an animator parameter value to path to only human animations  -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="IsHuman"/>		
+			</effect_group>	
+			<effect_group name="UseFactions"> <!-- This activates thr Usefactions Buff which tells the game not to use DMT faction classes  -->
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="UseFactionsNo"/>		
+			</effect_group>	
+			
+			<property name="RotateToGround" value="false"/>	
+			<property name="PushFactor" value="10"/>	
+	
+		</entity_class>
+		
+		<entity_class name="humanMeleeFemaleTemplate" extends="humanMeleeMaleTemplate">
+			<property name="Class" value="EntityBandit"/>
+			<property name="Tags" value="entity,female,human,melee"/>
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>			
+		</entity_class>
+		
+		<entity_class name="humanRangedMaleTemplate" extends="humanMeleeMaleTemplate"> 	<!-- If you want to make a ranged bandit without spawning in weapons, use this Template  -->
+			<property name="Class" value="EntityBandit"/>
+			<property name="Tags" value="entity,male,human,ranged"/>
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value="1.0, 1.0"/> 
+			<property name="MoveSpeedPanic" value="1.0"/>
+			<property name="MoveSpeedRand" value="-.2, .25"/> 		
+			<property name="SightRange" value="70"/>
+			<property name="LegCrippleScale" value="0"/>
+			<property name="RightHandJointName" value="Gunjoint" /> <!-- Ranged weapons goes on this child object (Except longbows) -->
+			<property name="HandItem" value="gunBanditHuntingRifle"/>
+			<property name="AITask-1" value="RangedAttackTarget2" data="itemType=0;attackPeriod=10"/> 
+			<property name="AITask-2" value="RangedAttackTarget2" data="itemType=0;attackPeriod=10"/> 
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityPlayer,0,EntitySurvivor,0,EntityEnemyAnimal,0"/>
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.7;healthPer=.5;healthPerMax=0.75"/> 
+			<property name="AITask-5" value="BreakBlock"/> 
+			<property name="AITask-6" value="ApproachSpot"/>
+			<property name="AITask-7" value="Territorial"/>
+			<property name="AITask-8" value="Look"/> 
+			<property name="AITask-9" value="Wander"/>
+			<property name="AITask-10" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityPlayer,EntitySurvivor,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntitySurvivor,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 			
+
+		</entity_class>	
+		
+		<entity_class name="humanRangedFemaleTemplate" extends="humanRangedMaleTemplate">
+			<property name="Class" value="EntityBandit"/>
+			<property name="Tags" value="entity,female,human,ranged"/>
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>				
+		</entity_class>	
+		
+		<entity_class name="humanMeleeMaleBanditTemplate" extends="humanMeleeMaleTemplate"> <!-- If you want to make a bandit that spawns in melee weapons, use this Template  -->
+			<property name="Tags" value="entity,male,human,bandit,melee"/>
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Class" value="EntityBandit"/>
+			<property name="LootDropProb" value="0.25"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/>  
+		</entity_class>	
+
+		<entity_class name="humanRangedMaleBanditTemplate" extends="humanRangedMaleTemplate"> 	<!-- If you want to make a bandit that spawns in ranged weapons, use this Template  -->
+			<property name="Tags" value="entity,male,human,bandit,ranged"/>
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Class" value="EntityBandit"/>
+			<property name="LootDropProb" value="0.25"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="humanMeleeFemaleBanditTemplate" extends="humanMeleeFemaleTemplate"> <!-- If you want to make a bandit that spawns in melee weapons, use this Template  -->
+			<property name="Tags" value="entity,female,human,bandit,melee"/>
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Class" value="EntityBandit"/>
+			<property name="LootDropProb" value="0.25"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/>  
+		</entity_class>	
+
+		<entity_class name="humanRangedFemaleBanditTemplate" extends="humanRangedFemaleTemplate"> 	<!-- If you want to make a bandit that spawns in ranged weapons, use this Template  -->
+			<property name="Tags" value="entity,female,human,bandit,ranged"/>
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Class" value="EntityBandit"/>
+			<property name="LootDropProb" value="0.25"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>			
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="humanMeleeMaleSurvivorTemplate" extends="humanMeleeMaleTemplate"> <!-- If you want to make a melee survivor, use this Template  -->
+			<property name="Tags" value="entity,male,human,survivor,melee"/>
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Class" value="EntitySurvivor"/>
+			<property name="HandItem" value="handChefKnife"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityPlayer,0,EntityEnemyAnimal,0"/> 
+			<property name="AITask-2" value="ApproachDistraction"/> 
+			<property name="AITask-3" value="Territorial"/>
+			<property name="AITask-4" value="ApproachSpot"/> 
+			<property name="AITask-5" value="Look"/> 		
+			<property name="AITask-6" value="Wander"/>
+			<property name="AITask-7" value="BreakBlock"/> 
+			<property name="AITask-8" value="Leap"/> 
+			<property name="AITask-9" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityPlayer,EntityBandit,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+
+		</entity_class>	
+
+		<entity_class name="humanRangedMaleSurvivorTemplate" extends="humanRangedMaleTemplate"> <!-- If you want to make a ranged survivor, use this Template  -->
+			<property name="Tags" value="entity,male,human,survivor,ranged"/>
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Class" value="EntitySurvivor"/>
+			<property name="HandItem" value="handBanditRifle"/>			
+			<property name="AITask-1" value="RangedAttackTarget2" data="itemType=0;attackPeriod=10"/> 
+			<property name="AITask-2" value="RangedAttackTarget2" data="itemType=0;attackPeriod=10"/> 
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityPlayer,0,EntityAnimalRabbit,0"/>
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.7;healthPer=.5;healthPerMax=0.75"/> 
+			<property name="AITask-5" value="BreakBlock"/> 
+			<property name="AITask-6" value="ApproachSpot"/>
+			<property name="AITask-7" value="Territorial"/>
+			<property name="AITask-8" value="Look"/> 
+			<property name="AITask-9" value="Wander"/>
+			<property name="AITask-10" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityPlayer,EntityBandit,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0,EntityBandit,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 			
+
+		</entity_class>	
+		
+		<entity_class name="humanMeleeFemaleSurvivorTemplate" extends="humanMeleeFemaleTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,melee"/>
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Class" value="EntitySurvivor"/>
+			<property name="HandItem" value="handChefKnife"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityPlayer,0,EntityEnemyAnimal,0"/> 
+			<property name="AITask-2" value="ApproachDistraction"/> 
+			<property name="AITask-3" value="Territorial"/>
+			<property name="AITask-4" value="ApproachSpot"/> 
+			<property name="AITask-5" value="Look"/> 		
+			<property name="AITask-6" value="Wander"/>
+			<property name="AITask-7" value="BreakBlock"/> 
+			<property name="AITask-8" value="Leap"/> 
+			<property name="AITask-9" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntityPlayer,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+		
+		</entity_class>	
+
+		<entity_class name="humanRangedFemaleSurvivorTemplate" extends="humanRangedFemaleTemplate"> 
+			<property name="Tags" value="entity,female,human,survivor,ranged"/>
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="Class" value="EntitySurvivor"/>
+			<property name="HandItem" value="handBanditRifle"/>			
+			<property name="AITask-1" value="RangedAttackTarget2" data="itemType=0;attackPeriod=10"/> 
+			<property name="AITask-2" value="RangedAttackTarget2" data="itemType=0;attackPeriod=10"/> 
+			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityPlayer,0,EntityAnimalRabbit,0"/>
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.7;healthPer=.5;healthPerMax=0.75"/> 
+			<property name="AITask-5" value="BreakBlock"/> 
+			<property name="AITask-6" value="ApproachSpot"/>
+			<property name="AITask-7" value="Territorial"/>
+			<property name="AITask-8" value="Look"/> 
+			<property name="AITask-9" value="Wander"/>
+			<property name="AITask-10" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntityPlayer,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0,EntityBandit,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 			
+
+		</entity_class>	
+		
+		<entity_class name="humanMeleeMaleTraderTemplate" extends="humanMeleeMaleTemplate">
+			<property name="Class" value="EntitySurvivor"/> 
+			<property name="Tags" value="entity,male,human,trader,melee"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?JoelRagdoll_X"/> 
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="PhysicsBody" value="traderStandard"/>
+			<property name="PainResistPerHit" value=".65"/>
+			<property name="SightRange" value="50"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="HandItem" value="handChefKnife"/>
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="MoveSpeedRand" value="-.2, .25"/> 				
+			<property name="AIPathCostScale" value=".9, 1"/>
+			<property name="AINoiseSeekDist" value="20"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="LootListAlive" value="62"/>
+			<property name="NPCID" value="traderJoel"/>
+			<property name="SoundHurt" value="Player_Male/player1painlg"/>
+			<property name="SoundHurtSmall" value="Player_Male/player1painsm"/>
+			<property name="SoundDeath" value="Player_Male/player1death"/>
+			<property name="SoundStamina" value="Player_Male/player1stamina"/>
+			<property name="SoundDrownPain" value="Player_Male/player1drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Male/player1drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Male/player1drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player1Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player1LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player1LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="AttackTimeoutDay" value=".8"/>
+			<property name="AttackTimeoutNight" value=".8"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+			<property name="AITask-2" value="ApproachDistraction"/> 
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/> 
+			<property name="AITask-6" value="Wander"/> 
+			<property name="AITask-7" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityEnemyAnimal,EntityBandit"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+
+		</entity_class> 
+
+		<!-- Bandits that spawn weapons -->	
+		<entity_class name="CPhumanEveBanditClub" extends="humanMeleeFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/>
+		</entity_class>
+
+		<entity_class name="CPhumanEveBanditSMG" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>
+			<property name="WalkType" value="6"/> <!-- Walktype for rifles  -->
+			<property name="RightHandJointName" value="Gunjoint" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/> 
+		</entity_class>	
+		
+		<entity_class name="CPhumanEveBanditPistol" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>			
+			<property name="WalkType" value="2"/> <!-- Walktype for Pistols  -->
+			<property name="RightHandJointName" value="RightWeapon" />  
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditPistol,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditPistol,ammoNPC9mmBulletBall"/> 
+		</entity_class>			
+		
+		<entity_class name="CPhumanEveBanditBow" extends="humanRangedFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,bandit,ranged"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/XythHumans.unity3d?EveRagdoll2_X"/>			
+			<property name="WalkType" value="3"/> 
+			<property name="RightHandJointName" value="LeftWeapon" />  <!--  Bows go in lefthand  -->
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditBow,ammoNPCArrowIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditBow,ammoNPCArrowIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditBow,ammoNPCArrowIron"/> 
+		</entity_class> 
+		
+		<entity_class name="FuriousRamsayZombieSkeleton" extends="zombieRegularTemplate">
+			<property name="Tags" value="entity,zombie,walker"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/FR_Zombies.unity3d?ZombieSkeleton_FR"/>
+		</entity_class>		
+		
+		<entity_class name="FuriousRamsayMutantAlien" extends="zombieRegularTemplate">
+			<property name="SizeScale" value="2"/>
+			<property name="Tags" value="entity,zombie,walker"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/FR_Zombies.unity3d?MutantAlien_FR"/>
+		</entity_class>		
+
+		<entity_class name="PaulineBanbitClub" extends="humanMeleeFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/FR_Zombies.unity3d?Pauline_FR"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AnimatorSetInt" property="IsHuman" value="2" duration="1" />
+			</effect_group>
+
+		</entity_class>
+
+	</append>
+</Config>

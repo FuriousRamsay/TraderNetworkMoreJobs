@@ -1,3 +1,11 @@
+TODO: Leveling up augments your genetics a little
+TODO: certain things level up your genetics: 
+looting intelligence
+readin, crafting knowledge
+jumping, running, etc dexterity
+healing constitution
+melee kills, mining strength
+buying charisma
 TODO: RE-TEST ALL MISSIONS
 
 TODO: Add fnding a trader to the main storyline
@@ -9,23 +17,6 @@ TODO: water from faucets (rebirth)
 TODO: Penalty for killing citizen
 
 I leveled up chef with a spear?
-
-InvalidCastException: Specified cast is not valid.
-  at EntityBuffs.RemoveBuff (System.String _name, System.Boolean _netSync) [0x00074] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at MinEventActionRemoveBuff.Execute (MinEventParams _params) [0x0003b] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at MinEffectGroup.FireEvent (MinEventTypes _eventType, MinEventParams _eventParms) [0x0002e] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at MinEffectController.FireEvent (MinEventTypes _eventType, MinEventParams _eventParms) [0x00019] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at BuffClass.FireEvent (MinEventTypes _eventType, MinEventParams _params) [0x00013] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at EntityBuffs.FireEvent (MinEventTypes _eventType, BuffClass _buffClass, MinEventParams _params) [0x00003] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at EntityBuffs.Update (System.Single _deltaTime) [0x00180] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at EntityAlive.OnUpdateEntity () [0x00019] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at World.TickEntity (Entity e, System.Single _partialTicks) [0x0015d] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at World.TickEntitiesSlice (System.Int32 count) [0x00037] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at World.TickEntitiesFlush () [0x0000c] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at World.TickEntities (System.Single _partialTicks) [0x000c9] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at GameManager.UpdateTick () [0x00093] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at GameManager.gmUpdate () [0x00291] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at GameManager.Update () [0x00000] in <4b1a8c809f0943a384283687c21422f8>:0 
 
 ===========================
 
@@ -113,24 +104,6 @@ TODO: Zombies that jump, aoe when lands
 
 TODO: check for zombie eating corpses on custom entities like battle androids
 
-FIX: NREs (buffs on traders? On update for EntityNPCs)
-	Check for Entities that might be missing some properties
-
-NullReferenceException: Object reference not set to an instance of an object
-  at EntityMoveHelper.UpdateMoveHelper () [0x00165] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at EntityAlive.updateTasks () [0x000ff] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at EntityAlive.OnUpdateLive () [0x00154] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at EntityEnemy.OnUpdateLive () [0x00000] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at EntityZombie.OnUpdateLive () [0x00000] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at EntityAlive.OnUpdateEntity () [0x0001e] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at World.TickEntity (Entity e, System.Single _partialTicks) [0x0015d] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at World.TickEntitiesSlice (System.Int32 count) [0x00037] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at World.TickEntitiesFlush () [0x0000c] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at World.TickEntities (System.Single _partialTicks) [0x000c9] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at GameManager.UpdateTick () [0x00093] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at GameManager.gmUpdate () [0x00291] in <4b1a8c809f0943a384283687c21422f8>:0 
-  at GameManager.Update () [0x00000] in <4b1a8c809f0943a384283687c21422f8>:0 
-
 Release
 
 TODO: mod to replace POI groups (by tier?)
@@ -158,6 +131,9 @@ Added localization for bandit gear
 TODO: Check why bandit gear has no stats
 Updated quest entities
 Only biome spawned bandits will drop loot
+Changed faction war challenge to rally point
+added buff to vanilla traders to kill off bandits and survivors when too close (NREs)
+Removed custom trader buff damaging enemy entities
 
 Items and Blocks:
 

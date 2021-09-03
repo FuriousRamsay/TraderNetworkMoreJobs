@@ -23,57 +23,68 @@
 
 			<property name="completiontype" value="AutoComplete"/>
 
-			<objective type="Time" value="80" phase="1"/>
+			<objective type="RandomGoto" value="200-250" phase="1">
+				<property name="completion_distance" value="50"/>
+				<property name="nav_object" value="quest" />
+			</objective>
+			
+			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+
+			<objective type="Time" value="80" phase="3"/>
 
 			<!-- Trader Network -->
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivorWar" value="1" phase="1">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivorWar" value="1" phase="3">
 				<property name="delay" value="1"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivorWar" value="1" phase="1">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivorWar" value="1" phase="3">
 				<property name="delay" value="3"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAMikeSurvivorWar" value="1" phase="1">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAMikeSurvivorWar" value="1" phase="3">
 				<property name="delay" value="5"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAMariaSurvivorWar" value="1" phase="1">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAMariaSurvivorWar" value="1" phase="3">
 				<property name="delay" value="7"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMARayahSurvivorWar" value="1" phase="1">
+			<action type="SpawnEnemy" id="FuriousRamsayUMARayahSurvivorWar" value="1" phase="3">
 				<property name="delay" value="9"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEarlSurvivorWar" value="1" phase="1">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEarlSurvivorWar" value="1" phase="3">
 				<property name="delay" value="11"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayAllyDogTier1War" value="1" phase="1">
+			<action type="SpawnEnemy" id="FuriousRamsayAllyDogTier1War" value="1" phase="3">
 				<property name="delay" value="16"/>
 			</action>
 
 			<!-- Black Shield -->
-			<action type="SpawnEnemy" id="FuriousRamsayUMAGabrielleEnemyWar" value="1" phase="1">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAGabrielleEnemyWar" value="1" phase="3">
 				<property name="delay" value="2"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemyWar" value="1" phase="1">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemyWar" value="1" phase="3">
 				<property name="delay" value="4"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemyWar" value="1" phase="1">
+			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemyWar" value="1" phase="3">
 				<property name="delay" value="6"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAWillieEnemyWar" value="1" phase="1">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAWillieEnemyWar" value="1" phase="3">
 				<property name="delay" value="8"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAHodorEnemyWar" value="1" phase="1">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAHodorEnemyWar" value="1" phase="3">
 				<property name="delay" value="10"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAKimEnemyWar" value="1" phase="1">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAKimEnemyWar" value="1" phase="3">
 				<property name="delay" value="12"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAClintEnemyWar" value="1" phase="1">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAClintEnemyWar" value="1" phase="3">
 				<property name="delay" value="13"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMARoxyEnemyWar" value="1" phase="1">
+			<action type="SpawnEnemy" id="FuriousRamsayUMARoxyEnemyWar" value="1" phase="3">
 				<property name="delay" value="14"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMARichieEnemyWar" value="1" phase="1">
+			<action type="SpawnEnemy" id="FuriousRamsayUMARichieEnemyWar" value="1" phase="3">
 				<property name="delay" value="15"/>
 			</action>
 

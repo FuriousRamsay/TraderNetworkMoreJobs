@@ -100,6 +100,46 @@
 		
 		<append xpath="/buffs" >		
 
+			<buff name="IsZombie">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group name="IsHuman">
+					<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="IsHuman" value="0"/> <!-- Value of zero paths the controller to zombie animations  -->
+				</effect_group>
+			</buff>	
+
+			<buff name="IsHuman">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group name="IsHuman"> <!-- This sets the IsHuman value to 2 which is the parameter INT value used to path to only human animations  -->
+					<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="IsHuman" value="2" duration="1" />
+				</effect_group>
+			</buff>	
+		
+			<buff name="UseFactionsNo"> <!-- This sets the UseFactions switch to false incase its a vanilla only game.   -->
+				<stack_type value="ignore"/>
+				<duration value="0"/>
+				<effect_group name="UseFactions">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="HasFactions" operation="set" value="0"/>				
+				</effect_group>
+			</buff>	
+			<buff name="UseFactionsYes"> <!-- This sets the UseFactions switch to true for NPCs.   -->
+				<stack_type value="ignore"/>
+				<duration value="0"/>
+				<effect_group name="UseFactions">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="HasFactions" operation="set" value="1"/>				
+				</effect_group>
+			</buff>	
+
+			<!--  Prevent bandits class characters from getting near trader POIs  -->
+			<buff name="buffTraderTrigger" hidden="true">
+				<stack_type value="replace"/>
+				<update_rate value="1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" target="selfAOE" range="50" stat="Health" operation="add" value="-99999" target_tags="bandit,survivor,robot"/>
+				</effect_group>
+			</buff>
+
 			<!-- RADIATION POISONING -->
 			<buff name="buffRadiationAddCure" name_key="buff Radiation Add Cure" hidden="true" icon="ui_game_symbol_radiation">
 				<stack_type value="ignore"/>

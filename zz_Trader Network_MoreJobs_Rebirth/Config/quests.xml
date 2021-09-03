@@ -4,6 +4,257 @@
 
 	<append xpath="/quests">
 
+		<!-- DEFEND AREA -->
+		<quest id="quest_FuriousRamsayDefendArea_Tier1">
+			<property name="name_key" value="quest_FuriousRamsayDefendArea_Tier1_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayDefendArea_Tier1_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayDefendArea_Tier1_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="easy"/>
+			<property name="difficulty_tier" value="1"/>
+			<property name="offer_key" value="quest_FuriousRamsayDefendArea_Tier1_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayDefendArea_Tier1_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayDefendArea_Tier1_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayDefendArea_Tier1_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="ZombieKill" value="2" phase="1"/>
+			<action type="SpawnEnemy" id="zombieBoe,zombieFemaleFat,zombieJoe,zombieJanitor,zombieMoe,zombieArlene,zombieLab,zombieDarlene,zombieMarlene,zombieYo,zombieSteve,zombieBusinessMan" value="3" phase="1"/>
+
+			<objective type="ZombieKill" value="3" phase="2"/>
+			<action type="SpawnEnemy" id="zombieBoe,zombieFemaleFat,zombieJoe,zombieJanitor,zombieMoe,zombieArlene,zombieLab,zombieDarlene,zombieMarlene,zombieYo,zombieSteve,zombieBusinessMan" value="4" phase="2"/>
+
+			<objective type="ZombieKill" value="4" phase="3"/>
+			<action type="SpawnEnemy" id="zombieBoe,zombieFemaleFat,zombieJoe,zombieJanitor,zombieMoe,zombieArlene,zombieLab,zombieDarlene,zombieMarlene,zombieYo,zombieSteve,zombieBusinessMan" value="5" phase="3"/>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="4"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="3600"/>
+			<reward type="Item" id="casinoCoin" value="200"/>
+
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="1"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="1"/>
+			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="1"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayDefendArea_Tier2">
+			<property name="name_key" value="quest_FuriousRamsayDefendArea_Tier2_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayDefendArea_Tier2_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayDefendArea_Tier2_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="easy"/>
+			<property name="difficulty_tier" value="2"/>
+			<property name="offer_key" value="quest_FuriousRamsayDefendArea_Tier2_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayDefendArea_Tier2_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayDefendArea_Tier2_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayDefendArea_Tier2_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="ZombieKill" value="3" phase="1"/>
+			<action type="SpawnEnemy" id="zombieBoe,zombieFemaleFat,zombieJoe,zombieJanitor,zombieMoe,zombieArlene,zombieLab,zombieDarlene,zombieMarlene,zombieYo,zombieSteve,zombieBusinessMan" value="5" phase="2"/>
+
+			<objective type="ZombieKill" value="4" phase="2"/>
+			<action type="SpawnEnemy" id="zombieBoe,zombieFemaleFat,zombieJoe,zombieJanitor,zombieMoe,zombieArlene,zombieLab,zombieDarlene,zombieMarlene,zombieYo,zombieSteve,zombieBusinessMan" value="6" phase="3"/>
+
+			<objective type="ZombieKill" value="5" phase="3"/>
+			<action type="SpawnEnemy" id="zombieBoe,zombieFemaleFat,zombieJoe,zombieJanitor,zombieMoe,zombieArlene,zombieLab,zombieDarlene,zombieMarlene,zombieYo,zombieSteve,zombieBusinessMan" value="7" phase="4"/>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="1200"/>
+			<reward type="Item" id="casinoCoin" value="400"/>
+
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalLow" ischosen="true" value="1"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayDefendArea_Tier3">
+			<property name="name_key" value="quest_FuriousRamsayDefendArea_Tier3_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayDefendArea_Tier3_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayDefendArea_Tier3_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="medium"/>
+			<property name="difficulty_tier" value="3"/>
+			<property name="offer_key" value="quest_FuriousRamsayDefendArea_Tier3_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayDefendArea_Tier3_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayDefendArea_Tier3_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayDefendArea_Tier3_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="ZombieKill" value="2" phase="1"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral,animalZombieVulture" value="4" phase="2"/>
+
+			<objective type="ZombieKill" value="3" phase="2"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral,animalZombieVulture" value="5" phase="3"/>
+
+			<objective type="ZombieKill" value="4" phase="3"/>
+			<action type="SpawnEnemy" id="zombieFootballPlayer,zombieNurseFeral,zombieBusinessManFeral,zombieSteveFeral,zombieYoFeral,zombieMarleneFeral,zombieDarleneFeral,zombieLabFeral,zombieArleneFeral,zombieMoeFeral,zombieJanitorFeral,zombieJoeFeral,zombieFemaleFatFeral,zombieBoeFeral,zombieStripperFeral,zombieFarmerFeral,zombieBikerFeral,zombieOldTimerFeral,zombieCheerleaderFeral,zombieSkateboarderFeral,zombieSoldierFeral,zombieUtilityWorkerFeral,zombieFatCopFeral,zombieFatHawaiianFeral,zombieSpiderFeral,zombieSteveCrawlerFeral,zombieWightFeral,animalZombieVulture" value="6" phase="4"/>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="2400"/>
+			<reward type="Item" id="casinoCoin" value="650"/>
+
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="3"/>
+			<reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="3"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalLow" ischosen="true" value="1"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayDefendArea_Tier4">
+			<property name="name_key" value="quest_FuriousRamsayDefendArea_Tier4_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayDefendArea_Tier4_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayDefendArea_Tier4_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="4"/>
+			<property name="offer_key" value="quest_FuriousRamsayDefendArea_Tier4_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayDefendArea_Tier4_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayDefendArea_Tier4_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayDefendArea_Tier4_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="ZombieKill" value="2" phase="1"/>
+			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated,animalZombieDog" value="4" phase="2"/>
+
+			<objective type="ZombieKill" value="3" phase="2"/>
+			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated,animalZombieDog" value="5" phase="3"/>
+
+			<objective type="ZombieKill" value="4" phase="3"/>
+			<action type="SpawnEnemy" id="zombieBikerRadiated,zombieOldTimerRadiated,zombieCheerleaderRadiated,zombieSkateboarderRadiated,zombieSoldierRadiated,zombieFatCopRadiated,zombieSpiderRadiated,zombieSteveRadiated,zombieYoRadiated,zombieMarleneRadiated,zombieDarleneRadiated,zombieLabRadiated,zombieArleneRadiated,zombieMoeRadiated,zombieJanitorRadiated,zombieJoeRadiated,zombieFemaleFatRadiated,zombieBoeRadiated,zombieWightRadiated,animalZombieDog" value="6" phase="4"/>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="4000"/>
+			<reward type="Item" id="casinoCoin" value="900"/>
+
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="4"/>
+			<reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="4"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="4"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalHigh" ischosen="true" value="1"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayDefendArea_Tier5">
+			<property name="name_key" value="quest_FuriousRamsayDefendArea_Tier5_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayDefendArea_Tier5_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayDefendArea_Tier5_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="5"/>
+			<property name="offer_key" value="quest_FuriousRamsayDefendArea_Tier5_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsayDefendArea_Tier5_statement"/>
+			<property name="response_key" value="quest_FuriousRamsayDefendArea_Tier5_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayDefendArea_Tier5_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="ZombieKill" value="4" phase="1"/>
+			<action type="SpawnEnemy" id="legendaryZombieLab,legendaryZombieBusinessMan,legendaryZombieUtilityWorker,zombieDemolition,zombieFatCopRadiated,zombieBikerRadiated,animalZombieVultureRadiated,animalZombieDog,zombieSnowFeral" value="6" phase="2"/>
+
+			<objective type="ZombieKill" value="5" phase="1"/>
+			<action type="SpawnEnemy" id="zombieBoe,zombieFemaleFat,zombieJoe,zombieJanitor,zombieMoe,zombieArlene,zombieLab,zombieDarlene,zombieMarlene,zombieYo,zombieSteve,zombieBusinessMan" value="7" phase="3"/>
+
+			<objective type="ZombieKill" value="6" phase="1"/>
+			<action type="SpawnEnemy" id="zombieBoe,zombieFemaleFat,zombieJoe,zombieJanitor,zombieMoe,zombieArlene,zombieLab,zombieDarlene,zombieMarlene,zombieYo,zombieSteve,zombieBusinessMan" value="8" phase="4"/>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="5000"/>
+			<reward type="Item" id="casinoCoin" value="1200"/>
+
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="5"/>
+			<reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="5"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="5"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalHigh" ischosen="true" value="1"/>
+		</quest>
+
 		<!-- SKULLS JOB -->
 		<quest id="quest_FuriousRamsaySkullsClearFetch_Tier1">
 			<property name="name_key" value="quest_FuriousRamsaySkullsClearFetch_Tier1_subtitle"/>
@@ -23,7 +274,7 @@
 			<property name="login_rally_reset" value="true"/>
 			
 			<property name="completiontype" value="TurnIn"/>
-			<property name="completion_key" value="quest_FuriousRamsayStealTechTier1_completion"/>
+			<property name="completion_key" value="quest_FuriousRamsaySkullsClearFetch_Tier1_completion"/>
 
 			<action type="TrackQuest"/>
 
@@ -79,8 +330,8 @@
 				<property name="nav_object" value="return_to_trader" />
 			</objective>
 
-			<reward type="Exp" value="2500"/>
-			<reward type="Item" id="casinoCoin" value="400"/>
+			<reward type="Exp" value="600"/>
+			<reward type="Item" id="casinoCoin" value="300"/>
 
 			<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="1"/>
 			<reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="1"/>
@@ -88,6 +339,346 @@
 			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="1"/>
 			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="1"/>
 			<reward type="LootItem" id="groupQuestMods" ischosen="true" value="1"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsaySkullsClearFetch_Tier2">
+			<property name="name_key" value="quest_FuriousRamsaySkullsClearFetch_Tier2_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsaySkullsClearFetch_Tier2_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsaySkullsClearFetch_Tier2_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="easy"/>
+			<property name="difficulty_tier" value="2"/>
+			<property name="offer_key" value="quest_FuriousRamsaySkullsClearFetch_Tier2_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsaySkullsClearFetch_Tier2_statement"/>
+			<property name="response_key" value="quest_FuriousRamsaySkullsClearFetch_Tier2_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="login_rally_reset" value="true"/>
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsaySkullsClearFetch_Tier2_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="biome_filter_type" value="ExcludeBiome" />
+				<property name="biome_filter" value="wasteland" />
+				<property name="nav_object" value="quest" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier2Quest,FuriousRamsaySkullsHammerTier2Quest,FuriousRamsaySkullsAxeTier2Quest" value="2" phase="2">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier2Quest,FuriousRamsaySkullsHammerTier2Quest,FuriousRamsaySkullsAxeTier2Quest" value="2" phase="3">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="ClearSleepers">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="sleeper_volume"/>
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier2Quest,FuriousRamsaySkullsHammerTier2Quest,FuriousRamsaySkullsAxeTier2Quest" value="3" phase="4">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="FetchFromContainer">
+				<property name="phase" value="4"/>
+				<property name="quest_item_ID" value="93"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="fetch_mode" value="Standard"/>
+				<property name="nav_object" value="fetch_container" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier2Quest,FuriousRamsaySkullsHammerTier2Quest,FuriousRamsaySkullsAxeTier2Quest" value="5" phase="5">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="1200"/>
+			<reward type="Item" id="casinoCoin" value="500"/>
+
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="2"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="2"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalLow" ischosen="true" value="1"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsaySkullsClearFetch_Tier3">
+			<property name="name_key" value="quest_FuriousRamsaySkullsClearFetch_Tier3_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsaySkullsClearFetch_Tier3_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsaySkullsClearFetch_Tier3_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="medium"/>
+			<property name="difficulty_tier" value="3"/>
+			<property name="offer_key" value="quest_FuriousRamsaySkullsClearFetch_Tier3_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsaySkullsClearFetch_Tier3_statement"/>
+			<property name="response_key" value="quest_FuriousRamsaySkullsClearFetch_Tier3_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="login_rally_reset" value="true"/>
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsaySkullsClearFetch_Tier3_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="biome_filter_type" value="ExcludeBiome" />
+				<property name="biome_filter" value="wasteland" />
+				<property name="nav_object" value="quest" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier3Quest,FuriousRamsaySkullsHammerTier3Quest,FuriousRamsaySkullsAxeTier3Quest" value="3" phase="2">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier3Quest,FuriousRamsaySkullsHammerTier3Quest,FuriousRamsaySkullsAxeTier3Quest" value="3" phase="3">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="ClearSleepers">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="sleeper_volume"/>
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier3Quest,FuriousRamsaySkullsHammerTier3Quest,FuriousRamsaySkullsAxeTier3Quest" value="4" phase="4">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="FetchFromContainer">
+				<property name="phase" value="4"/>
+				<property name="quest_item_ID" value="93"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="fetch_mode" value="Standard"/>
+				<property name="nav_object" value="fetch_container" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier3Quest,FuriousRamsaySkullsHammerTier3Quest,FuriousRamsaySkullsAxeTier3Quest" value="6" phase="5">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="2400"/>
+			<reward type="Item" id="casinoCoin" value="700"/>
+
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="3"/>
+			<reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="3"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="3"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalLow" ischosen="true" value="1"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsaySkullsClearFetch_Tier4">
+			<property name="name_key" value="quest_FuriousRamsaySkullsClearFetch_Tier4_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsaySkullsClearFetch_Tier4_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsaySkullsClearFetch_Tier4_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="4"/>
+			<property name="offer_key" value="quest_FuriousRamsaySkullsClearFetch_Tier4_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsaySkullsClearFetch_Tier4_statement"/>
+			<property name="response_key" value="quest_FuriousRamsaySkullsClearFetch_Tier4_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="login_rally_reset" value="true"/>
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsaySkullsClearFetch_Tier4_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="biome_filter_type" value="ExcludeBiome" />
+				<property name="biome_filter" value="wasteland" />
+				<property name="nav_object" value="quest" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier4Quest,FuriousRamsaySkullsHammerTier4Quest,FuriousRamsaySkullsAxeTier4Quest" value="4" phase="2">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier4Quest,FuriousRamsaySkullsHammerTier4Quest,FuriousRamsaySkullsAxeTier4Quest" value="4" phase="3">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="ClearSleepers">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="sleeper_volume"/>
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier4Quest,FuriousRamsaySkullsHammerTier4Quest,FuriousRamsaySkullsAxeTier4Quest" value="5" phase="4">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="FetchFromContainer">
+				<property name="phase" value="4"/>
+				<property name="quest_item_ID" value="93"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="fetch_mode" value="Standard"/>
+				<property name="nav_object" value="fetch_container" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier4Quest,FuriousRamsaySkullsHammerTier4Quest,FuriousRamsaySkullsAxeTier4Quest" value="7" phase="5">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="4000"/>
+			<reward type="Item" id="casinoCoin" value="1000"/>
+
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="4"/>
+			<reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="4"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="4"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="4"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalHigh" ischosen="true" value="1"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsaySkullsClearFetch_Tier5">
+			<property name="name_key" value="quest_FuriousRamsaySkullsClearFetch_Tier5_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsaySkullsClearFetch_Tier5_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsaySkullsClearFetch_Tier5_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="true"/>
+			<property name="shareable" value="true"/>
+			<property name="category_key" value="quest"/>
+			<property name="difficulty" value="hard"/>
+			<property name="difficulty_tier" value="5"/>
+			<property name="offer_key" value="quest_FuriousRamsaySkullsClearFetch_Tier5_offer"/>
+			<property name="statement_key" value="quest_FuriousRamsaySkullsClearFetch_Tier5_statement"/>
+			<property name="response_key" value="quest_FuriousRamsaySkullsClearFetch_Tier5_response"/>
+			<property name="return_to_quest_giver" value="true" />
+			
+			<property name="login_rally_reset" value="true"/>
+			
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsaySkullsClearFetch_Tier5_completion"/>
+
+			<action type="TrackQuest"/>
+
+			<objective type="RandomPOIGoto">
+				<property name="phase" value="1"/>
+				<property name="biome_filter_type" value="ExcludeBiome" />
+				<property name="biome_filter" value="wasteland" />
+				<property name="nav_object" value="quest" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier5Quest,FuriousRamsaySkullsHammerTier5Quest,FuriousRamsaySkullsAxeTier5Quest" value="5" phase="2">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="RallyPoint">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="rally" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier5Quest,FuriousRamsaySkullsHammerTier5Quest,FuriousRamsaySkullsAxeTier5Quest" value="5" phase="3">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="ClearSleepers">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="sleeper_volume"/>
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier5Quest,FuriousRamsaySkullsHammerTier5Quest,FuriousRamsaySkullsAxeTier5Quest" value="6" phase="4">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="FetchFromContainer">
+				<property name="phase" value="4"/>
+				<property name="quest_item_ID" value="93"/>
+				<property name="item_count" value="1"/>
+				<property name="default_container" value="cntFetchQuestSatchel"/>
+				<property name="fetch_mode" value="Standard"/>
+				<property name="nav_object" value="fetch_container" />
+			</objective>
+
+			<action type="SpawnEnemy" id="FuriousRamsaySkullsClubTier5Quest,FuriousRamsaySkullsHammerTier5Quest,FuriousRamsaySkullsAxeTier5Quest" value="8" phase="5">
+				<property name="delay" value="3"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="5"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="5000"/>
+			<reward type="Item" id="casinoCoin" value="1500"/>
+
+			<reward type="LootItem" id="groupQuestTools" ischosen="true" isfixed="true" value="5"/>
+			<reward type="LootItem" id="groupQuestArmor" ischosen="true" isfixed="true" value="5"/>
+			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="5"/>
+			<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="5"/>
+			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalHigh" ischosen="true" value="1"/>
 		</quest>
 
 		<!-- DISCIPLES TRAINING -->
@@ -3261,78 +3852,6 @@
 			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="1"/>
 		</quest>
 		
-		<quest id="quest_FuriousRamsayPeskyZombies">
-			<property name="name_key" value="quest_FuriousRamsayPeskyZombies_name"/>
-			<property name="subtitle_key" value="quest_FuriousRamsayPeskyZombies_subtitle"/>
-			<property name="description_key" value="quest_FuriousRamsayPeskyZombies_description"/>
-			<property name="icon" value="ui_game_symbol_quest"/>
-			<property name="repeatable" value="false"/>
-			<property name="shareable" value="false"/>
-			<property name="category_key" value="challenge"/>
-			<property name="difficulty" value="easy"/>
-			<property name="difficulty_tier" value="1"/>
-
-			<property name="completiontype" value="AutoComplete"/>
-
-			<objective type="Time" value="120" phase="1"/>
-
-			<objective type="Time" value="120" phase="2"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieArlene" value="1" phase="2"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieBoe" value="1" phase="2"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieJoe" value="1" phase="2"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieDarlene" value="1" phase="2"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieMarlene" value="1" phase="2"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieYo" value="1" phase="2"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieSteve" value="1" phase="2"/>
-
-			<objective type="Time" value="120" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieArlene" value="1" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieBoe" value="1" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieJoe" value="1" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieDarlene" value="1" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieMarlene" value="1" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieYo" value="1" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieSteve" value="1" phase="3"/>
-
-			<objective type="Time" value="120" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieArlene" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieBoe" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieJoe" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieDarlene" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieMarlene" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieYo" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayZombieSteve" value="1" phase="4"/>
-		</quest>		
-
-		<!--<quest id="quest_FuriousRamsayTraderOptionTest">
-			<property name="name_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_name"/>
-			<property name="subtitle_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_subtitle"/>
-			<property name="description_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_description"/>
-			<property name="icon" value="ui_game_symbol_quest"/>
-			<property name="repeatable" value="false"/>
-			<property name="shareable" value="false"/>
-			<property name="category_key" value="challenge"/>
-			<property name="difficulty" value="easy"/>
-			<property name="difficulty_tier" value="1"/>
-			<property name="offer_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_offer"/>
-
-			<property name="completiontype" value="TurnIn"/>
-
-			<objective type="Time" value="1" phase="1"/>
-
-			<objective type="InteractWithNPC">
-				<property name="phase" value="2"/>
-				<property name="nav_object" value="return_to_trader" />
-			</objective>
-
-			<reward type="LootItem" id="FuriousRamsayGroupQuestCookedFoodsTier1" ischosen="true" isfixed="true" value="1"/>
-			<reward type="LootItem" id="FuriousRamsayGroupQuestMedicalLow" ischosen="true" isfixed="true" value="1"/>
-			<reward type="LootItem" id="groupQuestTools" ischosen="true" value="1"/>
-			<reward type="LootItem" id="groupQuestArmor" ischosen="true" value="1"/>
-			<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
-			<reward type="LootItem" id="groupQuestWeapons" ischosen="true" value="1"/>
-		</quest>-->
-
 		<quest_list id="trader_quests_survivalspecialist">
 			<quest id="quest_FuriousRamsayLocateShelter" prob="1"/>
 		</quest_list>
@@ -3347,7 +3866,12 @@
 			<quest id="quest_FuriousRamsayHunterDisciplesTraining_Tier2" prob="1"/>
 			<quest id="quest_FuriousRamsayHunterDisciplesTraining_Tier3" prob="1"/>
 			<quest id="quest_FuriousRamsayHunterDisciplesTraining_Tier4" prob="1"/>
-			<quest id="quest_FuriousRamsayHunterDisciplesTraining_Tier5" prob="1"/>
+			<quest id="quest_FuriousRamsayHunterDisciplesTraining_Tier5" prob="1"/>		
+			<quest id="quest_FuriousRamsayDefendArea_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier2" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier3" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier4" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier5" prob="1"/>
 			<quest id="quest_FuriousRamsaySkullsClearFetch_Tier1" prob="1"/>
 		</quest_list>
 
@@ -3358,6 +3882,11 @@
 			<quest id="quest_FuriousRamsayThugDisciplesTraining_Tier3" prob="1"/>
 			<quest id="quest_FuriousRamsayThugDisciplesTraining_Tier4" prob="1"/>
 			<quest id="quest_FuriousRamsayThugDisciplesTraining_Tier5" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier2" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier3" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier4" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier5" prob="1"/>
 			<quest id="quest_FuriousRamsaySkullsClearFetch_Tier1" prob="1"/>
 		</quest_list>
 
@@ -3368,6 +3897,11 @@
 			<quest id="quest_FuriousRamsayButcherDisciplesTraining_Tier3" prob="1"/>
 			<quest id="quest_FuriousRamsayButcherDisciplesTraining_Tier4" prob="1"/>
 			<quest id="quest_FuriousRamsayButcherDisciplesTraining_Tier5" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier2" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier3" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier4" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier5" prob="1"/>
 			<quest id="quest_FuriousRamsaySkullsClearFetch_Tier1" prob="1"/>
 		</quest_list>
 
@@ -3378,6 +3912,11 @@
 			<quest id="quest_FuriousRamsaySoldierDisciplesTraining_Tier3" prob="1"/>
 			<quest id="quest_FuriousRamsaySoldierDisciplesTraining_Tier4" prob="1"/>
 			<quest id="quest_FuriousRamsaySoldierDisciplesTraining_Tier5" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier2" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier3" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier4" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier5" prob="1"/>
 			<quest id="quest_FuriousRamsaySkullsClearFetch_Tier1" prob="1"/>
 		</quest_list>
 
@@ -3388,6 +3927,11 @@
 			<quest id="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier3" prob="1"/>
 			<quest id="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier4" prob="1"/>
 			<quest id="quest_FuriousRamsayTechnogeekDisciplesTraining_Tier5" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier2" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier3" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier4" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier5" prob="1"/>
 			<quest id="quest_FuriousRamsaySkullsClearFetch_Tier1" prob="1"/>
 		</quest_list>
 
@@ -3398,6 +3942,11 @@
 			<quest id="quest_FuriousRamsayMadmanDisciplesTraining_Tier3" prob="1"/>
 			<quest id="quest_FuriousRamsayMadmanDisciplesTraining_Tier4" prob="1"/>
 			<quest id="quest_FuriousRamsayMadmanDisciplesTraining_Tier5" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier2" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier3" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier4" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier5" prob="1"/>
 			<quest id="quest_FuriousRamsaySkullsClearFetch_Tier1" prob="1"/>
 		</quest_list>
 
@@ -3408,6 +3957,11 @@
 			<quest id="quest_FuriousRamsayBuilderDisciplesTraining_Tier3" prob="1"/>
 			<quest id="quest_FuriousRamsayBuilderDisciplesTraining_Tier4" prob="1"/>
 			<quest id="quest_FuriousRamsayBuilderDisciplesTraining_Tier5" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier2" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier3" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier4" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier5" prob="1"/>
 			<quest id="quest_FuriousRamsaySkullsClearFetch_Tier1" prob="1"/>
 		</quest_list>
 
@@ -3418,6 +3972,11 @@
 			<quest id="quest_FuriousRamsayChefDisciplesTraining_Tier3" prob="1"/>
 			<quest id="quest_FuriousRamsayChefDisciplesTraining_Tier4" prob="1"/>
 			<quest id="quest_FuriousRamsayChefDisciplesTraining_Tier5" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier1" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier2" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier3" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier4" prob="1"/>
+			<quest id="quest_FuriousRamsayDefendArea_Tier5" prob="1"/>
 			<quest id="quest_FuriousRamsaySkullsClearFetch_Tier1" prob="1"/>
 		</quest_list>
 

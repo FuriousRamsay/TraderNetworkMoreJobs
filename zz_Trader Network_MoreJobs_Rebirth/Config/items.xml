@@ -4,6 +4,290 @@
 
 	<append xpath="/items">
 
+		<item name="FuriousRamsayGeneticsPerkTrainingMaster">
+			<property name="Extends" value="FuriousRamsayNoteMaster"/>
+			<property name="ItemTypeIcon" value="skills"/>
+		</item>
+
+		<!-- STRENGTH PERKS -->
+		<item name="FuriousRamsayStrengthperkSexualTrex">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="118, 227, 129"/>
+			<property name="DescriptionKey" value="FuriousRamsayStrengthperkSexualTrexDesc"/>
+			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayStrengthUnitPercIncrease"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStrengthperkMiner69r">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="99, 191, 109"/>
+			<property name="DescriptionKey" value="FuriousRamsayStrengthperkMiner69rDesc"/>
+			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
+						<property name="EconomicValue" value="2000"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayStrengthUnitPercIncrease"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayStrengthperkMotherLode">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="81, 156, 89"/>
+			<property name="DescriptionKey" value="FuriousRamsayStrengthperkMotherLodeDesc"/>
+			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
+						<property name="EconomicValue" value="2000"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayStrengthUnitPercIncrease"/>
+			</effect_group>
+		</item>
+
+		<!-- DEXTERITY PERKS -->
+		<item name="FuriousRamsayDexterityperkRuleOneCardio">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="209, 209, 105"/>
+			<property name="DescriptionKey" value="FuriousRamsayDexterityperkSexualTrexDesc"/>
+			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
+						<property name="EconomicValue" value="2000"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayDexterityUnitPercIncrease"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayDexterityperkParkour">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="173, 173, 87"/>
+			<property name="DescriptionKey" value="FuriousRamsayDexterityperkMiner69rDesc"/>
+			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
+						<property name="EconomicValue" value="2000"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayDexterityUnitPercIncrease"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayDexterityperkRunAndGun">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="133, 133, 68"/>
+			<property name="DescriptionKey" value="FuriousRamsayDexterityperkMotherLodeDesc"/>
+			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
+						<property name="EconomicValue" value="2000"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayDexterityUnitPercIncrease"/>
+			</effect_group>
+		</item>
+
+		<!-- CONSTITUTION PERKS -->
+		<item name="FuriousRamsayConstitutionperkPackMule">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="209, 107, 122"/>
+			<property name="DescriptionKey" value="FuriousRamsayConstitutionperkSexualTrexDesc"/>
+			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
+						<property name="EconomicValue" value="2000"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayConstitutionUnitPercIncrease"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayConstitutionperkHealingFactor">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="171, 87, 99"/>
+			<property name="DescriptionKey" value="FuriousRamsayConstitutionperkMiner69rDesc"/>
+			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
+						<property name="EconomicValue" value="2000"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayConstitutionUnitPercIncrease"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayConstitutionperkSlowMetabolism">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="133, 68, 77"/>
+			<property name="DescriptionKey" value="FuriousRamsayConstitutionperkMotherLodeDesc"/>
+			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
+						<property name="EconomicValue" value="2000"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayConstitutionUnitPercIncrease"/>
+			</effect_group>
+		</item>
+
+		<!-- INTELLIGENCE PERKS -->
+		<item name="FuriousRamsayIntelligenceperkLuckyLooter">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="106, 128, 217"/>
+			<property name="DescriptionKey" value="FuriousRamsayIntelligenceperkSexualTrexDesc"/>
+			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
+						<property name="EconomicValue" value="2000"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@varFuriousRamsayIntelligenceUnitPercIncrease"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayIntelligenceperkLockPicking">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="87, 106, 179"/>
+			<property name="DescriptionKey" value="FuriousRamsayIntelligenceperkMiner69rDesc"/>
+			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
+						<property name="EconomicValue" value="2000"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@varFuriousRamsayIntelligenceUnitPercIncrease"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayIntelligenceperkTreasureHunter">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="69, 83, 140"/>
+			<property name="DescriptionKey" value="FuriousRamsayIntelligenceperkMotherLodeDesc"/>
+			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
+						<property name="EconomicValue" value="2000"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@varFuriousRamsayIntelligenceUnitPercIncrease"/>
+			</effect_group>
+		</item>
+
+		<!-- KNOWLEDGE PERKS -->
+		<item name="FuriousRamsayKnowledgeperkGreaseMonkey">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="179, 120, 222"/>
+			<property name="DescriptionKey" value="FuriousRamsayKnowledgeperkSexualTrexDesc"/>
+			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
+						<property name="EconomicValue" value="2000"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@varFuriousRamsayKnowledgeUnitPercIncrease"/>
+			</effect_group>
+		</item>
+
+		<!-- CHARISMA PERKS -->
+		<item name="FuriousRamsayCharismaperkDaringAdventurer">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="224, 128, 208"/>
+			<property name="DescriptionKey" value="FuriousRamsayCharismaperkSexualTrexDesc"/>
+			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
+						<property name="EconomicValue" value="2000"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@varFuriousRamsayCharismaUnitPercIncrease"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayCharismaperkBetterBarter">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="189, 108, 175"/>
+			<property name="DescriptionKey" value="FuriousRamsayCharismaperkMiner69rDesc"/>
+			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
+						<property name="EconomicValue" value="2000"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@varFuriousRamsayCharismaUnitPercIncrease"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayCharismaperkCharismaticNature">
+			<property name="HoldType" value="73"/>
+			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIconTint" value="153, 87, 142"/>
+			<property name="DescriptionKey" value="FuriousRamsayCharismaperkMotherLodeDesc"/>
+			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
+						<property name="EconomicValue" value="2000"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+			</property>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@varFuriousRamsayCharismaUnitPercIncrease"/>
+			</effect_group>
+		</item>
+
+		<!-- TRAINER ITEMS -->
 		<item name="FuriousRamsayTrainerSpear">
 			<property name="Extends" value="meleeWpnSpearT0StoneSpear"/>
 			<property name="CustomIcon" value="meleeWpnSpearT0StoneSpear"/>
@@ -14,9 +298,7 @@
 			<property name="SellableToTrader" value="false"/>
 
 			<effect_group name="FuriousRamsayEffects" tiered="false">
-				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC">
-					<requirement name="EntityTagCompare" tags="FuriousRamsayHunterTraining"/>
-				</triggered_effect>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC"/>
 			</effect_group>
 
 			<effect_group name="meleeWpnSpearT0StoneSpear" tiered="false">
@@ -68,9 +350,7 @@
 			<property name="SellableToTrader" value="false"/>
 
 			<effect_group name="FuriousRamsayEffects" tiered="false">
-				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC">
-					<requirement name="EntityTagCompare" tags="FuriousRamsayButcherTraining"/>
-				</triggered_effect>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC"/>
 			</effect_group>
 
 			<effect_group name="meleeWpnBladeT3Machete" tiered="false">
@@ -96,9 +376,7 @@
 			<property name="SellableToTrader" value="false"/>
 
 			<effect_group name="FuriousRamsayEffects" tiered="false">
-				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC">
-					<requirement name="EntityTagCompare" tags="FuriousRamsaySoldierTraining"/>
-				</triggered_effect>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC"/>
 			</effect_group>
 
 			<effect_group name="meleeWpnKnucklesT0LeatherKnuckles" tiered="false">
@@ -124,9 +402,7 @@
 			<property name="SellableToTrader" value="false"/>
 
 			<effect_group name="FuriousRamsayEffects" tiered="false">
-				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC">
-					<requirement name="EntityTagCompare" tags="FuriousRamsayTechnogeekTraining"/>
-				</triggered_effect>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC"/>
 			</effect_group>
 
 			<effect_group name="meleeWpnBatonT2StunBaton" tiered="false">
@@ -152,9 +428,7 @@
 			<property name="SellableToTrader" value="false"/>
 
 			<effect_group name="FuriousRamsayEffects" tiered="false">
-				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC">
-					<requirement name="EntityTagCompare" tags="FuriousRamsayMadmanTraining"/>
-				</triggered_effect>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC"/>
 			</effect_group>
 
 			<effect_group name="meleeToolRepairT0StoneAxe" tiered="false">
@@ -180,9 +454,7 @@
 			<property name="SellableToTrader" value="false"/>
 
 			<effect_group name="FuriousRamsayEffects" tiered="false">
-				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC">
-					<requirement name="EntityTagCompare" tags="FuriousRamsayBuilderTraining"/>
-				</triggered_effect>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC"/>
 			</effect_group>
 
 			<effect_group name="meleeWpnSledgeT0StoneSledgehammer" tiered="false">
@@ -208,9 +480,7 @@
 			<property name="SellableToTrader" value="false"/>
 
 			<effect_group name="FuriousRamsayEffects" tiered="false">
-				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC">
-					<requirement name="EntityTagCompare" tags="FuriousRamsayChefTraining"/>
-				</triggered_effect>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="FuriousRamsayRemoveTrainingNPC"/>
 			</effect_group>
 
 			<effect_group name="meleeWpnBladeT0BoneKnife" tiered="false">
@@ -2751,8 +3021,8 @@
 			<property name="Meshfile" value="#Other/Items?Health/painkillersPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Morganic"/>
-			<property name="EconomicValue" value="80"/>
-			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="Stacknumber" value="1"/>
 			<property name="Group" value="Science,CFChemicals,Medical"/>
 		</item>
 
@@ -2790,6 +3060,7 @@
 		<item name="FuriousRamsayPillConstitution">
 			<property name="Extends" value="FuriousRamsayPillMaster"/>
 			<property name="CustomIconTint" value="122, 189, 113"/>
+			<property name="EconomicValue" value="750"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -2820,6 +3091,7 @@
 		<item name="FuriousRamsayPillKnowledge">
 			<property name="Extends" value="FuriousRamsayPillMaster"/>
 			<property name="CustomIconTint" value="165, 110, 184"/>
+			<property name="EconomicValue" value="1000"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
@@ -2835,6 +3107,7 @@
 		<item name="FuriousRamsayPillCharisma">
 			<property name="Extends" value="FuriousRamsayPillMaster"/>
 			<property name="CustomIconTint" value="179, 107, 167"/>
+			<property name="EconomicValue" value="375"/>
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>

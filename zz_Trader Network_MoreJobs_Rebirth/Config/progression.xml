@@ -1485,31 +1485,11 @@
 			<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeCharisma" operation="GTE" value="5" desc_key="FuriousRamsayReqCharismaLevel05"/>
 			<requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="5" desc_key="FuriousRamsayReqGeneticsLevel05"/>
 		</level_requirements>
-		<level_requirements level="6">
-			<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeCharisma" operation="GTE" value="6" desc_key="FuriousRamsayReqCharismaLevel06"/>
-			<requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="6" desc_key="FuriousRamsayReqGeneticsLevel06"/>
-		</level_requirements>
-		<level_requirements level="7">
-			<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeCharisma" operation="GTE" value="7" desc_key="FuriousRamsayReqCharismaLevel07"/>
-			<requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="7" desc_key="FuriousRamsayReqGeneticsLevel07"/>
-		</level_requirements>
-		<level_requirements level="8">
-			<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeCharisma" operation="GTE" value="8" desc_key="FuriousRamsayReqCharismaLevel08"/>
-			<requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="8" desc_key="FuriousRamsayReqGeneticsLevel08"/>
-		</level_requirements>
-		<level_requirements level="9">
-			<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeCharisma" operation="GTE" value="9" desc_key="FuriousRamsayReqCharismaLevel09"/>
-			<requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="9" desc_key="FuriousRamsayReqGeneticsLevel09"/>
-		</level_requirements>
-		<level_requirements level="10">
-			<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeCharisma" operation="GTE" value="10" desc_key="FuriousRamsayReqCharismaLevel10"/>
-			<requirement name="ProgressionLevel" progression_name="attfortitude" operation="GTE" value="10" desc_key="FuriousRamsayReqGeneticsLevel10"/>
-		</level_requirements>
 
 		<effect_group>
 			<passive_effect name="BarteringBuying" operation="base_add" level="1,2,3,4,5" value=".05,.1,.15,.2,.25"/>
 			<passive_effect name="BarteringSelling" operation="base_add" level="1,2,3,4,5" value=".05,.1,.15,.2,.25"/>
-			<passive_effect name="SecretStash" operation="base_add" level="3,5" value="3000,5000"/>
+			<passive_effect name="SecretStash" operation="base_add" level="1,2,3,4,5" value="1000,2000,3000,4000,5000"/>
 
 			<effect_description level="1" desc_key="perkBetterBarterRank1Desc" long_desc_key="perkBetterBarterRank1LongDesc"/>
 			<effect_description level="2" desc_key="perkBetterBarterRank2Desc" long_desc_key="perkBetterBarterRank2LongDesc"/>

@@ -35,6 +35,12 @@
 	<setattribute xpath="/entity_classes/entity_class[@name='animalBossGrace']/property[@name='AITask-4']" name="data">class=EntityPlayer,0,EntityZombie,0,EntitySurvivor,0,EntityBandit,0</setattribute>
 	<setattribute xpath="/entity_classes/entity_class[@name='animalWolf']/property[@name='AITarget-4']" name="data">class=EntityPlayer,0,0,EntityAnimalStag,0,0,EntityZombie,0,0,EntitySurvivor,0,0,EntityBandit,0,0</setattribute>
 
+	<append xpath="/entity_classes/entity_class[@name='npcTraderTemplate']">
+		<effect_group name="Backaway or Die bandit">
+			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffTraderTrigger"/>
+		</effect_group>
+	</append>
+
 	<append xpath="/entity_classes">
 
 <!-- Hold Fetch Classes -->
@@ -5975,7 +5981,7 @@ FuriousRamsayVultureToxicRadiated
 				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
 				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
             </effect_group>
-			
+		
             <effect_group name="Health Effects">
 				<passive_effect name="BuffResistance" operation="base_add" value="10" tags="buffLaceration,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffInjuryBleeding,buffInjuryBleedingParticle"/>
 				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="FuriousRamsayHealthRegen1"/>
@@ -6437,7 +6443,7 @@ FuriousRamsayVultureToxicRadiated
 
         <entity_class name="FuriousRamsayUMAGabrielleEnemy" extends="FuriousRamsayUMATemplateEnemyFemale">
             <property name="Archetype" value="FuriousRamsayGabrielle" />
-            <property name="Tags" value="entity,enemy,FuriousRamsayUMAGabrielleEnemy,UMA" />
+            <property name="Tags" value="entity,enemy,FuriousRamsayUMAGabrielleEnemy,UMA,bandit" />
 
 			<property name="NavObject" value="FuriousRamsayDotRed"/>
 
@@ -6502,7 +6508,7 @@ FuriousRamsayVultureToxicRadiated
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAAidenEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
-            <property name="Tags" value="entity,enemy,FuriousRamsayUMAAidenEnemy,UMA" />
+            <property name="Tags" value="entity,enemy,FuriousRamsayUMAAidenEnemy,UMA,bandit" />
             <property name="Archetype" value="FuriousRamsayAiden" />
         </entity_class>
 		
@@ -6537,7 +6543,7 @@ FuriousRamsayVultureToxicRadiated
         </entity_class>
 
         <entity_class name="FuriousRamsayUMACharlotteEnemy" extends="FuriousRamsayUMATemplateEnemyFemale">
-            <property name="Tags" value="entity,enemy,FuriousRamsayUMACharlotteEnemy,UMA" />
+            <property name="Tags" value="entity,enemy,FuriousRamsayUMACharlotteEnemy,UMA,bandit" />
             <property name="Archetype" value="FuriousRamsayCharlotte" />
         </entity_class>
 
@@ -6571,7 +6577,7 @@ FuriousRamsayVultureToxicRadiated
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAWillieEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
-            <property name="Tags" value="entity,enemy,FuriousRamsayUMAWillieEnemy,UMA" />
+            <property name="Tags" value="entity,enemy,FuriousRamsayUMAWillieEnemy,UMA,bandit" />
             <property name="Archetype" value="FuriousRamsayWillie" />
         </entity_class>
 
@@ -6605,7 +6611,7 @@ FuriousRamsayVultureToxicRadiated
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAHodorEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
-            <property name="Tags" value="entity,enemy,FuriousRamsayUMAHodorEnemy,UMA" />
+            <property name="Tags" value="entity,enemy,FuriousRamsayUMAHodorEnemy,UMA,bandit" />
             <property name="Archetype" value="FuriousRamsayHodor" />
 
             <effect_group name="Base Effects">
@@ -6677,7 +6683,7 @@ FuriousRamsayVultureToxicRadiated
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAKimEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
-            <property name="Tags" value="entity,enemy,FuriousRamsayUMAKimEnemy,UMA" />
+            <property name="Tags" value="entity,enemy,FuriousRamsayUMAKimEnemy,UMA,bandit" />
             <property name="Archetype" value="FuriousRamsayKim" />
         </entity_class>
 
@@ -6926,7 +6932,7 @@ FuriousRamsayVultureToxicRadiated
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAClintEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
-            <property name="Tags" value="entity,enemy,FuriousRamsayUMAClintEnemy,UMA" />
+            <property name="Tags" value="entity,enemy,FuriousRamsayUMAClintEnemy,UMA,bandit" />
             <property name="Archetype" value="FuriousRamsayClint" />
 
 			<property name="NavObject" value="FuriousRamsayDotRed"/>
@@ -7006,7 +7012,7 @@ FuriousRamsayVultureToxicRadiated
         </entity_class>
 
         <entity_class name="FuriousRamsayUMARoxyEnemy" extends="FuriousRamsayUMATemplateEnemyFemale">
-            <property name="Tags" value="entity,enemy,FuriousRamsayUMARoxyEnemy,UMA" />
+            <property name="Tags" value="entity,enemy,FuriousRamsayUMARoxyEnemy,UMA,bandit" />
             <property name="Archetype" value="FuriousRamsayRoxy" />
    		</entity_class>
 
@@ -7068,7 +7074,7 @@ FuriousRamsayVultureToxicRadiated
         </entity_class>
 
         <entity_class name="FuriousRamsayUMARichieEnemy" extends="FuriousRamsayUMATemplateEnemyMale">
-            <property name="Tags" value="entity,enemy,FuriousRamsayUMARichieEnemy,UMA" />
+            <property name="Tags" value="entity,enemy,FuriousRamsayUMARichieEnemy,UMA,bandit" />
             <property name="Archetype" value="FuriousRamsayRichie" />
         </entity_class>
 
@@ -7739,7 +7745,66 @@ FuriousRamsayVultureToxicRadiated
             <property name="HideInSpawnMenu" value="true"/><property name="Archetype" value="FuriousRamsayRoxy" />
         </entity_class>
 
-		<entity_class name="FuriousRamsayTraderUMATemplate" extends="npcTraderTemplate">
+		<entity_class name="FuriousRamsayTraderTemplate">
+			<property name="Tags" value="entity,npc,human"/>
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="EntityType" value="Player"/>
+			<property name="Faction" value="trader"/>
+			<property name="Mesh" value="Player/Male/player_maleRagdoll"/>
+			<property name="AvatarController" value="AvatarNpcController"/>
+			<property name="ModelType" value="Npc"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="Prefab" value="NPC"/>
+			<property name="Class" value="EntityTrader"/>
+			<property name="Parent" value="Players"/>
+			<property name="PhysicsBody" value="Player"/>
+			<property name="Weight" value="70"/>
+			<property name="LookAtAngle" value="60"/>
+
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityAlive"/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAlive"/>
+
+			<property name="IsEnemyEntity" value="true"/>
+			<property name="WalkType" value="7"/>
+			<property name="SurfaceCategory" value="organic"/>
+			<property name="ParticleOnDeath" value="blood_death"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="SoundRandomTime" value="200.0"/>
+			<property name="Archetype" value="TraderJoel"/>
+			<property name="SoundHurt" value="Player_Male/player1painlg"/>
+			<property name="SoundHurtSmall" value="Player_Male/player1painsm"/>
+			<property name="SoundDeath" value="Player_Male/player1death"/>
+			<property name="SoundStamina" value="Player_Male/player1stamina"/>
+			<property name="SoundDrownPain" value="Player_Male/player1drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Male/player1drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Male/player1drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player1Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player1LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player1LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+
+			<property name="MaxViewAngle" value="180"/>
+
+			<property name="LootListAlive" value="62"/>
+
+			<property name="MoveSpeed" value="0.75"/>
+			<property name="MoveSpeedAggro" value="1.15, 1.15"/>
+			<property name="MoveSpeedPanic" value="1.35"/>
+			<property name="CanClimbLadders" value="true"/>
+
+			<property name="ExperienceGain" value="130"/>
+			<property name="TimeStayAfterDeath" value="30"/>
+			<property name="DeadBodyHitPoints" value="251"/>
+
+			<property name="NavObject" value="trader" />
+
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="100000"/>
+				<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon,buffShocked"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayTraderUMATemplate" extends="FuriousRamsayTraderTemplate">
 			<property name="Tags" value="entity,entity,npc,human,trader"/>
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="EntityType" value="Player"/>
@@ -7789,7 +7854,7 @@ FuriousRamsayVultureToxicRadiated
 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="200"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayBlackShieldDefendTimer"/>
+				<!--<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayBlackShieldDefendTimer"/>-->
 				<passive_effect name="BuffResistance" operation="base_set" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingOne,buffInjuryBleedingTwo,buffInjuryBleeding,buffBurningZombie,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire,buffBurningWeapon,buffShocked"/>
 			</effect_group>
 		</entity_class>
@@ -8059,7 +8124,7 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 		
 		<entity_class name="FuriousRamsayBlackShieldDecoyTier1" extends="FuriousRamsayBlackShieldDecoyMaster">
-			<property name="Tags" value="entity,decoyTier1,UMA" />
+			<property name="Tags" value="entity,decoyTier1,UMA,survivor" />
 			<property name="Archetype" value="FuriousRamsayBlackShieldDecoyTier1" />
 			<property name="Explosion.EntityDamage" value="180"/>
 			<effect_group name="Base Effects">
@@ -8068,7 +8133,7 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackShieldDecoyTier2" extends="FuriousRamsayBlackShieldDecoyMaster">
-			<property name="Tags" value="entity,decoyTier1,UMA" />
+			<property name="Tags" value="entity,decoyTier1,UMA,survivor" />
 			<property name="Archetype" value="FuriousRamsayBlackShieldDecoyTier2" />
 			<property name="Explosion.EntityDamage" value="225"/>
 			<effect_group name="Base Effects">
@@ -8077,7 +8142,7 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackShieldDecoyTier3" extends="FuriousRamsayBlackShieldDecoyMaster">
-			<property name="Tags" value="entity,decoyTier1,UMA" />
+			<property name="Tags" value="entity,decoyTier1,UMA,survivor" />
 			<property name="Archetype" value="FuriousRamsayBlackShieldDecoyTier3" />
 			<property name="Explosion.EntityDamage" value="300"/>
 			<effect_group name="Base Effects">
@@ -8086,7 +8151,7 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackShieldDecoyTier4" extends="FuriousRamsayBlackShieldDecoyMaster">
-			<property name="Tags" value="entity,decoyTier1,UMA" />
+			<property name="Tags" value="entity,decoyTier1,UMA,survivor" />
 			<property name="Archetype" value="FuriousRamsayBlackShieldDecoyTier4" />
 			<property name="Explosion.EntityDamage" value="400"/>
 			<effect_group name="Base Effects">
@@ -8095,7 +8160,7 @@ FuriousRamsayVultureToxicRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBlackShieldDecoyTier5" extends="FuriousRamsayBlackShieldDecoyMaster">
-			<property name="Tags" value="entity,decoyTier1,UMA" />
+			<property name="Tags" value="entity,decoyTier1,UMA,survivor" />
 			<property name="Archetype" value="FuriousRamsayBlackShieldDecoyTier5" />
 			<property name="Explosion.EntityDamage" value="600"/>
 			<effect_group name="Base Effects">
@@ -16657,7 +16722,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
         </entity_class>
 
         <entity_class name="FuriousRamsayHazmatTier1" extends="FuriousRamsayHazmatMaster">
-            <property name="Tags" value="entity,enemy,FuriousRamsayHazmatTier1,UMA" />
+            <property name="Tags" value="entity,enemy,FuriousRamsayHazmatTier1,UMA,bandit" />
             <property name="Archetype" value="FuriousRamsayHazmatsTier1" />
 
             <property name="HandItem" value="FuriousRamsayHazmatMeleeHandTier1" />
@@ -16681,7 +16746,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
         </entity_class>
 
         <entity_class name="FuriousRamsayHazmatTier2" extends="FuriousRamsayHazmatMaster">
-            <property name="Tags" value="entity,enemy,FuriousRamsayHazmatTier2,UMA" />
+            <property name="Tags" value="entity,enemy,FuriousRamsayHazmatTier2,UMA,bandit" />
             <property name="Archetype" value="FuriousRamsayHazmatsTier2" />
 
             <property name="HandItem" value="FuriousRamsayHazmatMeleeHandTier2" />
@@ -16705,7 +16770,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
         </entity_class>
 
         <entity_class name="FuriousRamsayHazmatTier3" extends="FuriousRamsayHazmatMaster">
-            <property name="Tags" value="entity,enemy,FuriousRamsayHazmatTier3,UMA" />
+            <property name="Tags" value="entity,enemy,FuriousRamsayHazmatTier3,UMA,bandit" />
             <property name="Archetype" value="FuriousRamsayHazmatsTier3" />
 
             <property name="HandItem" value="FuriousRamsayHazmatMeleeHandTier3" />
@@ -16729,7 +16794,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
         </entity_class>
 
         <entity_class name="FuriousRamsayHazmatTier4" extends="FuriousRamsayHazmatMaster">
-            <property name="Tags" value="entity,enemy,FuriousRamsayHazmatTier4,UMA" />
+            <property name="Tags" value="entity,enemy,FuriousRamsayHazmatTier4,UMA,bandit" />
             <property name="Archetype" value="FuriousRamsayHazmatsTier4" />
 
             <property name="HandItem" value="FuriousRamsayHazmatMeleeHandTier4" />
@@ -16753,7 +16818,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
         </entity_class>
 
         <entity_class name="FuriousRamsayHazmatTier5" extends="FuriousRamsayHazmatMaster">
-            <property name="Tags" value="entity,enemy,FuriousRamsayHazmatTier5,UMA" />
+            <property name="Tags" value="entity,enemy,FuriousRamsayHazmatTier5,UMA,bandit" />
             <property name="Archetype" value="FuriousRamsayHazmatsTier5" />
 
             <property name="HandItem" value="FuriousRamsayHazmatMeleeHandTier5" />
@@ -17475,7 +17540,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 
 		<!-- HUNTER TRAINING LEADS -->
 		<entity_class name="FuriousRamsayHunterTrainerTier1" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerHunter,UMA,FuriousRamsayHunterTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerHunter,UMA,FuriousRamsayHunterTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayHunterTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -17517,7 +17582,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayHunterTrainerTier2" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerHunter,UMA,FuriousRamsayHunterTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerHunter,UMA,FuriousRamsayHunterTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayHunterTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -17560,7 +17625,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayHunterTrainerTier3" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerHunter,UMA,FuriousRamsayHunterTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerHunter,UMA,FuriousRamsayHunterTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayHunterTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -17603,7 +17668,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayHunterTrainerTier4" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerHunter,UMA,FuriousRamsayHunterTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerHunter,UMA,FuriousRamsayHunterTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayHunterTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -17646,7 +17711,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayHunterTrainerTier5" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerHunter,UMA,FuriousRamsayHunterTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerHunter,UMA,FuriousRamsayHunterTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayHunterTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -17690,7 +17755,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		
 		<!-- THUG TRAINING LEADS -->
 		<entity_class name="FuriousRamsayThugTrainerTier1" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerThug,UMA,FuriousRamsayThugTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerThug,UMA,FuriousRamsayThugTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayThugTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -17733,7 +17798,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayThugTrainerTier2" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerThug,UMA,FuriousRamsayThugTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerThug,UMA,FuriousRamsayThugTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayThugTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -17776,7 +17841,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayThugTrainerTier3" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerThug,UMA,FuriousRamsayThugTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerThug,UMA,FuriousRamsayThugTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayThugTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -17819,7 +17884,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayThugTrainerTier4" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerThug,UMA,FuriousRamsayThugTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerThug,UMA,FuriousRamsayThugTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayThugTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -17862,7 +17927,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayThugTrainerTier5" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerThug,UMA,FuriousRamsayThugTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerThug,UMA,FuriousRamsayThugTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayThugTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -17906,7 +17971,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		
 		<!-- BUTCHER TRAINING LEADS -->
 		<entity_class name="FuriousRamsayButcherTrainerTier1" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerButcher,UMA,FuriousRamsayButcherTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerButcher,UMA,FuriousRamsayButcherTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayButcherTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -17949,7 +18014,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayButcherTrainerTier2" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerButcher,UMA,FuriousRamsayButcherTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerButcher,UMA,FuriousRamsayButcherTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayButcherTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -17992,7 +18057,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayButcherTrainerTier3" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerButcher,UMA,FuriousRamsayButcherTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerButcher,UMA,FuriousRamsayButcherTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayButcherTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18035,7 +18100,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayButcherTrainerTier4" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerButcher,UMA,FuriousRamsayButcherTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerButcher,UMA,FuriousRamsayButcherTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayButcherTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18078,7 +18143,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayButcherTrainerTier5" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerButcher,UMA,FuriousRamsayButcherTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerButcher,UMA,FuriousRamsayButcherTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayButcherTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18122,7 +18187,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		
 		<!-- SOLDIER TRAINING LEADS -->
 		<entity_class name="FuriousRamsaySoldierTrainerTier1" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerSoldier,UMA,FuriousRamsaySoldierTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerSoldier,UMA,FuriousRamsaySoldierTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsaySoldierTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18165,7 +18230,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySoldierTrainerTier2" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerSoldier,UMA,FuriousRamsaySoldierTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerSoldier,UMA,FuriousRamsaySoldierTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsaySoldierTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18208,7 +18273,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySoldierTrainerTier3" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerSoldier,UMA,FuriousRamsaySoldierTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerSoldier,UMA,FuriousRamsaySoldierTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsaySoldierTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18251,7 +18316,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySoldierTrainerTier4" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerSoldier,UMA,FuriousRamsaySoldierTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerSoldier,UMA,FuriousRamsaySoldierTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsaySoldierTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18294,7 +18359,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySoldierTrainerTier5" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerSoldier,UMA,FuriousRamsaySoldierTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerSoldier,UMA,FuriousRamsaySoldierTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsaySoldierTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18338,7 +18403,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		
 		<!-- TECHNOGEEK TRAINING LEADS -->
 		<entity_class name="FuriousRamsayTechnogeekTrainerTier1" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerTechnogeek,UMA,FuriousRamsayTechnogeekTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerTechnogeek,UMA,FuriousRamsayTechnogeekTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayTechnogeekTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18381,7 +18446,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayTechnogeekTrainerTier2" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerTechnogeek,UMA,FuriousRamsayTechnogeekTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerTechnogeek,UMA,FuriousRamsayTechnogeekTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayTechnogeekTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18424,7 +18489,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayTechnogeekTrainerTier3" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerTechnogeek,UMA,FuriousRamsayTechnogeekTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerTechnogeek,UMA,FuriousRamsayTechnogeekTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayTechnogeekTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18467,7 +18532,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayTechnogeekTrainerTier4" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerTechnogeek,UMA,FuriousRamsayTechnogeekTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerTechnogeek,UMA,FuriousRamsayTechnogeekTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayTechnogeekTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18510,7 +18575,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayTechnogeekTrainerTier5" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerTechnogeek,UMA,FuriousRamsayTechnogeekTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerTechnogeek,UMA,FuriousRamsayTechnogeekTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayTechnogeekTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18554,7 +18619,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		
 		<!-- MADMAN TRAINING LEADS -->
 		<entity_class name="FuriousRamsayMadmanTrainerTier1" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerMadman,UMA,FuriousRamsayMadmanTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerMadman,UMA,FuriousRamsayMadmanTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayMadmanTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18597,7 +18662,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayMadmanTrainerTier2" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerMadman,UMA,FuriousRamsayMadmanTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerMadman,UMA,FuriousRamsayMadmanTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayMadmanTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18640,7 +18705,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayMadmanTrainerTier3" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerMadman,UMA,FuriousRamsayMadmanTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerMadman,UMA,FuriousRamsayMadmanTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayMadmanTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18683,7 +18748,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayMadmanTrainerTier4" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerMadman,UMA,FuriousRamsayMadmanTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerMadman,UMA,FuriousRamsayMadmanTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayMadmanTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18726,7 +18791,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayMadmanTrainerTier5" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerMadman,UMA,FuriousRamsayMadmanTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerMadman,UMA,FuriousRamsayMadmanTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayMadmanTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18770,7 +18835,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		
 		<!-- BUILDER TRAINING LEADS -->
 		<entity_class name="FuriousRamsayBuilderTrainerTier1" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerBuilder,UMA,FuriousRamsayBuilderTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerBuilder,UMA,FuriousRamsayBuilderTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayBuilderTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18813,7 +18878,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBuilderTrainerTier2" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerBuilder,UMA,FuriousRamsayBuilderTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerBuilder,UMA,FuriousRamsayBuilderTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayBuilderTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18856,7 +18921,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBuilderTrainerTier3" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerBuilder,UMA,FuriousRamsayBuilderTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerBuilder,UMA,FuriousRamsayBuilderTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayBuilderTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18899,7 +18964,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBuilderTrainerTier4" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerBuilder,UMA,FuriousRamsayBuilderTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerBuilder,UMA,FuriousRamsayBuilderTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayBuilderTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18942,7 +19007,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBuilderTrainerTier5" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerBuilder,UMA,FuriousRamsayBuilderTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerBuilder,UMA,FuriousRamsayBuilderTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayBuilderTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -18986,7 +19051,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		
 		<!-- CHEF TRAINING LEADS -->
 		<entity_class name="FuriousRamsayChefTrainer" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,female,bandit,melee,npc,human,FuriousRamsayChefTraining"/>
+			<property name="Tags" value="entity,female,bandit,melee,npc,human,FuriousRamsayChefTraining,survivor"/>
 
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
@@ -19035,7 +19100,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayChefTrainerTier1" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerChef,UMA,FuriousRamsayChefTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerChef,UMA,FuriousRamsayChefTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayChefTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19078,7 +19143,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayChefTrainerTier2" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerChef,UMA,FuriousRamsayChefTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerChef,UMA,FuriousRamsayChefTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayChefTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -19121,7 +19186,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayChefTrainerTier3" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerChef,UMA,FuriousRamsayChefTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerChef,UMA,FuriousRamsayChefTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayChefTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -19164,7 +19229,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayChefTrainerTier4" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerChef,UMA,FuriousRamsayChefTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerChef,UMA,FuriousRamsayChefTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayChefTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -19207,7 +19272,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayChefTrainerTier5" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,TrainerChef,UMA,FuriousRamsayChefTraining"/>
+			<property name="Tags" value="entity,npc,human,TrainerChef,UMA,FuriousRamsayChefTraining,survivor"/>
 			<property name="Archetype" value="FuriousRamsayChefTraining"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -19251,7 +19316,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		
 		<!-- HUNTER TRAINING HELPERS -->
 		<entity_class name="FuriousRamsayHunterGenericTrainingTier1" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerHunter"/>
+			<property name="Tags" value="entity,npc,human,UMA,TrainerHunter,survivor"/>
 			<property name="Archetype" value="FuriousRamsayGenericHunterTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19291,7 +19356,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayHunterGenericTrainingTier2" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerHunter"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerHunter"/>
 			<property name="Archetype" value="FuriousRamsayGenericHunterTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19331,7 +19396,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayHunterGenericTrainingTier3" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerHunter"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerHunter"/>
 			<property name="Archetype" value="FuriousRamsayGenericHunterTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19371,7 +19436,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayHunterGenericTrainingTier4" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerHunter"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerHunter"/>
 			<property name="Archetype" value="FuriousRamsayGenericHunterTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19411,7 +19476,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayHunterGenericTrainingTier5" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerHunter"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerHunter"/>
 			<property name="Archetype" value="FuriousRamsayGenericHunterTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19452,7 +19517,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 
 		<!-- THUG TRAINING HELPERS -->
 		<entity_class name="FuriousRamsayThugGenericTrainingTier1" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerThug"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerThug"/>
 			<property name="Archetype" value="FuriousRamsayGenericThugTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19492,7 +19557,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayThugGenericTrainingTier2" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerThug"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerThug"/>
 			<property name="Archetype" value="FuriousRamsayGenericThugTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19532,7 +19597,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayThugGenericTrainingTier3" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerThug"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerThug"/>
 			<property name="Archetype" value="FuriousRamsayGenericThugTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19572,7 +19637,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayThugGenericTrainingTier4" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerThug"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerThug"/>
 			<property name="Archetype" value="FuriousRamsayGenericThugTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19612,7 +19677,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayThugGenericTrainingTier5" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerThug"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerThug"/>
 			<property name="Archetype" value="FuriousRamsayGenericThugTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19653,7 +19718,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		
 		<!-- BUTCHER TRAINING HELPERS -->
 		<entity_class name="FuriousRamsayButcherGenericTrainingTier1" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerButcher"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerButcher"/>
 			<property name="Archetype" value="FuriousRamsayGenericButcherTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19693,7 +19758,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayButcherGenericTrainingTier2" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerButcher"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerButcher"/>
 			<property name="Archetype" value="FuriousRamsayGenericButcherTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19733,7 +19798,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayButcherGenericTrainingTier3" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerButcher"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerButcher"/>
 			<property name="Archetype" value="FuriousRamsayGenericButcherTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19773,7 +19838,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayButcherGenericTrainingTier4" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerButcher"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerButcher"/>
 			<property name="Archetype" value="FuriousRamsayGenericButcherTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19813,7 +19878,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayButcherGenericTrainingTier5" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerButcher"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerButcher"/>
 			<property name="Archetype" value="FuriousRamsayGenericButcherTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19854,7 +19919,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 
 		<!-- SOLDIER TRAINING HELPERS -->
 		<entity_class name="FuriousRamsaySoldierGenericTrainingTier1" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerSoldier"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerSoldier"/>
 			<property name="Archetype" value="FuriousRamsayGenericSoldierTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19894,7 +19959,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySoldierGenericTrainingTier2" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerSoldier"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerSoldier"/>
 			<property name="Archetype" value="FuriousRamsayGenericSoldierTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19934,7 +19999,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySoldierGenericTrainingTier3" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerSoldier"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerSoldier"/>
 			<property name="Archetype" value="FuriousRamsayGenericSoldierTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -19974,7 +20039,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySoldierGenericTrainingTier4" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerSoldier"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerSoldier"/>
 			<property name="Archetype" value="FuriousRamsayGenericSoldierTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20014,7 +20079,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySoldierGenericTrainingTier5" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerSoldier"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerSoldier"/>
 			<property name="Archetype" value="FuriousRamsayGenericSoldierTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20055,7 +20120,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 
 		<!-- TECHNOGEEK TRAINING HELPERS -->
 		<entity_class name="FuriousRamsayTechnogeekGenericTrainingTier1" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerTechnogeek"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerTechnogeek"/>
 			<property name="Archetype" value="FuriousRamsayGenericTechnogeekTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20095,7 +20160,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayTechnogeekGenericTrainingTier2" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerTechnogeek"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerTechnogeek"/>
 			<property name="Archetype" value="FuriousRamsayGenericTechnogeekTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20135,7 +20200,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayTechnogeekGenericTrainingTier3" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerTechnogeek"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerTechnogeek"/>
 			<property name="Archetype" value="FuriousRamsayGenericTechnogeekTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20175,7 +20240,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayTechnogeekGenericTrainingTier4" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerTechnogeek"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerTechnogeek"/>
 			<property name="Archetype" value="FuriousRamsayGenericTechnogeekTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20215,7 +20280,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayTechnogeekGenericTrainingTier5" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerTechnogeek"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerTechnogeek"/>
 			<property name="Archetype" value="FuriousRamsayGenericTechnogeekTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20256,7 +20321,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 
 		<!-- MADMAN TRAINING HELPERS -->
 		<entity_class name="FuriousRamsayMadmanGenericTrainingTier1" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerMadman"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerMadman"/>
 			<property name="Archetype" value="FuriousRamsayGenericMadmanTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20296,7 +20361,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayMadmanGenericTrainingTier2" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerMadman"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerMadman"/>
 			<property name="Archetype" value="FuriousRamsayGenericMadmanTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20336,7 +20401,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayMadmanGenericTrainingTier3" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerMadman"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerMadman"/>
 			<property name="Archetype" value="FuriousRamsayGenericMadmanTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20376,7 +20441,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayMadmanGenericTrainingTier4" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerMadman"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerMadman"/>
 			<property name="Archetype" value="FuriousRamsayGenericMadmanTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20416,7 +20481,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayMadmanGenericTrainingTier5" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerMadman"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerMadman"/>
 			<property name="Archetype" value="FuriousRamsayGenericMadmanTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20457,7 +20522,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 
 		<!-- BUILDER TRAINING HELPERS -->
 		<entity_class name="FuriousRamsayBuilderGenericTrainingTier1" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerBuilder"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerBuilder"/>
 			<property name="Archetype" value="FuriousRamsayGenericBuilderTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20497,7 +20562,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBuilderGenericTrainingTier2" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerBuilder"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerBuilder"/>
 			<property name="Archetype" value="FuriousRamsayGenericBuilderTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20537,7 +20602,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBuilderGenericTrainingTier3" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerBuilder"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerBuilder"/>
 			<property name="Archetype" value="FuriousRamsayGenericBuilderTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20577,7 +20642,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBuilderGenericTrainingTier4" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerBuilder"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerBuilder"/>
 			<property name="Archetype" value="FuriousRamsayGenericBuilderTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20617,7 +20682,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBuilderGenericTrainingTier5" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerBuilder"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerBuilder"/>
 			<property name="Archetype" value="FuriousRamsayGenericBuilderTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20658,7 +20723,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 
 		<!-- CHEF TRAINING HELPERS -->
 		<entity_class name="FuriousRamsayChefGenericTrainingTier1" extends="FuriousRamsayUMATemplateSurvivorMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerChef"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerChef"/>
 			<property name="Archetype" value="FuriousRamsayGenericChefTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20698,7 +20763,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayChefGenericTrainingTier2" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerChef"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerChef"/>
 			<property name="Archetype" value="FuriousRamsayGenericChefTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20738,7 +20803,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayChefGenericTrainingTier3" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerChef"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerChef"/>
 			<property name="Archetype" value="FuriousRamsayGenericChefTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20778,7 +20843,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayChefGenericTrainingTier4" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerChef"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerChef"/>
 			<property name="Archetype" value="FuriousRamsayGenericChefTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20818,7 +20883,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayChefGenericTrainingTier5" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerChef"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerChef"/>
 			<property name="Archetype" value="FuriousRamsayGenericChefTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20859,7 +20924,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 
 		<!-- DISCIPLE BIOME -->
 		<entity_class name="FuriousRamsayHunterGenericBiome" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerHunter"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerHunter"/>
 			<property name="Archetype" value="FuriousRamsayGenericHunterTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20892,7 +20957,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayThugGenericBiome" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerThug"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerThug"/>
 			<property name="Archetype" value="FuriousRamsayGenericThugTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20925,7 +20990,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayButcherGenericBiome" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerButcher"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerButcher"/>
 			<property name="Archetype" value="FuriousRamsayGenericButcherTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20958,7 +21023,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySoldierGenericBiome" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerSoldier"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerSoldier"/>
 			<property name="Archetype" value="FuriousRamsayGenericSoldierTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -20991,7 +21056,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayTechnogeekGenericBiome" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerTechnogeek"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerTechnogeek"/>
 			<property name="Archetype" value="FuriousRamsayGenericTechnogeekTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -21024,7 +21089,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayMadmanGenericBiome" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerMadman"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerMadman"/>
 			<property name="Archetype" value="FuriousRamsayGenericMadmanTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -21057,7 +21122,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayBuilderGenericBiome" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerBuilder"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerBuilder"/>
 			<property name="Archetype" value="FuriousRamsayGenericBuilderTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -21090,7 +21155,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsayChefGenericBiome" extends="FuriousRamsayUMATemplateSoldierMale">
-			<property name="Tags" value="entity,npc,human,UMA,TrainerChef"/>
+			<property name="Tags" value="entity,npc,human,UMA,survivor,TrainerChef"/>
 			<property name="Archetype" value="FuriousRamsayGenericChefTraining"/>
 
 			<property name="SoundRandom" value=""/>
@@ -21400,7 +21465,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySkullsClubTier1" extends="FuriousRamsaySkullsMaster">
-			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsClub"/>
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsClub,bandit"/>
 			<property name="Archetype" value="FuriousRamsaySkulls"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -21417,7 +21482,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySkullsClubTier2" extends="FuriousRamsaySkullsMaster">
-			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsClub"/>
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsClub,bandit"/>
 			<property name="Archetype" value="FuriousRamsaySkulls"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -21455,7 +21520,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySkullsClubTier4" extends="FuriousRamsaySkullsMaster">
-			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsClub"/>
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsClub,bandit"/>
 			<property name="Archetype" value="FuriousRamsaySkulls"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -21474,7 +21539,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySkullsClubTier5" extends="FuriousRamsaySkullsMaster">
-			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsClub"/>
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsClub,bandit"/>
 			<property name="Archetype" value="FuriousRamsaySkulls"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -21493,7 +21558,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySkullsHammerTier1" extends="FuriousRamsaySkullsMaster">
-			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsHammer"/>
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsHammer,bandit"/>
 			<property name="Archetype" value="FuriousRamsaySkulls"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -21512,7 +21577,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySkullsHammerTier2" extends="FuriousRamsaySkullsMaster">
-			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsHammer"/>
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsHammer,bandit"/>
 			<property name="Archetype" value="FuriousRamsaySkulls"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -21531,7 +21596,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySkullsHammerTier3" extends="FuriousRamsaySkullsMaster">
-			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsHammer"/>
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsHammer,bandit"/>
 			<property name="Archetype" value="FuriousRamsaySkulls"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -21550,7 +21615,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySkullsHammerTier4" extends="FuriousRamsaySkullsMaster">
-			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsHammer"/>
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsHammer,bandit"/>
 			<property name="Archetype" value="FuriousRamsaySkulls"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -21569,7 +21634,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySkullsHammerTier5" extends="FuriousRamsaySkullsMaster">
-			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsHammer"/>
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsHammer,bandit"/>
 			<property name="Archetype" value="FuriousRamsaySkulls"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -21588,7 +21653,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySkullsAxeTier1" extends="FuriousRamsaySkullsMaster">
-			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsAxe"/>
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsAxe,bandit"/>
 			<property name="Archetype" value="FuriousRamsaySkulls"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -21607,7 +21672,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySkullsAxeTier2" extends="FuriousRamsaySkullsMaster">
-			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsAxe"/>
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsAxe,bandit"/>
 			<property name="Archetype" value="FuriousRamsaySkulls"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -21626,7 +21691,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySkullsAxeTier3" extends="FuriousRamsaySkullsMaster">
-			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsAxe"/>
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsAxe,bandit"/>
 			<property name="Archetype" value="FuriousRamsaySkulls"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -21643,7 +21708,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySkullsAxeTier4" extends="FuriousRamsaySkullsMaster">
-			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsAxe"/>
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsAxe,bandit"/>
 			<property name="Archetype" value="FuriousRamsaySkulls"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -21660,7 +21725,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
 		<entity_class name="FuriousRamsaySkullsAxeTier5" extends="FuriousRamsaySkullsMaster">
-			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsAxe"/>
+			<property name="Tags" value="entity,npc,human,FuriousRamsaySkullsAxe,bandit"/>
 			<property name="Archetype" value="FuriousRamsaySkulls"/>		
 
 			<property name="SoundRandom" value=""/>
@@ -21783,7 +21848,7 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 		</entity_class>
 
         <entity_class name="FuriousRamsayUMALindaStarter" extends="FuriousRamsayUMATemplateEnemyMale">
-            <property name="Tags" value="entity,enemy,FuriousRamsayUMALindaStarter,UMA" />
+            <property name="Tags" value="entity,enemy,FuriousRamsayUMALindaStarter,UMA,bandit" />
             <property name="Archetype" value="FuriousRamsayLindaStarter" />
 
 			<property name="LootDropProb" value="1"/>
