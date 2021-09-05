@@ -20434,31 +20434,53 @@
 				</effect_group>
 			</buff>
 
+			<buff name="FuriousRamsayChangeStrength" hidden="true">	
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayChangeStrength">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>			
+				</effect_group>
+			</buff>
+
 			<buff name="VerifyFuriousRamsayActions" hidden="true">	
 				
-				<effect_group name="VerifyFuriousRamsayMining">
+				<effect_group name="VerifyFuriousRamsayBreakOther">
 					<requirement name="!TriggerHasTags" tags="Door"/>
 						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.00001"/>
 						<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>
 				</effect_group>
 
 				<effect_group name="VerifyFuriousRamsayBreakDoors">
-					<requirement name="TriggerHasTags" tags="FuriousRamsayTree"/>
-						<triggered_effect trigger="onSelfDamagedBlock" action="ShowToolbeltMessage" message="Cutting tree"/>
-						<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Cut down Tree"/>
-				</effect_group>
-
-				<effect_group name="VerifyFuriousRamsayBreakOre">
-					<requirement name="TriggerHasTags" tags="surfaceOre"/>
-						<triggered_effect trigger="onSelfDamagedBlock" action="ShowToolbeltMessage" message="Harvesting ore"/>
-						<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Broke down Ore"/>
-				</effect_group>
-
-				<effect_group name="VerifyFuriousRamsayBreakDoors">
 					<requirement name="TriggerHasTags" tags="Door"/>
-						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.001"/>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Door"/>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.00033"/> <!-- Triggers at each door stage. Should differentiate between door types for more xp -->
 						<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>
 				</effect_group>
+
+				<effect_group name="VerifyFuriousRamsayCutTrees">
+					<requirement name="TriggerHasTags" tags="FuriousRamsayTree"/>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ShowToolbeltMessage" message="Cutting tree"/> <!-- Works -->
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Cut down Tree"/> <!-- does not work -->
+				</effect_group>
+
+				<effect_group name="VerifyFuriousRamsayHarvestCrops">
+					<requirement name="TriggerHasTags" tags="crops"/>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ShowToolbeltMessage" message="Damage Crops"/>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Crops"/>
+				</effect_group>
+
+				<effect_group name="VerifyFuriousRamsayHarvestCrops2">
+					<requirement name="TriggerHasTags" tags="crops2"/>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ShowToolbeltMessage" message="Damage Crops 2"/>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Crops 2"/>
+				</effect_group>
+				
+				<effect_group name="VerifyFuriousRamsayBreakOre">
+					<requirement name="TriggerHasTags" tags="deepOre"/>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ShowToolbeltMessage" message="Harvesting ore"/> <!-- Works -->
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Broke down Ore"/> <!-- Doesn't work -->
+				</effect_group>
+
 
 				<effect_group name="VerifyFuriousRamsayNoGlobalRequirements">
 					<!-- LOOTING -->
@@ -20468,10 +20490,11 @@
 					<triggered_effect trigger="onSelfExplosionDamagedOther" action="ShowToolbeltMessage" message="Explosion Damage">
 						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
 					</triggered_effect>
-					
-					<triggered_effect trigger="onProjectileImpact" action="ShowToolbeltMessage" message="Projectile Damage"/>
-					
+
+					<triggered_effect trigger="onSelfHealedSelf" action="ShowToolbeltMessage" message="Healed Yourself" />
+												
 				</effect_group>
+
 			</buff>
 
 		</append>		
