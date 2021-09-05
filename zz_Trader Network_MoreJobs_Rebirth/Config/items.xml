@@ -1760,6 +1760,12 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeChefClass" operation="set" value="0"/>
 			</effect_group>
+			<effect_group name="FuriousRamsayGenetics" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="0.5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="0.25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessConstitutionAttribute"/>
+			</effect_group>
 			<effect_group name="RefreshVisuals" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterStarterVariablesSet" operation="Equals" value="1"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
@@ -1905,6 +1911,12 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeChefClass" operation="set" value="0"/>
 			</effect_group>
+			<effect_group name="FuriousRamsayGenetics" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="0.25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+			</effect_group>
 			<effect_group name="RefreshVisuals" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugStarterVariablesSet" operation="Equals" value="1"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
@@ -2022,6 +2034,12 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeChefClass" operation="set" value="0"/>
 			</effect_group>
+			<effect_group name="FuriousRamsayGenetics" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="0.25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessConstitutionAttribute"/>
+			</effect_group>
 			<effect_group name="RefreshVisuals" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherStarterVariablesSet" operation="Equals" value="1"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
@@ -2138,6 +2156,12 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeChefClass" operation="set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayGenetics" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="0.25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="0.5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessConstitutionAttribute"/>
 			</effect_group>
 			<effect_group name="RefreshVisuals" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierStarterVariablesSet" operation="Equals" value="1"/>
@@ -2283,6 +2307,12 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeChefClass" operation="set" value="0"/>
 			</effect_group>
+			<effect_group name="FuriousRamsayGenetics" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="0.25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessIntelligenceAttribute"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="0.5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessCharismaAttribute"/>
+			</effect_group>
 			<effect_group name="RefreshVisuals" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekStarterVariablesSet" operation="Equals" value="1"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
@@ -2426,6 +2456,12 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanClass" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeChefClass" operation="set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayGenetics" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="0.5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessConstitutionAttribute"/>
 			</effect_group>
 			<effect_group name="RefreshVisuals" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanStarterVariablesSet" operation="Equals" value="1"/>
@@ -2571,6 +2607,12 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeChefClass" operation="set" value="0"/>
 			</effect_group>
+			<effect_group name="FuriousRamsayGenetics" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="0.5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessKnowledgeAttribute"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="0.25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessCharismaAttribute"/>
+			</effect_group>
 			<effect_group name="RefreshVisuals" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderStarterVariablesSet" operation="Equals" value="1"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayChangePerk1Labels"/>
@@ -2714,6 +2756,12 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeBuilderClass" operation="set" value="0"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeChefClass" operation="set" value="1"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayGenetics" tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="0.5"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessIntelligenceAttribute"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="0.25"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessKnowledgeAttribute"/>
 			</effect_group>
 			<effect_group name="RefreshVisuals" tiered="false">
 				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefStarterVariablesSet" operation="Equals" value="1"/>

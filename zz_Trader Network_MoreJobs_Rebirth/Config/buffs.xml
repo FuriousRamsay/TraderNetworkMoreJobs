@@ -5373,12 +5373,12 @@
 				<duration value="1"/>
 				<effect_group>
 				<!-- GENETICS -->
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPercIncrease" operation="set" value="0.2"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPercIncrease" operation="set" value="0.2"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPercIncrease" operation="set" value="0.2"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPercIncrease" operation="set" value="0.2"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPercIncrease" operation="set" value="0.2"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPercIncrease" operation="set" value="0.2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPercIncrease" operation="set" value="0.25"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPercIncrease" operation="set" value="0.25"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPercIncrease" operation="set" value="0.25"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPercIncrease" operation="set" value="0.25"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPercIncrease" operation="set" value="0.25"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPercIncrease" operation="set" value="0.25"/>
 
 				<!-- ATTRIBUTES -->
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassNotSelectedColor" operation="set" value="255"/>
@@ -5420,11 +5420,11 @@
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassLevel" operation="set" value="0"/>
 
 				<!-- GENETICS -->
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="set" value="0.2"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="set" value="0.2"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="set" value="0.4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="set" value="0"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="set" value="0"/>
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="set" value="0.1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="set" value="0"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="set" value="0"/>
 
 				<!-- PERKS -->
@@ -20434,6 +20434,46 @@
 				</effect_group>
 			</buff>
 
+			<buff name="VerifyFuriousRamsayActions" hidden="true">	
+				
+				<effect_group name="VerifyFuriousRamsayMining">
+					<requirement name="!TriggerHasTags" tags="Door"/>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.00001"/>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>
+				</effect_group>
+
+				<effect_group name="VerifyFuriousRamsayBreakDoors">
+					<requirement name="TriggerHasTags" tags="FuriousRamsayTree"/>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ShowToolbeltMessage" message="Cutting tree"/>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Cut down Tree"/>
+				</effect_group>
+
+				<effect_group name="VerifyFuriousRamsayBreakOre">
+					<requirement name="TriggerHasTags" tags="surfaceOre"/>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ShowToolbeltMessage" message="Harvesting ore"/>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Broke down Ore"/>
+				</effect_group>
+
+				<effect_group name="VerifyFuriousRamsayBreakDoors">
+					<requirement name="TriggerHasTags" tags="Door"/>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.001"/>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>
+				</effect_group>
+
+				<effect_group name="VerifyFuriousRamsayNoGlobalRequirements">
+					<!-- LOOTING -->
+					<triggered_effect trigger="onSelfLootContainer" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="0.001"/>
+					<triggered_effect trigger="onSelfLootContainer" action="AddBuff" buff="FuriousRamsayProcessIntelligenceAttribute"/>
+					<!-- MADMAN EXPLOSION DAMAGE -->
+					<triggered_effect trigger="onSelfExplosionDamagedOther" action="ShowToolbeltMessage" message="Explosion Damage">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
+					</triggered_effect>
+					
+					<triggered_effect trigger="onProjectileImpact" action="ShowToolbeltMessage" message="Projectile Damage"/>
+					
+				</effect_group>
+			</buff>
+
 		</append>		
 
 		<append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
@@ -20446,6 +20486,11 @@
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="FuriousRamsayStarterAilments">
 				<requirement name="!CVarCompare" cvar="varFuriousRamsayStarterAilments" operation="Equals" value="1"/>
 				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayStarterAilments"/>
+			</triggered_effect>
+
+			<!-- ACTIONS -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayActions">
+				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayActions"/>
 			</triggered_effect>
 
 			<!-- AURAS -->
