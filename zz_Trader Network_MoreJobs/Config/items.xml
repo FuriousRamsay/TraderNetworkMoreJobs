@@ -4270,7 +4270,33 @@
 				<property name="Delay" value="0.8"/>
 				<property name="Range" value="2"/>
 				<property name="DamageEntity" value="20"/>
-				<property name="DamageBlock" value="35"/>
+				<property name="DamageBlock" value="60"/>
+				<property name="Sphere" value="1.2"/>
+				<property name="Block_range" value="2.5"/>
+			</property>
+		</item>	
+
+		<item name="FuriousRamsayMeleeHandEnemyQuest">
+			<property name="Extends" value="FuriousRamsayMeleeHandSoldier"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="Delay" value="0.8"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="15"/>
+				<property name="DamageBlock" value="50"/>
+				<property name="Sphere" value="1.2"/>
+				<property name="Block_range" value="2.5"/>
+			</property>
+		</item>	
+
+		<item name="FuriousRamsayMeleeHandEnemyCaptainQuest">
+			<property name="Extends" value="FuriousRamsayMeleeHandSoldier"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="Delay" value="0.8"/>
+				<property name="Range" value="2"/>
+				<property name="DamageEntity" value="20"/>
+				<property name="DamageBlock" value="60"/>
 				<property name="Sphere" value="1.2"/>
 				<property name="Block_range" value="2.5"/>
 			</property>
@@ -6933,6 +6959,10 @@
 			</effect_group>
 		</item>
 
+		<item name="FuriousRamsayBanditHeadCowboyHatQuest">
+			<property name="Extends" value="FuriousRamsayBanditHeadCowboyHat"/>
+		</item>
+
 		<item name="FuriousRamsayBanditHeadAviatorGoggles">
 			<property name="Tags" value="head,clothing,noMods"/>
 			<property name="Extends" value="apparelAviatorGoggles"/>
@@ -6993,6 +7023,10 @@
 			</effect_group>
 		</item>
 
+		<item name="FuriousRamsayBanditChestDusterQuest">
+			<property name="Extends" value="FuriousRamsayBanditChestDuster"/>
+		</item>
+
 		<item name="FuriousRamsayBanditChestShirtBlack">
 			<property name="Tags" value="upperbody,chest,clothing,pocketMod"/>
 			<property name="Extends" value="apparelArmyShirt"/>
@@ -7035,6 +7069,10 @@
 				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
 				<display_value name="dStaminaChangeOT" value="0"/>
 			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBanditChestShirtRedQuest">
+			<property name="Extends" value="FuriousRamsayBanditChestShirtRed"/>
 		</item>
 			
 		<item name="FuriousRamsayBanditChestTanktopRed">
@@ -7142,6 +7180,11 @@
 				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
 				<display_value name="dStaminaChangeOT" value="0"/>
 			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayBanditLegsPantsBlackQuest">
+			<property name="Tags" value="legs,clothing,pocketMod"/>
+			<property name="Extends" value="FuriousRamsayBanditLegsPantsBlack"/>
 		</item>
 
 		<item name="FuriousRamsayBanditLegsPantsRed">
@@ -7582,5 +7625,55 @@
 			</effect_group>
 		</item>
 		
+		<item name="FuriousRamsayHazmatMaskTier1">
+			<property name="Extends" value="apparelHazmatMask"/>
+			<property name="CustomIcon" value="apparelHazmatMask"/>
+			<property name="CustomIconTint" value="255,255,255"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Weight" value="0"/>
+		</item>
+		
+		<item name="FuriousRamsayHazmatMaskTier2">
+			<property name="Extends" value="apparelHazmatMask"/>
+			<property name="CustomIcon" value="apparelHazmatMask"/>
+			<property name="CustomIconTint" value="0,255,0"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Weight" value="0"/>
+		</item>
+
+		<item name="FuriousRamsayHazmatMaskTier3">
+			<property name="Extends" value="apparelHazmatMask"/>
+			<property name="CustomIcon" value="apparelHazmatMask"/>
+			<property name="CustomIconTint" value="255, 0, 0"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Weight" value="0"/>
+		</item>
+
+		<item name="FuriousRamsayHazmatMaskTier4">
+			<property name="Extends" value="apparelHazmatMask"/>
+			<property name="CustomIcon" value="apparelHazmatMask"/>
+			<property name="CustomIconTint" value="150,150,255"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Weight" value="0"/>
+		</item>
+
+		<item name="FuriousRamsayHazmatMaskTier5">
+			<property name="Extends" value="apparelHazmatMask"/>
+			<property name="CustomIcon" value="apparelHazmatMask"/>
+			<property name="CustomIconTint" value="20, 20, 20"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Weight" value="0"/>
+		</item>
+
 	</append>
 </Config>

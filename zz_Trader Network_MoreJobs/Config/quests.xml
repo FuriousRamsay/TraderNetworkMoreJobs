@@ -904,7 +904,7 @@
 			<property name="repeatable" value="true"/>
 			<property name="shareable" value="true"/>
 			<property name="category_key" value="challenge"/>
-			<property name="difficulty" value="medium"/>
+			<property name="difficulty" value="hard"/>
 			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="quest_FuriousRamsayHazmats_offer"/>
 			<property name="statement_key" value="quest_FuriousRamsayHazmats_statement"/>
@@ -916,7 +916,7 @@
 
 			<action type="TrackQuest"/>
 
-			<objective type="RandomGoto" value="300-600" phase="1">
+			<objective type="RandomGoto" value="200-300" phase="1">
 				<property name="completion_distance" value="50"/>
 				<property name="nav_object" value="quest" />
 			</objective>
@@ -927,8 +927,15 @@
 				<property name="nav_object" value="rally" />
 			</objective>
 				
-			<objective type="ZombieKill" id="FuriousRamsayHazmatTier1Quest" value="10" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayHazmatTier1Quest" value="15" phase="3">
+			<objective type="FetchKeep" id="FuriousRamsayHazmatMaskTier1" value="7" phase="3"/>
+			<objective type="Craft">
+				<property name="phase" value="3"/>
+				<property name="item" value="FuriousRamsayHazmatMarkerTier1"/>
+				<property name="count" value="1"/>
+			</objective>
+			<objective type="BlockPlace" id="FuriousRamsayHazmatMarkerTier1" value="1" phase="3"/>
+
+			<action type="SpawnEnemy" id="FuriousRamsayHazmatTier1Quest" value="10" phase="3">
 				<property name="delay" value="3"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayBoarToxicRadiated,FuriousRamsayCoyoteToxicRadiated" value="1" phase="3">
@@ -936,12 +943,12 @@
 			</action>
 
 			<objective type="ReturnToNPC">
-				<property name="phase" value="4"/>
+				<property name="phase" value="5"/>
 				<property name="nav_object" value="return_to_trader" />
 			</objective>
 
 			<objective type="InteractWithNPC">
-				<property name="phase" value="4"/>
+				<property name="phase" value="5"/>
 				<property name="nav_object" value="return_to_trader" />
 			</objective>
 
@@ -963,7 +970,7 @@
 			<property name="repeatable" value="true"/>
 			<property name="shareable" value="true"/>
 			<property name="category_key" value="challenge"/>
-			<property name="difficulty" value="medium"/>
+			<property name="difficulty" value="hard"/>
 			<property name="difficulty_tier" value="2"/>
 			<property name="offer_key" value="quest_FuriousRamsayHazmats_offer"/>
 			<property name="statement_key" value="quest_FuriousRamsayHazmats_statement"/>
@@ -975,7 +982,7 @@
 
 			<action type="TrackQuest"/>
 
-			<objective type="RandomGoto" value="300-600" phase="1">
+			<objective type="RandomGoto" value="200-300" phase="1">
 				<property name="completion_distance" value="50"/>
 				<property name="nav_object" value="quest" />
 			</objective>
@@ -986,8 +993,15 @@
 				<property name="nav_object" value="rally" />
 			</objective>
 				
-			<objective type="ZombieKill" id="FuriousRamsayHazmatTier2Quest" value="8" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayHazmatTier2Quest" value="16" phase="3">
+			<objective type="FetchKeep" id="FuriousRamsayHazmatMaskTier2" value="7" phase="3"/>
+			<objective type="Craft">
+				<property name="phase" value="3"/>
+				<property name="item" value="FuriousRamsayHazmatMarkerTier2"/>
+				<property name="count" value="1"/>
+			</objective>
+			<objective type="BlockPlace" id="FuriousRamsayHazmatMarkerTier2" value="1" phase="3"/>
+
+			<action type="SpawnEnemy" id="FuriousRamsayHazmatTier2Quest" value="10" phase="3">
 				<property name="delay" value="3"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayBoarToxicRadiated,FuriousRamsayWolfToxicRadiated" value="1" phase="3">
@@ -1022,7 +1036,7 @@
 			<property name="repeatable" value="true"/>
 			<property name="shareable" value="true"/>
 			<property name="category_key" value="challenge"/>
-			<property name="difficulty" value="medium"/>
+			<property name="difficulty" value="hard"/>
 			<property name="difficulty_tier" value="3"/>
 			<property name="offer_key" value="quest_FuriousRamsayHazmats_offer"/>
 			<property name="statement_key" value="quest_FuriousRamsayHazmats_statement"/>
@@ -1034,7 +1048,7 @@
 
 			<action type="TrackQuest"/>
 
-			<objective type="RandomGoto" value="300-600" phase="1">
+			<objective type="RandomGoto" value="200-300" phase="1">
 				<property name="completion_distance" value="50"/>
 				<property name="nav_object" value="quest" />
 			</objective>
@@ -1045,12 +1059,16 @@
 				<property name="nav_object" value="rally" />
 			</objective>
 				
-			<objective type="ZombieKill" id="FuriousRamsayHazmatTier3Quest" value="10" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayHazmatTier3Quest" value="20" phase="3">
+			<objective type="FetchKeep" id="FuriousRamsayHazmatMaskTier3" value="7" phase="3"/>
+			<objective type="Craft">
+				<property name="phase" value="3"/>
+				<property name="item" value="FuriousRamsayHazmatMarkerTier3"/>
+				<property name="count" value="1"/>
+			</objective>
+			<objective type="BlockPlace" id="FuriousRamsayHazmatMarkerTier3" value="1" phase="3"/>
+
+			<action type="SpawnEnemy" id="FuriousRamsayHazmatTier3Quest" value="10" phase="3">
 				<property name="delay" value="3"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayVultureToxicRadiated" value="1" phase="3">
-				<property name="delay" value="20"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayWolfToxicRadiated,FuriousRamsayDireWolfToxicRadiated" value="1" phase="3">
 				<property name="delay" value="30"/>
@@ -1084,7 +1102,7 @@
 			<property name="repeatable" value="true"/>
 			<property name="shareable" value="true"/>
 			<property name="category_key" value="challenge"/>
-			<property name="difficulty" value="hard"/>
+			<property name="difficulty" value="insane"/>
 			<property name="difficulty_tier" value="4"/>
 			<property name="offer_key" value="quest_FuriousRamsayHazmats_offer"/>
 			<property name="statement_key" value="quest_FuriousRamsayHazmats_statement"/>
@@ -1096,7 +1114,7 @@
 
 			<action type="TrackQuest"/>
 
-			<objective type="RandomGoto" value="300-600" phase="1">
+			<objective type="RandomGoto" value="200-300" phase="1">
 				<property name="completion_distance" value="50"/>
 				<property name="nav_object" value="quest" />
 			</objective>
@@ -1107,12 +1125,16 @@
 				<property name="nav_object" value="rally" />
 			</objective>
 				
-			<objective type="ZombieKill" id="FuriousRamsayHazmatTier4Quest" value="12" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayHazmatTier4Quest" value="24" phase="3">
+			<objective type="FetchKeep" id="FuriousRamsayHazmatMaskTier4" value="7" phase="3"/>
+			<objective type="Craft">
+				<property name="phase" value="3"/>
+				<property name="item" value="FuriousRamsayHazmatMarkerTier4"/>
+				<property name="count" value="1"/>
+			</objective>
+			<objective type="BlockPlace" id="FuriousRamsayHazmatMarkerTier4" value="1" phase="3"/>
+
+			<action type="SpawnEnemy" id="FuriousRamsayHazmatTier4Quest" value="10" phase="3">
 				<property name="delay" value="3"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayVultureToxicRadiated" value="2" phase="3">
-				<property name="delay" value="20"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayDireWolfToxicRadiated,FuriousRamsayMountainLionToxicRadiated" value="1" phase="3">
 				<property name="delay" value="30"/>
@@ -1146,7 +1168,7 @@
 			<property name="repeatable" value="true"/>
 			<property name="shareable" value="true"/>
 			<property name="category_key" value="challenge"/>
-			<property name="difficulty" value="hard"/>
+			<property name="difficulty" value="insane"/>
 			<property name="difficulty_tier" value="5"/>
 			<property name="offer_key" value="quest_FuriousRamsayHazmats_offer"/>
 			<property name="statement_key" value="quest_FuriousRamsayHazmats_statement"/>
@@ -1158,7 +1180,7 @@
 
 			<action type="TrackQuest"/>
 
-			<objective type="RandomGoto" value="300-600" phase="1">
+			<objective type="RandomGoto" value="200-300" phase="1">
 				<property name="completion_distance" value="50"/>
 				<property name="nav_object" value="quest" />
 			</objective>
@@ -1169,12 +1191,16 @@
 				<property name="nav_object" value="rally" />
 			</objective>
 				
-			<objective type="ZombieKill" id="FuriousRamsayHazmatTier5Quest" value="15" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayHazmatTier5Quest" value="30" phase="3">
+			<objective type="FetchKeep" id="FuriousRamsayHazmatMaskTier5" value="7" phase="3"/>
+			<objective type="Craft">
+				<property name="phase" value="3"/>
+				<property name="item" value="FuriousRamsayHazmatMarkerTier5"/>
+				<property name="count" value="1"/>
+			</objective>
+			<objective type="BlockPlace" id="FuriousRamsayHazmatMarkerTier5" value="1" phase="3"/>
+
+			<action type="SpawnEnemy" id="FuriousRamsayHazmatTier5Quest" value="10" phase="3">
 				<property name="delay" value="3"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayVultureToxicRadiated" value="3" phase="3">
-				<property name="delay" value="20"/>
 			</action>
 			<action type="SpawnEnemy" id="FuriousRamsayBearToxicRadiated,FuriousRamsayMountainLionToxicRadiated" value="1" phase="3">
 				<property name="delay" value="30"/>
@@ -3526,60 +3552,65 @@
 			<property name="response_key" value="quest_FuriousRamsayDefend_response"/>
 			
 			<property name="completiontype" value="TurnIn"/>
+			<property name="return_to_quest_giver" value="true" />
 			<property name="completion_key" value="quest_FuriousRamsayDefendTier1_completion"/>
 
 			<property name="login_rally_reset" value="true"/>
 
 			<action type="TrackQuest"/>
 
-			<objective type="RandomPOIGoto">
-				<property name="phase" value="1"/>
-				<property name="biome_filter_type" value="ExcludeBiome" />
-				<property name="biome_filter" value="wasteland" />
+			<objective type="RandomGoto" value="200-250" phase="1">
+				<property name="completion_distance" value="50"/>
 				<property name="nav_object" value="quest" />
 			</objective>
-
+			
 			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
 				<property name="phase" value="2"/>
 				<property name="nav_object" value="rally" />
 			</objective>
 
-			<objective type="Time" value="5" phase="3"/>
-			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar,FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="4">
+			<objective type="Time" value="30" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor" value="1" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAMariaSurvivor" value="1" phase="3">
+				<property name="delay" value="1"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor" value="1" phase="3">
+				<property name="delay" value="2"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEarlSurvivor" value="1" phase="3">
 				<property name="delay" value="3"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar" value="1" phase="4">
-				<property name="delay" value="4"/>
-			</action>		
-			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="1" phase="4">
-				<property name="delay" value="5"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="4">
-				<property name="delay" value="8"/>
-			</action>
-			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar,FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="1" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar" value="1" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="1" phase="5">
-				<property name="delay" value="5"/>
-			</action>
-			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar,FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="2" phase="6"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar" value="1" phase="6"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="1" phase="6">
-				<property name="delay" value="5"/>
-			</action>
-			<objective type="ZombieKill" id="FuriousRamsayUMAClintEnemyWar,FuriousRamsayUMAGabrielleEnemyWar" value="1" phase="7"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAClintEnemyWar" value="1" phase="7"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
-				<property name="delay" value="3"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAGabrielleEnemyWar" value="1" phase="7">
-				<property name="delay" value="6"/>
 			</action>
 
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemyQuest" value="1" phase="3">
+				<property name="delay" value="4"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAWillieEnemyQuest" value="1" phase="3">
+				<property name="delay" value="5"/>
+			</action>
+
+			<objective type="Time" value="30" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMARichieEnemyQuest" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemyQuest" value="1" phase="4">
+				<property name="delay" value="1"/>
+			</action>
+
+			<objective type="Time" value="30" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAHodorEnemyQuest" value="1" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMARoxyEnemyQuest" value="1" phase="5">
+				<property name="delay" value="1"/>
+			</action>
+
+			<objective type="Craft">
+				<property name="phase" value="6"/>
+				<property name="item" value="FuriousRamsayBanditGravestoneTier1"/>
+				<property name="count" value="1"/>
+			</objective>
+			<objective type="BlockPlace" id="FuriousRamsayBanditGravestoneTier1" value="1" phase="6"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAGabrielleEnemyQuest" value="1" phase="6"/>
+
 			<objective type="InteractWithNPC">
-				<property name="phase" value="8"/>
+				<property name="phase" value="7"/>
 				<property name="nav_object" value="return_to_trader" />
 			</objective>
 
@@ -3608,73 +3639,74 @@
 			<property name="response_key" value="quest_FuriousRamsayDefend_response"/>
 			
 			<property name="completiontype" value="TurnIn"/>
-			<property name="completion_key" value="quest_FuriousRamsayDefendTier2_completion"/>
+			<property name="return_to_quest_giver" value="true" />
+			<property name="completion_key" value="quest_FuriousRamsayDefendTier1_completion"/>
 
 			<property name="login_rally_reset" value="true"/>
 
 			<action type="TrackQuest"/>
 
-			<objective type="RandomPOIGoto">
-				<property name="phase" value="1"/>
-				<property name="biome_filter_type" value="ExcludeBiome" />
-				<property name="biome_filter" value="wasteland" />
+			<objective type="RandomGoto" value="200-250" phase="1">
+				<property name="completion_distance" value="50"/>
 				<property name="nav_object" value="quest" />
 			</objective>
-
+			
 			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
 				<property name="phase" value="2"/>
 				<property name="nav_object" value="rally" />
 			</objective>
 
-			<objective type="Time" value="5" phase="3"/>
-			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar,FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="2" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar" value="2" phase="4">
+			<objective type="Time" value="20" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor" value="1" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAMariaSurvivor" value="1" phase="3">
+				<property name="delay" value="1"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor" value="1" phase="3">
+				<property name="delay" value="2"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAMikeSurvivor" value="1" phase="3">
 				<property name="delay" value="3"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="1" phase="4">
-				<property name="delay" value="8"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEarlSurvivor" value="1" phase="3">
+				<property name="delay" value="4"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="4">
-				<property name="delay" value="11"/>
-			</action>
-			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar,FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="2" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar" value="1" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="5">
-				<property name="delay" value="3"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="2" phase="5">
+
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemyQuest" value="1" phase="3">
 				<property name="delay" value="5"/>
 			</action>
-			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar,FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="2" phase="6"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar" value="2" phase="6"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="6">
-				<property name="delay" value="3"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="1" phase="6">
-				<property name="delay" value="5"/>
-			</action>
-			<objective type="ZombieKill" id="FuriousRamsayUMAClintEnemyWar,FuriousRamsayUMAGabrielleEnemyWar" value="1" phase="7"/>
-			<objective type="ZombieKill" optional="true" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar,FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="2" phase="7"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAClintEnemyWar" value="1" phase="7"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
-				<property name="delay" value="3"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar" value="1" phase="7">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAWillieEnemyQuest" value="1" phase="3">
 				<property name="delay" value="6"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="7">
-				<property name="delay" value="9"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAKimEnemyQuest" value="1" phase="3">
+				<property name="delay" value="7"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="1" phase="7">
-				<property name="delay" value="12"/>
+
+			<objective type="Time" value="20" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMARichieEnemyQuest" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemyQuest" value="1" phase="4">
+				<property name="delay" value="1"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAGabrielleEnemyWar" value="1" phase="7">
-				<property name="delay" value="15"/>
+
+			<objective type="Time" value="20" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAHodorEnemyQuest" value="1" phase="5"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMARoxyEnemyQuest" value="1" phase="5">
+				<property name="delay" value="1"/>
+			</action>
+
+			<objective type="Craft">
+				<property name="phase" value="6"/>
+				<property name="item" value="FuriousRamsayBanditGravestoneTier2"/>
+				<property name="count" value="1"/>
+			</objective>
+			<objective type="BlockPlace" id="FuriousRamsayBanditGravestoneTier2" value="1" phase="6"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAClintEnemyQuest" value="1" phase="6"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAGabrielleEnemyQuest" value="1" phase="6">
+				<property name="delay" value="1"/>
 			</action>
 
 			<objective type="InteractWithNPC">
-				<property name="phase" value="8"/>
+				<property name="phase" value="7"/>
 				<property name="nav_object" value="return_to_trader" />
 			</objective>
 
@@ -3703,105 +3735,61 @@
 			<property name="response_key" value="quest_FuriousRamsayDefend_response"/>
 			
 			<property name="completiontype" value="TurnIn"/>
-			<property name="completion_key" value="quest_FuriousRamsayDefendTier3_completion"/>
+			<property name="return_to_quest_giver" value="true" />
+			<property name="completion_key" value="quest_FuriousRamsayDefendTier1_completion"/>
 
 			<property name="login_rally_reset" value="true"/>
 
 			<action type="TrackQuest"/>
 
-			<objective type="RandomPOIGoto">
-				<property name="phase" value="1"/>
-				<property name="biome_filter_type" value="ExcludeBiome" />
-				<property name="biome_filter" value="wasteland" />
+			<objective type="RandomGoto" value="200-250" phase="1">
+				<property name="completion_distance" value="50"/>
 				<property name="nav_object" value="quest" />
 			</objective>
-
+			
 			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
 				<property name="phase" value="2"/>
 				<property name="nav_object" value="rally" />
 			</objective>
 
-			<objective type="Time" value="8" phase="3"/>
-			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar,FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="2" phase="4"/>
-			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombie,FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie,FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="4"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar" value="2" phase="4">
+			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombie,FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie,FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="6" phase="3"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor" value="1" phase="3">
+				<property name="delay" value="1"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAMariaSurvivor" value="1" phase="3">
+				<property name="delay" value="2"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor" value="1" phase="3">
 				<property name="delay" value="3"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombie,FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie" value="1" phase="4">
-				<property name="delay" value="6"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAMikeSurvivor" value="1" phase="3">
+				<property name="delay" value="4"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="2" phase="4">
-				<property name="delay" value="9"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="4">
-				<property name="delay" value="12"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="2" phase="4">
-				<property name="delay" value="15"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="4">
-				<property name="delay" value="18"/>
-			</action>
-			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar,FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="2" phase="5"/>
-			<objective type="ZombieKill" id="FuriousRamsayUMAAidenZombie,FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie,FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="1" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar" value="1" phase="5"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="5">
-				<property name="delay" value="3"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="2" phase="5">
+			<action type="SpawnEnemy" id="FuriousRamsayUMAEarlSurvivor" value="1" phase="3">
 				<property name="delay" value="5"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombie,FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie" value="2" phase="5">
-				<property name="delay" value="8"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="1" phase="5">
-				<property name="delay" value="11"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="5">
-				<property name="delay" value="14"/>
-			</action>
-			<objective type="ZombieKill" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar,FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="2" phase="6"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar" value="2" phase="6"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="6">
-				<property name="delay" value="3"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteEnemyWar,FuriousRamsayUMARoxyEnemyWar" value="2" phase="6">
-				<property name="delay" value="5"/>
-			</action>
-			<!--<objective type="ZombieKill" id="FuriousRamsayUMAClintEnemyWar,FuriousRamsayUMAGabrielleEnemyWar" value="2" phase="7"/>-->
-			<objective type="ZombieKill" id="FuriousRamsayUMAClintZombie,FuriousRamsayUMAGabrielleZombie" value="1" phase="7"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAGabrielleEnemyWar" value="1" phase="7"/>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
-				<property name="delay" value="3"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenEnemyWar,FuriousRamsayUMAHodorEnemyWar,FuriousRamsayUMARichieEnemyWar,FuriousRamsayUMAWillieEnemyWar,FuriousRamsayUMAKimEnemyWar" value="1" phase="7">
+			<action type="SpawnEnemy" id="FuriousRamsayUMARayahSurvivor" value="1" phase="3">
 				<property name="delay" value="6"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAEmmaSurvivor,FuriousRamsayUMAMariaSurvivor,FuriousRamsayUMARayahSurvivor" value="1" phase="7">
-				<property name="delay" value="9"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAAidenZombie,FuriousRamsayUMAHodorZombie,FuriousRamsayUMARichieZombie,FuriousRamsayUMAWillieZombie,FuriousRamsayUMAKimZombie,FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="12" phase="3">
+				<property name="delay" value="10"/>
 			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMACharlotteZombie,FuriousRamsayUMARoxyZombie" value="1" phase="7">
-				<property name="delay" value="12"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAClintEnemyWar" value="1" phase="7">
-				<property name="delay" value="15"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAJimSurvivor,FuriousRamsayUMAEarlSurvivor,FuriousRamsayUMAMikeSurvivor" value="1" phase="7">
-				<property name="delay" value="18"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAClintZombie" value="1" phase="7">
-				<property name="delay" value="21"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAClintEnemyWar" value="1" phase="7">
-				<property name="delay" value="24"/>
-			</action>
-			<action type="SpawnEnemy" id="FuriousRamsayUMAGabrielleZombie" value="1" phase="7">
-				<property name="delay" value="27"/>
+			
+			<objective type="Craft">
+				<property name="phase" value="4"/>
+				<property name="item" value="FuriousRamsayBanditGravestoneTier3"/>
+				<property name="count" value="1"/>
+			</objective>
+			<objective type="BlockPlace" id="FuriousRamsayBanditGravestoneTier3" value="1" phase="4"/>
+
+			<action type="SpawnEnemy" id="FuriousRamsayUMAClintZombieQuest" value="1" phase="4"/>
+			<action type="SpawnEnemy" id="FuriousRamsayUMAGabrielleZombieQuest" value="1" phase="4">
+				<property name="delay" value="1"/>
 			</action>
 
 			<objective type="InteractWithNPC">
-				<property name="phase" value="8"/>
+				<property name="phase" value="5"/>
 				<property name="nav_object" value="return_to_trader" />
 			</objective>
 
@@ -3830,18 +3818,20 @@
 			<property name="response_key" value="quest_FuriousRamsayDefend_response"/>
 			
 			<property name="completiontype" value="TurnIn"/>
-			<property name="completion_key" value="quest_FuriousRamsayDefendTier4_completion"/>
+			<property name="return_to_quest_giver" value="true" />
+			<property name="completion_key" value="quest_FuriousRamsayDefendTier1_completion"/>
 
 			<property name="login_rally_reset" value="true"/>
 
 			<action type="TrackQuest"/>
 
-			<objective type="RandomPOIGoto">
-				<property name="phase" value="1"/>
+			<objective type="RandomGoto" value="200-250" phase="1">
+				<property name="completion_distance" value="50"/>
 				<property name="nav_object" value="quest" />
 			</objective>
-
+			
 			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
 				<property name="phase" value="2"/>
 				<property name="nav_object" value="rally" />
 			</objective>
@@ -3954,18 +3944,20 @@
 			<property name="response_key" value="quest_FuriousRamsayDefend_response"/>
 			
 			<property name="completiontype" value="TurnIn"/>
-			<property name="completion_key" value="quest_FuriousRamsayDefendTier5_completion"/>
+			<property name="return_to_quest_giver" value="true" />
+			<property name="completion_key" value="quest_FuriousRamsayDefendTier1_completion"/>
 
 			<property name="login_rally_reset" value="true"/>
 
 			<action type="TrackQuest"/>
 
-			<objective type="RandomPOIGoto">
-				<property name="phase" value="1"/>
+			<objective type="RandomGoto" value="200-250" phase="1">
+				<property name="completion_distance" value="50"/>
 				<property name="nav_object" value="quest" />
 			</objective>
-
+			
 			<objective type="RallyPoint">
+				<property name="start_mode" value="Create"/>
 				<property name="phase" value="2"/>
 				<property name="nav_object" value="rally" />
 			</objective>

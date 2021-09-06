@@ -6456,7 +6456,8 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="MaxViewAngle" value="360"/>
 			<property name="NavObject" value="" />
-			<property name="HandItem" value="FuriousRamsayMeleeHandSoldierWar"/>		
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandEnemyCaptainQuest"/>		
 
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,60,EntitySurvivor,30,EntityZombie,20"/>
 			<property name="AITask-2" value="BreakBlock"/>
@@ -6470,6 +6471,11 @@ FuriousRamsayVultureToxicRadiated
         <entity_class name="FuriousRamsayUMAGabrielleZombie" extends="FuriousRamsayUMATemplateZombieFemale">
             <property name="Archetype" value="FuriousRamsayGabrielleZombie" />
 			<property name="NavObject" value="FuriousRamsayDotRed"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAGabrielleZombieQuest" extends="FuriousRamsayUMAGabrielleZombie">
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldGabrielleZombieCaptainLoot"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAGabrielleZombieFeral" extends="FuriousRamsayUMATemplateZombieFeralFemale">
@@ -6519,6 +6525,11 @@ FuriousRamsayVultureToxicRadiated
 			<property name="MaxViewAngle" value="360"/>
 			<property name="NavObject" value="" />
 
+			<property name="HandItem" value="FuriousRamsayMeleeHandEnemyQuest"/>		
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayHordeTrainerTier1Loot"/>
+
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,60,EntitySurvivor,30,EntityZombie,20"/>
 			<property name="AITask-2" value="BreakBlock"/>
 			<property name="AITask-3" value="Wander"/>
@@ -6554,6 +6565,8 @@ FuriousRamsayVultureToxicRadiated
 			<property name="MaxViewAngle" value="360"/>
 			<property name="NavObject" value="" />
 
+			<property name="HandItem" value="FuriousRamsayMeleeHandEnemyQuest"/>		
+
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,60,EntitySurvivor,30,EntityZombie,20"/>
 			<property name="AITask-2" value="BreakBlock"/>
 			<property name="AITask-3" value="Wander"/>
@@ -6587,6 +6600,8 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="MaxViewAngle" value="360"/>
 			<property name="NavObject" value="" />
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandEnemyQuest"/>		
 
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,60,EntitySurvivor,30,EntityZombie,20"/>
 			<property name="AITask-2" value="BreakBlock"/>
@@ -6629,6 +6644,8 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="MaxViewAngle" value="360"/>
 			<property name="NavObject" value="" />
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandEnemyQuest"/>		
 
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,60,EntitySurvivor,30,EntityZombie,20"/>
 			<property name="AITask-2" value="BreakBlock"/>
@@ -6693,6 +6710,8 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="MaxViewAngle" value="360"/>
 			<property name="NavObject" value="" />
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandEnemyQuest"/>		
 
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,60,EntitySurvivor,30,EntityZombie,20"/>
 			<property name="AITask-2" value="BreakBlock"/>
@@ -6958,7 +6977,8 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="MaxViewAngle" value="360"/>
 			<property name="NavObject" value="" />
-			<property name="HandItem" value="FuriousRamsayMeleeHandSoldierWar"/>		
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandEnemyCaptainQuest"/>		
 
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,60,EntitySurvivor,30,EntityZombie,20"/>
 			<property name="AITask-2" value="BreakBlock"/>
@@ -6974,6 +6994,11 @@ FuriousRamsayVultureToxicRadiated
             <property name="Archetype" value="FuriousRamsayClintZombie" />
 
 			<property name="NavObject" value="FuriousRamsayDotRed"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMAClintZombieQuest" extends="FuriousRamsayUMAClintZombie">
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldClintZombieCaptainLoot"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayUMAClintZombieFeral" extends="FuriousRamsayUMATemplateZombieFeralMale">
@@ -7022,6 +7047,8 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="MaxViewAngle" value="360"/>
 			<property name="NavObject" value="" />
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandEnemyQuest"/>		
 
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,60,EntitySurvivor,30,EntityZombie,20"/>
 			<property name="AITask-2" value="BreakBlock"/>
@@ -7083,6 +7110,8 @@ FuriousRamsayVultureToxicRadiated
 			<property name="SightRange" value="200"/> 
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="NavObject" value="" />
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandEnemyQuest"/>		
 
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,60,EntitySurvivor,30,EntityZombie,20"/>
 			<property name="AITask-2" value="BreakBlock"/>
@@ -16846,6 +16875,9 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="SightRange" value="200"/> 
 			<property name="NavObject" value="FuriousRamsayDotOrange" />
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayHazmatTier1Loot"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayHazmatTier2Quest" extends="FuriousRamsayHazmatTier2">
@@ -16853,6 +16885,9 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="SightRange" value="200"/> 
 			<property name="NavObject" value="FuriousRamsayDotOrange" />
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayHazmatTier2Loot"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayHazmatTier3Quest" extends="FuriousRamsayHazmatTier3">
@@ -16860,6 +16895,9 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="SightRange" value="200"/> 
 			<property name="NavObject" value="FuriousRamsayDotOrange" />
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayHazmatTier3Loot"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayHazmatTier4Quest" extends="FuriousRamsayHazmatTier4">
@@ -16867,6 +16905,9 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="SightRange" value="200"/> 
 			<property name="NavObject" value="FuriousRamsayDotOrange" />
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayHazmatTier4Loot"/>
         </entity_class>
 
         <entity_class name="FuriousRamsayHazmatTier5Quest" extends="FuriousRamsayHazmatTier5">
@@ -16874,6 +16915,9 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 			<property name="AINoiseSeekDist" value="200"/>
 			<property name="SightRange" value="200"/> 
 			<property name="NavObject" value="FuriousRamsayDotOrange" />
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayHazmatTier5Loot"/>
         </entity_class>
 		
         <entity_class name="FuriousRamsayJumpTest" extends="zombieBoe">
@@ -21447,7 +21491,135 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 			<property name="Faction" value="none"/>	
 		</entity_class>
 
+		<entity_class name="FuriousRamsayBlackShieldClintCaptainLoot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="853"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
 
+		<entity_class name="FuriousRamsayBlackShieldGabrielleCaptainLoot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="854"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldClintZombieCaptainLoot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="855"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldGabrielleZombieCaptainLoot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="856"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayHazmatTier1Loot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="857"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayHazmatTier2Loot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="858"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayHazmatTier3Loot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="859"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayHazmatTier4Loot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="860"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayHazmatTier5Loot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="861"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
+
+		<entity_class name="FuriousRamsayBlackShieldBanditLoot">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="Mesh" value="#Entities/LootContainers?backpack03Prefab.prefab"/>
+			<property name="ModelType" value="Custom"/>
+			<property name="Prefab" value="Backpack"/>
+			<property name="Class" value="EntityLootContainer"/>
+			<property name="Parent" value="Backpack"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="LootListOnDeath" value="862"/>
+			<property name="Faction" value="none"/>	
+		</entity_class>
 
 		<!-- SKULLS -->
 		<entity_class name="FuriousRamsaySkullsMaster" extends="FuriousRamsayUMATemplateEnemyMale">
@@ -21900,6 +22072,74 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 			<property name="TimeStayAfterDeath" value="300"/>
 			<property name="LootListOnDeath" value="852"/>
 			<property name="Faction" value="none"/>	
+		</entity_class>
+
+        <entity_class name="FuriousRamsayUMAClintEnemyQuest" extends="FuriousRamsayUMAClintEnemyWar">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="NavObject" value="FuriousRamsayDotRed"/>
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldClintCaptainLoot"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayUMAGabrielleEnemyQuest" extends="FuriousRamsayUMAGabrielleEnemyWar">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="NavObject" value="FuriousRamsayDotRed"/>
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldGabrielleCaptainLoot"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayUMAAidenEnemyQuest" extends="FuriousRamsayUMAAidenEnemyWar">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="NavObject" value="FuriousRamsayDotOrange"/>
+		
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBanditLoot"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayUMAWillieEnemyQuest" extends="FuriousRamsayUMAWillieEnemyWar">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="NavObject" value="FuriousRamsayDotOrange"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBanditLoot"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayUMAHodorEnemyQuest" extends="FuriousRamsayUMAHodorEnemyWar">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="NavObject" value="FuriousRamsayDotOrange"/>
+
+			<property name="HandItem" value="FuriousRamsayMeleeHandEnemyQuest"/>		
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBanditLoot"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayUMAKimEnemyQuest" extends="FuriousRamsayUMAKimEnemyWar">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="NavObject" value="FuriousRamsayDotOrange"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBanditLoot"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayUMARichieEnemyQuest" extends="FuriousRamsayUMARichieEnemyWar">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="NavObject" value="FuriousRamsayDotOrange"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBanditLoot"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayUMACharlotteEnemyQuest" extends="FuriousRamsayUMACharlotteEnemyWar">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="NavObject" value="FuriousRamsayDotOrange"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBanditLoot"/>
+		</entity_class>
+
+        <entity_class name="FuriousRamsayUMARoxyEnemyQuest" extends="FuriousRamsayUMARoxyEnemyWar">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="NavObject" value="FuriousRamsayDotOrange"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBanditLoot"/>
 		</entity_class>
 
 	</append>
