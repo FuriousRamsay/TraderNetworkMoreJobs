@@ -1,6 +1,24 @@
 <Config>
 
 	<remove xpath="/items/item/property[@name='UnlockedBy']"/>
+	
+	<!-- Remove stats from all eyewear -->
+	<remove xpath="/items/item/property[@name='apparelShades']/effect_group/passive_effect[@name='AttributeLevel']"/>
+	<remove xpath="/items/item/property[@name='apparelToughGuySunglasses']/effect_group/passive_effect[@name='AttributeLevel']"/>
+	<remove xpath="/items/item/property[@name='apparelAviatorGoggles']/effect_group/passive_effect[@name='LootGamestage']"/>
+	<remove xpath="/items/item/property[@name='apparelAviatorGoggles']/effect_group/passive_effect[@name='TreasureBlocksPerReduction']"/>
+	<remove xpath="/items/item/property[@name='apparelAviatorGoggles']/effect_group/passive_effect[@name='dTreasureBlocksPerReduction']"/>
+	<remove xpath="/items/item/property[@name='apparelSkiGoggles']/effect_group/passive_effect[@name='AttributeLevel']"/>
+	<remove xpath="/items/item/property[@name='apparelNerdGlasses']/effect_group/passive_effect[@name='AttributeLevel']"/>
+	<remove xpath="/items/item/property[@name='apparelNerdGlasses']/effect_group/passive_effect[@name='CraftingTime']"/>
+	<remove xpath="/items/item/property[@name='apparelNerdGlasses']/effect_group/passive_effect[@name='PlayerExpGain']"/>
+	<remove xpath="/items/item/property[@name='apparelNerdGlasses']/effect_group/passive_effect[@name='dCraftingTime']"/>
+	<remove xpath="/items/item/property[@name='apparelNerdGlasses']/effect_group/passive_effect[@name='dPlayerExpGain']"/>
+	<remove xpath="/items/item/property[@name='FuriousRamsayBanditHeadAviatorGoggles']/effect_group/passive_effect[@name='AttributeLevel']"/>
+	<remove xpath="/items/item/property[@name='FuriousRamsayBanditHeadAviatorGoggles']/effect_group/passive_effect[@name='LootGamestage']"/>
+	<remove xpath="/items/item/property[@name='FuriousRamsayBanditHeadAviatorGoggles']/effect_group/passive_effect[@name='TreasureBlocksPerReduction']"/>
+	<remove xpath="/items/item/property[@name='FuriousRamsayBanditHeadAviatorGoggles']/effect_group/passive_effect[@name='dTreasureBlocksPerReduction']"/>
+	<remove xpath="/items/item/property[@name='FuriousRamsayBanditHeadSkiGoggles']/effect_group/passive_effect[@name='AttributeLevel']"/>
 
 	<append xpath="/items">
 

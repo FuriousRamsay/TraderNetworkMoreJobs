@@ -5380,6 +5380,48 @@
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPercIncrease" operation="set" value="0.25"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPercIncrease" operation="set" value="0.25"/>
 
+				<!-- STRENGTH TIER INCREASES -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseStrengthTier1" operation="set" value="0.1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseStrengthTier2" operation="set" value="0.2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseStrengthTier3" operation="set" value="0.3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseStrengthTier4" operation="set" value="0.4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseStrengthTier5" operation="set" value="0.5"/>
+
+				<!-- DEXTERITY TIER INCREASES -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseDexterityTier1" operation="set" value="0.1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseDexterityTier2" operation="set" value="0.2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseDexterityTier3" operation="set" value="0.3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseDexterityTier4" operation="set" value="0.4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseDexterityTier5" operation="set" value="0.5"/>
+
+				<!-- CONSTITUTION TIER INCREASES -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseConstitutionTier1" operation="set" value="0.1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseConstitutionTier2" operation="set" value="0.2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseConstitutionTier3" operation="set" value="0.3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseConstitutionTier4" operation="set" value="0.4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseConstitutionTier5" operation="set" value="0.5"/>
+
+				<!-- INTELLIGENCE TIER INCREASES -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseIntelligenceTier1" operation="set" value="0.1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseIntelligenceTier2" operation="set" value="0.2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseIntelligenceTier3" operation="set" value="0.3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseIntelligenceTier4" operation="set" value="0.4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseIntelligenceTier5" operation="set" value="0.5"/>
+
+				<!-- KNOWLEDGE TIER INCREASES -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseKnowledgeTier1" operation="set" value="0.1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseKnowledgeTier2" operation="set" value="0.2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseKnowledgeTier3" operation="set" value="0.3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseKnowledgeTier4" operation="set" value="0.4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseKnowledgeTier5" operation="set" value="0.5"/>
+
+				<!-- CHARISMA TIER INCREASES -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseCharismaTier1" operation="set" value="0.1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseCharismaTier2" operation="set" value="0.2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseCharismaTier3" operation="set" value="0.3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseCharismaTier4" operation="set" value="0.4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseCharismaTier5" operation="set" value="0.5"/>
+
 				<!-- ATTRIBUTES -->
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassNotSelectedColor" operation="set" value="255"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayClassHunterColor" operation="set" value="0"/>
@@ -14450,6 +14492,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterExp" operation="LTE" value="@varFuriousRamsayPerkSpearExpLvl10Max"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkSpear" operation="GTE" value="@varFuriousRamsayAttributeHunter"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsaySpears"/>
 					<requirement name="HitLocation" body_parts="Head"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeHunterExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeHunterExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
@@ -14461,6 +14504,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkSpear" operation="GTE" value="@varFuriousRamsayAttributeHunter"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsaySpears"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeHunterExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeHunterExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -14684,6 +14728,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkBow" operation="GTE" value="@varFuriousRamsayAttributeHunter"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayBows"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeHunterExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeHunterExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -14694,6 +14739,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkBow" operation="GTE" value="@varFuriousRamsayAttributeHunter"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayBows"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeHunterExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeHunterExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -14917,6 +14963,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkSniperRifle" operation="GTE" value="@varFuriousRamsayAttributeHunter"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsaySniperRifles"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeHunterExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeHunterExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -14927,6 +14974,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkSniperRifle" operation="GTE" value="@varFuriousRamsayAttributeHunter"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsaySniperRifles"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeHunterExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeHunterExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -15150,6 +15198,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="GTE" value="@varFuriousRamsayAttributeThug"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayClubs"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeThugExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeThugExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -15160,6 +15209,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkClub" operation="GTE" value="@varFuriousRamsayAttributeThug"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayClubs"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeThugExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeThugExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -15383,6 +15433,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="GTE" value="@varFuriousRamsayAttributeThug"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayShotguns"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeThugExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeThugExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -15393,6 +15444,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkShotgun" operation="GTE" value="@varFuriousRamsayAttributeThug"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayShotguns"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeThugExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeThugExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -15615,6 +15667,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkMachete" operation="GTE" value="@varFuriousRamsayAttributeButcher"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayMachetes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeButcherExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeButcherExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -15625,6 +15678,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkMachete" operation="GTE" value="@varFuriousRamsayAttributeButcher"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayMachetes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeButcherExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeButcherExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -15848,6 +15902,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAssaultRifle" operation="GTE" value="@varFuriousRamsayAttributeButcher"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAssaultRifles"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeButcherExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeButcherExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -15858,6 +15913,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAssaultRifle" operation="GTE" value="@varFuriousRamsayAttributeButcher"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAssaultRifles"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeButcherExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeButcherExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -16080,6 +16136,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnuckles" operation="GTE" value="@varFuriousRamsayAttributeSoldier"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayKnuckles"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeSoldierExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeSoldierExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -16090,6 +16147,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnuckles" operation="GTE" value="@varFuriousRamsayAttributeSoldier"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayKnuckles"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeSoldierExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeSoldierExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -16313,6 +16371,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkMarksmanRifle" operation="GTE" value="@varFuriousRamsayAttributeSoldier"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayMarksmanRifles"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeSoldierExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeSoldierExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -16323,6 +16382,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkMarksmanRifle" operation="GTE" value="@varFuriousRamsayAttributeSoldier"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayMarksmanRifles"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeSoldierExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeSoldierExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -16546,6 +16606,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkMachineGun" operation="GTE" value="@varFuriousRamsayAttributeSoldier"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayMachineGuns"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeSoldierExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeSoldierExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -16556,6 +16617,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkMachineGun" operation="GTE" value="@varFuriousRamsayAttributeSoldier"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayMachineGuns"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeSoldierExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeSoldierExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -16779,6 +16841,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkStunBaton" operation="GTE" value="@varFuriousRamsayAttributeTechnogeek"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayStunBatons"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeTechnogeekExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeTechnogeekExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -16789,6 +16852,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkStunBaton" operation="GTE" value="@varFuriousRamsayAttributeTechnogeek"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayStunBatons"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeTechnogeekExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeTechnogeekExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -17011,6 +17075,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkMagnum" operation="GTE" value="@varFuriousRamsayAttributeTechnogeek"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayMagnums"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeTechnogeekExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeTechnogeekExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -17021,6 +17086,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkMagnum" operation="GTE" value="@varFuriousRamsayAttributeTechnogeek"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayMagnums"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeTechnogeekExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeTechnogeekExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -17243,6 +17309,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkDeployableTurret" operation="GTE" value="@varFuriousRamsayAttributeTechnogeek"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayDeployableTurrets"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeTechnogeekExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeTechnogeekExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -17253,6 +17320,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkDeployableTurret" operation="GTE" value="@varFuriousRamsayAttributeTechnogeek"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayDeployableTurrets"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeTechnogeekExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeTechnogeekExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -17476,6 +17544,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="GTE" value="@varFuriousRamsayAttributeMadman"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeMadmanExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeMadmanExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -17486,6 +17555,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="GTE" value="@varFuriousRamsayAttributeMadman"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeMadmanExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeMadmanExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -17708,6 +17778,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkExplosive" operation="GTE" value="@varFuriousRamsayAttributeMadman"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayExplosives"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeMadmanExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeMadmanExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -17718,6 +17789,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkExplosive" operation="GTE" value="@varFuriousRamsayAttributeMadman"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayExplosives"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeMadmanExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeMadmanExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -17940,6 +18012,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkSubmachineGun" operation="GTE" value="@varFuriousRamsayAttributeMadman"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsaySubmachineGuns"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeMadmanExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeMadmanExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -17950,6 +18023,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkSubmachineGun" operation="GTE" value="@varFuriousRamsayAttributeMadman"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsaySubmachineGuns"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeMadmanExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeMadmanExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -18173,6 +18247,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkHammer" operation="GTE" value="@varFuriousRamsayAttributeBuilder"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayHammers"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeBuilderExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeBuilderExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -18183,6 +18258,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkHammer" operation="GTE" value="@varFuriousRamsayAttributeBuilder"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayHammers"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeBuilderExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeBuilderExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -18405,6 +18481,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkPistol" operation="GTE" value="@varFuriousRamsayAttributeBuilder"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayPistols"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeBuilderExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeBuilderExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -18415,6 +18492,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkPistol" operation="GTE" value="@varFuriousRamsayAttributeBuilder"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayPistols"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeBuilderExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeBuilderExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -18637,6 +18715,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkPoweredTurret" operation="GTE" value="@varFuriousRamsayAttributeBuilder"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayPoweredTurrets"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeBuilderExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeBuilderExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -18647,6 +18726,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkPoweredTurret" operation="GTE" value="@varFuriousRamsayAttributeBuilder"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayPoweredTurrets"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeBuilderExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeBuilderExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -18869,6 +18949,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnife" operation="GTE" value="@varFuriousRamsayAttributeChef"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayKnives"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeChefExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeChefExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -18879,6 +18960,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnife" operation="GTE" value="@varFuriousRamsayAttributeChef"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayKnives"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeChefExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeChefExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -19101,6 +19183,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkDesertVulture" operation="GTE" value="@varFuriousRamsayAttributeChef"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayDesertVultures"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeChefExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeChefExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -19111,6 +19194,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkDesertVulture" operation="GTE" value="@varFuriousRamsayAttributeChef"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayDesertVultures"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeChefExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeChefExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -19333,6 +19417,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="GTE" value="@varFuriousRamsayAttributeChef"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeChefExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeChefExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -19343,6 +19428,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="GTE" value="@varFuriousRamsayAttributeChef"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeChefExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeChefExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -19354,7 +19440,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl1"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl1"/>
 				</effect_group>
@@ -19364,7 +19450,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl2"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl2"/>
 				</effect_group>
@@ -19374,7 +19460,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl3"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl3"/>
 				</effect_group>
@@ -19384,7 +19470,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl4"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl4"/>
 				</effect_group>
@@ -19394,7 +19480,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl5"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl5"/>
 				</effect_group>
@@ -19404,7 +19490,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl6"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl6"/>
 				</effect_group>
@@ -19414,7 +19500,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl7"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl7"/>
 				</effect_group>
@@ -19424,7 +19510,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl8"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl8"/>
 				</effect_group>
@@ -19434,7 +19520,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl9"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl9"/>
 				</effect_group>
@@ -19444,7 +19530,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl10"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl10"/>
 				</effect_group>
@@ -19455,7 +19541,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl1"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl1"/>
 				</effect_group>
@@ -19465,7 +19551,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl2"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl2"/>
 				</effect_group>
@@ -19475,7 +19561,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl3"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl3"/>
 				</effect_group>
@@ -19485,7 +19571,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl4"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl4"/>
 				</effect_group>
@@ -19495,7 +19581,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl5"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl5"/>
 				</effect_group>
@@ -19505,7 +19591,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl6"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl6"/>
 				</effect_group>
@@ -19515,7 +19601,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl7"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl7"/>
 				</effect_group>
@@ -19525,7 +19611,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl8"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl8"/>
 				</effect_group>
@@ -19535,7 +19621,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl9"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl9"/>
 				</effect_group>
@@ -19545,7 +19631,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkRobotics" operation="LTE" value="@.varFuriousRamsayAttributeChefTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRoboticss"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayRobotics"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl10"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkRoboticsExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl10"/>
 				</effect_group>
@@ -20065,6 +20151,10 @@
 			<!-- INTELLIGENCE -->
 			<buff name="FuriousRamsayProcessIntelligenceAttribute" hidden="true">
 				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayProcessIntelligenceMsg">
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="Triggered Intelligence Attribute Buff"/>
+				</effect_group>
+
 				<effect_group name="FuriousRamsayProcessIntelligenceLvl10">
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeIntelligence" operation="Equals" value="9"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="GTE" value="1"/>
@@ -20442,25 +20532,43 @@
 				</effect_group>
 			</buff>
 
-			<buff name="VerifyFuriousRamsayActions" hidden="true">	
-				
-				<effect_group name="VerifyFuriousRamsayBreakOther">
-					<requirement name="!TriggerHasTags" tags="Door"/>
-						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.00001"/>
-						<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>
-				</effect_group>
-
+			<buff name="VerifyFuriousRamsayActionsStrength" hidden="true">	
+				<!-- BREAKING DOORS -->
 				<effect_group name="VerifyFuriousRamsayBreakDoors">
 					<requirement name="TriggerHasTags" tags="Door"/>
 						<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Door"/>
-						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.00033"/> <!-- Triggers at each door stage. Should differentiate between door types for more xp -->
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.1"/> <!-- Triggers at each door stage. Should differentiate between door types for more xp -->
 						<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>
 				</effect_group>
 
+				<!-- BREAKING OTHER BLOCKS -->
+				<effect_group name="VerifyFuriousRamsayBreakOther">
+					<requirement name="!TriggerHasTags" tags="Door"/>
+						<!--<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Not a Door"/>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.1"/>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>-->
+				</effect_group>
+
+				<!-- MINING ORE -->
+				<effect_group name="VerifyFuriousRamsayBreakOre">
+					<requirement name="TriggerHasTags" tags="deepOre"/>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.1"/>
+						<triggered_effect trigger="onSelfDamagedBlock" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>
+						<!--<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Broke down Ore"/>--> <!-- Doesn't work -->
+				</effect_group>
+
+				<!-- DIGGING -->
+				<effect_group name="VerifyFuriousRamsayDigging">
+					<requirement name="TriggerHasTags" tags="FuriousRamsayDig"/>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.1"/>
+						<triggered_effect trigger="onSelfDamagedBlock" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>
+				</effect_group>			
+
+				<!-- CUTTING TREES -->
 				<effect_group name="VerifyFuriousRamsayCutTrees">
 					<requirement name="TriggerHasTags" tags="FuriousRamsayTree"/>
-						<triggered_effect trigger="onSelfDamagedBlock" action="ShowToolbeltMessage" message="Cutting tree"/> <!-- Works -->
-						<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Cut down Tree"/> <!-- does not work -->
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.1"/>
+						<triggered_effect trigger="onSelfDamagedBlock" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>
 				</effect_group>
 
 				<effect_group name="VerifyFuriousRamsayHarvestCrops">
@@ -20475,26 +20583,555 @@
 						<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Crops 2"/>
 				</effect_group>
 				
-				<effect_group name="VerifyFuriousRamsayBreakOre">
-					<requirement name="TriggerHasTags" tags="deepOre"/>
-						<triggered_effect trigger="onSelfDamagedBlock" action="ShowToolbeltMessage" message="Harvesting ore"/> <!-- Works -->
-						<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Broke down Ore"/> <!-- Doesn't work -->
+			</buff>
+
+			<buff name="VerifyFuriousRamsayActionsDexterity" hidden="true">
+				<effect_group name="VerifyFuriousRamsayMobility">
+					<triggered_effect trigger="onSelfJump" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="0.01"/>
+					<triggered_effect trigger="onSelfJump" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+					<triggered_effect trigger="onSelfRun" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="0.01"/>
+					<triggered_effect trigger="onSelfRun" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+					<triggered_effect trigger="onSelfJump" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="0.01"/>
+					<triggered_effect trigger="onSelfJump" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="0.01"/>
+					<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+					<triggered_effect trigger="onReloadStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="0.01"/>
+					<triggered_effect trigger="onReloadStart" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+					<triggered_effect trigger="onSelfAimingGunStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="0.01"/>
+					<triggered_effect trigger="onSelfAimingGunStart" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+					<triggered_effect trigger="onOtherAttackedSelf" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="0.01"/>
+					<triggered_effect trigger="onOtherAttackedSelf" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
 				</effect_group>
+			</buff>
 
-
+			<buff name="VerifyFuriousRamsayActionsConstitution" hidden="true">
+				<!-- RECEIVED DAMAGE -->
 				<effect_group name="VerifyFuriousRamsayNoGlobalRequirements">
-					<!-- LOOTING -->
-					<triggered_effect trigger="onSelfLootContainer" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="0.001"/>
-					<triggered_effect trigger="onSelfLootContainer" action="AddBuff" buff="FuriousRamsayProcessIntelligenceAttribute"/>
-					<!-- MADMAN EXPLOSION DAMAGE -->
-					<triggered_effect trigger="onSelfExplosionDamagedOther" action="ShowToolbeltMessage" message="Explosion Damage">
-						<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
-					</triggered_effect>
+					<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="0.1"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" buff="FuriousRamsayProcessConstitutionAttribute"/>
+				</effect_group>
+			</buff>
 
-					<triggered_effect trigger="onSelfHealedSelf" action="ShowToolbeltMessage" message="Healed Yourself" />
-												
+			<buff name="VerifyFuriousRamsayActionsIntelligence" hidden="true">
+				<!-- LOOTING -->
+				<effect_group name="VerifyFuriousRamsayLooting">
+					<triggered_effect trigger="onSelfLootContainer" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="0.1"/>
+					<triggered_effect trigger="onSelfLootContainer" action="AddBuff" buff="FuriousRamsayProcessIntelligenceAttribute"/>
+				</effect_group>
+				<!-- DIGGING -->
+				<effect_group name="VerifyFuriousRamsayDigging">
+					<requirement name="TriggerHasTags" tags="FuriousRamsayDig"/>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="0.1"/>
+						<triggered_effect trigger="onSelfDamagedBlock" action="AddBuff" buff="FuriousRamsayProcessIntelligenceAttribute"/>
+				</effect_group>			
+			</buff>
+
+			<buff name="VerifyFuriousRamsayActionsKnowledge" hidden="true">
+				<!-- NOT WORKING -->
+					<!--<triggered_effect trigger="onSelfItemLooted" action="ShowToolbeltMessage" message="Looted"/>			
+					<triggered_effect trigger="onSelfItemGained" action="ShowToolbeltMessage" message="Gained"/>			-->
+				<effect_group name="VerifyFuriousRamsayCars">
+					<requirement name="TriggerHasTags" tags="FuriousRamsayCar"/>
+					<requirement name="HoldingItemHasTags" tags="perkSalvageOperations"/>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="0.1"/> <!-- Triggers at each destroy stage. Should differentiate between vehicle types for more xp -->
+						<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" buff="FuriousRamsayProcessKnowledgeAttribute"/>
+						<!-- XP to level up Grease Monkey Perk -->
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayPerkGreaseMonkeyXP" operation="add" value="0.1"/>
 				</effect_group>
 
+				<effect_group name="VerifyFuriousRamsayAppliances">
+					<requirement name="TriggerHasTags" tags="FuriousRamsayAppliance"/>
+					<requirement name="HoldingItemHasTags" tags="perkSalvageOperations"/>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="0.1"/> <!-- Triggers at each destroy stage. Should differentiate between vehicle types for more xp -->
+						<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" buff="FuriousRamsayProcessKnowledgeAttribute"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayActionsCharisma" hidden="true">
+				<!-- NOT WORKING -->
+					<!--<triggered_effect trigger="onSelfItemSold" action="ShowToolbeltMessage" message="Sold"/>			
+					<triggered_effect trigger="onSelfItemBought" action="ShowToolbeltMessage" message="Bought"/>			-->
+			</buff>
+
+			<buff name="VerifyFuriousRamsayActionsHunter" hidden="true">
+				<effect_group name="VerifyFuriousRamsayMobility">
+						<triggered_effect trigger="onSelfCrouch" action="ShowToolbeltMessage" message="Crouch"/>
+						<triggered_effect trigger="onSelfCrouchRun" action="ShowToolbeltMessage" message="Crouch Run"/>
+						<triggered_effect trigger="onSelfCrouchWalk" action="ShowToolbeltMessage" message="Crouch Walk"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayActionsThug" hidden="true">
+			</buff>
+
+			<buff name="VerifyFuriousRamsayActionsButcher" hidden="true">
+				<effect_group name="VerifyFuriousRamsayMobility">
+						<triggered_effect trigger="onSelfFallImpact" action="ShowToolbeltMessage" message="Fall Impact"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayActionsSoldier" hidden="true">
+			</buff>
+
+			<buff name="VerifyFuriousRamsayActionsTechnogeek" hidden="true">
+			</buff>
+
+			<buff name="VerifyFuriousRamsayActionsMadman" hidden="true">
+					<!-- MADMAN EXPLOSION DAMAGE -->
+				<effect_group name="VerifyFuriousRamsayExplosionDamage">
+					<triggered_effect trigger="onSelfExplosionDamagedOther" action="ShowToolbeltMessage" message="Explosion Damage"/>
+				</effect_group>
+
+				<!-- CUTTING TREES -->
+				<effect_group name="VerifyFuriousRamsayCutTrees">
+					<requirement name="TriggerHasTags" tags="FuriousRamsayTree"/>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ShowToolbeltMessage" message="Cutting tree"/> <!-- Works -->
+						<!--<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Cut down Tree"/>--> <!-- does not work -->
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayActionsBuilder" hidden="true">
+			</buff>
+
+			<buff name="VerifyFuriousRamsayActionsChef" hidden="true">
+			</buff>
+
+			<!-- QUEST: INCREASE STRENGTH -->
+			<buff name="FuriousRamsayProcessStrengthAttributeTier1Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseStrengthXPTier1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessStrengthAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessStrengthAttributeTier2Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseStrengthXPTier2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessStrengthAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessStrengthAttributeTier3Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseStrengthXPTier3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessStrengthAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessStrengthAttributeTier4Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseStrengthXPTier4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessStrengthAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessStrengthAttributeTier5Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseStrengthXPTier5"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessStrengthAttribute"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayIncreaseStrengthXPTier1" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseStrengthTier1"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseStrengthXPTier2" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseStrengthTier2"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseStrengthXPTier3" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseStrengthTier3"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseStrengthXPTier4" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseStrengthTier4"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseStrengthXPTier5" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseStrengthTier5"/>
+				</effect_group>
+			</buff>
+
+			<!-- QUEST: INCREASE DEXTERITY -->
+			<buff name="FuriousRamsayProcessDexterityAttributeTier1Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseDexterityXPTier1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessDexterityAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessDexterityAttributeTier2Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseDexterityXPTier2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessDexterityAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessDexterityAttributeTier3Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseDexterityXPTier3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessDexterityAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessDexterityAttributeTier4Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseDexterityXPTier4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessDexterityAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessDexterityAttributeTier5Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseDexterityXPTier5"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessDexterityAttribute"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayIncreaseDexterityXPTier1" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseDexterityTier1"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseDexterityXPTier2" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseDexterityTier2"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseDexterityXPTier3" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseDexterityTier3"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseDexterityXPTier4" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseDexterityTier4"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseDexterityXPTier5" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseDexterityTier5"/>
+				</effect_group>
+			</buff>
+
+			<!-- QUEST: INCREASE CONSTITUTION -->
+			<buff name="FuriousRamsayProcessConstitutionAttributeTier1Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseConstitutionXPTier1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessConstitutionAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessConstitutionAttributeTier2Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseConstitutionXPTier2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessConstitutionAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessConstitutionAttributeTier3Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseConstitutionXPTier3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessConstitutionAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessConstitutionAttributeTier4Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseConstitutionXPTier4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessConstitutionAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessConstitutionAttributeTier5Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseConstitutionXPTier5"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessConstitutionAttribute"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayIncreaseConstitutionXPTier1" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseConstitutionTier1"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseConstitutionXPTier2" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseConstitutionTier2"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseConstitutionXPTier3" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseConstitutionTier3"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseConstitutionXPTier4" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseConstitutionTier4"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseConstitutionXPTier5" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseConstitutionTier5"/>
+				</effect_group>
+			</buff>
+
+			<!-- QUEST: INCREASE INTELLIGENCE -->
+			<buff name="FuriousRamsayProcessIntelligenceAttributeTier1Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseIntelligenceXPTier1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessIntelligenceAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessIntelligenceAttributeTier2Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseIntelligenceXPTier2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessIntelligenceAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessIntelligenceAttributeTier3Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseIntelligenceXPTier3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessIntelligenceAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessIntelligenceAttributeTier4Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseIntelligenceXPTier4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessIntelligenceAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessIntelligenceAttributeTier5Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseIntelligenceXPTier5"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessIntelligenceAttribute"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayIncreaseIntelligenceXPTier1" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseIntelligenceTier1"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseIntelligenceXPTier2" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseIntelligenceTier2"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseIntelligenceXPTier3" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseIntelligenceTier3"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseIntelligenceXPTier4" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseIntelligenceTier4"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseIntelligenceXPTier5" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseIntelligenceTier5"/>
+				</effect_group>
+			</buff>
+
+			<!-- QUEST: INCREASE KNOWLEDGE -->
+			<buff name="FuriousRamsayProcessKnowledgeAttributeTier1Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseKnowledgeXPTier1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessKnowledgeAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessKnowledgeAttributeTier2Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseKnowledgeXPTier2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessKnowledgeAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessKnowledgeAttributeTier3Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseKnowledgeXPTier3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessKnowledgeAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessKnowledgeAttributeTier4Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseKnowledgeXPTier4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessKnowledgeAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessKnowledgeAttributeTier5Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseKnowledgeXPTier5"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessKnowledgeAttribute"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayIncreaseKnowledgeXPTier1" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseKnowledgeTier1"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseKnowledgeXPTier2" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseKnowledgeTier2"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseKnowledgeXPTier3" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseKnowledgeTier3"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseKnowledgeXPTier4" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseKnowledgeTier4"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseKnowledgeXPTier5" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseKnowledgeTier5"/>
+				</effect_group>
+			</buff>
+
+			<!-- QUEST: INCREASE CHARISMA -->
+			<buff name="FuriousRamsayProcessCharismaAttributeTier1Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseCharismaXPTier1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessCharismaAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessCharismaAttributeTier2Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseCharismaXPTier2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessCharismaAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessCharismaAttributeTier3Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseCharismaXPTier3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessCharismaAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessCharismaAttributeTier4Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseCharismaXPTier4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessCharismaAttribute"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayProcessCharismaAttributeTier5Timer" hidden="true" remove_on_death="true">
+				<stack_type value="ignore"/>
+				<duration value="0.1"/>
+				<effect_group>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayIncreaseCharismaXPTier5"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="selfAOE" range="50" buff="FuriousRamsayProcessCharismaAttribute"/>
+				</effect_group>
+			</buff>
+
+			<buff name="FuriousRamsayIncreaseCharismaXPTier1" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseCharismaTier1"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseCharismaXPTier2" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseCharismaTier2"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseCharismaXPTier3" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseCharismaTier3"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseCharismaXPTier4" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseCharismaTier4"/>
+				</effect_group>
+			</buff>
+			<buff name="FuriousRamsayIncreaseCharismaXPTier5" hidden="true">
+				<duration value="0.1"/>
+				<effect_group name="FuriousRamsayIncreaseXP">
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseCharismaTier5"/>
+				</effect_group>
 			</buff>
 
 		</append>		
@@ -20511,11 +21148,60 @@
 				<requirement name="NotHasBuff" target="self" buff="FuriousRamsayStarterAilments"/>
 			</triggered_effect>
 
-			<!-- ACTIONS -->
-			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayActions">
-				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayActions"/>
+		<!-- ACTIONS -->
+			<!-- GENETICS -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayActionsStrength">
+				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayActionsStrength"/>
 			</triggered_effect>
-
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayActionsDexterity">
+				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayActionsDexterity"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayActionsConstitution">
+				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayActionsConstitution"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayActionsIntelligence">
+				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayActionsIntelligence"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayActionsKnowledge">
+				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayActionsKnowledge"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayActionsCharisma">
+				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayActionsCharisma"/>
+			</triggered_effect>
+			<!-- CLASSES -->
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayActionsHunter">
+				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayActionsHunter"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeHunterClass" operation="Equals" value="1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayActionsThug">
+				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayActionsThug"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeThugClass" operation="Equals" value="1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayActionsButcher">
+				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayActionsButcher"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeButcherClass" operation="Equals" value="1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayActionsSoldier">
+				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayActionsSoldier"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayActionsTechnogeek">
+				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayActionsTechnogeek"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeTechnogeekClass" operation="Equals" value="1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayActionsMadman">
+				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayActionsMadman"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayActionsBuilder">
+				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayActionsBuilder"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeBuilderClass" operation="Equals" value="1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayActionsChef">
+				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayActionsChef"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeChefClass" operation="Equals" value="1"/>
+			</triggered_effect>
+			
 			<!-- AURAS -->
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayAuras">
 				<requirement name="NotHasBuff" target="self" buff="VerifyFuriousRamsayAuras"/>

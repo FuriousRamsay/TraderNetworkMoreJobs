@@ -1,0 +1,19 @@
+<Config>
+
+	<remove xpath="/windows/window[@name='mainMenuLogo']"/>
+	<remove xpath="/windows/window[@name='menuBackground']"/>
+	<remove xpath="/windows/window[@name='loadingScreen']"/>
+
+	<append xpath="/windows">
+
+		<window name="menuBackground" anchor="CenterCenter" pos="0,0" width="1920" height="1080" depth="-3">
+			<texture style="menuBackground" pivot="center" anchor_bottom="#cam,0,-5" anchor_top="#cam,1,5"/>
+		</window>
+
+		<window name="loadingScreen" depth="200" anchor="CenterCenter" pos="0,0" width="1920" height="1080" controller="LoadingScreen">
+			<texture depth="0" style="menuBackground" pivot="center" texture="{background_texture}" name="loading_image" anchor_bottom="#cam,0,-5" anchor_top="#cam,1,5"/>
+		</window>
+
+	</append>
+
+</Config>
