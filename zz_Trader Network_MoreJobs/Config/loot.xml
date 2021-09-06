@@ -144,6 +144,26 @@
 			<item name="qc_FuriousRamsayResetPOI" prob="0.25"/>
 		</lootgroup>
 
+		<lootgroup name="FuriousRamsayGroupBlackShieldBossDeathCorpseTier1" count="all">
+			<item name="FuriousRamsayBlackShieldBossCorpseTier1" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="FuriousRamsayGroupBlackShieldBossDeathCorpseTier2" count="all">
+			<item name="FuriousRamsayBlackShieldBossCorpseTier2" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="FuriousRamsayGroupBlackShieldBossDeathCorpseTier3" count="all">
+			<item name="FuriousRamsayBlackShieldBossCorpseTier3" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="FuriousRamsayGroupBlackShieldBossDeathCorpseTier4" count="all">
+			<item name="FuriousRamsayBlackShieldBossCorpseTier4" count="1"/>
+		</lootgroup>
+
+		<lootgroup name="FuriousRamsayGroupBlackShieldBossDeathCorpseTier5" count="all">
+			<item name="FuriousRamsayBlackShieldBossCorpseTier5" count="1"/>
+		</lootgroup>
+
 		<lootgroup name="FuriousRamsayGroupBlackShieldBossDeathArmorTier1" count="all">
 			<item name="armorClothHat" count="1"/>
 			<item name="armorClothJacket" count="1"/>
@@ -309,30 +329,35 @@
 		</lootgroup>
 
 		<lootgroup name="FuriousRamsayGroupBlackShieldBossDeathTier1" count="all">
+			<item group="FuriousRamsayGroupBlackShieldBossDeathCorpseTier1"/>
 			<item group="FuriousRamsayGroupBlackShieldBossDeathArmorTier1"/>
 			<item group="FuriousRamsayGroupBlackShieldBossDeathItemsTier1"/>
 			<item group="FuriousRamsayGroupBlackShieldBossDeathItemsTier1Special"/>
 		</lootgroup>
 
 		<lootgroup name="FuriousRamsayGroupBlackShieldBossDeathTier2" count="all">
+			<item group="FuriousRamsayGroupBlackShieldBossDeathCorpseTier2"/>
 			<item group="FuriousRamsayGroupBlackShieldBossDeathArmorTier2" prob="1"/>
 			<item group="FuriousRamsayGroupBlackShieldBossDeathItemsTier2" prob="1"/>
 			<item group="FuriousRamsayGroupBlackShieldBossDeathItemsTier2Special"/>
 		</lootgroup>
 
 		<lootgroup name="FuriousRamsayGroupBlackShieldBossDeathTier3" count="all">
+			<item group="FuriousRamsayGroupBlackShieldBossDeathCorpseTier3"/>
 			<item group="FuriousRamsayGroupBlackShieldBossDeathArmorTier3" prob="1"/>
 			<item group="FuriousRamsayGroupBlackShieldBossDeathItemsTier3" prob="1"/>
 			<item group="FuriousRamsayGroupBlackShieldBossDeathItemsTier3Special"/>
 		</lootgroup>
 
 		<lootgroup name="FuriousRamsayGroupBlackShieldBossDeathTier4" count="all">
+			<item group="FuriousRamsayGroupBlackShieldBossDeathCorpseTier4"/>
 			<item group="FuriousRamsayGroupBlackShieldBossDeathArmorTier4" prob="1"/>
 			<item group="FuriousRamsayGroupBlackShieldBossDeathItemsTier4" prob="1"/>
 			<item group="FuriousRamsayGroupBlackShieldBossDeathItemsTier4Special"/>
 		</lootgroup>
 
 		<lootgroup name="FuriousRamsayGroupBlackShieldBossDeathTier5" count="all">
+			<item group="FuriousRamsayGroupBlackShieldBossDeathCorpseTier5"/>
 			<item group="FuriousRamsayGroupBlackShieldBossDeathArmorTier5" prob="1"/>
 			<item group="FuriousRamsayGroupBlackShieldBossDeathItemsTier5" prob="1"/>
 			<item group="FuriousRamsayGroupBlackShieldBossDeathItemsTier5Special"/>
@@ -607,23 +632,23 @@
 		</lootcontainer>
 
 		<!-- Black Shield Bosses -->
-		<lootcontainer id="813" size="4,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" destroy_on_close="false">
+		<lootcontainer id="813" size="4,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" destroy_on_close="false">
 			<item group="FuriousRamsayGroupBlackShieldBossDeathTier1" />
 		</lootcontainer>
 
-		<lootcontainer id="814" size="4,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" destroy_on_close="false">
+		<lootcontainer id="814" size="4,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" destroy_on_close="false">
 			<item group="FuriousRamsayGroupBlackShieldBossDeathTier2" />
 		</lootcontainer>
 
-		<lootcontainer id="815" size="4,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" destroy_on_close="false">
+		<lootcontainer id="815" size="4,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" destroy_on_close="false">
 			<item group="FuriousRamsayGroupBlackShieldBossDeathTier3" />
 		</lootcontainer>
 
-		<lootcontainer id="816" size="4,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" destroy_on_close="false">
+		<lootcontainer id="816" size="4,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" destroy_on_close="false">
 			<item group="FuriousRamsayGroupBlackShieldBossDeathTier4" />
 		</lootcontainer>
 
-		<lootcontainer id="817" size="4,2" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" destroy_on_close="false">
+		<lootcontainer id="817" size="4,3" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" destroy_on_close="false">
 			<item group="FuriousRamsayGroupBlackShieldBossDeathTier5" />
 		</lootcontainer>
 

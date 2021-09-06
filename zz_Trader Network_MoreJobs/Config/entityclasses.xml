@@ -61,7 +61,7 @@ FuriousRamsayZombieOldTimerHFQuest
  -->
 
         <entity_class name="FuriousRamsayZombieBoeHFQuest" extends="zombieBoe">
-			<property name="HideInSpawnMenu" value="true"/><property name="AINoiseSeekDist" value="200"/><property name="SightRange" value="200"/><property name="AINoiseSeekDist" value="200"/><property name="SightRange" value="200"/>
+			<property name="HideInSpawnMenu" value="true"/><property name="AINoiseSeekDist" value="200"/><property name="SightRange" value="200"/>
 			<property name="TimeStayAfterDeath" value="30"/><property name="NavObject" value="FuriousRamsayDotOrange" /><effect_group name="FuriousRamsayVanishBuff"><triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishTimer"/></effect_group>
 		</entity_class>
 
@@ -22140,6 +22140,152 @@ FuriousRamsayBlackDecoyFireShockSmokeZombieWightRadiated
 			<property name="NavObject" value="FuriousRamsayDotOrange"/>
 			<property name="LootDropProb" value="1"/>
 			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBanditLoot"/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayCloakedShockAndroidQuest" extends="FuriousRamsayCloakedShockAndroid">
+			<property name="Class" value="EntityZombie"/>
+
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/>
+			
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=5"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
+			<property name="AITask-3" value="BreakBlock"/>
+			<property name="AITask-4" value="Wander"/>
+			<property name="AITask-5" value=""/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntitySurvivor,0,0"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-3" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayCloakedBurnAndroidQuest" extends="FuriousRamsayCloakedBurnAndroid">
+			<property name="Class" value="EntityZombie"/>
+
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/>
+			
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=5"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
+			<property name="AITask-3" value="BreakBlock"/>
+			<property name="AITask-4" value="Wander"/>
+			<property name="AITask-5" value=""/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntitySurvivor,0,0"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-3" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayEnemyAndroid1Quest" extends="FuriousRamsayEnemyAndroid1">
+			<property name="Class" value="EntityZombie"/>
+
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/>
+			
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntitySurvivor,0,0"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-3" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayEnemyAndroid2Quest" extends="FuriousRamsayEnemyAndroid2">
+			<property name="Class" value="EntityZombie"/>
+
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/>
+			
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntitySurvivor,0,0"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-3" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayEnemyAndroid3Quest" extends="FuriousRamsayEnemyAndroid3">
+			<property name="Class" value="EntityZombie"/>
+
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/>
+			
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntitySurvivor,0,0"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-3" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayEnemyAndroid4Quest" extends="FuriousRamsayEnemyAndroid4">
+			<property name="Class" value="EntityZombie"/>
+
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/>
+			
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntitySurvivor,0,0"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-3" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayEnemyAndroid5Quest" extends="FuriousRamsayEnemyAndroid5">
+			<property name="Class" value="EntityZombie"/>
+
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/>
+			
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntitySurvivor,0,0"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-3" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayEnemyAndroid6Quest" extends="FuriousRamsayEnemyAndroid6">
+			<property name="Class" value="EntityZombie"/>
+
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/>
+			
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntitySurvivor,0,0"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-3" value=""/>
+		</entity_class>
+
+		<entity_class name="FuriousRamsayEnemyAndroid7Quest" extends="FuriousRamsayEnemyAndroid7">
+			<property name="Class" value="EntityZombie"/>
+
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="SightRange" value="200"/>
+			
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityPlayer,15,EntitySurvivor,15"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="Wander"/>
+			<property name="AITask-4" value=""/>
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntitySurvivor,0,0"/>
+			<property name="AITarget-2" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-3" value=""/>
 		</entity_class>
 
 	</append>

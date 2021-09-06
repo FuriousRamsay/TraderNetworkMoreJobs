@@ -905,6 +905,17 @@ FuriousRamsayThrownBarrelDesc,items,Item,An explosive barrel you can throw. Deve
 cntFetchQuestSatchel,blocks,Quest,Satchel
 cntFuriousRamsayBuriedChest,blocks,Quest,Black Shield Buried Chest
 
+FuriousRamsayBlackShieldBossCorpseTier1,blocks,Quest,Black Shield Titan Remains
+FuriousRamsayBlackShieldBossCorpseTier1Desc,blocks,Quest,"The remains of a Black Shield Titan.\n\nLay it down to show all how glorious of a feat it was."
+FuriousRamsayBlackShieldBossCorpseTier2,blocks,Quest,Black Shield Titan Remains
+FuriousRamsayBlackShieldBossCorpseTier2Desc,blocks,Quest,"The remains of a Black Shield Titan.\n\nLay it down to show all how glorious of a feat it was."
+FuriousRamsayBlackShieldBossCorpseTier3,blocks,Quest,Black Shield Titan Remains
+FuriousRamsayBlackShieldBossCorpseTier3Desc,blocks,Quest,"The remains of a Black Shield Titan.\n\nLay it down to show all how glorious of a feat it was."
+FuriousRamsayBlackShieldBossCorpseTier4,blocks,Quest,Black Shield Titan Remains
+FuriousRamsayBlackShieldBossCorpseTier4Desc,blocks,Quest,"The remains of a Black Shield Titan.\n\nLay it down to show all how glorious of a feat it was."
+FuriousRamsayBlackShieldBossCorpseTier5,blocks,Quest,Black Shield Titan Remains
+FuriousRamsayBlackShieldBossCorpseTier5Desc,blocks,Quest,"The remains of a Black Shield Titan.\n\nLay it down to show all how glorious of a feat it was."
+
 FuriousRamsayBanditGravestoneTier1,blocks,Quest,Bandit Gravestone (Tier 1)
 FuriousRamsayBanditGravestoneTier1Desc,blocks,Quest,"The Gravestone of a Black Shield Bandit.\n\nProof the Trader Network requires in order for you to be claim your reward."
 FuriousRamsayBanditGravestoneTier2,blocks,Quest,Bandit Gravestone (Tier 2)
@@ -1687,6 +1698,7 @@ FuriousRamsayAllyLionTier3Ghost,entityclasses,Entity,"Trader Network Mechanical 
 FuriousRamsayAllyBearTier4Ghost,entityclasses,Entity,"Trader Network Mechanical Bear"
 FuriousRamsayAllyNPCTier5Ghost,entityclasses,Entity,"Trader Network Mechanical Android"
 
+FuriousRamsayCloakedEntityMaster,entityclasses,Entity,"Black Shield Android"
 FuriousRamsayCloakedAndroidMaster,entityclasses,Entity,"Black Shield Android"
 FuriousRamsayCloakedBurnAndroid,entityclasses,Entity,"Cloaked Black Shield Fire Android"
 FuriousRamsayCloakedShockAndroid,entityclasses,Entity,"Cloaked Black Shield Shock Android"
@@ -1697,6 +1709,16 @@ FuriousRamsayEnemyAndroid4,entityclasses,Entity,"Black Shield Battle Android"
 FuriousRamsayEnemyAndroid5,entityclasses,Entity,"Black Shield Battle Android"
 FuriousRamsayEnemyAndroid6,entityclasses,Entity,"Black Shield Battle Android"
 FuriousRamsayEnemyAndroid7,entityclasses,Entity,"Black Shield Battle Android"
+
+FuriousRamsayCloakedBurnAndroidQuest,entityclasses,Entity,"Cloaked Black Shield Fire Android"
+FuriousRamsayCloakedShockAndroidQuest,entityclasses,Entity,"Cloaked Black Shield Shock Android"
+FuriousRamsayEnemyAndroid1Quest,entityclasses,Entity,"Black Shield Battle Android"
+FuriousRamsayEnemyAndroid2Quest,entityclasses,Entity,"Black Shield Battle Android"
+FuriousRamsayEnemyAndroid3Quest,entityclasses,Entity,"Black Shield Battle Android"
+FuriousRamsayEnemyAndroid4Quest,entityclasses,Entity,"Black Shield Battle Android"
+FuriousRamsayEnemyAndroid5Quest,entityclasses,Entity,"Black Shield Battle Android"
+FuriousRamsayEnemyAndroid6Quest,entityclasses,Entity,"Black Shield Battle Android"
+FuriousRamsayEnemyAndroid7Quest,entityclasses,Entity,"Black Shield Battle Android"
 
 qc_FuriousRamsayTier1_BlackShieldBoss,items,Quest,Black Shield Titans (Tier 1)
 qc_FuriousRamsayTier2_BlackShieldBoss,items,Quest,Black Shield Titans (Tier 2)
@@ -1931,12 +1953,26 @@ quest_FuriousRamsayHordeTraining_offer,Quests,Quests,"Shall we begin your Horde 
 quest_FuriousRamsayHordeTraining_response,Quests,Quests,Horde Training
 quest_FuriousRamsayHordeTraining_statement,Quests,Quests,Train to defeat a Horde.
 
-quest_FuriousRamsayBlackShieldBoss_subtitle,Quests,Quests,"Black Shield Titans (Tier 1)"
 quest_FuriousRamsayBlackShieldBoss_description,Quests,Quests,"The Trader wants me to hunt down a Black Shield Titan."
-quest_FuriousRamsayBlackShieldBoss_title,Quests,Quests,"Black Shield Titans (Tier 1)"
-quest_FuriousRamsayBlackShieldBoss_response,Quests,Quests,Black Shield Titans (Tier 1)
 quest_FuriousRamsayBlackShieldBoss_statement,Quests,Quests,Hunt down a Black Shield Titan.
 quest_FuriousRamsayBlackShieldBoss_completion,Quests,Quests,"Big and dangerous fellows aren't they!\n\nWe couldn't have done this without your help.\n\nPlease choose your reward."
+
+quest_FuriousRamsayBlackShieldBossTier1_subtitle,Quests,Quests,"Black Shield Titans (Tier 1)"
+quest_FuriousRamsayBlackShieldBossTier1_title,Quests,Quests,"Black Shield Titans (Tier 1)"
+quest_FuriousRamsayBlackShieldBossTier1_response,Quests,Quests,Black Shield Titans (Tier 1)
+quest_FuriousRamsayBlackShieldBossTier2_subtitle,Quests,Quests,"Black Shield Titans (Tier 2)"
+quest_FuriousRamsayBlackShieldBossTier2_title,Quests,Quests,"Black Shield Titans (Tier 2)"
+quest_FuriousRamsayBlackShieldBossTier2_response,Quests,Quests,Black Shield Titans (Tier 2)
+quest_FuriousRamsayBlackShieldBossTier3_subtitle,Quests,Quests,"Black Shield Titans (Tier 3)"
+quest_FuriousRamsayBlackShieldBossTier3_title,Quests,Quests,"Black Shield Titans (Tier 3)"
+quest_FuriousRamsayBlackShieldBossTier3_response,Quests,Quests,Black Shield Titans (Tier 3)
+quest_FuriousRamsayBlackShieldBossTier4_subtitle,Quests,Quests,"Black Shield Titans (Tier 4)"
+quest_FuriousRamsayBlackShieldBossTier4_title,Quests,Quests,"Black Shield Titans (Tier 4)"
+quest_FuriousRamsayBlackShieldBossTier4_response,Quests,Quests,Black Shield Titans (Tier 4)
+quest_FuriousRamsayBlackShieldBossTier5_subtitle,Quests,Quests,"Black Shield Titans (Tier 5)"
+quest_FuriousRamsayBlackShieldBossTier5_title,Quests,Quests,"Black Shield Titans (Tier 5)"
+quest_FuriousRamsayBlackShieldBossTier5_response,Quests,Quests,Black Shield Titans (Tier 5)
+
 quest_FuriousRamsayBlackShieldBossTier1_offer,Quests,Quests,"The Black Shield faction has a new arsenal. Titans with special abilities.\n\nPlease help us get rid of these monsters.\n\nThis particular Titan isn't so bad, doesn't have much in terms of armor. Watch out for the knockdowns though."
 quest_FuriousRamsayBlackShieldBossTier2_offer,Quests,Quests,"The Black Shield faction has a new arsenal. Titans with special abilities.\n\nPlease help us get rid of these monsters.\n\nThis particular Titan has leather armor which might be of use to you after the fight.\n\nIt can shoot multiple arrows, make sure to dodge them."
 quest_FuriousRamsayBlackShieldBossTier3_offer,Quests,Quests,"The Black Shield faction has a new arsenal. Titans with special abilities.\n\nPlease help us get rid of these monsters.\n\nThis particular Titan has scrap armor which might be of use to you after the fight.\n\nIt will shoot electrical darts, make sure to dodge them. It also has the ability to knock you down at a certain distance and shock you. Beware."
