@@ -2,7 +2,7 @@
 
 	<remove xpath="/items/item/property[@name='UnlockedBy']"/>
 	
-	<!-- Remove stats from all eyewear -->
+	<!-- REMOVE STATS FROM ALL EYEWEAR -->
 	<remove xpath="/items/item/property[@name='apparelShades']/effect_group/passive_effect[@name='AttributeLevel']"/>
 	<remove xpath="/items/item/property[@name='apparelToughGuySunglasses']/effect_group/passive_effect[@name='AttributeLevel']"/>
 	<remove xpath="/items/item/property[@name='apparelAviatorGoggles']/effect_group/passive_effect[@name='LootGamestage']"/>
@@ -19,6 +19,39 @@
 	<remove xpath="/items/item/property[@name='FuriousRamsayBanditHeadAviatorGoggles']/effect_group/passive_effect[@name='TreasureBlocksPerReduction']"/>
 	<remove xpath="/items/item/property[@name='FuriousRamsayBanditHeadAviatorGoggles']/effect_group/passive_effect[@name='dTreasureBlocksPerReduction']"/>
 	<remove xpath="/items/item/property[@name='FuriousRamsayBanditHeadSkiGoggles']/effect_group/passive_effect[@name='AttributeLevel']"/>
+
+    <!-- GET WATER FROM FAUCETS, SINKS, TOILETS AND BATHTUBS -->
+	<append xpath="/items/item[@name='drinkJarEmpty']">
+        <property class="Action0">
+            <property name="Class" value="ExchangeItem" />
+            <property name="Delay" value="1.0" />
+            <property name="Change_item_to" value="drinkJarRiverWater" />
+
+            <property name="Focused_blockname_1" value="cntGraniteSink" /> 
+            <property name="Focused_blockname_2" value="cntCabinetOldSink" />
+            <property name="Focused_blockname_3" value="wallMountSinkCommercial" />
+            <property name="Focused_blockname_4" value="cntCabinetOldSink" />
+            <property name="Focused_blockname_5" value="utilitySink" />
+            <property name="Focused_blockname_6" value="pedestalSink" />
+            <property name="Focused_blockname_7" value="counterMountedSinkCommercial" />
+            <property name="Focused_blockname_8" value="counterSinkCommercial" />
+            <property name="Focused_blockname_9" value="wallHungSink" />
+            <property name="Focused_blockname_10" value="cntToilet01" />
+            <property name="Focused_blockname_11" value="cntToilet02" />
+            <property name="Focused_blockname_12" value="cntToilet03" />
+            <property name="Focused_blockname_13" value="urinalCommercialMounted" />
+            <property name="Focused_blockname_14" value="woodPlateCounterSink" />
+            <property name="Focused_blockname_15" value="decoClawFootBathTub" />
+            <property name="Focused_blockname_16" value="cntBathTubEmpty" />
+            <property name="Focused_blockname_17" value="faucet02" />
+            <property name="Focused_blockname_18" value="faucet04" />
+            <property name="Focused_blockname_19" value="faucetBrass02" />
+            <property name="Focused_blockname_20" value="faucetBrass04" />
+            <property name="Focused_blockname_21" value="showerHead" />
+
+			<property name="Sound_start" value="UseActions/bucketfill_water" />
+		</property>
+	</append>
 
 	<append xpath="/items">
 

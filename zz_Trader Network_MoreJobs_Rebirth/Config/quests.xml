@@ -2,6 +2,55 @@
 
 	<remove xpath="/quests/quest[@id='quest_BasicSurvival1']"/>
 
+	<!-- REMOVE SCHEMATICS FROM QUEST REWARDS -->
+	<set xpath="/quests/quest[@id='tier1_fetch']/reward[@id='groupQuestSchematics']/@id">groupQuestTools</set>
+	<set xpath="/quests/quest[@id='tier1_fetch']/reward[@id='groupQuestAmmo,groupQuestSchematics,groupQuestMods']/@id">groupQuestAmmo,groupQuestTools,groupQuestMods</set>
+
+	<remove xpath="/quests/quest[@id='tier2_fetch']/reward[@id='groupQuestSchematics']"/>
+	<remove xpath="/quests/quest[@id='tier3_fetch']/reward[@id='groupQuestSchematics']"/>
+	<remove xpath="/quests/quest[@id='tier4_fetch']/reward[@id='groupQuestSchematics']"/>
+	<remove xpath="/quests/quest[@id='tier5_fetch']/reward[@id='groupQuestSchematics']"/>
+	<remove xpath="/quests/quest[@id='tier6_fetch']/reward[@id='groupQuestSchematics']"/>
+
+	<set xpath="/quests/quest[@id='tier1_clear']/reward[@id='groupQuestSchematics']/@id">groupQuestTools</set>
+	<set xpath="/quests/quest[@id='tier1_clear']/reward[@id='groupQuestAmmo,groupQuestSchematics,groupQuestMods']/@id">groupQuestAmmo,groupQuestTools,groupQuestMods</set>
+
+	<remove xpath="/quests/quest[@id='tier2_clear']/reward[@id='groupQuestSchematics']"/>
+	<remove xpath="/quests/quest[@id='tier3_clear']/reward[@id='groupQuestSchematics']"/>
+	<remove xpath="/quests/quest[@id='tier4_clear']/reward[@id='groupQuestSchematics']"/>
+	<remove xpath="/quests/quest[@id='tier5_clear']/reward[@id='groupQuestSchematics']"/>
+	<remove xpath="/quests/quest[@id='tier6_clear']/reward[@id='groupQuestSchematics']"/>
+	
+	<remove xpath="/quests/quest[@id='tier2_fetch_clear']/reward[@id='groupQuestSchematics']"/>
+	<remove xpath="/quests/quest[@id='tier3_fetch_clear']/reward[@id='groupQuestSchematics']"/>
+	<remove xpath="/quests/quest[@id='tier4_fetch_clear']/reward[@id='groupQuestSchematics']"/>
+	<remove xpath="/quests/quest[@id='tier5_fetch_clear']/reward[@id='groupQuestSchematics']"/>
+	<remove xpath="/quests/quest[@id='tier6_fetch_clear']/reward[@id='groupQuestSchematics']"/>
+
+	<set xpath="/quests/quest[@id='tier1_buried_supplies']/reward[@id='groupQuestSchematics']/@id">groupQuestTools</set>
+	<set xpath="/quests/quest[@id='tier1_buried_supplies']/reward[@id='groupQuestAmmo,groupQuestSchematics,groupQuestMods']/@id">groupQuestAmmo,groupQuestTools,groupQuestMods</set>
+
+	<remove xpath="/quests/quest[@id='tier2_buried_supplies']/reward[@id='groupQuestSchematics']"/>
+
+	<remove xpath="/quests/quest[@id='test_sleepers']/reward[@id='groupQuestSchematics']"/>
+	<remove xpath="/quests/quest[@id='test_fetch']/reward[@id='groupQuestSchematics']"/>
+	<remove xpath="/quests/quest[@id='test_fetchsleep']/reward[@id='groupQuestSchematics']"/>
+	<remove xpath="/quests/quest[@id='test_hiddensleep']/reward[@id='groupQuestSchematics']"/>
+	<remove xpath="/quests/quest[@id='test_turnin']/reward[@id='groupQuestSchematics']"/>
+	<remove xpath="/quests/quest[@id='test_turnin2']/reward[@id='groupQuestSchematics']"/>
+
+	<set xpath="/quests/quest[@id='quest_tier1complete']/reward[@id='groupQuestSchematics']/@id">groupQuestTools</set>
+	<remove xpath="/quests/quest[@id='quest_tier2complete']/reward[@id='groupQuestTools']"/>
+	<set xpath="/quests/quest[@id='quest_tier2complete']/reward[@id='groupQuestSchematics']/@id">groupQuestTools</set>
+	<remove xpath="/quests/quest[@id='quest_tier3complete']/reward[@id='groupQuestTools']"/>
+	<set xpath="/quests/quest[@id='quest_tier3complete']/reward[@id='groupQuestSchematics']/@id">groupQuestTools</set>
+	<remove xpath="/quests/quest[@id='quest_tier4complete']/reward[@id='groupQuestTools']"/>
+	<set xpath="/quests/quest[@id='quest_tier4complete']/reward[@id='groupQuestSchematics']/@id">groupQuestTools</set>
+	<remove xpath="/quests/quest[@id='quest_tier5complete']/reward[@id='groupQuestTools']"/>
+	<set xpath="/quests/quest[@id='quest_tier5complete']/reward[@id='groupQuestSchematics']/@id">groupQuestTools</set>
+	<remove xpath="/quests/quest[@id='quest_tier6complete']/reward[@id='groupQuestTools']"/>
+	<set xpath="/quests/quest[@id='quest_tier6complete']/reward[@id='groupQuestSchematics']/@id">groupQuestTools</set>
+
 	<!-- KAMIKAZE -->
 	<append xpath="/quests/quest[@id='quest_FuriousRamsayTier1_Kamikaze']">
 		<action type="SpawnEnemy" id="FuriousRamsayInvisibleXPIntelligenceTier1" value="1" phase="5"/>

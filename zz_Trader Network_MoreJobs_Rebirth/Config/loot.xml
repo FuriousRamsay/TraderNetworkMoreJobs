@@ -1,5 +1,153 @@
 <Config>
    
+	<!-- MORE EGGS -->
+	<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest']/@count">1,2</set>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupBirdNest']/item[@name='foodEgg']" name="count">2,4</setattribute>
+	<setattribute xpath="/lootcontainers/lootgroup[@name='groupBirdNest']/item[@name='resourceFeather']" name="count">2,8</setattribute>
+	<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest']/item[@name='resourceFeather']/@prob">0.95</set>
+	<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest']/item[@name='foodEgg']/@prob">0.45</set>
+
+   <!-- REMOVE BOOKS AND SCHEMATICS FROM LOOT -->
+	<remove xpath="//lootgroup[@name='groupHeroChestLootSub']/item[@name='perkBooks']"/>
+	<remove xpath="//lootgroup[@name='junk']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootgroup[@name='labEquipment']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootgroup[@name='brewerySafeFiller']/item[@name='booksRareOnlyScaled']"/>
+	<remove xpath="//lootgroup[@name='shamwaySafeFiller']/item[@name='booksRareOnlyScaled']"/>
+	<remove xpath="//lootgroup[@name='groupHeroChestLootSub']/item[@name='booksRareOnlyScaled']"/>
+	<remove xpath="//lootgroup[@name='grills']/item[@name='booksRareOnlyScaled']"/>
+	<remove xpath="//lootgroup[@name='grills']/item[@name='foodRottingFlesh']"/>
+	<remove xpath="//lootgroup[@name='grills']/item[@name='foodRottingFlesh']"/>
+	<remove xpath="//lootgroup[@name='grills']/item[@name='foodRottingFlesh']"/>
+	<remove xpath="//lootgroup[@name='grills']/item[@name='foodRottingFlesh']"/>
+
+	<remove xpath="//lootcontainer[@id='12']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootcontainer[@id='14']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootcontainer[@id='15']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootcontainer[@id='24']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootcontainer[@id='42']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootcontainer[@id='43']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootcontainer[@id='44']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootcontainer[@id='48']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootcontainer[@id='49']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootcontainer[@id='60']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootcontainer[@id='67']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootcontainer[@id='70']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootcontainer[@id='71']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootcontainer[@id='89']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootcontainer[@id='95']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootcontainer[@id='135']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootcontainer[@id='136']/item[@name='booksAllScaled']"/>
+	<remove xpath="//lootcontainer[@id='34']/item[@name='booksRareOnlyScaled']"/>
+	<remove xpath="//lootcontainer[@id='73']/item[@name='booksRareOnlyScaled']"/>
+	<remove xpath="//lootcontainer[@id='95']/item[@name='booksRareOnlyScaled']"/>
+	<remove xpath="//lootcontainer[@id='104']/item[@name='booksRareOnlyScaled']"/>
+
+	<remove xpath="//lootcontainer[@id='520']/item[@name='twitch_books1']"/>
+	<remove xpath="//lootcontainer[@id='521']/item[@name='twitch_books2']"/>
+	<remove xpath="//lootcontainer[@id='522']/item[@name='twitch_books3']"/>
+
+
+   <!-- REMOVE CRAP FROM LOOT -->
+	<remove xpath="//lootgroup[@name='grills']/item[@name='foodRottingFlesh']"/>
+
+	<remove xpath="//lootgroup[@name='rottenFood']/item[@name='foodShamSandwich']"/>
+
+	<remove xpath="//lootgroup[@name='workbenchLoot']/item[@name='resourceCloth']"/>
+	<remove xpath="//lootgroup[@name='workbenchLoot']/item[@name='resourceScrapPolymers']"/>
+
+	<remove xpath="//lootgroup[@name='chemistryStationLoot']/item[@name='resourceCropCottonPlant']"/>
+
+	<remove xpath="//lootgroup[@name='junk']/item[@name='resourceCloth']"/>
+	<remove xpath="//lootgroup[@name='junk']/item[@name='resourceFeather']"/>
+	<remove xpath="//lootgroup[@name='junk']/item[@name='resourceScrapPolymers']"/>
+
+	<remove xpath="//lootgroup[@name='medicine']/item[@name='medicalBandage']"/>
+
+	<remove xpath="//lootgroup[@name='workingStiffsSub']/item[@name='resourceScrapPolymers']"/>
+
+	<remove xpath="//lootgroup[@name='storeLootFood']/item[@name='resourceScrapPolymers']"/>
+
+	<remove xpath="//lootgroup[@name='storeLootDrink']/item[@name='resourceScrapPolymers']"/>
+
+	<remove xpath="//lootgroup[@name='labEquipment']/item[@name='resourceScrapPolymers']"/>
+
+	<remove xpath="//lootgroup[@name='survivalMedical']/item[@name='medicalBandage']"/>
+
+	<remove xpath="//lootgroup[@name='shamwaySafeFiller']/item[@name='resourcePaper']"/>
+
+	<remove xpath="//lootgroup[@name='groupBirdNestMain']/item[@name='resourceFeather']"/>
+
+	<remove xpath="//lootcontainer[@id='12']/item[@name='meleeToolPaintTool']"/>
+
+	<remove xpath="//lootcontainer[@id='13']/item[@name='resourceCloth']"/>
+
+	<remove xpath="//lootcontainer[@id='14']/item[@name='resourcePaper']"/>
+
+	<remove xpath="//lootcontainer[@id='15']/item[@name='meleeToolPaintTool']"/>
+
+	<remove xpath="//lootcontainer[@id='18']/item[@name='resourceCloth']"/>
+
+	<remove xpath="//lootcontainer[@id='21']/item[@name='resourceScrapPolymers']"/>
+
+	<remove xpath="//lootcontainer[@id='22']/item[@name='meleeToolPaintTool']"/>
+
+	<remove xpath="//lootcontainer[@id='35']/item[@name='resourceScrapPolymers']"/>
+
+	<remove xpath="//lootcontainer[@id='37']/item[@name='resourceCloth']"/>
+
+	<remove xpath="//lootcontainer[@id='43']/item[@name='resourcePaper']"/>
+
+	<remove xpath="//lootcontainer[@id='44']/item[@name='resourcePaper']"/>
+
+	<remove xpath="//lootcontainer[@id='48']/item[@name='resourcePaper']"/>
+
+	<remove xpath="//lootcontainer[@id='51']/item[@name='resourceScrapPolymers']"/>
+
+	<remove xpath="//lootcontainer[@id='54']/item[@name='resourceScrapPolymers']"/>
+
+	<remove xpath="//lootcontainer[@id='55']/item[@name='resourcePaper']"/>
+
+	<remove xpath="//lootcontainer[@id='59']/item[@name='foodShamSandwich']"/>
+	<remove xpath="//lootcontainer[@id='59']/item[@name='resourcePaper']"/>
+	<remove xpath="//lootcontainer[@id='59']/item[@name='resourceScrapPolymers']"/>
+
+	<remove xpath="//lootcontainer[@id='60']/item[@name='resourcePaper']"/>
+
+	<remove xpath="//lootcontainer[@id='88']/item[@name='meleeToolPaintTool']"/>
+
+	<remove xpath="//lootcontainer[@id='89']/item[@name='resourcePaper']"/>
+	<remove xpath="//lootcontainer[@id='89']/item[@name='resourceScrapPolymers']"/>
+
+	<remove xpath="//lootcontainer[@id='96']/item[@name='resourcePaper']"/>
+
+	<remove xpath="//lootcontainer[@id='123']/item[@name='resourceCloth']"/>
+
+	<remove xpath="//lootcontainer[@id='124']/item[@name='resourceScrapPolymers']"/>
+	<remove xpath="//lootcontainer[@id='124']/item[@name='meleeToolPaintTool']"/>
+
+	<remove xpath="//lootcontainer[@id='125']/item[@name='resourceScrapPolymers']"/>
+	<remove xpath="//lootcontainer[@id='125']/item[@name='meleeToolPaintTool']"/>
+
+	<remove xpath="//lootcontainer[@id='130']/item[@name='resourceCloth']"/>
+	<remove xpath="//lootcontainer[@id='130']/item[@name='resourceScrapPolymers']"/>
+
+	<remove xpath="//lootcontainer[@id='135']/item[@name='resourcePaper']"/>
+
+	<remove xpath="//lootcontainer[@id='136']/item[@name='resourcePaper']"/>
+
+	<remove xpath="//lootcontainer[@id='141']/item[@name='resourceCloth']"/>
+
+	<remove xpath="//lootcontainer[@id='142']/item[@name='resourceCloth']"/>
+
+	<remove xpath="//lootcontainer[@id='145']/item[@name='resourcePaper']"/>
+
+	<remove xpath="//lootgroup[@name='booksAllScaled']/item[@group='groupQuestChallenge']"/>
+	<remove xpath="//lootgroup[@name='booksRareOnlyScaled']/item[@group='groupQuestChallenge']"/>
+	<remove xpath="//lootgroup[@name='junk']/item[@group='groupQuestChallenge']"/>
+	<remove xpath="//lootcontainer[@id='70']/item[@group='groupQuestChallenge']"/>
+	<remove xpath="//lootcontainer[@id='71']/item[@group='groupQuestChallenge']"/>
+	<remove xpath="//lootcontainer[@id='73']/item[@group='groupQuestChallenge']"/>
+   
 	<append xpath="/lootcontainers">
 
 		<lootgroup name="FuriousRamsayGroupContainerTrainerHunter" count="all">

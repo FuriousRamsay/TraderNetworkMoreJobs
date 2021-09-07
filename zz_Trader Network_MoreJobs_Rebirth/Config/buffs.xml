@@ -27,10 +27,10 @@
 		</append>
 
 		<!-- PARKOUR -->
-		<set xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$parkourBonus' and @value='.0162']">0.008</set>
-		<set xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$parkourBonus' and @value='.0304']">0.016</set>
-		<set xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$parkourBonus' and @value='.0587']">0.024</set>
-		<set xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$parkourBonus' and @value='.0728']">0.032</set>
+		<setattribute xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$parkourBonus' and @value='.0162']" name="value">0.008</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$parkourBonus' and @value='.0304']" name="value">0.016</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$parkourBonus' and @value='.0587']" name="value">0.024</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$parkourBonus' and @value='.0728']" name="value">0.032</setattribute>
 
 		<append xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group">		
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$parkourBonus" operation="set" value="0.04">
@@ -54,15 +54,17 @@
 		</append>
 
 		<!-- RUN AND GUN -->
-		<set xpath="/buffs/buff[@name='buffReloadMovementPenalty']/effect_group/passive_effect[@name='WalkSpeed' and @value='.5']">.5</set>
-		<set xpath="/buffs/buff[@name='buffReloadMovementPenalty']/effect_group/passive_effect[@name='RunSpeed' and @value='.5']">.5</set>
-		<set xpath="/buffs/buff[@name='buffReloadMovementPenalty']/effect_group/passive_effect[@name='JumpStrength' and @value='.5']">.5</set>
-		<set xpath="/buffs/buff[@name='buffReloadMovementPenalty']/effect_group/passive_effect[@name='WalkSpeed' and @value='.35']">.45</set>
-		<set xpath="/buffs/buff[@name='buffReloadMovementPenalty']/effect_group/passive_effect[@name='RunSpeed' and @value='.35']">.45</set>
-		<set xpath="/buffs/buff[@name='buffReloadMovementPenalty']/effect_group/passive_effect[@name='JumpStrength' and @value='.35']">.45</set>
-		<set xpath="/buffs/buff[@name='buffReloadMovementPenalty']/effect_group/passive_effect[@name='WalkSpeed' and @value='.2']">.4</set>
-		<set xpath="/buffs/buff[@name='buffReloadMovementPenalty']/effect_group/passive_effect[@name='RunSpeed' and @value='.2']">.4</set>
-		<set xpath="/buffs/buff[@name='buffReloadMovementPenalty']/effect_group/passive_effect[@name='JumpStrength' and @value='.2']">.4</set>
+		<setattribute xpath="/buffs/buff[@name='buffReloadMovementPenalty']/effect_group/passive_effect[@name='WalkSpeed' and @value='.5']" name="value">.5</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffReloadMovementPenalty']/effect_group/passive_effect[@name='RunSpeed' and @value='.5']" name="value">.5</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffReloadMovementPenalty']/effect_group/passive_effect[@name='JumpStrength' and @value='.5']" name="value">.5</setattribute>
+
+		<setattribute xpath="/buffs/buff[@name='buffReloadMovementPenalty']/effect_group/passive_effect[@name='WalkSpeed' and @value='.35']" name="value">.45</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffReloadMovementPenalty']/effect_group/passive_effect[@name='RunSpeed' and @value='.35']" name="value">.45</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffReloadMovementPenalty']/effect_group/passive_effect[@name='JumpStrength' and @value='.35']" name="value">.45</setattribute>
+
+		<setattribute xpath="/buffs/buff[@name='buffReloadMovementPenalty']/effect_group/passive_effect[@name='WalkSpeed' and @value='.2']" name="value">.4</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffReloadMovementPenalty']/effect_group/passive_effect[@name='RunSpeed' and @value='.2']" name="value">.4</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffReloadMovementPenalty']/effect_group/passive_effect[@name='JumpStrength' and @value='.2']" name="value">.4</setattribute>
 
 		<append xpath="/buffs/buff[@name='buffReloadMovementPenalty']">		
 			<effect_group>
@@ -116,10 +118,10 @@
 		</append>
 
 		<!-- HEAVY ARMOR -->
-		<set xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorHeavyStaminaWalk' and @value='.05']">.05</set>
-		<set xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorHeavyStaminaWalk' and @value='.1']">.075</set>
-		<set xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorHeavyStaminaWalk' and @value='.17']">.1</set>
-		<set xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorHeavyStaminaWalk' and @value='.25']">.125</set>
+		<setattribute xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorHeavyStaminaWalk' and @value='.05']" name="value">.05</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorHeavyStaminaWalk' and @value='.1']" name="value">.075</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorHeavyStaminaWalk' and @value='.17']" name="value">.1</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorHeavyStaminaWalk' and @value='.25']" name="value">.125</setattribute>
 
 		<append xpath="/buffs/buff[@name='buffStatusCheck02']">		
 			<effect_group>
@@ -155,14 +157,14 @@
 		</append>
 
 		<!-- LIGHT ARMOR -->
-		<set xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorLightStaminaWalk' and @value='.1']">.05</set>
-		<set xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorLightMobility' and @value='.15']">.05</set>
-		<set xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorLightStaminaWalk' and @value='.2']">.1</set>
-		<set xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorLightMobility' and @value='.3']">.1</set>
-		<set xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorLightStaminaWalk' and @value='.35']">.15</set>
-		<set xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorLightMobility' and @value='.5']">.15</set>
-		<set xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorLightStaminaWalk' and @value='.5']">.2</set>
-		<set xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorLightMobility' and @value='.75']">.2</set>
+		<setattribute xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorLightStaminaWalk' and @value='.1']" name="value">.05</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorLightMobility' and @value='.15']" name="value">.05</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorLightStaminaWalk' and @value='.2']" name="value">.1</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorLightMobility' and @value='.3']" name="value">.1</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorLightStaminaWalk' and @value='.35']" name="value">.15</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorLightMobility' and @value='.5']" name="value">.15</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorLightStaminaWalk' and @value='.5']" name="value">.2</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='.ArmorLightMobility' and @value='.75']" name="value">.2</setattribute>
 		
 		<append xpath="/buffs/buff[@name='buffStatusCheck02']">		
 			<effect_group>
@@ -290,11 +292,11 @@
 		</append>
 
 		<!-- HEALING FACTOR -->
-		<set xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='$critHitNaturalHealingRate' and @value='1.2']">1.1</set>
-		<set xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='$critHitNaturalHealingRate' and @value='1.4']">1.2</set>
-		<set xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='$critHitNaturalHealingRate' and @value='1.6']">1.3</set>
-		<set xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='$critHitNaturalHealingRate' and @value='1.8']">1.4</set>
-		<set xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='$critHitNaturalHealingRate' and @value='2']">1.5</set>
+		<setattribute xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='$critHitNaturalHealingRate' and @value='1.2']" name="value">1.1</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='$critHitNaturalHealingRate' and @value='1.4']" name="value">1.2</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='$critHitNaturalHealingRate' and @value='1.6']" name="value">1.3</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='$critHitNaturalHealingRate' and @value='1.8']" name="value">1.4</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group/triggered_effect[@cvar='$critHitNaturalHealingRate' and @value='2']" name="value">1.5</setattribute>
 
 		<append xpath="/buffs/buff[@name='buffStatusCheck02']">		
 			<effect_group>
@@ -317,18 +319,18 @@
 		</append>
 
 		<!-- SLOW METABOLISM -->
-		<set xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismResist' and @value='-1']">-.5</set>
-		<set xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismResist' and @value='-2']">-1</set>
-		<set xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismResist' and @value='-3']">-1.5</set>
-		<set xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismResist' and @value='-4']">-2</set>
-		<set xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismResist' and @value='-5']">-2.5</set>
+		<setattribute xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismResist' and @value='-1']" name="value">-.5</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismResist' and @value='-2']" name="value">-1</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismResist' and @value='-3']" name="value">-1.5</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismResist' and @value='-4']" name="value">-2</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismResist' and @value='-5']" name="value">-2.5</setattribute>
 
-		<set xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismDuration' and @value='.909']">.909</set>
-		<set xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismDuration' and @value='.833']">.880.5</set>
-		<set xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismDuration' and @value='.769']">.850</set>
-		<set xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismDuration' and @value='.714']">.8195</set>
-		<set xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismDuration' and @value='.667']">.789</set>
-		
+		<setattribute xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismDuration' and @value='.909']" name="value">.909</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismDuration' and @value='.833']" name="value">.8805</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismDuration' and @value='.769']" name="value">.850</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismDuration' and @value='.714']" name="value">.8195</setattribute>
+		<setattribute xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$MetabolismDuration' and @value='.667']" name="value">.789</setattribute>
+	
 		<append xpath="/buffs/buff[@name='buffStatusCheck02']/effect_group">		
 			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$MetabolismResist" operation="set" value="-3">
 				<requirement name="ProgressionLevel" progression_name="perkSlowMetabolism" operation="Equals" value="6"/>
