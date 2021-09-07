@@ -1,7 +1,30 @@
 <Config>
 
 		<remove xpath="/buffs/buff[@name='buffDeathFoodDrinkAdjust']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate']"/>
-		<!--<remove xpath="/buffs/buff[@name='buffDeathFoodDrinkAdjust']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @stat='Health']"/>-->
+
+		<append xpath="/buffs/buff[@name='god']/effect_group">		
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="FuriousRamsayProcessRespawnDebuffs"/>	
+		</append>
+
+		<!-- ADD NEAR DEATH MESSAGING WHEN YOU REACH CERTAIN LEVELS -->
+		<append xpath="/buffs/buff[@name='buffLevelUpTracking']">		
+			<effect_group name="FuriousRamsayPlayerLevel11">
+				<requirement name="PlayerLevel" operation="Equals" value="11"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[5fcf68][I]Near-death will now hurt some[/I][-]"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayPlayerLevel26">
+				<requirement name="PlayerLevel" operation="Equals" value="26"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[d2d461][I]Near-death is now a bit of an issue[/I][-]"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayPlayerLevel51">
+				<requirement name="PlayerLevel" operation="Equals" value="51"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[d9b464][I]Near-death is now quite painful[/I][-]"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayPlayerLevel101">
+				<requirement name="PlayerLevel" operation="Equals" value="101"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ShowToolbeltMessage" message="[d96c64][I]Near-death will now make you wish you had died[/I][-]"/>
+			</effect_group>
+		</append>
 
 		<!-- PARKOUR -->
 		<set xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$parkourBonus' and @value='.0162']">0.008</set>
@@ -21148,6 +21171,11 @@
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="set" value="120"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="add" value="-1"/>
 
+					<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="cold,heat,electrical"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_add" value="200"/>
+					<passive_effect name="PhysicalDamageResist" operation="base_add" value="200" tags="coredamageresist"/>
+					<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="heat,electrical"/>
+
 					<passive_effect name="HealthChangeOT" operation="base_set" value="0"/>
 					<passive_effect name="FoodChangeOT" operation="base_set" value="0"/>
 					<passive_effect name="WaterChangeOT" operation="base_set" value="0"/>
@@ -21218,7 +21246,7 @@
 					<requirement name="PlayerLevel" operation="LT" value="11"/>
 					<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="119"/>
 
-					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="set" value="75"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="set" value="100"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Food" operation="set" value="75"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Water" operation="set" value="75"/>
 			
@@ -21242,10 +21270,10 @@
 					<requirement name="PlayerLevel" operation="LT" value="21"/>
 					<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="119"/>
 
-					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="set" value="70"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="set" value="80"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Food" operation="set" value="70"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Water" operation="set" value="70"/>
-			
+					
 					<passive_effect name="BuffResistance" operation="base_add" value="5" tags="buffInfectionCatch"/>
 
 					<passive_effect name="BuffResistance" operation="base_subtract" value="5" tags="buffInjuryConcussion,buffLegSprainedCHTrigger,buffArmSprainedCHTrigger,buffAbrasionCatch,buffLaceration"/>
@@ -21273,7 +21301,7 @@
 					<requirement name="PlayerLevel" operation="LT" value="51"/>
 					<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="119"/>
 
-					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="set" value="65"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="set" value="70"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Food" operation="set" value="60"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Water" operation="set" value="60"/>
 

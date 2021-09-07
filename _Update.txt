@@ -1,55 +1,54 @@
-CHECK: How long a corpse really needs to stay for EntitySurvivor and EntityBandits (less NREs)
+TODO: Remove books from lootgroups
 
-CHECK: UL SOR: Crafted armor does not have stats
-				ERR when clicking on Omni extract
+TODO: bookshelves will have recipes for some food, drinks, medecine and probability is reduced. 
+
+TODO: Include books to scrap for paper instead of paper in bookshelves
+
+TODO: Add finding a trader to the main storyline
+
+TODO: Tag all blocks (individually)
+
+<!-- START: HUNTER -->
+TODO: Tracking for hunters
+
+TODO: Hunter sneak kills with bows augment sneak abilities (undetected and damage with bows)
+TODO: Hunter damage while throwing spears will scale as you use it
+
+<!-- START: HUNTER -->
+
+TODO: item to make you invincible for x seconds (max once every 20 minutes)
+
+===================================================
+HAVE FX TRY
+===================================================
+
+TODO: penalties for starving or being thirsty
+
+TODO: Hook up items to augment constitution when healing or eating good food
 
 TODO: Quests with invisible entity giving special debuffs (no ranged, impaired visibility, etc)
-
-TODO: Knowledge goes up when harvesting cars,appliances
 
 TODO: Change recipes for basic stone tools
 
 TODO: Centralize Genetics XP Variables
 
-TODO: Custom var for havesting cars which ups exp for crafting vehicles
-
-TODO: Reduce xp gain for upgrading and mining
-TODO: bookshelves will have recipes for some food, drinks, medecine and probability is reduced. 
-
-TODO: Include books to scrap for paper instead of paper in bookshelves
-
 TODO: Electrical purchased from Briston
-
-TODO: Give Charisma xp based on mission tiers
-
-TODO: Charisma perks all level with Charisma xp until more hooks are available
 
 TODO: Handyman trader sells building supplies like doors, hatches, etc
 
 TODO: Make player vending machine sold by Briston at Better Barter 3
 
-TODO: Hook up items to augment constitution when healing or eating good food
-
-TODO: augment intelligence when doing a mission by using invisible entities
-
-TODO: augment charisma when doing a mission by using invisible entities (when mission is completed)?
-
-TODO: Tag all blocks (individually)
-
-TODO: Tracking for hunters
-
 TODO: builder jump land ragdoll. Activate variable using secondary attack when you hit an enemy, buff lasts x seconds and you can jump and land for aoe ragdoll damage
 
 TODO: Madman, jump axe hit (mechanic like charged assault)
 
-TODO: Hunter sneak kills with bows augment sneak abilities (undetected and damage with bows)
-TODO: Hunter damage while throwing spears will scale as you use it
-
-TODO: Soldier successive knuckle hits will increase attack speed
+TODO: Soldier successive knuckle hits will increase movement speed
 
 TODO: Rename auras to things like War Cry
 
 TODO: Damage auras using particles
+
+TODO: Reduce xp gain for upgrading and mining
 
 TODO: Make a list of all actions that work (test them)
 onSelfRespawn (add status effects)
@@ -78,25 +77,17 @@ melee kills, mining strength
 buying charisma
 TODO: RE-TEST ALL MISSIONS
 
-TODO: Add fnding a trader to the main storyline
-
 TODO: look if you can use CVARS elsewhere than in buffs
 
 TODO: water from faucets (rebirth)
 
 TODO: Penalty for killing citizen
 
-I leveled up chef with a spear?
-
 ===========================
-
-TODO: Remove stats from glasses and replace with new skills (rebirth)
 
 TODO: Finish Thug Abilities. One per weapon?
 TODO: Figuer out how Trainer helps with the player progression
 TODO: Add 2 new Thug Achievements. One achievement unlocks the Jackal knife.
-
-TODO: WAKE UP WITH A RANDOM DEBUFF
 
 TODO: Remove References to unused buffs/perks
 
@@ -108,8 +99,6 @@ TODO: Auras will incur a cost
 TODO: Ability to turn your aura off in the
 TODO: what to do when multiple people have the same aura
 
-TODO: Remove books from lootgroups
-
 TODO: Achievements for each class (default 1 level)
 
 TODO: Deployable turrets provide XP when held only
@@ -119,7 +108,6 @@ TODO: Add ability to craft ammo and arrows to certain classes
 TODO: Verify that all classes have functional auras. Chef (Hunger - finish)
 
 TODO: Add trainers to faction wars
-TEST: Faction wars, die, start another, errors
 TODO: Prevent ally bear explosion from affecting traders
 
 TODO: Adjust base damage for specialized weapons compared to when you aren't, much higher for some
@@ -128,7 +116,6 @@ TODO: cannot loot certain items, like steel clubs, steel spears
 TODO: cannot buy steel clubs, steel spears, etc
 
 TODO: Change items that affect attributes such as glasses
-TODO: replace locked doors with unlocked? (Look at DF xml commercialDoor1_v1)
 
 TODO: Add shock and burn attack effect for Technogeek and chef trainers, bleed for chef, hunter, soldier and butcher trainers, 50% chance ragdoll for thug, 70% for builder
 
@@ -196,18 +183,7 @@ Main:
 //Added Spawnable Mechanical Allies in Multiplayer (based on Decoy mechanic), now purchasable from Player vending machines at trader POIs
 //Adjusted toolbelt notification when deploying mechanical allies in multiplayer to ensure players stay clear of the area they deploy them in to not affect the deployment process (could result in nothing happening)
 //Added ability to stack Mechanical Pets up to 25 in multiplayer.
-Added Skulls
-Added localization for bandit gear
-TODO: Check why bandit gear has no stats
-Updated quest entities
-Only biome spawned bandits will drop loot
-Changed faction war challenge to rally point
-added buff to vanilla traders to kill off bandits and survivors when too close (NREs)
-Updated Protect quests
-Updated Hazard quests
-Updated Black Shield titans challenge
-Updated Steal Tech quests
-Updated Ghosts quests
+Reduced time corpse stay after death for EntitySurvivor and EntityBandit (reduce NRE time)
 
 Items and Blocks:
 
@@ -216,9 +192,7 @@ I See and Hear You:
 Locate New Traders:
 
 Biome:
-Added Skulls to spawns
-Added loot drop for Skulls
-Added Missing localization
+
 
 Friendly Biome:
 
