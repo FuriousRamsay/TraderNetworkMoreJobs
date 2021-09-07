@@ -1,6 +1,7 @@
 <Config>
 
-		<!--<remove xpath="/buffs/buff[@name='buffDeathFoodDrinkAdjust']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate']"/>-->
+		<remove xpath="/buffs/buff[@name='buffDeathFoodDrinkAdjust']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate']"/>
+		<!--<remove xpath="/buffs/buff[@name='buffDeathFoodDrinkAdjust']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @stat='Health']"/>-->
 
 		<!-- PARKOUR -->
 		<set xpath="/buffs/buff[@name='buffPerkAbilityUpdate']/effect_group/triggered_effect[@cvar='$parkourBonus' and @value='.0162']">0.008</set>
@@ -21136,74 +21137,133 @@
 				</effect_group>
 			</buff>
 
-			<buff name="FuriousRamsayRespawnDebuffsToo">
+			<buff name="FuriousRamsayProcessRespawnDebuffs" icon="ui_game_symbol_skull" icon_color="137, 184, 118" name_key="FuriousRamsayProcessRespawnDebuffsName" description_key="FuriousRamsayProcessRespawnDebuffsDesc">
+				<display_value value="$varFuriousRamsayRespawnDebuffCounter"/><display_value_key value="{0}s"/>
 				<stack_type value="ignore"/>
-				<duration value="20"/>
+				<duration value="120"/>
 				<update_rate value="1"/>
 
 				<!-- HEALTH, FOOD, WATER -->
 				<effect_group name="FuriousRamsayRespawnCounter">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="set" value="0"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="set" value="120"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="add" value="-1"/>
+
+					<passive_effect name="HealthChangeOT" operation="base_set" value="0"/>
+					<passive_effect name="FoodChangeOT" operation="base_set" value="0"/>
+					<passive_effect name="WaterChangeOT" operation="base_set" value="0"/>
+					<passive_effect name="HealthChangeOT" operation="perc_set" value="0"/>
+					<passive_effect name="FoodChangeOT" operation="perc_set" value="0"/>
+					<passive_effect name="WaterChangeOT" operation="perc_set" value="0"/>
+
+					<passive_effect name="HealthChangeOT" operation="perc_add" value="-1.2"/>
+					<passive_effect name="FoodChangeOT" operation="perc_add" value="-1.2"/>
+
+					<passive_effect name="FoodLossPerHealthPointLost" operation="base_set" value="0"/>
+					<passive_effect name="WaterLossPerHealthPointGained" operation="base_set" value="0"/>
+			
 				</effect_group>
 
+				<!--<effect_group>
+					<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
+							<triggered_effect trigger="onSelfBuffStart" action="RemoveAllNegativeBuffs"/>
+
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$armHurtCounter" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$legHurtCounter" operation="set" value="0"/>
+
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="healAbrasionMult" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="foodHealthAmount" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$abrasionHealthMaxBlockage" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$abrasionCounter" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugPainkillersDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugVitaminsDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffFoodStaminaBonus"/>
+
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugVitaminsDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugPainkillersDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugSteroidsDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugRecogDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugFortBitesDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugAtomJunkiesDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugCovertCatsDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugEyeKandyDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugHackersDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugHealthBarDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugJailBreakersDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugNerdTatsDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugOhShitzDropsDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugRockBustersDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugSkullCrushersDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffDrugSugarButtsDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffShamChowderDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffPumpkinCheesecakeDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffRedTeaDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffRedTeaDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffYuccaJuiceSmoothieDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffCoffeeBSDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffBeerDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffGrandpasMoonshineDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffGrandpasAwesomeSauceDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffGrandpasLearningElixirDuration" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$foodAmountAdd" operation="set" value="0"/>
+						<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$waterAmountAdd" operation="set" value="0"/>
+				</effect_group>-->
+
 			<!-- AILMENTS -->
-				<!-- PLAYER LEVEL 1-25 -->
+				<!-- PLAYER LEVEL 1-10 -->
 				<effect_group name="FuriousRamsayRespawnAilmentsLow">
 					<requirement name="PlayerLevel" operation="GT" value="0"/>
-					<requirement name="PlayerLevel" operation="LT" value="21"/>
+					<requirement name="PlayerLevel" operation="LT" value="11"/>
+					<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="119"/>
 
-					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="set" value="80">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Food" operation="set" value="80">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Water" operation="set" value="80">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-					</triggered_effect>
-
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="set" value="75"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Food" operation="set" value="75"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Water" operation="set" value="75"/>
+			
 					<passive_effect name="BuffResistance" operation="base_add" value="5" tags="buffInfectionCatch"/>
 
-					<passive_effect name="BuffResistance" operation="base_subtract" value="5" tags="buffAbrasionCatch">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="1"/>
-					</passive_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffAbrasionCatch">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="1"/>
-					</triggered_effect>
-					<passive_effect name="BuffResistance" operation="base_subtract" value="5" tags="buffLegSprainedCHTrigger">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="1"/>
-					</passive_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffLegSprainedCHTrigger">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
-					</triggered_effect>
-					<passive_effect name="BuffResistance" operation="base_subtract" value="5" tags="buffArmSprainedCHTrigger">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="1"/>
-					</passive_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffArmSprainedCHTrigger">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
-					</triggered_effect>
-					<passive_effect name="BuffResistance" operation="base_subtract" value="5" tags="buffLaceration">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="1"/>
-					</passive_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffLaceration">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
-					</triggered_effect>
-					<passive_effect name="BuffResistance" operation="base_subtract" value="5" tags="buffInjuryConcussion">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="1"/>
-					</passive_effect>
+					<passive_effect name="BuffResistance" operation="base_subtract" value="5" tags="buffInjuryConcussion,buffLegSprainedCHTrigger,buffArmSprainedCHTrigger"/>
 					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffInjuryConcussion">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffLegSprainedCHTrigger">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,8" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffArmSprainedCHTrigger">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,8" operation="Equals" value="1"/>
+					</triggered_effect>
+				</effect_group>
+
+				<!-- PLAYER LEVEL 11-25 -->
+				<effect_group name="FuriousRamsayRespawnAilmentsLow">
+					<requirement name="PlayerLevel" operation="GT" value="10"/>
+					<requirement name="PlayerLevel" operation="LT" value="21"/>
+					<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="119"/>
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="set" value="70"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Food" operation="set" value="70"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Water" operation="set" value="70"/>
+			
+					<passive_effect name="BuffResistance" operation="base_add" value="5" tags="buffInfectionCatch"/>
+
+					<passive_effect name="BuffResistance" operation="base_subtract" value="5" tags="buffInjuryConcussion,buffLegSprainedCHTrigger,buffArmSprainedCHTrigger,buffAbrasionCatch,buffLaceration"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffInjuryConcussion">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="1"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffLegSprainedCHTrigger">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,6" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffArmSprainedCHTrigger">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,6" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffAbrasionCatch">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,10" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffLaceration">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,10" operation="Equals" value="1"/>
 					</triggered_effect>
 				</effect_group>
 
@@ -21211,40 +21271,42 @@
 				<effect_group name="FuriousRamsayRespawnAilmentsMedium">
 					<requirement name="PlayerLevel" operation="GT" value="20"/>
 					<requirement name="PlayerLevel" operation="LT" value="51"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerInfection">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
+					<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="119"/>
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="set" value="65"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Food" operation="set" value="60"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Water" operation="set" value="60"/>
+
+					<passive_effect name="BuffResistance" operation="base_add" value="5" tags="buffInfectionCatch"/>
+
+					<passive_effect name="BuffResistance" operation="base_subtract" value="5" tags="buffInjuryConcussion,buffLegSprainedCHTrigger,buffArmSprainedCHTrigger,buffAbrasionCatch,buffLaceration,buffFatiguedTrigger"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffInjuryConcussion">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="1"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffLegSprainedCHTrigger">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,2" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffArmSprainedCHTrigger">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,4" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffAbrasionCatch">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,8" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffLaceration">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,8" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffFatiguedTrigger">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,8" operation="Equals" value="1"/>
+					</triggered_effect>
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffArmBroken">
 						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerAbrasion">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffLegBroken">
 						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerSprainedLeg">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerBrokenLeg">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerSprainedArm">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerBrokenArm">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerFatigued">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerLaceration">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
-					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerConcussion">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffInfectionCatch">
 						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
 					</triggered_effect>
 				</effect_group>
@@ -21253,40 +21315,42 @@
 				<effect_group name="FuriousRamsayRespawnAilmentsMedium">
 					<requirement name="PlayerLevel" operation="GT" value="50"/>
 					<requirement name="PlayerLevel" operation="LT" value="101"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerInfection">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="119"/>
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="set" value="60"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Food" operation="set" value="40"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Water" operation="set" value="40"/>
+
+					<passive_effect name="BuffResistance" operation="base_add" value="5" tags="buffInfectionCatch"/>
+
+					<passive_effect name="BuffResistance" operation="base_subtract" value="5" tags="buffInjuryConcussion,buffLegSprainedCHTrigger,buffArmSprainedCHTrigger,buffAbrasionCatch,buffLaceration,buffFatiguedTrigger,buffArmBroken,buffLegBroken"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffInjuryConcussion">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="1"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerAbrasion">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffLegSprainedCHTrigger">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,3" operation="Equals" value="1"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerSprainedLeg">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffArmSprainedCHTrigger">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,3" operation="Equals" value="1"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerBrokenLeg">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffAbrasionCatch">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,4" operation="Equals" value="1"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerSprainedArm">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffLaceration">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,4" operation="Equals" value="1"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerBrokenArm">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffFatiguedTrigger">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,4" operation="Equals" value="1"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerFatigued">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffArmBroken">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,5" operation="Equals" value="1"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerLaceration">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffLegBroken">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,5" operation="Equals" value="1"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerConcussion">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffInfectionCatch">
 						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
 					</triggered_effect>
 				</effect_group>
@@ -21294,41 +21358,40 @@
 				<!-- PLAYER LEVEL 101+ -->
 				<effect_group name="FuriousRamsayRespawnAilmentsMedium">
 					<requirement name="PlayerLevel" operation="GT" value="100"/>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerInfection">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
+					<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="119"/>
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Food" operation="set" value="20"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Water" operation="set" value="20"/>
+
+					<passive_effect name="BuffResistance" operation="base_subtract" value="5" tags="buffInjuryConcussion,buffLegSprainedCHTrigger,buffArmSprainedCHTrigger,buffAbrasionCatch,buffLaceration,buffFatiguedTrigger,buffArmBroken,buffLegBroken,buffInfectionCatch"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffInjuryConcussion">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="1"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerAbrasion">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
+
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffLegSprainedCHTrigger">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,3" operation="Equals" value="1"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerSprainedLeg">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffArmSprainedCHTrigger">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,3" operation="Equals" value="1"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerBrokenLeg">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffAbrasionCatch">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,3" operation="Equals" value="1"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerSprainedArm">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffLaceration">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,3" operation="Equals" value="1"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerBrokenArm">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffFatiguedTrigger">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,3" operation="Equals" value="1"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerFatigued">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffArmBroken">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,3" operation="Equals" value="1"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerLaceration">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffLegBroken">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,3" operation="Equals" value="1"/>
 					</triggered_effect>
-					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="triggerConcussion">
-						<requirement name="CVarCompare" cvar="$varFuriousRamsayRespawnDebuffCounter" operation="Equals" value="1"/>
-						<requirement name="RandomRoll" seed_type="Random" min_max="1,1" operation="Equals" value="0"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="buffInfectionCatch">
+						<requirement name="RandomRoll" seed_type="Random" min_max="1,5" operation="Equals" value="0"/>
 					</triggered_effect>
 				</effect_group>
 			</buff>	
@@ -21336,7 +21399,7 @@
 			<buff name="FuriousRamsayRespawnDebuffs" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayRespawnDebuffs">
-					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="FuriousRamsayRespawnDebuffsToo"/>
+					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="FuriousRamsayProcessRespawnDebuffs"/>
 				</effect_group>
 			</buff>
 
