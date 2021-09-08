@@ -2750,7 +2750,7 @@
 	</perk>
 
 	<!-- SOLDIER -->
-	<perk name="FuriousRamsayPerkKnuckles" max_level="10" parent="FuriousRamsaySkillSoldierExpertise" name_key="FuriousRamsayPerkKnucklesName" desc_key="FuriousRamsayPerkKnucklesDesc" icon="">
+	<perk name="FuriousRamsayPerkAxe" max_level="10" parent="FuriousRamsaySkillSoldierExpertise" name_key="FuriousRamsayPerkAxeName" desc_key="FuriousRamsayPerkAxeDesc" icon="">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattsoldier" operation="GTE" value="1" desc_key="FuriousRamsayReqSoldierLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattsoldier" operation="GTE" value="2" desc_key="FuriousRamsayReqSoldierLevel02"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattsoldier" operation="GTE" value="3" desc_key="FuriousRamsayReqSoldierLevel03"/></level_requirements>
@@ -2762,28 +2762,29 @@
 		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattsoldier" operation="GTE" value="9" desc_key="FuriousRamsayReqSoldierLevel09"/></level_requirements>
 		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattsoldier" operation="GTE" value="10" desc_key="FuriousRamsayReqSoldierLevel10"/></level_requirements>
 		<effect_group>
-			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.15,-.2,-.25,-.3,-.4,-.5" tags="FuriousRamsayKnuckles"/>
-			<passive_effect name="AttacksPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.175,-.2,-.225,-.25" tags="FuriousRamsayKnuckles"/>
-			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,4,4,5,5,6,6" tags="FuriousRamsayKnuckles"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,10" value="1" tags="modMeleeErgonomicGrip"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="meleeWpnKnucklesT1IronKnuckles"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.15,-.2,-.25,-.3,-.4,-.5" tags="FuriousRamsayAxes"/>
+			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="FuriousRamsayAxes"/>
+			<passive_effect name="AttacksPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.175,-.2,-.225,-.25" tags="FuriousRamsayAxes"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,4,4,5,5,6,6" tags="FuriousRamsayAxes"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,10" value="1" tags="modMeleeSerratedBlade"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="meleeToolAxeT1IronFireaxe"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modMeleeWeightedHead"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="meleeWpnKnucklesT3SteelKnuckles"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modMeleeSerratedBlade"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="meleeToolAxeT2SteelAxe"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="modMeleeClubBurningShaft"/>
 
-			<effect_description level="1" desc_key="FuriousRamsayPerkKnucklesRank1Desc" long_desc_key="FuriousRamsayPerkKnucklesRank1LongDesc"/>
-			<effect_description level="2" desc_key="FuriousRamsayPerkKnucklesRank2Desc" long_desc_key="FuriousRamsayPerkKnucklesRank2LongDesc"/>
-			<effect_description level="3" desc_key="FuriousRamsayPerkKnucklesRank3Desc" long_desc_key="FuriousRamsayPerkKnucklesRank3LongDesc"/>
-			<effect_description level="4" desc_key="FuriousRamsayPerkKnucklesRank4Desc" long_desc_key="FuriousRamsayPerkKnucklesRank4LongDesc"/>
-			<effect_description level="5" desc_key="FuriousRamsayPerkKnucklesRank5Desc" long_desc_key="FuriousRamsayPerkKnucklesRank5LongDesc"/>
-			<effect_description level="6" desc_key="FuriousRamsayPerkKnucklesRank6Desc" long_desc_key="FuriousRamsayPerkKnucklesRank6LongDesc"/>
-			<effect_description level="7" desc_key="FuriousRamsayPerkKnucklesRank7Desc" long_desc_key="FuriousRamsayPerkKnucklesRank7LongDesc"/>
-			<effect_description level="8" desc_key="FuriousRamsayPerkKnucklesRank8Desc" long_desc_key="FuriousRamsayPerkKnucklesRank8LongDesc"/>
-			<effect_description level="9" desc_key="FuriousRamsayPerkKnucklesRank9Desc" long_desc_key="FuriousRamsayPerkKnucklesRank9LongDesc"/>
-			<effect_description level="10" desc_key="FuriousRamsayPerkKnucklesRank10Desc" long_desc_key="FuriousRamsayPerkKnucklesRank10LongDesc"/>
+			<effect_description level="1" desc_key="FuriousRamsayPerkAxeRank1Desc" long_desc_key="FuriousRamsayPerkAxeRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkAxeRank2Desc" long_desc_key="FuriousRamsayPerkAxeRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkAxeRank3Desc" long_desc_key="FuriousRamsayPerkAxeRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkAxeRank4Desc" long_desc_key="FuriousRamsayPerkAxeRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkAxeRank5Desc" long_desc_key="FuriousRamsayPerkAxeRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkAxeRank6Desc" long_desc_key="FuriousRamsayPerkAxeRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkAxeRank7Desc" long_desc_key="FuriousRamsayPerkAxeRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkAxeRank8Desc" long_desc_key="FuriousRamsayPerkAxeRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkAxeRank9Desc" long_desc_key="FuriousRamsayPerkAxeRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkAxeRank10Desc" long_desc_key="FuriousRamsayPerkAxeRank10LongDesc"/>
 		</effect_group>
 	</perk>
-	
+
 	<perk name="FuriousRamsayPerkMarksmanRifle" max_level="10" parent="FuriousRamsaySkillSoldierExpertise" name_key="FuriousRamsayPerkMarksmanRifleName" desc_key="FuriousRamsayPerkMarksmanRifleDesc" icon="">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattsoldier" operation="GTE" value="1" desc_key="FuriousRamsayReqSoldierLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattsoldier" operation="GTE" value="2" desc_key="FuriousRamsayReqSoldierLevel02"/></level_requirements>
@@ -3472,7 +3473,7 @@
 	</perk>-->
 
 	<!-- MADMAN -->
-	<perk name="FuriousRamsayPerkAxe" max_level="10" parent="FuriousRamsaySkillMadmanExpertise" name_key="FuriousRamsayPerkAxeName" desc_key="FuriousRamsayPerkAxeDesc" icon="">
+	<perk name="FuriousRamsayPerkKnuckles" max_level="10" parent="FuriousRamsaySkillMadmanExpertise" name_key="FuriousRamsayPerkKnucklesName" desc_key="FuriousRamsayPerkKnucklesDesc" icon="">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattmadman" operation="GTE" value="1" desc_key="FuriousRamsayReqMadmanLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattmadman" operation="GTE" value="2" desc_key="FuriousRamsayReqMadmanLevel02"/></level_requirements>
 		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="furiousramsayattmadman" operation="GTE" value="3" desc_key="FuriousRamsayReqMadmanLevel03"/></level_requirements>
@@ -3484,29 +3485,28 @@
 		<level_requirements level="9"><requirement name="ProgressionLevel" progression_name="furiousramsayattmadman" operation="GTE" value="9" desc_key="FuriousRamsayReqMadmanLevel09"/></level_requirements>
 		<level_requirements level="10"><requirement name="ProgressionLevel" progression_name="furiousramsayattmadman" operation="GTE" value="10" desc_key="FuriousRamsayReqMadmanLevel10"/></level_requirements>
 		<effect_group>
-			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.15,-.2,-.25,-.3,-.4,-.5" tags="FuriousRamsayAxes"/>
-			<passive_effect name="TargetArmor" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.2,-.25,-.3,-.35" tags="FuriousRamsayAxes"/>
-			<passive_effect name="AttacksPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.175,-.2,-.225,-.25" tags="FuriousRamsayAxes"/>
-			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,4,4,5,5,6,6" tags="FuriousRamsayAxes"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,10" value="1" tags="modMeleeSerratedBlade"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="meleeToolAxeT1IronFireaxe"/>
+			<passive_effect name="EntityDamage" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.15,-.2,-.25,-.3,-.4,-.5" tags="FuriousRamsayKnuckles"/>
+			<passive_effect name="AttacksPerMinute" operation="perc_add" level="1,2,3,4,5,6,7,8,9,10" value="-.025,-.05,-.075,-.1,-.125,-.15,-.175,-.2,-.225,-.25" tags="FuriousRamsayKnuckles"/>
+			<passive_effect name="CraftingTier" operation="base_set" level="1,2,3,4,5,6,7,8,9,10" value="1,2,2,3,4,4,5,5,6,6" tags="FuriousRamsayKnuckles"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,10" value="1" tags="modMeleeErgonomicGrip"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,10" value="1" tags="meleeWpnKnucklesT1IronKnuckles"/>
 			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,10" value="1" tags="modMeleeWeightedHead"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="meleeToolAxeT2SteelAxe"/>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="7,10" value="1" tags="modMeleeClubBurningShaft"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,10" value="1" tags="meleeWpnKnucklesT3SteelKnuckles"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,10" value="1" tags="modMeleeSerratedBlade"/>
 
-			<effect_description level="1" desc_key="FuriousRamsayPerkAxeRank1Desc" long_desc_key="FuriousRamsayPerkAxeRank1LongDesc"/>
-			<effect_description level="2" desc_key="FuriousRamsayPerkAxeRank2Desc" long_desc_key="FuriousRamsayPerkAxeRank2LongDesc"/>
-			<effect_description level="3" desc_key="FuriousRamsayPerkAxeRank3Desc" long_desc_key="FuriousRamsayPerkAxeRank3LongDesc"/>
-			<effect_description level="4" desc_key="FuriousRamsayPerkAxeRank4Desc" long_desc_key="FuriousRamsayPerkAxeRank4LongDesc"/>
-			<effect_description level="5" desc_key="FuriousRamsayPerkAxeRank5Desc" long_desc_key="FuriousRamsayPerkAxeRank5LongDesc"/>
-			<effect_description level="6" desc_key="FuriousRamsayPerkAxeRank6Desc" long_desc_key="FuriousRamsayPerkAxeRank6LongDesc"/>
-			<effect_description level="7" desc_key="FuriousRamsayPerkAxeRank7Desc" long_desc_key="FuriousRamsayPerkAxeRank7LongDesc"/>
-			<effect_description level="8" desc_key="FuriousRamsayPerkAxeRank8Desc" long_desc_key="FuriousRamsayPerkAxeRank8LongDesc"/>
-			<effect_description level="9" desc_key="FuriousRamsayPerkAxeRank9Desc" long_desc_key="FuriousRamsayPerkAxeRank9LongDesc"/>
-			<effect_description level="10" desc_key="FuriousRamsayPerkAxeRank10Desc" long_desc_key="FuriousRamsayPerkAxeRank10LongDesc"/>
+			<effect_description level="1" desc_key="FuriousRamsayPerkKnucklesRank1Desc" long_desc_key="FuriousRamsayPerkKnucklesRank1LongDesc"/>
+			<effect_description level="2" desc_key="FuriousRamsayPerkKnucklesRank2Desc" long_desc_key="FuriousRamsayPerkKnucklesRank2LongDesc"/>
+			<effect_description level="3" desc_key="FuriousRamsayPerkKnucklesRank3Desc" long_desc_key="FuriousRamsayPerkKnucklesRank3LongDesc"/>
+			<effect_description level="4" desc_key="FuriousRamsayPerkKnucklesRank4Desc" long_desc_key="FuriousRamsayPerkKnucklesRank4LongDesc"/>
+			<effect_description level="5" desc_key="FuriousRamsayPerkKnucklesRank5Desc" long_desc_key="FuriousRamsayPerkKnucklesRank5LongDesc"/>
+			<effect_description level="6" desc_key="FuriousRamsayPerkKnucklesRank6Desc" long_desc_key="FuriousRamsayPerkKnucklesRank6LongDesc"/>
+			<effect_description level="7" desc_key="FuriousRamsayPerkKnucklesRank7Desc" long_desc_key="FuriousRamsayPerkKnucklesRank7LongDesc"/>
+			<effect_description level="8" desc_key="FuriousRamsayPerkKnucklesRank8Desc" long_desc_key="FuriousRamsayPerkKnucklesRank8LongDesc"/>
+			<effect_description level="9" desc_key="FuriousRamsayPerkKnucklesRank9Desc" long_desc_key="FuriousRamsayPerkKnucklesRank9LongDesc"/>
+			<effect_description level="10" desc_key="FuriousRamsayPerkKnucklesRank10Desc" long_desc_key="FuriousRamsayPerkKnucklesRank10LongDesc"/>
 		</effect_group>
 	</perk>
-
+	
 	<perk name="FuriousRamsayPerkExplosives" max_level="10" parent="FuriousRamsaySkillMadmanExpertise" name_key="FuriousRamsayPerkExplosivesName" desc_key="FuriousRamsayPerkExplosivesDesc" icon="">
 		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="furiousramsayattmadman" operation="GTE" value="1" desc_key="FuriousRamsayReqMadmanLevel01"/></level_requirements>
 		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="furiousramsayattmadman" operation="GTE" value="2" desc_key="FuriousRamsayReqMadmanLevel02"/></level_requirements>

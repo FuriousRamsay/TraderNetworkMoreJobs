@@ -160,66 +160,128 @@
    
 	<append xpath="/lootcontainers/lootcontainer[@id='49']">
 		<item name="FuriousRamsayBook" count="1" prob="0.11"/>
-		<item group="FuriousRamsayGroupRebirthBooksFoodLow" prob="1.5"/>
-		<item group="FuriousRamsayGroupRebirthBooksFoodHigh" prob="1.25"/>
-		<item group="FuriousRamsayGroupRebirthBooksMeds" prob="0.75"/>
-		<item group="FuriousRamsayGroupRebirthBooksDrinks" prob="1.75"/>
+		<item group="FuriousRamsayGroupRebirthBooksVehicles" prob="0.3"/>
+		<item group="FuriousRamsayGroupRebirthBooksMisc" prob="0.4"/>
+		<item group="FuriousRamsayGroupRebirthBooksMeds" prob="0.5"/>
+		<item group="FuriousRamsayGroupRebirthBooksFoodHigh" prob="0.6"/>
+		<item group="FuriousRamsayGroupRebirthBooksElectricity" prob="0.65"/>
+		<item group="FuriousRamsayGroupRebirthBooksTools" prob="0.9"/>
+		<item group="FuriousRamsayGroupRebirthBooksFoodLow" prob="1"/>
+		<item group="FuriousRamsayGroupRebirthBooksDrinks" prob="1.25"/>
 		<item name="FuriousRamsayBook" count="1" prob="7.5"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootcontainer[@id='135']">
 		<item name="FuriousRamsayBook" count="1" prob="0.11"/>
-		<item group="FuriousRamsayGroupRebirthBooksFoodLow" prob="1"/>
-		<item group="FuriousRamsayGroupRebirthBooksFoodHigh" prob="0.75"/>
+		<item group="FuriousRamsayGroupRebirthBooksVehicles" prob="0.3"/>
+		<item group="FuriousRamsayGroupRebirthBooksMisc" prob="0.4"/>
 		<item group="FuriousRamsayGroupRebirthBooksMeds" prob="0.5"/>
+		<item group="FuriousRamsayGroupRebirthBooksFoodHigh" prob="0.6"/>
+		<item group="FuriousRamsayGroupRebirthBooksElectricity" prob="0.65"/>
+		<item group="FuriousRamsayGroupRebirthBooksTools" prob="0.9"/>
+		<item group="FuriousRamsayGroupRebirthBooksFoodLow" prob="1"/>
 		<item group="FuriousRamsayGroupRebirthBooksDrinks" prob="1.25"/>
-		<item name="FuriousRamsayBook" count="1" prob="7.5"/>
+		<item name="FuriousRamsayBook" count="1" prob="15"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootcontainer[@id='136']">
 		<item name="FuriousRamsayBook" count="1" prob="0.11"/>
-		<item group="FuriousRamsayGroupRebirthBooksFoodLow" prob="1"/>
-		<item group="FuriousRamsayGroupRebirthBooksFoodHigh" prob="0.75"/>
+		<item group="FuriousRamsayGroupRebirthBooksVehicles" prob="0.3"/>
+		<item group="FuriousRamsayGroupRebirthBooksMisc" prob="0.4"/>
 		<item group="FuriousRamsayGroupRebirthBooksMeds" prob="0.5"/>
+		<item group="FuriousRamsayGroupRebirthBooksFoodHigh" prob="0.6"/>
+		<item group="FuriousRamsayGroupRebirthBooksElectricity" prob="0.65"/>
+		<item group="FuriousRamsayGroupRebirthBooksTools" prob="0.9"/>
+		<item group="FuriousRamsayGroupRebirthBooksFoodLow" prob="1"/>
 		<item group="FuriousRamsayGroupRebirthBooksDrinks" prob="1.25"/>
-		<item name="FuriousRamsayBook" count="1" prob="7.5"/>
+		<item name="FuriousRamsayBook" count="1" prob="15"/>
 	</append>
 
 	<insertAfter xpath="/lootcontainers/lootgroup[@name='empty']">
 
+		<lootgroup name="FuriousRamsayGroupRebirthBooksTools">
+			<item name="meleeToolSalvageT1WrenchSchematic" prob="1"/>
+			<item name="meleeToolIronSetSchematic" prob="0.9"/>
+			<item name="meleeToolRepairT3NailgunSchematic" prob="0.8"/>
+			<item name="meleeToolSalvageT2RatchetSchematic" prob="0.7"/>
+			<item name="meleeToolSteelSetSchematic" prob="0.6"/>
+			<item name="meleeToolSalvageT3ImpactDriverSchematic" prob="0.5"/>
+			<item name="resourceMilitaryFiberSchematic" prob="0.4"/>
+			<item name="meleeToolAxeT3ChainsawSchematic" prob="0.3"/>
+			<item name="armorMilitarySetSchematic" prob="0.1"/>
+		</lootgroup>
+
+		<lootgroup name="FuriousRamsayGroupRebirthBooksVehicles">
+			<item name="vehicleBicycleChassisSchematic" prob="1"/>
+			<item name="vehicleBicycleHandlebarsSchematic" prob="1"/>
+			<item name="vehicleMinibikeChassisSchematic" prob="0.8"/>
+			<item name="vehicleMinibikeHandlebarsSchematic" prob="0.8"/>
+			<item name="vehicleMotorcycleChassisSchematic" prob="0.6"/>
+			<item name="vehicleMotorcycleHandlebarsSchematic" prob="0.6"/>
+			<item name="vehicle4x4TruckChassisSchematic" prob="0.4"/>
+			<item name="vehicle4x4TruckAccessoriesSchematic" prob="0.4"/>
+			<item name="vehicleGyroCopterChassisSchematic" prob="0.1"/>
+			<item name="vehicleGyroCopterAccessoriesSchematic" prob="0.1"/>
+		</lootgroup>
+
+		<lootgroup name="FuriousRamsayGroupRebirthBooksElectricity">
+			<item name="speakerSchematic" prob="1"/>
+			<item name="spotlightPlayerSchematic" prob="1"/>
+			<item name="electrictimerrelaySchematic" prob="0.9"/>
+			<item name="pressureplateSchematic" prob="0.85"/>
+			<item name="switchSchematic" prob="0.85"/>
+			<item name="dartTrapSchematic" prob="0.8"/>
+			<item name="generatorbankSchematic" prob="0.75"/>
+			<item name="electricfencepostSchematic" prob="0.7"/>
+			<item name="batterybankSchematic" prob="0.6"/>
+			<item name="motionsensorSchematic" prob="0.6"/>
+			<item name="bladeTrapSchematic" prob="0.5"/>
+			<item name="poweredDoorsSchematic" prob="0.4"/>
+		</lootgroup>
+
+		<lootgroup name="FuriousRamsayGroupRebirthBooksMisc">
+			<item name="modArmorHelmetLightSchematic" prob="1"/>
+			<item name="resourceOilSchematic" prob="0.8"/>
+			<item name="ammoGasCanSchematic" prob="0.7"/>
+			<item name="toolAnvilSchematic" prob="0.5"/>
+			<item name="toolBellowsSchematic" prob="0.5"/>
+			<item name="plantedGraceCorn1Schematic" prob="0.3"/>
+			<item name="toolForgeCrucibleSchematic" prob="0.1"/>
+		</lootgroup>
+
 		<lootgroup name="FuriousRamsayGroupRebirthBooksMeds">
-			<item name="medicalFirstAidBandageSchematic"/>
-			<item name="medicalFirstAidKitSchematic"/>
-			<item name="medicalPlasterCastSchematic"/>
-			<item name="drugHerbalAntibioticsSchematic"/>
-			<item name="drugAntibioticsSchematic"/>
+			<item name="drugHerbalAntibioticsSchematic" prob="1"/>
+			<item name="medicalPlasterCastSchematic" prob="0.8"/>
+			<item name="medicalFirstAidBandageSchematic" prob="0.6"/>
+			<item name="medicalFirstAidKitSchematic" prob="0.3"/>
+			<item name="drugAntibioticsSchematic" prob="0.1"/>
 		</lootgroup>
 
 		<lootgroup name="FuriousRamsayGroupRebirthBooksFoodLow">
-			<item name="foodCornBreadSchematic"/>
-			<item name="foodPumpkinBreadSchematic"/>
-			<item name="foodTunaFishGravyToastSchematic"/>
-			<item name="foodFishTacosSchematic"/>
-			<item name="foodChiliDogSchematic"/>
-			<item name="foodPumpkinPieSchematic"/>
+			<item name="foodCornBreadSchematic" prob="1"/>
+			<item name="foodPumpkinBreadSchematic" prob="0.9"/>
+			<item name="foodTunaFishGravyToastSchematic" prob="0.8"/>
+			<item name="foodPumpkinPieSchematic" prob="0.75"/>
+			<item name="foodChiliDogSchematic" prob="0.7"/>
+			<item name="foodFishTacosSchematic" prob="0.6"/>
 		</lootgroup>
 
 		<lootgroup name="FuriousRamsayGroupRebirthBooksFoodHigh">
-			<item name="foodBlueberryPieSchematic"/>
-			<item name="foodGumboStewSchematic"/>
-			<item name="foodHoboStewSchematic"/>
-			<item name="foodMeatStewSchematic"/>
-			<item name="foodPumpkinCheesecakeSchematic"/>
-			<item name="foodShamChowderSchematic"/>
-			<item name="foodShepardsPieSchematic"/>
-			<item name="foodVegetableStewSchematic"/>
+			<item name="foodVegetableStewSchematic" prob="1"/>
+			<item name="foodPumpkinCheesecakeSchematic" prob="0.95"/>
+			<item name="foodMeatStewSchematic" prob="0.9"/>
+			<item name="foodShepardsPieSchematic" prob="0.8"/>
+			<item name="foodBlueberryPieSchematic" prob="0.75"/>
+			<item name="foodGumboStewSchematic" prob="0.65"/>
+			<item name="foodHoboStewSchematic" prob="0.55"/>
+			<item name="foodShamChowderSchematic" prob="0.5"/>
 		</lootgroup>
 
 		<lootgroup name="FuriousRamsayGroupRebirthBooksDrinks">
-			<item name="drinkJarBeerSchematic"/>
-			<item name="drinkJarGoldenRodTeaSchematic"/>
-			<item name="drinkJarRedTeaSchematic"/>
-			<item name="drinkYuccaJuiceSmoothieSchematic"/>
+			<item name="drinkJarGoldenRodTeaSchematic" prob="1"/>
+			<item name="drinkJarRedTeaSchematic" prob="1"/>
+			<item name="drinkJarBeerSchematic" prob="0.8"/>
+			<item name="drinkYuccaJuiceSmoothieSchematic" prob="0.5"/>
 		</lootgroup>
 
 	</insertAfter>
@@ -266,7 +328,7 @@
 
 		<lootgroup name="FuriousRamsayGroupContainerTrainerSoldier" count="all">
 			<item name="FuriousRamsaySpawnSoldierTrainer"  count="1"/>
-			<item name="meleeWpnKnucklesT0LeatherKnuckles" quality="3" count="1"/>
+			<item name="meleeToolRepairT0StoneAxe" quality="5" count="1"/>
 			<item name="FuriousRamsayAttributeSoldierClass" count="1"/>
 			<item name="FuriousRamsayStarterArmorHeadSoldier" quality="1"/>
 			<item name="FuriousRamsayStarterArmorChestSoldier" quality="1"/>
@@ -290,7 +352,7 @@
 
 		<lootgroup name="FuriousRamsayGroupContainerTrainerMadman" count="all">
 			<item name="FuriousRamsaySpawnMadmanTrainer"  count="1"/>
-			<item name="meleeToolRepairT0StoneAxe" quality="5" count="1"/>
+			<item name="meleeWpnKnucklesT0LeatherKnuckles" quality="3" count="1"/>
 			<item name="FuriousRamsayAttributeMadmanClass" count="1"/>
 			<item name="FuriousRamsayStarterArmorHeadMadman" quality="1"/>
 			<item name="FuriousRamsayStarterArmorChestMadman" quality="1"/>
