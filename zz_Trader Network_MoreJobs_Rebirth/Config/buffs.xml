@@ -5402,6 +5402,12 @@
 				<stack_type value="replace"/>
 				<duration value="1"/>
 				<effect_group>
+				<!-- PLAYER LEVEL TIERS -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPlayerLevelTier1" operation="set" value="20"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPlayerLevelTier2" operation="set" value="50"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPlayerLevelTier3" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayPlayerLevelTier4" operation="set" value="200"/>
+				
 				<!-- GENETICS -->
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPercIncrease" operation="set" value="0.25"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPercIncrease" operation="set" value="0.25"/>
@@ -5410,6 +5416,63 @@
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPercIncrease" operation="set" value="0.25"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPercIncrease" operation="set" value="0.25"/>
 				
+				<!-- GENETICS LBD -->
+					<!-- TIER 1 -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseBreakingOreTier1" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseDiggingTier1" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseCutTreesTier1" operation="set" value="0.01"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseBreakingDoorTier1" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsaySalvageApplianceTier1" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsaySalvagedCarTier1" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsaySalvagedCarGreaseMonkeyTier1" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseLootedTier1" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseReceivedDamageTier1" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseMobilityTier1" operation="set" value="0.001"/>
+					<!-- TIER 2 -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseBreakingOreTier2" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseDiggingTier2" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseCutTreesTier2" operation="set" value="0.01"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseBreakingDoorTier2" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsaySalvageApplianceTier2" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsaySalvagedCarTier2" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsaySalvagedCarGreaseMonkeyTier2" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseLootedTier2" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseReceivedDamageTier2" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseMobilityTier2" operation="set" value="0.001"/>
+					<!-- TIER 3 -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseBreakingOreTier3" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseDiggingTier3" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseCutTreesTier3" operation="set" value="0.01"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseBreakingDoorTier3" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsaySalvageApplianceTier3" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsaySalvagedCarTier3" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsaySalvagedCarGreaseMonkeyTier3" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseLootedTier3" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseReceivedDamageTier3" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseMobilityTier3" operation="set" value="0.001"/>
+					<!-- TIER 4 -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseBreakingOreTier4" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseDiggingTier4" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseCutTreesTier4" operation="set" value="0.01"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseBreakingDoorTier4" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsaySalvageApplianceTier4" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsaySalvagedCarTier4" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsaySalvagedCarGreaseMonkeyTier4" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseLootedTier4" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseReceivedDamageTier4" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseMobilityTier4" operation="set" value="0.001"/>
+					<!-- TIER 5 -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseBreakingOreTier5" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseDiggingTier5" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseCutTreesTier5" operation="set" value="0.01"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseBreakingDoorTier5" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsaySalvageApplianceTier5" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsaySalvagedCarTier5" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsaySalvagedCarGreaseMonkeyTier5" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseLootedTier5" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseReceivedDamageTier5" operation="set" value="0.001"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIncreaseMobilityTier5" operation="set" value="0.001"/>
+		
 				<!-- PERKS -->
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayLVLperkSexualTrex" operation="set" value="0"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayLVLperkMiner69r" operation="set" value="0"/>
@@ -20575,7 +20638,25 @@
 			<buff name="FuriousRamsayChangeStrength" hidden="true">	
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayChangeStrength">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseStrengthTier1">
+						<requirement name="PlayerLevel" operation="GT" value="0"/>
+						<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+					<triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseStrengthTier2">
+						<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+						<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+					<triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseStrengthTier3">
+						<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+						<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+					<triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseStrengthTier4">
+						<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+						<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+					<triggered_effect>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseStrengthTier5">
+						<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+					<triggered_effect>
 					<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>			
 				</effect_group>
 			</buff>
@@ -20585,7 +20666,26 @@
 				<effect_group name="VerifyFuriousRamsayBreakDoors">
 					<requirement name="TriggerHasTags" tags="Door"/>
 						<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Door"/>
-						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.1"/> <!-- Triggers at each door stage. Should differentiate between door types for more xp -->
+						<!-- Triggers at each door stage. Should differentiate between door types for more xp -->
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseBreakingDoorTier1"> 
+							<requirement name="PlayerLevel" operation="GT" value="0"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseBreakingDoorTier2"> 
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseBreakingDoorTier3"> 
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseBreakingDoorTier4"> 
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseBreakingDoorTier5"> 
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+						</triggered_effect>
 						<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>
 				</effect_group>
 
@@ -20600,7 +20700,25 @@
 				<!-- MINING ORE -->
 				<effect_group name="VerifyFuriousRamsayBreakOre">
 					<requirement name="TriggerHasTags" tags="deepOre"/>
-						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.1"/>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseBreakingOreTier1">
+							<requirement name="PlayerLevel" operation="GT" value="0"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseBreakingOreTier2">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseBreakingOreTier3">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseBreakingOreTier4">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseBreakingOreTier5">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+						</triggered_effect>
 						<triggered_effect trigger="onSelfDamagedBlock" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>
 						<!--<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Broke down Ore"/>--> <!-- Doesn't work -->
 				</effect_group>
@@ -20608,54 +20726,163 @@
 				<!-- DIGGING -->
 				<effect_group name="VerifyFuriousRamsayDigging">
 					<requirement name="TriggerHasTags" tags="FuriousRamsayDig"/>
-						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.1"/>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseDiggingTier1">
+							<requirement name="PlayerLevel" operation="GT" value="0"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseDiggingTier2">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseDiggingTier3">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseDiggingTier4">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseDiggingTier5">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+						</triggered_effect>
 						<triggered_effect trigger="onSelfDamagedBlock" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>
 				</effect_group>			
 
 				<!-- CUTTING TREES -->
 				<effect_group name="VerifyFuriousRamsayCutTrees">
 					<requirement name="TriggerHasTags" tags="FuriousRamsayTree"/>
-						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="0.1"/>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseCutTreesTier1">
+							<requirement name="PlayerLevel" operation="GT" value="0"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseCutTreesTier2">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseCutTreesTier3">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseCutTreesTier4">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDamagedBlock" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseCutTreesTier5">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+						</triggered_effect>
 						<triggered_effect trigger="onSelfDamagedBlock" action="AddBuff" buff="FuriousRamsayProcessStrengthAttribute"/>
 				</effect_group>
 
 				<effect_group name="VerifyFuriousRamsayHarvestCrops">
 					<requirement name="TriggerHasTags" tags="crops"/>
-						<triggered_effect trigger="onSelfDamagedBlock" action="ShowToolbeltMessage" message="Damage Crops"/>
-						<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Crops"/>
+						<!--<triggered_effect trigger="onSelfDamagedBlock" action="ShowToolbeltMessage" message="Damage Crops"/>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Crops"/>-->
 				</effect_group>
 
 				<effect_group name="VerifyFuriousRamsayHarvestCrops2">
 					<requirement name="TriggerHasTags" tags="crops2"/>
-						<triggered_effect trigger="onSelfDamagedBlock" action="ShowToolbeltMessage" message="Damage Crops 2"/>
-						<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Crops 2"/>
+						<!--<triggered_effect trigger="onSelfDamagedBlock" action="ShowToolbeltMessage" message="Damage Crops 2"/>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Crops 2"/>-->
 				</effect_group>
 				
 			</buff>
 
 			<buff name="VerifyFuriousRamsayActionsDexterity" hidden="true">
-				<effect_group name="VerifyFuriousRamsayMobility">
-					<triggered_effect trigger="onSelfJump" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="0.01"/>
-					<triggered_effect trigger="onSelfJump" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
-					<triggered_effect trigger="onSelfRun" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="0.01"/>
-					<triggered_effect trigger="onSelfRun" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
-					<triggered_effect trigger="onSelfJump" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="0.01"/>
-					<triggered_effect trigger="onSelfJump" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
-					<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="0.01"/>
-					<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
-					<triggered_effect trigger="onReloadStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="0.01"/>
-					<triggered_effect trigger="onReloadStart" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
-					<triggered_effect trigger="onSelfAimingGunStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="0.01"/>
-					<triggered_effect trigger="onSelfAimingGunStart" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
-					<triggered_effect trigger="onOtherAttackedSelf" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="0.01"/>
-					<triggered_effect trigger="onOtherAttackedSelf" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+				<effect_group name="VerifyFuriousRamsayMobilityTier1">
+					<requirement name="PlayerLevel" operation="GT" value="0"/>
+					<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+						<triggered_effect trigger="onSelfJump" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier1"/>
+						<triggered_effect trigger="onSelfJump" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onSelfRun" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier1"/>
+						<triggered_effect trigger="onSelfRun" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier1"/>
+						<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onReloadStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier1"/>
+						<triggered_effect trigger="onReloadStart" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onSelfAimingGunStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier1"/>
+						<triggered_effect trigger="onSelfAimingGunStart" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<!--<triggered_effect trigger="onOtherAttackedSelf" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="0.01"/>
+						<triggered_effect trigger="onOtherAttackedSelf" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>-->
+				</effect_group>
+				<effect_group name="VerifyFuriousRamsayMobilityTier2">
+					<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+					<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+						<triggered_effect trigger="onSelfJump" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier2"/>
+						<triggered_effect trigger="onSelfJump" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onSelfRun" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier2"/>
+						<triggered_effect trigger="onSelfRun" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier2"/>
+						<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onReloadStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier2"/>
+						<triggered_effect trigger="onReloadStart" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onSelfAimingGunStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier2"/>
+						<triggered_effect trigger="onSelfAimingGunStart" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+				</effect_group>
+				<effect_group name="VerifyFuriousRamsayMobilityTier2">
+					<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+					<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+						<triggered_effect trigger="onSelfJump" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier3"/>
+						<triggered_effect trigger="onSelfJump" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onSelfRun" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier3"/>
+						<triggered_effect trigger="onSelfRun" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier3"/>
+						<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onReloadStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier3"/>
+						<triggered_effect trigger="onReloadStart" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onSelfAimingGunStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier3"/>
+						<triggered_effect trigger="onSelfAimingGunStart" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+				</effect_group>
+				<effect_group name="VerifyFuriousRamsayMobilityTier2">
+					<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+					<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+						<triggered_effect trigger="onSelfJump" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier4"/>
+						<triggered_effect trigger="onSelfJump" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onSelfRun" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier4"/>
+						<triggered_effect trigger="onSelfRun" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier4"/>
+						<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onReloadStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier4"/>
+						<triggered_effect trigger="onReloadStart" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onSelfAimingGunStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier4"/>
+						<triggered_effect trigger="onSelfAimingGunStart" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+				</effect_group>
+				<effect_group name="VerifyFuriousRamsayMobilityTier2">
+					<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+						<triggered_effect trigger="onSelfJump" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier5"/>
+						<triggered_effect trigger="onSelfJump" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onSelfRun" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier5"/>
+						<triggered_effect trigger="onSelfRun" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier5"/>
+						<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onReloadStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier5"/>
+						<triggered_effect trigger="onReloadStart" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
+						<triggered_effect trigger="onSelfAimingGunStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseMobilityTier5"/>
+						<triggered_effect trigger="onSelfAimingGunStart" action="AddBuff" buff="FuriousRamsayProcessDexterityAttribute"/>
 				</effect_group>
 			</buff>
 
 			<buff name="VerifyFuriousRamsayActionsConstitution" hidden="true">
 				<!-- RECEIVED DAMAGE -->
 				<effect_group name="VerifyFuriousRamsayNoGlobalRequirements">
-					<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="0.1"/>
+					<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseReceivedDamageTier1">
+						<requirement name="PlayerLevel" operation="GT" value="0"/>
+						<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseReceivedDamageTier2">
+						<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+						<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+					</triggered_effect>
+					<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseReceivedDamageTier3">
+						<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+						<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+					</triggered_effect>
+					<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseReceivedDamageTier4">
+						<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+						<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+					</triggered_effect>
+					<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseReceivedDamageTier5">
+						<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+					</triggered_effect>
 					<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" buff="FuriousRamsayProcessConstitutionAttribute"/>
 				</effect_group>
 			</buff>
@@ -20663,7 +20890,25 @@
 			<buff name="VerifyFuriousRamsayActionsIntelligence" hidden="true">
 				<!-- LOOTING -->
 				<effect_group name="VerifyFuriousRamsayLooting">
-					<triggered_effect trigger="onSelfLootContainer" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="0.1"/>
+					<triggered_effect trigger="onSelfLootContainer" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@varFuriousRamsayIncreaseLootedTier1">
+						<requirement name="PlayerLevel" operation="GT" value="0"/>
+						<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfLootContainer" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@varFuriousRamsayIncreaseLootedTier2">
+						<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+						<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfLootContainer" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@varFuriousRamsayIncreaseLootedTier3">
+						<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+						<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfLootContainer" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@varFuriousRamsayIncreaseLootedTier4">
+						<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+						<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfLootContainer" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@varFuriousRamsayIncreaseLootedTier5">
+						<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+					</triggered_effect>
 					<triggered_effect trigger="onSelfLootContainer" action="AddBuff" buff="FuriousRamsayProcessIntelligenceAttribute"/>
 				</effect_group>
 				<!-- DIGGING -->
@@ -20681,16 +20926,72 @@
 				<effect_group name="VerifyFuriousRamsayCars">
 					<requirement name="TriggerHasTags" tags="FuriousRamsayCar"/>
 					<requirement name="HoldingItemHasTags" tags="perkSalvageOperations"/>
-						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="0.1"/> <!-- Triggers at each destroy stage. Should differentiate between vehicle types for more xp -->
+						<!-- Triggers at each destroy stage. Should differentiate between vehicle types for more xp -->
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@varFuriousRamsaySalvagedCarTier1">
+							<requirement name="PlayerLevel" operation="GT" value="0"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@varFuriousRamsaySalvagedCarTier2">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@varFuriousRamsaySalvagedCarTier3">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@varFuriousRamsaySalvagedCarTier4">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@varFuriousRamsaySalvagedCarTier5">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+						</triggered_effect>
 						<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" buff="FuriousRamsayProcessKnowledgeAttribute"/>
 						<!-- XP to level up Grease Monkey Perk -->
-						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayPerkGreaseMonkeyXP" operation="add" value="0.1"/>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayPerkGreaseMonkeyXP" operation="add" value="@varFuriousRamsaySalvagedCarGreaseMonkeyTier1">
+							<requirement name="PlayerLevel" operation="GT" value="0"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayPerkGreaseMonkeyXP" operation="add" value="@varFuriousRamsaySalvagedCarGreaseMonkeyTier2">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayPerkGreaseMonkeyXP" operation="add" value="@varFuriousRamsaySalvagedCarGreaseMonkeyTier3">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayPerkGreaseMonkeyXP" operation="add" value="@varFuriousRamsaySalvagedCarGreaseMonkeyTier4">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayPerkGreaseMonkeyXP" operation="add" value="@varFuriousRamsaySalvagedCarGreaseMonkeyTier5">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+						</triggered_effect>
 				</effect_group>
 
 				<effect_group name="VerifyFuriousRamsayAppliances">
 					<requirement name="TriggerHasTags" tags="FuriousRamsayAppliance"/>
 					<requirement name="HoldingItemHasTags" tags="perkSalvageOperations"/>
-						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="0.1"/> <!-- Triggers at each destroy stage. Should differentiate between vehicle types for more xp -->
+						<!-- Triggers at each destroy stage. Should differentiate between vehicle types for more xp -->
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@varFuriousRamsaySalvageApplianceTier1">
+							<requirement name="PlayerLevel" operation="GT" value="0"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@varFuriousRamsaySalvageApplianceTier2">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@varFuriousRamsaySalvageApplianceTier3">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@varFuriousRamsaySalvageApplianceTier4">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+							<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+						</triggered_effect>
+						<triggered_effect trigger="onSelfDestroyedBlock" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@varFuriousRamsaySalvageApplianceTier5">
+							<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+						</triggered_effect>
 						<triggered_effect trigger="onSelfDestroyedBlock" action="AddBuff" buff="FuriousRamsayProcessKnowledgeAttribute"/>
 				</effect_group>
 			</buff>
@@ -20703,9 +21004,9 @@
 
 			<buff name="VerifyFuriousRamsayActionsHunter" hidden="true">
 				<effect_group name="VerifyFuriousRamsayMobility">
-						<triggered_effect trigger="onSelfCrouch" action="ShowToolbeltMessage" message="Crouch"/>
+						<!--<triggered_effect trigger="onSelfCrouch" action="ShowToolbeltMessage" message="Crouch"/>
 						<triggered_effect trigger="onSelfCrouchRun" action="ShowToolbeltMessage" message="Crouch Run"/>
-						<triggered_effect trigger="onSelfCrouchWalk" action="ShowToolbeltMessage" message="Crouch Walk"/>
+						<triggered_effect trigger="onSelfCrouchWalk" action="ShowToolbeltMessage" message="Crouch Walk"/>-->
 				</effect_group>
 			</buff>
 
@@ -20714,7 +21015,7 @@
 
 			<buff name="VerifyFuriousRamsayActionsButcher" hidden="true">
 				<effect_group name="VerifyFuriousRamsayMobility">
-						<triggered_effect trigger="onSelfFallImpact" action="ShowToolbeltMessage" message="Fall Impact"/>
+						<!--<triggered_effect trigger="onSelfFallImpact" action="ShowToolbeltMessage" message="Fall Impact"/>-->
 				</effect_group>
 			</buff>
 
@@ -20727,13 +21028,13 @@
 			<buff name="VerifyFuriousRamsayActionsMadman" hidden="true">
 					<!-- MADMAN EXPLOSION DAMAGE -->
 				<effect_group name="VerifyFuriousRamsayExplosionDamage">
-					<triggered_effect trigger="onSelfExplosionDamagedOther" action="ShowToolbeltMessage" message="Explosion Damage"/>
+					<!--<triggered_effect trigger="onSelfExplosionDamagedOther" action="ShowToolbeltMessage" message="Explosion Damage"/>-->
 				</effect_group>
 
 				<!-- CUTTING TREES -->
 				<effect_group name="VerifyFuriousRamsayCutTrees">
 					<requirement name="TriggerHasTags" tags="FuriousRamsayTree"/>
-						<triggered_effect trigger="onSelfDamagedBlock" action="ShowToolbeltMessage" message="Cutting tree"/> <!-- Works -->
+						<!--<triggered_effect trigger="onSelfDamagedBlock" action="ShowToolbeltMessage" message="Cutting tree"/>--> <!-- Works -->
 						<!--<triggered_effect trigger="onSelfDestroyedBlock" action="ShowToolbeltMessage" message="Cut down Tree"/>--> <!-- does not work -->
 				</effect_group>
 			</buff>
@@ -20789,31 +21090,31 @@
 			<buff name="FuriousRamsayIncreaseStrengthXPTier1" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseStrengthTier1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseStrengthTier1"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseStrengthXPTier2" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseStrengthTier2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseStrengthTier2"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseStrengthXPTier3" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseStrengthTier3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseStrengthTier3"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseStrengthXPTier4" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseStrengthTier4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseStrengthTier4"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseStrengthXPTier5" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseStrengthTier5"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayIncreaseStrengthTier5"/>
 				</effect_group>
 			</buff>
 
@@ -20862,31 +21163,31 @@
 			<buff name="FuriousRamsayIncreaseDexterityXPTier1" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseDexterityTier1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseDexterityTier1"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseDexterityXPTier2" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseDexterityTier2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseDexterityTier2"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseDexterityXPTier3" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseDexterityTier3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseDexterityTier3"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseDexterityXPTier4" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseDexterityTier4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseDexterityTier4"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseDexterityXPTier5" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseDexterityTier5"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayIncreaseDexterityTier5"/>
 				</effect_group>
 			</buff>
 
@@ -20935,31 +21236,31 @@
 			<buff name="FuriousRamsayIncreaseConstitutionXPTier1" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseConstitutionTier1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseConstitutionTier1"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseConstitutionXPTier2" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseConstitutionTier2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseConstitutionTier2"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseConstitutionXPTier3" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseConstitutionTier3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseConstitutionTier3"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseConstitutionXPTier4" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseConstitutionTier4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseConstitutionTier4"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseConstitutionXPTier5" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseConstitutionTier5"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseConstitutionTier5"/>
 				</effect_group>
 			</buff>
 
@@ -21008,31 +21309,31 @@
 			<buff name="FuriousRamsayIncreaseIntelligenceXPTier1" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseIntelligenceTier1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@varFuriousRamsayIncreaseIntelligenceTier1"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseIntelligenceXPTier2" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseIntelligenceTier2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@varFuriousRamsayIncreaseIntelligenceTier2"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseIntelligenceXPTier3" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseIntelligenceTier3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@varFuriousRamsayIncreaseIntelligenceTier3"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseIntelligenceXPTier4" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseIntelligenceTier4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@varFuriousRamsayIncreaseIntelligenceTier4"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseIntelligenceXPTier5" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseIntelligenceTier5"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@varFuriousRamsayIncreaseIntelligenceTier5"/>
 				</effect_group>
 			</buff>
 
@@ -21081,31 +21382,31 @@
 			<buff name="FuriousRamsayIncreaseKnowledgeXPTier1" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseKnowledgeTier1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@varFuriousRamsayIncreaseKnowledgeTier1"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseKnowledgeXPTier2" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseKnowledgeTier2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@varFuriousRamsayIncreaseKnowledgeTier2"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseKnowledgeXPTier3" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseKnowledgeTier3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@varFuriousRamsayIncreaseKnowledgeTier3"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseKnowledgeXPTier4" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseKnowledgeTier4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@varFuriousRamsayIncreaseKnowledgeTier4"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseKnowledgeXPTier5" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseKnowledgeTier5"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@varFuriousRamsayIncreaseKnowledgeTier5"/>
 				</effect_group>
 			</buff>
 
@@ -21154,31 +21455,31 @@
 			<buff name="FuriousRamsayIncreaseCharismaXPTier1" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseCharismaTier1"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@varFuriousRamsayIncreaseCharismaTier1"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseCharismaXPTier2" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseCharismaTier2"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@varFuriousRamsayIncreaseCharismaTier2"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseCharismaXPTier3" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseCharismaTier3"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@varFuriousRamsayIncreaseCharismaTier3"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseCharismaXPTier4" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseCharismaTier4"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@varFuriousRamsayIncreaseCharismaTier4"/>
 				</effect_group>
 			</buff>
 			<buff name="FuriousRamsayIncreaseCharismaXPTier5" hidden="true">
 				<duration value="0.1"/>
 				<effect_group name="FuriousRamsayIncreaseXP">
-					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@cvarFuriousRamsayIncreaseCharismaTier5"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@varFuriousRamsayIncreaseCharismaTier5"/>
 				</effect_group>
 			</buff>
 
