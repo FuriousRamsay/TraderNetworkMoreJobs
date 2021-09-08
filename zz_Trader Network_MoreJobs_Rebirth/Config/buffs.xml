@@ -1,5 +1,7 @@
 <Config>
 
+		<setattribute xpath="/buffs/buff[@name='buffDrugPainkillers']/effect_group/triggered_effect[@stat='Health']" name="value">12</setattribute>
+
 		<remove xpath="/buffs/buff[@name='buffDeathFoodDrinkAdjust']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate']"/>
 
 		<append xpath="/buffs/buff[@name='god']/effect_group">		
@@ -5407,6 +5409,24 @@
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPercIncrease" operation="set" value="0.25"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPercIncrease" operation="set" value="0.25"/>
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPercIncrease" operation="set" value="0.25"/>
+				
+				<!-- PERKS -->
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayLVLperkSexualTrex" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayLVLperkMiner69r" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayLVLperkMotherLode" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayLVLperkRuleOneCardio" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayLVLperkParkour" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayLVLperkRunAndGun" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayLVLperkPackMule" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayLVLperkHealingFactor" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayLVLperkSlowMetabolism" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayLVLperkLuckyLooter" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayLVLperkLockPicking" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayLVLperkTreasureHunter" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayLVLperkGreaseMonkey" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayLVLperkDaringAdventurer" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayLVLperkBetterBarter" operation="set" value="0"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="varFuriousRamsayLVLperkCharismaticNature" operation="set" value="0"/>
 
 				<!-- STRENGTH TIER INCREASES -->
 					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="cvarFuriousRamsayIncreaseStrengthTier1" operation="set" value="0.1"/>

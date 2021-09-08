@@ -11,7 +11,7 @@
 
 		<window name="HUDLeftStatBars" >
 
-			<rect name="hud" pos="9,110" rows="2" cols="1" width="260" side="right" >
+			<rect name="hud" pos="9,110" rows="2" cols="1" width="260" side="right" visible="{toolbeltvisible}">
 
 				<rect name="content" width="250" depth="2" pos="0,64" height="18" controller="HUDStatBar" stat_type="Stealth" visible="{statvisible}">	
 					<sprite depth="3" name="background" color="0,0,0,210" globalopacity="false" type="sliced" />
@@ -22,7 +22,7 @@
 					<filledsprite depth="5" name="BarContent" color="81, 120, 92" width="250" type="filled" fill="0"/>
 				</rect>
 
-				<rect name="content" width="250" depth="2" pos="0,45" height="22" controller="PlayerStatsWindow">	
+				<rect name="content" width="250" depth="2" pos="0,45" height="22" controller="PlayerStatsWindow" visible="{toolbeltvisible}">
 					<sprite depth="3" name="background" color="0,0,0" globalopacity="false" type="sliced" />
 					<sprite depth="4" sprite="menu_empty" name="border" color="255,255,255" globalopacity="false" type="sliced" fillcenter="false"/>
 
@@ -33,54 +33,54 @@
 					<label depth="5" name="playerLevel" pos="205,-3" width="50" height="15" justify="left" color="[white]" text="K:{playerzombiekills}" font_size="15"/>
 				</rect>
 
-				<rect pos="0,22" width="250" height="115">
+				<rect pos="0,22" width="250" height="115" visible="{toolbeltvisible}">
 					<sprite depth="1" name="background" color="0,0,0,140" type="sliced" />
 					<sprite depth="2" sprite="menu_empty" name="border" color="255,255,255" globalopacity="false" type="sliced" fillcenter="false"/>
 
-					<rect width="125" height="115" pos="0,0" controller="HUDStatBar" stat_type="Food" visible="{statvisible}">
+					<rect width="125" height="115" pos="0,0" controller="HUDStatBar" stat_type="Food" visible="{toolbeltvisible}">
 						<filledsprite depth="5" name="BarContent" color="186, 194, 171,255" width="125" type="filled" fill="0" filldirection="vertical"/>
 						<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="35,35" pos="10,-70" foregroundlayer="true"/>
 					</rect>
 
-					<rect width="125" height="115" pos="125,0" controller="HUDStatBar" stat_type="Water" visible="{statvisible}">
+					<rect width="125" height="115" pos="125,0" controller="HUDStatBar" stat_type="Water" visible="{toolbeltvisible}">
 						<filledsprite depth="5" name="BarContent" color="171, 215, 217,255" width="125" type="filled" fill="0" filldirection="vertical"/>
 						<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="35,35" pos="80,-70" foregroundlayer="true"/>
 					</rect>
 				</rect>
 
-				<rect pos="125,-28" width="160" height="160" cursor_area="true" xp_fill_speed="2">
+				<rect pos="125,-28" width="160" height="160" cursor_area="true" xp_fill_speed="2" visible="{toolbeltvisible}">
 					<sprite depth="9" height="162" width="162" name="border" sprite="ui_game_filled_circle" color="[black]" pivot="center" globalopacity="false" type="sliced"/>
 					<sprite depth="10" height="160" width="160" name="border" sprite="ui_game_filled_circle" color="150, 150, 150" pivot="center" globalopacity="false"/>
 					<sprite depth="11" height="160" width="160" name="BarContent" sprite="ui_game_filled_circle" globalopacity="false" color="111, 38, 150" type="filled" fill="{xp}" filldirection="radial360" pivot="center" controller="ToolbeltWindow"/>
 					<label depth="21" name="TextContent" pos="0,0" font_size="32" color="[white]" justify="center" pivot="left" text="{statcurrentwithmax}" width="125" height="35"/>
 				</rect>
 
-				<rect pos="125,-30" width="160" height="160" controller="HUDStatBar" stat_type="Health" visible="{statvisible}">
+				<rect pos="125,-30" width="160" height="160" controller="HUDStatBar" stat_type="Health" visible="{toolbeltvisible}">
 					<sprite depth="13" height="149" width="149" name="border" sprite="ui_game_filled_circle" color="[black]" pivot="center" globalopacity="false"/>
 					<sprite depth="14" height="149" width="147" name="border" sprite="ui_game_filled_circle" color="70,70,70" pivot="center" globalopacity="false"/>
 					<sprite depth="15" height="147" width="147" name="BarContent" sprite="ui_game_filled_circle" color="130, 36, 36" type="filled" globalopacity="false" fill="0" filldirection="radial360" pivot="center"/>
 				</rect>
 
-				<rect pos="125,-30" width="160" height="160" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
+				<rect pos="125,-30" width="160" height="160" controller="HUDStatBar" stat_type="Stamina" visible="{toolbeltvisible}">
 					<sprite depth="16" height="117" width="117" name="border" sprite="ui_game_filled_circle" color="[black]" pivot="center" globalopacity="false"/>
 					<sprite depth="17" height="117" width="115" name="border" sprite="ui_game_filled_circle" color="40,40,40" pivot="center" globalopacity="false"/>
 					<sprite depth="18" height="115" width="115" name="BarContent" sprite="ui_game_filled_circle" color="247, 245, 173" type="filled" globalopacity="false" fill="0" filldirection="radial360" pivot="center"/>
 				</rect>
 
-				<rect pos="125,-30" width="160" height="160" controller="HUDStatBar" stat_type="Health" visible="{statvisible}">
+				<rect pos="125,-30" width="160" height="160" controller="HUDStatBar" stat_type="Health" visible="{toolbeltvisible}">
 					<sprite depth="19" width="95" height="95" name="center" sprite="ui_game_filled_circle" color="[black]" pivot="center" globalopacity="false"/>
 					<sprite depth="20" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="15,15" pos="-7,38" color="[white]" foregroundlayer="true"/>
 					<label depth="21" name="TextContent" pos="-28,22" font_size="20" justify="center" color="168, 71, 71" text="{statcurrentwithmax}" height="20" width="56"/>
 				</rect>
 
-				<rect pos="125,-30" width="160" height="160" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
+				<rect pos="125,-30" width="160" height="160" controller="HUDStatBar" stat_type="Stamina" visible="{toolbeltvisible}">
 					<sprite depth="22" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="15,15" pos="-7,-22" color="[white]" foregroundlayer="true"/>
 					<label depth="23" name="TextContent" pos="-28,3" font_size="20" justify="center" color="247, 245, 173" text="{statcurrentwithmax}" height="20" width="56"/>
 				</rect>
 
 			</rect>
 
-			<rect name="hud" pos="90,190" side="left" controller="BuffPopoutList" pivot="BottomLeft" >
+			<rect name="hud" pos="90,190" side="left" controller="BuffPopoutList" pivot="BottomLeft" visible="{toolbeltvisible}">
 				<panel width="168" height="26" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" style="press" sound="[recipe_click]" on_hover="true" >
 					<sprite depth="3" pos="0,0"  name="Background" sprite="ui_game_popup" height="26" width="162" pivot="center" flip="Horizontally" color="[transparent]" />
 					<sprite depth="4" name="Icon" size="25,25" pos="-54,0" pivot="center" color="[transparent]"/>

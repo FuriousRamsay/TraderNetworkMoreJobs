@@ -57,6 +57,139 @@
 	<setattribute xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/effect_group/passive_effect[@name='DamageModifier' and @tags='metal']" name="value">0</setattribute>
 	<setattribute xpath="/items/item[@name='meleeToolAxeT2SteelAxe']/effect_group/passive_effect[@name='DamageModifier' and @tags='metal']" name="value">0</setattribute>
 
+	<!-- ADJUST HEALING/FOOD/WATER STATS -->
+	<append xpath="/items/item[@name='medicalBandage']">
+		<effect_group name="FuriousRamsayHealing">
+			<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medicalRegHealthAmount" operation="add" value="3"/>
+		</effect_group>
+	</append>
+
+	<setattribute xpath="/items/item[@name='medicalFirstAidBandage']/effect_group/triggered_effect[@cvar='medicalRegHealthAmount']" name="value">10</setattribute>
+	<setattribute xpath="/items/item[@name='medicalFirstAidKit']/effect_group/triggered_effect[@cvar='medicalRegHealthAmount']" name="value">50</setattribute>
+	<setattribute xpath="/items/item[@name='drugPainkillers']/effect_group/display_value[@name='dInstantHealth']" name="value">12</setattribute>
+	<setattribute xpath="/items/item[@name='drugPainkillers']/effect_group/display_value[@name='$waterAmountAdd']" name="value">-12</setattribute>
+	<setattribute xpath="/items/item[@name='foodHoney']/effect_group/triggered_effect[@cvar='$buffInfectionAddCurePerc']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='drugHerbalAntibiotics']/effect_group/triggered_effect[@cvar='$buffInfectionAddCurePerc']" name="value">5</setattribute>
+	<setattribute xpath="/items/item[@name='drugAntibiotics']/effect_group/triggered_effect[@cvar='$buffInfectionAddCurePerc']" name="value">15</setattribute>
+	<setattribute xpath="/items/item[@name='foodHoney']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodHoney']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanBeef']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">7</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanBeef']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanChicken']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">7</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanChicken']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanLamb']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">7</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanLamb']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanDogfood']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">3</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanDogfood']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanCatfood']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">3</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanCatfood']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanTuna']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">4</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanTuna']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanMiso']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanMiso']/effect_group/triggered_effect[@cvar='$waterAmountAdd']" name="value">4</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanMiso']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanSoup']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanSoup']/effect_group/triggered_effect[@cvar='$waterAmountAdd']" name="value">4</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanSoup']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanStock']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanStock']/effect_group/triggered_effect[@cvar='$waterAmountAdd']" name="value">4</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanStock']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanChili']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">7</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanChili']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanSham']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">7</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanSham']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanPasta']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">7</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanPasta']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanSalmon']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">7</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanSalmon']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanPeas']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">4</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanPeas']/effect_group/triggered_effect[@cvar='$waterAmountAdd']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanPeas']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanPears']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">4</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanPears']/effect_group/triggered_effect[@cvar='$waterAmountAdd']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodCanPears']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodCornOnTheCob']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodCornOnTheCob']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodCornBread']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodCornBread']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodMoldyBread']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodMoldyBread']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">-2</setattribute>
+	<setattribute xpath="/items/item[@name='foodShamSandwich']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">4</setattribute>
+	<setattribute xpath="/items/item[@name='foodShamSandwich']/effect_group/triggered_effect[@stat='Health']" name="value">-5</setattribute>
+	<setattribute xpath="/items/item[@name='foodCharredMeat']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">5</setattribute>
+	<setattribute xpath="/items/item[@name='foodCharredMeat']/effect_group/triggered_effect[@stat='water']" name="value">-5</setattribute>
+	<setattribute xpath="/items/item[@name='foodCharredMeat']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodGrilledMeat']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">7</setattribute>
+	<setattribute xpath="/items/item[@name='foodGrilledMeat']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodBoiledMeat']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">7</setattribute>
+	<setattribute xpath="/items/item[@name='foodBoiledMeat']/effect_group/triggered_effect[@cvar='$waterAmountAdd']" name="value">10</setattribute>
+	<setattribute xpath="/items/item[@name='foodBoiledMeat']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodMeatStew']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">20</setattribute>
+	<setattribute xpath="/items/item[@name='foodMeatStew']/effect_group/triggered_effect[@cvar='$waterAmountAdd']" name="value">10</setattribute>
+	<setattribute xpath="/items/item[@name='foodMeatStew']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">3</setattribute>
+	<setattribute xpath="/items/item[@name='foodVegetableStew']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">16</setattribute>
+	<setattribute xpath="/items/item[@name='foodVegetableStew']/effect_group/triggered_effect[@cvar='$waterAmountAdd']" name="value">10</setattribute>
+	<setattribute xpath="/items/item[@name='foodVegetableStew']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">3</setattribute>
+	<setattribute xpath="/items/item[@name='foodCropBlueberries']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">0</setattribute>
+	<setattribute xpath="/items/item[@name='foodCropCorn']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodCropCorn']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">0</setattribute>
+	<setattribute xpath="/items/item[@name='foodCropGraceCorn']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodCropGraceCorn']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">0</setattribute>
+	<setattribute xpath="/items/item[@name='foodCropPotato']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodCropMushrooms']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodCropMushrooms']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">0</setattribute>
+	<setattribute xpath="/items/item[@name='foodCropYuccaFruit']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodCropYuccaFruit']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">0</setattribute>
+	<setattribute xpath="/items/item[@name='foodCropPumpkin']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodCropPumpkin']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">0</setattribute>
+	<setattribute xpath="/items/item[@name='foodRottingFlesh']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodRottingFlesh']/effect_group/triggered_effect[@stat='Health']" name="value">-3</setattribute>
+	<setattribute xpath="/items/item[@name='foodRottingFlesh']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodRottingFlesh']/effect_group/triggered_effect[@stat='Health']" name="value">-1</setattribute>
+	<setattribute xpath="/items/item[@name='foodEgg']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodEgg']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodEggBoiled']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodEggBoiled']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodVegetableStew']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodVegetableStew']/effect_group/triggered_effect[@cvar='$waterAmountAdd']" name="value">-3</setattribute>
+	<setattribute xpath="/items/item[@name='foodVegetableStew']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodBakedPotato']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodBakedPotato']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodPumpkinBread']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">4</setattribute>
+	<setattribute xpath="/items/item[@name='foodPumpkinBread']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodBaconAndEggs']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">14</setattribute>
+	<setattribute xpath="/items/item[@name='foodBaconAndEggs']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodPumpkinCheesecake']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">10</setattribute>
+	<setattribute xpath="/items/item[@name='foodPumpkinCheesecake']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodBlueberryPie']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">10</setattribute>
+	<setattribute xpath="/items/item[@name='foodBlueberryPie']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodFishTacos']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">12</setattribute>
+	<setattribute xpath="/items/item[@name='foodFishTacos']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodPumpkinPie']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">10</setattribute>
+	<setattribute xpath="/items/item[@name='foodPumpkinPie']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='foodSpaghetti']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">20</setattribute>
+	<setattribute xpath="/items/item[@name='foodSpaghetti']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodSteakAndPotato']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">18</setattribute>
+	<setattribute xpath="/items/item[@name='foodSteakAndPotato']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodShamChowder']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">25</setattribute>
+	<setattribute xpath="/items/item[@name='foodShamChowder']/effect_group/triggered_effect[@cvar='$waterAmountAdd']" name="value">10</setattribute>
+	<setattribute xpath="/items/item[@name='foodShamChowder']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">5</setattribute>
+	<setattribute xpath="/items/item[@name='foodHoboStew']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">20</setattribute>
+	<setattribute xpath="/items/item[@name='foodHoboStew']/effect_group/triggered_effect[@cvar='$waterAmountAdd']" name="value">10</setattribute>
+	<setattribute xpath="/items/item[@name='foodHoboStew']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">0</setattribute>
+	<setattribute xpath="/items/item[@name='foodGumboStew']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">30</setattribute>
+	<setattribute xpath="/items/item[@name='foodGumboStew']/effect_group/triggered_effect[@cvar='$waterAmountAdd']" name="value">10</setattribute>
+	<setattribute xpath="/items/item[@name='foodGumboStew']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">3</setattribute>
+	<setattribute xpath="/items/item[@name='foodTunaFishGravyToast']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">24</setattribute>
+	<setattribute xpath="/items/item[@name='foodTunaFishGravyToast']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">3</setattribute>
+	<setattribute xpath="/items/item[@name='foodChiliDog']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">22</setattribute>
+	<setattribute xpath="/items/item[@name='foodChiliDog']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">3</setattribute>
+	<setattribute xpath="/items/item[@name='foodShepardsPie']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">25</setattribute>
+	<setattribute xpath="/items/item[@name='foodShepardsPie']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">3</setattribute>
+	<setattribute xpath="/items/item[@name='drinkYuccaJuiceSmoothie']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">5</setattribute>
+	<setattribute xpath="/items/item[@name='drinkYuccaJuiceSmoothie']/effect_group/triggered_effect[@cvar='$waterAmountAdd']" name="value">50</setattribute>
+	<setattribute xpath="/items/item[@name='drinkYuccaJuiceSmoothie']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">2</setattribute>
+	
 	<append xpath="/items">
 
 		<item name="FuriousRamsayGeneticsPerkTrainingMaster">
@@ -77,8 +210,39 @@
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 			</property>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayStrengthUnitPercIncrease"/>
+			<effect_group name="FuriousRamsayProgression">
+				<requirement name="ProgressionLevel" progression_name="perkSexualTrex" operation="LT" value="10"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayLVLperkSexualTrex" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSexualTrex" level="1">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSexualTrex" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSexualTrex" level="2">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSexualTrex" operation="Equals" value="2"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSexualTrex" level="3">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSexualTrex" operation="Equals" value="3"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSexualTrex" level="4">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSexualTrex" operation="Equals" value="4"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSexualTrex" level="5">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSexualTrex" operation="Equals" value="5"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSexualTrex" level="6">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSexualTrex" operation="Equals" value="6"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSexualTrex" level="7">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSexualTrex" operation="Equals" value="7"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSexualTrex" level="8">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSexualTrex" operation="Equals" value="8"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSexualTrex" level="9">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSexualTrex" operation="Equals" value="9"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSexualTrex" level="10">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSexualTrex" operation="Equals" value="10"/>
+					</triggered_effect>
 			</effect_group>
 		</item>
 
@@ -88,14 +252,45 @@
 			<property name="CustomIconTint" value="99, 191, 109"/>
 			<property name="DescriptionKey" value="FuriousRamsayStrengthperkMiner69rDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-						<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 			</property>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayStrengthUnitPercIncrease"/>
+			<effect_group name="FuriousRamsayProgression">
+				<requirement name="ProgressionLevel" progression_name="perkMiner69r" operation="LT" value="10"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayLVLperkMiner69r" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMiner69r" level="1">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMiner69r" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMiner69r" level="2">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMiner69r" operation="Equals" value="2"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMiner69r" level="3">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMiner69r" operation="Equals" value="3"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMiner69r" level="4">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMiner69r" operation="Equals" value="4"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMiner69r" level="5">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMiner69r" operation="Equals" value="5"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMiner69r" level="6">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMiner69r" operation="Equals" value="6"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMiner69r" level="7">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMiner69r" operation="Equals" value="7"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMiner69r" level="8">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMiner69r" operation="Equals" value="8"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMiner69r" level="9">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMiner69r" operation="Equals" value="9"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMiner69r" level="10">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMiner69r" operation="Equals" value="10"/>
+					</triggered_effect>
 			</effect_group>
 		</item>
 
@@ -105,14 +300,45 @@
 			<property name="CustomIconTint" value="81, 156, 89"/>
 			<property name="DescriptionKey" value="FuriousRamsayStrengthperkMotherLodeDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-						<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 			</property>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayStrengthUnitPerc" operation="add" value="@varFuriousRamsayStrengthUnitPercIncrease"/>
+			<effect_group name="FuriousRamsayProgression">
+				<requirement name="ProgressionLevel" progression_name="perkMotherLode" operation="LT" value="10"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayLVLperkMotherLode" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMotherLode" level="1">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMotherLode" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMotherLode" level="2">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMotherLode" operation="Equals" value="2"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMotherLode" level="3">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMotherLode" operation="Equals" value="3"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMotherLode" level="4">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMotherLode" operation="Equals" value="4"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMotherLode" level="5">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMotherLode" operation="Equals" value="5"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMotherLode" level="6">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMotherLode" operation="Equals" value="6"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMotherLode" level="7">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMotherLode" operation="Equals" value="7"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMotherLode" level="8">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMotherLode" operation="Equals" value="8"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMotherLode" level="9">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMotherLode" operation="Equals" value="9"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkMotherLode" level="10">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMotherLode" operation="Equals" value="10"/>
+					</triggered_effect>
 			</effect_group>
 		</item>
 
@@ -121,16 +347,47 @@
 			<property name="HoldType" value="73"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="CustomIconTint" value="209, 209, 105"/>
-			<property name="DescriptionKey" value="FuriousRamsayDexterityperkSexualTrexDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayDexterityperkRuleOneCardioDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-						<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 			</property>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayDexterityUnitPercIncrease"/>
+			<effect_group name="FuriousRamsayProgression">
+				<requirement name="ProgressionLevel" progression_name="perkRuleOneCardio" operation="LT" value="10"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayLVLperkRuleOneCardio" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRuleOneCardio" level="1">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRuleOneCardio" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRuleOneCardio" level="2">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRuleOneCardio" operation="Equals" value="2"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRuleOneCardio" level="3">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRuleOneCardio" operation="Equals" value="3"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRuleOneCardio" level="4">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRuleOneCardio" operation="Equals" value="4"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRuleOneCardio" level="5">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRuleOneCardio" operation="Equals" value="5"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRuleOneCardio" level="6">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRuleOneCardio" operation="Equals" value="6"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRuleOneCardio" level="7">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRuleOneCardio" operation="Equals" value="7"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRuleOneCardio" level="8">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRuleOneCardio" operation="Equals" value="8"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRuleOneCardio" level="9">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRuleOneCardio" operation="Equals" value="9"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRuleOneCardio" level="10">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRuleOneCardio" operation="Equals" value="10"/>
+					</triggered_effect>
 			</effect_group>
 		</item>
 
@@ -138,16 +395,47 @@
 			<property name="HoldType" value="73"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="CustomIconTint" value="173, 173, 87"/>
-			<property name="DescriptionKey" value="FuriousRamsayDexterityperkMiner69rDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayDexterityperkParkourDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-						<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 			</property>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayDexterityUnitPercIncrease"/>
+			<effect_group name="FuriousRamsayProgression">
+				<requirement name="ProgressionLevel" progression_name="perkParkour" operation="LT" value="10"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayLVLperkParkour" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkParkour" level="1">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkParkour" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkParkour" level="2">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkParkour" operation="Equals" value="2"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkParkour" level="3">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkParkour" operation="Equals" value="3"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkParkour" level="4">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkParkour" operation="Equals" value="4"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkParkour" level="5">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkParkour" operation="Equals" value="5"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkParkour" level="6">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkParkour" operation="Equals" value="6"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkParkour" level="7">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkParkour" operation="Equals" value="7"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkParkour" level="8">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkParkour" operation="Equals" value="8"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkParkour" level="9">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkParkour" operation="Equals" value="9"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkParkour" level="10">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkParkour" operation="Equals" value="10"/>
+					</triggered_effect>
 			</effect_group>
 		</item>
 
@@ -155,16 +443,47 @@
 			<property name="HoldType" value="73"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="CustomIconTint" value="133, 133, 68"/>
-			<property name="DescriptionKey" value="FuriousRamsayDexterityperkMotherLodeDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayDexterityperkRunAndGunDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-						<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 			</property>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayDexterityUnitPerc" operation="add" value="@varFuriousRamsayDexterityUnitPercIncrease"/>
+			<effect_group name="FuriousRamsayProgression">
+				<requirement name="ProgressionLevel" progression_name="perkRunAndGun" operation="LT" value="10"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayLVLperkRunAndGun" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRunAndGun" level="1">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRunAndGun" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRunAndGun" level="2">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRunAndGun" operation="Equals" value="2"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRunAndGun" level="3">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRunAndGun" operation="Equals" value="3"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRunAndGun" level="4">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRunAndGun" operation="Equals" value="4"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRunAndGun" level="5">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRunAndGun" operation="Equals" value="5"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRunAndGun" level="6">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRunAndGun" operation="Equals" value="6"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRunAndGun" level="7">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRunAndGun" operation="Equals" value="7"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRunAndGun" level="8">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRunAndGun" operation="Equals" value="8"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRunAndGun" level="9">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRunAndGun" operation="Equals" value="9"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkRunAndGun" level="10">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRunAndGun" operation="Equals" value="10"/>
+					</triggered_effect>
 			</effect_group>
 		</item>
 
@@ -173,16 +492,47 @@
 			<property name="HoldType" value="73"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="CustomIconTint" value="209, 107, 122"/>
-			<property name="DescriptionKey" value="FuriousRamsayConstitutionperkSexualTrexDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayConstitutionperkPackMuleDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-						<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 			</property>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayConstitutionUnitPercIncrease"/>
+			<effect_group name="FuriousRamsayProgression">
+				<requirement name="ProgressionLevel" progression_name="perkPackMule" operation="LT" value="10"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayLVLperkPackMule" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkPackMule" level="1">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkPackMule" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkPackMule" level="2">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkPackMule" operation="Equals" value="2"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkPackMule" level="3">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkPackMule" operation="Equals" value="3"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkPackMule" level="4">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkPackMule" operation="Equals" value="4"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkPackMule" level="5">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkPackMule" operation="Equals" value="5"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkPackMule" level="6">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkPackMule" operation="Equals" value="6"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkPackMule" level="7">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkPackMule" operation="Equals" value="7"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkPackMule" level="8">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkPackMule" operation="Equals" value="8"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkPackMule" level="9">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkPackMule" operation="Equals" value="9"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkPackMule" level="10">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkPackMule" operation="Equals" value="10"/>
+					</triggered_effect>
 			</effect_group>
 		</item>
 
@@ -190,16 +540,47 @@
 			<property name="HoldType" value="73"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="CustomIconTint" value="171, 87, 99"/>
-			<property name="DescriptionKey" value="FuriousRamsayConstitutionperkMiner69rDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayConstitutionperkHealingFactorDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-						<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 			</property>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayConstitutionUnitPercIncrease"/>
+			<effect_group name="FuriousRamsayProgression">
+				<requirement name="ProgressionLevel" progression_name="perkHealingFactor" operation="LT" value="10"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayLVLperkHealingFactor" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHealingFactor" level="1">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkHealingFactor" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHealingFactor" level="2">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkHealingFactor" operation="Equals" value="2"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHealingFactor" level="3">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkHealingFactor" operation="Equals" value="3"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHealingFactor" level="4">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkHealingFactor" operation="Equals" value="4"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHealingFactor" level="5">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkHealingFactor" operation="Equals" value="5"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHealingFactor" level="6">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkHealingFactor" operation="Equals" value="6"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHealingFactor" level="7">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkHealingFactor" operation="Equals" value="7"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHealingFactor" level="8">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkHealingFactor" operation="Equals" value="8"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHealingFactor" level="9">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkHealingFactor" operation="Equals" value="9"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHealingFactor" level="10">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkHealingFactor" operation="Equals" value="10"/>
+					</triggered_effect>
 			</effect_group>
 		</item>
 
@@ -207,16 +588,47 @@
 			<property name="HoldType" value="73"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="CustomIconTint" value="133, 68, 77"/>
-			<property name="DescriptionKey" value="FuriousRamsayConstitutionperkMotherLodeDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayConstitutionperkSlowMetabolismDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-						<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 			</property>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayConstitutionUnitPercIncrease"/>
+			<effect_group name="FuriousRamsayProgression">
+				<requirement name="ProgressionLevel" progression_name="perkSlowMetabolism" operation="LT" value="10"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayLVLperkSlowMetabolism" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSlowMetabolism" level="1">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSlowMetabolism" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSlowMetabolism" level="2">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSlowMetabolism" operation="Equals" value="2"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSlowMetabolism" level="3">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSlowMetabolism" operation="Equals" value="3"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSlowMetabolism" level="4">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSlowMetabolism" operation="Equals" value="4"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSlowMetabolism" level="5">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSlowMetabolism" operation="Equals" value="5"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSlowMetabolism" level="6">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSlowMetabolism" operation="Equals" value="6"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSlowMetabolism" level="7">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSlowMetabolism" operation="Equals" value="7"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSlowMetabolism" level="8">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSlowMetabolism" operation="Equals" value="8"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSlowMetabolism" level="9">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSlowMetabolism" operation="Equals" value="9"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkSlowMetabolism" level="10">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSlowMetabolism" operation="Equals" value="10"/>
+					</triggered_effect>
 			</effect_group>
 		</item>
 
@@ -225,16 +637,32 @@
 			<property name="HoldType" value="73"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="CustomIconTint" value="106, 128, 217"/>
-			<property name="DescriptionKey" value="FuriousRamsayIntelligenceperkSexualTrexDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayIntelligenceperkLuckyLooterDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-						<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 			</property>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@varFuriousRamsayIntelligenceUnitPercIncrease"/>
+			<effect_group name="FuriousRamsayProgression">
+				<requirement name="ProgressionLevel" progression_name="perkLuckyLooter" operation="LT" value="5"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayLVLperkLuckyLooter" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkLuckyLooter" level="1">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkLuckyLooter" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkLuckyLooter" level="2">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkLuckyLooter" operation="Equals" value="2"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkLuckyLooter" level="3">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkLuckyLooter" operation="Equals" value="3"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkLuckyLooter" level="4">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkLuckyLooter" operation="Equals" value="4"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkLuckyLooter" level="5">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkLuckyLooter" operation="Equals" value="5"/>
+					</triggered_effect>
 			</effect_group>
 		</item>
 
@@ -242,16 +670,26 @@
 			<property name="HoldType" value="73"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="CustomIconTint" value="87, 106, 179"/>
-			<property name="DescriptionKey" value="FuriousRamsayIntelligenceperkMiner69rDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayIntelligenceperkLockPickingDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-						<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 			</property>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@varFuriousRamsayIntelligenceUnitPercIncrease"/>
+			<effect_group name="FuriousRamsayProgression">
+				<requirement name="ProgressionLevel" progression_name="perkLockPicking" operation="LT" value="3"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayLVLperkLockPicking" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkLockPicking" level="1">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkLockPicking" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkLockPicking" level="2">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkLockPicking" operation="Equals" value="2"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkLockPicking" level="3">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkLockPicking" operation="Equals" value="3"/>
+					</triggered_effect>
 			</effect_group>
 		</item>
 
@@ -259,16 +697,26 @@
 			<property name="HoldType" value="73"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="CustomIconTint" value="69, 83, 140"/>
-			<property name="DescriptionKey" value="FuriousRamsayIntelligenceperkMotherLodeDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayIntelligenceperkTreasureHunterDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-						<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 			</property>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayIntelligenceUnitPerc" operation="add" value="@varFuriousRamsayIntelligenceUnitPercIncrease"/>
+			<effect_group name="FuriousRamsayProgression">
+				<requirement name="ProgressionLevel" progression_name="perkTreasureHunter" operation="LT" value="3"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayLVLperkTreasureHunter" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkTreasureHunter" level="1">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkTreasureHunter" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkTreasureHunter" level="2">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkTreasureHunter" operation="Equals" value="2"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkTreasureHunter" level="3">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkTreasureHunter" operation="Equals" value="3"/>
+					</triggered_effect>
 			</effect_group>
 		</item>
 
@@ -277,16 +725,32 @@
 			<property name="HoldType" value="73"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="CustomIconTint" value="179, 120, 222"/>
-			<property name="DescriptionKey" value="FuriousRamsayKnowledgeperkSexualTrexDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayKnowledgeperkGreaseMonkeyDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-						<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 			</property>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayKnowledgeUnitPerc" operation="add" value="@varFuriousRamsayKnowledgeUnitPercIncrease"/>
+			<effect_group name="FuriousRamsayProgression">
+				<requirement name="ProgressionLevel" progression_name="perkGreaseMonkey" operation="LT" value="5"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayLVLperkGreaseMonkey" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreaseMonkey" level="1">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkGreaseMonkey" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreaseMonkey" level="2">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkGreaseMonkey" operation="Equals" value="2"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreaseMonkey" level="3">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkGreaseMonkey" operation="Equals" value="3"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreaseMonkey" level="4">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkGreaseMonkey" operation="Equals" value="4"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkGreaseMonkey" level="5">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkGreaseMonkey" operation="Equals" value="5"/>
+					</triggered_effect>
 			</effect_group>
 		</item>
 
@@ -295,16 +759,29 @@
 			<property name="HoldType" value="73"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="CustomIconTint" value="224, 128, 208"/>
-			<property name="DescriptionKey" value="FuriousRamsayCharismaperkSexualTrexDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayCharismaperkDaringAdventurerDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-						<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 			</property>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@varFuriousRamsayCharismaUnitPercIncrease"/>
+			<effect_group name="FuriousRamsayProgression">
+				<requirement name="ProgressionLevel" progression_name="perkDaringAdventurer" operation="LT" value="4"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayLVLperkDaringAdventurer" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkDaringAdventurer" level="1">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkDaringAdventurer" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkDaringAdventurer" level="2">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkDaringAdventurer" operation="Equals" value="2"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkDaringAdventurer" level="3">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkDaringAdventurer" operation="Equals" value="3"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkDaringAdventurer" level="4">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkDaringAdventurer" operation="Equals" value="4"/>
+					</triggered_effect>
 			</effect_group>
 		</item>
 
@@ -312,16 +789,32 @@
 			<property name="HoldType" value="73"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="CustomIconTint" value="189, 108, 175"/>
-			<property name="DescriptionKey" value="FuriousRamsayCharismaperkMiner69rDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayCharismaperkBetterBarterDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-						<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 			</property>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@varFuriousRamsayCharismaUnitPercIncrease"/>
+			<effect_group name="FuriousRamsayProgression">
+				<requirement name="ProgressionLevel" progression_name="perkBetterBarter" operation="LT" value="5"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayLVLperkBetterBarter" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkBetterBarter" level="1">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkBetterBarter" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkBetterBarter" level="2">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkBetterBarter" operation="Equals" value="2"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkBetterBarter" level="3">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkBetterBarter" operation="Equals" value="3"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkBetterBarter" level="4">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkBetterBarter" operation="Equals" value="4"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkBetterBarter" level="5">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkBetterBarter" operation="Equals" value="5"/>
+					</triggered_effect>
 			</effect_group>
 		</item>
 
@@ -329,16 +822,32 @@
 			<property name="HoldType" value="73"/>
 			<property name="HoldingItemHidden" value="true"/>
 			<property name="CustomIconTint" value="153, 87, 142"/>
-			<property name="DescriptionKey" value="FuriousRamsayCharismaperkMotherLodeDesc"/>
+			<property name="DescriptionKey" value="FuriousRamsayCharismaperkCharismaticNatureDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-						<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 			</property>
-			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayCharismaUnitPerc" operation="add" value="@varFuriousRamsayCharismaUnitPercIncrease"/>
+			<effect_group name="FuriousRamsayProgression">
+				<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="LT" value="5"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayLVLperkCharismaticNature" operation="add" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkCharismaticNature" level="1">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkCharismaticNature" operation="Equals" value="1"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkCharismaticNature" level="2">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkCharismaticNature" operation="Equals" value="2"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkCharismaticNature" level="3">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkCharismaticNature" operation="Equals" value="3"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkCharismaticNature" level="4">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkCharismaticNature" operation="Equals" value="4"/>
+					</triggered_effect>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkCharismaticNature" level="5">
+						<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkCharismaticNature" operation="Equals" value="5"/>
+					</triggered_effect>
 			</effect_group>
 		</item>
 
