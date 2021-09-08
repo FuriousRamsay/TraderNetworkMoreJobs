@@ -162,6 +162,7 @@
 		<item name="FuriousRamsayBook" count="1" prob="0.11"/>
 		<item group="FuriousRamsayGroupRebirthBooksFoodLow" prob="1.5"/>
 		<item group="FuriousRamsayGroupRebirthBooksFoodHigh" prob="1.25"/>
+		<item group="FuriousRamsayGroupRebirthBooksMeds" prob="0.75"/>
 		<item group="FuriousRamsayGroupRebirthBooksDrinks" prob="1.75"/>
 		<item name="FuriousRamsayBook" count="1" prob="7.5"/>
 	</append>
@@ -170,6 +171,7 @@
 		<item name="FuriousRamsayBook" count="1" prob="0.11"/>
 		<item group="FuriousRamsayGroupRebirthBooksFoodLow" prob="1"/>
 		<item group="FuriousRamsayGroupRebirthBooksFoodHigh" prob="0.75"/>
+		<item group="FuriousRamsayGroupRebirthBooksMeds" prob="0.5"/>
 		<item group="FuriousRamsayGroupRebirthBooksDrinks" prob="1.25"/>
 		<item name="FuriousRamsayBook" count="1" prob="7.5"/>
 	</append>
@@ -178,11 +180,21 @@
 		<item name="FuriousRamsayBook" count="1" prob="0.11"/>
 		<item group="FuriousRamsayGroupRebirthBooksFoodLow" prob="1"/>
 		<item group="FuriousRamsayGroupRebirthBooksFoodHigh" prob="0.75"/>
+		<item group="FuriousRamsayGroupRebirthBooksMeds" prob="0.5"/>
 		<item group="FuriousRamsayGroupRebirthBooksDrinks" prob="1.25"/>
 		<item name="FuriousRamsayBook" count="1" prob="7.5"/>
 	</append>
 
 	<insertAfter xpath="/lootcontainers/lootgroup[@name='empty']">
+
+		<lootgroup name="FuriousRamsayGroupRebirthBooksMeds">
+			<item name="medicalFirstAidBandageSchematic"/>
+			<item name="medicalFirstAidKitSchematic"/>
+			<item name="medicalPlasterCastSchematic"/>
+			<item name="drugHerbalAntibioticsSchematic"/>
+			<item name="drugAntibioticsSchematic"/>
+		</lootgroup>
+
 		<lootgroup name="FuriousRamsayGroupRebirthBooksFoodLow">
 			<item name="foodCornBreadSchematic"/>
 			<item name="foodPumpkinBreadSchematic"/>
