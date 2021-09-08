@@ -53,6 +53,10 @@
 		</property>
 	</append>
 
+	<!-- ADJUST DAMAGE MODIFIERS FOR AXES ON METAL FOR MADMAN CLASS -->
+	<setattribute xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/effect_group/passive_effect[@name='DamageModifier' and @tags='metal']" name="value">0</setattribute>
+	<setattribute xpath="/items/item[@name='meleeToolAxeT2SteelAxe']/effect_group/passive_effect[@name='DamageModifier' and @tags='metal']" name="value">0</setattribute>
+
 	<append xpath="/items">
 
 		<item name="FuriousRamsayGeneticsPerkTrainingMaster">
@@ -560,7 +564,12 @@
 			<property name="Weight" value="0"/>
 			<property name="Group" value="Special Items,books"/>
 		</item>
-
+		
+		<item name="FuriousRamsayBook">
+			<property name="Extends" value="FuriousRamsayClassBookMaster"/>
+			<property name="Weight" value="14"/>
+		</item>
+	
 		<item name="FuriousRamsayClassBookGeneric">
 			<property name="Extends" value="FuriousRamsayClassBookMaster"/>
 			<property name="CustomIconTint" value="125, 125, 125"/>
