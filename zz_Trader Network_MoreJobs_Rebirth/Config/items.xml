@@ -189,8 +189,31 @@
 	<setattribute xpath="/items/item[@name='drinkYuccaJuiceSmoothie']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">5</setattribute>
 	<setattribute xpath="/items/item[@name='drinkYuccaJuiceSmoothie']/effect_group/triggered_effect[@cvar='$waterAmountAdd']" name="value">50</setattribute>
 	<setattribute xpath="/items/item[@name='drinkYuccaJuiceSmoothie']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">2</setattribute>
-	
+
+	<!-- CUSTOM REPAIR KITS FOR IRON TOOLS -->
+	<setattribute xpath="/items/item[@name='meleeToolPickT1IronPickaxe']/property[@name='RepairTools']" name="value">FuriousRamsayScrapRepairKit</setattribute>
+	<setattribute xpath="/items/item[@name='meleeToolShovelT1IronShovel']/property[@name='RepairTools']" name="value">FuriousRamsayScrapRepairKit</setattribute>
+	<setattribute xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/property[@name='RepairTools']" name="value">FuriousRamsayScrapRepairKit</setattribute>
+	<setattribute xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/property[@name='RepairTools']" name="value">FuriousRamsayScrapRepairKit</setattribute>
+
 	<append xpath="/items">
+
+		<item name="FuriousRamsayScrapRepairKit">
+			<property name="CustomIcon" value="cntToolBoxOpen"/>
+			<property name="CustomIconTint" value="50, 50, 50"/>
+			<property name="HoldType" value="45"/>
+			<property name="Tags" value="junk"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="100"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="RepairTime" value="3"/>
+			<property name="Weight" value="10"/>
+			<property name="RepairAmount" value="32000"/>
+			<property name="Group" value="Resources"/>
+		</item>
 
 		<item name="FuriousRamsayGeneticsPerkTrainingMaster">
 			<property name="Extends" value="FuriousRamsayNoteMaster"/>
