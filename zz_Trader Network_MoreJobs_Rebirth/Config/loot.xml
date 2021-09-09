@@ -52,6 +52,8 @@
 
 	<remove xpath="/lootcontainers/lootgroup[@name='rottenFood']/item[@name='foodShamSandwich']"/>
 
+	<remove xpath="/lootcontainers/lootgroup[@name='cupboard']/item[@name='dyes']"/>
+
 	<remove xpath="/lootcontainers/lootgroup[@name='workbenchLoot']/item[@name='resourceCloth']"/>
 	<remove xpath="/lootcontainers/lootgroup[@name='workbenchLoot']/item[@name='resourceScrapPolymers']"/>
 
@@ -86,18 +88,21 @@
 	<remove xpath="/lootcontainers/lootgroup[@name='shamwaySafeFiller']/item[@name='resourcePaper']"/>
 
 	<remove xpath="/lootcontainers/lootcontainer[@id='12']/item[@name='meleeToolPaintTool']"/>
+	<remove xpath="/lootcontainers/lootcontainer[@id='12']/item[@name='dyes']"/>
 
 	<remove xpath="/lootcontainers/lootcontainer[@id='13']/item[@name='resourceCloth']"/>
 
 	<remove xpath="/lootcontainers/lootcontainer[@id='14']/item[@name='resourcePaper']"/>
 
 	<remove xpath="/lootcontainers/lootcontainer[@id='15']/item[@name='meleeToolPaintTool']"/>
+	<remove xpath="/lootcontainers/lootcontainer[@id='15']/item[@name='dyes']"/>
 
 	<remove xpath="/lootcontainers/lootcontainer[@id='18']/item[@name='resourceCloth']"/>
 
 	<remove xpath="/lootcontainers/lootcontainer[@id='21']/item[@name='resourceScrapPolymers']"/>
 
 	<remove xpath="/lootcontainers/lootcontainer[@id='22']/item[@name='meleeToolPaintTool']"/>
+	<remove xpath="/lootcontainers/lootcontainer[@id='22']/item[@name='dyes']"/>
 
 	<remove xpath="/lootcontainers/lootcontainer[@id='35']/item[@name='resourceScrapPolymers']"/>
 
@@ -129,6 +134,10 @@
 	<remove xpath="/lootcontainers/lootcontainer[@id='89']/item[@name='resourceScrapPolymers']"/>
 
 	<remove xpath="/lootcontainers/lootcontainer[@id='96']/item[@name='resourcePaper']"/>
+
+	<remove xpath="/lootcontainers/lootcontainer[@id='114']/item[@name='dyes']"/>
+	<remove xpath="/lootcontainers/lootcontainer[@id='115']/item[@name='dyes']"/>
+	<remove xpath="/lootcontainers/lootcontainer[@id='116']/item[@name='dyes']"/>
 
 	<remove xpath="/lootcontainers/lootcontainer[@id='123']/item[@name='resourceCloth']"/>
 
@@ -288,8 +297,18 @@
 
 	<append xpath="/lootcontainers">
 
+		<lootgroup name="FuriousRamsayTraderNetworkSupplies" count="all">
+			<item name="qc_FuriousRamsayFindNextTrader" count="1"/>
+			<item name="foodCanBeef" count="1"/>
+			<item name="foodCanChili" count="1"/>
+			<item name="foodCanMiso" count="1"/>
+			<item name="foodCanPasta" count="1"/>
+			<item name="drinkJarPureMineralWater" count="2"/>
+			<item name="drinkCanMegaCrush" count="1"/>
+		</lootgroup>
+
 		<lootgroup name="FuriousRamsayGroupContainerTrainerHunter" count="all">
-			<item name="FuriousRamsaySpawnHunterTrainer"  count="1"/>
+			<item name="FuriousRamsaySpawnHunterTrainer" count="1"/>
 			<item name="meleeWpnSpearT0StoneSpear" quality="3" count="1"/>
 			<item name="gunBowT0PrimitiveBow" quality="3" count="1"/>
 			<item name="ammoArrowStone" count="50"/>
@@ -306,7 +325,7 @@
 		</lootgroup>
 
 		<lootgroup name="FuriousRamsayGroupContainerTrainerThug" count="all">
-			<item name="FuriousRamsaySpawnThugTrainer"  count="1"/>
+			<item name="FuriousRamsaySpawnThugTrainer" count="1"/>
 			<item name="meleeWpnClubT0WoodenClub" quality="3" count="1"/>
 			<item name="FuriousRamsayAttributeThugClass" count="1"/>
 			<item name="FuriousRamsayStarterArmorHeadThug" quality="1"/>
@@ -542,6 +561,10 @@
 
 		<lootcontainer id="833" size="5,3" destroy_on_close="true" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" open_time="1">
 			<item group="FuriousRamsayGroupContainerTrainerChef" />
+		</lootcontainer>
+
+		<lootcontainer id="863" size="8,9" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualPlus1Template">
+			<item group="FuriousRamsayTraderNetworkSupplies"/>
 		</lootcontainer>
 
 	</append>

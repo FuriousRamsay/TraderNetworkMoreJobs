@@ -1,6 +1,18 @@
 <Config>
 
+	<remove xpath="/blocks/block/property[@name='UnlockedBy']"/>
+
 	<append xpath="/blocks">
+
+		<block name="FuriousRamsayTraderNetworkBuriedSupplies">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="cntLootChestHeroInsecure" param1="DescriptionKey"/>
+			<property name="CustomIcon" value="cntLootChestHero"/>
+			<property name="CustomIconTint" value="80ff80"/>
+			<property name="Class" value="QuestLoot"/>
+			<property name="LootList" value="863"/>
+			<property name="Tags" value="buriedTreasure"/>
+		</block>
 
 		<!-- HUNTER -->
 		<block name="FuriousRamsayContainerTrainerHunter">
