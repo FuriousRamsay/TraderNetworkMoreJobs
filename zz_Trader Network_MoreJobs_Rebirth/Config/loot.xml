@@ -297,6 +297,9 @@
 
 	<append xpath="/lootcontainers">
 
+		<lootgroup name="FuriousRamsaySurvivalSupplies" count="all">
+		</lootgroup>
+
 		<lootgroup name="FuriousRamsayTraderNetworkSupplies" count="all">
 			<item name="qc_FuriousRamsayFindNextTrader" count="1"/>
 			<item name="foodCanBeef" count="1"/>
@@ -565,6 +568,10 @@
 
 		<lootcontainer id="863" size="8,9" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualPlus1Template">
 			<item group="FuriousRamsayTraderNetworkSupplies"/>
+		</lootcontainer>
+
+		<lootcontainer id="864" size="8,9" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualPlus1Template">
+			<item group="FuriousRamsaySurvivalSupplies"/>
 		</lootcontainer>
 
 	</append>

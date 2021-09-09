@@ -1,5 +1,14 @@
 <Config>
 
+	<append xpath="//quest_items">
+		<quest_item id="94" name="FuriousRamsayStarterBackpackStrengthQuestItem" description_key="FuriousRamsayStarterBackpackStrengthDesc" icon="backpackMedium" icon_color="c27272"/>
+		<quest_item id="95" name="FuriousRamsayStarterBackpackDexterityQuestItem" description_key="FuriousRamsayStarterBackpackDexterityDesc" icon="backpackMedium" icon_color="bdbf71"/>
+		<quest_item id="96" name="FuriousRamsayStarterBackpackConstitutionQuestItem" description_key="FuriousRamsayStarterBackpackConstitutionDesc" icon="backpackMedium" icon_color="7abd71"/>
+		<quest_item id="97" name="FuriousRamsayStarterBackpackIntelligenceQuestItem" description_key="FuriousRamsayStarterBackpackIntelligenceDesc" icon="backpackMedium" icon_color="70a4ba"/>
+		<quest_item id="98" name="FuriousRamsayStarterBackpackKnowledgeQuestItem" description_key="FuriousRamsayStarterBackpackKnowledgeDesc" icon="backpackMedium" icon_color="416eb8"/>
+		<quest_item id="99" name="FuriousRamsayStarterBackpackCharismaQuestItem" description_key="FuriousRamsayStarterBackpackCharismaDesc" icon="backpackMedium" icon_color="b36ba7"/>
+	</append>
+
 	<remove xpath="/quests/quest[@id='quest_BasicSurvival1']"/>
 
 	<!-- REMOVE SCHEMATICS FROM QUEST REWARDS -->
@@ -4144,6 +4153,10 @@
 
 			<action type="TrackQuest"/>
 
+			<action type="ShowTip" value="quest_FuriousRamsayGeneticsInfo" phase="1">
+				<property name="delay" value="0.25"/>
+			</action>
+
 			<objective type="RandomPOIGoto">
 				<property name="phase" value="1"/>
 				<property name="nav_object" value="quest" />
@@ -4190,7 +4203,7 @@
 
 			<objective type="BlockPlace" id="FuriousRamsaySpawnSurvivalSpecialist" value="1" phase="1"/>
 
-			<action type="ShowTip" value="quest_FuriousRamsayCraftClassBook" phase="2">
+			<action type="ShowTip" value="quest_FuriousRamsayPillsInfo" phase="2">
 				<property name="delay" value="0.25"/>
 			</action>
 
@@ -4199,11 +4212,377 @@
 				<property name="nav_object" value="return_to_trader" />
 			</objective>
 			
-			<reward type="LootItem" id="FuriousRamsayStarterBackpackStrength" ischosen="true" isfixed="true" value="1"/>
-			<reward type="LootItem" id="FuriousRamsayStarterBackpackDexterity" ischosen="true" isfixed="true" value="1"/>
-			<reward type="LootItem" id="FuriousRamsayStarterBackpackConstitution" ischosen="true" isfixed="true" value="1"/>
-			<reward type="LootItem" id="FuriousRamsayStarterBackpackIntelligence" ischosen="true" isfixed="true" value="1"/>
-			<reward type="LootItem" id="FuriousRamsayStarterBackpackCharisma" ischosen="true" isfixed="true" value="1"/>
+			<reward type="Item" id="qc_FuriousRamsayStarterBackpackStrengthDig" ischosen="true" isfixed="true" value="1"/>
+			<reward type="Item" id="qc_FuriousRamsayStarterBackpackDexterityDig" ischosen="true" isfixed="true" value="1"/>
+			<reward type="Item" id="qc_FuriousRamsayStarterBackpackConstitutionDig" ischosen="true" isfixed="true" value="1"/>
+			<reward type="Item" id="qc_FuriousRamsayStarterBackpackIntelligenceDig" ischosen="true" isfixed="true" value="1"/>
+			<reward type="Item" id="qc_FuriousRamsayStarterBackpackCharismaDig" ischosen="true" isfixed="true" value="1"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayStarterBackpackStrengthDig">
+			<property name="name_key" value="quest_FuriousRamsayStarterBackpackStrengthDig_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayStarterBackpackStrengthDig_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayStarterBackpackStrengthDig_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="difficulty_tier" value="1"/>
+
+			<property name="completiontype" value="TurnIn"/>
+			<property name="offer_key" value="quest_FuriousRamsayStarterBackpackStrengthDig_offer"/>
+			<property name="completion_key" value="quest_FuriousRamsayStarterBackpackStrengthDig_completion"/>
+
+			<objective type="FetchKeep" id="resourceYuccaFibers" value="10" phase="1"/>
+			<objective type="FetchKeep" id="resourceRockSmall" value="10" phase="1"/>
+			<objective type="FetchKeep" id="resourceWood" value="10" phase="1"/>
+			<objective type="Craft">
+				<property name="phase" value="1"/>
+				<property name="item" value="meleeToolShovelT0StoneShovel"/>
+				<property name="count" value="1"/>
+			</objective>
+
+			<objective type="TreasureChest">
+				<property name="phase" value="2"/>
+				<property name="block" value="FuriousRamsaySurvivalBuriedSupplies"/>
+				<property name="distance" value="80-100"/>
+				<property name="default_radius" value="4"/>
+				<property name="container_type" value="Supplies"/>
+				<property name="nav_object" value="treasure" />
+				<property name="direct_nav_object" value="treasure_direct" />
+				<property name="blocks_per_reduction" value="2" />
+				<property name="radius_reduction_sound" value="ui_radius_shrink" />
+			</objective>
+
+			<objective type="FetchFromTreasure">
+				<property name="phase" value="2"/>
+				<property name="block" value="FuriousRamsaySurvivalBuriedSupplies"/>
+				<property name="quest_item_ID" value="96"/>
+				<property name="item_count" value="1"/>
+			</objective>
+		
+			<action type="ShowTip" value="quest_FuriousRamsayCraftClassBook" phase="3">
+				<property name="delay" value="0.25"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="1000"/>
+			<reward type="Item" value="FuriousRamsayStarterBackpackStrength"/>
+		</quest>
+		
+		<quest id="quest_FuriousRamsayStarterBackpackDexterityDig">
+			<property name="name_key" value="quest_FuriousRamsayStarterBackpackDexterityDig_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayStarterBackpackDexterityDig_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayStarterBackpackDexterityDig_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="difficulty_tier" value="1"/>
+
+			<property name="completiontype" value="TurnIn"/>
+			<property name="offer_key" value="quest_FuriousRamsayStarterBackpackDexterityDig_offer"/>
+			<property name="completion_key" value="quest_FuriousRamsayStarterBackpackDexterityDig_completion"/>
+
+			<objective type="FetchKeep" id="resourceYuccaFibers" value="10" phase="1"/>
+			<objective type="FetchKeep" id="resourceRockSmall" value="10" phase="1"/>
+			<objective type="FetchKeep" id="resourceWood" value="10" phase="1"/>
+			<objective type="Craft">
+				<property name="phase" value="1"/>
+				<property name="item" value="meleeToolShovelT0StoneShovel"/>
+				<property name="count" value="1"/>
+			</objective>
+
+			<objective type="TreasureChest">
+				<property name="phase" value="2"/>
+				<property name="block" value="FuriousRamsaySurvivalBuriedSupplies"/>
+				<property name="distance" value="80-100"/>
+				<property name="default_radius" value="4"/>
+				<property name="container_type" value="Supplies"/>
+				<property name="nav_object" value="treasure" />
+				<property name="direct_nav_object" value="treasure_direct" />
+				<property name="blocks_per_reduction" value="2" />
+				<property name="radius_reduction_sound" value="ui_radius_shrink" />
+			</objective>
+
+			<objective type="FetchFromTreasure">
+				<property name="phase" value="2"/>
+				<property name="block" value="FuriousRamsaySurvivalBuriedSupplies"/>
+				<property name="quest_item_ID" value="96"/>
+				<property name="item_count" value="1"/>
+			</objective>
+		
+			<action type="ShowTip" value="quest_FuriousRamsayCraftClassBook" phase="3">
+				<property name="delay" value="0.25"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="1000"/>
+			<reward type="Item" value="FuriousRamsayStarterBackpackDexterity"/>
+		</quest>
+		
+		<quest id="quest_FuriousRamsayStarterBackpackConstitutionDig">
+			<property name="name_key" value="quest_FuriousRamsayStarterBackpackConstitutionDig_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayStarterBackpackConstitutionDig_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayStarterBackpackConstitutionDig_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="difficulty_tier" value="1"/>
+
+			<property name="completiontype" value="TurnIn"/>
+			<property name="offer_key" value="quest_FuriousRamsayStarterBackpackConstitutionDig_offer"/>
+			<property name="completion_key" value="quest_FuriousRamsayStarterBackpackConstitutionDig_completion"/>
+
+			<objective type="FetchKeep" id="resourceYuccaFibers" value="10" phase="1"/>
+			<objective type="FetchKeep" id="resourceRockSmall" value="10" phase="1"/>
+			<objective type="FetchKeep" id="resourceWood" value="10" phase="1"/>
+			<objective type="Craft">
+				<property name="phase" value="1"/>
+				<property name="item" value="meleeToolShovelT0StoneShovel"/>
+				<property name="count" value="1"/>
+			</objective>
+
+			<objective type="TreasureChest">
+				<property name="phase" value="2"/>
+				<property name="block" value="FuriousRamsaySurvivalBuriedSupplies"/>
+				<property name="distance" value="80-100"/>
+				<property name="default_radius" value="4"/>
+				<property name="container_type" value="Supplies"/>
+				<property name="nav_object" value="treasure" />
+				<property name="direct_nav_object" value="treasure_direct" />
+				<property name="blocks_per_reduction" value="2" />
+				<property name="radius_reduction_sound" value="ui_radius_shrink" />
+			</objective>
+
+			<objective type="FetchFromTreasure">
+				<property name="phase" value="2"/>
+				<property name="block" value="FuriousRamsaySurvivalBuriedSupplies"/>
+				<property name="quest_item_ID" value="96"/>
+				<property name="item_count" value="1"/>
+			</objective>
+		
+			<action type="ShowTip" value="quest_FuriousRamsayCraftClassBook" phase="3">
+				<property name="delay" value="0.25"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="1000"/>
+			<reward type="Item" value="FuriousRamsayStarterBackpackConstitution"/>
+		</quest>
+		
+		<quest id="quest_FuriousRamsayStarterBackpackIntelligenceDig">
+			<property name="name_key" value="quest_FuriousRamsayStarterBackpackIntelligenceDig_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayStarterBackpackIntelligenceDig_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayStarterBackpackIntelligenceDig_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="difficulty_tier" value="1"/>
+
+			<property name="completiontype" value="TurnIn"/>
+			<property name="offer_key" value="quest_FuriousRamsayStarterBackpackIntelligenceDig_offer"/>
+			<property name="completion_key" value="quest_FuriousRamsayStarterBackpackIntelligenceDig_completion"/>
+
+			<objective type="FetchKeep" id="resourceYuccaFibers" value="10" phase="1"/>
+			<objective type="FetchKeep" id="resourceRockSmall" value="10" phase="1"/>
+			<objective type="FetchKeep" id="resourceWood" value="10" phase="1"/>
+			<objective type="Craft">
+				<property name="phase" value="1"/>
+				<property name="item" value="meleeToolShovelT0StoneShovel"/>
+				<property name="count" value="1"/>
+			</objective>
+
+			<objective type="TreasureChest">
+				<property name="phase" value="2"/>
+				<property name="block" value="FuriousRamsaySurvivalBuriedSupplies"/>
+				<property name="distance" value="80-100"/>
+				<property name="default_radius" value="4"/>
+				<property name="container_type" value="Supplies"/>
+				<property name="nav_object" value="treasure" />
+				<property name="direct_nav_object" value="treasure_direct" />
+				<property name="blocks_per_reduction" value="2" />
+				<property name="radius_reduction_sound" value="ui_radius_shrink" />
+			</objective>
+
+			<objective type="FetchFromTreasure">
+				<property name="phase" value="2"/>
+				<property name="block" value="FuriousRamsaySurvivalBuriedSupplies"/>
+				<property name="quest_item_ID" value="96"/>
+				<property name="item_count" value="1"/>
+			</objective>
+		
+			<action type="ShowTip" value="quest_FuriousRamsayCraftClassBook" phase="3">
+				<property name="delay" value="0.25"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="1000"/>
+			<reward type="Item" value="FuriousRamsayStarterBackpackIntelligence"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayStarterBackpackKnowledgeDig">
+			<property name="name_key" value="quest_FuriousRamsayStarterBackpackKnowledgeDig_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayStarterBackpackKnowledgeDig_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayStarterBackpackKnowledgeDig_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="difficulty_tier" value="1"/>
+
+			<property name="completiontype" value="TurnIn"/>
+			<property name="offer_key" value="quest_FuriousRamsayStarterBackpackKnowledgeDig_offer"/>
+			<property name="completion_key" value="quest_FuriousRamsayStarterBackpackKnowledgeDig_completion"/>
+
+			<objective type="FetchKeep" id="resourceYuccaFibers" value="10" phase="1"/>
+			<objective type="FetchKeep" id="resourceRockSmall" value="10" phase="1"/>
+			<objective type="FetchKeep" id="resourceWood" value="10" phase="1"/>
+			<objective type="Craft">
+				<property name="phase" value="1"/>
+				<property name="item" value="meleeToolShovelT0StoneShovel"/>
+				<property name="count" value="1"/>
+			</objective>
+
+			<objective type="TreasureChest">
+				<property name="phase" value="2"/>
+				<property name="block" value="FuriousRamsaySurvivalBuriedSupplies"/>
+				<property name="distance" value="80-100"/>
+				<property name="default_radius" value="4"/>
+				<property name="container_type" value="Supplies"/>
+				<property name="nav_object" value="treasure" />
+				<property name="direct_nav_object" value="treasure_direct" />
+				<property name="blocks_per_reduction" value="2" />
+				<property name="radius_reduction_sound" value="ui_radius_shrink" />
+			</objective>
+
+			<objective type="FetchFromTreasure">
+				<property name="phase" value="2"/>
+				<property name="block" value="FuriousRamsaySurvivalBuriedSupplies"/>
+				<property name="quest_item_ID" value="96"/>
+				<property name="item_count" value="1"/>
+			</objective>
+		
+			<action type="ShowTip" value="quest_FuriousRamsayCraftClassBook" phase="3">
+				<property name="delay" value="0.25"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="1000"/>
+			<reward type="Item" value="FuriousRamsayStarterBackpackKnowledge"/>
+		</quest>
+
+		<quest id="quest_FuriousRamsayStarterBackpackCharismaDig">
+			<property name="name_key" value="quest_FuriousRamsayStarterBackpackCharismaDig_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayStarterBackpackCharismaDig_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayStarterBackpackCharismaDig_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="veryeasy"/>
+			<property name="difficulty_tier" value="1"/>
+
+			<property name="completiontype" value="TurnIn"/>
+			<property name="offer_key" value="quest_FuriousRamsayStarterBackpackCharismaDig_offer"/>
+			<property name="completion_key" value="quest_FuriousRamsayStarterBackpackCharismaDig_completion"/>
+
+			<objective type="FetchKeep" id="resourceYuccaFibers" value="10" phase="1"/>
+			<objective type="FetchKeep" id="resourceRockSmall" value="10" phase="1"/>
+			<objective type="FetchKeep" id="resourceWood" value="10" phase="1"/>
+			<objective type="Craft">
+				<property name="phase" value="1"/>
+				<property name="item" value="meleeToolShovelT0StoneShovel"/>
+				<property name="count" value="1"/>
+			</objective>
+
+			<objective type="TreasureChest">
+				<property name="phase" value="2"/>
+				<property name="block" value="FuriousRamsaySurvivalBuriedSupplies"/>
+				<property name="distance" value="80-100"/>
+				<property name="default_radius" value="4"/>
+				<property name="container_type" value="Supplies"/>
+				<property name="nav_object" value="treasure" />
+				<property name="direct_nav_object" value="treasure_direct" />
+				<property name="blocks_per_reduction" value="2" />
+				<property name="radius_reduction_sound" value="ui_radius_shrink" />
+			</objective>
+
+			<objective type="FetchFromTreasure">
+				<property name="phase" value="2"/>
+				<property name="block" value="FuriousRamsaySurvivalBuriedSupplies"/>
+				<property name="quest_item_ID" value="96"/>
+				<property name="item_count" value="1"/>
+			</objective>
+		
+			<action type="ShowTip" value="quest_FuriousRamsayCraftClassBook" phase="3">
+				<property name="delay" value="0.25"/>
+			</action>
+
+			<objective type="ReturnToNPC">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="3"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
+			<reward type="Exp" value="1000"/>
+			<reward type="Item" value="FuriousRamsayStarterBackpackCharisma"/>
 		</quest>
 		
 		<quest id="quest_FuriousRamsayTraderNetwork">
@@ -4325,7 +4704,7 @@
 
 			<objective type="ZombieKill" value="2" phase="1"/>
 			<objective type="Wear" id="apparelTShirtPlain" phase="1"/>
-			<objective type="Wear" id="apparelGothPants" phase="1"/>
+			<objective type="Wear" id="apparelDenimPants" phase="1"/>
 			<objective type="Wear" id="apparelRunningShoesRegular" phase="1"/>
 
 			<action type="SpawnEnemy" id="FuriousRamsayZombieArlene" value="1" phase="1"/>
@@ -4338,16 +4717,14 @@
 			<action type="SpawnEnemy" id="FuriousRamsayZombieBusinessMan" value="1" phase="1"/>
 			<action type="SpawnEnemy" id="FuriousRamsayUMALindaStarter" value="1" phase="1"/>
 
-			<objective type="FetchKeep" id="meleeToolRepairT0StoneAxe" value="1" phase="2"/>
-			
-			<objective type="Time" value="0" phase="3"/>
-			<action type="SpawnEnemy" id="FuriousRamsayNPCSurvivalSpecialist1" value="1" phase="3"/>	
-			<action type="ShowTip" value="FuriousRamsayFoundSurvivalSpecialistNote" phase="3">
-				<property name="delay" value="1"/>
+			<objective type="Time" value="0" phase="2"/>
+			<action type="SpawnEnemy" id="FuriousRamsayNPCSurvivalSpecialist1" value="1" phase="2"/>
+			<action type="ShowTip" value="FuriousRamsayFoundSurvivalSpecialistNote" phase="2">
+				<property name="delay" value="2"/>
 			</action>
 
 			<objective type="InteractWithNPC">
-				<property name="phase" value="4"/>
+				<property name="phase" value="3"/>
 				<property name="nav_object" value="return_to_trader" />
 			</objective>
 

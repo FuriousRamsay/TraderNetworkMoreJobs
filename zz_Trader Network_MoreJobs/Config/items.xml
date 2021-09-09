@@ -2,6 +2,18 @@
 
 	<set xpath="/items/item[@name='vehicle4x4TruckPlaceable']/property[@name='EconomicValue']/@value">15000</set>
 
+<!-- ADJUST DAMAGE MODIFIERS -->
+	<!-- ARROWS -->
+	<setattribute xpath="/items/item[@name='ammoArrowStone']/effect_group/passive_effect[@name='DamageModifier' and @tags='earth,metal,cloth']" name="value">0.1</setattribute>
+	<setattribute xpath="/items/item[@name='ammoArrowIron']/effect_group/passive_effect[@name='DamageModifier' and @tags='earth,metal,cloth']" name="value">0.4</setattribute>
+	<setattribute xpath="/items/item[@name='ammoArrowSteelAP']/effect_group/passive_effect[@name='DamageModifier' and @tags='earth,metal,cloth']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='ammoArrowFlaming']/effect_group/passive_effect[@name='DamageModifier' and @tags='earth,metal,cloth']" name="value">0.5</setattribute>
+	<!-- BOLTS -->
+	<setattribute xpath="/items/item[@name='ammoCrossbowBoltStone']/effect_group/passive_effect[@name='DamageModifier' and @tags='earth,metal,cloth']" name="value">0.1</setattribute>
+	<setattribute xpath="/items/item[@name='ammoCrossbowBoltIron']/effect_group/passive_effect[@name='DamageModifier' and @tags='earth,metal,cloth']" name="value">0.4</setattribute>
+	<setattribute xpath="/items/item[@name='ammoCrossbowBoltSteelAP']/effect_group/passive_effect[@name='DamageModifier' and @tags='earth,metal,cloth']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='ammoCrossbowBoltFlaming']/effect_group/passive_effect[@name='DamageModifier' and @tags='earth,metal,cloth']" name="value">0.5</setattribute>
+
 	<append xpath="/items/item[@name='apparelHazmatMask']">
 
 		<effect_group name="FuriousRamsay Armor Buffs">
