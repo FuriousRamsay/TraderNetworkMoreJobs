@@ -7598,31 +7598,29 @@
 			</property>
 
 			<effect_group name="FuriousRamsayStarterClub" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="10"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="11.6"/>
-				<passive_effect name="AttacksPerMinute" operation="base_set" value="55" tags="perkPummelPete,perkFlurryOfBlows"/>
-				<passive_effect name="StaminaLoss" operation="base_set" value="17.4" tags="primary"/>
+					<passive_effect name="EntityDamage" operation="base_set" value="13.8"/>
+					<passive_effect name="BlockDamage" operation="base_set" value="11.6"/>
+					<passive_effect name="AttacksPerMinute" operation="base_set" value="55"/>
+					<passive_effect name="StaminaLoss" operation="base_set" value="17.4" tags="primary"/>
+					<passive_effect name="DegradationMax" operation="base_set" value="110"/>
+					<passive_effect name="DegradationPerUse" operation="base_set" value="1"/>
+					<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+					<passive_effect name="BlockRange" operation="base_set" value="3"/>
 
-				<passive_effect name="DegradationMax" operation="base_set" value="80" tags="perkPummelPete"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkPummelPete"/>
-				<passive_effect name="MaxRange" operation="base_set" value="2.4" tags="perkPummelPete"/>
-				<passive_effect name="BlockRange" operation="base_set" value="3" tags="perkPummelPete"/>
+					<passive_effect name="ModSlots" operation="base_set" value="1,1,1,1,1,1" tier="1,2,3,4,5,6"/>
 
-				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
+					<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
 
-				<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
-				<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="stone"/>
-				<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="metal"/>
-
-				<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
-				<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
-				<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
-			</effect_group>
-			
-			<effect_group name="Power Attack" tiered="false">
-				<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
-				<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
-				<passive_effect name="StaminaLoss" operation="base_set" value="26.1" tags="secondary"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allHarvest"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="allToolsHarvest"/>
+					<passive_effect name="HarvestCount" operation="base_add" value="-.75" tags="oreWoodHarvest"/>
+				</effect_group>
+				<effect_group name="Power Attack" tiered="false">
+					<passive_effect name="EntityDamage" operation="perc_add" value="1" tags="secondary"/>
+					<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
+					<passive_effect name="StaminaLoss" operation="base_set" value="26.1" tags="secondary"/>
 			</effect_group>
 		</item>
 		
