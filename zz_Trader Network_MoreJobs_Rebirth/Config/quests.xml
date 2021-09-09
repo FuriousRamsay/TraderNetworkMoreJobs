@@ -3901,13 +3901,21 @@
 
 			<reward type="Item" id="FuriousRamsayContainerTrainerHunter" value="1" stage="start"/>
 
+			<action type="ShowTip" value="quest_FuriousRamsayContainerTrainerHunter" phase="1">
+				<property name="delay" value="0.25"/>
+			</action>
+
 			<objective type="BlockPlace" id="FuriousRamsayContainerTrainerHunter" value="1" phase="1"/>
 
 			<objective type="FetchKeep" id="FuriousRamsaySpawnHunterTrainer" value="1" phase="2"/>
 			<objective type="FetchKeep" id="meleeWpnSpearT0StoneSpear" value="1" phase="2"/>
-			<objective type="FetchKeep" id="gunBowT0PrimitiveBow" value="1" phase="2"/>
-			<objective type="FetchKeep" id="ammoArrowStone" value="50" phase="2"/>
+			<objective type="FetchKeep" id="gunBowT1WoodenBow" value="1" phase="2"/>
+			<objective type="FetchKeep" id="ammoArrowIron" value="50" phase="2"/>
 			<objective type="FetchKeep" id="FuriousRamsayAttributeHunterClass" value="1" phase="2"/>
+
+			<action type="ShowTip" value="quest_FuriousRamsayPlaceTrainerHunter" phase="1">
+				<property name="delay" value="0.25"/>
+			</action>
 
 			<objective type="BlockPlace" id="FuriousRamsaySpawnHunterTrainer" value="1" phase="3"/>
 
@@ -3915,6 +3923,8 @@
 				<property name="delay" value="0.25"/>
 			</action>
 			<objective type="Time" value="0" phase="4"/>
+
+			<reward type="Quest" id="quest_FuriousRamsayTraderNetwork"/>
 		</quest>
 		
 		<quest id="quest_FuriousRamsayThugTraining">
@@ -3934,11 +3944,19 @@
 
 			<reward type="Item" id="FuriousRamsayContainerTrainerThug" value="1" stage="start"/>
 
+			<action type="ShowTip" value="quest_FuriousRamsayContainerTrainerThug" phase="1">
+				<property name="delay" value="0.25"/>
+			</action>
+
 			<objective type="BlockPlace" id="FuriousRamsayContainerTrainerThug" value="1" phase="1"/>
 
 			<objective type="FetchKeep" id="FuriousRamsaySpawnThugTrainer" value="1" phase="2"/>
 			<objective type="FetchKeep" id="meleeWpnClubT0WoodenClub" value="1" phase="2"/>
 			<objective type="FetchKeep" id="FuriousRamsayAttributeThugClass" value="1" phase="2"/>
+
+			<action type="ShowTip" value="quest_FuriousRamsayPlaceTrainerThug" phase="1">
+				<property name="delay" value="0.25"/>
+			</action>
 
 			<objective type="BlockPlace" id="FuriousRamsaySpawnThugTrainer" value="1" phase="3"/>
 
@@ -3946,6 +3964,8 @@
 				<property name="delay" value="0.25"/>
 			</action>
 			<objective type="Time" value="0" phase="4"/>
+
+			<reward type="Quest" id="quest_FuriousRamsayTraderNetwork"/>
 		</quest>
 
 		<quest id="quest_FuriousRamsayButcherTraining">
@@ -3965,11 +3985,19 @@
 
 			<reward type="Item" id="FuriousRamsayContainerTrainerButcher" value="1" stage="start"/>
 
+			<action type="ShowTip" value="quest_FuriousRamsayContainerTrainerButcher" phase="1">
+				<property name="delay" value="0.25"/>
+			</action>
+
 			<objective type="BlockPlace" id="FuriousRamsayContainerTrainerButcher" value="1" phase="1"/>
 
 			<objective type="FetchKeep" id="FuriousRamsaySpawnButcherTrainer" value="1" phase="2"/>
 			<objective type="FetchKeep" id="meleeWpnBladeT3Machete" value="1" phase="2"/>
 			<objective type="FetchKeep" id="FuriousRamsayAttributeButcherClass" value="1" phase="2"/>
+
+			<action type="ShowTip" value="quest_FuriousRamsayPlaceTrainerButcher" phase="1">
+				<property name="delay" value="0.25"/>
+			</action>
 
 			<objective type="BlockPlace" id="FuriousRamsaySpawnButcherTrainer" value="1" phase="3"/>
 
@@ -3977,8 +4005,10 @@
 				<property name="delay" value="0.25"/>
 			</action>
 			<objective type="Time" value="0" phase="4"/>
-		</quest>
 
+			<reward type="Quest" id="quest_FuriousRamsayTraderNetwork"/>
+		</quest>
+		
 		<quest id="quest_FuriousRamsaySoldierTraining">
 			<property name="name_key" value="quest_FuriousRamsaySoldierTraining_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsaySoldierTraining_subtitle"/>
@@ -3996,11 +4026,19 @@
 
 			<reward type="Item" id="FuriousRamsayContainerTrainerSoldier" value="1" stage="start"/>
 
+			<action type="ShowTip" value="quest_FuriousRamsayContainerTrainerSoldier" phase="1">
+				<property name="delay" value="0.25"/>
+			</action>
+
 			<objective type="BlockPlace" id="FuriousRamsayContainerTrainerSoldier" value="1" phase="1"/>
 
 			<objective type="FetchKeep" id="FuriousRamsaySpawnSoldierTrainer" value="1" phase="2"/>
 			<objective type="FetchKeep" id="meleeToolRepairT0StoneAxe" value="1" phase="2"/>
 			<objective type="FetchKeep" id="FuriousRamsayAttributeSoldierClass" value="1" phase="2"/>
+
+			<action type="ShowTip" value="quest_FuriousRamsayPlaceTrainerSoldier" phase="1">
+				<property name="delay" value="0.25"/>
+			</action>
 
 			<objective type="BlockPlace" id="FuriousRamsaySpawnSoldierTrainer" value="1" phase="3"/>
 
@@ -4008,6 +4046,8 @@
 				<property name="delay" value="0.25"/>
 			</action>
 			<objective type="Time" value="0" phase="4"/>
+
+			<reward type="Quest" id="quest_FuriousRamsayTraderNetwork"/>
 		</quest>
 
 		<quest id="quest_FuriousRamsayTechnogeekTraining">
@@ -4027,11 +4067,19 @@
 
 			<reward type="Item" id="FuriousRamsayContainerTrainerTechnogeek" value="1" stage="start"/>
 
+			<action type="ShowTip" value="quest_FuriousRamsayContainerTrainerTechnogeek" phase="1">
+				<property name="delay" value="0.25"/>
+			</action>
+
 			<objective type="BlockPlace" id="FuriousRamsayContainerTrainerTechnogeek" value="1" phase="1"/>
 
 			<objective type="FetchKeep" id="FuriousRamsaySpawnTechnogeekTrainer" value="1" phase="2"/>
 			<objective type="FetchKeep" id="meleeWpnBatonT1JunkBaton" value="1" phase="2"/>
 			<objective type="FetchKeep" id="FuriousRamsayAttributeTechnogeekClass" value="1" phase="2"/>
+
+			<action type="ShowTip" value="quest_FuriousRamsayPlaceTrainerTechnogeek" phase="1">
+				<property name="delay" value="0.25"/>
+			</action>
 
 			<objective type="BlockPlace" id="FuriousRamsaySpawnTechnogeekTrainer" value="1" phase="3"/>
 
@@ -4039,6 +4087,8 @@
 				<property name="delay" value="0.25"/>
 			</action>
 			<objective type="Time" value="0" phase="4"/>
+
+			<reward type="Quest" id="quest_FuriousRamsayTraderNetwork"/>
 		</quest>
 
 		<quest id="quest_FuriousRamsayMadmanTraining">
@@ -4058,11 +4108,19 @@
 
 			<reward type="Item" id="FuriousRamsayContainerTrainerMadman" value="1" stage="start"/>
 
+			<action type="ShowTip" value="quest_FuriousRamsayContainerTrainerMadman" phase="1">
+				<property name="delay" value="0.25"/>
+			</action>
+
 			<objective type="BlockPlace" id="FuriousRamsayContainerTrainerMadman" value="1" phase="1"/>
 
 			<objective type="FetchKeep" id="FuriousRamsaySpawnMadmanTrainer" value="1" phase="2"/>
 			<objective type="FetchKeep" id="meleeWpnKnucklesT0LeatherKnuckles" value="1" phase="2"/>
 			<objective type="FetchKeep" id="FuriousRamsayAttributeMadmanClass" value="1" phase="2"/>
+
+			<action type="ShowTip" value="quest_FuriousRamsayPlaceTrainerMadman" phase="1">
+				<property name="delay" value="0.25"/>
+			</action>
 
 			<objective type="BlockPlace" id="FuriousRamsaySpawnMadmanTrainer" value="1" phase="3"/>
 
@@ -4070,6 +4128,8 @@
 				<property name="delay" value="0.25"/>
 			</action>
 			<objective type="Time" value="0" phase="4"/>
+
+			<reward type="Quest" id="quest_FuriousRamsayTraderNetwork"/>
 		</quest>
 
 		<quest id="quest_FuriousRamsayBuilderTraining">
@@ -4089,11 +4149,19 @@
 
 			<reward type="Item" id="FuriousRamsayContainerTrainerBuilder" value="1" stage="start"/>
 
+			<action type="ShowTip" value="quest_FuriousRamsayContainerTrainerBuilder" phase="1">
+				<property name="delay" value="0.25"/>
+			</action>
+
 			<objective type="BlockPlace" id="FuriousRamsayContainerTrainerBuilder" value="1" phase="1"/>
 
 			<objective type="FetchKeep" id="FuriousRamsaySpawnBuilderTrainer" value="1" phase="2"/>
 			<objective type="FetchKeep" id="meleeWpnSledgeT0StoneSledgehammer" value="1" phase="2"/>
 			<objective type="FetchKeep" id="FuriousRamsayAttributeBuilderClass" value="1" phase="2"/>
+
+			<action type="ShowTip" value="quest_FuriousRamsayPlaceTrainerBuilder" phase="1">
+				<property name="delay" value="0.25"/>
+			</action>
 
 			<objective type="BlockPlace" id="FuriousRamsaySpawnBuilderTrainer" value="1" phase="3"/>
 
@@ -4101,6 +4169,8 @@
 				<property name="delay" value="0.25"/>
 			</action>
 			<objective type="Time" value="0" phase="4"/>
+
+			<reward type="Quest" id="quest_FuriousRamsayTraderNetwork"/>
 		</quest>
 
 		<quest id="quest_FuriousRamsayChefTraining">
@@ -4120,11 +4190,19 @@
 
 			<reward type="Item" id="FuriousRamsayContainerTrainerChef" value="1" stage="start"/>
 
+			<action type="ShowTip" value="quest_FuriousRamsayContainerTrainerChef" phase="1">
+				<property name="delay" value="0.25"/>
+			</action>
+
 			<objective type="BlockPlace" id="FuriousRamsayContainerTrainerChef" value="1" phase="1"/>
 
 			<objective type="FetchKeep" id="FuriousRamsaySpawnChefTrainer" value="1" phase="2"/>
 			<objective type="FetchKeep" id="meleeWpnBladeT0BoneKnife" value="1" phase="2"/>
 			<objective type="FetchKeep" id="FuriousRamsayAttributeChefClass" value="1" phase="2"/>
+
+			<action type="ShowTip" value="quest_FuriousRamsayPlaceTrainerChef" phase="1">
+				<property name="delay" value="0.25"/>
+			</action>
 
 			<objective type="BlockPlace" id="FuriousRamsaySpawnChefTrainer" value="1" phase="3"/>
 
@@ -4135,7 +4213,7 @@
 
 			<reward type="Quest" id="quest_FuriousRamsayTraderNetwork"/>
 		</quest>
-
+		
 		<quest id="quest_FuriousRamsayLocateShelter">
 			<property name="name_key" value="quest_FuriousRamsayLocateShelter_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayLocateShelter_subtitle"/>
@@ -4234,9 +4312,9 @@
 			<property name="offer_key" value="quest_FuriousRamsayStarterBackpackStrengthDig_offer"/>
 			<property name="completion_key" value="quest_FuriousRamsayStarterBackpackStrengthDig_completion"/>
 
-			<objective type="FetchKeep" id="resourceYuccaFibers" value="10" phase="1"/>
-			<objective type="FetchKeep" id="resourceRockSmall" value="10" phase="1"/>
-			<objective type="FetchKeep" id="resourceWood" value="10" phase="1"/>
+			<objective type="FetchKeep" id="resourceYuccaFibers" value="3" phase="1"/>
+			<objective type="FetchKeep" id="resourceRockSmall" value="3" phase="1"/>
+			<objective type="FetchKeep" id="resourceWood" value="5" phase="1"/>
 			<objective type="Craft">
 				<property name="phase" value="1"/>
 				<property name="item" value="meleeToolShovelT0StoneShovel"/>
@@ -4277,7 +4355,7 @@
 			</objective>
 
 			<reward type="Exp" value="1000"/>
-			<reward type="Item" value="FuriousRamsayStarterBackpackStrength"/>
+			<reward type="Item" id="FuriousRamsayStarterBackpackStrength"/>	
 		</quest>
 		
 		<quest id="quest_FuriousRamsayStarterBackpackDexterityDig">
@@ -4338,7 +4416,7 @@
 			</objective>
 
 			<reward type="Exp" value="1000"/>
-			<reward type="Item" value="FuriousRamsayStarterBackpackDexterity"/>
+			<reward type="Item" id="FuriousRamsayStarterBackpackDexterity"/>
 		</quest>
 		
 		<quest id="quest_FuriousRamsayStarterBackpackConstitutionDig">
@@ -4399,7 +4477,7 @@
 			</objective>
 
 			<reward type="Exp" value="1000"/>
-			<reward type="Item" value="FuriousRamsayStarterBackpackConstitution"/>
+			<reward type="Item" id="FuriousRamsayStarterBackpackConstitution"/>
 		</quest>
 		
 		<quest id="quest_FuriousRamsayStarterBackpackIntelligenceDig">
@@ -4460,7 +4538,7 @@
 			</objective>
 
 			<reward type="Exp" value="1000"/>
-			<reward type="Item" value="FuriousRamsayStarterBackpackIntelligence"/>
+			<reward type="Item" id="FuriousRamsayStarterBackpackIntelligence"/>
 		</quest>
 
 		<quest id="quest_FuriousRamsayStarterBackpackKnowledgeDig">
@@ -4521,7 +4599,7 @@
 			</objective>
 
 			<reward type="Exp" value="1000"/>
-			<reward type="Item" value="FuriousRamsayStarterBackpackKnowledge"/>
+			<reward type="Item" id="FuriousRamsayStarterBackpackKnowledge"/>
 		</quest>
 
 		<quest id="quest_FuriousRamsayStarterBackpackCharismaDig">
@@ -4582,7 +4660,7 @@
 			</objective>
 
 			<reward type="Exp" value="1000"/>
-			<reward type="Item" value="FuriousRamsayStarterBackpackCharisma"/>
+			<reward type="Item" id="FuriousRamsayStarterBackpackCharisma"/>
 		</quest>
 		
 		<quest id="quest_FuriousRamsayTraderNetwork">
