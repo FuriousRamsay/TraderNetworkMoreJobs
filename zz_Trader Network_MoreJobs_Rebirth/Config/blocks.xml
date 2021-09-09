@@ -2,6 +2,24 @@
 
 	<remove xpath="/blocks/block/property[@name='UnlockedBy']"/>
 
+	<!-- ADD JUNK LOOT TO GENERIC BOXES -->
+	<append xpath="/blocks/block[@name='palletBrownBoxesBase']">
+		<property name="Class" value="Loot"/>
+		<property name="LootList" value="865"/>
+	</append>
+	<append xpath="/blocks/block[@name='palletBrownBoxesLoose']">
+		<property name="Class" value="Loot"/>
+		<property name="LootList" value="865"/>
+	</append>
+	<append xpath="/blocks/block[@name='palletBrownBoxesTile']">
+		<property name="Class" value="Loot"/>
+		<property name="LootList" value="865"/>
+	</append>
+	<append xpath="/blocks/block[@name='palletBrownBoxesTop']">
+		<property name="Class" value="Loot"/>
+		<property name="LootList" value="865"/>
+	</append>
+
 	<append xpath="/blocks">
 
 		<block name="FuriousRamsayTraderNetworkBuriedSupplies">

@@ -1,11 +1,11 @@
 <configs>
 
 	<setattribute xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='AITarget-4']" name="data">class=EntityPlayer,0,0,EntitySurvivor,0,0,EntityBandit,0,0</setattribute>
-	<setattribute xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='MaxViewAngle']" name="value">110</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='MaxViewAngle']" name="value">160</setattribute>
 
 	<setattribute xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='AITarget-4']" name="data">class=EntityPlayer,0,0,EntitySurvivor,0,0,EntityBandit,0,0</setattribute>
 	<setattribute xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='AITask-2']" name="data">class=EntityPlayer,20,EntitySurvivor,25,EntityZombie,20,EntityBandit,20</setattribute>
-	<setattribute xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='MaxViewAngle']" name="value">160</setattribute>
+	<setattribute xpath="/entity_classes/entity_class[@name='animalTemplateHostile']/property[@name='MaxViewAngle']" name="value">180</setattribute>
 
 	<setattribute xpath="/entity_classes/entity_class[@name='animalSnake']/property[@name='AITask-3']" name="data">class=EntityPlayer,15,EntitySurvivor,15,EntityBandit,15</setattribute>
 	<setattribute xpath="/entity_classes/entity_class[@name='animalWolf']/property[@name='AITarget-4']" name="data">class=EntityPlayer,12,0,EntityNPC,12,0,EntityZombie,12,0,EntitySurvivor,12,0,EntityBandit,12,0</setattribute>
@@ -39,6 +39,32 @@
 		<effect_group name="Backaway or Die bandit">
 			<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="buffTraderTrigger"/>
 		</effect_group>
+	</append>
+
+	<!-- ADD LOOT TO ZOMBIES -->
+	<append xpath="/entity_classes/entity_class[@name='zombieArlene']">
+		<property name="LootListOnDeath" value="818"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBoe']">
+		<property name="LootListOnDeath" value="819"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieJoe']">
+		<property name="LootListOnDeath" value="820"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieDarlene']">
+		<property name="LootListOnDeath" value="821"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieMarlene']">
+		<property name="LootListOnDeath" value="822"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieYo']">
+		<property name="LootListOnDeath" value="823"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieSteve']">
+		<property name="LootListOnDeath" value="824"/>
+	</append>
+	<append xpath="/entity_classes/entity_class[@name='zombieBusinessMan']">
+		<property name="LootListOnDeath" value="825"/>
 	</append>
 
 	<append xpath="/entity_classes">
@@ -5829,7 +5855,7 @@ FuriousRamsayVultureToxicRadiated
 			<property name="NavObject" value="FuriousRamsayDotOrange"/>
 
 			<property name="AIGroupCircle" value="1"/>
-			<property name="MaxViewAngle" value="160"/>
+			<property name="MaxViewAngle" value="180"/>
 			<property name="LookAtAngle" value="60"/>
 			<property name="AIPathCostScale" value=".15, .4"/>
 			<property name="SightLightThreshold" value="-2,-2"/>

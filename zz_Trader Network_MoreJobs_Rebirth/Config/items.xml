@@ -64,15 +64,17 @@
 		</effect_group>
 	</append>
 
-	<setattribute xpath="/items/item[@name='medicalFirstAidBandage']/effect_group/triggered_effect[@cvar='medicalRegHealthAmount']" name="value">10</setattribute>
+	<setattribute xpath="/items/item[@name='medicalFirstAidBandage']/effect_group/triggered_effect[@cvar='medicalRegHealthAmount']" name="value">20</setattribute>
+	<setattribute xpath="/items/item[@name='medicalFirstAidBandage']/effect_group/display_value[@name='foodHealthAmount']" name="value">20</setattribute>
 	<setattribute xpath="/items/item[@name='medicalFirstAidKit']/effect_group/triggered_effect[@cvar='medicalRegHealthAmount']" name="value">50</setattribute>
-	<setattribute xpath="/items/item[@name='drugPainkillers']/effect_group/display_value[@name='dInstantHealth']" name="value">12</setattribute>
-	<setattribute xpath="/items/item[@name='drugPainkillers']/effect_group/display_value[@name='$waterAmountAdd']" name="value">-12</setattribute>
+	<setattribute xpath="/items/item[@name='medicalFirstAidKit']/effect_group/display_value[@name='foodHealthAmount']" name="value">50</setattribute>
+	<setattribute xpath="/items/item[@name='drugPainkillers']/effect_group/display_value[@name='dInstantHealth']" name="value">25</setattribute>
+	<setattribute xpath="/items/item[@name='drugPainkillers']/effect_group/display_value[@name='$waterAmountAdd']" name="value">-25</setattribute>
 	<setattribute xpath="/items/item[@name='foodHoney']/effect_group/triggered_effect[@cvar='$buffInfectionAddCurePerc']" name="value">2</setattribute>
-	<setattribute xpath="/items/item[@name='drugHerbalAntibiotics']/effect_group/triggered_effect[@cvar='$buffInfectionAddCurePerc']" name="value">5</setattribute>
-	<setattribute xpath="/items/item[@name='drugAntibiotics']/effect_group/triggered_effect[@cvar='$buffInfectionAddCurePerc']" name="value">15</setattribute>
 	<setattribute xpath="/items/item[@name='foodHoney']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='foodHoney']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
+	<setattribute xpath="/items/item[@name='drugHerbalAntibiotics']/effect_group/triggered_effect[@cvar='$buffInfectionAddCurePerc']" name="value">5</setattribute>
+	<setattribute xpath="/items/item[@name='drugAntibiotics']/effect_group/triggered_effect[@cvar='$buffInfectionAddCurePerc']" name="value">15</setattribute>
 	<setattribute xpath="/items/item[@name='foodCanBeef']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">7</setattribute>
 	<setattribute xpath="/items/item[@name='foodCanBeef']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">2</setattribute>
 	<setattribute xpath="/items/item[@name='foodCanChicken']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">7</setattribute>
@@ -195,6 +197,12 @@
 	<setattribute xpath="/items/item[@name='meleeToolShovelT1IronShovel']/property[@name='RepairTools']" name="value">FuriousRamsayScrapRepairKit</setattribute>
 	<setattribute xpath="/items/item[@name='meleeToolRepairT1ClawHammer']/property[@name='RepairTools']" name="value">FuriousRamsayScrapRepairKit</setattribute>
 	<setattribute xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/property[@name='RepairTools']" name="value">FuriousRamsayScrapRepairKit</setattribute>
+	<setattribute xpath="/items/item[@name='meleeWpnClubT1BaseballBat']/property[@name='RepairTools']" name="value">FuriousRamsayScrapRepairKit</setattribute>
+	<setattribute xpath="/items/item[@name='meleeWpnSledgeT1IronSledgehammer']/property[@name='RepairTools']" name="value">FuriousRamsayScrapRepairKit</setattribute>
+	<setattribute xpath="/items/item[@name='meleeWpnBladeT3Machete']/property[@name='RepairTools']" name="value">FuriousRamsayScrapRepairKit</setattribute>
+	<setattribute xpath="/items/item[@name='gunBowT1WoodenBow']/property[@name='RepairTools']" name="value">FuriousRamsayScrapRepairKit</setattribute>
+	<setattribute xpath="/items/item[@name='meleeWpnSpearT1IronSpear']/property[@name='RepairTools']" name="value">FuriousRamsayScrapRepairKit</setattribute>
+	<setattribute xpath="/items/item[@name='meleeWpnKnucklesT1IronKnuckles']/property[@name='RepairTools']" name="value">FuriousRamsayScrapRepairKit</setattribute>
 
 	<append xpath="/items">
 

@@ -63,6 +63,9 @@
 	<remove xpath="/lootcontainers/lootgroup[@name='junk']/item[@name='resourceFeather']"/>
 	<remove xpath="/lootcontainers/lootgroup[@name='junk']/item[@name='resourceScrapPolymers']"/>
 	<remove xpath="/lootcontainers/lootgroup[@name='junk']/item[@name='resourcePaper']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='junk']/item[@group='rottenFood']"/>
+
+	<remove xpath="/lootcontainers/lootgroup[@name='banditsGeneral']/item[@group='rottenFood']"/>
 
 	<remove xpath="/lootcontainers/lootgroup[@name='medicine']/item[@name='medicalBandage']"/>
 
@@ -134,6 +137,10 @@
 	<remove xpath="/lootcontainers/lootcontainer[@id='89']/item[@name='resourceScrapPolymers']"/>
 
 	<remove xpath="/lootcontainers/lootcontainer[@id='96']/item[@name='resourcePaper']"/>
+
+	<remove xpath="/lootcontainers/lootcontainer[@id='111']/item[@name='rottenFood']"/>
+	<remove xpath="/lootcontainers/lootcontainer[@id='112']/item[@name='rottenFood']"/>
+	<remove xpath="/lootcontainers/lootcontainer[@id='113']/item[@name='rottenFood']"/>
 
 	<remove xpath="/lootcontainers/lootcontainer[@id='114']/item[@name='dyes']"/>
 	<remove xpath="/lootcontainers/lootcontainer[@id='115']/item[@name='dyes']"/>
@@ -312,7 +319,7 @@
 
 		<lootgroup name="FuriousRamsayGroupContainerTrainerHunter" count="all">
 			<item name="FuriousRamsaySpawnHunterTrainer" count="1"/>
-			<item name="meleeWpnSpearT0StoneSpear" quality="3" count="1"/>
+			<item name="meleeWpnSpearT1IronSpear" quality="1" count="1"/>
 			<item name="gunBowT1WoodenBow" quality="3" count="1"/>
 			<item name="ammoArrowIron" count="50"/>
 			<item name="FuriousRamsayAttributeHunterClass" count="1"/>
@@ -329,7 +336,7 @@
 
 		<lootgroup name="FuriousRamsayGroupContainerTrainerThug" count="all">
 			<item name="FuriousRamsaySpawnThugTrainer" count="1"/>
-			<item name="meleeWpnClubT0WoodenClub" quality="3" count="1"/>
+			<item name="meleeWpnClubT1BaseballBat" quality="1" count="1"/>
 			<item name="FuriousRamsayAttributeThugClass" count="1"/>
 			<item name="FuriousRamsayStarterArmorHeadThug" quality="1"/>
 			<item name="FuriousRamsayStarterArmorChestThug" quality="1"/>
@@ -359,7 +366,7 @@
 
 		<lootgroup name="FuriousRamsayGroupContainerTrainerSoldier" count="all">
 			<item name="FuriousRamsaySpawnSoldierTrainer"  count="1"/>
-			<item name="meleeToolRepairT0StoneAxe" quality="5" count="1"/>
+			<item name="meleeToolAxeT1IronFireaxe" quality="1" count="1"/>
 			<item name="FuriousRamsayAttributeSoldierClass" count="1"/>
 			<item name="FuriousRamsayStarterArmorHeadSoldier" quality="1"/>
 			<item name="FuriousRamsayStarterArmorChestSoldier" quality="1"/>
@@ -374,7 +381,7 @@
 
 		<lootgroup name="FuriousRamsayGroupContainerTrainerTechnogeek" count="all">
 			<item name="FuriousRamsaySpawnTechnogeekTrainer"  count="1"/>
-			<item name="meleeWpnBatonT1JunkBaton" quality="1" count="1"/>
+			<item name="meleeWpnBatonT2StunBaton" quality="1" count="1"/>
 			<item name="FuriousRamsayAttributeTechnogeekClass" count="1"/>
 			<item name="FuriousRamsayStarterArmorHeadTechnogeek" quality="1"/>
 			<item name="FuriousRamsayStarterArmorChestTechnogeek" quality="1"/>
@@ -389,7 +396,7 @@
 
 		<lootgroup name="FuriousRamsayGroupContainerTrainerMadman" count="all">
 			<item name="FuriousRamsaySpawnMadmanTrainer"  count="1"/>
-			<item name="meleeWpnKnucklesT0LeatherKnuckles" quality="3" count="1"/>
+			<item name="meleeWpnKnucklesT1IronKnuckles" quality="2" count="1"/>
 			<item name="FuriousRamsayAttributeMadmanClass" count="1"/>
 			<item name="FuriousRamsayStarterArmorHeadMadman" quality="1"/>
 			<item name="FuriousRamsayStarterArmorChestMadman" quality="1"/>
@@ -404,7 +411,7 @@
 
 		<lootgroup name="FuriousRamsayGroupContainerTrainerBuilder" count="all">
 			<item name="FuriousRamsaySpawnBuilderTrainer"  count="1"/>
-			<item name="meleeWpnSledgeT0StoneSledgehammer" quality="3" count="1"/>
+			<item name="meleeWpnSledgeT1IronSledgehammer" quality="1" count="1"/>
 			<item name="FuriousRamsayAttributeBuilderClass" count="1"/>
 			<item name="FuriousRamsayStarterArmorHeadBuilder" quality="1"/>
 			<item name="FuriousRamsayStarterArmorChestBuilder" quality="1"/>
@@ -419,7 +426,7 @@
 
 		<lootgroup name="FuriousRamsayGroupContainerTrainerChef" count="all">
 			<item name="FuriousRamsaySpawnChefTrainer"  count="1"/>
-			<item name="meleeWpnBladeT0BoneKnife" quality="5" count="1"/>
+			<item name="meleeWpnBladeT1HuntingKnife" quality="2" count="1"/>
 			<item name="FuriousRamsayAttributeChefClass" count="1"/>
 			<item name="FuriousRamsayStarterArmorHeadChef" quality="1"/>
 			<item name="FuriousRamsayStarterArmorChestChef" quality="1"/>
@@ -572,6 +579,10 @@
 
 		<lootcontainer id="864" size="8,9" sound_open="UseActions/open_fridge" sound_close="UseActions/close_fridge" loot_quality_template="qualPlus1Template">
 			<item group="FuriousRamsaySurvivalSupplies"/>
+		</lootcontainer>
+
+		<lootcontainer id="865" count="0,3" size="2,2" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate" open_time="1">
+			<item group="junk"/>
 		</lootcontainer>
 
 	</append>

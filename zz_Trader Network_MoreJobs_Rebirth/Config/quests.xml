@@ -3908,7 +3908,7 @@
 			<objective type="BlockPlace" id="FuriousRamsayContainerTrainerHunter" value="1" phase="1"/>
 
 			<objective type="FetchKeep" id="FuriousRamsaySpawnHunterTrainer" value="1" phase="2"/>
-			<objective type="FetchKeep" id="meleeWpnSpearT0StoneSpear" value="1" phase="2"/>
+			<objective type="FetchKeep" id="meleeWpnSpearT1IronSpear" value="1" phase="2"/>
 			<objective type="FetchKeep" id="gunBowT1WoodenBow" value="1" phase="2"/>
 			<objective type="FetchKeep" id="ammoArrowIron" value="50" phase="2"/>
 			<objective type="FetchKeep" id="FuriousRamsayAttributeHunterClass" value="1" phase="2"/>
@@ -3951,7 +3951,7 @@
 			<objective type="BlockPlace" id="FuriousRamsayContainerTrainerThug" value="1" phase="1"/>
 
 			<objective type="FetchKeep" id="FuriousRamsaySpawnThugTrainer" value="1" phase="2"/>
-			<objective type="FetchKeep" id="meleeWpnClubT0WoodenClub" value="1" phase="2"/>
+			<objective type="FetchKeep" id="meleeWpnClubT1BaseballBat" value="1" phase="2"/>
 			<objective type="FetchKeep" id="FuriousRamsayAttributeThugClass" value="1" phase="2"/>
 
 			<action type="ShowTip" value="quest_FuriousRamsayPlaceTrainerThug" phase="1">
@@ -4033,7 +4033,7 @@
 			<objective type="BlockPlace" id="FuriousRamsayContainerTrainerSoldier" value="1" phase="1"/>
 
 			<objective type="FetchKeep" id="FuriousRamsaySpawnSoldierTrainer" value="1" phase="2"/>
-			<objective type="FetchKeep" id="meleeToolRepairT0StoneAxe" value="1" phase="2"/>
+			<objective type="FetchKeep" id="meleeToolAxeT1IronFireaxe" value="1" phase="2"/>
 			<objective type="FetchKeep" id="FuriousRamsayAttributeSoldierClass" value="1" phase="2"/>
 
 			<action type="ShowTip" value="quest_FuriousRamsayPlaceTrainerSoldier" phase="1">
@@ -4074,7 +4074,7 @@
 			<objective type="BlockPlace" id="FuriousRamsayContainerTrainerTechnogeek" value="1" phase="1"/>
 
 			<objective type="FetchKeep" id="FuriousRamsaySpawnTechnogeekTrainer" value="1" phase="2"/>
-			<objective type="FetchKeep" id="meleeWpnBatonT1JunkBaton" value="1" phase="2"/>
+			<objective type="FetchKeep" id="meleeWpnBatonT2StunBaton" value="1" phase="2"/>
 			<objective type="FetchKeep" id="FuriousRamsayAttributeTechnogeekClass" value="1" phase="2"/>
 
 			<action type="ShowTip" value="quest_FuriousRamsayPlaceTrainerTechnogeek" phase="1">
@@ -4115,7 +4115,7 @@
 			<objective type="BlockPlace" id="FuriousRamsayContainerTrainerMadman" value="1" phase="1"/>
 
 			<objective type="FetchKeep" id="FuriousRamsaySpawnMadmanTrainer" value="1" phase="2"/>
-			<objective type="FetchKeep" id="meleeWpnKnucklesT0LeatherKnuckles" value="1" phase="2"/>
+			<objective type="FetchKeep" id="meleeWpnKnucklesT1IronKnuckles" value="1" phase="2"/>
 			<objective type="FetchKeep" id="FuriousRamsayAttributeMadmanClass" value="1" phase="2"/>
 
 			<action type="ShowTip" value="quest_FuriousRamsayPlaceTrainerMadman" phase="1">
@@ -4156,7 +4156,7 @@
 			<objective type="BlockPlace" id="FuriousRamsayContainerTrainerBuilder" value="1" phase="1"/>
 
 			<objective type="FetchKeep" id="FuriousRamsaySpawnBuilderTrainer" value="1" phase="2"/>
-			<objective type="FetchKeep" id="meleeWpnSledgeT0StoneSledgehammer" value="1" phase="2"/>
+			<objective type="FetchKeep" id="meleeWpnSledgeT1IronSledgehammer" value="1" phase="2"/>
 			<objective type="FetchKeep" id="FuriousRamsayAttributeBuilderClass" value="1" phase="2"/>
 
 			<action type="ShowTip" value="quest_FuriousRamsayPlaceTrainerBuilder" phase="1">
@@ -4197,7 +4197,7 @@
 			<objective type="BlockPlace" id="FuriousRamsayContainerTrainerChef" value="1" phase="1"/>
 
 			<objective type="FetchKeep" id="FuriousRamsaySpawnChefTrainer" value="1" phase="2"/>
-			<objective type="FetchKeep" id="meleeWpnBladeT0BoneKnife" value="1" phase="2"/>
+			<objective type="FetchKeep" id="meleeWpnBladeT1HuntingKnife" value="1" phase="2"/>
 			<objective type="FetchKeep" id="FuriousRamsayAttributeChefClass" value="1" phase="2"/>
 
 			<action type="ShowTip" value="quest_FuriousRamsayPlaceTrainerChef" phase="1">
@@ -4280,6 +4280,28 @@
 			<reward type="Skill" id="FuriousRamsayPerkChoiceIsMine" value="1" stage="start"/>
 
 			<objective type="BlockPlace" id="FuriousRamsaySpawnSurvivalSpecialist" value="1" phase="1"/>
+
+			<action type="SpawnEnemy" id="FuriousRamsayZombieArlene" value="1" phase="2">
+				<property name="delay" value="3"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieBoe" value="1" phase="2">
+				<property name="delay" value="3.5"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieJoe" value="1" phase="2">
+				<property name="delay" value="4"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieDarlene" value="1" phase="2">
+				<property name="delay" value="4.5"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieMarlene" value="1" phase="2">
+				<property name="delay" value="5"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieYo" value="1" phase="2">
+				<property name="delay" value="5.5"/>
+			</action>
+			<action type="SpawnEnemy" id="FuriousRamsayZombieSteve" value="1" phase="2">
+				<property name="delay" value="6"/>
+			</action>
 
 			<action type="ShowTip" value="quest_FuriousRamsayPillsInfo" phase="2">
 				<property name="delay" value="0.25"/>
