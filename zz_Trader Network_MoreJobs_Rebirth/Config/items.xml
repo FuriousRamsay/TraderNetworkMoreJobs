@@ -3,22 +3,22 @@
 	<remove xpath="/items/item/property[@name='UnlockedBy']"/>
 	
 	<!-- REMOVE STATS FROM ALL EYEWEAR -->
-	<remove xpath="/items/item/property[@name='apparelShades']/effect_group/passive_effect[@tags='attPerception']"/>
-	<remove xpath="/items/item/property[@name='apparelToughGuySunglasses']/effect_group/passive_effect[@name='AttributeLevel']"/>
-	<remove xpath="/items/item/property[@name='apparelAviatorGoggles']/effect_group/passive_effect[@name='LootGamestage']"/>
-	<remove xpath="/items/item/property[@name='apparelAviatorGoggles']/effect_group/passive_effect[@name='TreasureBlocksPerReduction']"/>
-	<remove xpath="/items/item/property[@name='apparelAviatorGoggles']/effect_group/passive_effect[@name='dTreasureBlocksPerReduction']"/>
-	<remove xpath="/items/item/property[@name='apparelSkiGoggles']/effect_group/passive_effect[@name='AttributeLevel']"/>
-	<remove xpath="/items/item/property[@name='apparelNerdGlasses']/effect_group/passive_effect[@name='AttributeLevel']"/>
-	<remove xpath="/items/item/property[@name='apparelNerdGlasses']/effect_group/passive_effect[@name='CraftingTime']"/>
-	<remove xpath="/items/item/property[@name='apparelNerdGlasses']/effect_group/passive_effect[@name='PlayerExpGain']"/>
-	<remove xpath="/items/item/property[@name='apparelNerdGlasses']/effect_group/passive_effect[@name='dCraftingTime']"/>
-	<remove xpath="/items/item/property[@name='apparelNerdGlasses']/effect_group/passive_effect[@name='dPlayerExpGain']"/>
-	<remove xpath="/items/item/property[@name='FuriousRamsayBanditHeadAviatorGoggles']/effect_group/passive_effect[@name='AttributeLevel']"/>
-	<remove xpath="/items/item/property[@name='FuriousRamsayBanditHeadAviatorGoggles']/effect_group/passive_effect[@name='LootGamestage']"/>
-	<remove xpath="/items/item/property[@name='FuriousRamsayBanditHeadAviatorGoggles']/effect_group/passive_effect[@name='TreasureBlocksPerReduction']"/>
-	<remove xpath="/items/item/property[@name='FuriousRamsayBanditHeadAviatorGoggles']/effect_group/passive_effect[@name='dTreasureBlocksPerReduction']"/>
-	<remove xpath="/items/item/property[@name='FuriousRamsayBanditHeadSkiGoggles']/effect_group/passive_effect[@name='AttributeLevel']"/>
+	<remove xpath="/items/item[@name='apparelShades']/effect_group/passive_effect[@tags='attPerception']"/>
+	<remove xpath="/items/item[@name='apparelToughGuySunglasses']/effect_group/passive_effect[@name='AttributeLevel']"/>
+	<remove xpath="/items/item[@name='apparelAviatorGoggles']/effect_group/passive_effect[@name='LootGamestage']"/>
+	<remove xpath="/items/item[@name='apparelAviatorGoggles']/effect_group/passive_effect[@name='TreasureBlocksPerReduction']"/>
+	<remove xpath="/items/item[@name='apparelAviatorGoggles']/effect_group/display_value[@name='dTreasureBlocksPerReduction']"/>
+	<remove xpath="/items/item[@name='apparelSkiGoggles']/effect_group/passive_effect[@name='AttributeLevel']"/>
+	<remove xpath="/items/item[@name='apparelNerdGlasses']/effect_group/passive_effect[@name='AttributeLevel']"/>
+	<remove xpath="/items/item[@name='apparelNerdGlasses']/effect_group/passive_effect[@name='CraftingTime']"/>
+	<remove xpath="/items/item[@name='apparelNerdGlasses']/effect_group/passive_effect[@name='PlayerExpGain']"/>
+	<remove xpath="/items/item[@name='apparelNerdGlasses']/effect_group/display_value[@name='dCraftingTime']"/>
+	<remove xpath="/items/item[@name='apparelNerdGlasses']/effect_group/display_value[@name='dPlayerExpGain']"/>
+	<remove xpath="/items/item[@name='FuriousRamsayBanditHeadAviatorGoggles']/effect_group/passive_effect[@name='AttributeLevel']"/>
+	<remove xpath="/items/item[@name='FuriousRamsayBanditHeadAviatorGoggles']/effect_group/passive_effect[@name='LootGamestage']"/>
+	<remove xpath="/items/item[@name='FuriousRamsayBanditHeadAviatorGoggles']/effect_group/passive_effect[@name='TreasureBlocksPerReduction']"/>
+	<remove xpath="/items/item[@name='FuriousRamsayBanditHeadAviatorGoggles']/effect_group/display_value[@name='dTreasureBlocksPerReduction']"/>
+	<remove xpath="/items/item[@name='FuriousRamsayBanditHeadSkiGoggles']/effect_group/passive_effect[@name='AttributeLevel']"/>
 
     <!-- GET WATER FROM FAUCETS, SINKS, TOILETS AND BATHTUBS -->
 	<append xpath="/items/item[@name='drinkJarEmpty']">
@@ -115,7 +115,6 @@
 	<setattribute xpath="/items/item[@name='foodCornBread']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">2</setattribute>
 	<setattribute xpath="/items/item[@name='foodCornBread']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='foodMoldyBread']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">2</setattribute>
-	<setattribute xpath="/items/item[@name='foodMoldyBread']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">-2</setattribute>
 	<setattribute xpath="/items/item[@name='foodShamSandwich']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">4</setattribute>
 	<setattribute xpath="/items/item[@name='foodShamSandwich']/effect_group/triggered_effect[@stat='Health']" name="value">-5</setattribute>
 	<setattribute xpath="/items/item[@name='foodCharredMeat']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">5</setattribute>
@@ -3933,8 +3932,12 @@
 <!-- HUNTER -->
 	<!-- SPEARS -->
 	<append xpath="/items/item[@name='meleeWpnSpearT0StoneSpear']/property[@name='Tags']/@value">,FuriousRamsaySpears</append>
-	<append xpath="/items/item[@name='meleeWpnSpearT1IronSpear']/property[@name='Tags']/@value">,FuriousRamsaySpears</append>
-	<append xpath="/items/item[@name='meleeWpnSpearT3SteelSpear']/property[@name='Tags']/@value">,FuriousRamsaySpears</append>
+	<append xpath="/items/item[@name='meleeWpnSpearT1IronSpear']">
+		<property name="Tags" value="melee,grunting,medium,weapon,meleeWeapon,longShaft,attPerception,perkJavelinMaster,canHaveCosmetic,thrownWeapon,FuriousRamsaySpears"/>
+	</append>
+	<append xpath="/items/item[@name='meleeWpnSpearT3SteelSpear']">
+		<property name="Tags" value="melee,grunting,medium,weapon,meleeWeapon,longShaft,attPerception,perkJavelinMaster,canHaveCosmetic,thrownWeapon,FuriousRamsaySpears"/>
+	</append>
 	<append xpath="/items/item[@name='FuriousRamsayShockSpear']/property[@name='Tags']/@value">,FuriousRamsaySpears</append>
 
 	<!-- BOWS -->
@@ -3971,10 +3974,13 @@
 	<append xpath="/items/item[@name='gunMGT2TacticalAR']/property[@name='Tags']/@value">,FuriousRamsayAssaultRifles</append>
 
 <!-- SOLDIER -->
-	<!-- KNUCKLES -->
-	<append xpath="/items/item[@name='meleeWpnKnucklesT0LeatherKnuckles']/property[@name='Tags']/@value">,FuriousRamsayKnuckles</append>
-	<append xpath="/items/item[@name='meleeWpnKnucklesT1IronKnuckles']/property[@name='Tags']/@value">,FuriousRamsayKnuckles</append>
-	<append xpath="/items/item[@name='meleeWpnKnucklesT3SteelKnuckles']/property[@name='Tags']/@value">,FuriousRamsayKnuckles</append>
+	<!-- AXES -->
+	<append xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@name='Tags']/@value">,FuriousRamsayAxes</append>
+	<append xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/property[@name='Tags']/@value">,FuriousRamsayAxes</append>
+	<append xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/property[@name='Tags']/@value">,FuriousRamsayAxes</append>
+	<append xpath="/items/item[@name='meleeToolAxeT2SteelAxe']">
+		<property name="Tags" value="axe,melee,grunting,medium,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic,FuriousRamsayAxes"/>
+	</append>
 
 	<!-- MARKSMAN -->
 	<append xpath="/items/item[@name='gunRifleT2MarksmanRifle']/property[@name='Tags']/@value">,FuriousRamsayMarksmanRifles</append>
@@ -3994,20 +4000,26 @@
 	<append xpath="/items/item[@name='gunBotT2JunkTurret']/property[@name='Tags']/@value">,FuriousRamsayDeployableTurrets</append>
 
 <!-- MADMAN -->
-	<!-- AXES -->
-	<append xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@name='Tags']/@value">,FuriousRamsayAxes</append>
-	<append xpath="/items/item[@name='meleeToolRepairT0TazasStoneAxe']/property[@name='Tags']/@value">,FuriousRamsayAxes</append>
-	<append xpath="/items/item[@name='meleeToolAxeT1IronFireaxe']/property[@name='Tags']/@value">,FuriousRamsayAxes</append>
-	<append xpath="/items/item[@name='meleeToolAxeT2SteelAxe']/property[@name='Tags']/@value">,FuriousRamsayAxes</append>
+	<!-- KNUCKLES -->
+	<append xpath="/items/item[@name='meleeWpnKnucklesT0LeatherKnuckles']/property[@name='Tags']/@value">,FuriousRamsayKnuckles</append>
+	<append xpath="/items/item[@name='meleeWpnKnucklesT1IronKnuckles']/property[@name='Tags']/@value">,FuriousRamsayKnuckles</append>
+	<append xpath="/items/item[@name='meleeWpnKnucklesT3SteelKnuckles']">
+		<property name="Tags" value="blunt,melee,grunting,light,perkFlurryOfBlows,weapon,attFortitude,perkBrawler,canHaveCosmetic,FuriousRamsayKnuckles"/>
+	</append>
+
 
 	<!-- EXPLOSIVES -->
 	<append xpath="/items/item[@name='gunExplosivesT3RocketLauncher']/property[@name='Tags']/@value">,FuriousRamsayExplosives</append>
 	<append xpath="/items/item[@name='thrownAmmoPipeBomb']/property[@name='Tags']/@value">,FuriousRamsayExplosives</append>
 	<append xpath="/items/item[@name='thrownGrenadeContact']/property[@name='Tags']/@value">,FuriousRamsayExplosives</append>
-	<append xpath="/items/item[@name='thrownGrenade']/property[@name='Tags']/@value">,FuriousRamsayExplosives</append>
+	<append xpath="/items/item[@name='thrownGrenade']">
+		<property name="Tags" value="ammo,weapon,attPerception,perkDemolitionsExpert,FuriousRamsayExplosives"/>
+	</append>
 	<append xpath="/items/item[@name='thrownTimedCharge']/property[@name='Tags']/@value">,FuriousRamsayExplosives</append>
 	<append xpath="/items/item[@name='thrownDynamite']/property[@name='Tags']/@value">,FuriousRamsayExplosives</append>
-	<append xpath="/items/item[@name='ammoRocketFrag']/property[@name='Tags']/@value">,FuriousRamsayExplosives</append>
+	<append xpath="/items/item[@name='ammoRocketFrag']">
+		<property name="Tags" value="ammo,FuriousRamsayExplosives"/>
+	</append>
 	<append xpath="/items/item[@name='ammoRocketHE']/property[@name='Tags']/@value">,FuriousRamsayExplosives</append>
 
 	<!-- SUBMACHINE GUNS -->
