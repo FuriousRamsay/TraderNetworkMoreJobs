@@ -2060,7 +2060,8 @@
 			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="quest_FuriousRamsayFindTraderNetwork_offer"/>
 			
-			<property name="completiontype" value="AutoComplete"/>
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_FuriousRamsayFindTraderNetwork_completion"/>
 
 			<property name="return_to_quest_giver" value="false" />
 
@@ -2068,11 +2069,24 @@
 				<property name="nav_object" value="go_to_trader" />
 			</objective>
 
+			<objective type="ReturnToNPC">
+				<property name="phase" value="2"/>
+				<property name="nav_object" value="return_to_trader" />
+			</objective>
+
 			<objective type="InteractWithNPC">
 				<property name="phase" value="2"/>
 				<property name="nav_object" value="return_to_trader" />
 				<property name="use_closest" value="true" />
 			</objective>
+
+			<reward type="Item" id="casinoCoin" value="200"/>
+
+			<reward type="Item" id="foodCanBeef" ischosen="true" isfixed="true" value="1"/>
+			<reward type="Item" id="foodCanChicken" ischosen="true" isfixed="true" value="1"/>
+			<reward type="Item" id="foodCanLamb" ischosen="true" isfixed="true" value="1"/>
+			<reward type="Item" id="foodCanChili" ischosen="true" isfixed="true" value="1"/>
+			<reward type="Item" id="foodCanPasta" ischosen="true" isfixed="true" value="1"/>
 		</quest>
 
 		<quest id="quest_FuriousRamsayFindNextTraderTier1">
@@ -2170,7 +2184,7 @@
 			<property name="icon" value="ui_game_symbol_quest"/>
 			<property name="repeatable" value="true"/>
 			<property name="shareable" value="true"/>
-			<property name="category_key" value="quest"/>
+			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="easy"/>
 			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="quest_FuriousRamsayStealTechTier1_offer"/>
@@ -2243,7 +2257,7 @@
 			<property name="icon" value="ui_game_symbol_quest"/>
 			<property name="repeatable" value="true"/>
 			<property name="shareable" value="true"/>
-			<property name="category_key" value="quest"/>
+			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="medium"/>
 			<property name="difficulty_tier" value="2"/>
 			<property name="offer_key" value="quest_FuriousRamsayStealTechTier2_offer"/>
@@ -2328,7 +2342,7 @@
 			<property name="icon" value="ui_game_symbol_quest"/>
 			<property name="repeatable" value="true"/>
 			<property name="shareable" value="true"/>
-			<property name="category_key" value="quest"/>
+			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="medium"/>
 			<property name="difficulty_tier" value="3"/>
 			<property name="offer_key" value="quest_FuriousRamsayStealTechTier3_offer"/>
@@ -2414,7 +2428,7 @@
 			<property name="icon" value="ui_game_symbol_quest"/>
 			<property name="repeatable" value="true"/>
 			<property name="shareable" value="true"/>
-			<property name="category_key" value="quest"/>
+			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="hard"/>
 			<property name="difficulty_tier" value="4"/>
 			<property name="offer_key" value="quest_FuriousRamsayStealTechTier4_offer"/>
@@ -2498,7 +2512,7 @@
 			<property name="icon" value="ui_game_symbol_quest"/>
 			<property name="repeatable" value="true"/>
 			<property name="shareable" value="true"/>
-			<property name="category_key" value="quest"/>
+			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="hard"/>
 			<property name="difficulty_tier" value="5"/>
 			<property name="offer_key" value="quest_FuriousRamsayStealTechTier5_offer"/>
@@ -2741,7 +2755,7 @@
 			<property name="description_key" value="quest_FuriousRamsayStealTechDig_description"/>
 			<property name="icon" value="ui_game_symbol_treasure"/>
 			<property name="repeatable" value="true"/>
-			<property name="category_key" value="challenge"/>
+			<property name="category_key" value="quest"/>
 			<property name="offer_key" value="quest_FuriousRamsayStealTechDigTier1_offer"/>
 			<property name="difficulty" value="medium"/>
 			<property name="difficulty_tier" value="1"/>
@@ -2811,7 +2825,7 @@
 			<property name="description_key" value="quest_FuriousRamsayStealTechDig_description"/>
 			<property name="icon" value="ui_game_symbol_treasure"/>
 			<property name="repeatable" value="true"/>
-			<property name="category_key" value="challenge"/>
+			<property name="category_key" value="quest"/>
 			<property name="offer_key" value="quest_FuriousRamsayStealTechDigTier2_offer"/>
 			<property name="difficulty" value="medium"/>
 			<property name="difficulty_tier" value="2"/>
@@ -2881,7 +2895,7 @@
 			<property name="description_key" value="quest_FuriousRamsayStealTechDig_description"/>
 			<property name="icon" value="ui_game_symbol_treasure"/>
 			<property name="repeatable" value="true"/>
-			<property name="category_key" value="challenge"/>
+			<property name="category_key" value="quest"/>
 			<property name="offer_key" value="quest_FuriousRamsayStealTechDigTier3_offer"/>
 			<property name="difficulty" value="medium"/>
 			<property name="difficulty_tier" value="3"/>
@@ -2957,7 +2971,7 @@
 			<property name="description_key" value="quest_FuriousRamsayStealTechDig_description"/>
 			<property name="icon" value="ui_game_symbol_treasure"/>
 			<property name="repeatable" value="true"/>
-			<property name="category_key" value="challenge"/>
+			<property name="category_key" value="quest"/>
 			<property name="offer_key" value="quest_FuriousRamsayStealTechDigTier4_offer"/>
 			<property name="difficulty" value="hard"/>
 			<property name="difficulty_tier" value="4"/>
@@ -3039,7 +3053,7 @@
 			<property name="description_key" value="quest_FuriousRamsayStealTechDig_description"/>
 			<property name="icon" value="ui_game_symbol_treasure"/>
 			<property name="repeatable" value="true"/>
-			<property name="category_key" value="challenge"/>
+			<property name="category_key" value="quest"/>
 			<property name="offer_key" value="quest_FuriousRamsayStealTechDigTier5_offer"/>
 			<property name="difficulty" value="hard"/>
 			<property name="difficulty_tier" value="5"/>

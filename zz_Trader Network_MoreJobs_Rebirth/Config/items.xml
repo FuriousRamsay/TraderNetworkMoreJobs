@@ -154,7 +154,7 @@
 	<setattribute xpath="/items/item[@name='foodVegetableStew']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='foodVegetableStew']/effect_group/triggered_effect[@cvar='$waterAmountAdd']" name="value">-3</setattribute>
 	<setattribute xpath="/items/item[@name='foodVegetableStew']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
-	<setattribute xpath="/items/item[@name='foodBakedPotato']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodBaked	ato']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">2</setattribute>
 	<setattribute xpath="/items/item[@name='foodBakedPotato']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='foodPumpkinBread']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">4</setattribute>
 	<setattribute xpath="/items/item[@name='foodPumpkinBread']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
@@ -974,6 +974,32 @@
 			<property class="Action0">
 				<property name="UseAnimation" value="false"/>
 				<property name="QuestGiven" value="quest_FuriousRamsayStarterBackpackCharismaDig"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayTraderNetworkDig">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="DescriptionKey" value="qc_FuriousRamsayTraderNetworkDigDesc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayTraderNetworkDig"/>
+			</property>
+		</item>
+
+		<item name="qc_FuriousRamsayBoilWater">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="DescriptionKey" value="qc_FuriousRamsayBoilWaterDesc"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Candrop" value="true"/>
+			<property name="SellableToTrader" value="false"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="quest_FuriousRamsayBoilWater"/>
 			</property>
 		</item>
 

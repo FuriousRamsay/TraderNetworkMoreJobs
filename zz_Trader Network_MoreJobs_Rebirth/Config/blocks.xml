@@ -1,5 +1,20 @@
 <Config>
 
+	<!-- ADD LOOT TO CONTAINERS -->
+	<append xpath="/blocks/block[@name='wineBarrel']">
+		<property name="Class" value="Loot"/>
+		<property name="LootList" value="865"/>
+	</append>
+	<append xpath="/blocks/block[@name='wineBarrelPlain']">
+		<property name="Class" value="Loot"/>
+		<property name="LootList" value="865"/>
+	</append>
+	<append xpath="/blocks/block[@name='wineBarrelSet']">
+		<property name="Class" value="Loot"/>
+		<property name="LootList" value="865"/>
+	</append>	
+
+	<!-- REMOVE BLOCK RECIPE LOCKS -->
 	<remove xpath="/blocks/block/property[@name='UnlockedBy']"/>
 
 	<!-- ADD JUNK LOOT TO GENERIC BOXES -->

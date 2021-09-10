@@ -2,7 +2,27 @@
     
 	<setattribute xpath="/recipes/recipe[@name='medicalBandage']/ingredient[@name='resourceCloth']" name="count">10</setattribute>
 	<setattribute xpath="/recipes/recipe[@name='medicalFirstAidBandage']/ingredient[@name='resourceCloth']" name="count">10</setattribute>
-	
+
+	<!-- UNLOCK DEFAULT RECIPES -->
+	<removeattribute xpath="/recipes/recipe[@name='drinkJarCoffee']/@tags"/>
+	<setattribute xpath="/recipes/recipe[@name='drinkJarCoffee']" name="always_unlocked">true</setattribute>
+	<removeattribute xpath="/recipes/recipe[@name='foodBaconAndEggs']/@tags"/>
+	<setattribute xpath="/recipes/recipe[@name='foodBaconAndEggs']" name="always_unlocked">true</setattribute>
+	<removeattribute xpath="/recipes/recipe[@name='foodBakedPotato']/@tags"/>
+	<setattribute xpath="/recipes/recipe[@name='foodBakedPotato']" name="always_unlocked">true</setattribute>
+	<removeattribute xpath="/recipes/recipe[@name='foodSpaghetti']/@tags"/>
+	<setattribute xpath="/recipes/recipe[@name='foodSpaghetti']" name="always_unlocked">true</setattribute>
+	<removeattribute xpath="/recipes/recipe[@name='foodBoiledMeat']/@tags"/>
+	<setattribute xpath="/recipes/recipe[@name='foodBoiledMeat']" name="always_unlocked">true</setattribute>
+	<removeattribute xpath="/recipes/recipe[@name='foodCornOnTheCob']/@tags"/>
+	<setattribute xpath="/recipes/recipe[@name='foodCornOnTheCob']" name="always_unlocked">true</setattribute>
+	<removeattribute xpath="/recipes/recipe[@name='foodGrilledMeat']/@tags"/>
+	<setattribute xpath="/recipes/recipe[@name='foodGrilledMeat']" name="always_unlocked">true</setattribute>
+	<removeattribute xpath="/recipes/recipe[@name='foodSteakAndPotato']/@tags"/>
+	<setattribute xpath="/recipes/recipe[@name='foodSteakAndPotato']" name="always_unlocked">true</setattribute>-->
+
+	<setattribute xpath="/recipes/recipe[@name='medicalFirstAidBandage']/ingredient[@name='resourceCloth']" name="count">10</setattribute>
+
 	<append xpath="/recipes">
 
 		<recipe name="FuriousRamsayScrapRepairKit" count="1">
