@@ -7229,9 +7229,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-4" value=""/>
 
-			<property name="LootDropProb" value="1"/>
-			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBossTier1Loot"/>
-
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="1000" />
                 <passive_effect name="HealthMax" operation="perc_set" value="1" />
@@ -7264,9 +7261,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntitySurvivor,0,0,EntityZombie,0,0"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-4" value=""/>
-
-			<property name="LootDropProb" value="1"/>
-			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBossTier2Loot"/>
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="2000" />
@@ -7301,9 +7295,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntitySurvivor,0,0,EntityZombie,0,0"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-4" value=""/>
-
-			<property name="LootDropProb" value="1"/>
-			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBossTier3Loot"/>
 
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="3000" />
@@ -7340,9 +7331,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-4" value=""/>
           
-			<property name="LootDropProb" value="1"/>
-			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBossTier4Loot"/>
-
 			<effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="4000" />
                 <passive_effect name="HealthMax" operation="perc_set" value="1" />
@@ -7380,9 +7368,6 @@ FuriousRamsayVultureToxicRadiated
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-4" value=""/>
 
-			<property name="LootDropProb" value="1"/>
-			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBossTier5Loot"/>
-
             <effect_group name="Base Effects">
                 <passive_effect name="HealthMax" operation="base_set" value="5000" />
                 <passive_effect name="HealthMax" operation="perc_set" value="1" />
@@ -7398,6 +7383,61 @@ FuriousRamsayVultureToxicRadiated
             </effect_group>
         </entity_class>
 		
+        <entity_class name="FuriousRamsayUMABlackShieldBossTier1Quest" extends="FuriousRamsayUMABlackShieldBossTier1">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="MaxViewAngle" value="360"/>
+			<property name="NavObject" value="" />
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBossTier1Loot"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMABlackShieldBossTier2Quest" extends="FuriousRamsayUMABlackShieldBossTier2">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="MaxViewAngle" value="360"/>
+			<property name="NavObject" value="" />
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBossTier2Loot"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMABlackShieldBossTier3Quest" extends="FuriousRamsayUMABlackShieldBossTier3">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="MaxViewAngle" value="360"/>
+			<property name="NavObject" value="" />
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBossTier3Loot"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMABlackShieldBossTier4Quest" extends="FuriousRamsayUMABlackShieldBossTier4">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="MaxViewAngle" value="360"/>
+			<property name="NavObject" value="" />
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBossTier4Loot"/>
+        </entity_class>
+
+        <entity_class name="FuriousRamsayUMABlackShieldBossTier5Quest" extends="FuriousRamsayUMABlackShieldBossTier5">
+			<property name="HideInSpawnMenu" value="true"/>
+			<property name="SightRange" value="200"/> 
+			<property name="AINoiseSeekDist" value="200"/>
+			<property name="MaxViewAngle" value="360"/>
+			<property name="NavObject" value="" />
+
+			<property name="LootDropProb" value="1"/>
+			<property name="LootDropEntityClass" value="FuriousRamsayBlackShieldBossTier5Loot"/>
+        </entity_class>
+
         <entity_class name="FuriousRamsayUMABlackShieldBossTier1War" extends="FuriousRamsayUMABlackShieldBossTier1">
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="SightRange" value="200"/> 

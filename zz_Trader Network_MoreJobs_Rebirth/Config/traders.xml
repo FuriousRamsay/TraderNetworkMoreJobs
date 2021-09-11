@@ -277,7 +277,7 @@
 			<item name="FuriousRamsayTrainerKnife" count="1" prob="1"/>
 		</trader_item_group>
 
-		<trader_item_group name="FuriousRamsayBioEngineerTrainerItemsTier0">
+		<trader_item_group name="FuriousRamsaySuvivalistTrainerItemsTier0">
 			<item name="forge" count="1" prob="1"/>
 			<item name="FuriousRamsayPillStrength" count="1" prob="1"/>
 			<item name="FuriousRamsayPillDexterity" count="1" prob="1"/>
@@ -303,18 +303,18 @@
 			<item name="FuriousRamsayCharismaperkCharismaticNature" count="1" prob="1"/>		
 		</trader_item_group>
 		
-		<trader_item_group name="FuriousRamsayBioEngineerTrainerItemsTier1">
+		<trader_item_group name="FuriousRamsaySuvivalistTrainerItemsTier1">
 			<item name="workbench" count="1" prob="1"/>
 			<item name="forge" count="1" prob="1"/>
 		</trader_item_group>
 
-		<trader_item_group name="FuriousRamsayBioEngineerTrainerItemsTier2">
+		<trader_item_group name="FuriousRamsaySuvivalistTrainerItemsTier2">
 			<item name="cementMixer" count="1" prob="1"/>
 			<item name="workbench" count="1" prob="1"/>
 			<item name="forge" count="1" prob="1"/>
 		</trader_item_group>
 
-		<trader_item_group name="FuriousRamsayBioEngineerTrainerItemsTier3">
+		<trader_item_group name="FuriousRamsaySuvivalistTrainerItemsTier3">
 			<item name="cementMixer" count="1" prob="1"/>
 			<item name="workbench" count="1" prob="1"/>
 			<item name="forge" count="1" prob="1"/>
@@ -322,7 +322,7 @@
 			<item name="FuriousRamsaySpawnChefTrainer" count="1" prob="1"/>
 		</trader_item_group>
 
-		<trader_item_group name="FuriousRamsayBioEngineerTrainerItemsTier4">
+		<trader_item_group name="FuriousRamsaySuvivalistTrainerItemsTier4">
 			<item name="cementMixer" count="1" prob="1"/>
 			<item name="workbench" count="1" prob="1"/>
 			<item name="forge" count="1" prob="1"/>
@@ -337,7 +337,7 @@
 			<item name="FuriousRamsaySpawnSurvivalSpecialist" count="1" prob="1"/>
 		</trader_item_group>
 
-		<trader_item_group name="FuriousRamsayBioEngineerTrainerItemsTier5">
+		<trader_item_group name="FuriousRamsaySuvivalistTrainerItemsTier5">
 			<item name="cementMixer" count="1" prob="1"/>
 			<item name="workbench" count="1" prob="1"/>
 			<item name="forge" count="1" prob="1"/>
@@ -356,30 +356,30 @@
 
 	<append xpath="/traders">
 	
-		<!-- Bioengineer -->
+		<!-- Suvivalist -->
 		<trader_info id="70" full_reset="true" override_buy_markup="1.5" min_inventory="20" max_inventory="30" min_items_swapped="20" max_items_swapped="30" reset_interval="1" open_time="0:00" close_time="0:00">
 			<trader_items count="all">
-				<item group="FuriousRamsayBioEngineerTrainerItemsTier0" count="1" prob="1"/>
+				<item group="FuriousRamsaySuvivalistTrainerItemsTier0" count="1" prob="1"/>
 			</trader_items>
 
 			<tier_items level="1000,1999" count="all"> <!-- requires Perk 1 -->
-				<item group="FuriousRamsayBioEngineerTrainerItemsTier1" count="1" prob="1"/>
+				<item group="FuriousRamsaySuvivalistTrainerItemsTier1" count="1" prob="1"/>
 			</tier_items>
 
 			<tier_items level="2000,2999" count="all"> <!-- requires Perk 2 -->
-				<item group="FuriousRamsayBioEngineerTrainerItemsTier2" count="1" prob="1"/>
+				<item group="FuriousRamsaySuvivalistTrainerItemsTier2" count="1" prob="1"/>
 			</tier_items>
 
 			<tier_items level="3000,3999" count="all"> <!-- requires Perk 3 -->
-				<item group="FuriousRamsayBioEngineerTrainerItemsTier3" count="1" prob="1"/>
+				<item group="FuriousRamsaySuvivalistTrainerItemsTier3" count="1" prob="1"/>
 			</tier_items>
 
 			<tier_items level="4000,4999" count="all"> <!-- requires Perk 4 -->
-				<item group="FuriousRamsayBioEngineerTrainerItemsTier4" count="1" prob="1"/>
+				<item group="FuriousRamsaySuvivalistTrainerItemsTier4" count="1" prob="1"/>
 			</tier_items>
 
 			<tier_items level="5000,-1" count="all"> <!-- requires Perk 5 -->
-				<item group="FuriousRamsayBioEngineerTrainerItemsTier5" count="1" prob="1"/>
+				<item group="FuriousRamsaySuvivalistTrainerItemsTier5" count="1" prob="1"/>
 			</tier_items>
 		</trader_info>
 		

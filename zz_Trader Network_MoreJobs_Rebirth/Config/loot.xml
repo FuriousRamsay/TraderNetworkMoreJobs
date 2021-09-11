@@ -7,7 +7,19 @@
 	<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest']/item[@name='resourceFeather']/@prob">0.95</set>
 	<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest']/item[@name='foodEgg']/@prob">0.45</set>
 
-   <!-- REMOVE BOOKS AND SCHEMATICS FROM LOOT -->
+	<!-- REMOVE CERTAIN ITEMS FROM LOOT -->
+	<remove xpath="/lootcontainers/lootgroup[@name='modGunT3']/item[@name='modGunBowPolymerString']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT2']/item[@name='modGunBowPolymerStringSchematic']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']/item[@name='drinkJarCoffeeSchematic']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']/item[@name='foodBaconAndEggsSchematic']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']/item[@name='foodBakedPotatoSchematic']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']/item[@name='foodBoiledMeatSchematic']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']/item[@name='foodCornOnTheCobSchematic']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']/item[@name='foodGrilledMeatSchematic']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT1']/item[@name='foodSteakAndPotatoSchematic']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT2']/item[@name='foodSpaghettiSchematic']"/>
+
+	<!-- REMOVE BOOKS AND SCHEMATICS FROM LOOT -->
 	<remove xpath="/lootcontainers/lootgroup[@name='groupHeroChestLootSub']/item[@group='perkBooks']"/>
 	<remove xpath="/lootcontainers/lootgroup[@name='junk']/item[@group='booksAllScaled']"/>
 	<remove xpath="/lootcontainers/lootgroup[@name='labEquipment']/item[@group='booksAllScaled']"/>
@@ -40,8 +52,7 @@
 	<remove xpath="/lootcontainers/lootcontainer[@id='521']/item[@group='twitch_books2']"/>
 	<remove xpath="/lootcontainers/lootcontainer[@id='522']/item[@group='twitch_books3']"/>
 
-
-   <!-- REMOVE CRAP FROM LOOT -->
+    <!-- REMOVE CRAP FROM LOOT -->
 	<remove xpath="/lootcontainers/lootgroup[@name='grills']/item[@name='foodRottingFlesh']"/>
 
 	<remove xpath="/lootcontainers/lootgroup[@name='rottenFood']/item[@name='foodShamSandwich']"/>
@@ -163,7 +174,32 @@
 	<remove xpath="/lootcontainers/lootcontainer[@id='70']/item[@group='groupQuestChallenge']"/>
 	<remove xpath="/lootcontainers/lootcontainer[@id='71']/item[@group='groupQuestChallenge']"/>
 	<remove xpath="/lootcontainers/lootcontainer[@id='73']/item[@group='groupQuestChallenge']"/>
-   
+
+	<remove xpath="/lootcontainers/lootgroup[@name='groupApparelFaceCover']/item[@name='apparelShades']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupApparelFaceCover']/item[@name='apparelToughGuySunglasses']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupApparelFaceCover']/item[@name='apparelNerdGlasses']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupApparelFaceCover']/item[@name='apparelSkiGoggles']"/>
+	<remove xpath="/lootcontainers/lootgroup[@name='groupApparelFaceCover']/item[@name='apparelAviatorGoggles']"/>
+  
+	<append xpath="/lootcontainers/lootgroup[@name='groupApparelFaceCover']">
+		<item name="FuriousRamsayHeadShadesStrengthTRex"/>
+		<item name="FuriousRamsayHeadShadesStrengthMiner69er"/>
+		<item name="FuriousRamsayHeadShadesStrengthMotherLode"/>
+		<item name="FuriousRamsayHeadShadesDexterityRuleOneCardio"/>
+		<item name="FuriousRamsayHeadShadesDexterityParkour"/>
+		<item name="FuriousRamsayHeadShadesDexterityRunAndGun"/>
+		<item name="FuriousRamsayHeadShadesConstitutionPackMule"/>
+		<item name="FuriousRamsayHeadShadesConstitutionHealingFactor"/>
+		<item name="FuriousRamsayHeadShadesConstitutionSlowMetabolism"/>
+		<item name="FuriousRamsayHeadShadesIntelligenceLuckyLooter"/>
+		<item name="FuriousRamsayHeadShadesIntelligenceLockPicking"/>
+		<item name="FuriousRamsayHeadShadesIntelligenceTreasureHunter"/>
+		<item name="FuriousRamsayHeadShadesKnowledgeGreaseMonkey"/>
+		<item name="FuriousRamsayHeadShadesCharismaDaringAdventurer"/>
+		<item name="FuriousRamsayHeadShadesCharismaBetterBarter"/>
+		<item name="FuriousRamsayHeadShadesCharismaCharismaticNature"/>
+	</append>
+
 	<append xpath="/lootcontainers/lootcontainer[@id='49']">
 		<item name="FuriousRamsayBook" count="1" prob="0.11"/>
 		<item group="FuriousRamsayGroupRebirthBooksVehicles" prob="0.3"/>

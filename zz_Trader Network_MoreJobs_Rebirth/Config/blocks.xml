@@ -1,5 +1,8 @@
 <Config>
 
+	<!-- PREVENT CLOTH LOOT FROM BEING DESTROYED WHEN NOT PAYING ATTENTION -->
+	<setattribute xpath="/blocks/block[@name='cntBackpack01']/property[@name='Material']" name="value">FuriousRamsayMLootcloth</setattribute>
+
 	<!-- ADD LOOT TO CONTAINERS -->
 	<append xpath="/blocks/block[@name='wineBarrel']">
 		<property name="Class" value="Loot"/>
@@ -34,6 +37,8 @@
 		<property name="Class" value="Loot"/>
 		<property name="LootList" value="865"/>
 	</append>
+
+
 
 	<append xpath="/blocks">
 

@@ -20,6 +20,31 @@
 	<remove xpath="/items/item[@name='FuriousRamsayBanditHeadAviatorGoggles']/effect_group/display_value[@name='dTreasureBlocksPerReduction']"/>
 	<remove xpath="/items/item[@name='FuriousRamsayBanditHeadSkiGoggles']/effect_group/passive_effect[@name='AttributeLevel']"/>
 
+	<!-- ADD NEW STATS TO EYEWEAR -->
+	<append xpath="/items/item[@name='FuriousRamsayBanditHeadAviatorGoggles']">
+		<effect_group name="FuriousRamsayEffects" tiered="false">
+			<passive_effect name="AttributeLevel" tags="attfortitude" operation="base_add" value="1"/>
+			<passive_effect name="PerkLevel" tags="perkMotherLode" operation="base_add" value="1"/>
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeStrengthReq" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="varFuriousRamsayAttributeStrengthReq" operation="add" value="-1"/>
+		</effect_group>
+	</append>
+
+	<setattribute xpath="/items/item[@name='FuriousRamsayBanditHeadAviatorGoggles']/property[@name='DisplayType']" name="value">FuriousRamsayHeadShadesStrengthMotherLode</setattribute>
+	<setattribute xpath="/items/item[@name='FuriousRamsayBanditHeadAviatorGoggles']/property[@name='DescriptionKey']" name="value">FuriousRamsayHeadShadesStrengthMotherLodeDesc</setattribute>
+
+	<append xpath="/items/item[@name='FuriousRamsayBanditHeadSkiGoggles']">
+		<effect_group name="FuriousRamsayEffects" tiered="false">
+			<passive_effect name="AttributeLevel" tags="attfortitude" operation="base_add" value="1"/>
+			<passive_effect name="PerkLevel" tags="perkSlowMetabolism" operation="base_add" value="1"/>
+			<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeConstitutionReq" operation="add" value="1"/>
+			<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="varFuriousRamsayAttributeConstitutionReq" operation="add" value="-1"/>
+		</effect_group>
+	</append>
+
+	<setattribute xpath="/items/item[@name='FuriousRamsayBanditHeadSkiGoggles']/property[@name='DisplayType']" name="value">FuriousRamsayHeadShadesConstitutionSlowMetabolism</setattribute>
+	<setattribute xpath="/items/item[@name='FuriousRamsayBanditHeadSkiGoggles']/property[@name='DescriptionKey']" name="value">FuriousRamsayHeadShadesConstitutionSlowMetabolismDesc</setattribute>
+
     <!-- GET WATER FROM FAUCETS, SINKS, TOILETS AND BATHTUBS -->
 	<append xpath="/items/item[@name='drinkJarEmpty']">
         <property class="Action0">
@@ -205,6 +230,442 @@
 
 	<append xpath="/items">
 
+		<item name="FuriousRamsayHeadShadesStrength">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesStrengthDesc"/>
+			<property name="DisplayType" value="FuriousRamsayStatShadesRecipes"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHeadShadesDexterity">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesDexterityDesc"/>
+			<property name="DisplayType" value="FuriousRamsayStatShadesRecipes"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHeadShadesConstitution">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesConstitutionDesc"/>
+			<property name="DisplayType" value="FuriousRamsayStatShadesRecipes"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHeadShadesIntelligence">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesIntelligenceDesc"/>
+			<property name="DisplayType" value="FuriousRamsayStatShadesRecipes"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHeadShadesKnowledge">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesKnowledgeDesc"/>
+			<property name="DisplayType" value="FuriousRamsayStatShadesRecipes"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHeadShadesCharisma">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesCharismaDesc"/>
+			<property name="DisplayType" value="FuriousRamsayStatShadesRecipes"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+		</item>
+
+		<!-- STRENGTH -->
+		<item name="FuriousRamsayHeadShadesStrengthTRex">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesStrengthTRexDesc"/>
+			<property name="DisplayType" value="FuriousRamsayHeadShadesStrengthTRex"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="CustomIconTint" value="194, 114, 114"/>
+			<property name="TintColor" value="194, 114, 114"/>
+			<property name="UMA.Overlay0Tint" value="194, 114, 114"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<passive_effect name="AttributeLevel" tags="attfortitude" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkSexualTrex" operation="base_add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeStrengthReq" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="varFuriousRamsayAttributeStrengthReq" operation="add" value="-1"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHeadShadesStrengthMiner69er">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesStrengthMiner69erDesc"/>
+			<property name="DisplayType" value="FuriousRamsayHeadShadesStrengthMiner69er"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="CustomIconTint" value="156, 92, 92"/>
+			<property name="TintColor" value="156, 92, 92"/>
+			<property name="UMA.Overlay0Tint" value="156, 92, 92"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<passive_effect name="AttributeLevel" tags="attfortitude" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkMiner69r" operation="base_add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeStrengthReq" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="varFuriousRamsayAttributeStrengthReq" operation="add" value="-1"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHeadShadesStrengthMotherLode">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesStrengthMotherLodeDesc"/>
+			<property name="DisplayType" value="FuriousRamsayHeadShadesStrengthMotherLode"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="CustomIconTint" value="120, 71, 71"/>
+			<property name="TintColor" value="120, 71, 71"/>
+			<property name="UMA.Overlay0Tint" value="120, 71, 71"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<passive_effect name="AttributeLevel" tags="attfortitude" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkMotherLode" operation="base_add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeStrengthReq" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="varFuriousRamsayAttributeStrengthReq" operation="add" value="-1"/>
+			</effect_group>
+		</item>
+
+		<!-- DEXTERITY -->
+		<item name="FuriousRamsayHeadShadesDexterityRuleOneCardio">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesDexterityRuleOneCardioDesc"/>
+			<property name="DisplayType" value="FuriousRamsayHeadShadesDexterityRuleOneCardio"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="CustomIconTint" value="189, 191, 113"/>
+			<property name="TintColor" value="189, 191, 113"/>
+			<property name="UMA.Overlay0Tint" value="189, 191, 113"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<passive_effect name="AttributeLevel" tags="attfortitude" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkRuleOneCardio" operation="base_add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeDexterityReq" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="varFuriousRamsayAttributeDexterityReq" operation="add" value="-1"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHeadShadesDexterityParkour">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesDexterityParkourDesc"/>
+			<property name="DisplayType" value="FuriousRamsayHeadShadesDexterityParkour"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="CustomIconTint" value="154, 156, 92"/>
+			<property name="TintColor" value="154, 156, 92"/>
+			<property name="UMA.Overlay0Tint" value="154, 156, 92"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<passive_effect name="AttributeLevel" tags="attfortitude" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkParkour" operation="base_add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeDexterityReq" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="varFuriousRamsayAttributeDexterityReq" operation="add" value="-1"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHeadShadesDexterityRunAndGun">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesDexterityRunAndGunDesc"/>
+			<property name="DisplayType" value="FuriousRamsayHeadShadesDexterityRunAndGun"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="CustomIconTint" value="116, 117, 69"/>
+			<property name="TintColor" value="116, 117, 69"/>
+			<property name="UMA.Overlay0Tint" value="116, 117, 69"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<passive_effect name="AttributeLevel" tags="attfortitude" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkRunAndGun" operation="base_add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeDexterityReq" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="varFuriousRamsayAttributeDexterityReq" operation="add" value="-1"/>
+			</effect_group>
+		</item>
+
+		<!-- CONSTITUTION -->
+		<item name="FuriousRamsayHeadShadesConstitutionPackMule">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesConstitutionPackMuleDesc"/>
+			<property name="DisplayType" value="FuriousRamsayHeadShadesConstitutionPackMule"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="CustomIconTint" value="122, 189, 113"/>
+			<property name="TintColor" value="122, 189, 113"/>
+			<property name="UMA.Overlay0Tint" value="122, 189, 113"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<passive_effect name="AttributeLevel" tags="attfortitude" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkPackMule" operation="base_add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeConstitutionReq" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="varFuriousRamsayAttributeConstitutionReq" operation="add" value="-1"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHeadShadesConstitutionHealingFactor">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesConstitutionHealingFactorDesc"/>
+			<property name="DisplayType" value="FuriousRamsayHeadShadesConstitutionHealingFactor"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="CustomIconTint" value="99, 153, 92"/>
+			<property name="TintColor" value="99, 153, 92"/>
+			<property name="UMA.Overlay0Tint" value="99, 153, 92"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<passive_effect name="AttributeLevel" tags="attfortitude" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkHealingFactor" operation="base_add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeConstitutionReq" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="varFuriousRamsayAttributeConstitutionReq" operation="add" value="-1"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHeadShadesConstitutionSlowMetabolism">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesConstitutionSlowMetabolismDesc"/>
+			<property name="DisplayType" value="FuriousRamsayHeadShadesConstitutionSlowMetabolism"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="CustomIconTint" value="76, 117, 70"/>
+			<property name="TintColor" value="76, 117, 70"/>
+			<property name="UMA.Overlay0Tint" value="76, 117, 70"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<passive_effect name="AttributeLevel" tags="attfortitude" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkSlowMetabolism" operation="base_add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeConstitutionReq" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="varFuriousRamsayAttributeConstitutionReq" operation="add" value="-1"/>
+			</effect_group>
+		</item>
+
+		<!-- INTELLIGENCE -->
+		<item name="FuriousRamsayHeadShadesIntelligenceLuckyLooter">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesIntelligenceLuckyLooterDesc"/>
+			<property name="DisplayType" value="FuriousRamsayHeadShadesIntelligenceLuckyLooter"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="CustomIconTint" value="112, 164, 186"/>
+			<property name="TintColor" value="112, 164, 186"/>
+			<property name="UMA.Overlay0Tint" value="112, 164, 186"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<passive_effect name="AttributeLevel" tags="attfortitude" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkLuckyLooter" operation="base_add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeIntelligenceReq" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="varFuriousRamsayAttributeIntelligenceReq" operation="add" value="-1"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHeadShadesIntelligenceLockPicking">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesIntelligenceLockPickingDesc"/>
+			<property name="DisplayType" value="FuriousRamsayHeadShadesIntelligenceLockPicking"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="CustomIconTint" value="90, 133, 150"/>
+			<property name="TintColor" value="90, 133, 150"/>
+			<property name="UMA.Overlay0Tint" value="90, 133, 150"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<passive_effect name="AttributeLevel" tags="attfortitude" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkLockPicking" operation="base_add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeIntelligenceReq" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="varFuriousRamsayAttributeIntelligenceReq" operation="add" value="-1"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHeadShadesIntelligenceTreasureHunter">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesIntelligenceTreasureHunterDesc"/>
+			<property name="DisplayType" value="FuriousRamsayHeadShadesIntelligenceTreasureHunter"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="CustomIconTint" value="68, 100, 112"/>
+			<property name="TintColor" value="68, 100, 112"/>
+			<property name="UMA.Overlay0Tint" value="68, 100, 112"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<passive_effect name="AttributeLevel" tags="attfortitude" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkTreasureHunter" operation="base_add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeIntelligenceReq" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="varFuriousRamsayAttributeIntelligenceReq" operation="add" value="-1"/>
+			</effect_group>
+		</item>
+
+		<!-- KNOWLEDGE -->
+		<item name="FuriousRamsayHeadShadesKnowledgeGreaseMonkey">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesKnowledgeGreaseMonkeyDesc"/>
+			<property name="DisplayType" value="FuriousRamsayHeadShadesKnowledgeGreaseMonkey"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="CustomIconTint" value="65, 110, 184"/>
+			<property name="TintColor" value="65, 110, 184"/>
+			<property name="UMA.Overlay0Tint" value="65, 110, 184"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<passive_effect name="AttributeLevel" tags="attfortitude" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkGreaseMonkey" operation="base_add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeKnowledgeReq" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="varFuriousRamsayAttributeKnowledgeReq" operation="add" value="-1"/>
+			</effect_group>
+		</item>
+
+		<!-- CHARISMA -->
+		<item name="FuriousRamsayHeadShadesCharismaDaringAdventurer">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesCharismaDaringAdventurerDesc"/>
+			<property name="DisplayType" value="FuriousRamsayHeadShadesCharismaDaringAdventurer"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="CustomIconTint" value="179, 107, 167"/>
+			<property name="TintColor" value="179, 107, 167"/>
+			<property name="UMA.Overlay0Tint" value="179, 107, 167"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<passive_effect name="AttributeLevel" tags="attfortitude" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkDaringAdventurer" operation="base_add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeCharismaReq" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="varFuriousRamsayAttributeCharismaReq" operation="add" value="-1"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHeadShadesCharismaBetterBarter">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesCharismaBetterBarterDesc"/>
+			<property name="DisplayType" value="FuriousRamsayHeadShadesCharismaBetterBarter"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="CustomIconTint" value="140, 84, 131"/>
+			<property name="TintColor" value="140, 84, 131"/>
+			<property name="UMA.Overlay0Tint" value="140, 84, 131"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<passive_effect name="AttributeLevel" tags="attfortitude" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkBetterBarter" operation="base_add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeCharismaReq" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="varFuriousRamsayAttributeCharismaReq" operation="add" value="-1"/>
+			</effect_group>
+		</item>
+
+		<item name="FuriousRamsayHeadShadesCharismaCharismaticNature">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="FuriousRamsayHeadShadesCharismaCharismaticNatureDesc"/>
+			<property name="DisplayType" value="FuriousRamsayHeadShadesCharismaCharismaticNature"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="RepairTools" value="resourceScrapIron"/>
+			<property name="CustomIconTint" value="105, 63, 98"/>
+			<property name="TintColor" value="105, 63, 98"/>
+			<property name="UMA.Overlay0Tint" value="105, 63, 98"/>
+			<property name="Tags" value="head,clothing,noMods"/>
+			<property name="SellableToTrader" value="false"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			</effect_group>
+			<effect_group name="FuriousRamsayEffects" tiered="false">
+				<passive_effect name="AttributeLevel" tags="attfortitude" operation="base_add" value="1"/>
+				<passive_effect name="PerkLevel" tags="perkCharismaticNature" operation="base_add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStart" action="ModifyCVar" cvar="varFuriousRamsayAttributeCharismaReq" operation="add" value="1"/>
+				<triggered_effect trigger="onSelfEquipStop" action="ModifyCVar" cvar="varFuriousRamsayAttributeCharismaReq" operation="add" value="-1"/>
+			</effect_group>
+		</item>
+
 		<item name="FuriousRamsayScrapRepairKit">
 			<property name="CustomIcon" value="cntToolBoxOpen"/>
 			<!--<property name="CustomIconTint" value="177, 98, 227"/>-->
@@ -330,7 +791,7 @@
 			<property name="CustomIconTint" value="81, 156, 89"/>
 			<property name="DescriptionKey" value="FuriousRamsayStrengthperkMotherLodeDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-			<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="1000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -379,7 +840,7 @@
 			<property name="CustomIconTint" value="209, 209, 105"/>
 			<property name="DescriptionKey" value="FuriousRamsayDexterityperkRuleOneCardioDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-			<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="1500"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -427,7 +888,7 @@
 			<property name="CustomIconTint" value="173, 173, 87"/>
 			<property name="DescriptionKey" value="FuriousRamsayDexterityperkParkourDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-			<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="1500"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -475,7 +936,7 @@
 			<property name="CustomIconTint" value="133, 133, 68"/>
 			<property name="DescriptionKey" value="FuriousRamsayDexterityperkRunAndGunDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-			<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="1500"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -620,7 +1081,7 @@
 			<property name="CustomIconTint" value="133, 68, 77"/>
 			<property name="DescriptionKey" value="FuriousRamsayConstitutionperkSlowMetabolismDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-			<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="1500"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -702,7 +1163,7 @@
 			<property name="CustomIconTint" value="87, 106, 179"/>
 			<property name="DescriptionKey" value="FuriousRamsayIntelligenceperkLockPickingDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-			<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="500"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -729,7 +1190,7 @@
 			<property name="CustomIconTint" value="69, 83, 140"/>
 			<property name="DescriptionKey" value="FuriousRamsayIntelligenceperkTreasureHunterDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-			<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="500"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -757,7 +1218,7 @@
 			<property name="CustomIconTint" value="179, 120, 222"/>
 			<property name="DescriptionKey" value="FuriousRamsayKnowledgeperkGreaseMonkeyDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-			<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="3000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -821,7 +1282,7 @@
 			<property name="CustomIconTint" value="189, 108, 175"/>
 			<property name="DescriptionKey" value="FuriousRamsayCharismaperkBetterBarterDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-			<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="1000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -854,7 +1315,7 @@
 			<property name="CustomIconTint" value="153, 87, 142"/>
 			<property name="DescriptionKey" value="FuriousRamsayCharismaperkCharismaticNatureDesc"/>
 			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
-			<property name="EconomicValue" value="2000"/>
+			<property name="EconomicValue" value="1000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
@@ -1269,6 +1730,7 @@
 		<item name="FuriousRamsayBook">
 			<property name="Extends" value="FuriousRamsayClassBookMaster"/>
 			<property name="Weight" value="14"/>
+			<property name="Candrop" value="true"/>
 		</item>
 	
 		<item name="FuriousRamsayClassBookGeneric">
@@ -3747,7 +4209,7 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="open_backpack"/>
 				<property name="UseAnimation" value="false"/>
-				<property name="Create_item" value="FuriousRamsayClassBookGeneric,FuriousRamsayPillStrength"/>
+				<property name="Create_item" value="FuriousRamsayClassBookGeneric,FuriousRamsayPillStrength,FuriousRamsayHeadShadesStrength"/>
 				<property name="Create_item_count" value="1,1"/>
 			</property>
 		</item>
@@ -3761,7 +4223,7 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="open_backpack"/>
 				<property name="UseAnimation" value="false"/>
-				<property name="Create_item" value="FuriousRamsayClassBookGeneric,FuriousRamsayPillDexterity"/>
+				<property name="Create_item" value="FuriousRamsayClassBookGeneric,FuriousRamsayPillDexterity,FuriousRamsayHeadShadesDexterity"/>
 				<property name="Create_item_count" value="1,1"/>
 			</property>
 		</item>
@@ -3775,7 +4237,7 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="open_backpack"/>
 				<property name="UseAnimation" value="false"/>
-				<property name="Create_item" value="FuriousRamsayClassBookGeneric,FuriousRamsayPillConstitution"/>
+				<property name="Create_item" value="FuriousRamsayClassBookGeneric,FuriousRamsayPillConstitution,FuriousRamsayHeadShadesConstitution"/>
 				<property name="Create_item_count" value="1,1"/>
 			</property>
 		</item>
@@ -3789,7 +4251,7 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="open_backpack"/>
 				<property name="UseAnimation" value="false"/>
-				<property name="Create_item" value="FuriousRamsayClassBookGeneric,FuriousRamsayPillIntelligence"/>
+				<property name="Create_item" value="FuriousRamsayClassBookGeneric,FuriousRamsayPillIntelligence,FuriousRamsayHeadShadesIntelligence"/>
 				<property name="Create_item_count" value="1,1"/>
 			</property>
 		</item>
@@ -3803,7 +4265,7 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="open_backpack"/>
 				<property name="UseAnimation" value="false"/>
-				<property name="Create_item" value="FuriousRamsayClassBookGeneric,FuriousRamsayPillKnowledge"/>
+				<property name="Create_item" value="FuriousRamsayClassBookGeneric,FuriousRamsayPillKnowledge,FuriousRamsayHeadShadesKnowledge"/>
 				<property name="Create_item_count" value="1,1"/>
 			</property>
 		</item>
@@ -3817,7 +4279,7 @@
 				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="open_backpack"/>
 				<property name="UseAnimation" value="false"/>
-				<property name="Create_item" value="FuriousRamsayClassBookGeneric,FuriousRamsayPillCharisma"/>
+				<property name="Create_item" value="FuriousRamsayClassBookGeneric,FuriousRamsayPillCharisma,FuriousRamsayHeadShadesCharisma"/>
 				<property name="Create_item_count" value="1,1"/>
 			</property>
 		</item>
@@ -3951,6 +4413,21 @@
 				<property name="Create_item" value="FuriousRamsaySpawnSurvivalSpecialist,FuriousRamsaySpawnHunterTrainer,FuriousRamsaySpawnThugTrainer,FuriousRamsaySpawnButcherTrainer,FuriousRamsaySpawnSoldierTrainer,FuriousRamsaySpawnTechnogeekTrainer,FuriousRamsaySpawnMadmanTrainer,FuriousRamsaySpawnBuilderTrainer,FuriousRamsaySpawnChefTrainer"/>
 				<property name="Create_item_count" value="1,1,1,1,1,1,1,1,1,1"/>
 			</property>
+		</item>
+
+		<item name="FuriousRamsayRope">
+			<property name="CustomIcon" value="modGunBowPolymerString"/>
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#Other/Items?Crafting/plant_fibers.fbx"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Weight" value="3"/>
+			<property name="Material" value="MresourceYuccaFibers"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="FuelValue" value="5"/>
+			<property name="EconomicValue" value="5"/>
+			<property name="EconomicBundleSize" value="50"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Resources"/>
 		</item>
 
 	</append>
