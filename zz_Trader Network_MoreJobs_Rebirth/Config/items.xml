@@ -179,7 +179,7 @@
 	<setattribute xpath="/items/item[@name='foodVegetableStew']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='foodVegetableStew']/effect_group/triggered_effect[@cvar='$waterAmountAdd']" name="value">-3</setattribute>
 	<setattribute xpath="/items/item[@name='foodVegetableStew']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
-	<setattribute xpath="/items/item[@name='foodBaked	ato']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">2</setattribute>
+	<setattribute xpath="/items/item[@name='foodBakedPotato']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">2</setattribute>
 	<setattribute xpath="/items/item[@name='foodBakedPotato']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
 	<setattribute xpath="/items/item[@name='foodPumpkinBread']/effect_group/triggered_effect[@cvar='$foodAmountAdd']" name="value">4</setattribute>
 	<setattribute xpath="/items/item[@name='foodPumpkinBread']/effect_group/triggered_effect[@cvar='foodHealthAmount']" name="value">1</setattribute>
@@ -227,6 +227,282 @@
 	<setattribute xpath="/items/item[@name='gunBowT1WoodenBow']/property[@name='RepairTools']" name="value">FuriousRamsayScrapRepairKit</setattribute>
 	<setattribute xpath="/items/item[@name='meleeWpnSpearT1IronSpear']/property[@name='RepairTools']" name="value">FuriousRamsayScrapRepairKit</setattribute>
 	<setattribute xpath="/items/item[@name='meleeWpnKnucklesT1IronKnuckles']/property[@name='RepairTools']" name="value">FuriousRamsayScrapRepairKit</setattribute>
+
+	<!-- ADD CONSTITUTION XP TO DRUGS -->
+	<append xpath="/items/item[@name='medicalBandage']">
+		<effect_group name="FuriousRamsayIncreaseConstitutionXP" tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier1">
+				<requirement name="PlayerLevel" operation="GT" value="0"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier2">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier3">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier4">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier5">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessConstitutionAttribute"/>
+		</effect_group>	
+	</append>
+
+	<append xpath="/items/item[@name='foodHoney']">
+		<effect_group name="FuriousRamsayIncreaseConstitutionXP" tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier1">
+				<requirement name="PlayerLevel" operation="GT" value="0"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier2">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier3">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier4">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier5">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessConstitutionAttribute"/>
+		</effect_group>	
+	</append>
+
+	<append xpath="/items/item[@name='medicalAloeCream']">
+		<effect_group name="FuriousRamsayIncreaseConstitutionXP" tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier1">
+				<requirement name="PlayerLevel" operation="GT" value="0"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier2">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier3">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier4">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier5">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessConstitutionAttribute"/>
+		</effect_group>	
+	</append>
+
+	<append xpath="/items/item[@name='medicalSplint']">
+		<effect_group name="FuriousRamsayIncreaseConstitutionXP" tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier1">
+				<requirement name="PlayerLevel" operation="GT" value="0"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier2">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier3">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier4">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsLowTier5">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessConstitutionAttribute"/>
+		</effect_group>	
+	</append>
+
+	<append xpath="/items/item[@name='medicalFirstAidBandage']">
+		<effect_group name="FuriousRamsayIncreaseConstitutionXP" tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier1">
+				<requirement name="PlayerLevel" operation="GT" value="0"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier2">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier3">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier4">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier5">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessConstitutionAttribute"/>
+		</effect_group>	
+	</append>
+
+	<append xpath="/items/item[@name='medicalPlasterCast']">
+		<effect_group name="FuriousRamsayIncreaseConstitutionXP" tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier1">
+				<requirement name="PlayerLevel" operation="GT" value="0"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier2">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier3">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier4">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier5">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessConstitutionAttribute"/>
+		</effect_group>	
+	</append>
+
+	<append xpath="/items/item[@name='drugHerbalAntibiotics']">
+		<effect_group name="FuriousRamsayIncreaseConstitutionXP" tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier1">
+				<requirement name="PlayerLevel" operation="GT" value="0"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier2">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier3">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier4">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier5">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessConstitutionAttribute"/>
+		</effect_group>	
+	</append>
+
+	<append xpath="/items/item[@name='drugPainkillers']">
+		<effect_group name="FuriousRamsayIncreaseConstitutionXP" tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier1">
+				<requirement name="PlayerLevel" operation="GT" value="0"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier2">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier3">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier4">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsMediumTier5">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessConstitutionAttribute"/>
+		</effect_group>	
+	</append>
+
+	<append xpath="/items/item[@name='drugAntibiotics']">
+		<effect_group name="FuriousRamsayIncreaseConstitutionXP" tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsHighTier1">
+				<requirement name="PlayerLevel" operation="GT" value="0"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsHighTier2">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsHighTier3">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsHighTier4">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsHighTier5">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessConstitutionAttribute"/>
+		</effect_group>	
+	</append>
+
+	<append xpath="/items/item[@name='drugVitamins']">
+		<effect_group name="FuriousRamsayIncreaseConstitutionXP" tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsHighTier1">
+				<requirement name="PlayerLevel" operation="GT" value="0"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsHighTier2">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsHighTier3">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsHighTier4">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsHighTier5">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessConstitutionAttribute"/>
+		</effect_group>	
+	</append>
+
+	<append xpath="/items/item[@name='medicalFirstAidKit']">
+		<effect_group name="FuriousRamsayIncreaseConstitutionXP" tiered="false">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsHighTier1">
+				<requirement name="PlayerLevel" operation="GT" value="0"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsHighTier2">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier1"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier2"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsHighTier3">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier2"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier3"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsHighTier4">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier3"/>
+				<requirement name="PlayerLevel" operation="LTE" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayConstitutionUnitPerc" operation="add" value="@varFuriousRamsayIncreaseUseDrugsHighTier5">
+				<requirement name="PlayerLevel" operation="GT" value="@varFuriousRamsayPlayerLevelTier4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="FuriousRamsayProcessConstitutionAttribute"/>
+		</effect_group>	
+	</append>
 
 	<append xpath="/items">
 
