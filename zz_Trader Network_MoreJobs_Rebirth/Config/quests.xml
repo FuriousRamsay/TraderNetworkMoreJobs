@@ -4053,7 +4053,6 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="quest_FuriousRamsayHunterTraining_offer"/>
 			<property name="completiontype" value="AutoComplete"/>
 
@@ -4096,7 +4095,6 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="quest_FuriousRamsayThugTraining_offer"/>
 			<property name="completiontype" value="AutoComplete"/>
 
@@ -4137,7 +4135,6 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="quest_FuriousRamsayButcherTraining_offer"/>
 			<property name="completiontype" value="AutoComplete"/>
 
@@ -4178,7 +4175,6 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="quest_FuriousRamsaySoldierTraining_offer"/>
 			<property name="completiontype" value="AutoComplete"/>
 
@@ -4219,7 +4215,6 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="quest_FuriousRamsayTechnogeekTraining_offer"/>
 			<property name="completiontype" value="AutoComplete"/>
 
@@ -4260,7 +4255,6 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="quest_FuriousRamsayMadmanTraining_offer"/>
 			<property name="completiontype" value="AutoComplete"/>
 
@@ -4301,7 +4295,6 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="quest_FuriousRamsayBuilderTraining_offer"/>
 			<property name="completiontype" value="AutoComplete"/>
 
@@ -4342,7 +4335,6 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="quest_FuriousRamsayChefTraining_offer"/>
 			<property name="completiontype" value="AutoComplete"/>
 
@@ -4423,7 +4415,6 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="quest_FuriousRamsayPlaceSurvivalSpecialist_offer"/>
 			<property name="statement_key" value="quest_FuriousRamsayPlaceSurvivalSpecialist_statement"/>
 			<property name="response_key" value="quest_FuriousRamsayPlaceSurvivalSpecialist_response"/>
@@ -4467,6 +4458,25 @@
 			<reward type="Item" id="qc_FuriousRamsayStarterBackpackCharismaDig" ischosen="true" isfixed="true" value="1"/>
 		</quest>
 
+		<quest id="quest_FuriousRamsayClassInfo">
+			<property name="name_key" value="quest_FuriousRamsayClassInfo_subtitle"/>
+			<property name="subtitle_key" value="quest_FuriousRamsayClassInfo_subtitle"/>
+			<property name="description_key" value="quest_FuriousRamsayClassInfo_description"/>
+			<property name="icon" value="ui_game_symbol_quest"/>
+			<property name="repeatable" value="false"/>
+			<property name="shareable" value="false"/>
+			<property name="category_key" value="challenge"/>
+			<property name="difficulty" value="veryeasy"/>
+
+			<property name="completiontype" value="AutoComplete"/>
+
+			<action type="ShowTip" value="quest_FuriousRamsayClassBookInformation" phase="1">
+				<property name="delay" value="0.25"/>
+			</action>
+
+			<objective type="Time" value="0" phase="1"/>
+		</quest>
+		
 		<quest id="quest_FuriousRamsayStarterBackpackStrengthDig">
 			<property name="name_key" value="quest_FuriousRamsayStarterBackpackStrengthDig_subtitle"/>
 			<property name="subtitle_key" value="quest_FuriousRamsayStarterBackpackStrengthDig_subtitle"/>
@@ -4476,15 +4486,16 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 
 			<property name="completiontype" value="TurnIn"/>
 			<property name="offer_key" value="quest_FuriousRamsayStarterBackpackStrengthDig_offer"/>
 			<property name="completion_key" value="quest_FuriousRamsayStarterBackpackStrengthDig_completion"/>
 
-			<objective type="FetchKeep" id="resourceYuccaFibers" value="3" phase="1"/>
-			<objective type="FetchKeep" id="resourceRockSmall" value="3" phase="1"/>
-			<objective type="FetchKeep" id="resourceWood" value="5" phase="1"/>
+			<objective type="Craft">
+				<property name="phase" value="1"/>
+				<property name="item" value="FuriousRamsayRope"/>
+				<property name="count" value="1"/>
+			</objective>
 			<objective type="Craft">
 				<property name="phase" value="1"/>
 				<property name="item" value="meleeToolShovelT0StoneShovel"/>
@@ -4526,6 +4537,7 @@
 
 			<reward type="Exp" value="1000"/>
 			<reward type="Item" id="FuriousRamsayStarterBackpackStrength"/>	
+			<reward type="Quest" id="quest_FuriousRamsayClassInfo"/>	
 		</quest>
 		
 		<quest id="quest_FuriousRamsayStarterBackpackDexterityDig">
@@ -4537,15 +4549,16 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 
 			<property name="completiontype" value="TurnIn"/>
 			<property name="offer_key" value="quest_FuriousRamsayStarterBackpackDexterityDig_offer"/>
 			<property name="completion_key" value="quest_FuriousRamsayStarterBackpackDexterityDig_completion"/>
 
-			<objective type="FetchKeep" id="resourceYuccaFibers" value="3" phase="1"/>
-			<objective type="FetchKeep" id="resourceRockSmall" value="3" phase="1"/>
-			<objective type="FetchKeep" id="resourceWood" value="5" phase="1"/>
+			<objective type="Craft">
+				<property name="phase" value="1"/>
+				<property name="item" value="FuriousRamsayRope"/>
+				<property name="count" value="1"/>
+			</objective>
 			<objective type="Craft">
 				<property name="phase" value="1"/>
 				<property name="item" value="meleeToolShovelT0StoneShovel"/>
@@ -4587,6 +4600,7 @@
 
 			<reward type="Exp" value="1000"/>
 			<reward type="Item" id="FuriousRamsayStarterBackpackDexterity"/>
+			<reward type="Quest" id="quest_FuriousRamsayClassInfo"/>	
 		</quest>
 		
 		<quest id="quest_FuriousRamsayStarterBackpackConstitutionDig">
@@ -4598,15 +4612,16 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 
 			<property name="completiontype" value="TurnIn"/>
 			<property name="offer_key" value="quest_FuriousRamsayStarterBackpackConstitutionDig_offer"/>
 			<property name="completion_key" value="quest_FuriousRamsayStarterBackpackConstitutionDig_completion"/>
 
-			<objective type="FetchKeep" id="resourceYuccaFibers" value="3" phase="1"/>
-			<objective type="FetchKeep" id="resourceRockSmall" value="3" phase="1"/>
-			<objective type="FetchKeep" id="resourceWood" value="5" phase="1"/>
+			<objective type="Craft">
+				<property name="phase" value="1"/>
+				<property name="item" value="FuriousRamsayRope"/>
+				<property name="count" value="1"/>
+			</objective>
 			<objective type="Craft">
 				<property name="phase" value="1"/>
 				<property name="item" value="meleeToolShovelT0StoneShovel"/>
@@ -4648,6 +4663,7 @@
 
 			<reward type="Exp" value="1000"/>
 			<reward type="Item" id="FuriousRamsayStarterBackpackConstitution"/>
+			<reward type="Quest" id="quest_FuriousRamsayClassInfo"/>	
 		</quest>
 		
 		<quest id="quest_FuriousRamsayStarterBackpackIntelligenceDig">
@@ -4659,15 +4675,16 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 
 			<property name="completiontype" value="TurnIn"/>
 			<property name="offer_key" value="quest_FuriousRamsayStarterBackpackIntelligenceDig_offer"/>
 			<property name="completion_key" value="quest_FuriousRamsayStarterBackpackIntelligenceDig_completion"/>
 
-			<objective type="FetchKeep" id="resourceYuccaFibers" value="3" phase="1"/>
-			<objective type="FetchKeep" id="resourceRockSmall" value="3" phase="1"/>
-			<objective type="FetchKeep" id="resourceWood" value="5" phase="1"/>
+			<objective type="Craft">
+				<property name="phase" value="1"/>
+				<property name="item" value="FuriousRamsayRope"/>
+				<property name="count" value="1"/>
+			</objective>
 			<objective type="Craft">
 				<property name="phase" value="1"/>
 				<property name="item" value="meleeToolShovelT0StoneShovel"/>
@@ -4709,6 +4726,7 @@
 
 			<reward type="Exp" value="1000"/>
 			<reward type="Item" id="FuriousRamsayStarterBackpackIntelligence"/>
+			<reward type="Quest" id="quest_FuriousRamsayClassInfo"/>	
 		</quest>
 
 		<quest id="quest_FuriousRamsayStarterBackpackKnowledgeDig">
@@ -4720,15 +4738,16 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 
 			<property name="completiontype" value="TurnIn"/>
 			<property name="offer_key" value="quest_FuriousRamsayStarterBackpackKnowledgeDig_offer"/>
 			<property name="completion_key" value="quest_FuriousRamsayStarterBackpackKnowledgeDig_completion"/>
 
-			<objective type="FetchKeep" id="resourceYuccaFibers" value="3" phase="1"/>
-			<objective type="FetchKeep" id="resourceRockSmall" value="3" phase="1"/>
-			<objective type="FetchKeep" id="resourceWood" value="5" phase="1"/>
+			<objective type="Craft">
+				<property name="phase" value="1"/>
+				<property name="item" value="FuriousRamsayRope"/>
+				<property name="count" value="1"/>
+			</objective>
 			<objective type="Craft">
 				<property name="phase" value="1"/>
 				<property name="item" value="meleeToolShovelT0StoneShovel"/>
@@ -4770,6 +4789,7 @@
 
 			<reward type="Exp" value="1000"/>
 			<reward type="Item" id="FuriousRamsayStarterBackpackKnowledge"/>
+			<reward type="Quest" id="quest_FuriousRamsayClassInfo"/>	
 		</quest>
 
 		<quest id="quest_FuriousRamsayStarterBackpackCharismaDig">
@@ -4781,15 +4801,16 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 
 			<property name="completiontype" value="TurnIn"/>
 			<property name="offer_key" value="quest_FuriousRamsayStarterBackpackCharismaDig_offer"/>
 			<property name="completion_key" value="quest_FuriousRamsayStarterBackpackCharismaDig_completion"/>
 
-			<objective type="FetchKeep" id="resourceYuccaFibers" value="10" phase="1"/>
-			<objective type="FetchKeep" id="resourceRockSmall" value="10" phase="1"/>
-			<objective type="FetchKeep" id="resourceWood" value="10" phase="1"/>
+			<objective type="Craft">
+				<property name="phase" value="1"/>
+				<property name="item" value="FuriousRamsayRope"/>
+				<property name="count" value="1"/>
+			</objective>
 			<objective type="Craft">
 				<property name="phase" value="1"/>
 				<property name="item" value="meleeToolShovelT0StoneShovel"/>
@@ -4831,6 +4852,7 @@
 
 			<reward type="Exp" value="1000"/>
 			<reward type="Item" id="FuriousRamsayStarterBackpackCharisma"/>
+			<reward type="Quest" id="quest_FuriousRamsayClassInfo"/>	
 		</quest>
 		
 		<quest id="quest_FuriousRamsayTraderNetwork">
@@ -4842,7 +4864,6 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="quest_FuriousRamsayTraderNetwork_offer"/>
 			<property name="completiontype" value="AutoComplete"/>
 
@@ -4890,7 +4911,6 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="quest_FuriousRamsayTraderNetworkDig_offer"/>
 
 			<property name="completiontype" value="TurnIn"/>
@@ -4946,7 +4966,6 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 			<property name="completiontype" value="AutoComplete"/>
 			<property name="offer_key" value="quest_FuriousRamsayBoilWater_offer"/>
 
@@ -4976,7 +4995,6 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 			<property name="completiontype" value="AutoComplete"/>
 
 			<action type="TrackQuest"/>
@@ -5003,7 +5021,6 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="veryeasy"/>
-			<property name="difficulty_tier" value="1"/>
 			<property name="completiontype" value="AutoComplete"/>
 
 			<action type="TrackQuest"/>
@@ -5024,7 +5041,6 @@
 			<property name="shareable" value="false"/>
 			<property name="category_key" value="challenge"/>
 			<property name="difficulty" value="easy"/>
-			<property name="difficulty_tier" value="1"/>
 			<property name="offer_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_offer"/>
 			<property name="completion_key" value="spawn_FuriousRamsaySpawnSurvivalSpecialist1_completion"/>
 

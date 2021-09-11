@@ -960,22 +960,35 @@
 		</item>
 
 		<item name="FuriousRamsayGeneticsPerkTrainingMaster">
-			<property name="Extends" value="FuriousRamsayNoteMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="HoldType" value="73"/>
+			<property name="CustomIcon" value="questMaster"/>
 			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="Weight" value="0"/>
+			<property name="FuelValue" value="0"/>
+			<property name="Stacknumber" value="25"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Special Items,Mods"/>
 		</item>
 
 		<!-- STRENGTH PERKS -->
 		<item name="FuriousRamsayStrengthperkSexualTrex">
-			<property name="HoldType" value="73"/>
-			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value="skills"/>
 			<property name="CustomIconTint" value="118, 227, 129"/>
 			<property name="DescriptionKey" value="FuriousRamsayStrengthperkSexualTrexDesc"/>
-			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
-				<property name="UseAnimation" value="false"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSexualTrex" operation="LT" value="@varFuriousRamsayAttributeStrengthReq"/>
+					<property name="Class" value="Eat"/>
+					<property name="UseAnimation" value="true"/>
 			</property>
 			<effect_group name="FuriousRamsayProgression" tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkSexualTrex" operation="LT" value="10"/>
@@ -1014,16 +1027,18 @@
 		</item>
 
 		<item name="FuriousRamsayStrengthperkMiner69r">
-			<property name="HoldType" value="73"/>
-			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="CustomIconTint" value="99, 191, 109"/>
 			<property name="DescriptionKey" value="FuriousRamsayStrengthperkMiner69rDesc"/>
-			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
 			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
-				<property name="UseAnimation" value="false"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMiner69r" operation="LT" value="@varFuriousRamsayAttributeStrengthReq"/>
+					<property name="Class" value="Eat"/>
+					<property name="UseAnimation" value="false"/>
 			</property>
 			<effect_group name="FuriousRamsayProgression" tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkMiner69r" operation="LT" value="10"/>
@@ -1062,16 +1077,18 @@
 		</item>
 
 		<item name="FuriousRamsayStrengthperkMotherLode">
-			<property name="HoldType" value="73"/>
-			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="CustomIconTint" value="81, 156, 89"/>
 			<property name="DescriptionKey" value="FuriousRamsayStrengthperkMotherLodeDesc"/>
-			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
 			<property name="EconomicValue" value="1000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
-				<property name="UseAnimation" value="false"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkMotherLode" operation="LT" value="@varFuriousRamsayAttributeStrengthReq"/>
+					<property name="Class" value="Eat"/>
+					<property name="UseAnimation" value="false"/>
 			</property>
 			<effect_group name="FuriousRamsayProgression" tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkMotherLode" operation="LT" value="10"/>
@@ -1111,16 +1128,18 @@
 
 		<!-- DEXTERITY PERKS -->
 		<item name="FuriousRamsayDexterityperkRuleOneCardio">
-			<property name="HoldType" value="73"/>
-			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="CustomIconTint" value="209, 209, 105"/>
 			<property name="DescriptionKey" value="FuriousRamsayDexterityperkRuleOneCardioDesc"/>
-			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
 			<property name="EconomicValue" value="1500"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
-				<property name="UseAnimation" value="false"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRuleOneCardio" operation="LT" value="@varFuriousRamsayAttributeDexterityReq"/>
+					<property name="Class" value="Eat"/>
+					<property name="UseAnimation" value="false"/>
 			</property>
 			<effect_group name="FuriousRamsayProgression" tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkRuleOneCardio" operation="LT" value="10"/>
@@ -1159,16 +1178,18 @@
 		</item>
 
 		<item name="FuriousRamsayDexterityperkParkour">
-			<property name="HoldType" value="73"/>
-			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="CustomIconTint" value="173, 173, 87"/>
 			<property name="DescriptionKey" value="FuriousRamsayDexterityperkParkourDesc"/>
-			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
 			<property name="EconomicValue" value="1500"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
-				<property name="UseAnimation" value="false"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkParkour" operation="LT" value="@varFuriousRamsayAttributeDexterityReq"/>
+					<property name="Class" value="Eat"/>
+					<property name="UseAnimation" value="false"/>
 			</property>
 			<effect_group name="FuriousRamsayProgression" tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkParkour" operation="LT" value="10"/>
@@ -1207,16 +1228,18 @@
 		</item>
 
 		<item name="FuriousRamsayDexterityperkRunAndGun">
-			<property name="HoldType" value="73"/>
-			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="CustomIconTint" value="133, 133, 68"/>
 			<property name="DescriptionKey" value="FuriousRamsayDexterityperkRunAndGunDesc"/>
-			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
 			<property name="EconomicValue" value="1500"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
-				<property name="UseAnimation" value="false"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkRunAndGun" operation="LT" value="@varFuriousRamsayAttributeDexterityReq"/>
+					<property name="Class" value="Eat"/>
+					<property name="UseAnimation" value="false"/>
 			</property>
 			<effect_group name="FuriousRamsayProgression" tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkRunAndGun" operation="LT" value="10"/>
@@ -1256,16 +1279,18 @@
 
 		<!-- CONSTITUTION PERKS -->
 		<item name="FuriousRamsayConstitutionperkPackMule">
-			<property name="HoldType" value="73"/>
-			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="CustomIconTint" value="209, 107, 122"/>
 			<property name="DescriptionKey" value="FuriousRamsayConstitutionperkPackMuleDesc"/>
-			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
 			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
-				<property name="UseAnimation" value="false"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkPackMule" operation="LT" value="@varFuriousRamsayAttributeConstitutionReq"/>
+					<property name="Class" value="Eat"/>
+					<property name="UseAnimation" value="false"/>
 			</property>
 			<effect_group name="FuriousRamsayProgression" tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkPackMule" operation="LT" value="10"/>
@@ -1304,16 +1329,18 @@
 		</item>
 
 		<item name="FuriousRamsayConstitutionperkHealingFactor">
-			<property name="HoldType" value="73"/>
-			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="CustomIconTint" value="171, 87, 99"/>
 			<property name="DescriptionKey" value="FuriousRamsayConstitutionperkHealingFactorDesc"/>
-			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
 			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
-				<property name="UseAnimation" value="false"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkHealingFactor" operation="LT" value="@varFuriousRamsayAttributeConstitutionReq"/>
+					<property name="Class" value="Eat"/>
+					<property name="UseAnimation" value="false"/>
 			</property>
 			<effect_group name="FuriousRamsayProgression" tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkHealingFactor" operation="LT" value="10"/>
@@ -1352,16 +1379,18 @@
 		</item>
 
 		<item name="FuriousRamsayConstitutionperkSlowMetabolism">
-			<property name="HoldType" value="73"/>
-			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="CustomIconTint" value="133, 68, 77"/>
 			<property name="DescriptionKey" value="FuriousRamsayConstitutionperkSlowMetabolismDesc"/>
-			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
 			<property name="EconomicValue" value="1500"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
-				<property name="UseAnimation" value="false"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkSlowMetabolism" operation="LT" value="@varFuriousRamsayAttributeConstitutionReq"/>
+					<property name="Class" value="Eat"/>
+					<property name="UseAnimation" value="false"/>
 			</property>
 			<effect_group name="FuriousRamsayProgression" tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkSlowMetabolism" operation="LT" value="10"/>
@@ -1401,16 +1430,18 @@
 
 		<!-- INTELLIGENCE PERKS -->
 		<item name="FuriousRamsayIntelligenceperkLuckyLooter">
-			<property name="HoldType" value="73"/>
-			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="CustomIconTint" value="106, 128, 217"/>
 			<property name="DescriptionKey" value="FuriousRamsayIntelligenceperkLuckyLooterDesc"/>
-			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
 			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
-				<property name="UseAnimation" value="false"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkLuckyLooter" operation="LT" value="@varFuriousRamsayAttributeIntelligenceReq"/>
+					<property name="Class" value="Eat"/>
+					<property name="UseAnimation" value="false"/>
 			</property>
 			<effect_group name="FuriousRamsayProgression" tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkLuckyLooter" operation="LT" value="5"/>
@@ -1434,16 +1465,18 @@
 		</item>
 
 		<item name="FuriousRamsayIntelligenceperkLockPicking">
-			<property name="HoldType" value="73"/>
-			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="CustomIconTint" value="87, 106, 179"/>
 			<property name="DescriptionKey" value="FuriousRamsayIntelligenceperkLockPickingDesc"/>
-			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
 			<property name="EconomicValue" value="500"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
-				<property name="UseAnimation" value="false"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkLockPicking" operation="LT" value="@varFuriousRamsayAttributeIntelligenceReq"/>
+					<property name="Class" value="Eat"/>
+					<property name="UseAnimation" value="false"/>
 			</property>
 			<effect_group name="FuriousRamsayProgression" tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkLockPicking" operation="LT" value="3"/>
@@ -1461,16 +1494,18 @@
 		</item>
 
 		<item name="FuriousRamsayIntelligenceperkTreasureHunter">
-			<property name="HoldType" value="73"/>
-			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="CustomIconTint" value="69, 83, 140"/>
 			<property name="DescriptionKey" value="FuriousRamsayIntelligenceperkTreasureHunterDesc"/>
-			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
 			<property name="EconomicValue" value="500"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
-				<property name="UseAnimation" value="false"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkTreasureHunter" operation="LT" value="@varFuriousRamsayAttributeIntelligenceReq"/>
+					<property name="Class" value="Eat"/>
+					<property name="UseAnimation" value="false"/>
 			</property>
 			<effect_group name="FuriousRamsayProgression" tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkTreasureHunter" operation="LT" value="3"/>
@@ -1489,16 +1524,18 @@
 
 		<!-- KNOWLEDGE PERKS -->
 		<item name="FuriousRamsayKnowledgeperkGreaseMonkey">
-			<property name="HoldType" value="73"/>
-			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="CustomIconTint" value="179, 120, 222"/>
 			<property name="DescriptionKey" value="FuriousRamsayKnowledgeperkGreaseMonkeyDesc"/>
-			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
 			<property name="EconomicValue" value="3000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
-				<property name="UseAnimation" value="false"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkGreaseMonkey" operation="LT" value="@varFuriousRamsayAttributeKnowledgeReq"/>
+					<property name="Class" value="Eat"/>
+					<property name="UseAnimation" value="false"/>
 			</property>
 			<effect_group name="FuriousRamsayProgression" tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkGreaseMonkey" operation="LT" value="5"/>
@@ -1523,16 +1560,18 @@
 
 		<!-- CHARISMA PERKS -->
 		<item name="FuriousRamsayCharismaperkDaringAdventurer">
-			<property name="HoldType" value="73"/>
-			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="CustomIconTint" value="224, 128, 208"/>
 			<property name="DescriptionKey" value="FuriousRamsayCharismaperkDaringAdventurerDesc"/>
-			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
 			<property name="EconomicValue" value="2000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
-				<property name="UseAnimation" value="false"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkDaringAdventurer" operation="LT" value="@varFuriousRamsayAttributeCharismaReq"/>
+					<property name="Class" value="Eat"/>
+					<property name="UseAnimation" value="false"/>
 			</property>
 			<effect_group name="FuriousRamsayProgression" tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkDaringAdventurer" operation="LT" value="4"/>
@@ -1553,16 +1592,18 @@
 		</item>
 
 		<item name="FuriousRamsayCharismaperkBetterBarter">
-			<property name="HoldType" value="73"/>
-			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="CustomIconTint" value="189, 108, 175"/>
 			<property name="DescriptionKey" value="FuriousRamsayCharismaperkBetterBarterDesc"/>
-			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
 			<property name="EconomicValue" value="1000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
-				<property name="UseAnimation" value="false"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkBetterBarter" operation="LT" value="@varFuriousRamsayAttributeCharismaReq"/>
+					<property name="Class" value="Eat"/>
+					<property name="UseAnimation" value="false"/>
 			</property>
 			<effect_group name="FuriousRamsayProgression" tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkBetterBarter" operation="LT" value="5"/>
@@ -1586,16 +1627,18 @@
 		</item>
 
 		<item name="FuriousRamsayCharismaperkCharismaticNature">
-			<property name="HoldType" value="73"/>
-			<property name="HoldingItemHidden" value="true"/>
+			<property name="CustomIcon" value="questMaster"/>
+			<property name="ItemTypeIcon" value="skills"/>
+			<property name="Extends" value="FuriousRamsayChallengeQuestMaster"/>
 			<property name="CustomIconTint" value="153, 87, 142"/>
 			<property name="DescriptionKey" value="FuriousRamsayCharismaperkCharismaticNatureDesc"/>
-			<property name="Extends" value="FuriousRamsayGeneticsPerkTrainingMaster"/>
 			<property name="EconomicValue" value="1000"/>
 			<property name="Candrop" value="true"/>
 			<property name="SellableToTrader" value="false"/>
 			<property class="Action0">
-				<property name="UseAnimation" value="false"/>
+				<requirement name="CVarCompare" cvar="varFuriousRamsayLVLperkCharismaticNature" operation="LT" value="@varFuriousRamsayAttributeCharismaReq"/>
+					<property name="Class" value="Eat"/>
+					<property name="UseAnimation" value="false"/>
 			</property>
 			<effect_group name="FuriousRamsayProgression" tiered="false">
 				<requirement name="ProgressionLevel" progression_name="perkCharismaticNature" operation="LT" value="5"/>
@@ -3708,29 +3751,29 @@
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExpLvl10Max" operation="set" value="999"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeSoldierExp" operation="set" value="@varFuriousRamsayAttributeSoldierExpLvl2Min"/>
 
-					<!-- KNUCKLES -->
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesNext" operation="set" value="1"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl1Min" operation="set" value="100"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl2Min" operation="set" value="200"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl3Min" operation="set" value="300"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl4Min" operation="set" value="400"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl5Min" operation="set" value="500"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl6Min" operation="set" value="600"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl7Min" operation="set" value="700"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl8Min" operation="set" value="800"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl9Min" operation="set" value="900"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl10Min" operation="set" value="1000"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl1Max" operation="set" value="199"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpMax" operation="set" value="@varFuriousRamsayPerkKnucklesExpLvl1Max"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl2Max" operation="set" value="299"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl3Max" operation="set" value="399"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl4Max" operation="set" value="499"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl5Max" operation="set" value="599"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl6Max" operation="set" value="699"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl7Max" operation="set" value="799"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl8Max" operation="set" value="899"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl9Max" operation="set" value="999"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl10Max" operation="set" value="1099"/>			
+					<!-- AXES -->
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeNext" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl1Min" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl2Min" operation="set" value="200"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl3Min" operation="set" value="300"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl4Min" operation="set" value="400"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl5Min" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl6Min" operation="set" value="600"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl7Min" operation="set" value="700"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl8Min" operation="set" value="800"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl9Min" operation="set" value="900"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl10Min" operation="set" value="1000"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl1Max" operation="set" value="199"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpMax" operation="set" value="@varFuriousRamsayPerkAxeExpLvl1Max"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl2Max" operation="set" value="299"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl3Max" operation="set" value="399"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl4Max" operation="set" value="499"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl5Max" operation="set" value="599"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl6Max" operation="set" value="699"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl7Max" operation="set" value="799"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl8Max" operation="set" value="899"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl9Max" operation="set" value="999"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl10Max" operation="set" value="1099"/>			
 
 					<!-- MARKSMAN RIFLE -->
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkMarksmanRifleNext" operation="set" value="1"/>
@@ -4008,29 +4051,29 @@
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExpLvl10Max" operation="set" value="999"/>
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayAttributeMadmanExp" operation="set" value="@varFuriousRamsayAttributeMadmanExpLvl2Min"/>
 
-					<!-- AXES -->
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeNext" operation="set" value="1"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl1Min" operation="set" value="100"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl2Min" operation="set" value="200"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl3Min" operation="set" value="300"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl4Min" operation="set" value="400"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl5Min" operation="set" value="500"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl6Min" operation="set" value="600"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl7Min" operation="set" value="700"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl8Min" operation="set" value="800"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl9Min" operation="set" value="900"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl10Min" operation="set" value="1000"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl1Max" operation="set" value="199"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpMax" operation="set" value="@varFuriousRamsayPerkAxeExpLvl1Max"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl2Max" operation="set" value="299"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl3Max" operation="set" value="399"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl4Max" operation="set" value="499"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl5Max" operation="set" value="599"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl6Max" operation="set" value="699"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl7Max" operation="set" value="799"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl8Max" operation="set" value="899"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl9Max" operation="set" value="999"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeExpLvl10Max" operation="set" value="1099"/>			
+					<!-- KNUCKLES -->
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesNext" operation="set" value="1"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl1Min" operation="set" value="100"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl2Min" operation="set" value="200"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl3Min" operation="set" value="300"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl4Min" operation="set" value="400"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl5Min" operation="set" value="500"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl6Min" operation="set" value="600"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl7Min" operation="set" value="700"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl8Min" operation="set" value="800"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl9Min" operation="set" value="900"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl10Min" operation="set" value="1000"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl1Max" operation="set" value="199"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpMax" operation="set" value="@varFuriousRamsayPerkKnucklesExpLvl1Max"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl2Max" operation="set" value="299"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl3Max" operation="set" value="399"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl4Max" operation="set" value="499"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl5Max" operation="set" value="599"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl6Max" operation="set" value="699"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl7Max" operation="set" value="799"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl8Max" operation="set" value="899"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl9Max" operation="set" value="999"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesExpLvl10Max" operation="set" value="1099"/>			
 
 					<!-- EXPLOSIVES -->
 					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="varFuriousRamsayPerkExplosiveNext" operation="set" value="1"/>
