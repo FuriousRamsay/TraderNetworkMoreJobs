@@ -12077,106 +12077,106 @@
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="self" buff="FuriousRamsayAddAttributeMadman"/>
 				</effect_group>
 		<!-- PERKS -->
-			<!-- AXES -->
-				<effect_group name="FuriousRamsayPerkAxeExpLvl1">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxeExp" operation="GTE" value="@varFuriousRamsayPerkAxeExpLvl1Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="Equals" value="0"/>
+			<!-- KNUCKLES -->
+				<effect_group name="FuriousRamsayPerkKnucklesExpLvl1">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnucklesExp" operation="GTE" value="@varFuriousRamsayPerkKnucklesExpLvl1Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnuckles" operation="Equals" value="0"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now an [/I] [aceefc]INITIATE[-] [I]with[/I] [f26161]Axes[-]"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxe" operation="set" value="1"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeNext" operation="set" value="2"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkAxe" level="1"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now an [/I] [aceefc]INITIATE[-] [I]with[/I] [f26161]Knuckles[-]"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnuckles" operation="set" value="1"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesNext" operation="set" value="2"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkKnuckles" level="1"/>
 				</effect_group>
-				<effect_group name="FuriousRamsayPerkAxeExpLvl2">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxeExp" operation="GTE" value="@varFuriousRamsayPerkAxeExpLvl2Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="Equals" value="1"/>
+				<effect_group name="FuriousRamsayPerkKnucklesExpLvl2">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnucklesExp" operation="GTE" value="@varFuriousRamsayPerkKnucklesExpLvl2Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnuckles" operation="Equals" value="1"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now a [/I] [9febfc]NOVICE[-] [I]with[/I] [f26161]Axes[-]"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxe" operation="set" value="2"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeNext" operation="set" value="3"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkAxe" level="2"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now a [/I] [9febfc]NOVICE[-] [I]with[/I] [f26161]Knuckles[-]"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnuckles" operation="set" value="2"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesNext" operation="set" value="3"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkKnuckles" level="2"/>
 				</effect_group>
-				<effect_group name="FuriousRamsayPerkAxeExpLvl3">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxeExp" operation="GTE" value="@varFuriousRamsayPerkAxeExpLvl3Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="Equals" value="2"/>
+				<effect_group name="FuriousRamsayPerkKnucklesExpLvl3">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnucklesExp" operation="GTE" value="@varFuriousRamsayPerkKnucklesExpLvl3Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnuckles" operation="Equals" value="2"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now [/I] [90e8fc]COMPETENT[-] [I]with[/I] [f26161]Axes[-]"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxe" operation="set" value="3"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeNext" operation="set" value="4"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkAxe" level="3"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now [/I] [90e8fc]COMPETENT[-] [I]with[/I] [f26161]Knuckles[-]"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnuckles" operation="set" value="3"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesNext" operation="set" value="4"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkKnuckles" level="3"/>
 				</effect_group>
-				<effect_group name="FuriousRamsayPerkAxeExpLvl4">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxeExp" operation="GTE" value="@varFuriousRamsayPerkAxeExpLvl4Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="Equals" value="3"/>
+				<effect_group name="FuriousRamsayPerkKnucklesExpLvl4">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnucklesExp" operation="GTE" value="@varFuriousRamsayPerkKnucklesExpLvl4Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnuckles" operation="Equals" value="3"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now [/I] [83e5fc]TALENTED[-] [I]with[/I] [f26161]Axes[-]"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxe" operation="set" value="4"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeNext" operation="set" value="5"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkAxe" level="4"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now [/I] [83e5fc]TALENTED[-] [I]with[/I] [f26161]Knuckles[-]"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnuckles" operation="set" value="4"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesNext" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkKnuckles" level="4"/>
 				</effect_group>
-				<effect_group name="FuriousRamsayPerkAxeExpLvl5">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxeExp" operation="GTE" value="@varFuriousRamsayPerkAxeExpLvl5Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="Equals" value="4"/>
+				<effect_group name="FuriousRamsayPerkKnucklesExpLvl5">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnucklesExp" operation="GTE" value="@varFuriousRamsayPerkKnucklesExpLvl5Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnuckles" operation="Equals" value="4"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now [/I] [77e2fc]SKILLED[-] [I]with[/I] [f26161]Axes[-]"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxe" operation="set" value="5"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeNext" operation="set" value="6"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkAxe" level="5"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now [/I] [77e2fc]SKILLED[-] [I]with[/I] [f26161]Knuckles[-]"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnuckles" operation="set" value="5"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesNext" operation="set" value="6"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkKnuckles" level="5"/>
 				</effect_group>
-				<effect_group name="FuriousRamsayPerkAxeExpLvl6">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxeExp" operation="GTE" value="@varFuriousRamsayPerkAxeExpLvl6Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="Equals" value="5"/>
+				<effect_group name="FuriousRamsayPerkKnucklesExpLvl6">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnucklesExp" operation="GTE" value="@varFuriousRamsayPerkKnucklesExpLvl6Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnuckles" operation="Equals" value="5"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now [/I] [6adffc]SEASONED[-] [I]with[/I] [f26161]Axes[-]"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxe" operation="set" value="6"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeNext" operation="set" value="7"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkAxe" level="6"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now [/I] [6adffc]SEASONED[-] [I]with[/I] [f26161]Knuckles[-]"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnuckles" operation="set" value="6"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesNext" operation="set" value="7"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkKnuckles" level="6"/>
 				</effect_group>
-				<effect_group name="FuriousRamsayPerkAxeExpLvl7">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxeExp" operation="GTE" value="@varFuriousRamsayPerkAxeExpLvl7Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="Equals" value="6"/>
+				<effect_group name="FuriousRamsayPerkKnucklesExpLvl7">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnucklesExp" operation="GTE" value="@varFuriousRamsayPerkKnucklesExpLvl7Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnuckles" operation="Equals" value="6"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now [/I] [5edfff]PROFICIENT[-] [I]with[/I] [f26161]Axes[-]"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxe" operation="set" value="7"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeNext" operation="set" value="8"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkAxe" level="7"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now [/I] [5edfff]PROFICIENT[-] [I]with[/I] [f26161]Knuckles[-]"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnuckles" operation="set" value="7"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesNext" operation="set" value="8"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkKnuckles" level="7"/>
 				</effect_group>
-				<effect_group name="FuriousRamsayPerkAxeExpLvl8">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxeExp" operation="GTE" value="@varFuriousRamsayPerkAxeExpLvl8Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="Equals" value="7"/>
+				<effect_group name="FuriousRamsayPerkKnucklesExpLvl8">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnucklesExp" operation="GTE" value="@varFuriousRamsayPerkKnucklesExpLvl8Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnuckles" operation="Equals" value="7"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now [/I] [51dafc]ADVANCED[-] [I]with[/I] [f26161]Axes[-]"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxe" operation="set" value="8"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeNext" operation="set" value="9"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkAxe" level="8"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now [/I] [51dafc]ADVANCED[-] [I]with[/I] [f26161]Knuckles[-]"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnuckles" operation="set" value="8"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesNext" operation="set" value="9"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkKnuckles" level="8"/>
 				</effect_group>
-				<effect_group name="FuriousRamsayPerkAxeExpLvl9">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxeExp" operation="GTE" value="@varFuriousRamsayPerkAxeExpLvl9Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="Equals" value="8"/>
+				<effect_group name="FuriousRamsayPerkKnucklesExpLvl9">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnucklesExp" operation="GTE" value="@varFuriousRamsayPerkKnucklesExpLvl9Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnuckles" operation="Equals" value="8"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now an [/I] [42d7fc]EXPERT[-] [I]with[/I] [f26161]Axes[-]"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxe" operation="set" value="9"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeNext" operation="set" value="10"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkAxe" level="9"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now an [/I] [42d7fc]EXPERT[-] [I]with[/I] [f26161]Knuckles[-]"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnuckles" operation="set" value="9"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesNext" operation="set" value="10"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkKnuckles" level="9"/>
 				</effect_group>
-				<effect_group name="FuriousRamsayPerkAxeExpLvl10">
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxeExp" operation="GTE" value="@varFuriousRamsayPerkAxeExpLvl10Min"/>
-					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="Equals" value="9"/>
+				<effect_group name="FuriousRamsayPerkKnucklesExpLvl10">
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnucklesExp" operation="GTE" value="@varFuriousRamsayPerkKnucklesExpLvl10Min"/>
+					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkKnuckles" operation="Equals" value="9"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeMadmanClass" operation="Equals" value="1"/>
 						<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundPerkLevel"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now a [/I] [36d7ff]MASTER[-] [I]with[/I] [f26161]Axes[-]"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxe" operation="set" value="10"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkAxeNext" operation="set" value="10"/>
-						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkAxe" level="10"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ShowToolbeltMessage" message="[I]You are now a [/I] [36d7ff]MASTER[-] [I]with[/I] [f26161]Knuckles[-]"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnuckles" operation="set" value="10"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="varFuriousRamsayPerkKnucklesNext" operation="set" value="10"/>
+						<triggered_effect trigger="onSelfBuffUpdate" action="SetProgressionLevel" progression_name="FuriousRamsayPerkKnuckles" level="10"/>
 				</effect_group>
 			<!-- EXPLOSIVES -->
 				<effect_group name="FuriousRamsayPerkExplosiveExpLvl1">
@@ -16256,7 +16256,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="GTE" value="@varFuriousRamsayAttributeSoldier"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeSoldierExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeSoldierExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadAttribute"/>
 				</effect_group>
@@ -16267,7 +16267,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="GTE" value="@varFuriousRamsayAttributeSoldier"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayAttributeSoldierExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillAttribute"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayAttributeSoldierExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageAttribute"/>
 				</effect_group>
@@ -16279,7 +16279,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl1"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl1"/>
 				</effect_group>
@@ -16289,7 +16289,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl2"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl2"/>
 				</effect_group>
@@ -16299,7 +16299,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl3"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl3"/>
 				</effect_group>
@@ -16309,7 +16309,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl4"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl4"/>
 				</effect_group>
@@ -16319,7 +16319,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl5"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl5"/>
 				</effect_group>
@@ -16329,7 +16329,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl6"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl6"/>
 				</effect_group>
@@ -16339,7 +16339,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl7"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl7"/>
 				</effect_group>
@@ -16349,7 +16349,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl8"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl8"/>
 				</effect_group>
@@ -16359,7 +16359,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl9"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl9"/>
 				</effect_group>
@@ -16369,7 +16369,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl10"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl10"/>
 				</effect_group>
@@ -16380,7 +16380,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl1"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl1"/>
 				</effect_group>
@@ -16390,7 +16390,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl2"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl2"/>
 				</effect_group>
@@ -16400,7 +16400,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl3"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl3"/>
 				</effect_group>
@@ -16410,7 +16410,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl4"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl4"/>
 				</effect_group>
@@ -16420,7 +16420,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl5"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl5"/>
 				</effect_group>
@@ -16430,7 +16430,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl6"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl6"/>
 				</effect_group>
@@ -16440,7 +16440,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl7"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl7"/>
 				</effect_group>
@@ -16450,7 +16450,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl8"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl8"/>
 				</effect_group>
@@ -16460,7 +16460,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl9"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl9"/>
 				</effect_group>
@@ -16470,7 +16470,7 @@
 					<requirement name="CVarCompare" cvar="varFuriousRamsayPerkAxe" operation="LTE" value="@.varFuriousRamsayAttributeSoldierTemp"/>
 					<requirement name="CVarCompare" cvar="varFuriousRamsayAttributeSoldierClass" operation="Equals" value="1"/>
 					<requirement name="!HitLocation" body_parts="Head"/>
-					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxe"/>
+					<requirement name="HoldingItemHasTags" tags="FuriousRamsayAxes"/>
 						<triggered_effect trigger="onSelfDamagedOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceDamageHeadLvl10"/>
 						<triggered_effect trigger="onSelfKilledOther" cvar="varFuriousRamsayPerkAxeExp" action="ModifyCVar" operation="add" value="@varFuriousRamsayExperienceKillHeadLvl10"/>
 				</effect_group>
@@ -22137,24 +22137,17 @@
 		
 
 			<effect_group name="FuriousRamsayDebug">
-				<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeMadmanClass"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeMadman"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkKnuckles"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkKnucklesExp"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeSoldierClass"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeSoldier"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkAxe"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkAxeExp"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayExpLvl"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkKnucklesExpLvl1Min"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkKnucklesExpLvl1Max"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkKnucklesExpLvl2Max"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkAxeExpLvl1Min"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkAxeExpLvl1Max"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkAxeExpLvl2Max"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerk1UnitPerc"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkKnucklesExpPercLvl2"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayExpProgress"/>-->
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeStrengthReq"/>
-				<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeDexterityReq"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeConstitutionReq"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeIntelligenceReq"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeKnowledgeReq"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeCharismaReq"/>-->
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayLVLperkSexualTrex"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkAxeExpPercLvl2"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayExpProgress"/>
 			</effect_group>
 
 			<effect_group name="FuriousRamsayAchievements">
