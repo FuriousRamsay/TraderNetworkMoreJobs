@@ -21,11 +21,20 @@
 		</entity_class>
 
 		<entity_class name="FuriousRamsayNPCSurvivalSpecialist1" extends="FuriousRamsayNPCSurvivalSpecialistMaster">
+			<property name="Archetype" value="FuriousRamsaySurvivalSpecialist1"/>
 			<property name="NPCID" value="FuriousRamsaySurvivalSpecialist1"/>
+
+			<effect_group name="FuriousRamsayVoiceovers">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundBriston1HeyStrangerOverHere"/>
+			</effect_group>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayNPCSurvivalSpecialist" extends="FuriousRamsayNPCSurvivalSpecialistMaster">
 			<property name="NPCID" value="FuriousRamsaySurvivalSpecialist"/>
+
+			<effect_group name="FuriousRamsayVoiceovers">
+				<!--<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="VerifyFuriousRamsayPlaySoundBristonNewPlace"/>--> <!-- TRIGGERS EVERYTIME YOU GET INTO THE GAME IN SINGLE PLAYER AT LEAST -->
+			</effect_group>
 		</entity_class>
 
 		<entity_class name="FuriousRamsayZombieArlene" extends="zombieArlene">

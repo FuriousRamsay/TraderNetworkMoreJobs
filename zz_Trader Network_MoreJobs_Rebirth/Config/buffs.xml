@@ -21852,6 +21852,22 @@
 				</effect_group>
 			</buff>
 
+			<buff name="VerifyFuriousRamsayPlaySoundBriston1HeyStrangerOverHere" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="PlaySound">
+					<triggered_effect trigger="onSelfBuffFinish" action="PlaySound" sound="trader_briston1_heystranger_overhere"/>
+				</effect_group>
+			</buff>
+
+			<buff name="VerifyFuriousRamsayPlaySoundBristonNewPlace" hidden="true">	
+				<stack_type value="replace"/>
+				<duration value="1"/>
+				<effect_group name="PlaySound">
+					<triggered_effect trigger="onSelfBuffFinish" action="PlaySound" sound="trader_briston_newplace"/>
+				</effect_group>
+			</buff>
+
 			<!--<buff name="FuriousRamsayActionsLootingLindaBackpack" hidden="true">
 				<duration value="30"/>
 				<update_rate value="5"/>
@@ -22137,7 +22153,7 @@
 		
 
 			<effect_group name="FuriousRamsayDebug">
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeSoldierClass"/>
+				<!--<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeSoldierClass"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayAttributeSoldier"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkAxe"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkAxeExp"/>
@@ -22147,7 +22163,7 @@
 				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkAxeExpLvl2Max"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerk1UnitPerc"/>
 				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayPerkAxeExpPercLvl2"/>
-				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayExpProgress"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="CVarLogValue" cvar="varFuriousRamsayExpProgress"/>-->
 			</effect_group>
 
 			<effect_group name="FuriousRamsayAchievements">
