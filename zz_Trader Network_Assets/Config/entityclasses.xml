@@ -650,12 +650,72 @@
 
 		</entity_class>
 
-		<!--<entity_class name="FuriousRamsayAndroidModel" extends="humanMeleeMaleSurvivorTemplate"> -->
-			<!--<property name="Tags" value="entity,male,robot,melee"/>-->
-		<entity_class name="FuriousRamsayAndroidModel" extends="humanMeleeFemaleBanditTemplate"> 
-			<property name="Tags" value="entity,female,human,bandit,melee"/>
+		<entity_class name="FuriousRamsayAndroidModel" extends="humanMeleeMaleSurvivorTemplate">
+			<property name="SizeScale" value="1.2"/>
+			<property name="Tags" value="entity,male,robot,melee"/>
 			<property name="Faction" value="bandits"/>
-			<property name="Mesh" value="#@modfolder:Resources/FR_Robots.unity3d?HumanBot_Skinned_A_Simple"/>
+			<property name="Mesh" value="#@modfolder:Resources/FR_Robots.unity3d?MedicalAndroid_FR"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="ParticleOnDeath" value="blockdestroy_metal"/>
+
+			<property name="SoundAlertTime" value="10"/>
+			<property name="SoundRandomTime" value="20"/>
+			<property name="SoundRandom" value="trader_medicaldroid_random"/>
+			<property name="SoundAlert" value="trader_medicaldroid_alert"/>
+			<property name="SoundSense" value="trader_medicaldroid_sense"/>
+			<property name="SoundAttack" value="trader_medicaldroid_attack"/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundHurt" value="trader_medicaldroid_hurt"/>
+			<property name="SoundHurtSmall" value="trader_medicaldroid_hurtsmall"/>
+
+			<property name="SoundStamina" value=""/>
+			<property name="SoundDrownPain" value=""/>
+			<property name="SoundWaterSurface" value=""/>
+			<property name="SoundDrownDeath" value=""/>
+			<property name="SoundJump" value=""/>
+			<property name="SoundLandSoft" value=""/>
+			<property name="SoundLandHard" value=""/>
+			<property name="SoundPlayerLandThump" value=""/>
+			<property name="SoundSleeperSense" value=""/>
+			<property name="SoundSleeperBackToSleep" value=""/>
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AnimatorSetInt" property="IsHuman" value="2" duration="1" />
+			</effect_group>
+
+		</entity_class>
+
+		<entity_class name="FuriousRamsayMedicalAndroidTrader" extends="humanMeleeMaleTraderTemplate">
+			<property name="SizeScale" value="1.2"/>
+			<property name="Tags" value="entity,npc,robot,trader"/>
+			<property name="Mesh" value="#@modfolder:Resources/FR_Robots.unity3d?MedicalAndroid_FR"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="ParticleOnDeath" value="blockdestroy_metal"/>
+			<property name="NPCID" value="FuriousRamsayMedicalAndroid"/>
+
+			<property name="AITask-1" value=""/>
+			<property name="AITarget-1" value=""/>
+
+			<property name="SoundAlertTime" value="30"/>
+			<property name="SoundRandomTime" value="30"/>
+			<property name="SoundRandom" value="trader_medicaldroid_idle"/>
+			<property name="SoundAlert" value="trader_medicaldroid_alert"/>
+			<property name="SoundSense" value="trader_medicaldroid_sense"/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundHurtSmall" value=""/>
+
+			<property name="SoundStamina" value=""/>
+			<property name="SoundDrownPain" value=""/>
+			<property name="SoundWaterSurface" value=""/>
+			<property name="SoundDrownDeath" value=""/>
+			<property name="SoundJump" value=""/>
+			<property name="SoundLandSoft" value=""/>
+			<property name="SoundLandHard" value=""/>
+			<property name="SoundPlayerLandThump" value=""/>
+			<property name="SoundSleeperSense" value=""/>
+			<property name="SoundSleeperBackToSleep" value=""/>
 
 			<effect_group name="Base Effects">
 				<triggered_effect trigger="onSelfFirstSpawn" action="AnimatorSetInt" property="IsHuman" value="2" duration="1" />

@@ -352,6 +352,20 @@
 			<item name="FuriousRamsaySpawnSurvivalSpecialist" count="1" prob="1"/>
 		</trader_item_group>
 
+		<trader_item_group name="FuriousRamsayMedicalDroidMedecine">
+			<item name="drugPainkillers" prob="1"/>
+			<item name="medicalFirstAidBandage" prob="1"/>
+			<item name="medicalSplint" prob="1"/>
+			<item name="drugVitamins" prob="1"/>
+			<item name="medicalPlasterCast" prob="1"/>
+			<item name="medicalFirstAidKit" prob="1"/>
+			<item name="medicalBandage" prob="1"/>
+			<item name="medicalAloeCream" prob="1"/>
+			<item name="medicalBloodBag" prob="1"/>
+			<item name="drugHerbalAntibiotics" prob="1"/>
+			<item name="drugAntibiotics" prob="1"/>
+		</trader_item_group>
+
 	</append>
 
 	<append xpath="/traders">
@@ -436,6 +450,13 @@
 		<trader_info id="78" full_reset="true" min_inventory="10" max_inventory="10" min_items_swapped="10" max_items_swapped="10" reset_interval="1" open_time="0:00" close_time="0:00">
 			<trader_items count="all">
 				<item group="FuriousRamsayChefTrainerItems" count="1,2"/>
+			</trader_items>
+		</trader_info>
+
+		<!-- MEDICAL DROID -->
+		<trader_info id="79" full_reset="true" override_buy_markup="2" min_inventory="10" max_inventory="10" min_items_swapped="10" max_items_swapped="10" reset_interval="1" open_time="0:00" close_time="0:00">
+			<trader_items count="all">
+				<item group="FuriousRamsayMedicalDroidMedecine"/>
 			</trader_items>
 		</trader_info>
 

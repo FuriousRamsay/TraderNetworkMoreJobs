@@ -2,6 +2,24 @@
 
 	<append xpath="/dialogs" >
 
+		<dialog id="FuriousRamsayMedicalAndroid" startstatementid="startStatement">
+			<!-- Statements -->
+			<statement id="startStatement" text="dialog_FuriousRamsayMedicalAndroid_statement_start">
+				<response_entry id="shopResponse" />
+				<response_entry id="doneResponse" />
+			</statement>
+			
+			<!-- Responses -->
+			<response id="shopResponse" text="dialog_trader_response_shop">
+				<action type="Trader" id="trade" />
+			</response>
+		
+			<response id="nevermindResponse" text="dialog_trader_response_nevermind" nextstatementid="startStatement" />
+			
+			<response id="doneResponse" text="dialog_trader_response_nevermind" />
+		
+		</dialog>
+
 		<dialog id="FuriousRamsaySurvivalSpecialist" startstatementid="startStatement">
 			<!-- Statements -->
 			<statement id="startStatement" text="dialog_FuriousRamsaySurvivalSpecialist_statement_start">
