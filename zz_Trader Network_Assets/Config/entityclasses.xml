@@ -421,9 +421,9 @@
 			<property name="Class" value="EntityBandit"/>
 			<property name="LootDropProb" value="0.25"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerStrong"/>			
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/> 
+			<!--<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/> 
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/> 
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/>  
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/>  -->
 		</entity_class>	
 
 		<entity_class name="humanRangedFemaleBanditTemplate" extends="humanRangedFemaleTemplate"> 	<!-- If you want to make a bandit that spawns in ranged weapons, use this Template  -->
@@ -640,9 +640,22 @@
 			<property name="Tags" value="entity,female,human,bandit,melee"/>
 			<property name="Faction" value="bandits"/>
 			<property name="Mesh" value="#@modfolder:Resources/FR_Zombies.unity3d?Pauline_FR"/>
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
+			<!--<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/>-->
+
+			<effect_group name="Base Effects">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AnimatorSetInt" property="IsHuman" value="2" duration="1" />
+			</effect_group>
+
+		</entity_class>
+
+		<!--<entity_class name="FuriousRamsayAndroidModel" extends="humanMeleeMaleSurvivorTemplate"> -->
+			<!--<property name="Tags" value="entity,male,robot,melee"/>-->
+		<entity_class name="FuriousRamsayAndroidModel" extends="humanMeleeFemaleBanditTemplate"> 
+			<property name="Tags" value="entity,female,human,bandit,melee"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/FR_Robots.unity3d?HumanBot_Skinned_A_Simple"/>
 
 			<effect_group name="Base Effects">
 				<triggered_effect trigger="onSelfFirstSpawn" action="AnimatorSetInt" property="IsHuman" value="2" duration="1" />

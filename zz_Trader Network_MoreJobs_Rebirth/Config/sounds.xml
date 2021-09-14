@@ -29,7 +29,7 @@
 		<!-- INITIAL BRISTON -->
 		<SoundDataNode name="trader_briston1_heystranger_overhere"> <AudioSource name="Sounds/AudioSource_VO"/> <!-- WORKS -->
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="1"/>
-			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?briston_heystranger_overhere"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?briston_first_spawn_inhey_stranger"/>
 			<LocalCrouchVolumeScale value="1.0"/>
 			<CrouchNoiseScale value="1"/>
 			<NoiseScale value="1"/>
@@ -39,7 +39,7 @@
 
 		<SoundDataNode name="trader_briston1likequestcomplete"> <AudioSource name="Sounds/AudioSource_VO"/> <!-- WORKS -->
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
-			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?briston_badshape"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?briston_dialog_line_1_option_2"/>
 			<LocalCrouchVolumeScale value="1.0"/>
 			<CrouchNoiseScale value="0.5"/>
 			<NoiseScale value="1"/>
@@ -49,7 +49,7 @@
 
 		<SoundDataNode name="trader_briston1likequestoffer"> <AudioSource name="Sounds/AudioSource_VO"/> <!-- WORKS -->
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
-			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?briston_shelter_offer"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?briston_dialog_line_2_option_2"/>
 			<LocalCrouchVolumeScale value="1.0"/>
 			<CrouchNoiseScale value="0.5"/>
 			<NoiseScale value="1"/>
@@ -59,7 +59,7 @@
 
 		<SoundDataNode name="trader_briston1likequestaccepted"> <AudioSource name="Sounds/AudioSource_VO"/> <!-- WORKS -->
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
-			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?briston_shelter_accepted"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?briston_dialog_line_4_taking_my_advice"/>
 			<LocalCrouchVolumeScale value="1.0"/>
 			<CrouchNoiseScale value="0.5"/>
 			<NoiseScale value="1"/>
@@ -69,7 +69,7 @@
 
 		<SoundDataNode name="trader_briston1likequestdeclined"> <AudioSource name="Sounds/AudioSource_VO"/> <!-- WORKS -->
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
-			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?briston_shelter_declined"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?briston_dialog_line_3_take_my_advice"/>
 			<LocalCrouchVolumeScale value="1.0"/>
 			<CrouchNoiseScale value="0.5"/>
 			<NoiseScale value="1"/>
@@ -88,9 +88,9 @@
 			<MaxRepeatRate value="1.111"/>
 		</SoundDataNode>
 
-		<SoundDataNode name="trader_bristonlikefirstgreet"> <AudioSource name="Sounds/AudioSource_VO"/>
+		<SoundDataNode name="trader_bristonlikequestcomplete"> <AudioSource name="Sounds/AudioSource_VO"/> <!-- USED -->
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
-			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?briston_badshape"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?briston_quest_complete"/>
 			<LocalCrouchVolumeScale value="1.0"/>
 			<CrouchNoiseScale value="0.5"/>
 			<NoiseScale value="1"/>
@@ -98,9 +98,12 @@
 			<MaxRepeatRate value="1.111"/>
 		</SoundDataNode>
 
-		<SoundDataNode name="trader_bristonlikegreeting"> <AudioSource name="Sounds/AudioSource_VO"/>
+		<SoundDataNode name="trader_bristonidle"> <AudioSource name="Sounds/AudioSource_VO"/> <!-- USED -->
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
-			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?greeting"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?briston_idle_1"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?briston_idle_2"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?briston_idle_3"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?briston_idle_6"/>
 			<LocalCrouchVolumeScale value="1.0"/>
 			<CrouchNoiseScale value="0.5"/>
 			<NoiseScale value="1"/>
@@ -108,117 +111,7 @@
 			<MaxRepeatRate value="1.111"/>
 		</SoundDataNode>
 
-		<SoundDataNode name="trader_bristonlikegreetmorn"> <AudioSource name="Sounds/AudioSource_VO"/>
-			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
-			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?greet_morning"/>
-			<LocalCrouchVolumeScale value="1.0"/>
-			<CrouchNoiseScale value="0.5"/>
-			<NoiseScale value="1"/>
-			<MaxVoices value="10"/>
-			<MaxRepeatRate value="1.111"/>
-		</SoundDataNode>
-
-		<SoundDataNode name="trader_bristonlikegreetaft"> <AudioSource name="Sounds/AudioSource_VO"/>
-			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
-			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?greet_afternoon"/>
-			<LocalCrouchVolumeScale value="1.0"/>
-			<CrouchNoiseScale value="0.5"/>
-			<NoiseScale value="1"/>
-			<MaxVoices value="10"/>
-			<MaxRepeatRate value="1.111"/>
-		</SoundDataNode>
-
-		<SoundDataNode name="trader_bristonlikegreeteve"> <AudioSource name="Sounds/AudioSource_VO"/>
-			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
-			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?greet_evening"/>
-			<LocalCrouchVolumeScale value="1.0"/>
-			<CrouchNoiseScale value="0.5"/>
-			<NoiseScale value="1"/>
-			<MaxVoices value="10"/>
-			<MaxRepeatRate value="1.111"/>
-		</SoundDataNode>
-
-		<SoundDataNode name="trader_bristonlikegreetnightfall"> <AudioSource name="Sounds/AudioSource_VO"/>
-			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
-			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?greet_nightfall"/>
-			<LocalCrouchVolumeScale value="1.0"/>
-			<CrouchNoiseScale value="0.5"/>
-			<NoiseScale value="1"/>
-			<MaxVoices value="10"/>
-			<MaxRepeatRate value="1.111"/>
-		</SoundDataNode>
-
-		<SoundDataNode name="trader_bristonlikegreetbloodmoon"> <AudioSource name="Sounds/AudioSource_VO"/>
-			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
-			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?greet_bloodmoon"/>
-			<LocalCrouchVolumeScale value="1.0"/>
-			<CrouchNoiseScale value="0.5"/>
-			<NoiseScale value="1"/>
-			<MaxVoices value="10"/>
-			<MaxRepeatRate value="1.111"/>
-		</SoundDataNode>
-
-		<SoundDataNode name="trader_bristonlikeidle"> <AudioSource name="Sounds/AudioSource_VO"/>
-			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
-			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?idle"/>
-			<LocalCrouchVolumeScale value="1.0"/>
-			<CrouchNoiseScale value="0.5"/>
-			<NoiseScale value="1"/>
-			<MaxVoices value="10"/>
-			<MaxRepeatRate value="1.111"/>
-		</SoundDataNode>
-
-		<SoundDataNode name="trader_bristonlikequestaccepted"> <AudioSource name="Sounds/AudioSource_VO"/> <!-- WORKS -->
-			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
-			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?quest_accepted"/>
-			<LocalCrouchVolumeScale value="1.0"/>
-			<CrouchNoiseScale value="0.5"/>
-			<NoiseScale value="1"/>
-			<MaxVoices value="10"/>
-			<MaxRepeatRate value="1.111"/>
-		</SoundDataNode>
-
-		<SoundDataNode name="trader_bristonlikequestcomplete"> <AudioSource name="Sounds/AudioSource_VO"/> <!-- WORKS -->
-			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
-			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?quest_complete"/>
-			<LocalCrouchVolumeScale value="1.0"/>
-			<CrouchNoiseScale value="0.5"/>
-			<NoiseScale value="1"/>
-			<MaxVoices value="10"/>
-			<MaxRepeatRate value="1.111"/>
-		</SoundDataNode>
-
-		<SoundDataNode name="trader_bristonlikequestdeclined"> <AudioSource name="Sounds/AudioSource_VO"/> <!-- WORKS -->
-			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
-			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?quest_delined"/>
-			<LocalCrouchVolumeScale value="1.0"/>
-			<CrouchNoiseScale value="0.5"/>
-			<NoiseScale value="1"/>
-			<MaxVoices value="10"/>
-			<MaxRepeatRate value="1.111"/>
-		</SoundDataNode>
-
-		<!--<SoundDataNode name="trader_bristonlikequestincomplete"> <AudioSource name="Sounds/AudioSource_VO"/>
-			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
-			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?quest_incomplete"/>
-			<LocalCrouchVolumeScale value="1.0"/>
-			<CrouchNoiseScale value="0.5"/>
-			<NoiseScale value="1"/>
-			<MaxVoices value="10"/>
-			<MaxRepeatRate value="1.111"/>
-		</SoundDataNode>-->
-
-		<SoundDataNode name="trader_bristonlikequestoffer"> <AudioSource name="Sounds/AudioSource_VO"/> <!-- WORKS -->
-			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
-			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?quest_offer"/>
-			<LocalCrouchVolumeScale value="1.0"/>
-			<CrouchNoiseScale value="0.5"/>
-			<NoiseScale value="1"/>
-			<MaxVoices value="10"/>
-			<MaxRepeatRate value="1.111"/>
-		</SoundDataNode>
-
-		<SoundDataNode name="trader_bristonlikesaleaccepted"> <AudioSource name="Sounds/AudioSource_VO"/>
+		<SoundDataNode name="trader_bristonlikesaleaccepted"> <AudioSource name="Sounds/AudioSource_VO"/> <!-- USED -->
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
 			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?sale_accepted"/>
 			<LocalCrouchVolumeScale value="1.0"/>
@@ -228,7 +121,7 @@
 			<MaxRepeatRate value="1.111"/>
 		</SoundDataNode>
 
-		<SoundDataNode name="trader_bristonlikesaledeclined"> <AudioSource name="Sounds/AudioSource_VO"/>
+		<SoundDataNode name="trader_bristonlikesaledeclined"> <AudioSource name="Sounds/AudioSource_VO"/> <!-- USED -->
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
 			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?sale_declined"/>
 			<LocalCrouchVolumeScale value="1.0"/>
@@ -238,7 +131,158 @@
 			<MaxRepeatRate value="1.111"/>
 		</SoundDataNode>
 
-		<SoundDataNode name="trader_bristonlikerumorberzerkerbills"> <AudioSource name="Sounds/AudioSource_VO"/>
+		<!-- TEMPLATE -->
+		<SoundDataNode name="trader_templatelikefirstgreet"> <AudioSource name="Sounds/AudioSource_VO"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?briston_badshape"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="1.111"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="trader_templatelikegreeting"> <AudioSource name="Sounds/AudioSource_VO"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?greeting"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="1.111"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="trader_templatelikegreetmorn"> <AudioSource name="Sounds/AudioSource_VO"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?greet_morning"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="1.111"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="trader_templatelikegreetaft"> <AudioSource name="Sounds/AudioSource_VO"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?greet_afternoon"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="1.111"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="trader_templatelikegreeteve"> <AudioSource name="Sounds/AudioSource_VO"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?greet_evening"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="1.111"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="trader_templatelikegreetnightfall"> <AudioSource name="Sounds/AudioSource_VO"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?greet_nightfall"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="1.111"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="trader_templatelikegreetbloodmoon"> <AudioSource name="Sounds/AudioSource_VO"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?greet_bloodmoon"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="1.111"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="trader_templatelikeidle"> <AudioSource name="Sounds/AudioSource_VO"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?idle"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="1.111"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="trader_templatelikequestaccepted"> <AudioSource name="Sounds/AudioSource_VO"/> <!-- WORKS -->
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?quest_accepted"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="1.111"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="trader_templatelikequestcomplete"> <AudioSource name="Sounds/AudioSource_VO"/> <!-- WORKS -->
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?quest_complete"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="1.111"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="trader_templatelikequestdeclined"> <AudioSource name="Sounds/AudioSource_VO"/> <!-- WORKS -->
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?quest_delined"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="1.111"/>
+		</SoundDataNode>
+
+		<!--<SoundDataNode name="trader_templatelikequestincomplete"> <AudioSource name="Sounds/AudioSource_VO"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?quest_incomplete"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="1.111"/>
+		</SoundDataNode>-->
+
+		<SoundDataNode name="trader_templatelikequestoffer"> <AudioSource name="Sounds/AudioSource_VO"/> <!-- WORKS -->
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?quest_offer"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="1.111"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="trader_templatelikesaleaccepted"> <AudioSource name="Sounds/AudioSource_VO"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?sale_accepted"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="1.111"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="trader_templatelikesaledeclined"> <AudioSource name="Sounds/AudioSource_VO"/>
+			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?sale_declined"/>
+			<LocalCrouchVolumeScale value="1.0"/>
+			<CrouchNoiseScale value="0.5"/>
+			<NoiseScale value="1"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="1.111"/>
+		</SoundDataNode>
+
+		<SoundDataNode name="trader_templatelikerumorberzerkerbills"> <AudioSource name="Sounds/AudioSource_VO"/>
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
 			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?rumour_bezerker_bills"/>
 			<LocalCrouchVolumeScale value="1.0"/>
@@ -248,7 +292,7 @@
 			<MaxRepeatRate value="1.111"/>
 		</SoundDataNode>
 
-		<SoundDataNode name="trader_bristonlikerumorevil"> <AudioSource name="Sounds/AudioSource_VO"/>
+		<SoundDataNode name="trader_templatelikerumorevil"> <AudioSource name="Sounds/AudioSource_VO"/>
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
 			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?rumor_evil"/>
 			<LocalCrouchVolumeScale value="1.0"/>
@@ -258,7 +302,7 @@
 			<MaxRepeatRate value="1.111"/>
 		</SoundDataNode>
 
-		<SoundDataNode name="trader_bristonlikerumorfates"> <AudioSource name="Sounds/AudioSource_VO"/>
+		<SoundDataNode name="trader_templatelikerumorfates"> <AudioSource name="Sounds/AudioSource_VO"/>
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
 			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?rumour_fates"/>
 			<LocalCrouchVolumeScale value="1.0"/>
@@ -268,7 +312,7 @@
 			<MaxRepeatRate value="1.111"/>
 		</SoundDataNode>
 
-		<SoundDataNode name="trader_bristonlikerumorjohnnytown"> <AudioSource name="Sounds/AudioSource_VO"/>
+		<SoundDataNode name="trader_templatelikerumorjohnnytown"> <AudioSource name="Sounds/AudioSource_VO"/>
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
 			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?rumour_johnnytown"/>
 			<LocalCrouchVolumeScale value="1.0"/>
@@ -278,7 +322,7 @@
 			<MaxRepeatRate value="1.111"/>
 		</SoundDataNode>
 
-		<SoundDataNode name="trader_bristonlikerumormotivation"> <AudioSource name="Sounds/AudioSource_VO"/>
+		<SoundDataNode name="trader_templatelikerumormotivation"> <AudioSource name="Sounds/AudioSource_VO"/>
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
 			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?rumour_motivation"/>
 			<LocalCrouchVolumeScale value="1.0"/>
@@ -288,7 +332,7 @@
 			<MaxRepeatRate value="1.111"/>
 		</SoundDataNode>
 
-		<SoundDataNode name="trader_bristonlikeannounceopen"> <AudioSource name="Sounds/AudioSource_VO_Announce"/>
+		<SoundDataNode name="trader_templatelikeannounceopen"> <AudioSource name="Sounds/AudioSource_VO_Announce"/>
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
 			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?announce_open"/>
 			<LocalCrouchVolumeScale value="1.0"/>
@@ -298,7 +342,7 @@
 			<MaxRepeatRate value="1.111"/>
 		</SoundDataNode>
 
-		<SoundDataNode name="trader_bristonlikeannounceclosing"> <AudioSource name="Sounds/AudioSource_VO_Announce"/>
+		<SoundDataNode name="trader_templatelikeannounceclosing"> <AudioSource name="Sounds/AudioSource_VO_Announce"/>
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
 			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?announce_closing"/>
 			<LocalCrouchVolumeScale value="1.0"/>
@@ -308,7 +352,7 @@
 			<MaxRepeatRate value="1.111"/>
 		</SoundDataNode>
 
-		<SoundDataNode name="trader_bristonlikeannounceclosed"> <AudioSource name="Sounds/AudioSource_VO_Announce"/>
+		<SoundDataNode name="trader_templatelikeannounceclosed"> <AudioSource name="Sounds/AudioSource_VO_Announce"/>
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
 			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?announce_closed"/>
 			<LocalCrouchVolumeScale value="1.0"/>
@@ -318,7 +362,7 @@
 			<MaxRepeatRate value="1.111"/>
 		</SoundDataNode>
 
-		<SoundDataNode name="trader_bristonlikeannouncespecial01"> <AudioSource name="Sounds/AudioSource_VO_Announce"/>
+		<SoundDataNode name="trader_templatelikeannouncespecial01"> <AudioSource name="Sounds/AudioSource_VO_Announce"/>
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
 			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?announce_special01"/>
 			<LocalCrouchVolumeScale value="1.0"/>
@@ -328,7 +372,7 @@
 			<MaxRepeatRate value="1.111"/>
 		</SoundDataNode>
 
-		<SoundDataNode name="trader_bristonlikeannouncespecial02"> <AudioSource name="Sounds/AudioSource_VO_Announce"/>
+		<SoundDataNode name="trader_templatelikeannouncespecial02"> <AudioSource name="Sounds/AudioSource_VO_Announce"/>
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
 			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?announce_special02"/>
 			<LocalCrouchVolumeScale value="1.0"/>
@@ -338,7 +382,7 @@
 			<MaxRepeatRate value="1.111"/>
 		</SoundDataNode>
 
-		<SoundDataNode name="trader_bristonlikeannouncespecial03"> <AudioSource name="Sounds/AudioSource_VO_Announce"/>
+		<SoundDataNode name="trader_templatelikeannouncespecial03"> <AudioSource name="Sounds/AudioSource_VO_Announce"/>
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
 			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?announce_special03"/>
 			<LocalCrouchVolumeScale value="1.0"/>
@@ -348,7 +392,7 @@
 			<MaxRepeatRate value="1.111"/>
 		</SoundDataNode>
 
-		<SoundDataNode name="trader_bristonlikebuyrareitem_"> <AudioSource name="Sounds/AudioSource_VO"/>
+		<SoundDataNode name="trader_templatelikebuyrareitem_"> <AudioSource name="Sounds/AudioSource_VO"/>
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
 			<AudioClip ClipName="#@modfolder:Resources/Audio.unity3d?buy_rareitem"/>
 			<LocalCrouchVolumeScale value="1.0"/>
