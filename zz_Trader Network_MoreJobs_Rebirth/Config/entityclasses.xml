@@ -40,20 +40,6 @@
 			</effect_group>
 		</entity_class>
 		
-		<entity_class name="FuriousRamsayMedicalDroid" extends="FuriousRamsayAndroidModel">
-			<property name="HandItem" value="FuriousRamsayMeleeHandAllyBearTier4Spawn"/>
-
-			<effect_group name="Base Effects">
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayVanishMechanicalAllySpawnTimer"/>
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayAddShockAllyNPCTier5Timer"/>				
-				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" buff="FuriousRamsayResistFire"/>
-				<passive_effect name="HealthMax" operation="base_set" value="1250"/>
-				<passive_effect name="HealthMax" operation="perc_add" value="0"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="10000"/>
-				<passive_effect name="StaminaChangeOT" operation="base_add" value="10"/>
-			</effect_group>		
-		</entity_class>
-		
 		<entity_class name="FuriousRamsayZombieArlene" extends="zombieArlene">
 			<property name="HideInSpawnMenu" value="true"/>
 			<property name="AINoiseSeekDist" value="200"/>
